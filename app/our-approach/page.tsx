@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Our Approach | BRE Builders | How We Work',
+  title: 'Our Approach | How We Work | Since 1989',
   description:
     'How BRE Builders works — consultation, design, permits, construction, and delivery. Licensed general contractor since 1989. NV #0085999.',
   alternates: { canonical: 'https://brebuilders.com/our-approach/' },

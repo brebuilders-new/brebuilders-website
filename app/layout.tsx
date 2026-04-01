@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Blue Reef Builders',
   },
   description:
-    'BRE Builders – licensed general contractor serving Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, repairs, commercial. NV #0085999.',
+    'BRE Builders – licensed general contractor serving Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, repairs, commercial. NV #0085999 CA #1009219.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -19,20 +20,14 @@ export const metadata: Metadata = {
         url: '/images/og-default.jpg',
         width: 1200,
         height: 630,
-        alt: 'Blue Reef Builders – Licensed General Contractor Reno NV',
+        alt: 'Blue Reef Builders – Licensed General Contractor Reno NV & California',
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  twitter: { card: 'summary_large_image' },
+  robots: { index: true, follow: true },
 }
 
-// Base LocalBusiness schema for all pages
 const baseSchema = {
   '@context': 'https://schema.org',
   '@type': 'GeneralContractor',
@@ -50,12 +45,12 @@ const baseSchema = {
     postalCode: '89502',
     addressCountry: 'US',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 39.5296,
-    longitude: -119.8138,
-  },
+  geo: { '@type': 'GeoCoordinates', latitude: 39.5296, longitude: -119.8138 },
   foundingDate: '1989',
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Nevada Contractor License #0085999' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'California Contractor License #1009219' },
+  ],
   areaServed: [
     { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
     { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
@@ -85,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div id="cursor" aria-hidden="true" />
         <div id="cursor-ring" aria-hidden="true" />
         {children}
+        <Analytics />
       </body>
     </html>
   )

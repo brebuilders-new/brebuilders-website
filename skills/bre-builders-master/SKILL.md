@@ -12,81 +12,94 @@ description: Master skill for the BRE Builders website rebuild project. MUST be 
 ## SESSION START CHECKLIST
 
 Before touching any file:
-- [ ] Confirm task scope — what exactly are we building/fixing this session?
-- [ ] Confirm CA license number has been verified (1009219 vs 1093798) — if not, don't put it on any page yet
-- [ ] Check if repo has any open issues or pending PRs
-- [ ] Confirm staging URL is live: https://brebuilders-website.vercel.app (or current staging URL)
-- [ ] Read the relevant sub-skill for the session work (SEO, images, content, forms, deploy)
+- [ ] Pull latest from main: `git pull origin main`
+- [ ] Check staging URL is live: https://brebuilders-website.vercel.app
+- [ ] Read the relevant sub-skill (SEO, images, content, forms, deploy)
+- [ ] Never put CA license 1009219 on NV pages — it's the CA number
 
 ---
 
-## VERIFIED COMPANY FACTS
+## VERIFIED COMPANY FACTS — ALL CONFIRMED
 
-| Field | Verified Value | Source |
+| Field | Verified Value | Notes |
 |---|---|---|
-| Legal Name | Blue Reef Enterprises, LLC | Live site footer |
-| DBA | BRE Builders / Blue Reef Builders | Throughout site |
-| Owner | Steve Rosenthal | Site + memory |
-| Phone | (775) 391-4517 | Live site footer |
-| Email (primary) | brebuilders@gmail.com | Client provided |
-| Email (Steve) | steve@brebuilders.com | Live site footer |
-| Email (CC) | chris@[domain], sean@[domain] — verify exact emails | Client provided context |
-| Address | 2600 Mill St #400, Reno, NV 89502 | Live site footer |
-| Founded | 1989 | Live site |
-| Years Experience | **35+** — USE THIS. Not 20, not 30 | Site says "Since 1989" |
-| Nevada License | **#0085999** ← VERIFIED | Live site footer |
-| California License | **⚠️ UNVERIFIED — confirm before publishing** | Footer: 1009219 / Portfolio: 1093798 |
-| Current WP Site | https://brebuilders.com | Live |
-| New Repo | https://github.com/brebuilders-new/brebuilders-website | Created Phase 0 |
+| Legal Name | Blue Reef Enterprises, LLC | |
+| DBA | BRE Builders / Blue Reef Builders | |
+| Owner | Steve Rosenthal | |
+| Phone | (775) 391-4517 | |
+| Primary Email | brebuilders@gmail.com | All form submissions go here |
+| Steve Email | steve@brebuilders.com | CC on all forms |
+| Chris Email | chris@brebuilders.com | CC on all forms |
+| Sean Email | sean@brebuilders.com | CC on all forms |
+| Dev/Test Email | ifyougetlockedout@protonmail.com | TESTING ONLY — no real emails |
+| Address | 2600 Mill St #400, Reno, NV 89502 | |
+| Founded | 1989 | |
+| Experience | **35+** years — USE THIS | Not 20, not 30 |
+| **Nevada License** | **#0085999** | ✅ VERIFIED |
+| **California License** | **#1009219** | ✅ VERIFIED — CA only |
 
-**⚠️ CRITICAL FLAG — Do NOT put CA license on any page until client confirms correct number.**
+**License display rule:**
+- Nevada pages → "NV License #0085999"
+- California pages → "CA License #1009219"  
+- Both states / footer → "NV #0085999 · CA #1009219"
+- NEVER show both on same line as if they're the same number
+
+---
+
+## EMAIL ROUTING — CONFIRMED
+
+```
+PRODUCTION (live site):
+  To:      brebuilders@gmail.com
+  CC:      steve@brebuilders.com, chris@brebuilders.com, sean@brebuilders.com
+  From:    BRE Builders <no-reply@brebuilders.com>
+  Reply-To: brebuilders@gmail.com
+
+TESTING / DEVELOPMENT:
+  To:      ifyougetlockedout@protonmail.com
+  CC:      (none — no internal team during testing)
+  From:    BRE Builders <no-reply@brebuilders.com>
+
+ENVIRONMENT VARIABLE SETUP:
+  NODE_ENV=development → use dev email only
+  NODE_ENV=production  → use full team routing
+```
 
 ---
 
 ## TECH STACK
 
-| Layer | Choice | Notes |
-|---|---|---|
-| Framework | Next.js 14 (App Router) | SSG/SSR, SEO-friendly |
-| Styling | Tailwind CSS | Utility-first |
-| Animations | Framer Motion | For hero, scroll, galleries |
-| Fonts | Cormorant Garamond + Syne + JetBrains Mono | Google Fonts |
-| Images | next/image with WebP | Performance + CWV |
-| Forms | React Hook Form + /api/contact route | No WP dependency |
-| Email | Resend (brebuilders@gmail.com primary, cc steve + chris + sean) | Form submissions |
-| Leads DB | Supabase (optional, TBD with client) | Lead storage |
-| Hosting | Vercel | Auto-deploy from GitHub |
-| CMS | Static MDX for blog | Keep simple |
-| Schema | Inline JSON-LD per page | Full control |
-| Sitemap | next-sitemap | Auto-generated |
-| Analytics | Google Analytics 4 | Existing GSC connected |
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Styling | Tailwind CSS |
+| Animations | Framer Motion |
+| Fonts | Cormorant Garamond + Syne + JetBrains Mono |
+| Images | next/image with WebP |
+| Forms | React Hook Form + /api/contact route |
+| Email | Resend (brebuilders@gmail.com primary) |
+| Analytics | @vercel/analytics/next (already in project) |
+| Hosting | Vercel — brebuilders team |
+| CMS | Static MDX for blog |
+| Schema | Inline JSON-LD per page |
+| Sitemap | next-sitemap |
 
 ---
 
 ## REPO & DEPLOYMENT
 
 ```
-Repo:     https://github.com/brebuilders-new/brebuilders-website
-Token:    [TOKEN_IN_PROJECT_GIT_FILE]  (in /mnt/project/git)
-Git user: BRE Builders <brebuilders@gmail.com>
-Branch:   main (production) / dev (staging)
-Vercel:   https://vercel.com/brebuilders
-Staging:  https://brebuilders-website.vercel.app (post-Vercel-connect)
-Live:     https://brebuilders.com (DNS cutover at Phase 10 ONLY)
+Repo:      https://github.com/brebuilders-new/brebuilders-website
+Git Token: [TOKEN_IN_PROJECT_GIT_FILE]
+Git user:  BRE Builders <brebuilders@gmail.com>
+Branch:    main
+
+Vercel Team:    brebuilders
+Vercel Project: prj_sUYTAW11av5uhg8EAVQUM8AQdoZ0
+Vercel Token:   [TOKEN_IN_PROJECT_VERCEL_FILE — once added]
+Staging URL:    https://brebuilders-website.vercel.app
+Live Domain:    brebuilders.com (DNS cutover at Phase 10 ONLY)
 ```
-
-**NEVER push directly to main without local build passing.**
-**DO NOT touch the live WordPress site at brebuilders.com during build.**
-
----
-
-## EMAIL ROUTING
-
-All form submissions route to:
-- **To:** brebuilders@gmail.com
-- **CC:** steve@brebuilders.com, chris@[verify], sean@[verify]
-- **From:** no-reply@brebuilders.com (via Resend)
-- **Reply-To:** brebuilders@gmail.com
 
 ---
 
@@ -96,19 +109,19 @@ All form submissions route to:
 /                           Home
 /about/                     About
 /our-approach/              Our Approach
-/careers/                   Careers
+/careers/                   Careers (uses Form 6 — job application)
 /services/                  Services hub
-/services/adu/              ADU (HIGHEST SEO PRIORITY — #1 ranking)
+/services/adu/              ADU ← #1 ranking, highest priority
 /services/kitchen-bath/     Kitchen & Bath
-/services/new-home/         Custom Home Building
-/services/additions/        Additions
+/services/new-home/         Custom Home (uses Form 7)
+/services/additions/        Additions ← BIGGEST CTR fix needed
 /services/decks/            Decks
 /services/lofts-condos/     Lofts & Condo Remodels
-/services/repairs/          Structural Repairs (Page 1 ranking)
-/services/repairs/foundation/         Foundation Repair
-/services/repairs/water-intrusion/    Water Intrusion
+/services/repairs/          Structural Repairs (uses Form 8)
+/services/repairs/foundation/         Foundation (uses Form 9)
+/services/repairs/water-intrusion/    Water Intrusion (uses Form 10)
 /services/concrete/         Concrete
-/services/hauling/          Hauling & Removal
+/services/hauling/          Hauling & Removal ← broken CTR fix needed
 /services/commercial/       Commercial hub
 /services/retail/           Retail
 /services/office/           Office
@@ -116,12 +129,8 @@ All form submissions route to:
 /projects/                  Portfolio hub
 /projects/[slug]/           Individual project pages
 /service-areas/             Service areas hub
-/service-areas/reno/        Reno
-/service-areas/sparks/      Sparks
-/service-areas/lake-tahoe/  Lake Tahoe
-/service-areas/carson-city/ Carson City
-/service-areas/truckee/     Truckee
-/service-areas/northern-california/ Northern CA
+/service-areas/reno/        through /service-areas/northern-california/
+/service-areas/lake-tahoe/adu/  ← new page needed (192 impressions pos 7.5)
 /faq/                       FAQ
 /blog/                      Blog hub
 /blog/[slug]/               Blog posts
@@ -130,77 +139,33 @@ All form submissions route to:
 
 ---
 
-## 301 REDIRECT MAP (Implement in next.config.js Phase 1)
-
-```
-/adus/                    → /services/adu/
-/repairs/                 → /services/repairs/
-/repairs/foundation-repair-and-foundation-issues-in-reno-nv/ → /services/repairs/foundation/
-/repairs/water-intrusion-and-moisture-issues-in-reno-nv/ → /services/repairs/water-intrusion/
-/concrete/                → /services/concrete/
-/kitchen/                 → /services/kitchen-bath/
-/decks/                   → /services/decks/
-/new-home/                → /services/new-home/
-/additions/               → /services/additions/
-/retail/                  → /services/retail/
-/office/                  → /services/office/
-/warehouse-metal-buildings/ → /services/warehouse/
-/hauling-removal/         → /services/hauling/
-/lofts-and-condo-remodels/ → /services/lofts-condos/
-/frequently-asked-questions-bre-builders/ → /faq/
-/blogs/                   → /blog/
-/project-type/home-remodeling/ → /services/
-/project-type/commercial-tenant-improvements/ → /services/commercial/
-/project-type/custom-home-building/ → /services/new-home/
-/portfolio/lake-tahoe-interior-renovation-project/ → /projects/lake-tahoe-interior-renovation/
-/portfolio/ripon-california-estate-project/ → /projects/ripon-estate/
-/portfolio/rio-tinto-home-renovation-project/ → /projects/rio-tinto-renovation/
-/portfolio/quaking-aspen-structural-repair/ → /projects/quaking-aspen-repair/
-/portfolio/lake-tahoe-deck-balcony-structural-repair/ → /projects/lake-tahoe-deck-repair/
-/portfolio/mine-shaft-framing-shed-construction-reno-nv/ → /projects/mine-shaft-framing/
-/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/ → /projects/car-wash-reno/
-/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/ → /projects/arun-deck-repair/
-/portfolio/charolettes-deck/ → /projects/charolettes-deck/
-/service-areas/nevada/    → /service-areas/
-/service-areas/northern-california/ → /service-areas/northern-california/
-/residential-services/    → /services/
-```
-
----
-
-## VERIFIED SEO RANKINGS (Protect These)
-
-| Keyword | Position | Page |
-|---|---|---|
-| adu builders reno | **#1 + Google AI Overview** | /services/adu/ |
-| foundation repair in reno nv | **Page 1** | /services/repairs/ |
-| northern california construction services | **Page 1** | General |
-
-**Rule:** The ADU page is the highest-value SEO asset on this site. The new `/services/adu/` page must replicate the keyword density, FAQ structure, and content depth of the existing `/adus/` page EXACTLY before DNS cutover.
-
----
-
 ## WHAT NEVER TO DO
 
-- Never invent a price, timeline, license number, or fact. Source from bre-builders-content skill.
-- Never put CA license on any page until client confirms correct number.
-- Never change existing 301 redirects once set — breaking them kills rankings.
-- Never push a broken build to main — it blocks all deploys.
-- Never touch brebuilders.com WordPress site during build.
-- Never use "20 years" or "30 years" — always "35+" or "Since 1989."
-- Never write alt text from memory — use bre-builders-images skill registry.
-- Never write testimonials from memory — use bre-builders-content skill exactly.
+- Never use CA license 1009219 on Nevada-only pages
+- Never invent a price, timeline, or fact — source from bre-builders-content skill
+- Never send emails to steve/chris/sean/brebuilders in testing — use protonmail only
+- Never push broken build to main
+- Never touch brebuilders.com WordPress during build
+- Never use "20 years" or "30 years" — always "35+" or "Since 1989"
+- Never write alt text from memory — use bre-builders-images skill
+
+---
+
+## GSC KEY FINDINGS (April 2026)
+
+- Total impressions: 68,624 / Total clicks: 442 / Overall CTR: 0.64%
+- Mobile CTR (1.09%) is 2.4x better than desktop (0.46%)
+- /additions/ = 19,319 impressions, 0.11% CTR — biggest single fix
+- /hauling-removal/ = 2,482 impressions, 0.04% CTR — broken
+- /kitchen/ = 2,198 impressions, 0.05% CTR — broken
+- Spam pages from malware: must return 410 Gone
 
 ---
 
 ## SESSION END — ALWAYS DO THIS
 
-1. Run `npm run build` — fix all errors before committing
-2. Commit with descriptive message: `feat: [what was built]` or `fix: [what was fixed]`
-3. Push to `dev` branch first, verify staging
-4. Flag any SKILL UPDATE needed
-
-**SKILL UPDATE format:**
-```
-SKILL UPDATE: bre-builders-master → [finding]
-```
+1. `npm run build` — 0 errors before commit
+2. `git add [specific files]` — never `git add -A` blindly
+3. `git commit -m "feat/fix/content/seo: [what]"`
+4. `git push origin main`
+5. Flag SKILL UPDATE items

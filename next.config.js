@@ -12,7 +12,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // ─── Residential service pages ──────────
+      // ─── Residential service pages ──────────────────
       { source: '/adus', destination: '/services/adu', permanent: true },
       { source: '/adus/', destination: '/services/adu/', permanent: true },
       { source: '/repairs', destination: '/services/repairs', permanent: true },
@@ -37,10 +37,10 @@ const nextConfig = {
       { source: '/hauling-removal/', destination: '/services/hauling/', permanent: true },
       { source: '/lofts-and-condo-remodels', destination: '/services/lofts-condos', permanent: true },
       { source: '/lofts-and-condo-remodels/', destination: '/services/lofts-condos/', permanent: true },
-      // ─── Repair sub-pages ───────────────────
+      // ─── Repair sub-pages ───────────────────────────
       { source: '/repairs/foundation-repair-and-foundation-issues-in-reno-nv/', destination: '/services/repairs/foundation/', permanent: true },
       { source: '/repairs/water-intrusion-and-moisture-issues-in-reno-nv/', destination: '/services/repairs/water-intrusion/', permanent: true },
-      // ─── Hub / misc pages ───────────────────
+      // ─── Misc pages ─────────────────────────────────
       { source: '/frequently-asked-questions-bre-builders', destination: '/faq', permanent: true },
       { source: '/frequently-asked-questions-bre-builders/', destination: '/faq/', permanent: true },
       { source: '/blogs', destination: '/blog', permanent: true },
@@ -49,7 +49,7 @@ const nextConfig = {
       { source: '/project-type/commercial-tenant-improvements/', destination: '/services/commercial/', permanent: true },
       { source: '/project-type/custom-home-building/', destination: '/services/new-home/', permanent: true },
       { source: '/residential-services/', destination: '/services/', permanent: true },
-      // ─── Portfolio pages ─────────────────────
+      // ─── Portfolio pages ─────────────────────────────
       { source: '/portfolio/lake-tahoe-interior-renovation-project/', destination: '/projects/lake-tahoe-interior-renovation/', permanent: true },
       { source: '/portfolio/ripon-california-estate-project/', destination: '/projects/ripon-estate/', permanent: true },
       { source: '/portfolio/rio-tinto-home-renovation-project/', destination: '/projects/rio-tinto-renovation/', permanent: true },
@@ -59,8 +59,21 @@ const nextConfig = {
       { source: '/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/', destination: '/projects/car-wash-reno/', permanent: true },
       { source: '/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/', destination: '/projects/arun-deck-repair/', permanent: true },
       { source: '/portfolio/charolettes-deck/', destination: '/projects/charolettes-deck/', permanent: true },
-      // ─── Service areas ───────────────────────
+      // ─── Service areas ───────────────────────────────
       { source: '/service-areas/nevada/', destination: '/service-areas/', permanent: true },
+    ]
+  },
+  async headers() {
+    return [
+      // ─── Spam/malware pages from December 2024 incident — 410 Gone ───
+      {
+        source: '/step-into-the-spotlight-win-big-with-nine-casino-today-4226/',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
+      {
+        source: '/vavada-casino/',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+      },
     ]
   },
 }

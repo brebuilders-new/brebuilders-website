@@ -68,6 +68,15 @@ const nextConfig = {
       { source: '/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/', destination: '/projects/',                        permanent: true },
       { source: '/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/',              destination: '/projects/',                          permanent: true },
       { source: '/portfolio/adus/',                destination: '/services/adu/',      permanent: true },
+      { source: '/portfolio/lake-tahoe-interior-renovation-project-bre-builders',  destination: '/projects/lake-tahoe-renovation/',    permanent: true },
+      { source: '/portfolio/ripon-california-estate-project',                       destination: '/projects/ripon-estate/',             permanent: true },
+      { source: '/portfolio/rio-tinto-home-renovation-project',                    destination: '/projects/',                          permanent: true },
+      { source: '/portfolio/quaking-aspen-structural-repair',                      destination: '/projects/',                          permanent: true },
+      { source: '/portfolio/lake-tahoe-deck-balcony-structural-repair',            destination: '/projects/',                          permanent: true },
+      { source: '/portfolio/mine-shaft-framing-shed-construction-reno-nv',         destination: '/projects/',                          permanent: true },
+      { source: '/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation', destination: '/projects/',                        permanent: true },
+      { source: '/portfolio/arun-hillside-deck-repair-lake-tahoe-nv',              destination: '/projects/',                          permanent: true },
+      { source: '/portfolio/adus',                destination: '/services/adu/',      permanent: true },
       // ─── Service areas ────────────────────────────────────────────────
       // /service-areas/nevada/ is the indexed URL for Reno page — keep pointing there
       { source: '/service-areas/nevada',  destination: '/service-areas/reno',  permanent: true },

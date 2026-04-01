@@ -57,12 +57,16 @@ export default function Nav() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 border border-teal/70 rounded-lg flex items-center justify-center text-teal font-display text-lg font-semibold relative overflow-hidden group-hover:border-teal transition-colors">
-              <span className="relative z-10">B</span>
-              <div className="absolute inset-0 bg-teal/[0.06]" />
-            </div>
-            <div>
-              <div className="font-display text-[17px] text-cream leading-none">Blue Reef Builders</div>
+            {/* Real BRE logo from live site */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp"
+              alt="BRE Builders – Blue Reef Enterprises Reno NV General Contractor"
+              className="h-9 w-auto object-contain"
+              loading="eager"
+            />
+            <div className="hidden sm:block">
+              <div className="font-display text-[17px] text-cream leading-none group-hover:text-teal transition-colors">Blue Reef Builders</div>
               <div className="font-mono text-[9px] tracking-[2.5px] text-teal uppercase mt-[3px]">Est. 1989 · NV & CA</div>
             </div>
           </Link>

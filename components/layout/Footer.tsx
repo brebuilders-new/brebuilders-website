@@ -63,7 +63,8 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 border border-teal/50 rounded-lg flex items-center justify-center text-teal font-display text-lg">B</div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp" alt="BRE Builders Logo" className="h-9 w-auto object-contain" loading="lazy" />
               <div>
                 <div className="font-display text-[16px] text-cream">Blue Reef Builders</div>
                 <div className="font-mono text-[9px] tracking-[2px] text-teal uppercase">Est. 1989</div>

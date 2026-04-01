@@ -258,3 +258,27 @@ Week 1–2 after DNS cutover — check daily:
 5. Manual Google search: `adu builders reno` — confirm #1 position holds
 
 **If ranking drops:** First check that 301 from /adus/ → /services/adu/ is working. Then check that ADU page content matches old page depth.
+
+---
+
+## GSC DATA UPDATE — April 2026 (3-month period)
+
+### Device Split Reality
+- Desktop: 223 clicks / 48,436 impr = **0.46% CTR** @ pos 38
+- Mobile: 217 clicks / 19,872 impr = **1.09% CTR** @ pos 28
+- Mobile converts 2.4x better — build mobile CTA hierarchy first
+
+### Critical CTR Failures (fix title/meta = instant traffic)
+- /additions/ — 19,319 impr, 0.11% CTR → biggest win on the site
+- /residential-services/ — 4,855 impr, 0.08% CTR → broken page
+- /hauling-removal/ — 2,482 impr, 0.04% CTR → broken title/desc
+- /kitchen/ — 2,198 impr, 0.05% CTR → broken title/desc
+
+### Quick-win keywords (pos 3–8, zero clicks)
+home additions reno nv (3.5), adu companies reno nv (5.1),
+deck contractors reno nv (5.8), adu contractors reno nv (6.0),
+lake tahoe adu builder (7.5), building repair northern california (8.1)
+
+### Spam URLs to 410
+/step-into-the-spotlight-win-big-with-nine-casino-today-4226/
+/vavada-casino/

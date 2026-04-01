@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'General Contractor Reno NV | Licensed Since 1989 | BRE Builders',
+  title: 'General Contractor Reno NV | Licensed Since 1989',
   description:
     'BRE Builders is a licensed general contractor in Reno, NV. ADUs, repairs, kitchen & bath, additions, custom homes, commercial. NV License #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/nevada/' },

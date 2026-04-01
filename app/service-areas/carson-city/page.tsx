@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contractor Carson City NV | Licensed General Contractor | BRE Builders',
+  title: 'Contractor Carson City NV | Licensed General Contractor',
   description: 'BRE Builders serves Carson City, NV — residential remodeling, ADU construction, additions, commercial. NV License #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/carson-city/' },
 }

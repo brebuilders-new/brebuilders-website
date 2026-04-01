@@ -10,7 +10,7 @@ import { IMGS } from '@/lib/images'
 // 19,319 impressions · 0.11% CTR · pos 43 — biggest waste on the whole site
 // Keyword cluster: home additions reno nv (pos 3.5), addition contractors reno (pos 4.6)
 export const metadata: Metadata = {
-  title: 'Home Additions Reno NV | Room & Garage Additions | BRE Builders',
+  title: 'Home Additions Reno NV | Room & Garage Additions',
   description:
     'Home additions in Reno, NV — room additions, second stories, garage expansions. Add space without moving. Licensed GC since 1989. Free estimates. NV #0085999.',
   alternates: { canonical: 'https://brebuilders.com/additions/' },

@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Northern California Construction Services | BRE Builders | CA #1009219',
+  title: 'Northern California Construction Services | CA #1009219',
   description: 'BRE Builders provides construction services across Northern California — custom homes, commercial, structural repairs. CA License #1009219. Ripon, Truckee, Graeagle.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/northern-california/' },
 }

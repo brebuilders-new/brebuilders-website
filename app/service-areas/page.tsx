@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Service Areas | BRE Builders Reno NV | Nevada & California',
+  title: 'Service Areas | Nevada & California',
   description:
     'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1009219.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/' },

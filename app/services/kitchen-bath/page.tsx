@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor | BRE Builders',
+  title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
   description:
     'Kitchen and bathroom remodeling in Reno, NV. High-quality finishes, modern layouts, licensed contractor. NV License #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/kitchen/' },

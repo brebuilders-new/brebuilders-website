@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contractor Sparks NV | Licensed General Contractor | BRE Builders',
+  title: 'Contractor Sparks NV | Licensed General Contractor',
   description: 'BRE Builders serves Sparks, NV — ADU construction, repairs, kitchen & bath, decks, additions. Licensed NV #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/sparks/' },
 }

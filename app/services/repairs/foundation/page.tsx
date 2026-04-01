@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Foundation Repair Reno NV | Foundation Issues | BRE Builders',
+  title: 'Foundation Repair Reno NV | Foundation Issues',
   description:
     'Foundation repair and structural inspection in Reno, NV. Licensed GC since 1989. Cracks, settlement, drainage issues. NV License #0085999. Free evaluation.',
   alternates: { canonical: 'https://brebuilders.com/repairs/foundation-repair-and-foundation-issues-in-reno-nv/' },

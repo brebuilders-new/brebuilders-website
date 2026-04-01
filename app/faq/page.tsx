@@ -6,7 +6,7 @@ import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { FAQS, SITE } from '@/lib/site-data'
 
 export const metadata: Metadata = {
-  title: 'FAQ — BRE Builders Reno NV | Common Questions | Blue Reef Builders',
+  title: 'FAQ — BRE Builders Reno NV | Common Questions',
   description:
     'Answers to common questions about BRE Builders — services, pricing, timelines, materials, warranty, licensing, and service areas.',
   alternates: { canonical: 'https://brebuilders.com/frequently-asked-questions-bre-builders/' },

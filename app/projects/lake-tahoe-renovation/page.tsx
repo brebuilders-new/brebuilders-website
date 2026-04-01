@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 
 export const metadata: Metadata = {
-  title: 'Lake Tahoe Full Home Renovation | BRE Builders Portfolio',
+  title: 'Lake Tahoe Full Home Renovation | Portfolio',
   description:
     '695 Lakeview Blvd, Zephyr Cove, NV — complete interior and exterior renovation by BRE Builders. Structural upgrades, kitchen, bath, custom stairs, deck. 16 photos.',
   alternates: { canonical: 'https://brebuilders.com/portfolio/lake-tahoe-interior-renovation-project-bre-builders/' },

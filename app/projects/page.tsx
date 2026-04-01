@@ -6,7 +6,7 @@ import { PROJECTS } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Projects & Portfolio | BRE Builders Reno NV | Blue Reef Builders',
+  title: 'Projects & Portfolio | BRE Builders Reno NV',
   description:
     'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial construction. Northern Nevada and California since 1989.',
   alternates: { canonical: 'https://brebuilders.com/projects/' },

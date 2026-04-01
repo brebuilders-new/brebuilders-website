@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contractor Truckee CA & Graeagle | BRE Builders | CA Lic #1009219',
+  title: 'Contractor Truckee CA & Graeagle | CA Lic #1009219',
   description: 'BRE Builders serves Truckee, CA and Graeagle — custom homes, decks, remodeling, structural repair. CA License #1009219. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/truckee/' },
 }

@@ -8,7 +8,7 @@ import { IMGS } from '@/lib/images'
 
 // ─── SEO metadata ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'ADU Builders Reno NV | $75K–$300K Complete Builds | BRE Builders',
+  title: 'ADU Builders Reno NV | $75K–$300K Complete Builds',
   description:
     'Licensed ADU contractors in Reno, NV. Complete builds from $75,000. Permit-ready plans, full design-build, 35+ years experience. NV License #0085999. Free quote in 24 hours.',
   openGraph: {

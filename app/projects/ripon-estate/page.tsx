@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Ripon CA Luxury Estate | Custom Home Build | BRE Builders Portfolio',
+  title: 'Ripon CA Luxury Estate | Custom Home Build | Portfolio',
   description:
     'Ground-up luxury estate in Ripon, California. Classical architecture, custom cabinetry, marble surfaces, ironwork staircase. CA License #1009219. BRE Builders.',
   alternates: { canonical: 'https://brebuilders.com/portfolio/ripon-california-estate-project/' },

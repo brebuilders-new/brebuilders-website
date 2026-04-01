@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Commercial Contractor Reno NV | Tenant Improvements | BRE Builders',
+  title: 'Commercial Contractor Reno NV | Tenant Improvements',
   description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1009219. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/commercial-services/' },
 }

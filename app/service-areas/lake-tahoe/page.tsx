@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contractor Lake Tahoe NV | Deck Repair & Renovation | BRE Builders',
+  title: 'Contractor Lake Tahoe NV | Deck Repair & Renovation',
   description:
     'Licensed contractor serving Lake Tahoe, NV — full home renovation, deck repair, ADU construction, structural work. NV License #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/lake-tahoe/' },

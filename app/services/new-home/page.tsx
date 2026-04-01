@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Custom Home Builder Reno NV | New Home Construction | BRE Builders',
+  title: 'Custom Home Builder Reno NV | New Home Construction',
   description:
     'Custom home building in Reno, NV and Northern California. Ground-up builds, in-house design-build. Licensed NV #0085999 · CA #1009219. Free consultations.',
   alternates: { canonical: 'https://brebuilders.com/new-home/' },

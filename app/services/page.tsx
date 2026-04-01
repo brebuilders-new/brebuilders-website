@@ -6,7 +6,7 @@ import { SERVICES } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'All Services | General Contractor Reno NV | BRE Builders',
+  title: 'All Services | General Contractor Reno NV',
   description:
     'Complete list of BRE Builders services — ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial, concrete, hauling. Licensed NV & CA.',
   alternates: { canonical: 'https://brebuilders.com/services/' },

@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Structural Repairs Reno NV | Foundation & Home Repairs | BRE Builders',
+  title: 'Structural Repairs Reno NV | Foundation & Home Repairs',
   description:
     'Licensed structural repair contractors in Reno, NV. Foundation repair, dry rot, water intrusion, framing. NV License #0085999. Free inspection request.',
   alternates: { canonical: 'https://brebuilders.com/repairs/' },

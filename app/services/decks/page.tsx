@@ -7,7 +7,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Deck Builder Reno NV | Deck Repair Lake Tahoe | BRE Builders',
+  title: 'Deck Builder Reno NV | Deck Repair Lake Tahoe',
   description:
     'Deck construction and repair in Reno, Sparks & Lake Tahoe. New builds and structural restoration. NV License #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/decks/' },

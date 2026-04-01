@@ -7,7 +7,7 @@ import { IMGS } from '@/lib/images'
 
 // GSC: 2,482 impressions / 0.04% CTR — catastrophic title. This page needs work.
 export const metadata: Metadata = {
-  title: 'Hauling & Demolition Reno NV | Same-Day Removal | BRE Builders',
+  title: 'Hauling & Demolition Reno NV | Same-Day Removal',
   description: 'Hauling and demolition services in Reno, NV. Construction debris, yard waste, appliance removal, interior demo, full property cleanouts. NV #0085999.',
   alternates: { canonical: 'https://brebuilders.com/hauling-removal/' },
 }

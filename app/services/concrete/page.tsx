@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Concrete Contractor Reno NV | Slabs & Foundations | BRE Builders',
+  title: 'Concrete Contractor Reno NV | Slabs & Foundations',
   description: 'Concrete contractor in Reno, NV. Foundations, slabs, driveways, commercial concrete, utility access. Licensed NV #0085999. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/concrete/' },
 }

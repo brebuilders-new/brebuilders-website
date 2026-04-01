@@ -6,7 +6,7 @@ import { SITE, TESTIMONIALS } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'About BRE Builders | Blue Reef Enterprises Reno NV | Since 1989',
+  title: 'About BRE Builders | Blue Reef Enterprises | Since 1989',
   description:
     'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1009219. Residential and commercial.',
   alternates: { canonical: 'https://brebuilders.com/about/' },

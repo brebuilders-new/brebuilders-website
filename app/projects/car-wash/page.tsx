@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Car+Wash+Construction+Reno+NV&sub=Commercial+Concrete+%26+Build-Out+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/` },
 }
 
 const schema = {

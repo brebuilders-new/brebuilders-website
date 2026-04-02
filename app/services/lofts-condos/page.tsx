@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Loft+%26+Condo+Remodeling&sub=Modern+Renovations+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Residential`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/lofts-and-condo-remodels/' },
+  alternates: { canonical: `${SITE_URL}/lofts-and-condo-remodels/` },
 }
 
 const schema = {

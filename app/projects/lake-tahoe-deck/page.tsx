@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Deck+Structural+Repair&sub=Steel+Bracket+Reinforcement+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/lake-tahoe-deck-balcony-structural-repair/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/lake-tahoe-deck-balcony-structural-repair/` },
 }
 
 const schema = {

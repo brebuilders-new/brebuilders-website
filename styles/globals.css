@@ -18,9 +18,9 @@
   /* Deeper amber for high-contrast CTAs */
   --gold:    #d4953a;
   /* Warm paper white — heavy stock, not digital white */
-  --cream:   #f2ede6;
-  --muted:   rgba(242,237,230,0.50);
-  --dim:     rgba(242,237,230,0.22);
+  --cream:   #f8f4ef;
+  --muted:   rgba(248,244,239,0.65);
+  --dim:     rgba(248,244,239,0.38);
 }
 
 /* ─── RESET ──────────────────────────────────────────────────────────────────── */
@@ -28,6 +28,8 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
   background: var(--void);
   color: var(--cream);
   overflow-x: hidden;
@@ -164,9 +166,9 @@ img { max-width: 100%; height: auto; display: block; }
 /* ─── BUTTON BASE ────────────────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 28px; border-radius: 8px;
+  padding: 14px 32px; border-radius: 8px;
   background: var(--teal); color: var(--void);
-  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
   letter-spacing: 0.3px; text-decoration: none;
   transition: background .2s, transform .15s;
   cursor: pointer; border: none;

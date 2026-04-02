@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Kitchen+Hurting+Your+Home+Value%3F&sub=5+Things+to+Fix+First+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/is-your-kitchen-ruining-your-property-value/' },
+  alternates: { canonical: `${SITE_URL}/is-your-kitchen-ruining-your-property-value/` },
 }
 
 const schema = {

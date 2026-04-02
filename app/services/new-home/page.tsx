@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Custom+Homes`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/new-home/' },
+  alternates: { canonical: `${SITE_URL}/new-home/` },
 }
 
 const schema = {

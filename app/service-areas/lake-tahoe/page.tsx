@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Licensed contractor serving Lake Tahoe NV & CA. Snow-load builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
     images: [`${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV+%26+CA&sub=Snow-Load+%C2%B7+Custom+Homes+%C2%B7+Structural+Repair+%C2%B7+NV+%230085999&badge=Lake+Tahoe`],
   },
-  alternates: { canonical: 'https://brebuilders.com/service-areas/lake-tahoe/' },
+  alternates: { canonical: `${SITE_URL}/service-areas/lake-tahoe/` },
 }
 
 const schema = {

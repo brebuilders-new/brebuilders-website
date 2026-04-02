@@ -81,18 +81,47 @@ export default function BlogTemplate({
         {/* ── ARTICLE ── */}
         <article className="py-16 lg:py-24 bg-deep">
           <div className="container">
-            <div className="max-w-[760px]">
+            <div className="grid lg:grid-cols-[1fr_280px] gap-12 xl:gap-16 items-start max-w-[1100px]">
+            <div>
               {/* Article content */}
               <div className="
                 prose prose-invert max-w-none
-                prose-headings:font-display prose-headings:font-light prose-headings:tracking-tight prose-headings:text-cream
-                prose-h2:text-[clamp(24px,3vw,38px)] prose-h2:mt-12 prose-h2:mb-5
-                prose-h3:text-[22px] prose-h3:mt-8 prose-h3:mb-4
-                prose-p:text-cream/60 prose-p:leading-relaxed prose-p:text-[15px] prose-p:my-4
-                prose-li:text-cream/60 prose-li:text-[15px]
-                prose-a:text-teal prose-a:no-underline hover:prose-a:underline
-                prose-strong:text-cream/80
-                prose-blockquote:border-teal/40 prose-blockquote:text-cream/55 prose-blockquote:italic
+
+                prose-headings:font-display prose-headings:font-light prose-headings:tracking-tight
+                prose-headings:text-cream prose-headings:leading-[1.1]
+
+                prose-h2:text-[clamp(22px,3vw,36px)] prose-h2:mt-14 prose-h2:mb-5
+                prose-h2:border-b prose-h2:border-white/[0.06] prose-h2:pb-4
+
+                prose-h3:text-[20px] prose-h3:mt-10 prose-h3:mb-3 prose-h3:text-teal/90
+
+                prose-h4:text-[16px] prose-h4:mt-7 prose-h4:mb-2 prose-h4:font-mono
+                prose-h4:tracking-wide prose-h4:uppercase prose-h4:text-cream/50 prose-h4:not-italic
+
+                prose-p:text-cream/62 prose-p:leading-[1.85] prose-p:text-[15.5px] prose-p:my-5
+
+                prose-li:text-cream/62 prose-li:text-[15px] prose-li:leading-[1.8] prose-li:my-1.5
+                prose-ul:my-6 prose-ol:my-6
+                prose-ul:pl-0 prose-li:marker:text-teal
+
+                prose-a:text-teal prose-a:font-medium prose-a:no-underline
+                hover:prose-a:underline hover:prose-a:underline-offset-2
+
+                prose-strong:text-cream prose-strong:font-semibold
+
+                prose-blockquote:border-l-teal prose-blockquote:border-l-2
+                prose-blockquote:bg-teal/[0.04] prose-blockquote:rounded-r-xl
+                prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:my-8
+                prose-blockquote:text-cream/65 prose-blockquote:italic prose-blockquote:not-italic
+                prose-blockquote:text-[15px]
+
+                prose-code:text-teal/80 prose-code:bg-teal/[0.07] prose-code:px-1.5
+                prose-code:py-0.5 prose-code:rounded prose-code:text-[13px]
+                prose-code:before:content-none prose-code:after:content-none
+
+                prose-hr:border-white/[0.07] prose-hr:my-10
+
+                prose-img:rounded-xl prose-img:border prose-img:border-white/[0.07]
               ">
                 {content}
               </div>
@@ -109,28 +138,61 @@ export default function BlogTemplate({
                 </div>
               </div>
             </div>
+
+            {/* ── STICKY SIDEBAR (desktop only) ── */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-28 space-y-5">
+
+                {/* Quick CTA */}
+                <div className="bg-panel rounded-2xl border border-teal/15 p-5">
+                  <p className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal mb-3">Free Estimate</p>
+                  <p className="font-display text-[20px] text-cream leading-snug mb-3">Get a free on-site assessment.</p>
+                  <p className="text-[13px] text-cream/45 leading-relaxed mb-5">
+                    BRE Builders responds within 24 hours. NV #0085999 · CA #1093798.
+                  </p>
+                  <Link href="/contact" className="btn-primary w-full justify-center text-[13px] py-3 mb-3">
+                    Request Free Estimate →
+                  </Link>
+                  <a href={SITE.phoneHref} className="flex items-center justify-center gap-2 w-full py-2.5 border border-white/[0.08] rounded-xl font-mono text-[13px] text-cream/50 hover:text-teal hover:border-teal/30 transition-all">
+                    {SITE.phone}
+                  </a>
+                </div>
+
+                {/* Related services */}
+                {relatedServices.length > 0 && (
+                  <div className="bg-panel rounded-2xl border border-white/[0.07] p-5">
+                    <p className="font-mono text-[10px] tracking-[2.5px] uppercase text-cream/35 mb-4">Related Services</p>
+                    <div className="space-y-2">
+                      {relatedServices.map((s) => (
+                        <Link
+                          key={s.label}
+                          href={s.href}
+                          className="flex items-center justify-between text-[13px] text-cream/55 hover:text-teal transition-colors py-1.5 border-b border-white/[0.05] last:border-0"
+                        >
+                          {s.label}
+                          <span className="text-teal/40 text-[11px]">→</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* License trust block */}
+                <div className="bg-teal/[0.04] border border-teal/15 rounded-2xl p-5">
+                  <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal/60 mb-3">Licensed & Insured</p>
+                  <div className="space-y-2">
+                    <p className="font-mono text-[12px] text-cream/60">NV Lic #0085999</p>
+                    <p className="font-mono text-[12px] text-cream/60">CA Lic #1093798</p>
+                    <p className="font-mono text-[12px] text-cream/60">Est. 1989 · 35+ years</p>
+                  </div>
+                </div>
+
+              </div>
+            </aside>
+
+            </div>
           </div>
         </article>
-
-        {/* ── RELATED SERVICES ── */}
-        {relatedServices.length > 0 && (
-          <section className="py-16 bg-panel border-t border-white/[0.05]">
-            <div className="container">
-              <SectionLabel text="Related Services" />
-              <div className="flex flex-wrap gap-3">
-                {relatedServices.map((s) => (
-                  <Link
-                    key={s.label}
-                    href={s.href}
-                    className="text-[13px] font-mono text-cream/50 border border-white/[0.08] px-4 py-2 rounded-lg hover:border-teal/30 hover:text-teal transition-all"
-                  >
-                    {s.label} →
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* ── RELATED POSTS ── */}
         {relatedPosts.length > 0 && (

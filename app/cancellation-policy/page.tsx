@@ -3,10 +3,12 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Cancellation Policy | Blue Reef Builders (BRE Builders) Reno NV',
   description: 'Cancellation and change order policy for BRE Builders (Blue Reef Builders), licensed general contractor in Reno, NV. Deposits, timelines, and project changes.',
-  alternates: { canonical: 'https://brebuilders.com/cancellation-policy/' },
+  alternates: { canonical: `${SITE_URL}/cancellation-policy/` },
   robots: { index: true, follow: false },
 }
 

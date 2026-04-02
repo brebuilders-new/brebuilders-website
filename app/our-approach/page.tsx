@@ -5,11 +5,13 @@ import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Our Approach | How We Work | Since 1989',
   description:
     'How BRE Builders works — consultation, design, permits, construction, and delivery. Licensed general contractor since 1989. NV #0085999.',
-  alternates: { canonical: 'https://brebuilders.com/our-approach/' },
+  alternates: { canonical: `${SITE_URL}/our-approach/` },
 }
 
 function SL({ text }: { text: string }) {

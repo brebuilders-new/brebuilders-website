@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Client+Testimonials&sub=Real+Reviews+%C2%B7+Blue+Reef+Builders+Reno+NV&badge=Reviews`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/testimonials/' },
+  alternates: { canonical: `${SITE_URL}/testimonials/` },
 }
 
 const schema = {

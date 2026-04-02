@@ -5,11 +5,13 @@ import Footer from '@/components/layout/Footer'
 import { SERVICES } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'All Services | General Contractor Reno NV',
   description:
     'Complete list of BRE Builders services — ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial, concrete, hauling. Licensed NV & CA.',
-  alternates: { canonical: 'https://brebuilders.com/services/' },
+  alternates: { canonical: `${SITE_URL}/services/` },
 }
 
 const SERVICE_IMGS: Record<string, string> = {

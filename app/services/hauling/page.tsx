@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/hauling-removal/' },
+  alternates: { canonical: `${SITE_URL}/hauling-removal/` },
 }
 
 const schema = {

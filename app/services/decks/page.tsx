@@ -1,22 +1,21 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
-
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  ServiceHeroSection, SectionLabel, SectionHeading, SpeakableBlock,
+  PageSection, MobileCTABox, DesktopCTASection, RelatedServices, ServiceFAQSection,
+} from '@/components/templates/ServiceTemplate'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
-import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
-  title: 'Deck Builder Reno NV | Deck Repair Lake Tahoe',
-  description:
-    'Deck construction and repair in Reno, Sparks & Lake Tahoe. New builds and structural restoration. NV License #0085999. Free estimates.',
+  title: 'Deck Builder Reno NV & Lake Tahoe | Deck Repair & Construction',
+  description: 'Licensed deck builders in Reno, NV and Lake Tahoe. New deck construction, structural repair, snow-load rated. NV License #0085999. Free estimates.',
   openGraph: {
-    images: [{
-      url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`,
-      width: 1200, height: 630,
-    }],
+    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630 }],
   },
   alternates: { canonical: 'https://brebuilders.com/decks/' },
 }
@@ -27,8 +26,8 @@ const schema = {
     {
       '@type': 'Service',
       '@id': 'https://brebuilders.com/decks/#service',
-      name: 'Deck Builder and Deck Repair Reno NV',
-      description: 'BRE Builders builds and repairs decks in Reno, Sparks, and Lake Tahoe. New deck construction and structural deck repair. Licensed NV #0085999.',
+      name: 'Deck Builder Reno NV',
+      description: 'BRE Builders builds and repairs decks in Reno, NV and Lake Tahoe. Snow-load rated construction, structural repair, composite and wood decking.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
@@ -38,75 +37,39 @@ const schema = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do I know if my deck is structurally unsafe?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Warning signs include: soft or springy boards, visible rot or discoloration, wobbly railings, rusted or missing fasteners, ledger board separation from the house, and visible cracks in support posts. Schedule an inspection if you notice any of these.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does BRE Builders repair decks at Lake Tahoe?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. BRE Builders repairs and builds decks at Lake Tahoe properties including Zephyr Cove, Incline Village, and surrounding areas. Licensed NV #0085999.',
-          },
-        },
+        { '@type': 'Question', name: 'How much does a new deck cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'New deck construction in Reno typically costs $25–$60 per square foot. A 300 sq ft deck runs $7,500–$18,000. Lake Tahoe decks cost more due to snow-load engineering requirements.' } },
+        { '@type': 'Question', name: 'Do decks in Lake Tahoe need special construction?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Lake Tahoe decks must handle snow loads of up to 200 lbs per sq ft, UV exposure, and freeze-thaw cycles. BRE Builders designs to Washoe County and Douglas County structural requirements.' } },
+        { '@type': 'Question', name: 'What are signs a deck needs structural repair?', acceptedAnswer: { '@type': 'Answer', text: 'Signs include: soft or spongy wood when walked on, visible rot or discoloration, ledger pulling away from house, wobbly railing, rust-stained fasteners, and posts showing signs of rot at the base.' } },
       ],
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Decks', item: 'https://brebuilders.com/decks/' },
+        { '@type': 'ListItem', position: 2, name: 'Deck Builder', item: 'https://brebuilders.com/decks/' },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq'] },
   ],
 }
 
-function SL({ text }: { text: string }) {
-  return (
-    <div className="flex items-center gap-3 mb-5">
-      <div className="w-7 h-px bg-teal flex-shrink-0" />
-      <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">{text}</span>
-    </div>
-  )
-}
-
-const DECK_FAQS = [
-  {
-    q: 'How do I know if my deck is structurally unsafe?',
-    a: 'Warning signs: soft or springy boards, visible rot or discoloration, wobbly railings, rusted or missing fasteners, ledger board separation from the house, and visible cracks in support posts. Schedule a free inspection if you notice any of these.',
-  },
-  {
-    q: 'Does BRE Builders build and repair decks at Lake Tahoe?',
-    a: 'Yes. BRE Builders builds and repairs decks at Lake Tahoe properties including Zephyr Cove, Incline Village, and surrounding areas. We have completed structural deck repairs at multiple Tahoe properties. Licensed NV #0085999.',
-  },
-  {
-    q: 'How long does a deck repair take in Reno?',
-    a: 'Minor deck repairs take 1–3 days. Structural repairs (ledger, posts, beams) take 3–7 days. A complete deck rebuild runs 3–7 days depending on size and complexity.',
-  },
-  {
-    q: 'What materials do you use for decks in Reno and Lake Tahoe?',
-    a: 'We build with Trex composite decking, pressure-treated lumber, and stainless/galvanized hardware. Material choice depends on budget, climate exposure, and aesthetics. We discuss options at the estimate.',
-  },
-  {
-    q: 'Do Lake Tahoe decks need special structural requirements?',
-    a: 'Yes. Lake Tahoe properties face snow loads, freeze-thaw cycles, and UV exposure. Decks must meet Washoe County or Douglas County structural requirements. BRE Builders designs and builds to local code.',
-  },
+const DECK_SIGNS = [
+  'Soft or spongy boards when you walk on them',
+  'Visible rot, gray discoloration, or soft wood anywhere',
+  'Ledger board pulling away from the house',
+  'Wobbly or loose railing posts',
+  'Rust-stained decking or fasteners showing',
+  'Posts showing rot or deterioration at the base',
+  'Deck is 10+ years old with no professional inspection',
+  'Squeaking, bouncing, or movement underfoot',
 ]
 
-const SAFETY_SIGNS = [
-  'Soft, springy, or spongy boards underfoot',
-  'Visible rot, discoloration, or fungal growth on wood',
-  'Wobbly or loose railings that move when pushed',
-  'Rusted, corroded, or missing fasteners and hardware',
-  'Ledger board pulling away from the house',
-  'Cracks or splits in support posts or beams',
-  'Deck moves or vibrates when walked on',
-  "Water pooling on deck surface that doesn't drain",
+const FAQS = [
+  { q: 'How much does a new deck cost in Reno NV?', a: 'New deck construction in Reno typically costs $25–$60 per square foot. A 300 sq ft deck runs $7,500–$18,000. Lake Tahoe decks cost more due to snow-load engineering requirements.' },
+  { q: 'Do decks in Lake Tahoe need special construction?', a: 'Yes. Lake Tahoe decks must handle snow loads up to 200 lbs per sq ft, UV degradation, and extreme freeze-thaw cycles. BRE Builders designs and builds to Washoe County and Douglas County structural requirements.' },
+  { q: 'What are signs a deck needs structural repair?', a: 'Signs include: soft or spongy wood, visible rot, ledger pulling away from the house, wobbly railing, rust-stained fasteners, and posts showing rot at the base.' },
+  { q: 'Does BRE Builders repair existing decks?', a: 'Yes. We provide complete structural evaluations and repair failing decks throughout Reno and Lake Tahoe. Many repairs are more cost-effective than full replacement.' },
+  { q: 'What materials does BRE Builders use for decks?', a: 'We build with pressure-treated wood, composite decking (Trex, TimberTech), and tropical hardwoods. For Lake Tahoe, we recommend composite or aluminum for maximum durability against snow and UV.' },
 ]
 
 export default function DecksPage() {
@@ -114,233 +77,122 @@ export default function DecksPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-
       <main>
-        {/* ── HERO: safety + beauty — Lake Tahoe deck photo ──────────────── */}
-        {/* Mobile: safety urgency "Is your deck safe this season?"
-            Desktop: Lake Tahoe visual + new deck aspiration */}
-        <section className="relative min-h-[70vh] lg:min-h-[78vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
-          {/* Desktop: hillside deck repair photo (dramatic) */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={IMGS.repairs_arun}
-            alt="Hillside Deck Repair Reinforced Support Beams Lake Tahoe NV BRE Builders"
-            className="absolute inset-0 w-full h-full object-cover hidden md:block"
-            fetchPriority="high"
-          />
-          {/* Mobile: Charolette finished deck (aspirational) */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={IMGS.deck_charolette}
-            alt="Custom Deck Build Smooth Sealed Surface BRE Builders Sparks NV"
-            className="absolute inset-0 w-full h-full object-cover md:hidden"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/55 to-void/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent hidden md:block" />
+        <ServiceHeroSection hero={{
+          bgDesktop: IMGS.repairs_arun,
+          bgMobile: IMGS.deck_charolette,
+          eyebrow: 'Deck Builder · Reno NV & Lake Tahoe',
+          h1Lines: ['Deck Builder', 'Reno & Lake Tahoe'],
+          h1Ghost: 'Snow-load rated. Built to last.',
+          lead: 'New deck construction and structural repair in Reno, NV and Lake Tahoe. Snow-load engineered builds, composite and wood, full permit handling. NV License #0085999.',
+          badges: ['Snow Load Expertise', 'Full Structural Repair', 'Composite & Wood', 'Free Estimates'],
+          ctaPrimaryLabel: 'Get a Free Deck Estimate →',
+          ctaPrimaryHref: '/contact?service=deck',
+          ctaSecondaryLabel: 'Lake Tahoe Deck Repair',
+          ctaSecondaryHref: '/service-areas/lake-tahoe/',
+          urgencyNote: 'Deck inspections available same-week — free with any estimate',
+          stats: [{ n: '$25', label: 'Per Sq Ft' }, { n: '35+', label: 'Years Exp.' }, { n: 'Free', label: 'Inspection' }],
+          license: 'NV',
+        }} />
 
-          <div className="relative z-10 container">
-            <div className="max-w-[580px]">
-              <div className="animate-fade-up-1 flex items-center gap-3 mb-5">
-                <div className="w-6 h-px bg-teal" />
-                <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">
-                  Deck Builder & Repair · Reno & Lake Tahoe
-                </span>
-              </div>
-
-              <h1 className="animate-fade-up-2 font-display font-light text-[clamp(38px,6vw,76px)] leading-[0.95] tracking-tight text-white mb-4">
-                Deck Builder
-                <br />
-                Reno NV &
-                <br />
-                <span className="italic text-teal">Lake Tahoe</span>
-              </h1>
-
-              <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.75] text-white/70 mb-5 max-w-[460px]">
-                New deck construction and structural deck repair. Reno, Sparks, Carson City, and Lake
-                Tahoe. Trex composite and pressure-treated builds. Licensed NV #0085999.
-              </p>
-
-              <div className="animate-fade-up-3 flex flex-wrap gap-2 mb-6">
-                {['New Decks', 'Structural Repair', 'Lake Tahoe Specialist', 'Free Inspection'].map((b) => (
-                  <span key={b} className="font-mono text-[10px] tracking-wider text-teal border border-teal/30 bg-teal/[0.08] px-2.5 py-1 rounded-md">
-                    ✓ {b}
-                  </span>
-                ))}
-              </div>
-
-              <div className="animate-fade-up-4">
-                {/* Mobile: safety-first CTA */}
-                <div className="md:hidden mb-4">
-                  <p className="font-display text-[18px] text-yellow-300/80 mb-4 leading-snug">
-                    Is your deck safe this season?
-                  </p>
-                  <div className="flex gap-3">
-                    <a href={SITE.phoneHref} className="btn-primary flex-1 justify-center">📞 Free Inspection</a>
-                    <Link href="/contact?service=decks" className="btn-ghost flex-1 justify-center">Get Quote</Link>
-                  </div>
-                </div>
-                {/* Desktop: build-first */}
-                <div className="hidden md:flex gap-3 mb-5">
-                  <Link href="/contact?service=decks" className="btn-primary">Get a Free Deck Quote →</Link>
-                  <Link href="/blog/deck-safety-warning-signs-reno-lake-tahoe/" className="btn-ghost">8 Safety Warning Signs</Link>
-                </div>
-                <p className="font-mono text-[11px] text-white/30 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse flex-shrink-0" />
-                  Deck rebuilds: 3–7 days · Minor repairs: 1–3 days
-                </p>
-              </div>
+        {/* Safety checker strip */}
+        <section className="bg-panel border-y border-white/[0.06]">
+          <div className="container py-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="font-mono text-[10px] tracking-[2px] uppercase text-teal">Quick Safety Checker</span>
+              <div className="h-px bg-white/[0.06] flex-1" />
+              <Link href="/contact?service=deck&urgency=inspection" className="font-mono text-[11px] text-teal/60 hover:text-teal transition-colors hidden md:block">Request Free Inspection →</Link>
             </div>
-          </div>
-        </section>
-
-        {/* ── SAFETY CHECKER ─────────────────────────────────────────────── */}
-        <section className="py-20 lg:py-28 bg-deep">
-          <div className="container">
-            <SL text="Deck Safety" />
-            <h2 className="font-display text-[clamp(28px,4vw,52px)] font-light leading-[1.05] tracking-tight mb-4">
-              8 Signs Your Deck Is No Longer Safe.
-            </h2>
-            <p className="text-[15px] text-cream/55 leading-relaxed max-w-[560px] mb-10">
-              Reno and Lake Tahoe decks take a beating from freeze-thaw cycles, UV exposure, and
-              seasonal snow loads. Check for these warning signs before the season starts.
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              {DECK_SIGNS.slice(0, 8).map((sign, i) => (
+                <div key={i} className="flex items-start gap-2 text-[12px] text-cream/45">
+                  <span className="text-gold/60 flex-shrink-0 mt-0.5">□</span>
+                  <span>{sign}</span>
+                </div>
+              ))}
+            </div>
+            <p className="font-mono text-[11px] text-cream/30 mt-4">
+              2+ items checked? Your deck needs a professional inspection.{' '}
+              <Link href="/contact?service=deck" className="text-teal hover:underline">Request one free →</Link>
             </p>
-
-            <div className="grid md:grid-cols-2 gap-3 mb-10">
-              {SAFETY_SIGNS.map((sign, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 bg-panel rounded-xl border border-white/[0.055]">
-                  <span className="font-mono text-[11px] text-teal/50 flex-shrink-0 mt-0.5">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="text-[13px] text-cream/60 leading-relaxed">{sign}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-4">
-              <Link href="/contact?service=decks" className="btn-primary">
-                Request Free Deck Inspection →
-              </Link>
-              <Link href="/blog/deck-safety-warning-signs-reno-lake-tahoe/" className="btn-ghost">
-                Read: Deck Safety Warning Signs →
-              </Link>
-            </div>
           </div>
         </section>
 
-        {/* ── DECK GALLERY ────────────────────────────────────────────────── */}
-        <section className="py-20 lg:py-28 bg-void">
-          <div className="container">
-            <SL text="Deck Projects" />
-            <h2 className="font-display text-[clamp(28px,4vw,52px)] font-light leading-[1.05] tracking-tight mb-10">
-              Reno & Lake Tahoe
-              <br /><span className="italic text-teal">Deck Work.</span>
-            </h2>
-
-            {/* Mobile: carousel */}
-            <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-4" style={{ scrollSnapType: 'x mandatory' }}>
-              {[
-                { src: IMGS.repairs_arun, alt: 'Hillside Deck Repair Reinforced Support Beams Lake Tahoe NV', cap: 'Hillside Deck Repair — Lake Tahoe' },
-                { src: IMGS.deck_charolette, alt: 'Custom Deck Build Smooth Sealed Surface Sparks NV', cap: "Charolette's Deck — Sparks, NV" },
-                { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Brackets Securing Deck to CMU Wall Lake Tahoe', cap: 'Structural Reinforcement — Lake Tahoe' },
-                { src: IMGS.lt(2), alt: 'Exterior Deck Renovation Lake Tahoe Full Home Renovation', cap: 'Deck Renovation — Zephyr Cove' },
-              ].map((img, i) => (
-                <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img.src} alt={img.alt} className="w-full h-52 object-cover rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
-                  <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.cap}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Desktop: masonry grid */}
-            <div className="hidden md:grid grid-cols-3 gap-4">
-              <div className="col-span-2 overflow-hidden rounded-xl group">
+        {/* Photos */}
+        <PageSection bg="bg-deep">
+          <SectionLabel text="Deck Projects" />
+          <SectionHeading line1="Built for Every Season." line2italic="Engineered to Code." size="lg" className="mb-10" />
+          <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-2" style={{ scrollSnapType: 'x mandatory' }}>
+            {[
+              { src: IMGS.deck_charolette, alt: "Charolette's Deck Smooth Sealed Surface BRE Builders Reno", cap: "Charolette's Deck · Reno NV" },
+              { src: IMGS.repairs_arun, alt: 'Hillside Deck Reinforcement Support Beams Lake Tahoe BRE Builders', cap: 'Hillside Deck Repair · Lake Tahoe' },
+              { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Bracket System Deck Repair Lake Tahoe BRE Builders', cap: 'Structural Reinforcement · Lake Tahoe' },
+              { src: IMGS.lt(2), alt: 'Deck Structure Renovation Lake Tahoe BRE Builders', cap: 'Deck Renovation · Zephyr Cove' },
+            ].map((p, i) => (
+              <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={IMGS.repairs_arun} alt="Hillside Deck Repair Reinforced Support Beams Lake Tahoe NV BRE Builders" className="w-full object-cover group-hover:scale-[1.03] transition-transform duration-700" style={{ height: '340px' }} loading="eager" />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">Hillside Deck Repair — Lake Tahoe, NV</p>
+                <img src={p.src} alt={p.alt} className="w-full h-52 object-cover rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
+                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
               </div>
-              <div className="flex flex-col gap-4">
-                <div className="overflow-hidden rounded-xl group">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={IMGS.deck_charolette} alt="Custom Deck Build Smooth Sealed Surface Sparks NV BRE Builders" className="w-full h-40 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading="eager" />
-                  <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">Custom Deck — Sparks, NV</p>
-                </div>
-                <div className="overflow-hidden rounded-xl group">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={IMGS.repairs_deck_lt} alt="Steel Angle Brackets Deck Structural Reinforcement Lake Tahoe BRE Builders" className="w-full h-40 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading="lazy" />
-                  <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">Steel Bracket Repair — Lake Tahoe</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+          <div className="hidden md:grid grid-cols-4 gap-4">
+            {[
+              { src: IMGS.deck_charolette, alt: "Charolette's Deck Sealed Surface BRE Builders Reno NV", cap: "Charolette's Deck · Reno NV" },
+              { src: IMGS.repairs_arun, alt: 'Hillside Deck Support Beam Reinforcement Lake Tahoe', cap: 'Hillside Deck Repair · Lake Tahoe' },
+              { src: IMGS.repairs_deck_lt, alt: 'Steel Bracket System Lake Tahoe Deck Structural Repair', cap: 'Steel Bracket System · Lake Tahoe' },
+              { src: IMGS.lt(3), alt: 'Deck Railing Renovation Lake Tahoe BRE Builders', cap: 'Deck Railing · Zephyr Cove' },
+            ].map((p, i) => (
+              <div key={i} className="group overflow-hidden rounded-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.src} alt={p.alt} className="w-full h-48 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading={i < 2 ? 'eager' : 'lazy'} />
+                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
+              </div>
+            ))}
+          </div>
+        </PageSection>
 
-        {/* ── FAQ + AEO ─────────────────────────────────────────────────── */}
-        <section className="py-20 lg:py-28 bg-panel border-y border-white/[0.05]">
-          <div className="container">
-            <div className="grid lg:grid-cols-2 gap-16">
-              <div>
-                <SL text="Deck Building & Repair in Reno" />
-                <h2 className="font-display text-[clamp(26px,3.5vw,46px)] font-light leading-[1.1] tracking-tight mb-6">
-                  The Deck Contractor
-                  <br /><span className="italic text-teal">Reno Trusts.</span>
-                </h2>
-                <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55 mb-8">
-                  <p>
-                    BRE Builders builds and repairs decks throughout Reno, Sparks, Carson City, and Lake Tahoe.
-                    We've repaired hillside decks in Zephyr Cove, reinforced balconies attached to CMU walls, and
-                    built new decks from the ground up across Northern Nevada.
-                  </p>
-                  <p>
-                    Every deck project begins with a structural assessment. We use Trex composite decking,
-                    pressure-treated lumber, and galvanized or stainless hardware rated for the local climate.
-                    All work is licensed (NV #0085999) and permit-compliant.
-                  </p>
-                </div>
-                <div className="hidden md:flex flex-wrap gap-3">
-                  <Link href="/projects/lake-tahoe-deck-repair" className="btn-ghost text-[12px] py-2 px-4">Lake Tahoe Deck Project →</Link>
-                  <Link href="/projects/arun-deck-repair" className="btn-ghost text-[12px] py-2 px-4">Hillside Deck Repair →</Link>
-                  <Link href="/blog/deck-safety-warning-signs-reno-lake-tahoe/" className="btn-ghost text-[12px] py-2 px-4">Deck Safety Blog Post →</Link>
-                </div>
-              </div>
-              <div>
-                <SL text="Common Questions" />
-                <FAQAccordion items={DECK_FAQS} />
+        <ServiceFAQSection
+          faqs={FAQS}
+          label="Deck Questions"
+          aeoContent={
+            <div>
+              <SectionLabel text="Deck Builder Reno NV & Lake Tahoe" />
+              <SectionHeading line1="Built for the Mountain." line2italic="Engineered to Last." size="md" className="mb-6" />
+              <SpeakableBlock className="mb-6">
+                <p>BRE Builders builds and repairs decks throughout Reno, Sparks, and Lake Tahoe. In the Reno metro, decks face UV exposure, summer heat, and winter freeze-thaw cycles that accelerate wood deterioration. At Lake Tahoe, snow loads can reach 200 lbs per square foot — decks must be engineered to handle it.</p>
+                <p>Our licensed team handles everything from permit applications through final inspection. Whether you need a new deck, structural reinforcement, composite replacement, or railing upgrades, BRE Builders provides one licensed team for the entire job. NV License #0085999.</p>
+              </SpeakableBlock>
+              <div className="hidden md:flex flex-wrap gap-3">
+                <Link href="/service-areas/lake-tahoe/" className="btn-ghost text-[12px] py-2 px-4">Lake Tahoe Decks →</Link>
+                <Link href="/repairs/" className="btn-ghost text-[12px] py-2 px-4">Structural Repairs →</Link>
               </div>
             </div>
-          </div>
-        </section>
+          }
+        />
 
-        {/* ── CTA ───────────────────────────────────────────────────────── */}
-        <section className="md:hidden bg-void py-12">
-          <div className="container">
-            <div className="bg-teal/[0.06] border border-teal/20 rounded-2xl p-6">
-              <p className="font-display text-[22px] text-cream leading-snug mb-2">Don't wait for a deck failure.</p>
-              <p className="text-[14px] text-cream/50 mb-6">Free inspection for Reno and Lake Tahoe decks. NV #0085999.</p>
-              <a href={SITE.phoneHref} className="btn-primary w-full justify-center py-4 text-[15px] mb-3">📞 {SITE.phone}</a>
-              <Link href="/contact?service=decks" className="btn-ghost w-full justify-center py-3 text-[13px]">Request a Quote Online</Link>
-            </div>
-          </div>
-        </section>
+        <RelatedServices items={[
+          { label: 'Structural Repairs', href: '/repairs/', desc: 'If the deck is failing' },
+          { label: 'Lake Tahoe Services', href: '/service-areas/lake-tahoe/', desc: 'Mountain deck experts' },
+          { label: 'Home Additions', href: '/additions/', desc: 'Expand your space' },
+          { label: 'Custom Homes', href: '/new-home/', desc: 'Full builds' },
+        ]} />
 
-        <section className="hidden md:block bg-void relative py-24 overflow-hidden">
-          <div className="absolute inset-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={IMGS.lt(14)} alt="Exterior Deck Renovation Lake Tahoe BRE Builders" className="w-full h-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-void/88" />
-          </div>
-          <div className="relative container text-center">
-            <h2 className="font-display text-[clamp(36px,5vw,68px)] font-light leading-[1.0] tracking-tight text-white mb-5">
-              Build or Repair.<br /><span className="italic text-teal">Done Right the First Time.</span>
-            </h2>
-            <p className="text-[16px] text-white/50 max-w-md mx-auto mb-10">Free estimates · Licensed NV #0085999 · Reno & Lake Tahoe</p>
-            <div className="flex items-center justify-center gap-4">
-              <Link href="/contact?service=decks" className="btn-primary px-10 py-4 text-[14px]">Get a Free Deck Quote →</Link>
-              <a href={SITE.phoneHref} className="btn-ghost px-10 py-4 text-[14px] font-mono">{SITE.phone}</a>
-            </div>
-          </div>
-        </section>
+        <MobileCTABox
+          headline="Is your deck safe this season?"
+          subtext="Free inspection with any estimate. NV #0085999. Reno & Lake Tahoe."
+          ctaLabel="Request a Free Deck Inspection"
+          ctaHref="/contact?service=deck"
+        />
+        <DesktopCTASection
+          bgImage={IMGS.deck_charolette}
+          bgAlt="BRE Builders completed deck Charolette's sealed surface Reno NV"
+          headline="A Deck That Lasts"
+          headlineItalic="Through Every Season."
+          subtext="Free estimates · Snow-load rated · NV #0085999"
+          ctaLabel="Get a Free Deck Estimate →"
+          ctaHref="/contact?service=deck"
+        />
       </main>
       <Footer />
     </>

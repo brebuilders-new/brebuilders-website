@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Structural+Repairs+Reno+NV&sub=Foundation+%26+Dry+Rot+%C2%B7+Free+Inspection+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/repairs/' },
+  alternates: { canonical: `${SITE_URL}/repairs/` },
 }
 
 const schema = {

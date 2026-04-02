@@ -3,7 +3,7 @@
 // WP fallback: https://brebuilders.com/wp-content/uploads/ (remove when WP shuts down)
 
 const CDN = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main'
-const WP  = 'https://brebuilders.com/wp-content/uploads'
+const WP  = 'https://brebuilders.com/wp-content/uploads' // DEPRECATED — remove after WP shutdown
 
 // Helper: use CDN if file is downloaded, otherwise WP
 function img(filename: string, hasCdn = false): string {

@@ -284,6 +284,9 @@ export async function POST(req: NextRequest) {
 
           if (imageRecord?.id) {
             savedImageRecords.push({ imageId: imageRecord.id, url: publicUrl, service: img.service })
+            console.log('Image record saved:', imageRecord.id)
+          } else {
+            console.error('Image record insert returned no id — imageRecord:', JSON.stringify(imageRecord))
           }
         } catch (imgErr) {
           console.error('Image processing error:', imgErr)
@@ -291,7 +294,9 @@ export async function POST(req: NextRequest) {
       }
 
       // Run Claude Vision analysis inline (Vercel kills fire-and-forget after response)
+      console.log('savedImageRecords count:', savedImageRecords.length)
       if (savedImageRecords.length > 0) {
+        console.log('Starting Claude Vision analysis for', savedImageRecords.length, 'images')
         await runImageAnalysis(savedLead.id, savedImageRecords)
       }
     }

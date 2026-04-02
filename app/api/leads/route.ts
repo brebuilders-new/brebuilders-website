@@ -270,9 +270,15 @@ export async function POST(req: NextRequest) {
           // Save record to lead_images table
           // Note: insert().select().single() returns null with sb_secret key
           // Use insert then separate select to reliably get the new row id
+          // Pre-generate UUID so we don't need a select-back after insert
+          // supabase-js insert().select() returns empty with sb_secret key
+          const { randomUUID } = await import('crypto')
+          const imageId = randomUUID()
+
           const { error: imgInsertError } = await supabaseAdmin
             .from('lead_images')
             .insert({
+              id:           imageId,
               lead_id:      savedLead.id,
               service:      img.service,
               storage_path: storagePath,
@@ -287,20 +293,7 @@ export async function POST(req: NextRequest) {
             continue
           }
 
-          // Fetch back the id (use array result — .single() errors on 0 rows)
-          const { data: imageRows } = await supabaseAdmin
-            .from('lead_images')
-            .select('id')
-            .eq('lead_id', savedLead.id)
-            .order('created_at', { ascending: false })
-            .limit(1)
-
-          const imageId = imageRows?.[0]?.id
-          if (imageId) {
-            savedImageRecords.push({ imageId, url: publicUrl, service: img.service })
-          } else {
-            console.error('Could not retrieve image record id — rows returned:', imageRows?.length ?? 0)
-          }
+          savedImageRecords.push({ imageId, url: publicUrl, service: img.service })
         } catch (imgErr) {
           console.error('Image processing error:', imgErr)
         }

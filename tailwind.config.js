@@ -8,18 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        void: '#050a0f',
-        deep: '#0a1520',
-        panel: '#0f1e2d',
-        surface: '#142233',
-        teal: '#1ecfc9',
-        gold: '#c8923a',
-        cream: '#f0ece4',
+        void:    '#141210',
+        deep:    '#1c1916',
+        panel:   '#24201c',
+        surface: '#2e2922',
+        teal:    '#c07d3e',
+        gold:    '#d4953a',
+        cream:   '#f2ede6',
       },
       fontFamily: {
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
-        ui: ['Syne', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
+        ui:      ['DM Sans', 'sans-serif'],
+        mono:    ['DM Mono', 'monospace'],
       },
     },
   },

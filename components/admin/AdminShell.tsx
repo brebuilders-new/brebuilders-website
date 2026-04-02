@@ -79,7 +79,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   )
 
   return (
-    <div className="flex min-h-screen" style={{ background: '#060d14', color: '#e8e4dc', fontFamily: 'system-ui, sans-serif' }}>
+    <div className="flex min-h-screen" style={{ background: '#141210', color: '#e8e4dc', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* Desktop sidebar */}
       <aside className="hidden md:flex flex-col w-[200px] flex-shrink-0 sticky top-0 h-screen border-r border-white/[0.06]">
@@ -88,7 +88,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
 
       {/* Mobile header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 border-b border-white/[0.06]"
-        style={{ background: '#060d14' }}>
+        style={{ background: '#141210' }}>
         <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase">BRE Builders · Admin</p>
         <button
           onClick={() => setMobileOpen(true)}
@@ -103,7 +103,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
         <>
           <div className="md:hidden fixed inset-0 bg-black/60 z-40" onClick={() => setMobileOpen(false)} />
           <aside className="md:hidden fixed top-0 left-0 bottom-0 w-[220px] z-50 border-r border-white/[0.06]"
-            style={{ background: '#060d14' }}>
+            style={{ background: '#141210' }}>
             <SidebarContent onClick={() => setMobileOpen(false)} />
           </aside>
         </>

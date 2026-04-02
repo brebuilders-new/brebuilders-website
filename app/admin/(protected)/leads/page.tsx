@@ -104,7 +104,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '24px' }}>
         <div>
-          <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 6px' }}>All Submissions</p>
+          <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>All Submissions</p>
           <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Leads</h1>
         </div>
         <p style={{ fontFamily: 'monospace', fontSize: '12px', color: 'rgba(232,228,220,0.3)', margin: 0 }}>{leads?.length || 0} results</p>
@@ -122,8 +122,8 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
               style={{
                 padding: '7px 14px', borderRadius: '8px', fontSize: '12px', textDecoration: 'none',
                 fontFamily: 'monospace', transition: 'all 0.15s',
-                background: active ? '#1cb8b3' : 'rgba(255,255,255,0.04)',
-                color: active ? '#060d14' : 'rgba(232,228,220,0.5)',
+                background: active ? '#c07d3e' : 'rgba(255,255,255,0.04)',
+                color: active ? '#141210' : 'rgba(232,228,220,0.5)',
                 border: active ? 'none' : '1px solid rgba(255,255,255,0.07)',
                 fontWeight: active ? 600 : 400,
               }}
@@ -157,7 +157,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       </div>
 
       {/* Table */}
-      <div style={{ background: '#0c1a27', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
+      <div style={{ background: '#1c1714', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
         {!leads?.length ? (
           <div style={{ padding: '60px', textAlign: 'center', color: 'rgba(232,228,220,0.3)', fontFamily: 'monospace', fontSize: '13px' }}>
             No leads match this filter.
@@ -187,7 +187,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
 
                   >
                     <td style={cell}>
-                      <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3' }}>
+                      <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#c07d3e' }}>
                         BRE-{String(lead.lead_number).padStart(4, '0')}
                       </span>
                     </td>
@@ -219,7 +219,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                       {timeAgo(lead.created_at)}
                     </td>
                     <td style={cell}>
-                      <Link href={`/admin/leads/${lead.id}`} style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3', textDecoration: 'none' }}>
+                      <Link href={`/admin/leads/${lead.id}`} style={{ fontFamily: 'monospace', fontSize: '11px', color: '#c07d3e', textDecoration: 'none' }}>
                         Open →
                       </Link>
                     </td>

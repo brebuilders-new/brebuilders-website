@@ -63,7 +63,7 @@ export default async function AdminDashboard() {
   const stats = await getStats()
 
   const cards = [
-    { label: 'Total Leads',   value: stats.total, color: '#1cb8b3' },
+    { label: 'Total Leads',   value: stats.total, color: '#c07d3e' },
     { label: 'New / Unread',  value: stats.new,   color: '#3b82f6' },
     { label: 'Hot Leads 🔥',  value: stats.hot,   color: '#22c55e' },
     { label: 'Warm Leads ⚡', value: stats.warm,  color: '#f59e0b' },
@@ -82,14 +82,14 @@ export default async function AdminDashboard() {
     <div className="p-4 md:p-8">
       {/* Header */}
       <div style={{ marginBottom: '28px' }}>
-        <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 6px' }}>Overview</p>
+        <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>Overview</p>
         <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Dashboard</h1>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
         {cards.map(c => (
-          <div key={c.label} style={{ background: '#0c1a27', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.07)', padding: '16px 18px' }}>
+          <div key={c.label} style={{ background: '#1c1714', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.07)', padding: '16px 18px' }}>
             <p style={{ fontSize: '11px', color: 'rgba(232,228,220,0.4)', fontFamily: 'monospace', textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 8px' }}>{c.label}</p>
             <p style={{ fontSize: '32px', fontWeight: 600, color: c.color, margin: 0, lineHeight: 1 }}>{c.value}</p>
           </div>
@@ -97,10 +97,10 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Recent leads */}
-      <div style={{ background: '#0c1a27', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
+      <div style={{ background: '#1c1714', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
         <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <p style={{ margin: 0, fontSize: '14px', fontWeight: 500, color: '#e8e4dc' }}>Recent Leads</p>
-          <Link href="/admin/leads" style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3', textDecoration: 'none' }}>View all →</Link>
+          <Link href="/admin/leads" style={{ fontFamily: 'monospace', fontSize: '11px', color: '#c07d3e', textDecoration: 'none' }}>View all →</Link>
         </div>
 
         {stats.recent.length === 0 ? (
@@ -129,7 +129,7 @@ export default async function AdminDashboard() {
                 return (
                   <tr key={lead.id as string} style={{ cursor: 'pointer' }}>
                     <td style={cell}>
-                      <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3' }}>
+                      <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#c07d3e' }}>
                         BRE-{String(lead.lead_number).padStart(4, '0')}
                       </span>
                     </td>
@@ -158,7 +158,7 @@ export default async function AdminDashboard() {
                       {timeAgo(lead.created_at as string)}
                     </td>
                     <td style={cell}>
-                      <Link href={`/admin/leads/${lead.id as string}`} style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3', textDecoration: 'none' }}>
+                      <Link href={`/admin/leads/${lead.id as string}`} style={{ fontFamily: 'monospace', fontSize: '11px', color: '#c07d3e', textDecoration: 'none' }}>
                         View →
                       </Link>
                     </td>

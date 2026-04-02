@@ -33,10 +33,10 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: '#060d14' }}>
+    <div className="min-h-screen flex items-center justify-center" style={{ background: '#141210' }}>
       <div style={{ width: '100%', maxWidth: '360px', padding: '0 24px' }}>
         <div style={{ marginBottom: '32px', textAlign: 'center' }}>
-          <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 8px' }}>BRE Builders</p>
+          <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 8px' }}>BRE Builders</p>
           <h1 style={{ fontSize: '24px', fontWeight: 400, color: '#e8e4dc', margin: 0 }}>Admin Dashboard</h1>
         </div>
 
@@ -65,8 +65,8 @@ export default function AdminLoginPage() {
             type="submit"
             disabled={loading || !password}
             style={{
-              background: loading || !password ? 'rgba(255,255,255,0.05)' : '#1cb8b3',
-              color: loading || !password ? 'rgba(232,228,220,0.3)' : '#060d14',
+              background: loading || !password ? 'rgba(255,255,255,0.05)' : '#c07d3e',
+              color: loading || !password ? 'rgba(232,228,220,0.3)' : '#141210',
               border: 'none',
               borderRadius: '12px',
               padding: '14px',

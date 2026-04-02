@@ -2,28 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────────────────────────── */
 :root {
-  --void:    #050a0f;
-  --deep:    #0a1520;
-  --panel:   #0f1e2d;
-  --surface: #142233;
+  /* Warm charcoal — aged concrete, dark walnut, permanence */
+  --void:    #141210;
+  --deep:    #1c1916;
+  --panel:   #24201c;
+  --surface: #2e2922;
   --edge:    rgba(255,255,255,0.07);
-  --teal:    #1ecfc9;
-  --teal-dim:rgba(30,207,201,0.10);
-  --gold:    #c8923a;
-  --cream:   #f0ece4;
-  --muted:   rgba(240,236,228,0.45);
-  --dim:     rgba(240,236,228,0.22);
+  /* Bronze/copper — craftsmanship, warmth, authority */
+  --teal:    #c07d3e;
+  --teal-dim:rgba(192,125,62,0.10);
+  /* Deeper amber for high-contrast CTAs */
+  --gold:    #d4953a;
+  /* Warm paper white — heavy stock, not digital white */
+  --cream:   #f2ede6;
+  --muted:   rgba(242,237,230,0.50);
+  --dim:     rgba(242,237,230,0.22);
 }
 
 /* ─── RESET ──────────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   background: var(--void);
   color: var(--cream);
   overflow-x: hidden;
@@ -35,10 +39,10 @@ body {
 /* ─── SCROLLBAR ──────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--void); }
-::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; opacity: .4; }
+::-webkit-scrollbar-thumb { background: rgba(192,125,62,0.5); border-radius: 2px; }
 
 /* ─── SELECTION ──────────────────────────────────────────────────────────────── */
-::selection { background: rgba(30,207,201,0.18); color: var(--cream); }
+::selection { background: rgba(192,125,62,0.20); color: var(--cream); }
 
 /* ─── FOCUS ──────────────────────────────────────────────────────────────────── */
 :focus-visible { outline: 1.5px solid var(--teal); outline-offset: 3px; }
@@ -61,7 +65,7 @@ body {
 }
 #cursor-ring {
   width: 32px; height: 32px;
-  border: 1px solid rgba(30,207,201,.3);
+  border: 1px solid rgba(192,125,62,.35);
   transition: all .12s ease;
 }
 @media (max-width: 768px) {
@@ -100,7 +104,7 @@ body {
 /* ─── SECTION LABEL ──────────────────────────────────────────────────────────── */
 .section-label {
   display: flex; align-items: center; gap: 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
   color: var(--teal); margin-bottom: 16px;
 }
@@ -115,8 +119,8 @@ body {
 /* ─── GRID BACKGROUND ───────────────────────────────────────────────────────── */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(30,207,201,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30,207,201,.03) 1px, transparent 1px);
+    linear-gradient(rgba(192,125,62,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(192,125,62,.03) 1px, transparent 1px);
   background-size: 80px 80px;
 }
 
@@ -134,9 +138,9 @@ body {
 }
 
 /* ─── TYPOGRAPHY HELPERS ─────────────────────────────────────────────────────── */
-.font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
-.font-mono    { font-family: 'JetBrains Mono', monospace; }
-.font-sans    { font-family: 'Syne', sans-serif; }
+.font-display { font-family: 'Playfair Display', Georgia, serif; }
+.font-mono    { font-family: 'DM Mono', monospace; }
+.font-sans    { font-family: 'DM Sans', sans-serif; }
 
 /* ─── IMAGE HELPERS ──────────────────────────────────────────────────────────── */
 img { max-width: 100%; height: auto; display: block; }
@@ -162,7 +166,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: inline-flex; align-items: center; gap: 8px;
   padding: 12px 28px; border-radius: 8px;
   background: var(--teal); color: var(--void);
-  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
   letter-spacing: 0.3px; text-decoration: none;
   transition: background .2s, transform .15s;
   cursor: pointer; border: none;
@@ -174,7 +178,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 12px 28px; border-radius: 8px;
   background: transparent; color: var(--cream);
   border: 1px solid rgba(255,255,255,.15);
-  font-family: 'Syne', sans-serif; font-size: 13px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px;
   text-decoration: none; transition: all .2s; cursor: pointer;
 }
 .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
@@ -184,7 +188,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 12px 28px; border-radius: 8px;
   background: transparent; color: var(--teal);
   border: 1px solid rgba(30,207,201,.4);
-  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  font-family: 'DM Mono', monospace; font-size: 12px;
   text-decoration: none; transition: all .2s; cursor: pointer;
 }
 .btn-teal-outline:hover { background: rgba(30,207,201,.08); border-color: var(--teal); }
@@ -216,11 +220,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .page-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(5,10,15,.92) 0%, rgba(5,10,15,.55) 50%, rgba(5,10,15,.3) 100%);
+  background: linear-gradient(to top, rgba(14,12,10,.95) 0%, rgba(14,12,10,.55) 50%, rgba(14,12,10,.2) 100%);
 }
 .page-hero-overlay-side {
   position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(5,10,15,.75) 0%, rgba(5,10,15,.2) 60%, transparent 100%);
+  background: linear-gradient(to right, rgba(14,12,10,.80) 0%, rgba(14,12,10,.20) 60%, transparent 100%);
 }
 
 /* ─── SPEAKABLE CONTENT ──────────────────────────────────────────────────────── */
@@ -476,16 +480,15 @@ img { max-width: 100%; height: auto; display: block; }
    Gold = value + aspiration. The scroll journey moves warm → action.
    ─────────────────────────────────────────────────────────────────────────── */
 [data-theme="home"] {
-  --void:    #04080e;
-  --deep:    #070f1c;
-  --panel:   #0c1828;
-  --surface: #112030;
+  --void:    #100e0c;
+  --deep:    #191510;
+  --panel:   #221d17;
+  --surface: #2b2520;
 }
-/* Mobile homepage: darker, more contrast, phone CTA dominant */
 @media (max-width: 768px) {
   [data-theme="home"] {
-    --void:  #030609;
-    --panel: #091420;
+    --void:  #0c0a08;
+    --panel: #1c1812;
   }
 }
 

@@ -37,7 +37,7 @@ export default async function PipelinePage() {
   return (
     <div style={{ padding: '32px' }}>
       <div style={{ marginBottom: '24px' }}>
-        <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 6px' }}>Lead Pipeline</p>
+        <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>Lead Pipeline</p>
         <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Pipeline</h1>
       </div>
 
@@ -63,7 +63,7 @@ export default async function PipelinePage() {
                       href={`/admin/leads/${lead.id}`}
                       style={{
                         display: 'block', textDecoration: 'none',
-                        background: '#0c1a27', borderRadius: '10px',
+                        background: '#1c1714', borderRadius: '10px',
                         border: `1px solid ${stage.border}`,
                         padding: '12px',
                         transition: 'border-color 0.15s',

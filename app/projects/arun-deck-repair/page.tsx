@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Arun+Hillside+Deck+Repair&sub=Reinforced+Support+Beams+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/` },
 }
 
 const schema = {

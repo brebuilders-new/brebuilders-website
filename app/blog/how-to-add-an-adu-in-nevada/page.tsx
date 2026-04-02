@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=How+to+Add+an+ADU+in+Nevada&sub=2025+Guide+%C2%B7+Costs%2C+Permits%2C+Timeline+%C2%B7+Reno+NV&badge=ADU+Guide`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide/' },
+  alternates: { canonical: `${SITE_URL}/how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide/` },
 }
 
 const schema = {

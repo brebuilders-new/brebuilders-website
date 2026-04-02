@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "30-Year-Old Home Repairs in Reno — Critical Issues to Inspect | BRE Builders",
   description: "30-year-old Reno homes from the 1990s face compounding structural issues — galvanized pipe corrosion, aluminum wiring, unsafe deck framing, foundation movement. BRE Builders repair guide.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=30-Year-Old+Reno+Home+Repairs&sub=Critical+Issues+in+1990s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/reno-home-repairs-30-year-old-house/' },
+  alternates: { canonical: `${SITE_URL}/reno-home-repairs-30-year-old-house/` },
 }
 
 const schema = {

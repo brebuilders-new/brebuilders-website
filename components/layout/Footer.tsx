@@ -306,20 +306,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            {/* License callout */}
-            <div className="bg-deep border border-l-2 border-l-teal border-white/[0.05] rounded-xl p-4">
-              <div className="font-mono text-[9px] tracking-[2px] uppercase text-cream/30 mb-2">Active Licenses</div>
-              <div className="space-y-1">
-                <div>
-                  <div className="font-mono text-[11px] text-teal">NV #0085999</div>
-                  <div className="font-mono text-[9px] text-cream/30">Nevada Contractor</div>
-                </div>
-                <div>
-                  <div className="font-mono text-[11px] text-teal">CA #1009219</div>
-                  <div className="font-mono text-[9px] text-cream/30">California Contractor</div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Col 4: Company */}
@@ -332,21 +318,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            {/* Social for desktop col 4 */}
-            <div className="flex gap-2 mt-6">
-              {SOCIAL_LINKS.map(s => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-8 h-8 border border-white/[0.08] rounded-lg flex items-center justify-center text-cream/30 hover:text-teal hover:border-teal/40 transition-all"
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
+
           </div>
         </div>
       </div>

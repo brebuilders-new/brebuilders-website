@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 // ─── Portfolio images for inline display ──────────────────────────────────────
@@ -467,6 +468,7 @@ function TypingIndicator() {
 
 // ─── Main chat widget ─────────────────────────────────────────────────────────
 export default function ChatWidget() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState<Msg[]>([])
   const [typing, setTyping] = useState(false)
@@ -505,13 +507,52 @@ export default function ChatWidget() {
     }
   }, [scrollToBottom])
 
-  // Init on first open
+  // Init on first open — page-aware greeting
   const initChat = useCallback(() => {
     if (initiated) return
     setInitiated(true)
-    const step = getStep('start')
-    queueMessages(step.messages)
-  }, [initiated, queueMessages])
+
+    // Detect service from current page URL
+    const pageServiceMap: Record<string, { service: string; label: string }> = {
+      '/services/repairs':            { service: 'repairs',     label: 'structural repair' },
+      '/services/repairs/foundation': { service: 'repairs',     label: 'foundation repair' },
+      '/services/repairs/water':      { service: 'repairs',     label: 'water intrusion' },
+      '/services/adu':                { service: 'adu',         label: 'ADU' },
+      '/services/additions':          { service: 'other',       label: 'home addition' },
+      '/services/new-home':           { service: 'newhome',     label: 'new home build' },
+      '/services/new-home-builds':    { service: 'newhome',     label: 'new home build' },
+      '/services/kitchen-bath':       { service: 'kitchen',     label: 'kitchen & bath remodel' },
+      '/services/decks':              { service: 'decks',       label: 'deck project' },
+      '/services/commercial':         { service: 'commercial',  label: 'commercial project' },
+    }
+
+    const matchedPage = Object.entries(pageServiceMap).find(([path]) => pathname.startsWith(path))
+
+    if (matchedPage) {
+      const [, { service, label }] = matchedPage
+      const id9 = () => Math.random().toString(36).slice(2, 11)
+      const greetMsgs: Msg[] = [
+        {
+          id: id9(), role: 'bot', delay: 300,
+          text: `Hi! Looks like you're researching a ${label}. That's one of our specialties. 👋`,
+        },
+        {
+          id: id9(), role: 'bot', delay: 900,
+          text: 'Want a quick answer or a free estimate? I can help with both.',
+          options: [
+            { label: `📋 Get a free ${label} estimate`, value: service },
+            { label: '❓ I have a quick question', value: '__question' },
+            { label: '🔍 Just browsing', value: '__browse' },
+          ],
+        },
+      ]
+      queueMessages(greetMsgs)
+      setCurrentStep('start')
+    } else {
+      const step = getStep('start')
+      queueMessages(step.messages)
+    }
+  }, [initiated, queueMessages, pathname])
 
   // Pulse after 8s to draw attention
   useEffect(() => {
@@ -561,6 +602,35 @@ export default function ChatWidget() {
         queueMessages(step.messages)
         setCurrentStep('start')
       }, 400)
+      return
+    }
+
+    if (value === '__question') {
+      const botMsg: Msg = {
+        id: Math.random().toString(36).slice(2),
+        role: 'bot',
+        text: "Go ahead — what would you like to know? I can answer questions about timelines, costs, permits, or what to expect.",
+      }
+      setTimeout(() => { setMessages(prev => [...prev, botMsg]); scrollToBottom() }, 400)
+      return
+    }
+
+    if (value === '__browse') {
+      const botMsg: Msg = {
+        id: Math.random().toString(36).slice(2),
+        role: 'bot',
+        text: "No problem. If you have questions or want a free estimate, I'm here. What service are you most interested in?",
+        options: [
+          { label: '🏠 ADU / Guest House', value: 'adu' },
+          { label: '🔧 Structural Repairs', value: 'repairs' },
+          { label: '🪵 Kitchen & Bath', value: 'kitchen' },
+          { label: '🏗️ New Home Build', value: 'newhome' },
+          { label: '🌲 Deck / Outdoor', value: 'decks' },
+          { label: '🏢 Commercial', value: 'commercial' },
+        ],
+      }
+      setTimeout(() => { setMessages(prev => [...prev, botMsg]); scrollToBottom() }, 400)
+      setCurrentStep('start')
       return
     }
 
@@ -620,7 +690,7 @@ export default function ChatWidget() {
       {/* ── CHAT WINDOW ── */}
       {open && (
         <div
-          className="fixed bottom-24 right-4 md:right-6 z-[1000] w-[calc(100vw-32px)] md:w-[380px] max-w-[440px]"
+          className="fixed bottom-[136px] md:bottom-24 right-4 md:right-6 z-[1000] w-[calc(100vw-32px)] md:w-[380px] max-w-[440px]"
           style={{ animation: 'chat-slide-up 0.25s cubic-bezier(0.22,1,0.36,1) forwards' }}
         >
           <div className="flex flex-col rounded-2xl overflow-hidden border border-white/[0.10] shadow-2xl shadow-black/60" style={{ height: '520px', background: '#060d14' }}>
@@ -682,7 +752,7 @@ export default function ChatWidget() {
       )}
 
       {/* ── FAB BUTTON ── */}
-      <div className="fixed bottom-5 right-4 md:right-6 z-[1000]">
+      <div className="fixed bottom-[72px] md:bottom-5 right-4 md:right-6 z-[1000]">
         {/* Pulse ring when unread */}
         {hasUnread && !open && (
           <div

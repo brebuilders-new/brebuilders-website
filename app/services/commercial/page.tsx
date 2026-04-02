@@ -6,10 +6,12 @@ import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
   description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. Free estimates.',
-  alternates: { canonical: 'https://brebuilders.com/commercial-services/' },
+  alternates: { canonical: `${SITE_URL}/commercial-services/` },
 }
 
 const schema = {

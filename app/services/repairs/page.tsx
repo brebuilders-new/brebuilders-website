@@ -15,6 +15,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -211,35 +212,16 @@ export default function RepairsPage() {
           <SectionLabel text="Completed Repairs" />
           <SectionHeading line1="Before Signs Become" line2italic="Bigger Problems." size="lg" className="mb-10" />
           {/* Mobile carousel */}
-          <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-2" style={{ scrollSnapType: 'x mandatory' }}>
-            {[
-              { src: IMGS.repairs_deck_lt, alt: 'Lake Tahoe Deck Steel Bracket Structural Reinforcement BRE Builders', cap: 'Lake Tahoe Deck Repair' },
-              { src: IMGS.repairs_rot, alt: 'Dry Rot Exposure Wall Panel Structural Damage Reno NV', cap: 'Dry Rot Removal' },
-              { src: IMGS.repairs_foundation, alt: 'Foundation Repair Reno NV Clay Soil BRE Builders', cap: 'Foundation Repair' },
-              { src: IMGS.repairs_arun, alt: 'Deck Reinforcement Support Beams Hillside Lake Tahoe', cap: 'Hillside Deck Reinforcement' },
-            ].map((img, i) => (
-              <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={img.alt} className="w-full h-52 object-cover rounded-xl" loading="lazy" />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.cap}</p>
-              </div>
-            ))}
-          </div>
-          {/* Desktop grid */}
-          <div className="hidden md:grid grid-cols-4 gap-4">
-            {[
-              { src: IMGS.repairs_deck_lt, alt: 'Lake Tahoe Deck Steel Bracket Reinforcement BRE Builders', cap: 'Steel Bracket Reinforcement — Lake Tahoe' },
-              { src: IMGS.repairs_rot, alt: 'Extensive Dry Rot Exposure Wall Panel Reno NV Structural Damage', cap: 'Dry Rot Diagnosis & Removal' },
-              { src: IMGS.repairs_foundation, alt: 'Foundation Repair Reno NV BRE Builders Clay Soil', cap: 'Foundation Repair — Reno NV' },
-              { src: IMGS.repairs_arun, alt: 'Hillside Deck Repair Reinforced Support Beams Lake Tahoe', cap: 'Hillside Deck Repair' },
-            ].map((img, i) => (
-              <div key={i} className="group overflow-hidden rounded-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={img.alt} className="w-full h-48 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading="lazy" />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.cap}</p>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid
+            mode="grid"
+            images={[
+              { src: IMGS.repairs_deck_lt,    alt: 'Lake Tahoe Deck Steel Bracket Reinforcement BRE Builders',         title: 'Steel Bracket System',     caption: 'Lake Tahoe — deck-to-wall structural reinforcement' },
+              { src: IMGS.repairs_rot,        alt: 'Dry Rot Exposure Wall Panel Structural Damage Reno NV',             title: 'Dry Rot Removal',          caption: 'Full wall panel rot — remediation + reframe' },
+              { src: IMGS.repairs_foundation, alt: 'Foundation Repair Reno NV Clay Soil BRE Builders',                  title: 'Foundation Repair',        caption: 'Reno, NV — clay soil settlement repair' },
+              { src: IMGS.repairs_arun,       alt: 'Hillside Deck Reinforced Support Beams Lake Tahoe BRE Builders',    title: 'Hillside Deck Repair',     caption: 'Elevated framing on challenging slope — Lake Tahoe' },
+            ]}
+            aspectClass="h-52"
+          />
         </PageSection>
 
         {/* AEO + FAQ */}

@@ -8,6 +8,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -97,14 +98,15 @@ export default function NewHomePage() {
                 <Link href="/contact?service=new-home" className="btn-ghost hidden md:flex">Start Your Build →</Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={IMGS.ripon[3]} alt="Mediterranean Front Elevation Luxury Estate Ripon California BRE Builders" className="col-span-2 h-52 w-full object-cover rounded-xl" loading="eager" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={IMGS.ripon[2]} alt="Grand Foyer Iron Staircase Marble Flooring Ripon Estate" className="h-40 w-full object-cover rounded-xl" loading="lazy" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={IMGS.ripon[1]} alt="Chef's Kitchen Custom Cabinetry Marble Backsplash Ripon CA" className="h-40 w-full object-cover rounded-xl" loading="lazy" />
-            </div>
+            <GalleryGrid
+              mode="grid"
+              images={[
+                { src: IMGS.ripon[3], alt: 'Mediterranean Front Elevation Luxury Estate Ripon California BRE Builders', title: 'Front Elevation',  caption: 'Ripon, CA — Mediterranean luxury estate' },
+                { src: IMGS.ripon[2], alt: 'Grand Foyer Iron Staircase Marble Flooring Ripon Estate',                   title: 'Grand Foyer',     caption: 'Iron staircase, marble flooring' },
+                { src: IMGS.ripon[1], alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Ripon CA",                title: "Chef's Kitchen",  caption: "Custom cabinetry, marble backsplash" },
+              ]}
+              aspectClass="h-44"
+            />
           </div>
         </PageSection>
 

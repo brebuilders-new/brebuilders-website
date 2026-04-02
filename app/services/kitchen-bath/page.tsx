@@ -8,6 +8,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -51,34 +52,16 @@ export default function KitchenBathPage() {
         <PageSection bg="bg-deep">
           <SectionLabel text="Kitchen & Bath Gallery" />
           <SectionHeading line1="Real Projects." line2italic="Real Results." size="lg" className="mb-10" />
-          <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-2" style={{ scrollSnapType: 'x mandatory' }}>
-            {[
-              { src: IMGS.ripon[1], alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Ripon CA BRE Builders", cap: "Chef's Kitchen · Ripon, CA" },
-              { src: IMGS.lt(8), alt: 'Bathroom Renovation Lake Tahoe Interior BRE Builders', cap: 'Bathroom Renovation · Lake Tahoe' },
-              { src: IMGS.lt(10), alt: 'Bathroom Renovation Installation Lake Tahoe BRE Builders', cap: 'Bath Installation · Lake Tahoe' },
-              { src: IMGS.ripon[4], alt: 'Elegant Laundry Suite Custom Cabinetry Brass Hardware Ripon CA', cap: 'Laundry Suite · Ripon, CA' },
-            ].map((p, i) => (
-              <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.alt} className="w-full h-52 object-cover rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
-              </div>
-            ))}
-          </div>
-          <div className="hidden md:grid grid-cols-4 gap-4">
-            {[
-              { src: IMGS.ripon[1], alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Ripon CA", cap: "Chef's Kitchen · Ripon, CA" },
-              { src: IMGS.lt(8), alt: 'Bathroom Renovation Lake Tahoe Interior', cap: 'Bathroom Renovation · Lake Tahoe' },
-              { src: IMGS.lt(10), alt: 'Bathroom Installation Lake Tahoe BRE Builders', cap: 'Bath Installation · Lake Tahoe' },
-              { src: IMGS.ripon[4], alt: 'Laundry Suite Custom Cabinetry Brass Hardware Ripon CA', cap: 'Laundry Suite · Ripon, CA' },
-            ].map((p, i) => (
-              <div key={i} className="group overflow-hidden rounded-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.alt} className="w-full h-52 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid
+            mode="grid"
+            images={[
+              { src: IMGS.ripon[1], alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Ripon CA", title: "Chef's Kitchen", caption: "Ripon, CA · Custom cabinetry, marble backsplash" },
+              { src: IMGS.lt(8), alt: 'Bathroom Renovation Lake Tahoe Interior BRE Builders', title: 'Bathroom Renovation', caption: 'Lake Tahoe, NV · Full bath renovation' },
+              { src: IMGS.lt(10), alt: 'Bathroom Installation Lake Tahoe BRE Builders', title: 'Bath Installation', caption: 'Lake Tahoe, NV · Tub, vanity, tile work' },
+              { src: IMGS.ripon[4], alt: 'Laundry Suite Custom Cabinetry Brass Hardware Ripon CA', title: 'Laundry Suite', caption: 'Ripon, CA · Custom cabinetry + brass hardware' },
+            ]}
+            aspectClass="h-56"
+          />
         </PageSection>
 
         <PageSection bg="bg-panel" border>

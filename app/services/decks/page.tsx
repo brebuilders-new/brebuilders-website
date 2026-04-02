@@ -8,6 +8,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -122,34 +123,16 @@ export default function DecksPage() {
         <PageSection bg="bg-deep">
           <SectionLabel text="Deck Projects" />
           <SectionHeading line1="Built for Every Season." line2italic="Engineered to Code." size="lg" className="mb-10" />
-          <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-2" style={{ scrollSnapType: 'x mandatory' }}>
-            {[
-              { src: IMGS.deck_charolette, alt: "Charolette's Deck Smooth Sealed Surface BRE Builders Reno", cap: "Charolette's Deck · Reno NV" },
-              { src: IMGS.repairs_arun, alt: 'Hillside Deck Reinforcement Support Beams Lake Tahoe BRE Builders', cap: 'Hillside Deck Repair · Lake Tahoe' },
-              { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Bracket System Deck Repair Lake Tahoe BRE Builders', cap: 'Structural Reinforcement · Lake Tahoe' },
-              { src: IMGS.lt(2), alt: 'Deck Structure Renovation Lake Tahoe BRE Builders', cap: 'Deck Renovation · Zephyr Cove' },
-            ].map((p, i) => (
-              <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.alt} className="w-full h-52 object-cover rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
-              </div>
-            ))}
-          </div>
-          <div className="hidden md:grid grid-cols-4 gap-4">
-            {[
-              { src: IMGS.deck_charolette, alt: "Charolette's Deck Sealed Surface BRE Builders Reno NV", cap: "Charolette's Deck · Reno NV" },
-              { src: IMGS.repairs_arun, alt: 'Hillside Deck Support Beam Reinforcement Lake Tahoe', cap: 'Hillside Deck Repair · Lake Tahoe' },
-              { src: IMGS.repairs_deck_lt, alt: 'Steel Bracket System Lake Tahoe Deck Structural Repair', cap: 'Steel Bracket System · Lake Tahoe' },
-              { src: IMGS.lt(3), alt: 'Deck Railing Renovation Lake Tahoe BRE Builders', cap: 'Deck Railing · Zephyr Cove' },
-            ].map((p, i) => (
-              <div key={i} className="group overflow-hidden rounded-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.alt} className="w-full h-48 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.cap}</p>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid
+            mode="grid"
+            images={[
+              { src: IMGS.deck_charolette, alt: "Charolette's Deck Smooth Sealed Surface BRE Builders Reno", title: '', caption: '' },
+              { src: IMGS.repairs_arun, alt: 'Hillside Deck Reinforcement Support Beams Lake Tahoe BRE Builders', title: '', caption: '' },
+              { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Bracket System Deck Repair Lake Tahoe BRE Builders', title: '', caption: '' },
+              { src: IMGS.lt(2), alt: 'Deck Structure Renovation Lake Tahoe BRE Builders', title: '', caption: '' },
+            ]}
+            aspectClass="h-56"
+          />
         </PageSection>
 
         <ServiceFAQSection

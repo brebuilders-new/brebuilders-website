@@ -15,6 +15,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -179,36 +180,16 @@ export default function ADUPage() {
             <Link href="/portfolio/adus/" className="hidden md:inline-flex items-center gap-2 text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors flex-shrink-0">Full ADU Portfolio →</Link>
           </div>
           {/* Mobile carousel */}
-          <div className="md:hidden flex gap-4 overflow-x-auto pb-3 scrollbar-none mb-2" style={{ scrollSnapType: 'x mandatory' }}>
-            {[
-              { src: IMGS.adu_pool, alt: 'Pool House ADU BRE Builders Reno NV', cap: 'Pool House ADU' },
-              { src: IMGS.adu_inlaw, alt: 'In-Law Suite ADU BRE Builders Northern Nevada', cap: 'In-Law Suite' },
-              { src: IMGS.adu_garage, alt: 'Garage ADU Conversion BRE Builders Reno', cap: 'Garage Conversion' },
-              { src: IMGS.adu_main, alt: 'ADU Backyard Home BRE Builders Reno NV', cap: 'Backyard ADU' },
-            ].map((img, i) => (
-              <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '75vw' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={img.alt} className="w-full h-52 object-cover rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.cap}</p>
-              </div>
-            ))}
-          </div>
-          <p className="md:hidden font-mono text-[10px] text-cream/25 tracking-wider mb-4">← Swipe · 4 photos</p>
-          {/* Desktop 2×2 grid */}
-          <div className="hidden md:grid grid-cols-2 gap-4">
-            {[
-              { src: IMGS.adu_pool, alt: 'Pool House ADU Build Blue Reef Builders Reno NV', cap: 'Pool House ADU' },
-              { src: IMGS.adu_inlaw, alt: 'In-Law Suite ADU Private Entrance BRE Builders', cap: 'In-Law Suite ADU' },
-              { src: IMGS.adu_garage, alt: 'Garage ADU Conversion Custom Storage BRE Builders', cap: 'Garage ADU Conversion' },
-              { src: IMGS.adu_main, alt: 'ADU Backyard Home Builder Reno NV BRE Builders', cap: 'Backyard ADU' },
-            ].map((img, i) => (
-              <div key={i} className="group overflow-hidden rounded-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={img.src} alt={img.alt} className="w-full h-56 object-cover group-hover:scale-[1.03] transition-transform duration-600" loading={i < 2 ? 'eager' : 'lazy'} />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.cap}</p>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid
+            mode="grid"
+            images={[
+              { src: IMGS.adu_pool,   alt: 'Pool House ADU Build Blue Reef Builders Reno NV',       title: 'Pool House ADU',      caption: 'Backyard pool house — detached, full amenities' },
+              { src: IMGS.adu_inlaw,  alt: 'In-Law Suite ADU Private Entrance BRE Builders',        title: 'In-Law Suite ADU',    caption: 'Private entrance, kitchen & bath' },
+              { src: IMGS.adu_garage, alt: 'Garage ADU Conversion Custom Storage BRE Builders',     title: 'Garage Conversion',   caption: 'Full garage-to-living-space conversion' },
+              { src: IMGS.adu_main,   alt: 'ADU Backyard Home Builder Reno NV BRE Builders',        title: 'Backyard ADU',        caption: 'Detached ADU — rental-ready' },
+            ]}
+            aspectClass="h-56"
+          />
         </PageSection>
 
         {/* Process */}

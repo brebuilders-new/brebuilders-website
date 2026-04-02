@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Custom+Cabinetry+%C2%B7+Tile+%C2%B7+Countertops+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/kitchen/' },
+  alternates: { canonical: `${SITE_URL}/kitchen/` },
 }
 
 const FAQS = [

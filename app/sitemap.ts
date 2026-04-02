@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Tier 3: Projects / Portfolio ──────────────────────────────────────
     { url: base + '/projects/',                               lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: base + '/projects/glenbrook-lake-tahoe/',         lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: base + '/projects/lake-tahoe-renovation/',         lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: base + '/projects/ripon-estate/',                  lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: base + '/projects/adus/',                          lastModified: now, changeFrequency: 'monthly', priority: 0.75 },

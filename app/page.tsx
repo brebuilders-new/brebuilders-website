@@ -75,7 +75,7 @@ function HeroSlider() {
         </div>
       ))}
       {/* Dark overlay — preserves readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-void/75 via-void/50 to-void/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void/60 via-void/30 to-void/75" />
       <div className="absolute inset-0 bg-gradient-to-r from-void/60 to-transparent" />
     </div>
   )
@@ -141,11 +141,11 @@ export default function HomePage() {
             <h1 className="font-display font-light text-[clamp(40px,11vw,58px)] leading-[0.93] tracking-tight text-white mb-4" style={{ textShadow: '0 2px 30px rgba(0,0,0,0.6)' }}>
               Built to Last.<br />
               Built Right.<br />
-              <span className="italic" style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.4)' }}>Since&nbsp;1989.</span>
+              <span className="italic text-teal">Since&nbsp;1989.</span>
             </h1>
 
             {/* Short mobile sub — 1 sentence max */}
-            <p className="text-[14px] leading-[1.65] text-white/65 mb-5 max-w-[320px]">
+            <p className="text-[14px] leading-[1.65] text-white/85 mb-5 max-w-[320px]">
               Licensed contractor serving Reno, Lake Tahoe, and Northern California.
               <span className="block mt-1 font-display text-[17px] text-white/45">We build with <AnimatedWord />.</span>
             </p>
@@ -235,12 +235,12 @@ export default function HomePage() {
                   <Link href="/contact" className="px-7 py-3.5 bg-teal text-void text-[13px] font-bold rounded-lg hover:bg-teal/90 transition-colors shadow-lg">
                     Get a Free Quote →
                   </Link>
-                  <Link href="/projects" className="px-7 py-3.5 border border-white/25 text-white text-[13px] rounded-lg hover:bg-white/10 transition-all backdrop-blur-sm">
-                    View Projects
-                  </Link>
-                  <a href={SITE.phoneHref} className="px-7 py-3.5 border border-teal/40 text-teal text-[13px] rounded-lg hover:bg-teal/10 transition-all font-mono backdrop-blur-sm">
+                  <a href={SITE.phoneHref} className="px-7 py-3.5 bg-white/10 border border-teal/50 text-teal text-[13px] rounded-lg hover:bg-teal/15 transition-all font-mono backdrop-blur-sm font-bold">
                     {SITE.phone}
                   </a>
+                  <Link href="/projects" className="px-7 py-3.5 border border-white/20 text-white/70 text-[13px] rounded-lg hover:bg-white/10 transition-all backdrop-blur-sm">
+                    View Projects
+                  </Link>
                 </div>
               </div>
             </div>

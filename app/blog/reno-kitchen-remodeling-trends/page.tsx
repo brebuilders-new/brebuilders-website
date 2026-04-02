@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,56 +43,45 @@ export default function KitchenTrendsPage() {
       ]}
       content={
         <div>
+          <p>Kitchen design in Reno and Northern Nevada follows national trends but adapts them to the specific lifestyle and aesthetic of the region — mountain modern, high desert contemporary, and the influence of Tahoe architecture all shape what homeowners here actually want. BRE Builders has completed kitchen remodels across Reno, Sparks, Lake Tahoe, and Northern California. Here is what we are seeing in 2025.</p>
+
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
-            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
-            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            src={IMGS.ripon[1]}
+            alt="Chef kitchen custom cabinetry marble backsplash modern design Ripon California"
+            caption="Contemporary chef&apos;s kitchen — Ripon, CA · White cabinetry, marble backsplash, professional range"
             priority
           />
-          <p>Are you a Reno homeowner dreaming of a kitchen that&apos;s both beautiful and functional? A kitchen remodel can significantly enhance your lifestyle and boost your home&apos;s value. But with so many options available, how do you choose the best approach for your Reno home and budget?</p>
 
-          <h2>Reno Kitchen Remodeling Trends for 2025</h2>
+          <h2>1. Shaker Cabinets Are Staying — Flat-Front Is Growing</h2>
+          <p>Shaker-style cabinets remain the dominant choice for Reno kitchen remodels — they work with both traditional and contemporary aesthetics and hold their value well. But flat-front frameless cabinets are gaining significant share, particularly in homes with open floor plans and contemporary architecture. Frameless construction maximizes interior cabinet storage and allows for a cleaner, more minimal look that pairs well with mountain modern design.</p>
 
-          <h3>Embracing Natural Warmth</h3>
-          <p>Expect to see an increase in natural materials like wood cabinets, stone countertops (quartz, granite), and earthy tones. These elements create a warm and inviting atmosphere, especially appealing in the Reno climate. Warm-toned wood grains in cabinet door styles — from flat-panel to shaker — are replacing the cold white-on-white kitchens that dominated the 2010s.</p>
+          <h2>2. Quartz Over Granite</h2>
+          <p>Granite had its decade. Quartz now dominates Reno kitchen countertops for several reasons: it is non-porous (no sealing required), more consistent in appearance, harder to chip, and now available in a much wider range of colors and patterns including convincing marble and concrete looks. Leathered and honed finishes are trending over polished. White and light grey quartz remains the most popular choice for broad resale appeal.</p>
 
-          <h3>The Rise of Smart Kitchens</h3>
-          <p>Technology is playing a bigger role, with homeowners integrating smart appliances, touchless faucets, and voice-activated lighting. This trend emphasizes efficiency and convenience. Smart refrigerators, induction cooktops, and app-connected dishwashers are increasingly common in mid-range and above Reno kitchen remodels.</p>
+          <BlogImage
+            src={IMGS.ripon[4]}
+            alt="Custom cabinetry laundry suite brass hardware modern design BRE Builders Ripon CA"
+            caption="Custom cabinetry with brass hardware — warm tones and natural materials trending in 2025"
+          />
 
-          <h3>Backsplashes as Focal Points</h3>
-          <p>Backsplashes are becoming a focal point, with unique tile patterns, textured materials, and pops of color adding personality and visual interest. Zellige tile, handmade ceramic, and bold geometric patterns are replacing the standard white subway tile that saturated the Reno market through 2022.</p>
+          <h2>3. Warm Tones Are Back</h2>
+          <p>After a decade of all-white kitchens, warm tones are returning strongly. Warm whites (with yellow and red undertones rather than blue), greige (grey-beige), sage green, and earthy terracotta are appearing as cabinet and island colors. Brass and warm gold hardware has replaced brushed nickel as the dominant finish. Natural wood elements — open shelving, floating wood shelves, butcher block sections — add warmth and texture.</p>
 
-          <h3>Maximized Storage Solutions</h3>
-          <p>Clever storage solutions — pull-out drawers, pantry organizers, and hidden charging stations — are key to keeping kitchens clutter-free and efficient. Deep corner cabinet pullouts, appliance garages, and built-in spice racks are among the most requested features in current Reno kitchen projects.</p>
+          <h2>4. Islands Are Getting Bigger and More Functional</h2>
+          <p>The kitchen island has evolved from a prep surface to the functional center of the modern home. In 2025 Reno remodels, we are regularly seeing islands that incorporate: seating for 4–6, prep sink with filtered water, built-in beverage refrigerator, microwave drawer, dedicated charging stations, and storage drawers rather than doors. If the existing layout allows it, island expansion or addition is consistently the highest-return single change in a kitchen remodel.</p>
 
-          <h3>The Ever-Popular Functional Island</h3>
-          <p>Kitchen islands continue to be popular, offering extra counter space, seating, and storage. Consider incorporating a cooktop or sink into your island for added functionality. In Reno homes with open-plan layouts, a well-designed island anchors the kitchen visually and functionally.</p>
+          <BlogPullQuote>
+            The kitchen island is now the center of the modern home — prep surface, dining table, homework station, and social hub all in one.
+          </BlogPullQuote>
 
-          <h2>Smart Kitchen Remodeling Investments for Reno Homes</h2>
+          <h2>5. Appliance Integration and Panel-Ready Design</h2>
+          <p>Panel-ready appliances — refrigerators, dishwashers, and even range hoods that accept a custom cabinet panel to blend into the cabinetry — are increasingly common in high-end Reno remodels. The result is a kitchen where the appliances disappear into the cabinet run, creating a seamless, furniture-like appearance. This requires careful planning at the rough-in stage and coordination with appliance specifications before cabinets are ordered.</p>
 
-          <h3>Invest in Quality Countertops & Cabinets</h3>
-          <p>These are high-impact features that significantly affect both aesthetics and functionality. Quartz countertops remain the most popular choice in Reno — durable, low-maintenance, and available in a wide range of styles. Cabinets are the largest cost in most kitchen remodels; cabinet refacing (replacing doors and hardware while keeping the box) is the highest-ROI option when the existing layout works.</p>
+          <h2>6. Better Lighting Layers</h2>
+          <p>LED recessed lighting is now standard, but the trend in Reno remodels is toward thoughtful layering: recessed for general illumination, under-cabinet LED strips for task lighting at the countertop, pendant lighting over the island (often statement fixtures that anchor the design), and toe-kick lighting for nighttime navigation. Dimmer controls on all circuits are now expected, not optional.</p>
 
-          <h3>Upgrade to Energy-Efficient Appliances</h3>
-          <p>Upgrading to energy-efficient models reduces utility costs and appeals to eco-conscious buyers, adding value to your Reno home. Reno&apos;s high-desert climate — with hot summers and cold winters — means HVAC-connected appliances and proper kitchen ventilation have a direct impact on monthly energy bills.</p>
-
-          <h3>Modernize Lighting</h3>
-          <p>Under-cabinet lighting, recessed LEDs, and pendant fixtures over islands transform both the function and feel of a kitchen. Lighting is one of the most underinvested areas in Reno kitchens — and one of the highest-return improvements per dollar spent.</p>
-
-          <h3>Optimize Your Layout</h3>
-          <p>Before investing in finishes, evaluate whether the current layout works. Removing a non-load-bearing wall between the kitchen and dining area — one of the most common structural changes in Reno remodels — can fundamentally change how the space feels and functions. This typically runs $3,000–$8,000 and pays for itself many times over in livability and resale value.</p>
-
-          <h2>What Does a Kitchen Remodel Cost in Reno?</h2>
-          <p>Kitchen remodel costs in Reno vary significantly based on scope:</p>
-          <ul>
-            <li><strong>Minor refresh</strong> (paint, hardware, appliances, lighting): $5,000–$15,000</li>
-            <li><strong>Mid-range remodel</strong> (new cabinets, countertops, flooring, appliances): $20,000–$45,000</li>
-            <li><strong>Full gut-and-remodel</strong> (layout changes, high-end finishes, full systems): $50,000–$100,000+</li>
-          </ul>
-          <p>The Reno real estate market generally returns 60–80% of kitchen remodel cost at resale for well-executed projects that match the price point of the neighborhood.</p>
-
-          <h2>BRE Builders — Reno Kitchen Remodeling Since 1989</h2>
-          <p>BRE Builders remodels kitchens throughout Reno, Sparks, and Northern Nevada. We handle the full scope — design planning, permit coordination, structural changes, cabinetry, countertops, tile, plumbing fixtures, electrical, and final finishes. Free estimates. Licensed NV #0085999 · CA #1093798.</p>
+          <h2>BRE Builders — Kitchen Remodeling in Reno, NV</h2>
+          <p>BRE Builders provides free kitchen remodel consultations and on-site estimates throughout Reno, Sparks, Lake Tahoe, Carson City, and Northern California. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
         </div>
       }
     />

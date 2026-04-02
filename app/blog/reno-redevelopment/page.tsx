@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,35 +43,42 @@ export default function RenoRedevelopmentPage() {
       ]}
       content={
         <div>
-          <p>Reno is in the middle of its largest redevelopment cycle in decades. Driven by tech industry migration from the Bay Area, a growing permanent population, a surge in ADU construction activity, and a downtown corridor undergoing significant transformation, Northern Nevada&apos;s construction market is operating at a pace that it hasn&apos;t seen since the pre-2008 period.</p>
+          <p>Reno is in the middle of one of the most significant urban redevelopment periods in its history. The combination of tech industry migration, University District expansion, downtown revival, and Midtown densification has created a construction environment unlike anything the city has seen since the casino boom of the 1980s. BRE Builders has been operating in Reno since 1989 and has built through every cycle. Here is what is happening and what it means for construction.</p>
 
-          <h2>What&apos;s Driving Reno&apos;s Construction Boom</h2>
+          <BlogImage
+            src={IMGS.svc_commercial}
+            alt="Commercial construction Reno NV BRE Builders tenant improvement build-out"
+            caption="Commercial construction and tenant improvement — BRE Builders, Reno NV"
+            priority
+          />
 
-          <h3>Tech Industry Migration</h3>
-          <p>Tesla, Apple, Google, and dozens of smaller tech companies have established operations in the greater Reno-Sparks metro over the last decade. This has brought a wave of higher-income residents who are building, renovating, and expanding properties. The Tahoe corridor — Incline Village, Zephyr Cove, and Truckee — has seen particular pressure as remote workers established primary residences in mountain communities that were previously seasonal.</p>
+          <h2>What Is Driving Reno&apos;s Growth</h2>
+          <p>The primary driver is tech industry migration. Tesla, Google, Apple, Switch, and a significant number of smaller tech companies have established operations in the Reno-Sparks metro since 2015. This has brought a sustained influx of higher-income households — households that demand higher-quality construction, renovated commercial space, and residential product that does not exist in adequate supply in Northern Nevada.</p>
 
-          <h3>Housing Demand Outpacing Supply</h3>
-          <p>Reno&apos;s housing market has been in undersupply since 2018. Single-family home construction has not kept pace with population growth, driving prices up across all segments. This creates strong demand for ADU construction — homeowners are monetizing their lots with accessory dwelling units that generate $1,200–$2,000/month in rental income while adding equity to their primary property. BRE Builders has seen ADU inquiry volume increase substantially year-over-year since 2022.</p>
+          <h2>The Downtown Core</h2>
+          <p>Downtown Reno has changed more in the past 8 years than in the preceding 30. The Record Street corridor, Virginia Street, and the Freight House District have all seen significant new commercial development, adaptive reuse projects, and high-density residential. The closure or conversion of several casino properties has freed large land parcels that are now being developed for mixed-use. BRE Builders has participated in commercial tenant improvement work across several downtown projects.</p>
 
-          <h3>Downtown Reno Transformation</h3>
-          <p>The downtown Reno corridor has seen significant investment — new restaurants, commercial spaces, residential conversions, and the ongoing redevelopment of the Midtown and West 4th Street areas. Adaptive reuse projects — converting underutilized commercial properties into new uses — are a growing part of the Reno construction market. BRE Builders&apos; car wash conversion project (the former Starlite Lanes on Plumb Lane) is a direct example of this trend.</p>
+          <BlogImage
+            src={IMGS.rio_tinto}
+            alt="Interior renovation drywall prep construction Reno NV BRE Builders commercial"
+            caption="Interior renovation and drywall prep — BRE Builders commercial project, Reno NV"
+          />
+
+          <h2>Midtown: The Residential Renovation Wave</h2>
+          <p>Midtown Reno — the corridor along South Virginia Street between downtown and the 395 — has become the most active residential renovation market in Northern Nevada. Older Craftsman bungalows and mid-century ranch homes that sold for $150,000 in 2015 are now trading at $400,000–$600,000 after renovation. BRE Builders has completed full interior renovations, additions, and ADU builds throughout Midtown for homeowners who want to maximize their investment in this appreciating area.</p>
+
+          <BlogPullQuote>
+            Reno&apos;s redevelopment is not a bubble — it is a structural shift driven by tech industry migration that has been underway for nearly a decade.
+          </BlogPullQuote>
+
+          <h2>The Construction Labor Market</h2>
+          <p>Reno&apos;s construction boom has created a tight labor market for qualified tradespeople. Lead times for licensed subcontractors — particularly electricians, plumbers, and structural engineers — have extended significantly. BRE Builders&apos; 35-year presence in Northern Nevada means we have established relationships with qualified, licensed subcontractors that newer contractors and out-of-state firms cannot access on short notice. Our network is a real advantage for project scheduling.</p>
+
+          <h2>Material Costs and Scheduling</h2>
+          <p>Reno&apos;s active construction market has kept material costs elevated relative to pre-2020 levels — the volume of projects pulling from regional suppliers maintains price pressure. BRE Builders uses established supplier relationships and volume purchasing to manage material costs for our projects. We provide transparent, detailed cost estimates and communicate proactively when market conditions affect project pricing.</p>
 
           <h2>What This Means for Homeowners</h2>
-
-          <h3>Contractor Availability Is Tighter</h3>
-          <p>With construction activity at elevated levels, licensed contractor availability in Reno is tighter than it has been in years. Lead times for estimates, permit processing, and project starts have extended. If you&apos;re planning a project for summer or fall, initiating the estimate process in winter or early spring gives you the best scheduling position.</p>
-
-          <h3>Material Costs Remain Elevated</h3>
-          <p>Supply chain pressures from 2020–2022 have partially normalized, but material costs in Northern Nevada remain above 2019 levels for most categories — lumber, concrete, framing hardware, and electrical materials. Projects priced in 2024 or 2025 are priced to current material costs; don&apos;t rely on older estimates from pre-2022.</p>
-
-          <h3>ADU Value Has Never Been Higher</h3>
-          <p>With rental demand strong and housing prices elevated, the return on ADU investment in Reno is at historic highs. A well-built ADU on a Reno property adds both rental income and appraised value. The typical payback period for an ADU at current Reno rental rates is 6–10 years for a modest studio, 8–12 years for a larger 1-bedroom unit.</p>
-
-          <h2>What This Means for Commercial Property Owners</h2>
-          <p>Commercial real estate in Reno is seeing strong demand for tenant improvement work as new businesses establish operations. Office and retail build-outs, warehouse upgrades, and commercial-to-residential conversions are all active in the current market. BRE Builders handles the full commercial scope — permit coordination, structural work, MEP coordination, and all finish trades — under Nevada Contractor License #0085999.</p>
-
-          <h2>BRE Builders — In Reno Through Every Cycle Since 1989</h2>
-          <p>BRE Builders has operated in the Reno-Sparks market since 1989 — through the boom, the bust, and the boom again. We understand Reno&apos;s construction market and can advise on project timing, scope prioritization, and realistic timelines in the current environment. Free estimates. Licensed NV #0085999 · CA #1093798.</p>
+          <p>If you own property in Reno — residential or commercial — the current market rewards investment in quality improvements. Reno&apos;s rising property values mean that renovations, additions, ADUs, and commercial improvements are achieving strong returns. BRE Builders can help you evaluate which improvements make the most sense for your specific property. Licensed NV #0085999 · CA #1093798. Free consultation, 24-hour response.</p>
         </div>
       }
     />

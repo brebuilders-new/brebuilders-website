@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,55 +43,45 @@ export default function Repairs20YearPage() {
       ]}
       content={
         <div>
+          <p>A 20-year-old Reno home has reached a critical threshold. Major building systems — roof, HVAC, water heater, windows, and often the original appliances — are at or past their design life. The foundation has cycled through two full decades of Reno&apos;s expansive clay soil movement. And any deferred maintenance from the first decade has had time to compound. BRE Builders assesses hundreds of Reno homes in this age range every year. Here is what we find.</p>
+
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/20-Year-Old-Reno-Homes.jpg"
-            alt="20-year-old Reno home inspection structural issues BRE Builders"
-            caption="20-year-old Reno homes have specific, predictable failure patterns — BRE Builders has seen them all."
+            src={IMGS.repairs_rot}
+            alt="Dry rot structural damage 20-year-old Reno home BRE Builders repair"
+            caption="Dry rot exposure at 20 years — deferred maintenance from the first decade has compounded"
             priority
           />
-          <p>At 20 years old, Reno homes built in the early 2000s have accumulated a specific set of problems caused by aging materials, original construction shortcuts common to that era, and two decades of Reno&apos;s demanding climate. Most homeowners only notice these issues after they&apos;ve advanced to the expensive-to-repair stage. Here&apos;s what BRE Builders inspects in 20-year-old Reno homes.</p>
 
-          <h2>1. Soil-Related Foundation Cracking (Advanced Stage)</h2>
-          <p>The expansive clay soils in Spanish Springs, South Meadows, and South Reno have been working on the foundation for two full decades. What were hairline cracks at year 10 are now wider, more numerous, and have begun to affect door and window operation. Diagonal crack patterns at opening corners are the most common sign. Any crack wider than ⅛ inch warrants structural assessment — not patching.</p>
+          <h2>Roof: At or Past Life Expectancy</h2>
+          <p>Standard 3-tab asphalt shingles installed in Reno circa 2005 have a rated life of 20–25 years — but Reno&apos;s UV exposure typically puts the actual service life at the low end of that range. At 20 years, the question is not if replacement is coming but when. Have the roof assessed by a licensed roofing contractor. Key indicators: granule loss in gutters, visible shingle surface texture loss, any cracked or missing shingles, and the condition of all flashing. If the roof was replaced at year 10, it is now at its own midpoint inspection.</p>
 
-          <h2>2. Sun Damage on Siding — Surface Failure</h2>
-          <p>Reno&apos;s UV exposure fades and degrades west-facing siding faster than any other exposure. At 20 years, original vinyl siding installed in the early 2000s is approaching the end of its functional life on the sun-exposed faces. Look for brittleness (panels crack when pushed), significant fading, and lifting at seams. Original paint on wood or fiber-cement is likely failed — the underlying material is now absorbing moisture directly.</p>
+          <h2>Foundation: 20 Cycles of Clay Movement</h2>
+          <p>Reno&apos;s clay soils have now moved through 20 wet-dry cycles. Any differential settlement that was minor at year 5 or 10 may now be visible as sticking doors, stair-step cracks in exterior stucco or brick, or interior drywall cracks at door and window corners. A structural assessment at year 20 is not optional — it is the point where many issues cross from cosmetic to structural. BRE Builders provides free structural assessments for homeowners throughout the Reno metro.</p>
 
-          <h2>3. Attic Mold Growth</h2>
-          <p>Attic plywood in homes built before 2005 was frequently installed with inadequate ventilation — a code and practice issue of that era. Warm air from living spaces rises into an under-ventilated attic, condenses on cold roof sheathing, and mold follows. By year 20, homes with this problem have significant mold colonies visible on the sheathing. This must be addressed before any attic insulation work or the mold returns immediately.</p>
-
-          <h2>4. Window Frame Separation</h2>
-          <p>Original vinyl or aluminum window frames from the early 2000s have now gone through 20 years of thermal cycling — daily expansion and contraction from Reno&apos;s temperature swings. The sealant between the frame and rough opening has long since failed. Look for daylight at frame edges, drafts, and visible gaps where the frame pulls away from the surrounding drywall or trim. This is both an energy issue and a water intrusion pathway.</p>
-
-          <h2>5. Deck Structural Deterioration</h2>
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/Unsafe-Deck-Framing.jpg"
-            alt="Unsafe deck framing structural deterioration Reno NV"
-            caption="20-year-old deck connections — ledger attachment and post bases are the first to fail."
+            src={IMGS.repairs_foundation}
+            alt="Foundation crack repair 20-year-old home Reno NV BRE Builders assessment"
+            caption="Foundation crack assessment — 20-year-old homes in Reno often show the full effects of clay soil cycling"
           />
-          <p>Pressure-treated lumber from the early 2000s used a formulation (CCA — chromated copper arsenate) that was banned for residential use in 2004. CCA lumber is more durable than the ACQ (alkaline copper quaternary) that replaced it in many applications, but by year 20 the critical connections — ledger board attachments, post bases, joist hangers — are showing metal corrosion and wood deterioration at contact points. Any 20-year-old deck warrants a structural inspection before the next outdoor season.</p>
 
-          <h2>6. HVAC System Age</h2>
-          <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/Failing-HVAC-Systems.jpg"
-            alt="Failing HVAC system 20-year old Reno home inspection"
-            caption="20-year-old HVAC systems at end of service life — moisture problems often follow."
-          />
-          <p>Standard residential HVAC systems have a 15–20 year service life. A home built in 2004 has an HVAC system that is at or past the end of its designed life. Failing systems don&apos;t just cost more to run — they create moisture problems. Poorly functioning air handlers and duct systems allow humidity imbalances that contribute to attic and crawlspace condensation. An HVAC system at end-of-life that&apos;s still running often signals moisture problems developing elsewhere in the structure.</p>
+          <h2>HVAC: Replacement Planning</h2>
+          <p>Original HVAC equipment from 2005 is well past its rated life. Furnaces last 15–20 years; central air conditioners last 15–20 years. If the original system is still running, it is operating at significantly reduced efficiency — likely 20–30% below its original SEER rating. Replacement now, on a planned basis, costs considerably less than emergency replacement when the system fails in a heat wave. Modern high-efficiency systems typically pay back the incremental cost in energy savings within 5–7 years in Reno&apos;s climate.</p>
 
-          <h2>7. Foundation Drainage</h2>
-          <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/Basement-Water-Intrusion.jpg"
-            alt="Basement water intrusion moisture issue Reno NV home repair"
-            caption="Foundation drainage failure — common in 20-year Reno homes as grade and downspouts degrade."
-          />
-          <p>Original downspout extensions and grade conditions installed at construction have often degraded or been buried by 20 years of landscaping. Downspouts discharging at the foundation, grade that has settled toward the house, and irrigation systems that wet the foundation zone are all contributors to the soil movement and moisture problems that dominate 20-year repair lists in Reno.</p>
+          <h2>Windows: Seal Failure</h2>
+          <p>Dual-pane windows installed in 2005 often show seal failure at 20 years — visible as fogging or condensation between the panes. Failed seals eliminate the insulating value of the double-pane assembly. In Reno&apos;s climate, failed window seals increase heating and cooling costs meaningfully. Individual insulated glass units (IGUs) can be replaced without replacing the full window frame if the frames themselves are still structurally sound.</p>
 
-          <h2>8. Overloaded Breaker Panels</h2>
-          <p>Homes built in the early 2000s were sized for the electrical load of that era — before the proliferation of EV chargers, home offices, and high-draw appliances. If breakers trip regularly or if the panel is fully loaded with no open slots, the electrical system needs assessment. Aluminum wiring used in some homes of this era requires specific handling at connections.</p>
+          <BlogPullQuote>
+            At year 20, deferred maintenance is no longer deferred — it is active damage. Every year of continued deferral adds to the eventual cost.
+          </BlogPullQuote>
 
-          <h2>BRE Builders — 20-Year Reno Home Specialists</h2>
-          <p>BRE Builders has been repairing homes across Reno since 1989. We&apos;ve repaired thousands of early-2000s Reno homes and know exactly what fails in this specific construction vintage in this specific climate. Free estimates on all structural repairs. Licensed NV #0085999 · CA #1093798.</p>
+          <h2>Exterior: Paint, Caulk, and Water Management</h2>
+          <p>A 20-year-old exterior paint job is past life — even if touch-ups have been done. Full repainting at 20 years should include complete caulk replacement at all joints (window perimeters, door frames, trim-to-siding transitions), inspection and repair of any damaged or deteriorated siding, and an assessment of roof-to-wall transitions and all penetration flashings.</p>
+
+          <h2>Plumbing: Proactive Assessment</h2>
+          <p>At 20 years, original supply line valves (at toilets, sinks, and appliances) often fail when operated — they have not been turned in decades and the seats have corroded. Replace the easy ones preventively before they fail at an inconvenient moment. Have the water heater inspected — if it is original, plan for replacement. Check under every sink and in the crawlspace for any sign of slow leaks or corrosion.</p>
+
+          <h2>BRE Builders — 20-Year Home Assessments in Reno</h2>
+          <p>BRE Builders provides comprehensive structural and repair assessments for 20-year-old homes throughout the Reno-Sparks metro, Carson City, Lake Tahoe, and Northern California. Licensed NV #0085999 · CA #1093798. Contact us for a free consultation.</p>
         </div>
       }
     />

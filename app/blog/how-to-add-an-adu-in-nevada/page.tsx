@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,36 +43,54 @@ export default function ADUGuidePage() {
       ]}
       content={
         <div>
-          <h2>Can I Build an ADU on My Reno Property?</h2>
-          <p>Yes. Nevada law allows ADUs on most single-family residential lots in Reno and Washoe County. Zoning, lot size, and owner-occupancy rules apply. BRE Builders holds Nevada License #0085999 and manages the full permit process from application through Certificate of Occupancy.</p>
+          <p>Nevada is one of the most ADU-friendly states in the country. Reno and Washoe County have actively simplified their ADU approval process since 2021, and the result is that most residential lots in the metro area now qualify for at least one ADU. Here is a complete, accurate guide to adding an ADU in Reno, Nevada — based on current code and BRE Builders&apos; direct experience with the permit process.</p>
 
-          <h2>What Does an ADU Cost in Reno?</h2>
-          <p>ADU costs in Reno range from $75,000 to $300,000 for complete builds, including permits and utilities.</p>
-          <ul>
-            <li><strong>Studio ADU (400–600 sq ft):</strong> From $75,000</li>
-            <li><strong>1-Bedroom ADU (600–800 sq ft):</strong> $95,000–$115,000</li>
-            <li><strong>2-Bedroom ADU (800–1,200 sq ft):</strong> $115,000–$300,000</li>
-            <li><strong>Permit costs (Washoe County):</strong> $3,000–$5,000</li>
-          </ul>
-          <p>BRE Builders builds at $175/sq ft and up. The final cost depends on size, finishes, site conditions, and utility connections.</p>
+          <BlogImage
+            src={IMGS.adu_pool}
+            alt="Pool house ADU built by BRE Builders Reno NV"
+            caption="Detached pool house ADU — BRE Builders, Reno NV · From $75,000"
+            priority
+          />
 
-          <h2>ADU Timeline in Reno</h2>
-          <p>A complete ADU build in Reno takes 3–5 months from contract to move-in:</p>
-          <ul>
-            <li>Permits &amp; Design: 4–6 weeks</li>
-            <li>Foundation &amp; Framing: 3–4 weeks</li>
-            <li>MEP &amp; Insulation: 2–3 weeks</li>
-            <li>Finishes &amp; Inspection: 3–4 weeks</li>
-          </ul>
+          <h2>Step 1: Confirm Your Lot Qualifies</h2>
+          <p>Most single-family residential lots in Reno and Washoe County qualify for an ADU. Key requirements: the lot must have an existing primary dwelling, the primary dwelling must be owner-occupied (for attached ADUs), and the lot must meet minimum size requirements for the zoning district. Multi-family lots have different rules. BRE Builders performs a free pre-application lot assessment to confirm eligibility before any design work begins.</p>
 
-          <h2>Rental Income From a Reno ADU</h2>
-          <p>ADUs in Reno typically earn $1,200–$2,000/month in rental income. Nevada requires a minimum 30-day rental period and the property owner must occupy the main residence.</p>
+          <BlogPullQuote>
+            Most Reno residential lots now qualify for at least one ADU under current Washoe County and City of Reno code — and the permitting process is faster than it was three years ago.
+          </BlogPullQuote>
 
-          <h2>ADU Types in Reno</h2>
-          <p>BRE Builders builds detached backyard homes, garage conversions, pool houses, in-law suites, and junior ADUs (JADUs). We evaluate your property and recommend what works best for your zoning, lot size, and goals.</p>
+          <h2>Step 2: Choose Your ADU Type</h2>
+          <p>Nevada recognizes three primary ADU types: detached ADUs (separate structure on the same lot), attached ADUs (addition to the primary home), and junior ADUs (JADUs — conversion of existing interior space). Each has different size limits, setback requirements, and design standards. Detached ADUs offer the most flexibility and are BRE Builders&apos; most common project type. Garage conversions are classified as attached or detached depending on the garage type.</p>
 
-          <h2>How BRE Builders Manages Your ADU</h2>
-          <p>BRE Builders is a licensed Nevada contractor (#0085999) that handles the complete ADU build in-house — design coordination, permit applications through Washoe County and the City of Reno, construction, and final inspection. Free estimates with site visit.</p>
+          <BlogImage
+            src={IMGS.adu_garage}
+            alt="Garage ADU conversion BRE Builders Reno NV"
+            caption="Garage-to-ADU conversion — fully permitted, kitchen and bath included"
+          />
+
+          <h2>Step 3: Design and Plans</h2>
+          <p>Washoe County and the City of Reno require architectural drawings for all ADU permits. BRE Builders coordinates architectural design as part of our design-build process — you do not need to hire a separate architect. Our in-house design process produces permit-ready drawings that meet current energy code, accessibility requirements, and the specific standards of your jurisdiction. Plan review takes 4–8 weeks depending on the jurisdiction and project complexity.</p>
+
+          <h2>Step 4: Permits</h2>
+          <p>The permit application includes architectural drawings, a site plan, energy compliance documentation, and coordination with any required planning review. BRE Builders prepares and submits all permit documentation and responds to plan check corrections. Permit fees for ADUs in Reno and Washoe County typically run $3,000–$6,000 depending on size and location.</p>
+
+          <h2>Step 5: Construction</h2>
+          <p>Construction timelines for ADUs run 8–14 weeks for most standard projects. This assumes an approved permit and no significant site complications (unusual soil conditions, utility conflicts, or major grade changes). BRE Builders provides milestone-based progress updates throughout construction. Inspections are coordinated with the jurisdiction — we handle all inspection scheduling and coordination.</p>
+
+          <BlogImage
+            src={IMGS.adu_inlaw}
+            alt="In-law suite ADU private entrance BRE Builders Northern Nevada"
+            caption="In-law suite ADU with private entrance — complete kitchen, bath, and bedroom"
+          />
+
+          <h2>ADU Costs in Reno, NV</h2>
+          <p>Studio ADUs (400–600 sq ft) start at $75,000. One-bedroom ADUs (600–800 sq ft) run $95,000–$115,000. Two-bedroom ADUs (800–1,200 sq ft) range from $115,000–$300,000 depending on finishes. These figures include all permit fees, foundation, framing, mechanical, electrical, plumbing, insulation, drywall, flooring, cabinets, and appliances. Site work and utility connections are quoted separately based on your specific lot conditions.</p>
+
+          <h2>Rental Income Potential</h2>
+          <p>ADUs in Reno typically generate $1,200–$2,000 per month in rental income depending on size, location, and condition. Nevada law requires a minimum 30-day rental period — short-term rental of ADUs requires a separate license and is subject to local regulations that vary by municipality. Long-term rental ADUs typically achieve payback within 5–8 years at current Reno rental rates.</p>
+
+          <h2>Start with a Free Lot Assessment</h2>
+          <p>BRE Builders provides free ADU feasibility assessments for Reno and Northern Nevada property owners. We will review your lot, confirm zoning eligibility, discuss design options, and give you a realistic cost range — before you commit to anything. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
         </div>
       }
     />

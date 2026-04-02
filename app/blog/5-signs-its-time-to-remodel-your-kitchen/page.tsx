@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -45,39 +45,42 @@ export default function KitchenSignsPage() {
       ]}
       content={
         <div>
+          <p>Most kitchens don&apos;t announce when it&apos;s time for a remodel. They just get harder to use, less pleasant to be in, and more expensive to maintain — gradually, until one day you realize the room isn&apos;t working anymore. BRE Builders has remodeled kitchens across Reno, Lake Tahoe, and Northern California. Here are the 5 signs that it&apos;s time.</p>
+
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
-            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
-            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            src={IMGS.ripon[1]}
+            alt="Custom chef kitchen cabinetry marble backsplash Ripon California BRE Builders"
+            caption="Chef&apos;s kitchen — Ripon, CA · Custom cabinetry, marble backsplash, professional appliances"
             priority
           />
-          <p>Most Reno homeowners don&apos;t plan a kitchen remodel — they tolerate the kitchen until one of a few specific things forces the decision. BRE Builders has been remodeling kitchens across Northern Nevada since 1989. Here are the five signs we see most often that tell you it&apos;s time.</p>
 
-          <h2>Sign #1: You Avoid Using the Kitchen</h2>
-          <p>This one sounds obvious, but it&apos;s more meaningful than it first appears. If you&apos;re ordering out more than you should, if you&apos;re eating at the counter because the table is always cluttered, or if you just feel a vague resistance when you think about cooking — that&apos;s a functional failure in the space.</p>
-          <p>Kitchens that work feel different. You use them. Good layout, adequate lighting, and functional storage change behavior, not just aesthetics. If you&apos;re avoiding your kitchen, the kitchen isn&apos;t working.</p>
+          <h2>1. You Have Run Out of Storage</h2>
+          <p>The first sign is storage failure. When you are storing appliances on the counter because there is nowhere else to put them, keeping pots in the oven because there is no cabinet space, and doing a full reorganization every time you need to find something — the kitchen was not designed for the way you actually use it. Modern kitchen design solves storage with pull-out drawers instead of deep fixed shelves, corner solutions that actually function, and tall pantry cabinets that use vertical space. A good kitchen remodel recovers space you didn&apos;t know you had.</p>
 
-          <h2>Sign #2: Your Kitchen Is Dated by 15+ Years — and You&apos;re Not Planning to Stay</h2>
-          <p>This is the one most homeowners miss. If you have a 2005–2010 kitchen and you&apos;re planning to sell in the next 3–7 years, every year you delay the remodel is a year you&apos;re losing equity quietly.</p>
-          <p>Reno home values have appreciated significantly. Buyers in the current market expect updated kitchens — especially above $400K. An outdated kitchen doesn&apos;t just fail to add value. It actively suppresses your sale price. Buyers subtract $30,000–$50,000 from offers when they see a kitchen that needs work, even if the rest of the house is excellent.</p>
-          <p>The math is straightforward: a $20,000–$35,000 targeted kitchen update (new cabinets, counters, lighting, appliances) protects significantly more than that in your eventual sale price — and you get to use it in the meantime.</p>
+          <h2>2. The Layout Does Not Work</h2>
+          <p>Kitchen efficiency is determined by the distance between three points: the refrigerator, the sink, and the stove. This is called the work triangle, and it should be compact enough that you are not walking laps every time you cook. If your kitchen layout requires you to cross traffic to get between these three points, if there is no counter space adjacent to the stove, or if the pantry is in a completely different room — you have a layout problem that only structural remodeling can fix. Moving a wall costs money, but it changes how the room works for the next 30 years.</p>
 
-          <h2>Sign #3: The Layout Doesn&apos;t Work for Your Household</h2>
-          <p>Families change. If you&apos;ve added people to the household, if kids are now helping cook, if you&apos;re entertaining more, or if you&apos;re cooking more seriously than you were 10 years ago — the original kitchen layout may no longer match how you actually live.</p>
-          <p>Common layout problems BRE Builders sees in Reno homes: no kitchen island (no place to prep and gather simultaneously), insufficient counter space on the main prep side, refrigerator in a corner that blocks traffic flow, and no natural transition to a dining or outdoor space.</p>
-          <p>Layout changes — removing a non-load-bearing wall, adding a peninsula, relocating the refrigerator — often cost $5,000–$15,000 and make a bigger functional difference than any cosmetic upgrade.</p>
+          <BlogImage
+            src={IMGS.svc_kitchen}
+            alt="Kitchen remodel BRE Builders Reno NV custom cabinetry tile"
+            caption="Kitchen remodel by BRE Builders — new cabinetry, countertops, and tile work"
+          />
 
-          <h2>Sign #4: Something Doesn&apos;t Work and You&apos;ve Been Working Around It</h2>
-          <p>A drawer that doesn&apos;t close right. A cabinet door with a broken hinge. Countertop damage you&apos;ve been hiding with a cutting board. A leak under the sink that recurred twice. These individual items feel small — but collectively they signal deferred maintenance that tends to compound.</p>
-          <p>More importantly, when one thing doesn&apos;t work, people stop noticing the things that do. The &quot;broken drawer kitchen&quot; feeling is self-reinforcing. A remodel resets the mental state of the kitchen.</p>
+          <BlogPullQuote>
+            The kitchen is the room that makes or breaks a home&apos;s resale value — and it&apos;s the room buyers remember longest after a showing.
+          </BlogPullQuote>
 
-          <h2>Sign #5: Your Appliances Are On Their Last Years</h2>
-          <p>The average lifespan of a dishwasher is 10–12 years. Refrigerators run 12–17 years. Ranges 13–15 years. If your appliances are all from the same original installation and you&apos;re at 12–15 years, you&apos;re in the replacement zone for all of them simultaneously.</p>
-          <p>One appliance failure is a replacement. Three simultaneous appliance failures is a kitchen remodel — whether you planned it or not. Getting ahead of it lets you coordinate the work properly and choose what goes in, rather than replacing piece by piece reactively.</p>
+          <h2>3. The Fixtures and Appliances Are Failing</h2>
+          <p>When individual fixtures and appliances start failing — the dishwasher is on its third repair, the faucet drips, the disposal is 15 years old, the range igniters have to be coaxed — you are in a cycle of diminishing returns. Replacing individual items piecemeal is expensive over time and leaves you with a kitchen full of mismatched equipment that does not look coordinated. A full remodel lets you specify coordinated appliances and fixtures that all start fresh at the same time.</p>
 
-          <h2>What to Do Next</h2>
-          <p>If two or more of these signs describe your kitchen right now, it&apos;s worth getting a professional assessment and estimate. BRE Builders provides free, no-obligation estimates on kitchen remodeling in Reno, Sparks, and throughout Northern Nevada.</p>
-          <p>We&apos;ll tell you honestly what makes sense — a targeted upgrade, a full remodel, or a phased approach. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
+          <h2>4. You Are Losing Value Relative to the Neighborhood</h2>
+          <p>If comparable homes in your neighborhood are selling with updated kitchens and yours still has original 1990s cabinets and laminate countertops, you are giving up resale value. Kitchen remodels consistently return 60–80% of their cost in added home value in the Reno-Sparks market. A $40,000 kitchen remodel that adds $30,000 to your appraised value is a reasonable return — and you get to enjoy the new kitchen for the years before you sell.</p>
+
+          <h2>5. The Kitchen Does Not Reflect How You Live</h2>
+          <p>Kitchens built 20 or 30 years ago were designed around different assumptions about how families use the space. Open-concept layouts that connect to living areas, islands that double as dining surfaces, integrated home office nooks, coffee stations, and mudroom transitions — these are all features that reflect how modern households actually function. If your kitchen feels isolated, cramped, or disconnected from the rest of your home, a remodel can restructure the space around your actual life.</p>
+
+          <h2>BRE Builders — Kitchen Remodeling in Reno and Northern California</h2>
+          <p>BRE Builders has completed full kitchen remodels throughout Reno, Sparks, Lake Tahoe, Carson City, and Northern California. We provide free design consultations and on-site estimates. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
         </div>
       }
     />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -45,44 +45,42 @@ export default function KitchenPropertyValuePage() {
       ]}
       content={
         <div>
+          <p>In the Reno-Sparks residential market, the kitchen is the single room most likely to determine whether a house sells quickly at asking price or sits for months with price reductions. Buyers form an immediate, emotional response to kitchens — and an outdated kitchen activates a calculation about remodel cost that buyers subtract directly from what they are willing to offer. BRE Builders has remodeled kitchens across Northern Nevada and California. Here is what we know about kitchen impact on property value.</p>
+
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
-            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
-            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            src={IMGS.ripon[1]}
+            alt="Updated modern kitchen custom cabinetry marble countertop property value BRE Builders"
+            caption="Updated chef&apos;s kitchen — Ripon, CA · The kitchen buyers remember and pay for"
             priority
           />
-          <p>Your kitchen is the first room buyers mentally price when they walk through your Reno home. Real estate agents say it consistently — an outdated kitchen stops a sale or kills the offer price, even when everything else looks great.</p>
 
-          <p>BRE Builders has remodeled kitchens across Reno, Sparks, and Northern Nevada since 1989. Here are the five kitchen problems we see most often that hurt property values — and what the fix actually involves.</p>
+          <h2>What &quot;Outdated&quot; Actually Costs You</h2>
+          <p>Real estate agents in the Reno-Sparks market consistently report that buyers discount outdated kitchens by 1.5x to 2x the actual remodel cost. A kitchen that would cost $35,000 to update leads buyers to mentally subtract $50,000–$70,000 from their offer. This is a market irrationality — but it is consistent and well-documented. Sellers who update their kitchen before listing typically recover more than the cost of the update in higher offers and faster sale times.</p>
 
-          <h2>1. Dark or Yellow-Toned Cabinets From the 1990s</h2>
-          <p>Honey oak, dark cherry, and yellowed white cabinets immediately signal to a buyer that the kitchen hasn&apos;t been touched in 20+ years. They don&apos;t just look dated — they make the whole kitchen feel smaller and darker, which amplifies every other problem in the space.</p>
-          <p><strong>What buyers see:</strong> A kitchen that will cost them $30,000–$60,000 to update — so they subtract that from their offer.</p>
-          <p><strong>The fix:</strong> Cabinet refacing (replacing doors and hardware while keeping existing box structure) runs $8,000–$18,000 and is the highest-ROI kitchen upgrade in Reno. Full cabinet replacement runs $15,000–$35,000 depending on materials and layout. Both dramatically modernize the space.</p>
+          <h2>The Countertop Test</h2>
+          <p>Walk into your kitchen and look at the countertops. If they are original laminate from the 1990s, original tile with grout lines, or cultured marble — they are signaling &quot;this kitchen has not been updated&quot; to every buyer who walks through. Countertop replacement is the highest-visible, highest-return single change in a kitchen remodel. Quartz countertops in a white or light grey tone cost $50–$80 per square foot installed and signal contemporary design to buyers immediately.</p>
 
-          <h2>2. Tile Countertops or Laminate in Poor Condition</h2>
-          <p>Grout lines in tile countertops stain and hold bacteria. Laminate chips, lifts at seams, and shows burns. Both materials signal low-budget construction — regardless of how nice the rest of the kitchen is.</p>
-          <p><strong>What buyers see:</strong> They have to replace the counters immediately. Granite, quartz, or butcher block is the expected standard in the current Reno market.</p>
-          <p><strong>The fix:</strong> Quartz countertops for a standard Reno kitchen run $3,000–$8,000 installed. This is one of the single highest-impact per-dollar upgrades in resale terms. Buyers react visibly when they see stone counters — it resets their whole impression of the kitchen.</p>
+          <BlogImage
+            src={IMGS.svc_kitchen}
+            alt="Kitchen remodel before after property value Reno NV BRE Builders"
+            caption="Kitchen remodel by BRE Builders — new countertops, cabinetry, and tile add measurable property value"
+          />
 
-          <h2>3. No Island or Peninsula — Closed-Off Layout</h2>
-          <p>The Reno market has fully moved to open-concept kitchens. A kitchen that is boxed in, walled off from the living space, or that has no central gathering surface is considered functionally deficient by today&apos;s buyer.</p>
-          <p><strong>What buyers see:</strong> A kitchen that doesn&apos;t work for how people actually live — they factor in the cost of structural changes to open it up.</p>
-          <p><strong>The fix:</strong> Removing a non-load-bearing wall between kitchen and dining room runs $3,000–$8,000. Adding a kitchen island runs $2,000–$6,000 depending on whether plumbing or electrical is involved. Together, these two changes transform the feel of the entire main floor.</p>
+          <h2>Cabinet Condition vs. Layout</h2>
+          <p>Buyers distinguish between cabinet condition and cabinet layout. Cabinets that are structurally sound but cosmetically dated can often be addressed with door and drawer front replacement plus new hardware — a fraction of full replacement cost. But if the cabinet layout itself is dysfunctional — poor storage design, awkward work triangle, insufficient space — a more comprehensive update is required to move the buyer perception needle.</p>
 
-          <h2>4. Outdated Appliances — Especially Mismatched or Black</h2>
-          <p>Mismatched appliances — one stainless, one white, one black — tell a story of deferred maintenance and piecemeal replacements. Black appliances from the early 2000s are particularly dated. Almond and biscuit appliances are even more damaging to perceived value.</p>
-          <p><strong>What buyers see:</strong> More things that need immediate replacement. Appliance upgrades also affect the functional impression of the whole kitchen.</p>
-          <p><strong>The fix:</strong> A matched stainless appliance suite (refrigerator, range, dishwasher, microhood) from a mid-tier brand like Samsung or LG runs $3,000–$6,000. This is usually the seller&apos;s best standalone investment before listing.</p>
+          <BlogPullQuote>
+            Buyers do not see what a kitchen remodel costs — they see what it would cost them. And their estimate is almost always higher than the actual number.
+          </BlogPullQuote>
 
-          <h2>5. Poor Lighting — One Ceiling Fixture, No Task Lighting</h2>
-          <p>A single overhead fixture creates shadows on countertops and makes the kitchen feel institutional. Under-cabinet lighting, pendant lights over an island, and recessed LED lighting are expected in the current Reno market — especially in the $400K+ range.</p>
-          <p><strong>What buyers see:</strong> A dark, uninviting kitchen that feels cramped even if the square footage is adequate.</p>
-          <p><strong>The fix:</strong> A full kitchen lighting upgrade — new recessed fixtures, under-cabinet LED strip lights, and pendant installation — runs $1,500–$4,000 depending on how many circuits need to be added. For the visual impact it creates, this is one of the most underrated investments in kitchen resale prep.</p>
+          <h2>Appliances: Mismatched Is Worse Than Old</h2>
+          <p>A kitchen with all-original appliances from 2005 reads consistently to buyers. A kitchen with a 2005 refrigerator, a 2012 dishwasher, a 2018 range, and a 2022 microwave reads as chaos — it signals that things have been failing and being replaced piecemeal, which raises questions about what else is failing. If you are updating appliances before a sale, update them all at once to a consistent finish (typically stainless or panel-ready) for maximum visual impact.</p>
 
-          <h2>The Bottom Line for Reno Sellers</h2>
-          <p>You don&apos;t need a full kitchen gut-and-remodel to protect your property value. Strategic upgrades — new cabinet doors, stone counters, a matched appliance suite, and updated lighting — can modernize a kitchen for $15,000–$25,000 and protect or increase the sale price by far more.</p>
-          <p>BRE Builders provides free estimates on kitchen remodeling in Reno, Sparks, and surrounding areas. Licensed NV #0085999 · CA #1093798.</p>
+          <h2>The Backsplash Signal</h2>
+          <p>The kitchen backsplash is the detail buyers notice most after countertops. An original tile backsplash with dated grout is a negative signal. A fresh subway tile, hexagon, or contemporary pattern backsplash costs $800–$2,500 installed for a typical kitchen and signals that the space has been updated. It is a high-visibility, relatively low-cost change that changes buyer perception disproportionately.</p>
+
+          <h2>What BRE Builders Can Do for You</h2>
+          <p>BRE Builders works with homeowners throughout the Reno-Sparks market on pre-sale kitchen updates designed to maximize return. We can advise on which changes will move the needle most for your specific property, your price point, and your neighborhood. Licensed NV #0085999 · CA #1093798. Free consultation, 24-hour response.</p>
         </div>
       }
     />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,41 +43,48 @@ export default function StructuralRepairsTrustPage() {
       ]}
       content={
         <div>
-          <p>BRE Builders, a division of Blue Reef Enterprises, is known for structural repairs that last — especially in Northern Nevada&apos;s harsh soil and weather conditions. We repair the core of your home with Reno-specific experience that generic contractors simply don&apos;t have.</p>
+          <p>Structural repair is one of the most technically demanding services in residential construction — and one of the most consequential. A botched repair can mask an active problem while it continues to worsen. BRE Builders has provided structural repair services in Reno, Sparks, Lake Tahoe, and Northern Nevada since 1989. Here is what sets our approach apart.</p>
 
-          <h2>What Makes Northern Nevada Structural Repair Different</h2>
-          <p>Reno&apos;s geology and climate create structural failure modes that are specific to this region. Expansive clay soils in Spanish Springs, South Meadows, and South Reno expand when wet and contract when dry — creating ongoing foundation movement that compounds year over year. The freeze-thaw cycle at 4,500 feet adds additional stress to concrete, wood connections, and buried elements. UV exposure at high altitude degrades exterior wood faster than at lower elevations. A contractor without direct experience in these conditions will misdiagnose the cause of structural problems — and fix symptoms instead of root causes.</p>
+          <BlogImage
+            src={IMGS.repairs_foundation}
+            alt="Foundation repair Reno NV BRE Builders licensed structural contractor"
+            caption="Foundation assessment and repair — BRE Builders, Reno NV, licensed since 1989"
+            priority
+          />
 
-          <h2>Common Structural Problems BRE Builders Fixes in Reno</h2>
-          <ul>
-            <li><strong>Foundation cracks and bowing walls</strong> — diagonal cracks at window and door corners, step cracking in brick veneer, horizontal cracks in basement or crawlspace walls</li>
-            <li><strong>Sagging floors and uneven support beams</strong> — floor bounce, visible sag between joists, doors and windows that stick or won&apos;t latch</li>
-            <li><strong>Damaged joists or subflooring from water or mold</strong> — soft spots, spongy floors, visible rot in crawlspace framing</li>
-            <li><strong>Load-bearing beam reinforcement</strong> — inadequate original beam sizing, notched or drilled beams compromised by plumbing or electrical</li>
-            <li><strong>Settling piers and failing crawlspaces</strong> — post bases corroding, settlement under posts, inadequate vapor barrier allowing moisture damage</li>
-          </ul>
+          <h2>We Diagnose Before We Recommend</h2>
+          <p>The most common problem in the structural repair industry is over-recommendation — contractors who sell the most expensive solution rather than the right one. BRE Builders has a 35-year track record of recommending the repair that actually fixes the problem, not the repair with the highest margin. We will tell you when a crack is cosmetic and when it is structural. We will tell you when a problem needs immediate intervention and when it can be monitored. That transparency is what keeps our clients coming back across decades.</p>
 
-          <h2>Top Warning Signs Your Reno Home May Need Structural Repair</h2>
-          <p>These are the signs BRE Builders sees most frequently on Reno structural assessment calls:</p>
+          <BlogPullQuote>
+            BRE Builders has been diagnosing structural problems in Reno homes since 1989 — before many of the properties we inspect today were even built.
+          </BlogPullQuote>
 
-          <h3>Cracks in Ceilings or Drywall Near Corners</h3>
-          <p>Diagonal cracks running from the corners of windows and doors are a classic sign of foundation movement in Reno homes. This pattern is caused by differential settlement — one part of the foundation moving more than another. It&apos;s not just a cosmetic issue. Left unaddressed, the cracks grow and the door and window openings become out of square.</p>
+          <h2>Reno-Specific Structural Challenges</h2>
+          <p>Reno sits on expansive clay soils — soils that swell significantly when wet and shrink when dry. This seasonal movement puts cyclic stress on foundations that accumulates over decades. Combined with Reno&apos;s freeze-thaw cycling, high UV exposure, and irrigation-season saturation, Northern Nevada homes experience structural loads that many contractors from other regions underestimate. Our team has assessed thousands of homes in this specific environment and understands the failure patterns it produces.</p>
 
-          <h3>Sloping or Bouncy Floors</h3>
-          <p>Place a marble on the floor. If it rolls, the floor is sloping — and the cause is almost always a structural issue, not a finish issue. Bouncy floors (spring underfoot when you walk) indicate failed or undersized joist framing that needs reinforcement.</p>
+          <BlogImage
+            src={IMGS.repairs_rot}
+            alt="Dry rot structural damage exposed wall panel BRE Builders Reno NV"
+            caption="Extensive dry rot exposure — this wall panel required full framing replacement"
+          />
 
-          <h3>Sticking Doors and Windows</h3>
-          <p>When a door or window that used to operate smoothly starts sticking or won&apos;t latch, the frame has racked — meaning the rough opening is no longer square. This follows from foundation movement or framing settlement and won&apos;t self-correct.</p>
+          <h2>Self-Performed Work</h2>
+          <p>BRE Builders self-performs structural repair work — we do not broker it to unlicensed subcontractors. Our field crews are experienced carpenters and concrete workers with direct experience in foundation repair, framing repair, dry rot remediation, and waterproofing. When you hire BRE Builders, the people who show up are our employees, not day laborers sourced from a staffing agency.</p>
 
-          <h3>Visible Rot in Crawlspace or Basement</h3>
-          <p>Reno&apos;s temperature swings create condensation in crawlspaces even in a dry climate. Poorly vented or unencapsulated crawlspaces accumulate moisture that rots the bottom chord of floor joists and the sill plates. This is invisible from above but critical to catch early.</p>
+          <h2>Foundation Repair Capabilities</h2>
+          <p>Our foundation repair services include crack injection (epoxy and polyurethane), helical pier installation, carbon fiber strap installation for bowing walls, drainage correction, and crawlspace encapsulation. We work with licensed structural engineers when the project scope requires stamped plans — which is required for any permitted structural repair in Washoe County and the City of Reno.</p>
 
-          <h3>Gaps at the Top of Interior Walls</h3>
-          <p>Gaps between the top of interior partition walls and the ceiling indicate the floor above is deflecting under load. This is a framing problem that requires structural assessment, not just patching.</p>
+          <BlogImage
+            src={IMGS.repairs_deck_lt}
+            alt="Structural reinforcement steel bracket system Lake Tahoe deck BRE Builders"
+            caption="Steel bracket reinforcement system — BRE Builders Lake Tahoe structural repair"
+          />
 
-          <h2>BRE Builders Structural Repair Process</h2>
-          <p>BRE Builders starts every structural repair with a thorough site assessment — we diagnose the actual cause of the problem before proposing a fix. We won&apos;t sell you a pier if the real problem is a compromised beam. We won&apos;t patch drywall when the issue is foundation movement that will crack the same wall again next season.</p>
-          <p>Free structural repair estimates. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
+          <h2>Response Time</h2>
+          <p>Structural concerns are not something to schedule for next month. BRE Builders responds to structural repair inquiries within 24 hours and can typically schedule a site visit within 48–72 hours. We provide free structural assessments for homeowners throughout the Reno-Sparks metro, Carson City, Lake Tahoe, and Truckee areas.</p>
+
+          <h2>Free Structural Assessment — Reno, NV</h2>
+          <p>If you have noticed cracks, settling, soft floors, sticking doors, or any of the other warning signs of structural damage, contact BRE Builders for a free assessment. We are licensed in Nevada (#0085999) and California (#1093798) and have been serving Northern Nevada homeowners since 1989.</p>
         </div>
       }
     />

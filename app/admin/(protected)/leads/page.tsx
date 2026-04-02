@@ -97,7 +97,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
     quoted: 'Quoted', won: 'Won', lost: 'Lost',
   }
 
-  const cell: React.CSSProperties = { padding: '13px 16px', borderBottom: '1px solid rgba(255,255,255,0.05)', fontSize: '13px', verticalAlign: 'middle' as const }
+  const cell: React.CSSProperties = { padding: '13px 16px', borderBottom: '1px solid #f3f4f6', fontSize: '13px', verticalAlign: 'middle' as const }
 
   return (
     <div className="p-4 md:p-8">
@@ -105,9 +105,9 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '24px' }}>
         <div>
           <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>All Submissions</p>
-          <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Leads</h1>
+          <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#111827' }}>Leads</h1>
         </div>
-        <p style={{ fontFamily: 'monospace', fontSize: '12px', color: 'rgba(232,228,220,0.3)', margin: 0 }}>{leads?.length || 0} results</p>
+        <p style={{ fontFamily: 'monospace', fontSize: '12px', color: '#9ca3af', margin: 0 }}>{leads?.length || 0} results</p>
       </div>
 
       {/* Status filter tabs */}
@@ -122,8 +122,8 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
               style={{
                 padding: '7px 14px', borderRadius: '8px', fontSize: '12px', textDecoration: 'none',
                 fontFamily: 'monospace', transition: 'all 0.15s',
-                background: active ? '#c07d3e' : 'rgba(255,255,255,0.04)',
-                color: active ? '#141210' : 'rgba(232,228,220,0.5)',
+                background: active ? '#c07d3e' : '#f3f4f6',
+                color: active ? '#ffffff' : '#6b7280',
                 border: active ? 'none' : '1px solid rgba(255,255,255,0.07)',
                 fontWeight: active ? 600 : 400,
               }}
@@ -146,7 +146,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                 padding: '5px 11px', borderRadius: '6px', fontSize: '11px', textDecoration: 'none',
                 fontFamily: 'monospace', transition: 'all 0.15s',
                 background: active ? 'rgba(200,146,58,0.2)' : 'transparent',
-                color: active ? '#c8923a' : 'rgba(232,228,220,0.35)',
+                color: active ? '#c8923a' : '#6b7280',
                 border: active ? '1px solid rgba(200,146,58,0.4)' : '1px solid rgba(255,255,255,0.07)',
               }}
             >
@@ -157,9 +157,9 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       </div>
 
       {/* Table */}
-      <div style={{ background: '#1c1714', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden' }}>
+      <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #e5e7eb', overflow: 'hidden' }}>
         {!leads?.length ? (
-          <div style={{ padding: '60px', textAlign: 'center', color: 'rgba(232,228,220,0.3)', fontFamily: 'monospace', fontSize: '13px' }}>
+          <div style={{ padding: '60px', textAlign: 'center', color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>
             No leads match this filter.
           </div>
         ) : (
@@ -168,7 +168,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
             <thead>
               <tr>
                 {['#', 'Name', 'Services', 'Score', 'Budget', 'Location', 'Status', 'Age', ''].map(h => (
-                  <th key={h} style={{ padding: '10px 16px', textAlign: 'left', fontSize: '10px', fontFamily: 'monospace', color: 'rgba(232,228,220,0.3)', textTransform: 'uppercase', letterSpacing: '1.5px', borderBottom: '1px solid rgba(255,255,255,0.06)', fontWeight: 400 }}>
+                  <th key={h} style={{ padding: '10px 16px', textAlign: 'left', fontSize: '10px', fontFamily: 'monospace', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '1.5px', borderBottom: '1px solid #f3f4f6', fontWeight: 400 }}>
                     {h}
                   </th>
                 ))}
@@ -192,16 +192,16 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                       </span>
                     </td>
                     <td style={cell}>
-                      <p style={{ margin: 0, color: '#e8e4dc', fontWeight: 500, fontSize: '13px' }}>{lead.first_name} {lead.last_name}</p>
-                      <p style={{ margin: '1px 0 0', fontSize: '11px', color: 'rgba(232,228,220,0.35)', fontFamily: 'monospace' }}>{lead.email}</p>
+                      <p style={{ margin: 0, color: '#111827', fontWeight: 500, fontSize: '13px' }}>{lead.first_name} {lead.last_name}</p>
+                      <p style={{ margin: '1px 0 0', fontSize: '11px', color: '#9ca3af', fontFamily: 'monospace' }}>{lead.email}</p>
                     </td>
                     <td style={{ ...cell, maxWidth: '160px' }}>
-                      <span style={{ fontSize: '12px', color: 'rgba(232,228,220,0.6)' }}>{svcText}</span>
+                      <span style={{ fontSize: '12px', color: '#6b7280' }}>{svcText}</span>
                     </td>
                     <td style={{ ...cell, textAlign: 'center' }}>
                       <div>
                         <span style={{ fontSize: '15px', fontWeight: 700, color: scoreColor(lead.lead_score || 0) }}>{lead.lead_score}</span>
-                        <p style={{ margin: 0, fontSize: '9px', color: 'rgba(232,228,220,0.25)', fontFamily: 'monospace' }}>/100</p>
+                        <p style={{ margin: 0, fontSize: '9px', color: '#d1d5db', fontFamily: 'monospace' }}>/100</p>
                       </div>
                     </td>
                     <td style={cell}>

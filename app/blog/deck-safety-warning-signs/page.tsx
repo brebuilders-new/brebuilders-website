@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "8 Signs Your Deck Is No Longer Safe — Reno & Lake Tahoe | BRE Builders",
   description: "Deck collapses injure hundreds every year. BRE Builders identifies the 8 warning signs that a Reno or Tahoe deck needs immediate inspection or replacement. Licensed NV #0085999.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=8+Signs+Your+Deck+Is+Unsafe&sub=Reno+%26+Lake+Tahoe+Deck+Safety+Guide&badge=Decks`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/deck-safety-warning-signs-reno-lake-tahoe/' },
+  alternates: { canonical: `${SITE_URL}/deck-safety-warning-signs-reno-lake-tahoe/` },
 }
 
 const schema = {

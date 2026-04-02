@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import '../styles/globals.css'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'),
   title: {
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Blue Reef Builders',
     images: [
       {
-        url: '/images/og-default.jpg',
+        url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=Licensed+Since+1989+%E2%80%93+NV+%230085999+%C2%B7+CA+%231009219`,
         width: 1200,
         height: 630,
         alt: 'Blue Reef Builders – Licensed General Contractor Reno NV & California',
@@ -25,6 +27,10 @@ export const metadata: Metadata = {
     ],
   },
   twitter: { card: 'summary_large_image' },
+  icons: {
+    icon: '/icon',
+    apple: '/apple-icon',
+  },
   robots: { index: true, follow: true },
 }
 

@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'brebuilders.com',
         pathname: '/wp-content/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        pathname: '/gh/brebuilders-new/bre-assets/**',
+      },
     ],
     formats: ['image/webp'],
   },

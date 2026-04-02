@@ -92,7 +92,7 @@ export default function Nav() {
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0" onClick={() => setMobileOpen(false)} aria-label="BRE Builders — Home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp"
+              src="/brelogo.webp"
               alt="BRE Builders – Blue Reef Enterprises Reno NV General Contractor"
               className="h-9 w-auto object-contain"
               width={120} height={36} loading="eager"

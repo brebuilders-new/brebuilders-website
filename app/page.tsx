@@ -273,50 +273,142 @@ export default function HomePage() {
         </div>
 
         {/* ═══════════════════════════ SERVICES ══════════════════════════════ */}
-        <section className="py-24 lg:py-32 bg-deep">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <Fade>
-              <SL text="What We Build" />
-              <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-14">
-                <h2 className="font-display text-[clamp(36px,5.5vw,72px)] font-light leading-[1.0] tracking-tight">
-                  Every Project.<br /><span className="italic text-teal">Every Scale.</span>
-                </h2>
-                <Link href="/services" className="text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors flex-shrink-0">All Services →</Link>
-              </div>
-            </Fade>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {SERVICES.slice(0, 8).map((s, i) => (
-                <Fade key={s.slug} delay={i * 50}>
-                  <Link href={`/services/${s.slug}`} className="group relative block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/30 transition-all duration-500 bg-panel">
-                    {/* Real photo background */}
-                    {SERVICE_IMGS[s.slug] && (
-                      <div className="relative h-36 overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={SERVICE_IMGS[s.slug]}
-                          alt={`${s.name} – BRE Builders`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-panel via-panel/40 to-transparent" />
-                        {/* Top shimmer on hover */}
-                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-teal/0 via-teal/60 to-teal/0 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                      </div>
-                    )}
-                    <div className="p-4">
-                      <h3 className="font-display text-[16px] lg:text-[17px] text-cream mb-1.5 leading-snug group-hover:text-teal/90 transition-colors">{s.shortName}</h3>
-                      {'priceRange' in s && s.priceRange && (
-                        <p className="font-mono text-[10px] text-teal/65 mb-1">{s.priceRange}</p>
-                      )}
-                      <div className="text-[10px] font-mono tracking-wider uppercase text-teal/45 group-hover:text-teal flex items-center gap-1 transition-colors">
-                        Explore <span className="group-hover:translate-x-0.5 transition-transform inline-block">→</span>
-                      </div>
-                    </div>
-                  </Link>
-                </Fade>
-              ))}
-            </div>
+        {/* Cinematic service chapters — alternating panels desktop, stacked cards mobile */}
+        <section className="bg-void">
+          {/* Section label */}
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-12 pt-20 pb-6 flex items-center justify-between">
+            <SL text="What We Build" />
+            <Link href="/services" className="text-[11px] font-mono tracking-[2px] uppercase text-teal/50 hover:text-teal transition-colors">All Services →</Link>
           </div>
+
+          {[
+            {
+              slug: 'adu',
+              index: '01',
+              headline: <>Built for<br/>Life & Income</>,
+              tagline: '400–1,200 sq ft accessory dwelling units. Full permit handling, design coordination, and 35+ years of licensed execution in Reno, Sparks, and Northern Nevada.',
+              price: '$75K–$300K',
+              priceNote: '$175/sqft and up',
+              cta: 'Explore ADUs',
+              img: SERVICE_IMGS['adu'],
+            },
+            {
+              slug: 'new-home',
+              index: '02',
+              headline: <>Concept<br/>to Keys</>,
+              tagline: 'Ground-up custom builds with in-house design. Every detail personalized from foundation to finish across Nevada and California.',
+              price: '$500K+',
+              priceNote: 'Full design-build',
+              cta: 'Explore Custom Homes',
+              img: SERVICE_IMGS['new-home'],
+            },
+            {
+              slug: 'repairs',
+              index: '03',
+              headline: <>Fix It Right.<br/>Fix It Once.</>,
+              tagline: 'Foundation repair, dry rot, water intrusion, structural framing. The structural specialists of Northern Nevada since 1989.',
+              price: 'Free Inspection',
+              priceNote: 'Quote in 24 hours',
+              cta: 'Request Inspection',
+              img: SERVICE_IMGS['repairs'],
+            },
+            {
+              slug: 'kitchen-bath',
+              index: '04',
+              headline: <>Spaces You<br/>Live In Daily</>,
+              tagline: 'High-quality finishes, modern functionality. Licensed remodeling contractors serving all of Northern Nevada.',
+              price: '$30K–$150K',
+              priceNote: 'Free estimate',
+              cta: 'Explore Kitchen & Bath',
+              img: SERVICE_IMGS['kitchen-bath'],
+            },
+            {
+              slug: 'additions',
+              index: '05',
+              headline: <>More Space.<br/>Same Home.</>,
+              tagline: 'Room additions, second stories, garage expansions. Add square footage without the cost of moving.',
+              price: '$80K–$300K',
+              priceNote: 'Free estimate',
+              cta: 'Explore Additions',
+              img: SERVICE_IMGS['additions'],
+            },
+            {
+              slug: 'commercial',
+              index: '06',
+              headline: <>Built for<br/>Business</>,
+              tagline: 'Tenant improvements, retail buildouts, offices, warehouses. Licensed in Nevada and California. Permits handled end to end.',
+              price: 'Free Estimate',
+              priceNote: 'NV & CA Licensed',
+              cta: 'Explore Commercial',
+              img: SERVICE_IMGS['commercial'],
+            },
+          ].map((svc, i) => (
+            <div key={svc.slug}>
+              {/* Divider between panels */}
+              {i > 0 && <div className="h-px bg-gradient-to-r from-transparent via-teal/15 to-transparent" />}
+
+              {/* DESKTOP panel — alternating left/right */}
+              <Link
+                href={`/services/${svc.slug}`}
+                className={`hidden md:flex group relative overflow-hidden ${i % 2 === 1 ? 'flex-row-reverse' : ''}`}
+                style={{ minHeight: '420px' }}
+              >
+                {/* Photo side */}
+                <div className="relative w-[52%] flex-shrink-0 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={svc.img}
+                    alt={`${svc.cta} – BRE Builders`}
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                    style={{ minHeight: '420px' }}
+                  />
+                  {/* Gradient fade into bg */}
+                  <div className={`absolute inset-0 ${i % 2 === 1 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-void via-void/20 to-transparent`} />
+                </div>
+
+                {/* Accent line */}
+                <div className={`absolute top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-teal/25 to-transparent z-10 ${i % 2 === 1 ? 'left-[52%]' : 'right-[52%]'}`} />
+
+                {/* Content side */}
+                <div className="flex-1 flex flex-col justify-center px-12 xl:px-16 py-12 relative z-10">
+                  <p className="font-mono text-[10px] tracking-[3px] uppercase text-teal/50 mb-4">{svc.index} / {SERVICES.find(s => s.slug === svc.slug)?.name}</p>
+                  <h2 className="font-display font-light text-[clamp(36px,4vw,58px)] leading-[1.02] tracking-[-1px] text-cream mb-4">{svc.headline}</h2>
+                  <p className="text-[15px] text-cream/55 leading-[1.7] mb-6 max-w-[380px]">{svc.tagline}</p>
+                  <div className="flex items-baseline gap-3 mb-8">
+                    <span className="text-[20px] font-semibold text-teal">{svc.price}</span>
+                    <span className="font-mono text-[11px] text-cream/30 tracking-wider">· {svc.priceNote}</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-teal text-void text-[13px] font-bold rounded-lg self-start group-hover:bg-gold transition-colors">
+                    {svc.cta} <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+                  </div>
+                </div>
+              </Link>
+
+              {/* MOBILE card — full bleed photo, text pinned bottom */}
+              <Link
+                href={`/services/${svc.slug}`}
+                className="md:hidden relative block overflow-hidden"
+                style={{ minHeight: '420px' }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={svc.img}
+                  alt={`${svc.cta} – BRE Builders`}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-void via-void/75 to-void/20" />
+                <div className="relative z-10 flex flex-col justify-end h-full px-5 pb-7 pt-28">
+                  <p className="font-mono text-[9px] tracking-[3px] uppercase text-teal/60 mb-2">{svc.index} · {SERVICES.find(s => s.slug === svc.slug)?.shortName}</p>
+                  <h2 className="font-display font-light text-[34px] leading-[1.05] text-white mb-2">{svc.headline}</h2>
+                  <p className="text-[13px] text-white/65 leading-[1.6] mb-5 max-w-[300px]">{svc.tagline}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[16px] font-semibold text-teal">{svc.price}</span>
+                    <span className="px-4 py-2.5 bg-teal text-void text-[13px] font-bold rounded-lg">Explore →</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
         </section>
 
         {/* ═══════════════ FEATURED PROJECT STRIP ══════════════════════════════ */}

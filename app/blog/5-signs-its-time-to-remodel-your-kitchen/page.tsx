@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=5+Signs+Your+Kitchen+Needs+a+Remodel&sub=%232+Hurts+Your+Home+Value+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/5-signs-its-time-to-remodel-your-kitchen/' },
+  alternates: { canonical: `${SITE_URL}/5-signs-its-time-to-remodel-your-kitchen/` },
 }
 
 const schema = {

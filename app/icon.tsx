@@ -10,22 +10,33 @@ export default function Icon() {
         style={{
           width: 32,
           height: 32,
-          background: '#050a0f',
-          border: '1.5px solid #1ecfc9',
-          borderRadius: 7,
+          background: '#080604',
+          borderRadius: 6,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          position: 'relative',
         }}
       >
+        {/* Gold left accent bar */}
+        <div style={{
+          position: 'absolute',
+          left: 0,
+          top: 6,
+          bottom: 6,
+          width: 2,
+          background: '#d4a032',
+          borderRadius: 2,
+        }} />
         <span
           style={{
             fontFamily: 'Georgia, serif',
-            fontSize: 18,
+            fontSize: 19,
             fontWeight: 400,
-            color: '#1ecfc9',
-            letterSpacing: '-0.5px',
+            color: '#f8f0e0',
             fontStyle: 'italic',
+            letterSpacing: '-0.5px',
+            marginLeft: 2,
           }}
         >
           B

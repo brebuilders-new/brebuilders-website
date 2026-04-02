@@ -139,33 +139,96 @@ export default function HomePage() {
       <main>
 
         {/* ═══════════════════════════════════ HERO ════════════════════════════ */}
-        <section className="relative min-h-screen flex flex-col justify-end pb-16 lg:pb-28 overflow-hidden">
+        {/* MOBILE (hidden md+): Full-screen, call-first, minimal copy */}
+        <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>
           <HeroSlider />
+          <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(rgba(30,207,201,1) 1px,transparent 1px),linear-gradient(90deg,rgba(30,207,201,1) 1px,transparent 1px)', backgroundSize: '60px 60px' }} />
 
-          {/* Grid overlay */}
+          <div className="relative z-10 flex flex-col justify-end px-5 pb-8 pt-28" style={{ minHeight: '100svh' }}>
+            {/* Live badge */}
+            <div className="inline-flex items-center gap-2 border border-teal/30 rounded-full px-3 py-1.5 bg-teal/[0.08] backdrop-blur-sm mb-5 self-start">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
+              <span className="font-mono text-[9px] tracking-[2px] uppercase text-teal">Now Accepting Projects · NV & CA</span>
+            </div>
+
+            {/* H1 — mobile-sized, punchy, 3 short lines */}
+            <h1 className="font-display font-light text-[clamp(40px,11vw,58px)] leading-[0.93] tracking-tight text-white mb-4" style={{ textShadow: '0 2px 30px rgba(0,0,0,0.6)' }}>
+              Built to Last.<br />
+              Built Right.<br />
+              <span className="italic" style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.4)' }}>Since&nbsp;1989.</span>
+            </h1>
+
+            {/* Short mobile sub — 1 sentence max */}
+            <p className="text-[14px] leading-[1.65] text-white/65 mb-5 max-w-[320px]">
+              Licensed contractor serving Reno, Lake Tahoe, and Northern California.
+              <span className="block mt-1 font-display text-[17px] text-white/45">We build with <AnimatedWord />.</span>
+            </p>
+
+            {/* Mobile stats — compact row */}
+            <div className="flex gap-6 mb-6">
+              {[{ n: '35+', l: 'Years' }, { n: 'NV·CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
+                <div key={s.l}>
+                  <div className="font-display text-[22px] text-white leading-none">{s.n}</div>
+                  <div className="font-mono text-[9px] uppercase text-white/35 mt-0.5 tracking-wider">{s.l}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile CTAs — stacked, call first */}
+            <div className="flex flex-col gap-2.5 mb-4">
+              <a
+                href={SITE.phoneHref}
+                className="w-full flex items-center justify-center gap-2 py-4 bg-teal text-void text-[15px] font-bold rounded-xl"
+              >
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                Call for a Free Quote
+              </a>
+              <div className="grid grid-cols-2 gap-2">
+                <Link href="/contact" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">
+                  Request Quote
+                </Link>
+                <Link href="/projects" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">
+                  View Projects
+                </Link>
+              </div>
+            </div>
+
+            {/* Dots */}
+            <div className="flex gap-2">
+              {HERO_IMGS.map((_, i) => (
+                <button key={i} aria-label={`Show image ${i + 1}`} className="h-[3px] w-3 rounded-full bg-white/25 transition-all duration-500" />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* DESKTOP (hidden below md): Full-bleed, research mode, stats row */}
+        <section className="relative hidden md:flex flex-col justify-end pb-20 lg:pb-32 overflow-hidden min-h-screen">
+          <HeroSlider />
           <div className="absolute inset-0 pointer-events-none opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(rgba(30,207,201,1) 1px,transparent 1px),linear-gradient(90deg,rgba(30,207,201,1) 1px,transparent 1px)', backgroundSize: '80px 80px' }} />
 
-          <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 w-full pt-28 lg:pt-36">
-
+          <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 w-full pt-36">
             {/* Badge */}
             <div className="animate-fade-up-1 inline-flex items-center gap-2.5 border border-white/20 rounded-full px-4 py-2 bg-white/[0.06] backdrop-blur-sm mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Now Accepting New Projects · Northern Nevada & California</span>
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Now Accepting New Projects · NV Lic #0085999 · CA Lic #1093798</span>
             </div>
 
             {/* H1 */}
             <div className="animate-fade-up-2">
-              <h1 className="font-display font-light text-[clamp(50px,9vw,124px)] leading-[0.92] tracking-[-2px] text-white mb-3" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
+              <h1 className="font-display font-light text-[clamp(56px,9vw,124px)] leading-[0.92] tracking-[-2px] text-white mb-3" style={{ textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
                 Built to Last.<br />
                 Built Right.<br />
                 <span className="italic" style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.45)' }}>Built Since&nbsp;1989.</span>
               </h1>
             </div>
 
-            {/* Sub */}
-            <div className="animate-fade-up-3 mt-8 flex flex-col lg:flex-row items-start lg:items-end gap-8 lg:gap-16">
-              <div className="max-w-[500px]">
-                <p className="text-[15px] lg:text-[17px] leading-[1.7] text-white/70 mb-4" style={{ textShadow: '0 1px 20px rgba(0,0,0,0.5)' }}>
+            {/* Desktop layout: lead left, stats+CTAs right */}
+            <div className="animate-fade-up-3 mt-10 flex flex-col lg:flex-row items-start lg:items-end gap-10 lg:gap-20">
+              <div className="max-w-[520px]">
+                <p className="text-[15px] lg:text-[17px] leading-[1.75] text-white/70 mb-4" style={{ textShadow: '0 1px 20px rgba(0,0,0,0.5)' }}>
                   Licensed Nevada and California general contractor. Residential remodeling, ADUs, structural repairs, custom homes, and commercial construction across Reno, Sparks, Lake Tahoe, Truckee, Carson City, Graeagle, and Northern California.
                 </p>
                 <p className="font-display text-[20px] text-white/50">
@@ -173,16 +236,16 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-6">
-                <div className="flex gap-8 lg:gap-14">
+              <div className="flex flex-col gap-7">
+                <div className="flex gap-10 lg:gap-16">
                   {[{ n: '35+', l: 'Years' }, { n: 'NV · CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
                     <div key={s.l}>
-                      <div className="font-display text-[clamp(28px,4vw,48px)] font-light text-white leading-none" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>{s.n}</div>
-                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/40 mt-1">{s.l}</div>
+                      <div className="font-display text-[clamp(30px,4vw,50px)] font-light text-white leading-none" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>{s.n}</div>
+                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/40 mt-1.5">{s.l}</div>
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-3">
                   <Link href="/contact" className="px-7 py-3.5 bg-teal text-void text-[13px] font-bold rounded-lg hover:bg-teal/90 transition-colors shadow-lg">
                     Get a Free Quote →
                   </Link>
@@ -199,7 +262,7 @@ export default function HomePage() {
             {/* Image dots */}
             <div className="mt-10 flex gap-2">
               {HERO_IMGS.map((_, i) => (
-                <button key={i} aria-label={`Show image ${i + 1}`} className={`h-[3px] rounded-full transition-all duration-500 ${i === 0 ? 'w-8 bg-teal' : 'w-3 bg-white/30'}`} />
+                <button key={i} aria-label={`Show image ${i + 1}`} className="h-[3px] rounded-full transition-all duration-500 w-3 bg-white/30" />
               ))}
             </div>
           </div>

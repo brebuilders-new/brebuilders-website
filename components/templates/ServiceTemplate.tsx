@@ -269,6 +269,9 @@ export function ServiceFAQSection({
 }
 
 // ─── Service Hero ─────────────────────────────────────────────────────────────
+// Device-split: completely different layout and psychology for mobile vs desktop.
+// Mobile: call-first, urgency-first, short copy, big CTA
+// Desktop: research mode, stats, secondary CTA, full lead paragraph
 export function ServiceHeroSection({ hero }: { hero: ServiceHero }) {
   const licenseStr =
     hero.license === 'CA'
@@ -277,122 +280,234 @@ export function ServiceHeroSection({ hero }: { hero: ServiceHero }) {
       ? 'NV #0085999 · CA #1093798'
       : 'NV Lic #0085999'
 
-  return (
-    <section className="relative min-h-[70vh] lg:min-h-[78vh] flex flex-col justify-end pb-14 lg:pb-24 pt-28 overflow-hidden">
-      {/* Desktop background */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={hero.bgDesktop}
-        alt={hero.h1Lines.join(' ') + ' BRE Builders'}
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        fetchPriority="high"
-      />
-      {/* Mobile background */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={hero.bgMobile || hero.bgDesktop}
-        alt={hero.h1Lines.join(' ') + ' BRE Builders'}
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-        fetchPriority="high"
-      />
-      {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-void/93 via-void/55 to-void/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent hidden md:block" />
-      <div className="absolute inset-0 grid-bg opacity-[0.02] pointer-events-none" />
+  const h1Text = hero.h1Lines.join(' ')
 
-      <div className="relative z-10 container">
-        <div className="max-w-[620px]">
+  return (
+    <>
+      {/* ─────────────────────────────────────────────────────
+          MOBILE HERO  (hidden on md+)
+          Layout: stacked image top, content bottom
+          Psychology: call-first, urgency-first, social proof
+      ───────────────────────────────────────────────────── */}
+      <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>
+        {/* Full-bleed image — top 60% */}
+        <div className="absolute inset-0" style={{ zIndex: 0 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={hero.bgMobile || hero.bgDesktop}
+            alt={h1Text + ' BRE Builders'}
+            className="w-full h-full object-cover object-center"
+            fetchPriority="high"
+            style={{ objectPosition: '50% 30%' }}
+          />
+          {/* Strong bottom fade — content must be readable */}
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(to bottom, rgba(5,10,15,0.15) 0%, rgba(5,10,15,0.55) 40%, rgba(5,10,15,0.92) 65%, rgba(5,10,15,1) 85%)'
+          }} />
+        </div>
+
+        {/* Content — anchored to bottom */}
+        <div className="relative z-10 flex flex-col justify-end min-h-[inherit] px-5 pb-8 pt-28" style={{ minHeight: '100svh' }}>
           {/* Eyebrow */}
-          <div className="animate-fade-up-1 flex items-center gap-3 mb-5">
-            <div className="w-6 h-px bg-teal" />
-            <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">{hero.eyebrow}</span>
+          <div className="flex items-center gap-2.5 mb-3">
+            <div className="w-5 h-px bg-teal flex-shrink-0" />
+            <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">{hero.eyebrow}</span>
           </div>
 
-          {/* H1 */}
-          <h1 className="animate-fade-up-2 font-display font-light text-[clamp(38px,6vw,80px)] leading-[0.93] tracking-tight text-white mb-4">
+          {/* H1 — shorter/punchier on mobile */}
+          <h1 className="font-display font-light text-[clamp(34px,9vw,52px)] leading-[0.95] tracking-tight text-white mb-3">
             {hero.h1Lines.map((line, i) => (
-              <span key={i}>
-                {i > 0 && <br />}
-                {line}
-              </span>
+              <span key={i} className="block">{line}</span>
             ))}
             {hero.h1Ghost && (
-              <>
-                <br />
-                <span className="italic" style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,.35)' }}>
-                  {hero.h1Ghost}
-                </span>
-              </>
+              <span
+                className="block italic mt-1"
+                style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,.4)', fontSize: '0.72em' }}
+              >
+                {hero.h1Ghost}
+              </span>
             )}
           </h1>
 
-          {/* Lead */}
-          <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.75] text-white/70 mb-5 max-w-[490px]">
-            {hero.lead}
+          {/* Mobile-optimised lead — 2 lines max, action-oriented */}
+          <p className="text-[14px] leading-[1.6] text-white/65 mb-4 max-w-[340px]">
+            {/* Trim to first sentence for mobile brevity */}
+            {hero.lead.split('.')[0]}.{' '}
+            <span className="text-white/40 text-[12px]">{licenseStr}</span>
           </p>
 
-          {/* Badges */}
+          {/* Badges — horizontal scroll on mobile, 2 visible */}
           {hero.badges && hero.badges.length > 0 && (
-            <div className="animate-fade-up-3 flex flex-wrap gap-2 mb-6">
-              {hero.badges.map((b) => (
-                <span key={b} className="font-mono text-[10px] tracking-wider text-teal border border-teal/30 bg-teal/[0.08] px-2.5 py-1 rounded-md">
+            <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1 mb-4" style={{ scrollSnapType: 'x mandatory' }}>
+              {hero.badges.slice(0, 4).map((b) => (
+                <span
+                  key={b}
+                  className="flex-shrink-0 font-mono text-[9px] tracking-wider text-teal border border-teal/30 bg-teal/[0.1] px-2.5 py-1.5 rounded-lg"
+                  style={{ scrollSnapAlign: 'start' }}
+                >
                   ✓ {b}
                 </span>
               ))}
             </div>
           )}
 
-          {/* CTAs */}
-          <div className="animate-fade-up-4">
-            {/* Desktop CTAs */}
-            <div className="hidden md:flex gap-3 flex-wrap mb-5">
-              <Link href={hero.ctaPrimaryHref} className="btn-primary">
-                {hero.ctaPrimaryLabel}
-              </Link>
-              {hero.ctaSecondaryLabel && hero.ctaSecondaryHref && (
-                <Link href={hero.ctaSecondaryHref} className="btn-ghost">
-                  {hero.ctaSecondaryLabel}
-                </Link>
-              )}
-            </div>
+          {/* Mobile CTAs — 2 full-width buttons, stacked */}
+          {/* CALL is #1 action on mobile — 2.4x higher CTR than desktop */}
+          <div className="flex flex-col gap-2.5 mb-4">
+            <a
+              href={SITE.phoneHref}
+              className="w-full flex items-center justify-center gap-2 py-4 bg-teal text-void text-[15px] font-bold rounded-xl"
+            >
+              <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              {hero.ctaMobileLabel || 'Call for a Free Quote'}
+            </a>
+            <Link
+              href={hero.ctaPrimaryHref}
+              className="w-full flex items-center justify-center gap-2 py-3.5 border border-white/20 text-white text-[14px] font-mono rounded-xl bg-white/[0.04]"
+            >
+              Request Quote Online →
+            </Link>
+          </div>
 
-            {/* Mobile CTAs */}
-            <div className="md:hidden flex gap-3 mb-5">
-              <a href={SITE.phoneHref} className="btn-primary flex-1 justify-center">
-                📞 {hero.ctaMobileLabel || 'Call Now'}
-              </a>
-              <Link href={hero.ctaPrimaryHref} className="btn-ghost flex-1 justify-center">
-                Get Quote
-              </Link>
-            </div>
-
-            {/* Urgency note */}
-            {hero.urgencyNote && (
-              <p className="font-mono text-[11px] text-white/35 flex items-center gap-2">
+          {/* Urgency + stats strip */}
+          <div className="flex items-center justify-between pt-3 border-t border-white/[0.08]">
+            {hero.urgencyNote ? (
+              <p className="font-mono text-[10px] text-white/35 flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse flex-shrink-0" />
                 {hero.urgencyNote}
               </p>
+            ) : (
+              <p className="font-mono text-[10px] text-white/35">{licenseStr} · Free Estimates</p>
+            )}
+            {hero.stats && hero.stats.length > 0 && (
+              <div className="flex gap-4">
+                {hero.stats.slice(0, 2).map(s => (
+                  <div key={s.label} className="text-right">
+                    <div className="font-display text-[16px] text-white leading-none">{s.n}</div>
+                    <div className="font-mono text-[9px] text-white/30 uppercase mt-0.5">{s.label}</div>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         </div>
+      </section>
 
-        {/* Desktop stats row */}
-        {hero.stats && hero.stats.length > 0 && (
-          <div className="hidden md:flex gap-12 mt-10 pt-8 border-t border-white/10">
-            {hero.stats.map((s) => (
-              <div key={s.label}>
-                <div className="font-display text-[clamp(22px,3vw,38px)] font-light text-white leading-none">{s.n}</div>
-                <div className="font-mono text-[10px] tracking-wider text-white/35 mt-1 uppercase">{s.label}</div>
-              </div>
-            ))}
-            <div>
-              <div className="font-mono text-[12px] text-teal leading-none">{licenseStr}</div>
-              <div className="font-mono text-[10px] tracking-wider text-white/35 mt-1 uppercase">Licensed</div>
-            </div>
+      {/* ─────────────────────────────────────────────────────
+          DESKTOP HERO  (hidden below md)
+          Layout: full-bleed, content left-anchored
+          Psychology: research mode, credentials, ROI proof
+      ───────────────────────────────────────────────────── */}
+      <section className="relative hidden md:flex flex-col justify-end pb-20 lg:pb-28 pt-32 overflow-hidden min-h-[82vh] lg:min-h-[88vh]">
+        {/* Background */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={hero.bgDesktop}
+          alt={h1Text + ' BRE Builders'}
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          style={{ objectPosition: '60% center' }}
+        />
+        {/* Multi-direction overlays for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-void/96 via-void/60 to-void/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-void/80 via-void/40 to-transparent" />
+        {/* Subtle grid texture */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.025]"
+          style={{ backgroundImage: 'linear-gradient(rgba(30,207,201,1) 1px,transparent 1px),linear-gradient(90deg,rgba(30,207,201,1) 1px,transparent 1px)', backgroundSize: '80px 80px' }}
+        />
+        {/* Teal corner accent */}
+        <div className="absolute top-0 left-0 w-1 h-full bg-teal/30" />
+
+        <div className="relative z-10 container">
+          {/* Eyebrow */}
+          <div className="animate-fade-up-1 flex items-center gap-3 mb-6">
+            <div className="w-8 h-px bg-teal" />
+            <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">{hero.eyebrow}</span>
+            <span className="font-mono text-[10px] text-white/20">·</span>
+            <span className="font-mono text-[10px] text-white/25 tracking-wider">{licenseStr}</span>
           </div>
-        )}
-      </div>
-    </section>
+
+          {/* H1 — large, confident, multiple lines */}
+          <h1 className="animate-fade-up-2 font-display font-light text-[clamp(48px,6.5vw,90px)] leading-[0.92] tracking-tight text-white mb-6">
+            {hero.h1Lines.map((line, i) => (
+              <span key={i} className="block">{line}</span>
+            ))}
+            {hero.h1Ghost && (
+              <span
+                className="block italic"
+                style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,.32)', fontSize: '0.72em' }}
+              >
+                {hero.h1Ghost}
+              </span>
+            )}
+          </h1>
+
+          {/* Desktop lead — full paragraph, research-mode */}
+          <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.8] text-white/65 mb-6 max-w-[560px]">
+            {hero.lead}
+          </p>
+
+          {/* Badges */}
+          {hero.badges && hero.badges.length > 0 && (
+            <div className="animate-fade-up-3 flex flex-wrap gap-2 mb-7">
+              {hero.badges.map((b) => (
+                <span key={b} className="font-mono text-[10px] tracking-wider text-teal border border-teal/30 bg-teal/[0.08] px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                  ✓ {b}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Desktop CTAs — side by side, primary + secondary */}
+          <div className="animate-fade-up-4 flex gap-3 flex-wrap items-center mb-6">
+            <Link href={hero.ctaPrimaryHref} className="btn-primary px-8">
+              {hero.ctaPrimaryLabel}
+            </Link>
+            {hero.ctaSecondaryLabel && hero.ctaSecondaryHref && (
+              <Link href={hero.ctaSecondaryHref} className="btn-ghost">
+                {hero.ctaSecondaryLabel}
+              </Link>
+            )}
+            <a href={SITE.phoneHref} className="font-mono text-[13px] text-teal/70 hover:text-teal transition-colors ml-2">
+              {SITE.phone}
+            </a>
+          </div>
+
+          {/* Urgency note */}
+          {hero.urgencyNote && (
+            <div className="animate-fade-up-4 flex items-center gap-2 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse flex-shrink-0" />
+              <p className="font-mono text-[11px] text-white/35">{hero.urgencyNote}</p>
+            </div>
+          )}
+
+          {/* Desktop stats row — full credibility strip */}
+          {hero.stats && hero.stats.length > 0 && (
+            <div className="flex gap-10 lg:gap-14 pt-8 border-t border-white/10 mt-2">
+              {hero.stats.map((s) => (
+                <div key={s.label}>
+                  <div className="font-display text-[clamp(24px,3vw,40px)] font-light text-white leading-none">{s.n}</div>
+                  <div className="font-mono text-[10px] tracking-wider text-white/35 mt-1.5 uppercase">{s.label}</div>
+                </div>
+              ))}
+              <div>
+                <div className="font-mono text-[13px] text-teal leading-none">{licenseStr}</div>
+                <div className="font-mono text-[10px] tracking-wider text-white/35 mt-1.5 uppercase">Licensed</div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 right-10 hidden lg:flex flex-col items-center gap-3 z-10 opacity-50">
+          <div className="w-px h-10 bg-gradient-to-b from-teal to-transparent" />
+          <span className="font-mono text-[9px] tracking-[3px] text-white/30 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+        </div>
+      </section>
+    </>
   )
 }
 

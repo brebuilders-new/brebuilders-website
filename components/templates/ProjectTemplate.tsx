@@ -61,7 +61,84 @@ export default function ProjectTemplate({
       )}
       <main>
         {/* ── HERO ── */}
-        <section className="relative min-h-[72vh] lg:min-h-[82vh] flex flex-col justify-end pb-14 lg:pb-24 pt-28 overflow-hidden">
+        {/* MOBILE: stacked layout, image top, content anchored bottom */}
+        <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={heroImage}
+            alt={heroAlt}
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            style={{ objectPosition: '50% 30%' }}
+          />
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(to bottom, rgba(5,10,15,0.1) 0%, rgba(5,10,15,0.5) 40%, rgba(5,10,15,0.93) 68%, rgba(5,10,15,1) 85%)'
+          }} />
+
+          <div className="relative z-10 flex flex-col justify-end px-5 pb-8 pt-28" style={{ minHeight: '100svh' }}>
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-1.5 mb-4 font-mono text-[10px] text-white/30 flex-wrap" aria-label="Breadcrumb">
+              {breadcrumb.map((b, i) => (
+                <span key={i} className="flex items-center gap-1.5">
+                  {i > 0 && <span>/</span>}
+                  {b.href ? <Link href={b.href} className="hover:text-teal transition-colors">{b.name}</Link> : <span className="text-white/50">{b.name}</span>}
+                </span>
+              ))}
+            </nav>
+
+            <div className="flex items-center gap-2.5 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">{projectType}</span>
+            </div>
+
+            <h1 className="font-display font-light text-[clamp(32px,8vw,50px)] leading-[0.95] tracking-tight text-white mb-3">
+              {title}
+              {titleItalic && <span className="block italic text-teal">{titleItalic}</span>}
+            </h1>
+
+            <p className="text-[13px] leading-[1.65] text-white/60 mb-5 max-w-[340px]">
+              {description.split('.')[0]}.
+            </p>
+
+            {/* Location + photo count badges */}
+            <div className="flex flex-wrap gap-2 mb-5">
+              <span className="font-mono text-[10px] text-white/45 border border-white/[0.12] bg-white/[0.05] px-2.5 py-1.5 rounded-lg">
+                📍 {location}
+              </span>
+              {photos.length > 0 && (
+                <span className="font-mono text-[10px] text-teal/70 border border-teal/20 bg-teal/[0.06] px-2.5 py-1.5 rounded-lg">
+                  {photos.length} Photos
+                </span>
+              )}
+              {videoUrl && (
+                <a
+                  href={videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-[10px] text-white/50 border border-white/[0.12] bg-white/[0.05] px-2.5 py-1.5 rounded-lg flex items-center gap-1.5"
+                >
+                  ▶ Watch
+                </a>
+              )}
+            </div>
+
+            {/* Mobile CTAs */}
+            <div className="flex flex-col gap-2.5">
+              <a href={SITE.phoneHref} className="w-full flex items-center justify-center gap-2 py-4 bg-teal text-void text-[15px] font-bold rounded-xl">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                Start a Similar Project
+              </a>
+              <Link href="/contact" className="w-full flex items-center justify-center py-3.5 border border-white/20 text-white text-[14px] font-mono rounded-xl bg-white/[0.04]">
+                Request Free Quote →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* DESKTOP: full-bleed, content left-anchored */}
+        <section className="relative hidden md:flex flex-col justify-end pb-20 lg:pb-28 pt-32 overflow-hidden min-h-[85vh] lg:min-h-[90vh]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={heroImage}
@@ -69,31 +146,31 @@ export default function ProjectTemplate({
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-void/93 via-void/55 to-void/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-void/65 to-transparent hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/60 to-void/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-void/80 via-void/45 to-transparent" />
+          {/* Left accent */}
+          <div className="absolute top-0 left-0 w-1 h-full bg-teal/25" />
 
           <div className="relative z-10 container">
-            <div className="max-w-[620px]">
-              {/* Breadcrumb */}
-              <nav className="flex items-center gap-2 mb-6 font-mono text-[11px] text-cream/30 flex-wrap">
-                {breadcrumb.map((b, i) => (
-                  <span key={i} className="flex items-center gap-2">
-                    {i > 0 && <span>/</span>}
-                    {b.href ? (
-                      <Link href={b.href} className="hover:text-teal transition-colors">{b.name}</Link>
-                    ) : (
-                      <span className="text-cream/60">{b.name}</span>
-                    )}
-                  </span>
-                ))}
-              </nav>
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-2 mb-7 font-mono text-[11px] text-white/30 flex-wrap" aria-label="Breadcrumb">
+              {breadcrumb.map((b, i) => (
+                <span key={i} className="flex items-center gap-2">
+                  {i > 0 && <span>/</span>}
+                  {b.href ? <Link href={b.href} className="hover:text-teal transition-colors">{b.name}</Link> : <span className="text-white/55">{b.name}</span>}
+                </span>
+              ))}
+            </nav>
 
-              <div className="animate-fade-up-1 flex items-center gap-3 mb-4">
-                <div className="w-6 h-px bg-teal" />
+            <div className="max-w-[680px]">
+              <div className="animate-fade-up-1 flex items-center gap-3 mb-5">
+                <div className="w-8 h-px bg-teal" />
                 <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">{projectType}</span>
+                <span className="font-mono text-[10px] text-white/20">·</span>
+                <span className="font-mono text-[10px] text-white/25">NV Lic #0085999</span>
               </div>
 
-              <h1 className="animate-fade-up-2 font-display font-light text-[clamp(34px,5.5vw,72px)] leading-[0.94] tracking-tight text-white mb-4">
+              <h1 className="animate-fade-up-2 font-display font-light text-[clamp(48px,6vw,84px)] leading-[0.93] tracking-tight text-white mb-5">
                 {title}
                 {titleItalic && (
                   <>
@@ -103,16 +180,17 @@ export default function ProjectTemplate({
                 )}
               </h1>
 
-              <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/70 mb-6 max-w-[500px]">
+              <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.8] text-white/65 mb-7 max-w-[540px]">
                 {description}
               </p>
 
-              <div className="animate-fade-up-4 flex flex-wrap gap-3">
-                <span className="font-mono text-[11px] text-cream/40 border border-white/[0.1] px-3 py-1.5 rounded-lg">
+              {/* Metadata badges */}
+              <div className="animate-fade-up-4 flex flex-wrap gap-3 mb-8">
+                <span className="font-mono text-[11px] text-white/45 border border-white/[0.12] bg-white/[0.05] px-3 py-1.5 rounded-lg">
                   📍 {location}
                 </span>
                 {photos.length > 0 && (
-                  <span className="font-mono text-[11px] text-cream/40 border border-white/[0.1] px-3 py-1.5 rounded-lg">
+                  <span className="font-mono text-[11px] text-teal/70 border border-teal/20 bg-teal/[0.06] px-3 py-1.5 rounded-lg">
                     {photos.length} Photos
                   </span>
                 )}
@@ -121,13 +199,25 @@ export default function ProjectTemplate({
                     href={videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-[11px] text-teal/70 border border-teal/20 px-3 py-1.5 rounded-lg hover:border-teal/50 hover:text-teal transition-colors"
+                    className="font-mono text-[11px] text-white/50 border border-white/[0.12] bg-white/[0.05] px-3 py-1.5 rounded-lg hover:border-teal/40 hover:text-teal transition-all"
                   >
-                    ▶ Watch Video
+                    ▶ Watch Project Video
                   </a>
                 )}
               </div>
+
+              {/* Desktop CTAs */}
+              <div className="animate-fade-up-4 flex items-center gap-4">
+                <Link href="/contact" className="btn-primary">Start a Similar Project →</Link>
+                <a href={SITE.phoneHref} className="btn-ghost font-mono">{SITE.phone}</a>
+              </div>
             </div>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 right-10 hidden lg:flex flex-col items-center gap-3 z-10 opacity-40">
+            <div className="w-px h-10 bg-gradient-to-b from-teal to-transparent" />
+            <span className="font-mono text-[9px] tracking-[3px] text-white/30 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
           </div>
         </section>
 

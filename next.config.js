@@ -56,6 +56,8 @@ const nextConfig = {
       // ─── Project slug aliases ─────────────────────────────────────────
       { source: '/projects/lake-tahoe-interior-renovation',   destination: '/projects/lake-tahoe-renovation',  permanent: true },
 
+      { source: '/portfolio/charolettes-deck',    destination: '/projects/charolettes-deck',   permanent: true },
+      { source: '/portfolio/lake-tahoe-hillside-structural-repair-expansion', destination: '/projects/lake-tahoe-renovation', permanent: true },
       // ─── Service area aliases ─────────────────────────────────────────
       { source: '/service-areas/nevada',   destination: '/service-areas/reno',  permanent: true },
 

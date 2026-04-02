@@ -287,12 +287,13 @@ export async function POST(req: NextRequest) {
             continue
           }
 
-          // Fetch back the id we just created
+          // Fetch back the id we just created (most recent for this lead)
           const { data: imageRecord } = await supabaseAdmin
             .from('lead_images')
             .select('id')
             .eq('lead_id', savedLead.id)
-            .eq('storage_path', storagePath)
+            .order('created_at', { ascending: false })
+            .limit(1)
             .single()
 
           if (imageRecord?.id) {

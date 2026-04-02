@@ -268,7 +268,9 @@ export async function POST(req: NextRequest) {
             .getPublicUrl(storagePath)
 
           // Save record to lead_images table
-          const { data: imageRecord } = await supabaseAdmin
+          // Note: insert().select().single() returns null with sb_secret key
+          // Use insert then separate select to reliably get the new row id
+          const { error: imgInsertError } = await supabaseAdmin
             .from('lead_images')
             .insert({
               lead_id:      savedLead.id,
@@ -279,12 +281,24 @@ export async function POST(req: NextRequest) {
               file_size:    img.fileSize,
               mime_type:    img.mimeType,
             })
+
+          if (imgInsertError) {
+            console.error('lead_images insert error:', imgInsertError.message)
+            continue
+          }
+
+          // Fetch back the id we just created
+          const { data: imageRecord } = await supabaseAdmin
+            .from('lead_images')
             .select('id')
+            .eq('lead_id', savedLead.id)
+            .eq('storage_path', storagePath)
             .single()
 
-          console.log('imageRecord full value:', JSON.stringify(imageRecord))
           if (imageRecord?.id) {
             savedImageRecords.push({ imageId: imageRecord.id, url: publicUrl, service: img.service })
+          } else {
+            console.error('Could not retrieve image record id for path:', storagePath)
           }
         } catch (imgErr) {
           console.error('Image processing error:', imgErr)
@@ -292,9 +306,7 @@ export async function POST(req: NextRequest) {
       }
 
       // Run Claude Vision analysis inline (Vercel kills fire-and-forget after response)
-      console.log('savedImageRecords count:', savedImageRecords.length)
       if (savedImageRecords.length > 0) {
-        console.log('Starting Claude Vision analysis for', savedImageRecords.length, 'images')
         await runImageAnalysis(savedLead.id, savedImageRecords)
       }
     }

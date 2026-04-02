@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const ALL_PROJECTS = [
   {
-    slug: 'lake-tahoe-interior-renovation',
+    slug: 'lake-tahoe-renovation',
     wpSlug: 'portfolio/lake-tahoe-interior-renovation-project-bre-builders',
     title: 'Lake Tahoe Full Home Renovation',
     type: 'Full Home Renovation',
@@ -60,7 +60,7 @@ const ALL_PROJECTS = [
     desc: 'Commercial warehouse and metal building projects across Northern Nevada.',
   },
   {
-    slug: 'quaking-aspen-repair',
+    slug: 'quaking-aspen',
     wpSlug: 'portfolio/quaking-aspen-structural-repair',
     title: 'Quaking Aspen Structural Repair',
     type: 'Structural Repair',
@@ -70,7 +70,7 @@ const ALL_PROJECTS = [
     desc: 'Severe dry rot and structural damage repair — exposed framing, full remediation.',
   },
   {
-    slug: 'lake-tahoe-deck-repair',
+    slug: 'lake-tahoe-deck',
     wpSlug: 'portfolio/lake-tahoe-deck-balcony-structural-repair',
     title: 'Lake Tahoe Deck Structural Repair',
     type: 'Deck Repair',
@@ -80,7 +80,7 @@ const ALL_PROJECTS = [
     desc: 'Steel angle bracket system anchoring exterior deck to CMU wall. Full structural reinforcement.',
   },
   {
-    slug: 'car-wash-reno',
+    slug: 'car-wash',
     wpSlug: 'portfolio/car-wash-construction-reno-nv-concrete-slab-foundation',
     title: 'Car Wash — Concrete Slab & Foundation',
     type: 'Commercial / Concrete',
@@ -100,7 +100,7 @@ const ALL_PROJECTS = [
     desc: 'Hillside deck repair with reinforced support beams and elevated framing on a challenging slope.',
   },
   {
-    slug: 'rio-tinto-renovation',
+    slug: 'rio-tinto',
     wpSlug: 'portfolio/rio-tinto-home-renovation-project',
     title: 'Rio Tinto Home Renovation',
     type: 'Residential Renovation',
@@ -142,55 +142,54 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          {/* Featured projects — large cards */}
+          {/* Featured projects — signature cards, cinematic */}
           <section className="mb-16">
             <SL text="Signature Projects" />
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-[3px] rounded-2xl overflow-hidden">
               {featured.map((p, i) => (
                 <a
                   key={p.slug}
-                  href={`https://brebuilders.com/${p.wpSlug}/`}
-                  className="group block overflow-hidden rounded-2xl border border-white/[0.055] hover:border-teal/25 transition-all duration-500 bg-panel"
+                  href={p.slug.startsWith('portfolio/') ? `https://brebuilders.com/${p.wpSlug}/` : `/projects/${p.slug}/`}
+                  className="group relative block overflow-hidden bg-void"
+                  style={{ aspectRatio: '16/10' }}
                 >
-                  <div className="relative h-72 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.thumbnail}
-                      alt={p.thumbnailAlt}
-                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
-                      loading={i === 0 ? 'eager' : 'lazy'}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-void/85 via-void/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-2">{p.type}</div>
-                      <h2 className="font-display text-[22px] text-white mb-1 leading-snug">{p.title}</h2>
-                      <p className="text-[12px] text-white/50">📍 {p.location}</p>
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <p className="text-[13px] text-cream/45 leading-relaxed mb-3">{p.desc}</p>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.thumbnail}
+                    alt={p.thumbnailAlt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                  />
+                  {/* Permanent gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-void/30 to-void/5 pointer-events-none" />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-void/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
+                  {/* Gold left bar */}
+                  <div className="absolute top-0 left-0 w-[3px] h-full bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ boxShadow: '0 0 16px rgba(200,146,58,0.6)' }} />
+                  {/* Content always visible */}
+                  <div className="absolute bottom-0 left-0 right-0 p-7">
+                    <div className="font-mono text-[10px] tracking-[3px] uppercase text-teal mb-2">{p.type}</div>
+                    <h2 className="font-display text-[clamp(20px,2.5vw,32px)] font-light text-white leading-[1.1] mb-1">{p.title}</h2>
+                    <p className="text-[12px] text-white/45 mb-4">{p.location}</p>
                     <div className="flex items-center gap-4">
-                      {p.imageCount && (
-                        <span className="font-mono text-[11px] text-cream/30">{p.imageCount} photos</span>
-                      )}
+                      {p.imageCount && <span className="font-mono text-[11px] text-cream/30">{p.imageCount} photos</span>}
                       {p.videoUrl && (
-                        <a
-                          href={p.videoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-[11px] text-teal/60 hover:text-teal transition-colors"
-                        >
-                          ▶ Watch Video
+                        <a href={p.videoUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                          className="font-mono text-[11px] text-teal/60 hover:text-teal transition-colors">
+                          ▶ Watch
                         </a>
                       )}
-                      <span className="font-mono text-[11px] text-teal/55 group-hover:text-teal transition-colors ml-auto">
+                      <span className="font-mono text-[11px] text-gold/60 group-hover:text-gold transition-colors ml-auto">
                         View Project →
                       </span>
                     </div>
                   </div>
+                  {/* Desc — slides up on hover */}
+                  <div className="absolute top-6 right-6 max-w-[200px] opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+                    <p className="text-[12px] text-cream/55 leading-relaxed text-right">{p.desc}</p>
+                  </div>
                 </a>
-              ))}
-            </div>
+              ))}</div>
           </section>
 
           {/* Lake Tahoe inline gallery preview */}
@@ -216,25 +215,39 @@ export default function ProjectsPage() {
             <p className="font-mono text-[10px] text-cream/25 mt-2 tracking-wider">695 Lakeview Blvd · Zephyr Cove, NV · ← Swipe</p>
           </section>
 
-          {/* All other projects */}
+          {/* All other projects — cinematic 3-col grid */}
           <section>
             <SL text="All Projects" />
-            <div className="grid md:grid-cols-3 gap-5">
+            <div className="grid md:grid-cols-3 gap-[3px] rounded-2xl overflow-hidden">
               {rest.map((p, i) => (
                 <a
                   key={p.slug}
-                  href={`https://brebuilders.com/${p.wpSlug}/`}
-                  className="group block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/25 transition-all duration-500 bg-panel"
+                  href={p.slug.startsWith('portfolio/') ? `https://brebuilders.com/${p.wpSlug}/` : `/projects/${p.slug}/`}
+                  className="group relative block overflow-hidden bg-void"
+                  style={{ aspectRatio: '4/3' }}
                 >
-                  <div className="relative h-48 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.thumbnail} alt={p.thumbnailAlt} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/10 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
-                      <h3 className="font-display text-[16px] text-white leading-snug">{p.title}</h3>
-                      <p className="text-[12px] text-white/45 mt-0.5">📍 {p.location}</p>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.thumbnail}
+                    alt={p.thumbnailAlt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/15 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-void/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute top-0 left-0 w-[3px] h-full bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ boxShadow: '0 0 12px rgba(200,146,58,0.5)' }} />
+                  {/* Expand icon */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="w-10 h-10 rounded-full border border-gold/40 bg-void/40 flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
+                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
                     </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
+                    <h3 className="font-display text-[17px] font-light text-white leading-snug">{p.title}</h3>
+                    <p className="text-[11px] text-white/40 mt-0.5">{p.location}</p>
                   </div>
                 </a>
               ))}

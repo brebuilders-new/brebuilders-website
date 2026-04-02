@@ -117,21 +117,7 @@ function SL({ text }: { text: string }) {
 
 // ─── HOME PAGE ─────────────────────────────────────────────────────────────────
 export default function HomePage() {
-  // Cursor
-  useEffect(() => {
-    const c = document.getElementById('cursor'), r = document.getElementById('cursor-ring')
-    if (!c || !r) return
-    let rx = 0, ry = 0, id = 0
-    const mv = (e: MouseEvent) => { c.style.left = e.clientX + 'px'; c.style.top = e.clientY + 'px' }
-    const loop = () => {
-      const cx = parseFloat(c.style.left) || 0, cy = parseFloat(c.style.top) || 0
-      rx += (cx - rx) * 0.12; ry += (cy - ry) * 0.12
-      r.style.left = rx + 'px'; r.style.top = ry + 'px'
-      id = requestAnimationFrame(loop)
-    }
-    document.addEventListener('mousemove', mv); id = requestAnimationFrame(loop)
-    return () => { document.removeEventListener('mousemove', mv); cancelAnimationFrame(id) }
-  }, [])
+
 
   return (
     <>

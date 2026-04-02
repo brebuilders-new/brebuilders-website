@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import CursorTracker from '@/components/ui/CursorTracker'
 import '../styles/globals.css'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="noise-overlay" aria-hidden="true" />
         <div id="cursor" aria-hidden="true" />
         <div id="cursor-ring" aria-hidden="true" />
+        <CursorTracker />
         {children}
         <Analytics />
         <SpeedInsights />

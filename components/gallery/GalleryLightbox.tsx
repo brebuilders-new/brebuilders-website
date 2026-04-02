@@ -304,80 +304,102 @@ export function GalleryGrid({
       {/* Desktop: grid / masonry / alternating */}
       {!forceCarousel && (
         <>
-          {/* Standard grid */}
+          {/* Standard grid — 3 columns, fixed aspect ratio */}
           {mode === 'grid' && (
-            <div className={`hidden md:grid grid-cols-3 gap-4 ${className}`}>
+            <div className={`hidden md:grid grid-cols-3 gap-[3px] rounded-2xl overflow-hidden ${className}`}>
               {images.map((img, i) => (
                 <button
                   key={i}
-                  className="group overflow-hidden rounded-xl focus:outline-none focus-visible:ring-1 focus-visible:ring-teal/50 relative"
+                  className="group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-teal/60 bg-void"
+                  style={{ aspectRatio: '4/3' }}
                   onClick={() => openAt(images, i)}
-                  aria-label={`Open ${img.title || img.alt}`}
+                  aria-label={`View ${img.title || img.alt}`}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className={`w-full ${aspectClass} object-cover group-hover:scale-[1.03] transition-transform duration-500`}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                     loading={i < 3 ? 'eager' : 'lazy'}
                   />
-                  {/* Hover overlay with expand icon */}
-                  <div className="absolute inset-0 bg-void/0 group-hover:bg-void/30 transition-all duration-300 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-white/0 group-hover:bg-white/10 border border-white/0 group-hover:border-white/20 flex items-center justify-center transition-all duration-300">
-                      <svg className="w-4 h-4 text-white/0 group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-void/60 via-transparent to-void/10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-void/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute top-0 left-0 w-[3px] h-full bg-gold opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none" style={{ boxShadow: '0 0 12px rgba(200,146,58,0.5)' }} />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="w-10 h-10 rounded-full border border-gold/40 bg-void/40 flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
+                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                       </svg>
                     </div>
                   </div>
-                  {/* Caption */}
-                  {img.caption && (
-                    <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase text-left px-0.5">
-                      {img.caption}
-                    </p>
-                  )}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                    {img.title && <p className="font-display text-[14px] text-white leading-snug mb-0.5">{img.title}</p>}
+                    {img.caption && <p className="font-mono text-[10px] text-cream/45 leading-snug">{img.caption}</p>}
+                  </div>
                 </button>
               ))}
             </div>
           )}
 
-          {/* Masonry — 3 columns */}
+          {/* Masonry — cinematic 3-column grid, fixed aspect ratio, gold reveal */}
           {mode === 'masonry' && (
-            <div className="hidden md:grid grid-cols-3 gap-4">
-              {[0, 1, 2].map((col) => (
-                <div key={col} className="flex flex-col gap-4">
-                  {images.filter((_, i) => i % 3 === col).map((img, j) => {
-                    const realIdx = images.indexOf(img)
-                    return (
-                      <button
-                        key={j}
-                        className="group overflow-hidden rounded-xl focus:outline-none focus-visible:ring-1 focus-visible:ring-teal/50 relative w-full text-left"
-                        onClick={() => openAt(images, realIdx)}
-                        aria-label={`Open ${img.title || img.alt}`}
-                      >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={img.src}
-                          alt={img.alt}
-                          className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-600"
-                          loading={realIdx < 3 ? 'eager' : 'lazy'}
-                        />
-                        {/* Hover overlay */}
-                        <div className="absolute inset-0 bg-void/0 group-hover:bg-void/25 transition-all duration-300 flex items-end">
-                          <div className="w-full px-3 pb-3 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                            {img.title && (
-                              <p className="font-display text-[13px] text-white leading-snug drop-shadow">{img.title}</p>
-                            )}
-                          </div>
-                        </div>
-                        {img.caption && (
-                          <p className="mt-1.5 font-mono text-[10px] tracking-wider text-cream/30 uppercase px-0.5">
-                            {img.caption}
-                          </p>
-                        )}
-                      </button>
-                    )
-                  })}
-                </div>
+            <div className="hidden md:grid grid-cols-3 gap-[3px] rounded-2xl overflow-hidden">
+              {images.map((img, realIdx) => (
+                <button
+                  key={realIdx}
+                  className="group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-teal/60 bg-void"
+                  style={{ aspectRatio: '4/3' }}
+                  onClick={() => openAt(images, realIdx)}
+                  aria-label={`View ${img.title || img.alt}`}
+                >
+                  {/* Image — fills cell exactly */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                    loading={realIdx < 3 ? 'eager' : 'lazy'}
+                  />
+
+                  {/* Permanent subtle vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-void/60 via-transparent to-void/10 pointer-events-none" />
+
+                  {/* Hover reveal overlay — slides up from bottom */}
+                  <div className="absolute inset-0 bg-void/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  {/* Gold accent bar — slides in from left on hover */}
+                  <div
+                    className="absolute top-0 left-0 w-[3px] h-full bg-gold opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"
+                    style={{ boxShadow: '0 0 12px rgba(200,146,58,0.5)' }}
+                  />
+
+                  {/* Index badge top-right */}
+                  <div className="absolute top-3 right-3 font-mono text-[10px] text-cream/0 group-hover:text-cream/40 transition-colors duration-300 tracking-widest">
+                    {String(realIdx + 1).padStart(2, '0')}
+                  </div>
+
+                  {/* Label — slides up on hover */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                    {img.title && (
+                      <p className="font-display text-[14px] text-white leading-snug mb-0.5">{img.title}</p>
+                    )}
+                    {img.caption && (
+                      <p className="font-mono text-[10px] text-cream/45 leading-snug">{img.caption}</p>
+                    )}
+                  </div>
+
+                  {/* Expand icon center */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div
+                      className="w-10 h-10 rounded-full border border-gold/40 bg-void/40 flex items-center justify-center"
+                      style={{ backdropFilter: 'blur(4px)' }}
+                    >
+                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
               ))}
             </div>
           )}

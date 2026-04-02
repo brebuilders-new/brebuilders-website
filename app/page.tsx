@@ -565,13 +565,19 @@ export default function HomePage() {
                 </p>
                 {/* Named owner — E-E-A-T signal */}
                 <div className="flex items-center gap-4 p-4 bg-deep border border-white/[0.06] rounded-xl mb-5">
-                  <div className="w-12 h-12 rounded-full bg-teal/15 border border-teal/30 flex items-center justify-center flex-shrink-0">
-                    <span className="font-display text-[18px] text-teal font-light">SR</span>
-                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/steve-rosenthal.png"
+                    alt="Steve Rosenthal — Owner and Founder, BRE Builders, Licensed General Contractor Reno NV since 1989"
+                    className="w-14 h-14 rounded-full object-cover flex-shrink-0 border-2 border-teal/30"
+                    width={56}
+                    height={56}
+                    loading="lazy"
+                  />
                   <div>
-                    <div className="font-display text-[15px] text-cream">Steve Rosenthal</div>
-                    <div className="font-mono text-[10px] text-cream/45 tracking-wider mt-0.5">Owner & Founder · BRE Builders · Since 1989</div>
-                    <div className="font-mono text-[9px] text-teal/60 tracking-wider mt-1">NV #0085999 · CA #1093798</div>
+                    <div className="font-display text-[16px] text-cream">Steve Rosenthal</div>
+                    <div className="font-mono text-[10px] text-cream/55 tracking-wider mt-0.5">Owner & Founder · BRE Builders · Since 1989</div>
+                    <div className="font-mono text-[9px] text-teal/70 tracking-wider mt-1">NV #0085999 · CA #1093798</div>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-3">

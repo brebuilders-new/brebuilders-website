@@ -287,19 +287,19 @@ export async function POST(req: NextRequest) {
             continue
           }
 
-          // Fetch back the id we just created (most recent for this lead)
-          const { data: imageRecord } = await supabaseAdmin
+          // Fetch back the id (use array result — .single() errors on 0 rows)
+          const { data: imageRows } = await supabaseAdmin
             .from('lead_images')
             .select('id')
             .eq('lead_id', savedLead.id)
             .order('created_at', { ascending: false })
             .limit(1)
-            .single()
 
-          if (imageRecord?.id) {
-            savedImageRecords.push({ imageId: imageRecord.id, url: publicUrl, service: img.service })
+          const imageId = imageRows?.[0]?.id
+          if (imageId) {
+            savedImageRecords.push({ imageId, url: publicUrl, service: img.service })
           } else {
-            console.error('Could not retrieve image record id for path:', storagePath)
+            console.error('Could not retrieve image record id — rows returned:', imageRows?.length ?? 0)
           }
         } catch (imgErr) {
           console.error('Image processing error:', imgErr)

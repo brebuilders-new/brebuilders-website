@@ -176,17 +176,17 @@ export function GalleryLightbox({
       </div>
 
       {/* ── CAPTION PANEL ── */}
-      <div className="relative z-10 flex-shrink-0 px-4 lg:px-8 pt-4 pb-6">
+      <div className="relative z-10 flex-shrink-0 px-4 lg:px-8 pt-5 pb-6 border-t border-white/[0.08]" style={{ background: '#0c0a08' }}>
         <div className="max-w-[720px] mx-auto">
           {/* Title */}
           {current.title && (
-            <p className="font-display text-[17px] lg:text-[20px] text-cream font-light leading-snug mb-1">
+            <p className="font-display text-[18px] lg:text-[22px] text-white font-light leading-snug mb-2">
               {current.title}
             </p>
           )}
           {/* Description / caption */}
           {current.caption && (
-            <p className="font-mono text-[11px] lg:text-[12px] text-cream/45 leading-relaxed">
+            <p className="font-mono text-[11px] lg:text-[12px] leading-relaxed" style={{ color: 'rgba(242,237,230,0.65)' }}>
               {current.caption}
             </p>
           )}

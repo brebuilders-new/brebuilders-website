@@ -5,11 +5,13 @@ import Footer from '@/components/layout/Footer'
 import { PROJECTS } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Projects & Portfolio | Reno NV & California',
   description:
     'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial construction. Northern Nevada and California since 1989.',
-  alternates: { canonical: 'https://brebuilders.com/projects/' },
+  alternates: { canonical: `${SITE_URL}/projects/` },
 }
 
 const ALL_PROJECTS = [

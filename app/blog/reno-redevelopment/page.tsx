@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Reno's $1 Billion Redevelopment — What It Means for Contractors | BRE Builders",
   description: "Reno is in the middle of its largest redevelopment wave in decades. BRE Builders breaks down what the construction boom means for contractors, homeowners, and commercial property owners in Northern Nevada.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Redevelopment+%241+Billion&sub=What+It+Means+for+Northern+Nevada+Construction&badge=Commercial`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/reno-1-billion-redevelopment-contractors/' },
+  alternates: { canonical: `${SITE_URL}/reno-1-billion-redevelopment-contractors/` },
 }
 
 const schema = {

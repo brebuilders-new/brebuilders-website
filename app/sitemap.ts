@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: base + '/kitchen/',                                     lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: base + '/decks/',                                       lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: base + '/new-home/',                                    lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: base + '/services/new-home-builds/',                    lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: base + '/commercial-services/',                         lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: base + '/concrete/',                                    lastModified: now, changeFrequency: 'monthly', priority: 0.75 },
     { url: base + '/hauling-removal/',                             lastModified: now, changeFrequency: 'monthly', priority: 0.75 },

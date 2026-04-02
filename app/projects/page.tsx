@@ -184,9 +184,16 @@ export default function ProjectsPage() {
                       </span>
                     </div>
                   </div>
-                  {/* Desc — slides up on hover */}
-                  <div className="absolute top-6 right-6 max-w-[200px] opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
-                    <p className="text-[12px] text-cream/55 leading-relaxed text-right">{p.desc}</p>
+                  {/* Rich hover panel — slides up from bottom */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-7 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-400 pointer-events-none">
+                    <div className="bg-void/85 backdrop-blur-md rounded-xl border border-teal/20 p-5 mb-20" style={{ backdropFilter: 'blur(12px)' }}>
+                      <p className="text-[13px] text-cream/85 leading-relaxed mb-3">{p.desc}</p>
+                      <div className="flex items-center gap-4 border-t border-white/10 pt-3">
+                        {p.imageCount && <span className="font-mono text-[10px] text-teal/70 uppercase tracking-wider">{p.imageCount} Photos</span>}
+                        {p.videoUrl && <span className="font-mono text-[10px] text-teal/70 uppercase tracking-wider">▶ Video Tour</span>}
+                        <span className="font-mono text-[11px] text-gold ml-auto tracking-wide">View Full Project →</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               ))}</div>
@@ -236,18 +243,23 @@ export default function ProjectsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/15 to-transparent pointer-events-none" />
                   <div className="absolute inset-0 bg-void/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   <div className="absolute top-0 left-0 w-[3px] h-full bg-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ boxShadow: '0 0 12px rgba(200,146,58,0.5)' }} />
-                  {/* Expand icon */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="w-10 h-10 rounded-full border border-gold/40 bg-void/40 flex items-center justify-center" style={{ backdropFilter: 'blur(4px)' }}>
-                      <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                  {/* Default label — always visible */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2 pointer-events-none">
                     <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
                     <h3 className="font-display text-[17px] font-light text-white leading-snug">{p.title}</h3>
-                    <p className="text-[11px] text-white/40 mt-0.5">{p.location}</p>
+                    <p className="text-[11px] text-white/50 mt-0.5">📍 {p.location}</p>
+                  </div>
+                  {/* Rich hover panel */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-350 pointer-events-none">
+                    <div className="rounded-xl border border-teal/25 p-4" style={{ background: 'rgba(8,6,4,0.88)', backdropFilter: 'blur(14px)' }}>
+                      <div className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal mb-1.5">{p.type}</div>
+                      <h3 className="font-display text-[16px] font-light text-cream leading-snug mb-2">{p.title}</h3>
+                      <p className="text-[12px] text-cream/75 leading-relaxed mb-3">{p.desc}</p>
+                      <div className="flex items-center justify-between border-t border-white/10 pt-2.5">
+                        <span className="font-mono text-[10px] text-cream/45 tracking-wide">📍 {p.location}</span>
+                        <span className="font-mono text-[11px] text-gold font-medium">View →</span>
+                      </div>
+                    </div>
                   </div>
                 </a>
               ))}

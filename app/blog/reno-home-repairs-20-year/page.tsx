@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "20-Year-Old Home Repairs in Reno — What to Inspect Now | BRE Builders",
   description: "At 20 years old, Reno homes face cumulative damage from clay soils, freeze-thaw cycles, and UV exposure. BRE Builders identifies the 8 issues that matter most in homes built in the early 2000s.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=What+to+Inspect+%26+When+to+Act&badge=Structural+Repairs`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/reno-home-repairs-20-year-old-house/' },
+  alternates: { canonical: `${SITE_URL}/reno-home-repairs-20-year-old-house/` },
 }
 
 const schema = {

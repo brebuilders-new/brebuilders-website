@@ -132,9 +132,9 @@ export default function HomePage() {
 
           <div className="relative z-10 flex flex-col justify-end px-5 pb-8 pt-28" style={{ minHeight: '100svh' }}>
             {/* Live badge */}
-            <div className="inline-flex items-center gap-2 border border-teal/30 rounded-full px-3 py-1.5 bg-teal/[0.08] backdrop-blur-sm mb-5 self-start">
+            <div className="inline-flex items-center gap-2 border border-teal/60 rounded-full px-3 py-1.5 bg-teal/[0.18] backdrop-blur-sm mb-5 self-start">
               <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-              <span className="font-mono text-[9px] tracking-[2px] uppercase text-teal">Now Accepting Projects · NV & CA</span>
+              <span className="font-mono text-[9px] tracking-[2px] uppercase text-cream font-medium">Now Accepting Projects · NV & CA</span>
             </div>
 
             {/* H1 — mobile-sized, punchy, 3 short lines */}
@@ -197,9 +197,9 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 w-full pt-36">
             {/* Badge */}
-            <div className="animate-fade-up-1 inline-flex items-center gap-2.5 border border-white/20 rounded-full px-4 py-2 bg-white/[0.06] backdrop-blur-sm mb-8">
+            <div className="animate-fade-up-1 inline-flex items-center gap-2.5 border border-teal/60 rounded-full px-4 py-2 bg-teal/[0.15] backdrop-blur-sm mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Now Accepting New Projects · NV Lic #0085999 · CA Lic #1093798</span>
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-cream font-medium">Now Accepting New Projects · NV Lic #0085999 · CA Lic #1093798</span>
             </div>
 
             {/* H1 */}
@@ -235,8 +235,8 @@ export default function HomePage() {
                   <Link href="/contact" className="px-7 py-3.5 bg-teal text-void text-[13px] font-bold rounded-lg hover:bg-teal/90 transition-colors shadow-lg">
                     Get a Free Quote →
                   </Link>
-                  <a href={SITE.phoneHref} className="px-7 py-3.5 bg-white/10 border border-teal/50 text-teal text-[13px] rounded-lg hover:bg-teal/15 transition-all font-mono backdrop-blur-sm font-bold">
-                    {SITE.phone}
+                  <a href={SITE.phoneHref} className="px-7 py-3.5 bg-teal/20 border-2 border-teal text-white text-[14px] rounded-lg hover:bg-teal/30 transition-all font-mono font-bold tracking-wide">
+                    📞 {SITE.phone}
                   </a>
                   <Link href="/projects" className="px-7 py-3.5 border border-white/20 text-white/70 text-[13px] rounded-lg hover:bg-white/10 transition-all backdrop-blur-sm">
                     View Projects
@@ -612,7 +612,7 @@ export default function HomePage() {
             <Fade>
               <div className="inline-flex items-center gap-2 border border-teal/25 rounded-full px-4 py-2 bg-teal/[0.06] mb-10">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-                <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Now Accepting New Projects</span>
+                <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-cream font-medium">Now Accepting New Projects</span>
               </div>
               <h2 className="font-display text-[clamp(40px,7vw,88px)] font-light leading-[0.96] tracking-tight text-white mb-6">
                 Let&apos;s Build Something<br />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025 | BRE Builders',
   description: 'Top kitchen remodeling trends in Reno for 2025. Smart kitchens, natural materials, functional islands. Investment tips to maximize your ROI. Licensed NV #0085999.',
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Kitchen+Remodeling+Trends+2025&sub=Investment+Tips+%26+Top+Trends&badge=Kitchen`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/reno-kitchen-remodeling-top-trends-investment-tips-for-2025/' },
+  alternates: { canonical: `${SITE_URL}/reno-kitchen-remodeling-top-trends-investment-tips-for-2025/` },
 }
 
 const schema = {

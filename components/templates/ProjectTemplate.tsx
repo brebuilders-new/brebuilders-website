@@ -1,6 +1,5 @@
-import ScrollPsychology from '@/components/ui/ScrollPsychology'
 'use client'
-
+import ScrollPsychology from '@/components/ui/ScrollPsychology'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "From Strikes to Suds: How BRE Builders Saved a Reno Icon | BRE Builders",
   description: "BRE Builders transformed the abandoned Starlite Lanes bowling alley into Reno's longest car wash tunnel. Adaptive reuse case study. Licensed NV #0085999.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=From+Strikes+to+Suds&sub=How+BRE+Builders+Saved+a+Reno+Icon&badge=Commercial`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/from-strikes-to-suds-how-bre-builders-saved-a-reno-icon/' },
+  alternates: { canonical: `${SITE_URL}/from-strikes-to-suds-how-bre-builders-saved-a-reno-icon/` },
 }
 
 const schema = {

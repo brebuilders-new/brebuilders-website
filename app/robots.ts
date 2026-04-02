@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next'
 
+const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -8,20 +10,21 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/?m=',        // Spam query string URLs from malware incident
+          '/admin/',
+          '/?m=',
           '/*?m=',
         ],
       },
-      // Allow all major AI crawlers explicitly
-      { userAgent: 'GPTBot', allow: '/' },
-      { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'GPTBot',          allow: '/' },
+      { userAgent: 'ChatGPT-User',    allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
-      { userAgent: 'anthropic-ai', allow: '/' },
-      { userAgent: 'PerplexityBot', allow: '/' },
-      { userAgent: 'Applebot', allow: '/' },
-      { userAgent: 'Bingbot', allow: '/' },
+      { userAgent: 'anthropic-ai',    allow: '/' },
+      { userAgent: 'PerplexityBot',   allow: '/' },
+      { userAgent: 'ClaudeBot',       allow: '/' },
+      { userAgent: 'Applebot',        allow: '/' },
+      { userAgent: 'Bingbot',         allow: '/' },
     ],
-    sitemap: 'https://brebuilders.com/sitemap.xml',
-    host: 'https://brebuilders.com',
+    sitemap: `${base}/sitemap.xml`,
+    host: base,
   }
 }

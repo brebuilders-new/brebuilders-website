@@ -1,3 +1,4 @@
+import { runImageAnalysis } from '@/lib/analyzeImages'
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
@@ -289,17 +290,9 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      // Trigger async GPT-4o analysis if any images were saved
+      // Run Claude Vision analysis inline (Vercel kills fire-and-forget after response)
       if (savedImageRecords.length > 0) {
-        // Use request origin so callback works on staging + production
-        const origin = req.headers.get('origin') || req.headers.get('host')
-          ? `${req.headers.get('x-forwarded-proto') || 'https'}://${req.headers.get('host')}`
-          : process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
-        fetch(`${origin}/api/analyze-images`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ leadId: savedLead.id, images: savedImageRecords }),
-        }).catch(console.error)
+        await runImageAnalysis(savedLead.id, savedImageRecords)
       }
     }
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Custom homes, repairs, remodeling. CA #1093798. Proven work in Ripon CA.',
     images: [`${SITE_URL}/api/og?title=Northern+California+Contractor&sub=CA+Lic+%231093798+%C2%B7+Ripon+CA&badge=Northern+CA`],
   },
-  alternates: { canonical: 'https://brebuilders.com/service-areas/northern-california/' },
+  alternates: { canonical: `${SITE_URL}/service-areas/northern-california/` },
 }
 
 const schema = {

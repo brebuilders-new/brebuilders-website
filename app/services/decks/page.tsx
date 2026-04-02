@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/decks/' },
+  alternates: { canonical: `${SITE_URL}/decks/` },
 }
 
 const schema = {

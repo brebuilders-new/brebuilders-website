@@ -282,11 +282,9 @@ export async function POST(req: NextRequest) {
             .select('id')
             .single()
 
+          console.log('imageRecord full value:', JSON.stringify(imageRecord))
           if (imageRecord?.id) {
             savedImageRecords.push({ imageId: imageRecord.id, url: publicUrl, service: img.service })
-            console.log('Image record saved:', imageRecord.id)
-          } else {
-            console.error('Image record insert returned no id — imageRecord:', JSON.stringify(imageRecord))
           }
         } catch (imgErr) {
           console.error('Image processing error:', imgErr)

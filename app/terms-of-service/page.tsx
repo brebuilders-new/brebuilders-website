@@ -3,10 +3,12 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Terms of Service | Blue Reef Builders (BRE Builders) Reno NV',
   description: 'Terms of service for Blue Reef Builders (BRE Builders), licensed general contractor in Reno, NV. Website use, estimates, contracts, and project terms.',
-  alternates: { canonical: 'https://brebuilders.com/terms-of-service/' },
+  alternates: { canonical: `${SITE_URL}/terms-of-service/` },
   robots: { index: true, follow: false },
 }
 

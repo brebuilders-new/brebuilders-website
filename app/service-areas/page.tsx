@@ -4,11 +4,13 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Service Areas | Nevada & California Licensed Contractor',
   description:
     'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798.',
-  alternates: { canonical: 'https://brebuilders.com/service-areas/' },
+  alternates: { canonical: `${SITE_URL}/service-areas/` },
 }
 
 const AREAS = [

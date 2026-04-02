@@ -1088,10 +1088,10 @@ export default function SmartQuoteForm({ preselect, className = '' }: SmartQuote
     setSubmitting(true)
     setError('')
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, service: form.services[0] || 'other' }),  // legacy compat
+        body: JSON.stringify({ ...form }),
       })
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)

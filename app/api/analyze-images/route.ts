@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     }
 
     const result = await runImageAnalysis(leadId, images)
-    return NextResponse.json({ success: true, ...result })
+    return NextResponse.json({ success: true, analyzed: result.analyzed, errors: result.errors, lastError: result.lastError || null })
 
   } catch (err) {
     console.error('Image analysis error:', err)

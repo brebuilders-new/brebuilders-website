@@ -25,22 +25,23 @@ Analyze this construction/property photo and respond with ONLY valid JSON (no ma
 export async function runImageAnalysis(
   leadId: string,
   images: Array<{ imageId: string; url: string; service: string }>
-): Promise<{ analyzed: number; errors: number }> {
+): Promise<{ analyzed: number; errors: number; lastError: string }> {
   const apiKey = process.env.ANTHROPIC_API_KEY
   if (!apiKey) {
     console.error('ANTHROPIC_API_KEY not set — skipping image analysis')
-    return { analyzed: 0, errors: images.length }
+    return { analyzed: 0, errors: images.length, lastError: 'ANTHROPIC_API_KEY not set' }
   }
 
   const client = new Anthropic({ apiKey })
   let analyzed = 0
   let errors = 0
+  let lastErrorMsg = ''
 
   for (const img of images) {
     try {
       // Fetch image from Supabase Storage
       console.log('analyzeImages: fetching', img.url.slice(0, 80))
-      const imgResp = await fetch(img.url, { signal: AbortSignal.timeout(15000) })
+      const imgResp = await fetch(img.url)
       if (!imgResp.ok) throw new Error(`Failed to fetch image: ${imgResp.status} ${imgResp.statusText}`)
       console.log('analyzeImages: fetched', imgResp.headers.get('content-type'), imgResp.headers.get('content-length'), 'bytes')
       const imgBuffer = await imgResp.arrayBuffer()
@@ -85,6 +86,7 @@ export async function runImageAnalysis(
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)
       console.error(`analyzeImages error for ${img.imageId}: ${msg}`)
+      lastErrorMsg = msg
       errors++
     }
   }
@@ -117,5 +119,5 @@ export async function runImageAnalysis(
     }
   }
 
-  return { analyzed, errors }
+  return { analyzed, errors, lastError: lastErrorMsg }
 }

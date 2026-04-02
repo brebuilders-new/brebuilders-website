@@ -39,8 +39,10 @@ export async function runImageAnalysis(
   for (const img of images) {
     try {
       // Fetch image from Supabase Storage
-      const imgResp = await fetch(img.url)
-      if (!imgResp.ok) throw new Error(`Failed to fetch image: ${imgResp.status}`)
+      console.log('analyzeImages: fetching', img.url.slice(0, 80))
+      const imgResp = await fetch(img.url, { signal: AbortSignal.timeout(15000) })
+      if (!imgResp.ok) throw new Error(`Failed to fetch image: ${imgResp.status} ${imgResp.statusText}`)
+      console.log('analyzeImages: fetched', imgResp.headers.get('content-type'), imgResp.headers.get('content-length'), 'bytes')
       const imgBuffer = await imgResp.arrayBuffer()
       const base64Data = Buffer.from(imgBuffer).toString('base64')
       const rawType = imgResp.headers.get('content-type') || 'image/jpeg'
@@ -49,6 +51,7 @@ export async function runImageAnalysis(
           ? rawType : 'image/jpeg'
       ) as 'image/jpeg' | 'image/png' | 'image/gif' | 'image/webp'
 
+      console.log('analyzeImages: calling Claude Haiku, mediaType=', mediaType, 'b64len=', base64Data.length)
       const message = await client.messages.create({
         model: 'claude-haiku-4-5-20251001',
         max_tokens: 1024,
@@ -80,7 +83,8 @@ export async function runImageAnalysis(
       await new Promise(r => setTimeout(r, 300))
 
     } catch (err) {
-      console.error(`Analysis failed for image ${img.imageId}:`, err)
+      const msg = err instanceof Error ? err.message : String(err)
+      console.error(`analyzeImages error for ${img.imageId}: ${msg}`)
       errors++
     }
   }

@@ -77,6 +77,9 @@ const nextConfig = {
       { source: '/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation', destination: '/projects/car-wash/',                        permanent: true },
       { source: '/portfolio/arun-hillside-deck-repair-lake-tahoe-nv',              destination: '/projects/arun-deck-repair/',                          permanent: true },
       { source: '/portfolio/adus',                destination: '/services/adu/',      permanent: true },
+      // ─── Project slug aliases ────────────────────────────────────────────────
+      { source: '/projects/lake-tahoe-interior-renovation',  destination: '/projects/lake-tahoe-renovation/', permanent: true },
+      { source: '/projects/lake-tahoe-interior-renovation/', destination: '/projects/lake-tahoe-renovation/', permanent: true },
       // ─── Service areas ────────────────────────────────────────────────
       // /service-areas/nevada/ is the indexed URL for Reno page — keep pointing there
       { source: '/service-areas/nevada',  destination: '/service-areas/reno',  permanent: true },

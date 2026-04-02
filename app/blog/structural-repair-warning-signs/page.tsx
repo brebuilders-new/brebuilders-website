@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Top 10 Signs Your Home Needs Structural Repair — Don't Ignore #3 | BRE Builders",
   description: "10 structural warning signs Reno homeowners miss until it's expensive. BRE Builders breaks down each sign, what causes it, and what it means for your home. Licensed NV #0085999.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Top+10+Structural+Repair+Warning+Signs&sub=Don%27t+Ignore+%233+%C2%B7+Reno+NV&badge=Structural+Repairs`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/top-10-signs-your-home-needs-structural-repair-dont-ignore-3/' },
+  alternates: { canonical: `${SITE_URL}/top-10-signs-your-home-needs-structural-repair-dont-ignore-3/` },
 }
 
 const schema = {

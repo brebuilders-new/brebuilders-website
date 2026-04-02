@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: '#1 ADU Builder Reno · Page 1 Foundation Repair · Licensed NV #0085999. Free estimates.',
     images: [`${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+NV+%230085999&badge=Reno+NV`],
   },
-  alternates: { canonical: 'https://brebuilders.com/service-areas/nevada/' },
+  alternates: { canonical: `${SITE_URL}/service-areas/nevada/` },
 }
 
 const schema = {

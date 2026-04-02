@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer'
 import { IMGS } from '@/lib/images'
 import { SITE } from '@/lib/site-data'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Blog | BRE Builders Reno NV — Construction Tips & Guides',
   description: 'ADU guides, structural repair advice, kitchen remodeling tips, and Northern Nevada construction insights from BRE Builders — licensed general contractor since 1989.',
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'BRE Builders',
     locale: 'en_US',
   },
-  alternates: { canonical: 'https://brebuilders.com/blog/' },
+  alternates: { canonical: `${SITE_URL}/blog/` },
 }
 
 // All posts now on Vercel routes

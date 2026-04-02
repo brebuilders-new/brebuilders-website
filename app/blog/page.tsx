@@ -24,6 +24,34 @@ export const metadata: Metadata = {
 // All posts now on Vercel routes
 const POSTS = [
   {
+    title: 'Custom Home Builder Reno NV — What It Actually Costs in 2026',
+    excerpt: 'Real 2026 pricing for custom home construction in Reno NV — design-build process, permit timelines, and what separates good contractors from bad ones.',
+    href: '/blog/custom-home-builder-reno-nv',
+    category: 'Custom Homes',
+    date: 'April 2026',
+  },
+  {
+    title: 'Kitchen Remodel Cost Reno NV — Real Prices for 2026',
+    excerpt: 'How much does a kitchen remodel cost in Reno NV? Real pricing data — from $18,000 basic refreshes to $85,000 full gut renovations.',
+    href: '/blog/kitchen-remodel-cost-reno-nv',
+    category: 'Kitchen & Bath',
+    date: 'April 2026',
+  },
+  {
+    title: 'Home Addition Cost Reno NV — 2026 Pricing Guide',
+    excerpt: 'Room additions start at $80,000 in Reno NV. Real pricing for room additions, master suites, second stories, and garage additions.',
+    href: '/blog/home-addition-cost-reno-nv',
+    category: 'Home Additions',
+    date: 'April 2026',
+  },
+  {
+    title: 'Deck Builder Reno NV — Cost, Permits & What to Expect in 2026',
+    excerpt: 'New decks start at $18,000 in Reno NV. What decks cost, permit requirements, best materials for Northern Nevada climate, and Lake Tahoe snow-load requirements.',
+    href: '/blog/deck-builder-reno-nv',
+    category: 'Decks',
+    date: 'April 2026',
+  },
+  {
     href: '/blog/how-to-add-an-adu-in-nevada',
     title: 'How to Add an ADU in Nevada Without Breaking the Bank: 2025 Guide',
     category: 'ADU',

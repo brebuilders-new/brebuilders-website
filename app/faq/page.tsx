@@ -5,11 +5,13 @@ import Footer from '@/components/layout/Footer'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { FAQS, SITE } from '@/lib/site-data'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'FAQ — Licensed Contractor Reno NV | Common Questions',
   description:
     'Answers to common questions about BRE Builders — services, pricing, timelines, materials, warranty, licensing, and service areas.',
-  alternates: { canonical: 'https://brebuilders.com/frequently-asked-questions-bre-builders/' },
+  alternates: { canonical: `${SITE_URL}/frequently-asked-questions-bre-builders/` },
 }
 
 const schema = {

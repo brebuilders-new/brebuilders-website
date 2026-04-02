@@ -127,7 +127,7 @@ export default async function AdminDashboard() {
                 const serviceShort = services.slice(0, 2).join(', ') + (services.length > 2 ? ` +${services.length - 2}` : '')
 
                 return (
-                  <tr key={lead.id as string} style={{ cursor: 'pointer' }} onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.02)')} onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>
+                  <tr key={lead.id as string} style={{ cursor: 'pointer' }}>
                     <td style={cell}>
                       <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3' }}>
                         BRE-{String(lead.lead_number).padStart(4, '0')}

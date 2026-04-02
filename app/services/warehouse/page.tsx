@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Warehouse+%26+Metal+Buildings&sub=Custom+Steel+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/warehouse-metal-buildings/' },
+  alternates: { canonical: `${SITE_URL}/warehouse-metal-buildings/` },
 }
 
 const schema = {

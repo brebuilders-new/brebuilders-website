@@ -147,7 +147,7 @@ export default function HomePage() {
             {/* Short mobile sub — 1 sentence max */}
             <p className="text-[14px] leading-[1.65] text-white/85 mb-5 max-w-[320px]">
               Licensed contractor serving Reno, Lake Tahoe, and Northern California.
-              <span className="block mt-1 font-display text-[17px] text-white/45">We build with <AnimatedWord />.</span>
+              <span className="block mt-1 font-display text-[17px] text-white/75">We build with <AnimatedWord />.</span>
             </p>
 
             {/* Mobile stats — compact row */}
@@ -155,7 +155,7 @@ export default function HomePage() {
               {[{ n: '35+', l: 'Years' }, { n: 'NV·CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
                 <div key={s.l}>
                   <div className="font-display text-[22px] text-white leading-none">{s.n}</div>
-                  <div className="font-mono text-[9px] uppercase text-white/35 mt-0.5 tracking-wider">{s.l}</div>
+                  <div className="font-mono text-[9px] uppercase text-white/65 mt-0.5 tracking-wider">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -214,10 +214,10 @@ export default function HomePage() {
             {/* Desktop layout: lead left, stats+CTAs right */}
             <div className="animate-fade-up-3 mt-10 flex flex-col lg:flex-row items-start lg:items-end gap-10 lg:gap-20">
               <div className="max-w-[520px]">
-                <p className="text-[15px] lg:text-[17px] leading-[1.75] text-white/70 mb-4" style={{ textShadow: '0 1px 20px rgba(0,0,0,0.5)' }}>
+                <p className="text-[15px] lg:text-[17px] leading-[1.75] text-white/90 mb-4" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.9), 0 1px 8px rgba(0,0,0,0.8)' }}>
                   Licensed Nevada and California general contractor. Residential remodeling, ADUs, structural repairs, custom homes, and commercial construction across Reno, Sparks, Lake Tahoe, Truckee, Carson City, Graeagle, and Northern California.
                 </p>
-                <p className="font-display text-[20px] text-white/50">
+                <p className="font-display text-[20px] text-white/75">
                   We build with <AnimatedWord />.
                 </p>
               </div>
@@ -227,7 +227,7 @@ export default function HomePage() {
                   {[{ n: '35+', l: 'Years' }, { n: 'NV · CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
                     <div key={s.l}>
                       <div className="font-display text-[clamp(30px,4vw,50px)] font-light text-white leading-none" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>{s.n}</div>
-                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/40 mt-1.5">{s.l}</div>
+                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/65 mt-1.5">{s.l}</div>
                     </div>
                   ))}
                 </div>
@@ -256,7 +256,7 @@ export default function HomePage() {
           {/* Scroll indicator */}
           <div className="absolute bottom-8 right-12 hidden lg:flex flex-col items-center gap-3 z-10">
             <div className="w-px h-12 bg-gradient-to-b from-teal/80 to-transparent" />
-            <span className="font-mono text-[9px] tracking-[3px] text-white/25 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+            <span className="font-mono text-[9px] tracking-[3px] text-white/55 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
           </div>
         </section>
 
@@ -266,7 +266,7 @@ export default function HomePage() {
             {['NV License #0085999', 'CA License #1093798', 'Since 1989 — 35+ Years', 'Free Estimates', '1-Year Warranty', 'Full Permit Handling', 'Bonded & Insured'].map(t => (
               <div key={t} className="flex items-center gap-2 flex-shrink-0">
                 <span className="text-teal text-[12px]">✓</span>
-                <span className="font-mono text-[11px] tracking-wide text-cream/40 whitespace-nowrap">{t}</span>
+                <span className="font-mono text-[11px] tracking-wide text-cream/70 whitespace-nowrap">{t}</span>
               </div>
             ))}
           </div>
@@ -373,7 +373,7 @@ export default function HomePage() {
                 <div className="flex-1 flex flex-col justify-center px-12 xl:px-16 py-12 relative z-10">
                   <p className="font-mono text-[10px] tracking-[3px] uppercase text-teal/50 mb-4">{svc.index} / {SERVICES.find(s => s.slug === svc.slug)?.name}</p>
                   <h2 className="font-display font-light text-[clamp(36px,4vw,58px)] leading-[1.02] tracking-[-1px] text-cream mb-4">{svc.headline}</h2>
-                  <p className="text-[15px] text-cream/55 leading-[1.7] mb-6 max-w-[380px]">{svc.tagline}</p>
+                  <p className="text-[15px] text-cream/80 leading-[1.7] mb-6 max-w-[380px]">{svc.tagline}</p>
                   <div className="flex items-baseline gap-3 mb-8">
                     <span className="text-[20px] font-semibold text-teal">{svc.price}</span>
                     <span className="font-mono text-[11px] text-cream/30 tracking-wider">· {svc.priceNote}</span>
@@ -400,7 +400,7 @@ export default function HomePage() {
                 <div className="relative z-10 flex flex-col justify-end h-full px-5 pb-7 pt-28">
                   <p className="font-mono text-[9px] tracking-[3px] uppercase text-teal/60 mb-2">{svc.index} · {SERVICES.find(s => s.slug === svc.slug)?.shortName}</p>
                   <h2 className="font-display font-light text-[34px] leading-[1.05] text-white mb-2">{svc.headline}</h2>
-                  <p className="text-[13px] text-white/65 leading-[1.6] mb-5 max-w-[300px]">{svc.tagline}</p>
+                  <p className="text-[13px] text-white/88 leading-[1.6] mb-5 max-w-[300px]">{svc.tagline}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-[16px] font-semibold text-teal">{svc.price}</span>
                     <span className="px-4 py-2.5 bg-teal text-void text-[13px] font-bold rounded-lg">Explore →</span>
@@ -441,7 +441,7 @@ export default function HomePage() {
                           className="w-full h-48 md:h-56 object-cover rounded-xl group-hover:scale-[1.02] transition-transform duration-500"
                           loading={i < 4 ? 'eager' : 'lazy'}
                         />
-                        <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase px-1">{captions[i]}</p>
+                        <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/70 uppercase px-1">{captions[i]}</p>
                       </div>
                     </Fade>
                   )
@@ -454,7 +454,7 @@ export default function HomePage() {
 
             <Fade delay={200} className="mt-6">
               <div className="flex items-center justify-between">
-                <p className="font-mono text-[11px] text-cream/25 tracking-wider">695 Lakeview Blvd · Zephyr Cove, NV · 16 Photos · Full Home Renovation</p>
+                <p className="font-mono text-[11px] text-cream/70 tracking-wider">695 Lakeview Blvd · Zephyr Cove, NV · 16 Photos · Full Home Renovation</p>
                 {SITE.youtubeProject && (
                   <a href={SITE.youtubeProject} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-teal/60 hover:text-teal transition-colors font-mono text-[11px] tracking-wider">
                     ▶ Watch Project Video
@@ -494,7 +494,7 @@ export default function HomePage() {
                       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                         <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
                         <h3 className="font-display text-[16px] text-white leading-snug">{p.title}</h3>
-                        <p className="text-[12px] text-white/50 mt-1">📍 {p.location}</p>
+                        <p className="text-[12px] text-white/80 mt-1">📍 {p.location}</p>
                       </div>
                     </div>
                   </Link>
@@ -534,10 +534,10 @@ export default function HomePage() {
                 <h2 className="font-display text-[clamp(30px,4vw,56px)] font-light leading-[1.05] tracking-tight mb-5">
                   Luxury Estate.<br /><span className="italic text-teal">Concept to Key.</span>
                 </h2>
-                <p className="text-[15px] text-cream/55 leading-relaxed mb-4">
+                <p className="text-[15px] text-cream/80 leading-relaxed mb-4">
                   A ground-up luxury estate in Ripon, California — blending classical European architecture with modern amenities. Every column, arch, and interior element was designed, engineered, and built by our licensed in-house team.
                 </p>
-                <p className="text-[15px] text-cream/55 leading-relaxed mb-8">
+                <p className="text-[15px] text-cream/80 leading-relaxed mb-8">
                   NV Lic #0085999 · CA Lic #1093798
                 </p>
                 <Link href="/projects/ripon-estate" className="inline-flex items-center gap-2 px-6 py-3 bg-teal text-void text-[13px] font-semibold rounded-lg hover:bg-teal/90 transition-colors">
@@ -557,10 +557,10 @@ export default function HomePage() {
                 <h2 className="font-display text-[clamp(28px,4vw,56px)] font-light leading-[1.1] tracking-tight mb-6">
                   A Trusted General<br /><span className="italic text-teal">Contractor Since 1989</span>
                 </h2>
-                <p className="text-[15px] leading-relaxed text-cream/55 mb-4">
+                <p className="text-[15px] leading-relaxed text-cream/80 mb-4">
                   Blue Reef Enterprises, LLC is a licensed general contractor providing residential remodeling, commercial improvements, custom home building, and addition work across Northern Nevada and Northern California. Our projects are managed with precision, clean execution, and strict code compliance.
                 </p>
-                <p className="text-[15px] leading-relaxed text-cream/55 mb-8">
+                <p className="text-[15px] leading-relaxed text-cream/80 mb-8">
                   We focus on clear communication, responsible planning, and results that stay aligned with client expectations. Every build — small or large — is completed with attention to detail and a commitment to lasting quality.
                 </p>
                 <div className="flex flex-wrap gap-3">
@@ -578,7 +578,7 @@ export default function HomePage() {
                   <Fade key={v.t} delay={i * 80}>
                     <div className="bg-deep border border-white/[0.06] rounded-xl p-5 hover:border-teal/20 transition-colors h-full">
                       <h4 className="font-display text-[15px] text-cream mb-2">{v.t}</h4>
-                      <p className="text-[12px] text-cream/38 leading-relaxed">{v.b}</p>
+                      <p className="text-[12px] text-cream/70 leading-relaxed">{v.b}</p>
                     </div>
                   </Fade>
                 ))}
@@ -600,10 +600,10 @@ export default function HomePage() {
               {TESTIMONIALS.map((t, i) => (
                 <Fade key={t.name} delay={i * 60}>
                   <div className="bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full">
-                    <div className="font-display text-[56px] leading-none text-teal/18 absolute top-4 left-5 select-none">&ldquo;</div>
-                    <p className="font-display text-[15px] italic text-cream/62 leading-relaxed pt-8 mb-5">{t.text}</p>
+                    <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
+                    <p className="font-display text-[15px] italic text-cream/85 leading-relaxed pt-8 mb-5">{t.text}</p>
                     <div className="font-semibold text-[13px] text-cream">{t.name}</div>
-                    <div className="font-mono text-[10px] text-cream/30 tracking-wider mt-0.5">{t.location}</div>
+                    <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                   </div>
                 </Fade>
               ))}
@@ -627,12 +627,12 @@ export default function HomePage() {
                   {['Reno, NV', 'Sparks, NV', 'Lake Tahoe, NV', 'Carson City, NV', 'Truckee, CA', 'Graeagle, CA', 'Northern California', 'Carson Valley, NV'].map(a => (
                     <div key={a} className="flex items-center gap-2.5 border border-white/[0.055] rounded-lg px-3 py-2.5">
                       <div className="w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0" />
-                      <span className="text-[13px] text-cream/55">{a}</span>
+                      <span className="text-[13px] text-cream/80">{a}</span>
                     </div>
                   ))}
                 </div>
                 <div className="bg-panel border border-l-[3px] border-l-gold border-white/[0.06] rounded-xl p-5">
-                  <p className="text-[13px] text-cream/52 leading-[1.8]">
+                  <p className="text-[13px] text-cream/80 leading-[1.8]">
                     <strong className="text-gold">Nevada License #0085999</strong><br />
                     <strong className="text-gold/75">California License #1093798</strong><br />
                     Blue Reef Enterprises, LLC holds active licenses in both states for residential and commercial construction.
@@ -651,10 +651,10 @@ export default function HomePage() {
                     <Link href={a.slug} className="flex items-start justify-between gap-4 p-5 bg-panel border border-white/[0.055] rounded-xl hover:border-teal/25 transition-all group">
                       <div>
                         <div className="font-display text-[16px] text-cream mb-1 group-hover:text-teal transition-colors">{a.area}</div>
-                        <div className="text-[12px] text-cream/32">{a.svcs}</div>
+                        <div className="text-[12px] text-cream/65">{a.svcs}</div>
                       </div>
                       <div className="flex flex-col items-end gap-1.5 flex-shrink-0">
-                        <span className="font-mono text-[9px] tracking-wider text-teal/55">{a.lic}</span>
+                        <span className="font-mono text-[9px] tracking-wider text-teal/85">{a.lic}</span>
                         <svg className="w-4 h-4 text-cream/18 group-hover:text-teal transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" /></svg>
                       </div>
                     </Link>
@@ -674,7 +674,7 @@ export default function HomePage() {
                 <h2 className="font-display text-[clamp(28px,4vw,52px)] font-light leading-[1.1] tracking-tight mb-4">
                   Common<br /><span className="italic text-teal">Questions.</span>
                 </h2>
-                <p className="text-[14px] text-cream/42 leading-relaxed mb-6">Everything you need to know about working with BRE Builders.</p>
+                <p className="text-[14px] text-cream/75 leading-relaxed mb-6">Everything you need to know about working with BRE Builders.</p>
                 <Link href="/faq" className="text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors">All FAQs →</Link>
               </Fade>
               <div>
@@ -710,7 +710,7 @@ export default function HomePage() {
                 Let&apos;s Build Something<br />
                 <span className="italic" style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(30,207,201,0.4)' }}>Exceptional Together.</span>
               </h2>
-              <p className="text-[16px] text-white/50 max-w-lg mx-auto leading-relaxed mb-10">
+              <p className="text-[16px] text-white/80 max-w-lg mx-auto leading-relaxed mb-10">
                 Free estimates · Response within 24 hours · Licensed in Nevada and California since 1989.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -745,7 +745,7 @@ function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
             </svg>
           </span>
         </button>
-        {open && <p className="pb-5 text-[14px] text-cream/45 leading-relaxed">{a}</p>}
+        {open && <p className="pb-5 text-[14px] text-cream/78 leading-relaxed">{a}</p>}
       </div>
     </Fade>
   )

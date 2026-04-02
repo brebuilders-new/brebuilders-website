@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
-  alternates: { canonical: 'https://brebuilders.com/services/new-home-builds/' },
+  alternates: { canonical: `${SITE_URL}/services/new-home-builds/` },
 }
 
 const schema = {

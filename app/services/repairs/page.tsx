@@ -95,7 +95,7 @@ export default function RepairsPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="repairs">
 
         {/* HERO — urgency psychology */}
         <ServiceHeroSection hero={{

@@ -54,7 +54,7 @@ const FAQS = [
 
 export default function ConcretePage() {
   return (
-    <ServiceTemplate
+    <ServiceTemplate theme="commercial"
       schema={schema}
       hero={{
         bgDesktop: IMGS.concrete_slab,

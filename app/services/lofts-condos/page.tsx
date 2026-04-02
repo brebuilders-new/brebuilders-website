@@ -54,7 +54,7 @@ const FAQS = [
 
 export default function LoftCondoPage() {
   return (
-    <ServiceTemplate
+    <ServiceTemplate theme="warmth"
       schema={schema}
       hero={{
         bgDesktop: IMGS.svc_loft,

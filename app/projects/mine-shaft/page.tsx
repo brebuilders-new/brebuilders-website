@@ -25,6 +25,7 @@ const schema = {
 export default function MineShaftPage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

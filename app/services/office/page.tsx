@@ -53,7 +53,7 @@ const FAQS = [
 
 export default function OfficePage() {
   return (
-    <ServiceTemplate
+    <ServiceTemplate theme="commercial"
       schema={schema}
       hero={{
         bgDesktop: IMGS.svc_office,

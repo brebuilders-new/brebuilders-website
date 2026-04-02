@@ -89,7 +89,7 @@ export default function ADUPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="growth">
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.adu_main,
           bgMobile: IMGS.adu_pool,

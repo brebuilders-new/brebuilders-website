@@ -41,7 +41,7 @@ export default function CommercialPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="commercial">
         <section className="relative min-h-[65vh] lg:min-h-[72vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={IMGS.svc_commercial} alt="Commercial Tenant Improvement Construction Reno NV BRE Builders" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />

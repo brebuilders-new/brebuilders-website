@@ -122,7 +122,7 @@ export default function HomePage() {
   return (
     <>
       <Nav />
-      <main>
+      <main data-theme="home">
 
         {/* ═══════════════════════════════════ HERO ════════════════════════════ */}
         {/* MOBILE (hidden md+): Full-screen, call-first, minimal copy */}

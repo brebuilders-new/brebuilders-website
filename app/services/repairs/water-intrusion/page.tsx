@@ -83,7 +83,7 @@ export default function WaterIntrusionPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="repairs">
         <section className="relative min-h-[68vh] lg:min-h-[75vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={IMGS.repairs_water} alt="Water Intrusion Moisture Damage Inspection Reno Nevada BRE Builders" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />

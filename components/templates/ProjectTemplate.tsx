@@ -1,3 +1,4 @@
+import ScrollPsychology from '@/components/ui/ScrollPsychology'
 'use client'
 
 import Link from 'next/link'
@@ -31,6 +32,7 @@ interface ProjectTemplateProps {
   scope?: string[]
   aboutContent?: React.ReactNode
   schema?: object
+  theme?: string
 }
 
 export default function ProjectTemplate({
@@ -49,6 +51,7 @@ export default function ProjectTemplate({
   scope,
   aboutContent,
   schema,
+  theme,
 }: ProjectTemplateProps) {
   return (
     <>
@@ -59,7 +62,8 @@ export default function ProjectTemplate({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       )}
-      <main>
+      <main data-theme={theme || 'gallery'}>
+        <ScrollPsychology theme={theme || 'gallery'} />
         {/* ── HERO ── */}
         {/* MOBILE: stacked layout, image top, content anchored bottom */}
         <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>

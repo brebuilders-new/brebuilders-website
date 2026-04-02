@@ -31,7 +31,7 @@ export default function KitchenBathPage() {
   return (
     <>
       <Nav />
-      <main>
+      <main data-theme="warmth">
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.ripon[1],
           bgMobile: IMGS.lt(8),

@@ -25,6 +25,7 @@ const schema = {
 export default function CarWashPage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

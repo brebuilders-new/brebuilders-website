@@ -64,7 +64,7 @@ export default function NewHomePage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="luxury">
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.ripon[3],
           bgMobile: IMGS.ripon[0],

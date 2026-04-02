@@ -127,7 +127,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-24">
+      <main data-theme="gallery" className="pt-28 pb-24">
         <div className="container">
           {/* Header */}
           <div className="max-w-[660px] mb-16">

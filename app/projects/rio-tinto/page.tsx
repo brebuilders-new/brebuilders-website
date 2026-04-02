@@ -25,6 +25,7 @@ const schema = {
 export default function RioTintoPage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

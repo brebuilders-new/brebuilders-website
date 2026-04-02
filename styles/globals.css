@@ -232,3 +232,334 @@ img { max-width: 100%; height: auto; display: block; }
 @media print {
   .noise-overlay, #cursor, #cursor-ring { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COLOR PSYCHOLOGY SYSTEM
+   Page themes via data-theme attribute on <main> or wrapper
+   Each theme overrides CSS vars — all components respond automatically
+   Desktop and mobile differ: desktop uses richer mid-tones,
+   mobile uses higher contrast + warmer accent for thumb-zone CTAs
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── REPAIRS / FOUNDATION / WATER INTRUSION ────────────────────────────────
+   Psychology: Crisis → Resolution
+   Visitor is anxious, possibly scared about structural damage.
+   Deep authoritative blue builds trust ("serious professionals").
+   Controlled urgency — not panic red — moves them to the form.
+   Desktop: rich dark navy with cobalt accent, high-contrast CTA
+   Mobile: pure black bg, electric blue CTA pulse — single point of action
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="repairs"] {
+  --void:    #04080f;
+  --deep:    #060d1a;
+  --panel:   #0a1428;
+  --surface: #0e1c38;
+  --teal:    #2d7dd2;       /* Authority blue — not clinical, not icy */
+  --teal-dim: rgba(45,125,210,0.10);
+  --gold:    #e05c2a;       /* Urgency orange for CTAs — activates action */
+  --cream:   #eef2f8;       /* Slightly blue-white — clean, clinical trust */
+  --accent-pulse: rgba(224,92,42,0.35); /* CTA pulse ring color */
+}
+[data-theme="repairs"] .btn-primary {
+  background: #e05c2a;
+  color: #fff;
+  box-shadow: 0 0 0 0 rgba(224,92,42,0.5);
+  animation: cta-pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+[data-theme="repairs"] .btn-primary:hover {
+  background: #c94d1e;
+  animation: none;
+}
+/* Mobile: black bg, full-width pulsing orange CTA */
+@media (max-width: 768px) {
+  [data-theme="repairs"] {
+    --void: #020408;
+    --panel: #080f1c;
+    --teal:  #4a9ee8;       /* Brighter on mobile for thumb visibility */
+    --gold:  #ff6b35;       /* Louder orange on small screen */
+  }
+}
+
+/* ─── ADU / ADDITIONS / HOME EXPANSION ──────────────────────────────────────
+   Psychology: Investment → Growth → Pride of Ownership
+   These visitors are making a financial decision, not fixing a problem.
+   Forest green = growth, ROI, nature, new life.
+   Warm cream transition = "this will feel like home."
+   Desktop: deep forest hero → warm cream sections
+   Mobile: rich dark green with gold financial accent
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="growth"] {
+  --void:    #040e08;
+  --deep:    #071810;
+  --panel:   #0b2218;
+  --surface: #102c20;
+  --teal:    #1a9e5c;       /* Forest green — growth, money, investment */
+  --teal-dim: rgba(26,158,92,0.10);
+  --gold:    #c8922a;       /* Gold = return on investment */
+  --cream:   #f0ede4;       /* Warm cream — homelike, aspirational */
+}
+[data-theme="growth"] .section-label::before { background: #1a9e5c; }
+[data-theme="growth"] .btn-primary { background: #1a9e5c; color: #fff; }
+[data-theme="growth"] .btn-primary:hover { background: #15834d; }
+@media (max-width: 768px) {
+  [data-theme="growth"] {
+    --void:  #030c07;
+    --panel: #082014;
+    --teal:  #22c574;       /* Brighter green mobile — income signal */
+    --gold:  #d4a240;       /* Gold pops on small screen */
+  }
+}
+
+/* ─── NEW HOME / CUSTOM BUILD ────────────────────────────────────────────────
+   Psychology: Aspiration → Legacy → Luxury
+   This is the largest purchase of someone's life.
+   Deep navy-black with warm gold — timeless authority.
+   Gold accents = permanence, craftsmanship, heritage.
+   Desktop: near-black with architectural gold lines, display type prominent
+   Mobile: obsidian black, gold CTAs only — minimalism = luxury signal
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="luxury"] {
+  --void:    #050505;
+  --deep:    #0a0a0c;
+  --panel:   #111114;
+  --surface: #18181c;
+  --teal:    #b8922a;       /* Warm architectural gold — not yellow, not orange */
+  --teal-dim: rgba(184,146,42,0.10);
+  --gold:    #d4aa44;       /* Brighter gold for CTA */
+  --cream:   #f5f0e8;       /* Parchment — heritage, craftsmanship */
+  --edge:    rgba(184,146,42,0.12); /* Gold borders instead of white */
+}
+[data-theme="luxury"] .section-label { color: var(--teal); }
+[data-theme="luxury"] .section-label::before { background: var(--teal); }
+[data-theme="luxury"] .btn-primary { background: var(--gold); color: #0a0a0c; }
+[data-theme="luxury"] .btn-primary:hover { background: #c49a30; }
+[data-theme="luxury"] .btn-ghost { border-color: rgba(184,146,42,0.3); }
+[data-theme="luxury"] .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+[data-theme="luxury"] .card { border-color: rgba(184,146,42,0.1); }
+[data-theme="luxury"] .card:hover { border-color: rgba(184,146,42,0.3); }
+@media (max-width: 768px) {
+  [data-theme="luxury"] {
+    --void:  #030303;
+    --panel: #0d0d0f;
+    --teal:  #c8a840;       /* Richer gold on mobile, pops on black */
+    --gold:  #e0bc50;
+  }
+}
+
+/* ─── KITCHEN / BATH ─────────────────────────────────────────────────────────
+   Psychology: Sensory warmth → Comfort → "I can see this in my home"
+   Pure white contractor sites feel cold. Warm linen says "designer."
+   Warm off-white backgrounds activate the same emotional response as
+   high-end kitchen showrooms (Restoration Hardware uses this exact palette).
+   Desktop: warm linen bg sections, dark charcoal text blocks, copper CTAs
+   Mobile: inverted — dark bg with warm photography and linen highlights
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="warmth"] {
+  --void:    #080604;
+  --deep:    #0f0c08;
+  --panel:   #17120c;
+  --surface: #211a12;
+  --teal:    #c07840;       /* Warm copper — kitchen hardware, natural warmth */
+  --teal-dim: rgba(192,120,64,0.10);
+  --gold:    #d49858;       /* Amber — wood tones, warmth, appetite */
+  --cream:   #f5ede0;       /* True warm linen — not gray-white */
+}
+[data-theme="warmth"] .section-label { color: var(--teal); }
+[data-theme="warmth"] .section-label::before { background: var(--teal); }
+[data-theme="warmth"] .btn-primary { background: var(--teal); color: var(--cream); }
+[data-theme="warmth"] .btn-primary:hover { background: #a86535; }
+@media (max-width: 768px) {
+  [data-theme="warmth"] {
+    --void:  #060402;
+    --panel: #130e08;
+    --teal:  #d48848;       /* Warmer, more saturated on mobile */
+    --gold:  #e0a860;
+  }
+}
+
+/* ─── DECKS / OUTDOOR ────────────────────────────────────────────────────────
+   Psychology: Sensory memory → Natural materials → "I can feel this deck"
+   The color literally smells like cedar and redwood.
+   Warm brown activates tactile and sensory memory before a word is read.
+   Premium material associations trigger higher perceived quality + budget.
+   Desktop: deep walnut background, cedar-toned accents
+   Mobile: darker, richer browns with strong outdoor photography contrast
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="cedar"] {
+  --void:    #080502;
+  --deep:    #110a04;
+  --panel:   #1c1008;
+  --surface: #261508;
+  --teal:    #a86830;       /* Natural cedar/redwood — familiar, warm */
+  --teal-dim: rgba(168,104,48,0.10);
+  --gold:    #c87828;       /* Deeper amber — aged wood, rich tone */
+  --cream:   #f5ece0;       /* Warm white — sunlit wood */
+  --edge:    rgba(168,104,48,0.12);
+}
+[data-theme="cedar"] .section-label { color: var(--teal); }
+[data-theme="cedar"] .section-label::before { background: var(--teal); }
+[data-theme="cedar"] .btn-primary { background: var(--teal); color: var(--cream); }
+[data-theme="cedar"] .btn-primary:hover { background: #905820; }
+@media (max-width: 768px) {
+  [data-theme="cedar"] {
+    --void:  #060300;
+    --panel: #160c04;
+    --teal:  #c07838;       /* Richer, more saturated on mobile */
+    --gold:  #d89040;
+  }
+}
+
+/* ─── COMMERCIAL / TI / OFFICE / RETAIL ─────────────────────────────────────
+   Psychology: Authority → Efficiency → "These people mean business"
+   B2B buyers respond to authority, precision, and deadline pressure.
+   Concrete gray = industrial authority. Red = urgency (not alarm).
+   No warmth, no softness — B2B decisions are logical, not emotional.
+   Desktop: cool dark gray with red urgency accent on CTAs only
+   Mobile: same logic, high contrast, business card aesthetic
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="commercial"] {
+  --void:    #060608;
+  --deep:    #0c0c10;
+  --panel:   #141418;
+  --surface: #1c1c22;
+  --teal:    #6b8caa;       /* Slate blue-gray — corporate authority */
+  --teal-dim: rgba(107,140,170,0.10);
+  --gold:    #c03a2a;       /* Decision red — urgency, not alarm */
+  --cream:   #e8eaed;       /* Cool white — business, precision */
+  --edge:    rgba(107,140,170,0.12);
+}
+[data-theme="commercial"] .section-label { color: var(--teal); }
+[data-theme="commercial"] .section-label::before { background: var(--teal); }
+[data-theme="commercial"] .btn-primary { background: var(--gold); color: #fff; }
+[data-theme="commercial"] .btn-primary:hover { background: #a02e1e; }
+@media (max-width: 768px) {
+  [data-theme="commercial"] {
+    --void:  #040406;
+    --panel: #101014;
+    --teal:  #8aa8c4;       /* Lighter on mobile for readability */
+    --gold:  #d44030;       /* Brighter red CTA on mobile */
+  }
+}
+
+/* ─── PORTFOLIO / PROJECTS ───────────────────────────────────────────────────
+   Psychology: Gallery mode → Luxury showcase → "This is what's possible"
+   Pure black maximizes image impact. This is Dezeen, not a contractor site.
+   Gold accent = premium framing. The work speaks, copy is secondary.
+   Desktop: cinematic black, full bleed images, gold reveals
+   Mobile: same — full screen images, minimal chrome
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="gallery"] {
+  --void:    #020202;
+  --deep:    #050505;
+  --panel:   #0a0a0a;
+  --surface: #111111;
+  --teal:    #c8922a;       /* Gallery gold — luxury framing */
+  --teal-dim: rgba(200,146,42,0.10);
+  --gold:    #e0aa44;       /* Brighter gold for hover reveals */
+  --cream:   #f8f5ef;       /* Warm gallery white */
+  --edge:    rgba(200,146,42,0.10);
+}
+[data-theme="gallery"] .section-label { color: var(--teal); }
+[data-theme="gallery"] .section-label::before { background: var(--teal); }
+@media (max-width: 768px) {
+  [data-theme="gallery"] {
+    --void:  #000000;
+    --panel: #080808;
+    --teal:  #d4a040;
+  }
+}
+
+/* ─── HOMEPAGE ───────────────────────────────────────────────────────────────
+   Psychology: Authority → Trust → Desire → Action (full arc)
+   The homepage must work for EVERY visitor type simultaneously.
+   Deep navy establishes permanence. Teal = technology + precision.
+   Gold = value + aspiration. The scroll journey moves warm → action.
+   ─────────────────────────────────────────────────────────────────────────── */
+[data-theme="home"] {
+  --void:    #04080e;
+  --deep:    #070f1c;
+  --panel:   #0c1828;
+  --surface: #112030;
+}
+/* Mobile homepage: darker, more contrast, phone CTA dominant */
+@media (max-width: 768px) {
+  [data-theme="home"] {
+    --void:  #030609;
+    --panel: #091420;
+  }
+}
+
+/* ─── CTA PULSE ANIMATION ─────────────────────────────────────────────────── */
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--accent-pulse, rgba(30,207,201,0.4)); }
+  50% { box-shadow: 0 0 0 8px transparent; }
+}
+
+/* ─── MOBILE: THUMB ZONE CTA BOOST ──────────────────────────────────────────
+   On mobile, CTAs in the lower 40% of screen get urgency treatment.
+   Bottom-anchored CTAs on all mobile pages get higher contrast.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .mobile-cta-primary {
+    font-size: 16px;                  /* Larger text for thumb */
+    padding: 18px 24px;               /* Bigger hit area */
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+  .mobile-sticky-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    padding: 12px 16px env(safe-area-inset-bottom, 12px);
+    background: linear-gradient(to top, var(--void) 70%, transparent);
+    z-index: 90;
+  }
+}
+
+/* ─── SECTION COLOR RHYTHM (scroll psychology) ───────────────────────────────
+   Sections alternate between slightly different dark tones.
+   This creates visual breathing without destroying the dark premium feel.
+   The human eye reads alternating sections as "chapters" — increases
+   perceived content value and dwell time.
+   ─────────────────────────────────────────────────────────────────────────── */
+.section-rhythm-1 { background: var(--void); }
+.section-rhythm-2 { background: var(--deep); }
+.section-rhythm-3 { background: var(--panel); }
+.section-rhythm-cta {
+  background: linear-gradient(135deg, var(--panel) 0%, var(--surface) 100%);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* ─── EMOTIONAL STATE MODIFIERS ──────────────────────────────────────────────
+   Applied via JS based on scroll position or time-on-page.
+   These are the "advanced psychological experiments."
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Scroll-triggered color temperature shift:
+   Page starts cool (authority) and warms as user scrolls to CTA.
+   Applied to elements with data-warm="true" after 60% scroll depth. */
+.color-warm-on-scroll {
+  transition: color 0.8s ease, background-color 0.8s ease;
+}
+.color-warm-on-scroll.is-warm {
+  color: var(--gold);
+}
+
+/* Urgency overlay: appears after 45s on page without interaction */
+.urgency-overlay {
+  position: fixed; inset: 0; z-index: 1000; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 100%, rgba(224,92,42,0.04) 0%, transparent 60%);
+  opacity: 0; transition: opacity 2s ease;
+}
+.urgency-overlay.is-active { opacity: 1; }
+
+/* Before/after reveal: desaturate → color transition for repair pages */
+@keyframes desaturate-to-color {
+  from { filter: grayscale(100%) brightness(0.7); }
+  to   { filter: grayscale(0%) brightness(1); }
+}
+.before-after-reveal.revealed {
+  animation: desaturate-to-color 1.2s cubic-bezier(0.22,1,0.36,1) forwards;
+}

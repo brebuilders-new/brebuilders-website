@@ -63,6 +63,7 @@ const PHOTOS = [
 export default function RiponEstatePage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

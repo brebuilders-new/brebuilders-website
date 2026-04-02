@@ -63,7 +63,7 @@ const FAQS = [
 
 export default function RetailPage() {
   return (
-    <ServiceTemplate
+    <ServiceTemplate theme="commercial"
       schema={schema}
       hero={{
         bgDesktop: IMGS.svc_retail,

@@ -79,7 +79,7 @@ export default function AdditionsPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="growth">
 
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.lt(1),

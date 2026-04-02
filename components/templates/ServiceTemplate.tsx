@@ -1,3 +1,4 @@
+import ScrollPsychology from '@/components/ui/ScrollPsychology'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
@@ -33,6 +34,7 @@ interface ServiceTemplateProps {
   hero: ServiceHero
   sections: React.ReactNode  // Page body content after hero
   schema?: object
+  theme?: string
 }
 
 // ─── Section label ─────────────────────────────────────────────────────────
@@ -512,7 +514,7 @@ export function ServiceHeroSection({ hero }: { hero: ServiceHero }) {
 }
 
 // ─── Full Service Page template wrapper ──────────────────────────────────────
-export default function ServiceTemplate({ hero, sections, schema }: ServiceTemplateProps) {
+export default function ServiceTemplate({ hero, sections, schema, theme }: ServiceTemplateProps) {
   return (
     <>
       <Nav />
@@ -522,7 +524,8 @@ export default function ServiceTemplate({ hero, sections, schema }: ServiceTempl
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       )}
-      <main>
+      <main data-theme={theme}>
+        <ScrollPsychology theme={theme} />
         <ServiceHeroSection hero={hero} />
         {sections}
       </main>

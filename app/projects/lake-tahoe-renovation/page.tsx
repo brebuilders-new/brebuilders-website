@@ -55,6 +55,7 @@ const PHOTOS = [
 export default function LakeTahoeProjectPage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

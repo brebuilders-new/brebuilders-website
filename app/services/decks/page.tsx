@@ -77,7 +77,7 @@ export default function DecksPage() {
     <>
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <main>
+      <main data-theme="cedar">
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.repairs_arun,
           bgMobile: IMGS.deck_charolette,

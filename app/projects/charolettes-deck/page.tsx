@@ -25,6 +25,7 @@ const schema = {
 export default function CharoletteDeckPage() {
   return (
     <ProjectTemplate
+      theme="gallery"
       breadcrumb={[
         { name: 'Home', href: '/' },
         { name: 'Projects', href: '/projects/' },

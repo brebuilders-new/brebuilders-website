@@ -53,7 +53,7 @@ const FAQS = [
 
 export default function HaulingPage() {
   return (
-    <ServiceTemplate
+    <ServiceTemplate theme="commercial"
       schema={schema}
       hero={{
         bgDesktop: IMGS.svc_hauling,

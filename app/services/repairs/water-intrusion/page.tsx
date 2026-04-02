@@ -6,11 +6,13 @@ import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Water Intrusion Repair Reno NV | Moisture Issues',
   description:
     'Water intrusion and moisture repair in Reno, NV. Basement, crawl space, foundation water damage. Licensed NV #0085999. Free evaluation.',
-  alternates: { canonical: 'https://brebuilders.com/repairs/water-intrusion-and-moisture-issues-in-reno-nv/' },
+  alternates: { canonical: `${SITE_URL}/repairs/water-intrusion-and-moisture-issues-in-reno-nv/` },
 }
 
 const schema = {

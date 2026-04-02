@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,6 +43,12 @@ export default function Repairs20YearPage() {
       ]}
       content={
         <div>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/20-Year-Old-Reno-Homes.jpg"
+            alt="20-year-old Reno home inspection structural issues BRE Builders"
+            caption="20-year-old Reno homes have specific, predictable failure patterns — BRE Builders has seen them all."
+            priority
+          />
           <p>At 20 years old, Reno homes built in the early 2000s have accumulated a specific set of problems caused by aging materials, original construction shortcuts common to that era, and two decades of Reno&apos;s demanding climate. Most homeowners only notice these issues after they&apos;ve advanced to the expensive-to-repair stage. Here&apos;s what BRE Builders inspects in 20-year-old Reno homes.</p>
 
           <h2>1. Soil-Related Foundation Cracking (Advanced Stage)</h2>
@@ -58,12 +64,27 @@ export default function Repairs20YearPage() {
           <p>Original vinyl or aluminum window frames from the early 2000s have now gone through 20 years of thermal cycling — daily expansion and contraction from Reno&apos;s temperature swings. The sealant between the frame and rough opening has long since failed. Look for daylight at frame edges, drafts, and visible gaps where the frame pulls away from the surrounding drywall or trim. This is both an energy issue and a water intrusion pathway.</p>
 
           <h2>5. Deck Structural Deterioration</h2>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/Unsafe-Deck-Framing.jpg"
+            alt="Unsafe deck framing structural deterioration Reno NV"
+            caption="20-year-old deck connections — ledger attachment and post bases are the first to fail."
+          />
           <p>Pressure-treated lumber from the early 2000s used a formulation (CCA — chromated copper arsenate) that was banned for residential use in 2004. CCA lumber is more durable than the ACQ (alkaline copper quaternary) that replaced it in many applications, but by year 20 the critical connections — ledger board attachments, post bases, joist hangers — are showing metal corrosion and wood deterioration at contact points. Any 20-year-old deck warrants a structural inspection before the next outdoor season.</p>
 
           <h2>6. HVAC System Age</h2>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/Failing-HVAC-Systems.jpg"
+            alt="Failing HVAC system 20-year old Reno home inspection"
+            caption="20-year-old HVAC systems at end of service life — moisture problems often follow."
+          />
           <p>Standard residential HVAC systems have a 15–20 year service life. A home built in 2004 has an HVAC system that is at or past the end of its designed life. Failing systems don&apos;t just cost more to run — they create moisture problems. Poorly functioning air handlers and duct systems allow humidity imbalances that contribute to attic and crawlspace condensation. An HVAC system at end-of-life that&apos;s still running often signals moisture problems developing elsewhere in the structure.</p>
 
           <h2>7. Foundation Drainage</h2>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/Basement-Water-Intrusion.jpg"
+            alt="Basement water intrusion moisture issue Reno NV home repair"
+            caption="Foundation drainage failure — common in 20-year Reno homes as grade and downspouts degrade."
+          />
           <p>Original downspout extensions and grade conditions installed at construction have often degraded or been buried by 20 years of landscaping. Downspouts discharging at the foundation, grade that has settled toward the house, and irrigation systems that wet the foundation zone are all contributors to the soil movement and moisture problems that dominate 20-year repair lists in Reno.</p>
 
           <h2>8. Overloaded Breaker Panels</h2>

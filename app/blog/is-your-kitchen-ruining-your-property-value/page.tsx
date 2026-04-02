@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -45,6 +45,12 @@ export default function KitchenPropertyValuePage() {
       ]}
       content={
         <div>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
+            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
+            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            priority
+          />
           <p>Your kitchen is the first room buyers mentally price when they walk through your Reno home. Real estate agents say it consistently — an outdated kitchen stops a sale or kills the offer price, even when everything else looks great.</p>
 
           <p>BRE Builders has remodeled kitchens across Reno, Sparks, and Northern Nevada since 1989. Here are the five kitchen problems we see most often that hurt property values — and what the fix actually involves.</p>

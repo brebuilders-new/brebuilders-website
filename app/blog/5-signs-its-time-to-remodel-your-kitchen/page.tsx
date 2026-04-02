@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -45,6 +45,12 @@ export default function KitchenSignsPage() {
       ]}
       content={
         <div>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
+            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
+            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            priority
+          />
           <p>Most Reno homeowners don&apos;t plan a kitchen remodel — they tolerate the kitchen until one of a few specific things forces the decision. BRE Builders has been remodeling kitchens across Northern Nevada since 1989. Here are the five signs we see most often that tell you it&apos;s time.</p>
 
           <h2>Sign #1: You Avoid Using the Kitchen</h2>

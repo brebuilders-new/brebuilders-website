@@ -4,6 +4,64 @@ import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { SectionLabel } from './ServiceTemplate'
 
+
+// ─── Inline blog image ────────────────────────────────────────────────────────
+export function BlogImage({
+  src, alt, caption, priority = false,
+}: { src: string; alt: string; caption?: string; priority?: boolean }) {
+  return (
+    <figure className="my-10 not-prose">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        className="w-full rounded-xl border border-white/[0.07] object-cover"
+        style={{ maxHeight: '480px' }}
+        loading={priority ? 'eager' : 'lazy'}
+      />
+      {caption && (
+        <figcaption className="mt-3 text-center font-mono text-[11px] text-cream/35 tracking-wide">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+
+// ─── YouTube embed ────────────────────────────────────────────────────────────
+export function BlogVideo({
+  videoId, title, caption,
+}: { videoId: string; title: string; caption?: string }) {
+  return (
+    <figure className="my-10 not-prose">
+      <div className="relative w-full rounded-xl overflow-hidden border border-white/[0.07]" style={{ paddingBottom: '56.25%' }}>
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full"
+          loading="lazy"
+        />
+      </div>
+      {caption && (
+        <figcaption className="mt-3 text-center font-mono text-[11px] text-cream/35 tracking-wide">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+
+// ─── Pull quote ───────────────────────────────────────────────────────────────
+export function BlogPullQuote({ children }: { children: React.ReactNode }) {
+  return (
+    <blockquote className="not-prose my-10 border-l-2 border-teal/50 bg-teal/[0.04] rounded-r-xl px-6 py-5">
+      <p className="font-display text-[20px] text-cream/85 leading-relaxed italic">{children}</p>
+    </blockquote>
+  )
+}
+
 interface BlogTemplateProps {
   // Article data
   title: string

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,34 +43,63 @@ export default function DeckSafetyPage() {
       ]}
       content={
         <div>
-          <p>Deck collapses injure hundreds of people every year in the United States — and the most dangerous decks often look structurally sound from above. The wood surface may be in good condition. The railings might feel solid. But the structural failure points are in the connections, framing, and ledger attachment — places you can&apos;t see from the deck surface. BRE Builders performs deck safety inspections across Reno and Lake Tahoe. Here are the 8 signs that require immediate attention.</p>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/Framing-and-Bench-Layout-Stage.jpg"
+            alt="Deck framing structural inspection BRE Builders Reno NV Lake Tahoe"
+            caption="Deck framing — the structure beneath the surface is where failure begins."
+            priority
+          />
+          <p>A deck failure can happen without warning — and in Reno and Lake Tahoe, where snow loads, freeze-thaw cycles, and UV exposure are extreme, decks deteriorate faster than in milder climates. BRE Builders has repaired and reinforced hundreds of decks across Northern Nevada. Here are the 8 signs that mean yours needs professional attention now.</p>
 
-          <h2>1. Ledger Board Separation</h2>
-          <p>The ledger is the board attached to the house that carries half the deck&apos;s load. It is the single most critical structural element on any deck — and the point where most deck collapses originate. Pull back any debris or decking at the house-to-deck connection and look for gaps between the ledger and the house framing, rust staining from corroding hardware, or soft wood that yields under pressure. Any gap, any soft wood, or any visible corrosion at the ledger is an immediate structural concern.</p>
+          <BlogImage
+            src={IMGS.repairs_deck_lt}
+            alt="Lake Tahoe deck reinforcement steel angle bracket system BRE Builders"
+            caption="Steel angle bracket reinforcement system — Lake Tahoe deck repair by BRE Builders"
+            priority
+          />
 
-          <h2>2. Soft or Spongy Spots Underfoot</h2>
-          <p>Walk the entire deck surface and pay attention to any spots that feel soft or spongy. A soft deck board is a surface problem. A spongy spot that involves flex in the structure below — where the whole area depresses when you step on it — indicates rot in the framing beneath. Push a screwdriver firmly into any soft area. If it penetrates more than ¼ inch, the wood is structurally compromised.</p>
+          <h2>1. Soft or Spongy Decking Boards</h2>
+          <p>Press your foot firmly on each deck board. Any give, sponginess, or flex beyond normal indicates rot has started in that board. In Reno and Tahoe, this typically starts at board ends and any area where water pools. Soft boards mean the rot has consumed enough of the wood fiber to lose structural integrity — they can fail underfoot. Replace affected boards immediately and inspect the joists beneath them.</p>
 
-          <h2>3. Visible Rot at Post Bases</h2>
-          <p>Post bases sit at ground level or are embedded in concrete — the two worst environments for wood longevity. Reno&apos;s irrigation water, spring snowmelt, and freeze-thaw cycling attack post bases relentlessly. Look for soft wood at the base of every post, any post that rocks when pushed laterally, and rust or corrosion on post base hardware. A structurally failed post transfers no load — the deck is effectively unsupported at that point.</p>
+          <h2>2. Visible Rot at the Ledger Board</h2>
+          <p>The ledger board is the board bolted to your house where the deck attaches. It is the single most critical connection on the entire structure. If water has been getting behind it — which happens when flashing fails or is absent — rot in the ledger can cause catastrophic deck collapse with no warning. Pull back any siding or trim and probe the ledger with a screwdriver. If it sinks in easily, the wood has lost its integrity.</p>
 
-          <h2>4. Corroded Joist Hangers and Hardware</h2>
-          <p>Joist hangers, post caps, and ledger lag bolts are the mechanical connections that hold deck framing together. Corrosion of these metal connectors is invisible from the deck surface but can reduce their load capacity to near zero. In Lake Tahoe decks, snow load and seasonal moisture cycling accelerate hardware corrosion dramatically compared to lower-elevation Reno decks. Any visible orange-brown corrosion on deck hardware warrants close inspection.</p>
+          <BlogPullQuote>
+            The ledger-to-house connection is where most deck collapses originate. A failed ledger gives zero warning before failure.
+          </BlogPullQuote>
 
-          <h2>5. Deck Movement When Loaded</h2>
-          <p>Stand at one corner of the deck and apply your body weight while watching the opposite corner. A properly built deck should show no perceptible movement or sway. Lateral movement — the deck shifting side-to-side when you push against a post — indicates missing or failed diagonal bracing. Vertical deflection under load indicates undersized joists or failed connections. Any visible movement under load is a structural deficiency.</p>
+          <h2>3. Corroded or Missing Fasteners</h2>
+          <p>Galvanized fasteners in Reno&apos;s alkaline soil and freeze-thaw conditions have a lifespan of 15–25 years. Stainless steel lasts longer but still requires inspection. Look for rust staining on the decking surface (indicates corroding fasteners below), loose or missing joist hangers, and any connection hardware that is cracked or bent. In Tahoe snow-load zones, hardware that is undersized for the load is a code and safety issue regardless of corrosion.</p>
 
-          <h2>6. Railing Failures</h2>
-          <p>Building code requires deck railings to withstand 200 lbs of lateral force applied at the top rail. Test yours: push firmly against the top rail. It should not move perceptibly. Railings that wobble, posts that rock at their base connections, and balusters with gaps larger than 4 inches are code violations — and the wobble or gap is usually the visible indicator of a structural connection failure that has already compromised the system.</p>
+          <h2>4. Posts That Rock or Lean</h2>
+          <p>Deck posts should be perfectly plumb and completely rigid. Any movement, lean, or rocking means the post-to-beam connection, the post base connection, or the concrete footing below has failed. Posts that sit in or near soil (rather than on concrete piers elevated above grade) are almost always rotting at the base — even if they look fine from above. Push each post by hand. It should not move at all.</p>
 
-          <h2>7. Stair Stringer Rot or Separation</h2>
-          <p>Deck stairs carry concentrated loads at the stringer-to-deck connection — where the stringer sits against the deck framing. This joint is a water trap that holds moisture against end grain, which absorbs water faster than face grain. At Lake Tahoe, where snow sits against deck stairs for months, stringer rot at the top connection is nearly universal in decks older than 15 years. Test by pushing firmly at the top of the stringer where it meets the deck — any movement indicates a failed connection.</p>
+          <BlogImage
+            src={IMGS.repairs_arun}
+            alt="Deck repair reinforced support beams elevated framing hillside Lake Tahoe BRE Builders"
+            caption="Hillside deck repair — reinforced support beams and elevated framing by BRE Builders"
+          />
 
-          <h2>8. Age — Especially Lake Tahoe Decks Over 15 Years</h2>
-          <p>A Reno deck built to code with proper materials has a structural service life of 25–30 years with maintenance. A Lake Tahoe deck faces 200+ inches of annual snowfall, UV radiation, freeze-thaw cycling, and seasonal moisture that dramatically reduces that lifespan. BRE Builders recommends structural inspection of any Lake Tahoe deck older than 15 years, regardless of visual appearance — and any Reno deck older than 20 years. The cost of an inspection is trivial compared to the cost of a collapse, legally and medically.</p>
+          <h2>5. Deck Moves or Shakes When Walking</h2>
+          <p>A structurally sound deck should feel completely solid. If you feel the deck move, sway, or vibrate when walking — particularly when others are also on it — the structural framing has failed somewhere. This is often a diagonal bracing issue (most residential decks lack adequate lateral bracing), a ledger connection failure, or post-to-beam connection failure. Do not use the deck until it has been inspected.</p>
 
-          <h2>Free Deck Safety Inspections — BRE Builders</h2>
-          <p>BRE Builders performs deck safety inspections throughout Reno, Sparks, Carson City, Lake Tahoe, and Truckee. We check all 8 failure points and provide a written assessment of any concerns. Free with any project estimate. If your deck is safe, we&apos;ll tell you — and we&apos;ll tell you what to watch for going forward. Licensed NV #0085999 · CA #1093798.</p>
+          <h2>6. Boards Have Separated, Warped, or Lifted</h2>
+          <p>Reno&apos;s temperature range — routinely from 10°F to 105°F — causes wood to expand and contract significantly across seasons. Over time this creates cupping (boards curving upward at the edges), checking (surface cracks along the grain), and splitting. These are not cosmetic issues: cupped boards collect water and accelerate rot. Checked boards have weakened significantly. Any board that is tripping-hazard lifted at one end needs replacement.</p>
+
+          <h2>7. Structural Hardware Is Undersized for Snow Load</h2>
+          <p>If your deck is in a Tahoe or mountain area snow zone, it must be engineered for the local ground snow load — which can be 200+ lbs per square foot in parts of the Sierra. Many decks — especially those built before current codes or by unlicensed contractors — use standard residential hardware that is insufficient for mountain snow loading. This is a life-safety issue. Have the structural hardware reviewed if your deck is in a snow zone.</p>
+
+          <BlogImage
+            src={IMGS.deck_charolette}
+            alt="Charlotte deck finished smooth sealed surface BRE Builders Reno NV"
+            caption="Completed deck replacement by BRE Builders — sealed, safe, and built to local code"
+          />
+
+          <h2>8. It Is More Than 20 Years Old and Has Never Been Inspected</h2>
+          <p>The average wood deck has a design life of 20–30 years with regular maintenance, and 10–15 years without it. If your deck is older than 20 years and has never had a professional structural inspection, it should be assessed — regardless of how it looks from above. Many serious structural deficiencies are not visible without getting underneath the deck and probing the framing members. BRE Builders provides free deck assessments throughout the Reno, Sparks, Lake Tahoe, and Carson City areas.</p>
+
+          <h2>BRE Builders — Free Deck Inspections</h2>
+          <p>BRE Builders provides free structural assessments for decks throughout Northern Nevada and California. If your deck shows any of these signs, call us before it becomes an emergency. Licensed NV #0085999 · CA #1093798. We respond within 24 hours.</p>
         </div>
       }
     />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,6 +43,12 @@ export default function KitchenTrendsPage() {
       ]}
       content={
         <div>
+          <BlogImage
+            src="https://brebuilders.com/wp-content/uploads/2022/10/kitchen-real-estate-interior-design-1940177.jpg"
+            alt="Kitchen remodel ROI Reno NV BRE Builders interior design"
+            caption="A well-executed kitchen remodel recovers 60–80% of its cost in resale value."
+            priority
+          />
           <p>Are you a Reno homeowner dreaming of a kitchen that&apos;s both beautiful and functional? A kitchen remodel can significantly enhance your lifestyle and boost your home&apos;s value. But with so many options available, how do you choose the best approach for your Reno home and budget?</p>
 
           <h2>Reno Kitchen Remodeling Trends for 2025</h2>

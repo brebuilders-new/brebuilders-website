@@ -62,4 +62,39 @@ export const IMGS = {
 
   // RIO TINTO
   rio_tinto: `${BASE}/Interior-Living-Room-Drywall-Prep-\u2013-Rio-Tinto-600x403.jpg`,
+  // BLOG CONTENT IMAGES
+  blog_contractor:    `${BASE}/pexels-nathanmartins-13834439-scaled.jpg`,
+  blog_wall_gaps:     `${BASE}/Gaps-between-walls-and-flooring-scaled.jpg`,
+  lt_glenbrook_1:     `${BASE}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
+
+
+  // BLOG POST INLINE IMAGES — from WP uploads
+  // 20-year post specific
+  blog_20yr_hero:     `${BASE}/20-Year-Old-Reno-Homes.jpg`,
+  blog_cracked_shower:`${BASE}/Cracked-Shower-Walls.jpg`,
+  blog_hvac:          `${BASE}/Failing-HVAC-Systems.jpg`,
+  blog_porch:         `${BASE}/Shifting-Porch-Columns.jpg`,
+  blog_basement_water:`${BASE}/Basement-Water-Intrusion.jpg`,
+
+  // 30-year post specific
+  blog_30yr_hero:     `${BASE}/30-Year-Old-Reno-Homes.jpg`,
+  blog_furnace:       `${BASE}/Rusty-Furnace-Damage.jpg`,
+  blog_unsafe_deck:   `${BASE}/Unsafe-Deck-Framing.jpg`,
+  blog_pipes:         `${BASE}/Galvanized-Pipe-Corrosion.jpg`,
+  blog_wiring:        `${BASE}/Aluminum-Wiring-Risk.jpg`,
+
+  // Deck post specific
+  blog_deck_framing:  `${BASE}/Framing-and-Bench-Layout-Stage.jpg`,
+  blog_after_const:   `${BASE}/After-Construction_resized.jpg`,
+
+  // Kitchen post specific
+  blog_kitchen_reno:  `${BASE}/2022/10/kitchen-real-estate-interior-design-1940177.jpg`,
+
+  // Car wash / commercial
+  blog_carwash:       `${BASE}/Starlite-Express-Car-Wash-.jpg`,
+  blog_gsr:           `${BASE}/GSR_project-1024x778.jpg`,
+
+  // Lake Tahoe — additional (for blog)
+  lt_glenbrook:       `${BASE}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
+  lt_16:              `${BASE}/2025/12/16-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-16-of-16-600x403.webp`,
 } as const

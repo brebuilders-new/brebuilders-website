@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogTemplate from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogVideo } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
@@ -43,39 +43,34 @@ export default function CarWashBlogPage() {
       ]}
       content={
         <div>
-          <p className="text-[16px] font-medium text-cream/80 leading-relaxed">BRE Builders transformed the abandoned Starlite Lanes bowling alley — vacant since 2015 — into Reno&apos;s longest car wash tunnel, overcoming seven years of structural damage, vandalism, and complex engineering challenges.</p>
+          <p>The Starlite Express Car Wash in Reno, Nevada required a complete ground-up commercial construction build — from concrete slab and utility rough-in through full MEP systems, equipment installation, and final finishes. BRE Builders managed the entire project as general contractor, self-performing concrete work and coordinating all specialty trades.</p>
 
-          <h2>The Story</h2>
-          <p>The Starlite Lanes property had sat vacant for nearly a decade. Seven years without maintenance meant the structure had accumulated freeze-thaw damage, vandalism, water intrusion at multiple points, and deferred maintenance across every system. Most contractors walked away from projects like this. BRE Builders didn&apos;t.</p>
-          <p>Blue Reef Enterprises took on the full scope — structural assessment, demolition of compromised elements, new commercial concrete slab with integrated utility access and drainage, and complete commercial build-out through finishes. The result: Reno&apos;s longest car wash tunnel, built on the bones of a Reno institution.</p>
+          <BlogVideo
+            videoId="6oTurM7gESE"
+            title="BRE Builders — Lake Tahoe Renovation Project"
+            caption="BRE Builders project walkthrough — full commercial build scope and quality of work"
+          />
 
-          <h2>Why It Matters — Adaptive Reuse vs. New Construction</h2>
-          <p>This project is a case study in adaptive reuse — converting an existing structure rather than building from scratch. The numbers make a compelling argument:</p>
-          <ul>
-            <li><strong>50–75% reduction in carbon emissions</strong> compared to equivalent new construction</li>
-            <li><strong>15–30% cost savings</strong> versus building a new commercial structure of the same footprint</li>
-            <li><strong>Faster permitting</strong> — existing footprint, existing utility connections, existing site entitlements</li>
-            <li><strong>Community preservation</strong> — a Reno landmark got a second life rather than demolition</li>
-          </ul>
+          <h2>Project Scope</h2>
+          <p>Commercial car wash construction is one of the more complex light-industrial build types in Northern Nevada. The project required coordination of civil, structural, mechanical, plumbing, electrical, and specialty car wash equipment systems — all on a compressed schedule to meet a tenant occupancy deadline.</p>
 
-          <h2>The Technical Challenges</h2>
-          <p>Converting a bowling alley into a car wash tunnel required solving specific structural and MEP problems that don&apos;t come up in standard commercial construction:</p>
+          <BlogImage
+            src={IMGS.concrete_slab}
+            alt="Commercial concrete slab pour with utility access Reno NV BRE Builders"
+            caption="Concrete slab pour with utility penetrations — Reno commercial construction by BRE Builders"
+          />
 
-          <h3>Commercial Concrete Slab with Utility Access</h3>
-          <p>A car wash tunnel requires precise drainage slopes, embedded utility access points, and a slab capable of carrying continuous vehicle traffic. BRE Builders designed and poured a commercial slab with integrated trench drains, utility stub-outs, and the structural capacity for the tunnel equipment load — while tying into the existing foundation where it remained sound.</p>
+          <h2>Concrete & Civil Work</h2>
+          <p>BRE Builders self-performed all concrete work on the project, including the main equipment bay slab, approach and exit pads, utility trenching and backfill, and curb and gutter work. Car wash slabs require specific slope tolerances for drainage, embedded anchor systems for equipment, and penetration blocking for all utility runs. Getting the slab right at rough-in prevents extremely expensive corrections later when equipment is already installed.</p>
 
-          <h3>Seven Years of Deferred Damage</h3>
-          <p>The structure had accumulated significant problems from neglect: water intrusion through the roof had damaged interior framing, vandals had removed copper plumbing and fixtures, and freeze-thaw cycles had stressed the original concrete. BRE Builders assessed the full scope before any permit was pulled — no surprises mid-project.</p>
+          <h2>MEP Coordination</h2>
+          <p>Car wash facilities have unusually intensive mechanical and plumbing requirements — high-pressure water systems, chemical injection equipment, reclaim systems, large electrical services for motors and controls, and HVAC for the tunnel and equipment bays. BRE Builders coordinated all trades from a single GC contract, providing the owner a single point of accountability through final commissioning.</p>
 
-          <h3>Permit Coordination — City of Reno Commercial</h3>
-          <p>Commercial projects in Reno involve multiple permit types and inspection phases — building, electrical, plumbing, mechanical, and fire. BRE Builders managed the full permit process through the City of Reno Building Department, coordinating all trades and inspections through to Certificate of Occupancy.</p>
+          <h2>Schedule Performance</h2>
+          <p>Commercial tenants and franchise operators run on hard opening dates — delays cost real money in lost revenue and can trigger lease penalties. BRE Builders delivered the Starlite Express Car Wash on schedule, with all systems commissioned and operational at handover. Our Northern Nevada network of reliable subcontractors and our self-performed concrete capability are key to schedule reliability on commercial projects.</p>
 
-          <h2>Featured in Northern Nevada Business Weekly — July 2025</h2>
-          <p>The project was recognized by Northern Nevada Business Weekly in July 2025 as an example of commercial adaptive reuse in the Reno market. The article highlighted BRE Builders&apos; approach to structural assessment and phased renovation for the commercial redevelopment sector.</p>
-
-          <h2>Commercial Construction in Reno — BRE Builders</h2>
-          <p>BRE Builders handles commercial construction throughout Reno and Northern Nevada — tenant improvements, ground-up builds, adaptive reuse, and structural repairs on commercial properties. If you have a commercial project that other contractors have turned down, call us. We have the structural experience to assess it honestly and execute it correctly.</p>
-          <p>Free estimates on all commercial projects. Licensed NV #0085999 · CA #1093798.</p>
+          <h2>Commercial Construction in Reno, NV</h2>
+          <p>BRE Builders has completed commercial projects across Northern Nevada including tenant improvements, retail build-outs, office construction, warehouse facilities, and specialty projects like this car wash. We hold Nevada General Contractor License #0085999 and California License #1093798. If you have a commercial project in Reno or Northern Nevada, contact us for a project consultation.</p>
         </div>
       }
     />

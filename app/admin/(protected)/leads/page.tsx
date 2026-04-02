@@ -145,7 +145,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
               style={{
                 padding: '5px 11px', borderRadius: '6px', fontSize: '11px', textDecoration: 'none',
                 fontFamily: 'monospace', transition: 'all 0.15s',
-                background: active ? 'rgba(200,146,58,0.2)' : 'transparent',
+                background: active ? 'rgba(200,146,58,0.15)' : 'transparent',
                 color: active ? '#c8923a' : '#6b7280',
                 border: active ? '1px solid rgba(200,146,58,0.4)' : '1px solid rgba(255,255,255,0.07)',
               }}

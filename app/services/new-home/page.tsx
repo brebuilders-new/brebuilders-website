@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -10,6 +12,12 @@ export const metadata: Metadata = {
   title: 'Custom Home Builder Reno NV | New Home Construction',
   description:
     'Custom home building in Reno, NV and Northern California. Ground-up builds, in-house design-build. Licensed NV #0085999 · CA #1009219. Free consultations.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Builds+%C2%B7+NV+%230085999+%C2%B7+CA+%231009219&badge=Custom+Homes`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/new-home/' },
 }
 

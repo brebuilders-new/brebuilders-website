@@ -24,6 +24,8 @@ const SERVICE_IMGS: Record<string, string> = {
   decks: 'https://brebuilders.com/wp-content/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg',
   concrete: 'https://brebuilders.com/wp-content/uploads/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-600x403.jpg',
   commercial: 'https://brebuilders.com/wp-content/uploads/Image_fx-9-600x403.jpg',
+  hauling: 'https://brebuilders.com/wp-content/uploads/image-26-600x403.jpg',
+  'lofts-condos': 'https://brebuilders.com/wp-content/uploads/loft-condo-remodel-600x403.jpg',
 }
 
 // ─── Animated cycling word ─────────────────────────────────────────────────────

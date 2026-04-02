@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -10,6 +12,12 @@ export const metadata: Metadata = {
   title: 'Contractor Lake Tahoe NV | Deck Repair & Renovation',
   description:
     'Licensed contractor serving Lake Tahoe, NV — full home renovation, deck repair, ADU construction, structural work. NV License #0085999. Free estimates.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV&sub=Deck+Repair+%C2%B7+Full+Home+Renovation+%C2%B7+ADU+Construction&badge=Lake+Tahoe`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/service-areas/lake-tahoe/' },
 }
 

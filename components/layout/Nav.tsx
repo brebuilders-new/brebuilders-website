@@ -23,6 +23,7 @@ const NAV_LINKS = [
   { label: 'Projects', href: '/projects' },
   { label: 'Areas', href: '/service-areas' },
   { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq' },
 ]
 

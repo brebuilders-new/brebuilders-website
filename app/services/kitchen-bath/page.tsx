@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -10,6 +12,12 @@ export const metadata: Metadata = {
   title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
   description:
     'Kitchen and bathroom remodeling in Reno, NV. High-quality finishes, modern layouts, licensed contractor. NV License #0085999. Free estimates.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=High-Quality+Finishes+%C2%B7+Expert+Execution&badge=Kitchen+%26+Bath`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/kitchen/' },
 }
 

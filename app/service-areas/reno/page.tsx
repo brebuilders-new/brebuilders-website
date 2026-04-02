@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -10,6 +12,12 @@ export const metadata: Metadata = {
   title: 'General Contractor Reno NV | Licensed Since 1989',
   description:
     'BRE Builders is a licensed general contractor in Reno, NV. ADUs, repairs, kitchen & bath, additions, custom homes, commercial. NV License #0085999. Free estimates.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+Licensed+Since+1989&badge=Reno+NV`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/service-areas/nevada/' },
 }
 

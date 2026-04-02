@@ -1,5 +1,3 @@
-'use server'
-
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'

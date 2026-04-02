@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -13,6 +15,12 @@ export const metadata: Metadata = {
   title: 'Home Additions Reno NV | Room & Garage Additions',
   description:
     'Home additions in Reno, NV — room additions, second stories, garage expansions. Add space without moving. Licensed GC since 1989. Free estimates. NV #0085999.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=Home+Additions+Reno+NV&sub=Add+Space.+Don%E2%80%99t+Move.&badge=Home+Additions`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/additions/' },
 }
 

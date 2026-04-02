@@ -1,3 +1,5 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
@@ -10,6 +12,12 @@ export const metadata: Metadata = {
   title: 'Foundation Repair Reno NV | Foundation Issues',
   description:
     'Foundation repair and structural inspection in Reno, NV. Licensed GC since 1989. Cracks, settlement, drainage issues. NV License #0085999. Free evaluation.',
+  openGraph: {
+    images: [{
+      url: `${SITE_URL}/api/og?title=Foundation+Repair+Reno+NV&sub=Free+Evaluation+%C2%B7+Licensed+Since+1989+%C2%B7+NV+%230085999&badge=Foundation+Repair`,
+      width: 1200, height: 630,
+    }],
+  },
   alternates: { canonical: 'https://brebuilders.com/repairs/foundation-repair-and-foundation-issues-in-reno-nv/' },
 }
 

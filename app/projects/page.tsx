@@ -4,6 +4,7 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { PROJECTS } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { CDN } from '@/lib/image-catalog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 

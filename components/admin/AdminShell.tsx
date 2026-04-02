@@ -22,20 +22,6 @@ const STATUS_COLORS: Record<string, string> = {
 
 export { STATUS_COLORS }
 
-const S = {
-  shell:   { display: 'flex', minHeight: '100vh', background: '#060d14', color: '#e8e4dc', fontFamily: 'system-ui, sans-serif' } as React.CSSProperties,
-  sidebar: { width: '200px', flexShrink: 0, borderRight: '1px solid rgba(255,255,255,0.06)', display: 'flex', flexDirection: 'column', position: 'sticky', top: 0, height: '100vh' } as React.CSSProperties,
-  logo:    { padding: '18px 16px 14px', borderBottom: '1px solid rgba(255,255,255,0.06)' } as React.CSSProperties,
-  nav:     { flex: 1, padding: '10px 8px', overflowY: 'auto' } as React.CSSProperties,
-  signout: { padding: '10px 8px', borderTop: '1px solid rgba(255,255,255,0.06)' } as React.CSSProperties,
-  main:    { flex: 1, overflow: 'auto', minWidth: 0 } as React.CSSProperties,
-  // Mobile top bar
-  topbar:  { display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderBottom: '1px solid rgba(255,255,255,0.06)', background: '#060d14' } as React.CSSProperties,
-  // Mobile nav overlay
-  overlay: { position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.6)', zIndex: 40 } as React.CSSProperties,
-  drawer:  { position: 'fixed', top: 0, left: 0, bottom: 0, width: '240px', background: '#060d14', borderRight: '1px solid rgba(255,255,255,0.06)', zIndex: 50, display: 'flex', flexDirection: 'column' } as React.CSSProperties,
-}
-
 export default function AdminShell({ children }: { children: React.ReactNode }) {
   const path = usePathname()
   const router = useRouter()
@@ -48,97 +34,85 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
     router.push('/admin/login')
   }
 
-  const navLink = (item: typeof NAV[0], onClick?: () => void) => {
-    const active = path === item.href || (item.href !== '/admin' && path.startsWith(item.href))
-    return (
-      <Link
-        key={item.href}
-        href={item.href}
-        onClick={onClick}
-        style={{
-          display: 'flex', alignItems: 'center', gap: '10px',
-          padding: '10px 12px', borderRadius: '8px', marginBottom: '2px',
-          fontSize: '14px', textDecoration: 'none', transition: 'all 0.15s',
-          background: active ? 'rgba(28,184,179,0.1)' : 'transparent',
-          color: active ? '#1cb8b3' : 'rgba(232,228,220,0.55)',
-          border: active ? '1px solid rgba(28,184,179,0.2)' : '1px solid transparent',
-        }}
-      >
-        <span style={{ fontSize: '16px', width: '18px', textAlign: 'center', lineHeight: 1 }}>{item.icon}</span>
-        {item.label}
-      </Link>
-    )
-  }
+  const NavLinks = ({ onClick }: { onClick?: () => void }) => (
+    <>
+      {NAV.map(item => {
+        const active = path === item.href || (item.href !== '/admin' && path.startsWith(item.href))
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onClick}
+            className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg mb-0.5 text-sm transition-all duration-150 border ${
+              active
+                ? 'bg-teal/10 text-teal border-teal/20'
+                : 'text-cream/50 border-transparent hover:text-cream/80 hover:bg-white/5'
+            }`}
+          >
+            <span className="w-4 text-center text-base leading-none">{item.icon}</span>
+            {item.label}
+          </Link>
+        )
+      })}
+    </>
+  )
 
-  const signOutBtn = (
-    <button
-      onClick={handleSignOut}
-      disabled={signingOut}
-      style={{ width: '100%', padding: '9px 12px', borderRadius: '8px', border: 'none', background: 'transparent', color: 'rgba(232,228,220,0.35)', cursor: 'pointer', fontSize: '13px', textAlign: 'left', fontFamily: 'monospace' }}
-    >
-      {signingOut ? 'Signing out...' : '← Sign out'}
-    </button>
+  const SidebarContent = ({ onClick }: { onClick?: () => void }) => (
+    <div className="flex flex-col h-full">
+      <div className="px-4 py-4 border-b border-white/[0.06]">
+        <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase mb-0.5">BRE Builders</p>
+        <p className="text-[12px] text-cream/40">Admin Dashboard</p>
+      </div>
+      <nav className="flex-1 p-2 overflow-y-auto">
+        <NavLinks onClick={onClick} />
+      </nav>
+      <div className="p-2 border-t border-white/[0.06]">
+        <button
+          onClick={handleSignOut}
+          disabled={signingOut}
+          className="w-full px-3 py-2.5 rounded-lg text-left text-[13px] font-mono text-cream/30 hover:text-cream/50 transition-colors"
+        >
+          {signingOut ? 'Signing out...' : '← Sign out'}
+        </button>
+      </div>
+    </div>
   )
 
   return (
-    <>
-      {/* ── DESKTOP layout ─────────────────────────────────────────── */}
-      <div style={{ ...S.shell, display: 'flex' }} className="admin-shell">
-        <style>{`
-          @media (max-width: 768px) {
-            .admin-sidebar { display: none !important; }
-            .admin-topbar  { display: flex !important; }
-          }
-          @media (min-width: 769px) {
-            .admin-sidebar { display: flex !important; }
-            .admin-topbar  { display: none !important; }
-          }
-        `}</style>
+    <div className="flex min-h-screen" style={{ background: '#060d14', color: '#e8e4dc', fontFamily: 'system-ui, sans-serif' }}>
 
-        {/* Desktop sidebar */}
-        <aside className="admin-sidebar" style={S.sidebar}>
-          <div style={S.logo}>
-            <p style={{ fontFamily: 'monospace', fontSize: '9px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 2px' }}>BRE Builders</p>
-            <p style={{ fontSize: '13px', color: 'rgba(232,228,220,0.5)', margin: 0 }}>Admin</p>
-          </div>
-          <nav style={S.nav}>{NAV.map(item => navLink(item))}</nav>
-          <div style={S.signout}>{signOutBtn}</div>
-        </aside>
+      {/* Desktop sidebar */}
+      <aside className="hidden md:flex flex-col w-[200px] flex-shrink-0 sticky top-0 h-screen border-r border-white/[0.06]">
+        <SidebarContent />
+      </aside>
 
-        {/* Mobile top bar */}
-        <div className="admin-topbar" style={{ ...S.topbar, display: 'none', position: 'sticky', top: 0, zIndex: 30 }}>
-          <div>
-            <p style={{ fontFamily: 'monospace', fontSize: '9px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: 0 }}>BRE Builders</p>
-          </div>
-          <button
-            onClick={() => setMobileOpen(true)}
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#e8e4dc', padding: '8px 12px', cursor: 'pointer', fontSize: '18px', lineHeight: 1 }}
-          >
-            ☰
-          </button>
-        </div>
-
-        {/* Mobile drawer */}
-        {mobileOpen && (
-          <>
-            <div style={S.overlay} onClick={() => setMobileOpen(false)} />
-            <aside style={S.drawer}>
-              <div style={{ ...S.logo, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div>
-                  <p style={{ fontFamily: 'monospace', fontSize: '9px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 2px' }}>BRE Builders</p>
-                  <p style={{ fontSize: '13px', color: 'rgba(232,228,220,0.5)', margin: 0 }}>Admin</p>
-                </div>
-                <button onClick={() => setMobileOpen(false)} style={{ background: 'none', border: 'none', color: 'rgba(232,228,220,0.4)', cursor: 'pointer', fontSize: '20px', padding: '4px' }}>✕</button>
-              </div>
-              <nav style={S.nav}>{NAV.map(item => navLink(item, () => setMobileOpen(false)))}</nav>
-              <div style={S.signout}>{signOutBtn}</div>
-            </aside>
-          </>
-        )}
-
-        {/* Main content */}
-        <main style={S.main}>{children}</main>
+      {/* Mobile header */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 border-b border-white/[0.06]"
+        style={{ background: '#060d14' }}>
+        <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase">BRE Builders · Admin</p>
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="px-3 py-1.5 rounded-lg text-cream/60 text-sm border border-white/10 hover:border-white/20"
+        >
+          ☰ Menu
+        </button>
       </div>
-    </>
+
+      {/* Mobile drawer */}
+      {mobileOpen && (
+        <>
+          <div className="md:hidden fixed inset-0 bg-black/60 z-40" onClick={() => setMobileOpen(false)} />
+          <aside className="md:hidden fixed top-0 left-0 bottom-0 w-[220px] z-50 border-r border-white/[0.06]"
+            style={{ background: '#060d14' }}>
+            <SidebarContent onClick={() => setMobileOpen(false)} />
+          </aside>
+        </>
+      )}
+
+      {/* Main */}
+      <main className="flex-1 min-w-0 md:overflow-auto pt-[52px] md:pt-0">
+        {children}
+      </main>
+    </div>
   )
 }

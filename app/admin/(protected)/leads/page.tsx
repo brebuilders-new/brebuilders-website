@@ -1,6 +1,25 @@
 import { supabaseAdmin } from '@/lib/supabase'
 import Link from 'next/link'
 
+interface Lead {
+  id: string
+  lead_number: number
+  first_name: string
+  last_name: string
+  phone: string
+  email: string
+  services: string[]
+  lead_score: number
+  score_badge: string
+  status: string
+  city: string
+  state: string
+  budget: string
+  timeline: string
+  created_at: string
+  updated_at: string
+}
+
 const SERVICE_LABELS: Record<string, string> = {
   'adu': 'ADU', 'additions': 'Addition', 'new-home': 'New Home',
   'kitchen-bath': 'Kitchen/Bath', 'repairs': 'Repairs', 'decks': 'Decks',
@@ -42,24 +61,35 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
   const statusFilter = params.status || ''
   const serviceFilter = params.service || ''
 
-  let query = supabaseAdmin
-    .from('leads')
-    .select('id,lead_number,first_name,last_name,phone,email,services,lead_score,score_badge,status,city,state,budget,timeline,created_at,updated_at')
-    .order('created_at', { ascending: false })
-    .limit(100)
+  let leads: Lead[] = []
+  try {
+    let query = supabaseAdmin
+      .from('leads')
+      .select('id,lead_number,first_name,last_name,phone,email,services,lead_score,score_badge,status,city,state,budget,timeline,created_at,updated_at')
+      .order('created_at', { ascending: false })
+      .limit(100)
 
-  if (statusFilter) query = query.eq('status', statusFilter)
-  if (serviceFilter) query = query.contains('services', [serviceFilter])
+    if (statusFilter) query = query.eq('status', statusFilter)
+    if (serviceFilter) query = query.contains('services', [serviceFilter])
 
-  const { data: leads } = await query
+    const { data } = await query
+    leads = (data as Lead[]) || []
+  } catch (err) {
+    console.error('leads fetch error:', err)
+  }
 
   // Count by status for filter tabs
-  const { data: statusCounts } = await supabaseAdmin
-    .from('leads')
-    .select('status')
-
   const counts: Record<string, number> = {}
-  statusCounts?.forEach(r => { counts[r.status] = (counts[r.status] || 0) + 1 })
+  try {
+    const { data: statusRows } = await supabaseAdmin
+      .from('leads')
+      .select('status')
+    statusRows?.forEach((r: { status: string }) => {
+      counts[r.status] = (counts[r.status] || 0) + 1
+    })
+  } catch (err) {
+    console.error('statusCounts error:', err)
+  }
 
   const STATUSES = ['', 'new', 'contacted', 'site_visit', 'quoted', 'won', 'lost']
   const STATUS_LABELS: Record<string, string> = {
@@ -84,7 +114,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       <div style={{ display: 'flex', gap: '4px', marginBottom: '20px', flexWrap: 'wrap' }}>
         {STATUSES.map(s => {
           const active = statusFilter === s
-          const count = s === '' ? (statusCounts?.length || 0) : (counts[s] || 0)
+          const count = s === '' ? leads.length : (counts[s] || 0)
           return (
             <Link
               key={s}
@@ -153,8 +183,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                   <tr
                     key={lead.id}
                     style={{ cursor: 'pointer', transition: 'background 0.1s' }}
-                    onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.02)')}
-                    onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+
                   >
                     <td style={cell}>
                       <span style={{ fontFamily: 'monospace', fontSize: '11px', color: '#1cb8b3' }}>

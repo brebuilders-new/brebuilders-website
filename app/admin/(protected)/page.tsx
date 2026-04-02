@@ -2,25 +2,29 @@ import { supabaseAdmin } from '@/lib/supabase'
 import Link from 'next/link'
 
 async function getStats() {
-  const [total, newLeads, hot, warm, won, recent] = await Promise.all([
-    supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }),
-    supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).eq('status', 'new'),
-    supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).gte('lead_score', 70),
-    supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).gte('lead_score', 45).lt('lead_score', 70),
-    supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).eq('status', 'won'),
-    supabaseAdmin.from('leads')
-      .select('id,lead_number,first_name,last_name,services,lead_score,score_badge,status,city,state,created_at,budget,phone,email')
-      .order('created_at', { ascending: false })
-      .limit(8),
-  ])
-
-  return {
-    total: total.count || 0,
-    new: newLeads.count || 0,
-    hot: hot.count || 0,
-    warm: warm.count || 0,
-    won: won.count || 0,
-    recent: recent.data || [],
+  try {
+    const [total, newLeads, hot, warm, won, recent] = await Promise.all([
+      supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }),
+      supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).eq('status', 'new'),
+      supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).gte('lead_score', 70),
+      supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).gte('lead_score', 45).lt('lead_score', 70),
+      supabaseAdmin.from('leads').select('id', { count: 'exact', head: true }).eq('status', 'won'),
+      supabaseAdmin.from('leads')
+        .select('id,lead_number,first_name,last_name,services,lead_score,score_badge,status,city,state,created_at,budget,phone,email')
+        .order('created_at', { ascending: false })
+        .limit(8),
+    ])
+    return {
+      total: total.count || 0,
+      new: newLeads.count || 0,
+      hot: hot.count || 0,
+      warm: warm.count || 0,
+      won: won.count || 0,
+      recent: recent.data || [],
+    }
+  } catch (err) {
+    console.error('getStats error:', err)
+    return { total: 0, new: 0, hot: 0, warm: 0, won: 0, recent: [] }
   }
 }
 

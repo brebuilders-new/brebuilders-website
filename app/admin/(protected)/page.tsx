@@ -79,7 +79,7 @@ export default async function AdminDashboard() {
   }
 
   return (
-    <div style={{ padding: '32px' }}>
+    <div style={{ padding: 'clamp(16px, 4vw, 32px)' }}>
       {/* Header */}
       <div style={{ marginBottom: '28px' }}>
         <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#1cb8b3', textTransform: 'uppercase', margin: '0 0 6px' }}>Overview</p>
@@ -87,7 +87,7 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Stats */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '12px', marginBottom: '32px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px', marginBottom: '32px' }}>
         {cards.map(c => (
           <div key={c.label} style={{ background: '#0c1a27', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.07)', padding: '16px 18px' }}>
             <p style={{ fontSize: '11px', color: 'rgba(232,228,220,0.4)', fontFamily: 'monospace', textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 8px' }}>{c.label}</p>
@@ -108,7 +108,7 @@ export default async function AdminDashboard() {
             No leads yet — run the SQL migration first, then submit a test form.
           </div>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}><table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
             <thead>
               <tr>
                 {['#', 'Name', 'Services', 'Score', 'Budget', 'Location', 'Status', 'Time', ''].map(h => (
@@ -167,6 +167,7 @@ export default async function AdminDashboard() {
               })}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

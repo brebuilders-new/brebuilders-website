@@ -100,7 +100,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
   const cell: React.CSSProperties = { padding: '13px 16px', borderBottom: '1px solid rgba(255,255,255,0.05)', fontSize: '13px', verticalAlign: 'middle' as const }
 
   return (
-    <div style={{ padding: '32px' }}>
+    <div style={{ padding: 'clamp(16px, 4vw, 32px)' }}>
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '24px' }}>
         <div>
@@ -163,7 +163,8 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
             No leads match this filter.
           </div>
         ) : (
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' as const }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px' }}>
             <thead>
               <tr>
                 {['#', 'Name', 'Services', 'Score', 'Budget', 'Location', 'Status', 'Age', ''].map(h => (
@@ -227,6 +228,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
               })}
             </tbody>
           </table>
+          </div>
         )}
       </div>
     </div>

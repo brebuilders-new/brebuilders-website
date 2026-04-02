@@ -77,6 +77,22 @@ export default function AboutPage() {
                   </p>
                 </div>
 
+                {/* Steve Rosenthal — named owner */}
+                <div className="flex items-center gap-5 p-5 bg-panel border border-white/[0.06] rounded-xl mb-6">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/steve-rosenthal.png"
+                    alt="Steve Rosenthal — Owner and Founder, Blue Reef Builders, Licensed General Contractor Reno NV since 1989"
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-teal/30"
+                    width={64}
+                    height={64}
+                  />
+                  <div>
+                    <div className="font-display text-[18px] text-cream leading-tight">Steve Rosenthal</div>
+                    <div className="font-mono text-[10px] text-teal/70 tracking-wider mt-1 uppercase">Owner & Founder · Licensed Since 1989</div>
+                    <div className="font-mono text-[10px] text-cream/45 tracking-wider mt-1">NV #0085999 · CA #1093798</div>
+                  </div>
+                </div>
                 {/* License block */}
                 <div className="mt-8 bg-panel rounded-xl p-5 border border-gold/20 border-l-[3px] border-l-gold">
                   <p className="font-mono text-[10px] tracking-[2px] uppercase text-gold mb-3">Licensing & Credentials</p>

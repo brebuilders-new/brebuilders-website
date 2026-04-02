@@ -3,10 +3,12 @@ import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import Link from 'next/link'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'Privacy Policy | BRE Builders — Blue Reef Builders Reno NV',
   description: 'Privacy policy for BRE Builders (Blue Reef Enterprises, LLC), licensed general contractor in Reno, NV. Website address: brebuilders.com.',
-  alternates: { canonical: 'https://brebuilders.com/privacy-policy/' },
+  alternates: { canonical: `${SITE_URL}/privacy-policy/` },
   robots: { index: false },
 }
 

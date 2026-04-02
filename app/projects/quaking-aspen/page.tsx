@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Quaking+Aspen+Structural+Repair&sub=Dry+Rot+%26+Structural+Restoration+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/quaking-aspen-structural-repair/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/quaking-aspen-structural-repair/` },
 }
 
 const schema = {

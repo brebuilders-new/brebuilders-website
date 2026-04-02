@@ -186,6 +186,46 @@ export default function TestimonialsPage() {
           </div>
         </section>
 
+        {/* Service discovery — testimonials readers know they want work done */}
+        <section className="py-16 bg-panel border-y border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-7 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">What Can We Build For You?</span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+              {[
+                { label: 'ADU Construction', desc: 'Studio to 2BR · from $75,000 · Reno & NorCal', href: '/services/adu' },
+                { label: 'Structural Repairs', desc: 'Foundation, framing, dry rot · Free estimates', href: '/services/repairs' },
+                { label: 'Kitchen & Bath Remodeling', desc: 'Custom cabinetry, stone counters, premium finishes', href: '/services/kitchen-bath' },
+                { label: 'Deck Construction', desc: 'Snow-load rated · Reno, Sparks, Lake Tahoe', href: '/services/decks' },
+                { label: 'Custom Home Building', desc: 'Ground-up builds · Ripon CA estate completed', href: '/services/new-home' },
+                { label: 'Home Additions', desc: 'Room additions, second stories, garage additions', href: '/services/additions' },
+              ].map(s => (
+                <Link key={s.href} href={s.href} className="group flex items-center gap-3 p-4 rounded-xl border border-white/[0.06] hover:border-teal/25 bg-deep hover:bg-teal/[0.04] transition-all">
+                  <div className="flex-1">
+                    <span className="text-[14px] text-cream/75 group-hover:text-teal transition-colors font-medium block">{s.label}</span>
+                    <span className="text-[11px] text-cream/35 block mt-0.5">{s.desc}</span>
+                  </div>
+                  <span className="text-cream/20 group-hover:text-teal text-[13px] flex-shrink-0">→</span>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: 'View All Projects', href: '/projects' },
+                { label: 'About BRE Builders', href: '/about' },
+                { label: 'FAQ', href: '/faq' },
+                { label: 'Blog', href: '/blog' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">
+                  {l.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20 bg-deep">
           <div className="container text-center">

@@ -3,103 +3,157 @@ import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { IMGS } from '@/lib/images'
+import { SITE } from '@/lib/site-data'
 
 export const metadata: Metadata = {
-  title: 'Blog | BRE Builders Reno NV Construction Tips & News',
-  description:
-    'Construction tips, ADU guides, repair advice, and local market insights from BRE Builders — licensed general contractor in Reno, NV since 1989.',
+  title: 'Blog | BRE Builders Reno NV — Construction Tips & Guides',
+  description: 'ADU guides, structural repair advice, kitchen remodeling tips, and Northern Nevada construction insights from BRE Builders — licensed general contractor since 1989.',
+  openGraph: {
+    title: 'BRE Builders Blog — Construction Guides for Reno Homeowners',
+    description: 'ADU guides, repair advice, remodeling tips, and local insights. Licensed NV #0085999 · CA #1093798.',
+    url: 'https://brebuilders.com/blog/',
+    type: 'website',
+    siteName: 'BRE Builders',
+    locale: 'en_US',
+  },
   alternates: { canonical: 'https://brebuilders.com/blog/' },
 }
 
-// All verified WP blog posts — these live at brebuilders.com, not on the new site
-// Links go directly to WP until blog posts are migrated
+// All posts now on Vercel routes
 const POSTS = [
   {
-    slug: 'how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide',
+    href: '/blog/how-to-add-an-adu-in-nevada',
     title: 'How to Add an ADU in Nevada Without Breaking the Bank: 2025 Guide',
     category: 'ADU',
-    excerpt: 'Nevada ADU laws, permit costs, construction timelines, and real cost data for Reno homeowners considering an accessory dwelling unit in 2025.',
+    excerpt: 'Nevada ADU laws, permit costs, construction timelines, and real cost data for Reno homeowners. From $75,000.',
     img: IMGS.adu_main,
-    alt: 'ADU Guide Nevada 2025 BRE Builders',
+    alt: 'ADU Construction Guide Nevada 2025 BRE Builders',
     priority: true,
+    service: '/services/adu',
   },
   {
-    slug: 'top-10-signs-your-home-needs-structural-repair-dont-ignore-3',
+    href: '/blog/structural-repair-warning-signs',
     title: 'Top 10 Signs Your Home Needs Structural Repair (Don\'t Ignore #3)',
     category: 'Structural Repairs',
-    excerpt: 'Warning signs that indicate your Reno home may have structural issues — from stair-step cracks to bowing walls. What to watch for.',
+    excerpt: 'Warning signs from foundation cracks to sloping floors. What each sign means for your Reno home.',
     img: IMGS.repairs_rot,
-    alt: 'Structural Repair Warning Signs Reno Home',
+    alt: 'Structural Repair Warning Signs Reno Home BRE Builders',
     priority: true,
+    service: '/services/repairs',
   },
   {
-    slug: 'deck-safety-warning-signs-reno-lake-tahoe',
-    title: 'Deck Safety Warning Signs for Reno and Lake Tahoe Homeowners',
+    href: '/blog/deck-safety-warning-signs',
+    title: '8 Signs Your Deck Is No Longer Safe — Reno & Lake Tahoe',
     category: 'Decks',
-    excerpt: 'Eight signs your Reno or Lake Tahoe deck needs immediate inspection. Seasonal wear, freeze-thaw damage, and structural warning signs.',
-    img: IMGS.repairs_arun,
-    alt: 'Deck Safety Warning Signs Reno Lake Tahoe',
+    excerpt: 'Eight structural warning signs BRE Builders checks on every deck inspection. Free inspections available.',
+    img: IMGS.repairs_deck_lt,
+    alt: 'Deck Safety Warning Signs Reno Lake Tahoe BRE Builders',
     priority: true,
+    service: '/services/decks',
   },
   {
-    slug: 'reno-kitchen-remodeling-top-trends-investment-tips-for-2025',
+    href: '/blog/reno-kitchen-remodeling-trends',
     title: 'Reno Kitchen Remodeling: Top Trends & Investment Tips for 2025',
     category: 'Kitchen & Bath',
-    excerpt: 'Kitchen remodel ROI in Reno, current material trends, and what Reno homeowners should prioritize for resale or livability.',
-    img: IMGS.ripon[1],
-    alt: 'Kitchen Remodeling Reno NV 2025 Trends',
+    excerpt: 'Natural materials, smart kitchens, functional islands. What Reno homeowners should prioritize for ROI.',
+    img: IMGS.svc_kitchen,
+    alt: 'Kitchen Remodeling Reno NV 2025 Trends BRE Builders',
+    service: '/services/kitchen-bath',
   },
   {
-    slug: 'from-strikes-to-suds-how-bre-builders-saved-a-reno-icon',
+    href: '/blog/is-your-kitchen-ruining-your-property-value',
+    title: 'Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First',
+    category: 'Kitchen & Bath',
+    excerpt: 'An outdated kitchen quietly drains your Reno home\'s value. The 5 problems that cost you the most at resale.',
+    img: IMGS.svc_kitchen,
+    alt: 'Kitchen property value Reno NV BRE Builders',
+    service: '/services/kitchen-bath',
+  },
+  {
+    href: '/blog/5-signs-its-time-to-remodel-your-kitchen',
+    title: '5 Signs It\'s Time to Remodel Your Kitchen — #2 Is Quietly Hurting Your Value',
+    category: 'Kitchen & Bath',
+    excerpt: 'Not sure if it\'s time? These 5 signs tell you the answer — and #2 is one most Reno homeowners miss.',
+    img: IMGS.svc_kitchen,
+    alt: '5 signs kitchen remodel Reno NV',
+    service: '/services/kitchen-bath',
+  },
+  {
+    href: '/blog/bre-builders-car-wash-reno',
     title: 'From Strikes to Suds: How BRE Builders Saved a Reno Icon',
     category: 'Commercial',
-    excerpt: 'The story of the BRE Builders car wash project in Reno — converting a bowling alley into a commercial car wash.',
+    excerpt: 'Converting the abandoned Starlite Lanes bowling alley into Reno\'s longest car wash. Adaptive reuse case study.',
     img: IMGS.concrete_slab,
-    alt: 'Commercial Concrete Car Wash Construction Reno NV BRE Builders',
+    alt: 'Commercial Car Wash Construction Reno NV BRE Builders',
+    service: '/services/commercial',
   },
   {
-    slug: 'reno-home-repairs-20-year-old-house',
+    href: '/blog/reno-home-repairs-20-year',
     title: 'Reno Home Repairs: What to Expect in a 20-Year-Old House',
     category: 'Structural Repairs',
-    excerpt: 'What structural and system issues commonly appear in Reno homes built in the early 2000s — and what to do about them.',
+    excerpt: '8 structural and system issues in Reno homes built in the early 2000s — and when each becomes urgent.',
     img: IMGS.repairs_foundation,
-    alt: 'Reno Home Repairs 20 Year Old House Structural Issues',
+    alt: 'Reno Home Repairs 20 Year Old House',
+    service: '/services/repairs',
   },
   {
-    slug: 'reno-home-repairs-30-year-old-house',
+    href: '/blog/reno-home-repairs-30-year',
     title: 'Reno Home Repairs: What to Expect in a 30-Year-Old House',
     category: 'Structural Repairs',
-    excerpt: "What Reno homeowners should expect in homes from the 1990s — foundation concerns, aging systems, and deferred maintenance.",
+    excerpt: '8 critical issues in 1990s-era Reno homes — galvanized pipes, aluminum wiring, unsafe decks, roof age.',
     img: IMGS.repairs_rot,
-    alt: 'Reno Home Repairs 30 Year Old House Structural',
+    alt: 'Reno Home Repairs 30 Year Old House',
+    service: '/services/repairs',
   },
   {
-    slug: 'why-more-reno-homeowners-trust-bre-builders-for-structural-repairs',
+    href: '/blog/reno-structural-repairs',
     title: 'Why More Reno Homeowners Trust BRE Builders for Structural Repairs',
     category: 'Structural Repairs',
-    excerpt: 'What sets BRE Builders apart for structural repair work in Northern Nevada — licensing, approach, and track record.',
+    excerpt: 'Northern Nevada soil conditions, 35+ years of repair experience, and what sets BRE apart.',
     img: IMGS.repairs_deck_lt,
     alt: 'Reno Structural Repair Contractor BRE Builders',
+    service: '/services/repairs',
   },
   {
-    slug: 'reno-1-billion-redevelopment-contractors',
-    title: 'Reno\'s $1 Billion Redevelopment: What It Means for Local Contractors',
+    href: '/blog/reno-redevelopment',
+    title: 'Reno\'s $1 Billion Redevelopment — What It Means for Contractors',
     category: 'Commercial',
-    excerpt: 'Reno\'s ongoing downtown and midtown redevelopment — what\'s being built, who\'s doing the work, and the outlook for local contractors.',
+    excerpt: 'Tech migration, downtown transformation, ADU boom. What Reno\'s construction cycle means for homeowners.',
     img: IMGS.svc_commercial,
     alt: 'Reno Redevelopment Commercial Construction BRE Builders',
+    service: '/services/commercial',
   },
   {
-    slug: 'what-reno-homeowners-overlook-in-10-year-old-homes',
+    href: '/blog/reno-home-10-year-maintenance',
     title: 'What Reno Homeowners Overlook in 10-Year-Old Homes',
     category: 'Structural Repairs',
-    excerpt: 'Common maintenance blind spots in Reno homes that are 8–12 years old — what to inspect before problems compound.',
-    img: IMGS.lt(5),
+    excerpt: '5 climate-specific issues in 10-year-old Reno homes: clay soils, UV damage, attic ducts, driveways, decks.',
+    img: IMGS.repairs_foundation,
     alt: 'Reno Home Maintenance 10 Year Old House BRE Builders',
+    service: '/services/repairs',
   },
 ]
 
 const CATEGORIES = ['All', 'ADU', 'Structural Repairs', 'Kitchen & Bath', 'Decks', 'Commercial']
+
+// Strategic service links for the sidebar / bottom CTA
+const SERVICE_SHORTCUTS = [
+  { label: 'ADU Construction — from $75K', href: '/services/adu' },
+  { label: 'Structural Repairs — Free Estimates', href: '/services/repairs' },
+  { label: 'Kitchen & Bath Remodeling', href: '/services/kitchen-bath' },
+  { label: 'Deck Construction & Repair', href: '/services/decks' },
+  { label: 'Home Additions', href: '/services/additions' },
+  { label: 'Commercial Construction', href: '/services/commercial' },
+]
+
+const AREA_SHORTCUTS = [
+  { label: 'Reno, NV', href: '/service-areas/nevada/' },
+  { label: 'Sparks, NV', href: '/service-areas/sparks/' },
+  { label: 'Lake Tahoe', href: '/service-areas/lake-tahoe/' },
+  { label: 'Carson City, NV', href: '/service-areas/carson-city/' },
+  { label: 'Truckee, CA', href: '/service-areas/truckee/' },
+  { label: 'Northern California', href: '/service-areas/northern-california/' },
+]
 
 function SL({ text }: { text: string }) {
   return (
@@ -120,101 +174,175 @@ export default function BlogPage() {
       <main className="pt-28 pb-24">
         <div className="container">
           {/* Header */}
-          <div className="max-w-[660px] mb-14">
+          <div className="max-w-[660px] mb-12">
             <SL text="Construction Blog" />
             <h1 className="font-display text-[clamp(38px,5.5vw,72px)] font-light leading-[0.95] tracking-tight text-cream mb-4">
-              Insights From the<br />
-              <span className="italic text-teal">Job Site.</span>
+              Insights From the<br /><span className="italic text-teal">Job Site.</span>
             </h1>
-            <p className="text-[15px] text-cream/55 leading-relaxed">
+            <p className="text-[15px] text-cream/55 leading-relaxed mb-6">
               ADU guides, repair advice, remodeling tips, and Northern Nevada construction
               insights from BRE Builders — licensed since 1989.
             </p>
-          </div>
-
-          {/* Category pills */}
-          <div className="flex flex-wrap gap-2 mb-12">
-            {CATEGORIES.map(c => (
-              <span key={c} className="font-mono text-[11px] tracking-wider text-cream/50 border border-white/[0.1] px-3 py-1.5 rounded-full hover:border-teal/30 hover:text-teal transition-all cursor-pointer">
-                {c}
-              </span>
-            ))}
-          </div>
-
-          {/* Featured posts */}
-          <section className="mb-14">
-            <SL text="Featured Guides" />
-            <div className="grid md:grid-cols-3 gap-6">
-              {featured.map((p, i) => (
-                <a
-                  key={p.slug}
-                  href={`https://brebuilders.com/${p.slug}/`}
-                  className="group block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/25 transition-all bg-panel"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.img}
-                      alt={p.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      loading={i < 2 ? 'eager' : 'lazy'}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-panel/90 to-transparent" />
-                    <div className="absolute top-3 left-3 font-mono text-[9px] tracking-wider uppercase bg-teal text-void px-2 py-1 rounded">
-                      {p.category}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h2 className="font-display text-[17px] text-cream leading-snug mb-3 group-hover:text-teal transition-colors">
-                      {p.title}
-                    </h2>
-                    <p className="text-[13px] text-cream/40 leading-relaxed mb-4">{p.excerpt}</p>
-                    <span className="font-mono text-[11px] text-teal/60 group-hover:text-teal transition-colors tracking-wider uppercase">
-                      Read Article →
-                    </span>
-                  </div>
-                </a>
+            {/* Breadcrumb / context pill row */}
+            <div className="flex flex-wrap gap-2">
+              {CATEGORIES.map(c => (
+                <span key={c} className="font-mono text-[11px] tracking-wider text-cream/45 border border-white/[0.08] px-3 py-1.5 rounded-full hover:border-teal/30 hover:text-teal transition-all cursor-default">
+                  {c}
+                </span>
               ))}
             </div>
-          </section>
+          </div>
 
-          {/* All other posts */}
-          <section className="mb-14">
-            <SL text="All Posts" />
-            <div className="space-y-0">
-              {rest.map((p, i) => (
-                <a
-                  key={p.slug}
-                  href={`https://brebuilders.com/${p.slug}/`}
-                  className="group flex items-start gap-5 py-5 border-b border-white/[0.055] hover:bg-panel/30 -mx-4 px-4 rounded-lg transition-colors"
-                >
-                  <div className="flex-shrink-0 w-20 h-16 overflow-hidden rounded-lg hidden sm:block">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.img} alt={p.alt} className="w-full h-full object-cover" loading="lazy" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-mono text-[10px] tracking-wider uppercase text-teal/60 mb-1">{p.category}</div>
-                    <h3 className="font-display text-[16px] text-cream leading-snug mb-1 group-hover:text-teal transition-colors">
-                      {p.title}
-                    </h3>
-                    <p className="text-[12px] text-cream/35 leading-relaxed hidden md:block">{p.excerpt}</p>
-                  </div>
-                  <span className="font-mono text-[11px] text-teal/40 group-hover:text-teal transition-colors flex-shrink-0 hidden sm:block">→</span>
-                </a>
-              ))}
+          <div className="grid lg:grid-cols-[1fr_280px] gap-12">
+            {/* ── MAIN CONTENT ── */}
+            <div>
+              {/* Featured posts */}
+              <section className="mb-14">
+                <SL text="Featured Guides" />
+                <div className="grid md:grid-cols-3 gap-5">
+                  {featured.map((p, i) => (
+                    <Link
+                      key={p.href}
+                      href={p.href}
+                      className="group block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/25 transition-all bg-panel"
+                    >
+                      <div className="relative h-48 overflow-hidden">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={p.img}
+                          alt={p.alt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          loading={i < 2 ? 'eager' : 'lazy'}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-panel/90 to-transparent" />
+                        <div className="absolute top-3 left-3 font-mono text-[9px] tracking-wider uppercase bg-teal text-void px-2 py-1 rounded">
+                          {p.category}
+                        </div>
+                      </div>
+                      <div className="p-5">
+                        <h2 className="font-display text-[17px] text-cream leading-snug mb-3 group-hover:text-teal transition-colors">
+                          {p.title}
+                        </h2>
+                        <p className="text-[13px] text-cream/40 leading-relaxed mb-4">{p.excerpt}</p>
+                        <div className="flex items-center justify-between">
+                          <span className="font-mono text-[11px] text-teal/60 group-hover:text-teal transition-colors tracking-wider uppercase">
+                            Read Guide →
+                          </span>
+
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+
+              {/* Inline CTA — after featured */}
+              <div className="mb-12 p-5 bg-teal/[0.06] border border-teal/20 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex-1">
+                  <p className="font-display text-[18px] text-cream mb-1">Have a project in mind?</p>
+                  <p className="text-[13px] text-cream/50">Free estimates. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>
+                </div>
+                <div className="flex gap-2.5 flex-shrink-0">
+                  <Link href="/contact" className="btn-primary text-[13px] py-2.5 px-5">Get a Free Quote →</Link>
+                  <a href={SITE.phoneHref} className="btn-ghost text-[13px] py-2.5 px-4 font-mono">Call</a>
+                </div>
+              </div>
+
+              {/* All posts list */}
+              <section className="mb-14">
+                <SL text="All Posts" />
+                <div className="space-y-0">
+                  {rest.map(p => (
+                    <Link
+                      key={p.href}
+                      href={p.href}
+                      className="group flex items-start gap-5 py-4 border-b border-white/[0.055] hover:bg-panel/30 -mx-4 px-4 rounded-lg transition-colors"
+                    >
+                      <div className="flex-shrink-0 w-20 h-16 overflow-hidden rounded-lg hidden sm:block">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={p.img} alt={p.alt} className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-mono text-[10px] tracking-wider uppercase text-teal/60">{p.category}</span>
+                        </div>
+                        <h3 className="font-display text-[16px] text-cream leading-snug mb-1 group-hover:text-teal transition-colors">
+                          {p.title}
+                        </h3>
+                        <p className="text-[12px] text-cream/35 leading-relaxed hidden md:block">{p.excerpt}</p>
+                      </div>
+                      <span className="font-mono text-[11px] text-teal/40 group-hover:text-teal transition-colors flex-shrink-0 hidden sm:block mt-1">→</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             </div>
-          </section>
 
-          {/* CTA */}
-          <div className="bg-panel rounded-2xl p-8 border border-white/[0.06] text-center">
-            <p className="font-display text-[22px] text-cream mb-2">Have a project in mind?</p>
-            <p className="text-[14px] text-cream/50 mb-6">
-              BRE Builders provides free estimates for all residential and commercial projects.
-              Licensed NV #0085999 · CA #1093798.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/contact" className="btn-primary px-8">Request a Free Quote →</Link>
-              <a href="tel:7753914517" className="btn-ghost px-8 font-mono">(775) 391-4517</a>
+            {/* ── SIDEBAR ── */}
+            <aside className="hidden lg:block">
+              {/* Sticky sidebar */}
+              <div className="sticky top-28 space-y-6">
+                {/* Free estimate CTA */}
+                <div className="bg-panel rounded-2xl p-5 border border-white/[0.07]">
+                  <p className="font-display text-[20px] text-cream mb-1 leading-snug">Start Your Project</p>
+                  <p className="text-[12px] text-cream/45 mb-4">Free estimates. Licensed NV #0085999. Response within 24 hours.</p>
+                  <Link href="/contact" className="btn-primary w-full justify-center text-[13px] mb-2">Get a Free Estimate →</Link>
+                  <a href={SITE.phoneHref} className="btn-ghost w-full justify-center text-[13px] font-mono">{SITE.phone}</a>
+                </div>
+
+                {/* Services shortcut */}
+                <div className="bg-panel rounded-2xl p-5 border border-white/[0.07]">
+                  <p className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal mb-4">Our Services</p>
+                  <div className="space-y-0">
+                    {SERVICE_SHORTCUTS.map(s => (
+                      <Link key={s.href} href={s.href} className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                        <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">{s.label}</span>
+                        <span className="text-cream/20 group-hover:text-teal transition-colors text-[12px]">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Service areas shortcut */}
+                <div className="bg-panel rounded-2xl p-5 border border-white/[0.07]">
+                  <p className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal mb-4">Service Areas</p>
+                  <div className="grid grid-cols-2 gap-1.5">
+                    {AREA_SHORTCUTS.map(a => (
+                      <Link key={a.href} href={a.href} className="text-[12px] text-cream/50 hover:text-teal transition-colors py-1">
+                        {a.label} →
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonials teaser */}
+                <div className="bg-teal/[0.04] border border-teal/15 rounded-2xl p-5">
+                  <p className="font-display text-[16px] text-cream mb-3 leading-snug">
+                    &ldquo;Exceeds my expectations every time.&rdquo;
+                  </p>
+                  <p className="font-mono text-[10px] text-cream/35 mb-3">— Stephanie, Reno NV</p>
+                  <Link href="/testimonials" className="font-mono text-[11px] text-teal hover:text-cream transition-colors">
+                    Read All Reviews →
+                  </Link>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          {/* Bottom cross-links strip — mobile-first */}
+          <div className="mt-12 pt-10 border-t border-white/[0.06]">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { label: 'View All Projects', desc: 'Portfolio of completed work', href: '/projects' },
+                { label: 'Client Testimonials', desc: 'Real reviews from Reno clients', href: '/testimonials' },
+                { label: 'Frequently Asked Questions', desc: 'Permits, pricing, timelines', href: '/faq' },
+                { label: 'About BRE Builders', desc: '35+ years, licensed NV & CA', href: '/about' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="group p-4 bg-panel rounded-xl border border-white/[0.06] hover:border-teal/25 transition-colors">
+                  <span className="text-[14px] text-cream/75 group-hover:text-teal transition-colors font-medium block">{l.label}</span>
+                  <span className="text-[12px] text-cream/35 block mt-0.5">{l.desc}</span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

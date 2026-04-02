@@ -254,8 +254,36 @@ export default function ProjectsPage() {
             </div>
           </section>
 
+          {/* Cross-links: services + areas + social proof */}
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+            {[
+              { label: 'ADU Construction', desc: 'From $75K · See our ADU work', href: '/services/adu' },
+              { label: 'Structural Repairs', desc: 'Foundation, framing, dry rot', href: '/services/repairs' },
+              { label: 'Custom Homes', desc: 'Nevada & California', href: '/services/new-home' },
+              { label: 'Decks', desc: 'Reno, Sparks, Lake Tahoe', href: '/services/decks' },
+            ].map(s => (
+              <Link key={s.href} href={s.href} className="group p-4 bg-panel rounded-xl border border-white/[0.06] hover:border-teal/25 transition-colors">
+                <span className="text-[13px] text-cream/75 group-hover:text-teal transition-colors font-medium block">{s.label} →</span>
+                <span className="text-[11px] text-cream/35 block mt-0.5">{s.desc}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 mb-10">
+            {[
+              { label: 'Client Testimonials', href: '/testimonials' },
+              { label: 'ADU Blog Guide', href: '/blog/how-to-add-an-adu-in-nevada' },
+              { label: 'Structural Repair Signs', href: '/blog/structural-repair-warning-signs' },
+              { label: 'About BRE Builders', href: '/about' },
+              { label: 'Service Areas', href: '/service-areas' },
+            ].map(l => (
+              <Link key={l.href} href={l.href} className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">
+                {l.label} →
+              </Link>
+            ))}
+          </div>
+
           {/* CTA */}
-          <div className="mt-16 p-8 bg-panel rounded-2xl border border-white/[0.06] text-center">
+          <div className="p-8 bg-panel rounded-2xl border border-white/[0.06] text-center">
             <p className="font-display text-[24px] text-cream mb-2">Want to start your project?</p>
             <p className="text-[14px] text-cream/50 mb-6">Free estimates. Licensed in Nevada and California since 1989.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

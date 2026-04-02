@@ -79,8 +79,48 @@ export default function FAQPage() {
             ))}
           </div>
 
+          {/* Related services — FAQ readers are in research mode */}
+          <div className="max-w-[800px] mt-14 mb-8">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-6 h-px bg-teal" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Explore Our Services</span>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-2 mb-6">
+              {[
+                { label: 'ADU Construction', desc: 'From $75,000 · Permit-ready designs', href: '/services/adu' },
+                { label: 'Structural Repairs', desc: 'Foundation, framing, dry rot — free estimates', href: '/services/repairs' },
+                { label: 'Kitchen & Bath Remodeling', desc: 'Full remodels and targeted upgrades', href: '/services/kitchen-bath' },
+                { label: 'Deck Construction & Repair', desc: 'Snow-load rated builds for Reno & Tahoe', href: '/services/decks' },
+                { label: 'Home Additions', desc: 'Room additions, second stories, garage additions', href: '/services/additions' },
+                { label: 'Commercial Construction', desc: 'Tenant improvements, office, warehouse', href: '/services/commercial' },
+              ].map(s => (
+                <Link key={s.href} href={s.href} className="group flex items-center gap-3 p-3 rounded-xl border border-white/[0.06] hover:border-teal/25 bg-panel/50 hover:bg-teal/[0.04] transition-all">
+                  <div className="flex-1">
+                    <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">{s.label}</span>
+                    <span className="text-[11px] text-cream/35 block mt-0.5">{s.desc}</span>
+                  </div>
+                  <span className="text-cream/20 group-hover:text-teal text-[12px] flex-shrink-0">→</span>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: 'Reno, NV', href: '/service-areas/nevada/' },
+                { label: 'Sparks, NV', href: '/service-areas/sparks/' },
+                { label: 'Lake Tahoe', href: '/service-areas/lake-tahoe/' },
+                { label: 'Carson City', href: '/service-areas/carson-city/' },
+                { label: 'Truckee, CA', href: '/service-areas/truckee/' },
+                { label: 'Northern CA', href: '/service-areas/northern-california/' },
+              ].map(a => (
+                <Link key={a.href} href={a.href} className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">
+                  {a.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* CTA block */}
-          <div className="max-w-[800px] mt-16 p-8 bg-panel rounded-2xl border border-white/[0.06]">
+          <div className="max-w-[800px] mt-8 p-8 bg-panel rounded-2xl border border-white/[0.06]">
             <p className="font-display text-[22px] text-cream mb-2">Still have questions?</p>
             <p className="text-[14px] text-cream/50 mb-6">
               Call us directly or submit a project request. We respond within 24 hours.

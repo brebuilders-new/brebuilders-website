@@ -206,6 +206,70 @@ export default function AdditionsPage() {
           }
         />
 
+        
+        {/* ── BLOG + AREA CROSS-LINKS ── */}
+        <section className="py-14 bg-void border-t border-white/[0.05]">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Blog cross-links */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-6 h-px bg-teal flex-shrink-0" />
+                  <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Adding space to your Reno home?</span>
+                </div>
+                <div className="space-y-0">
+                                    <Link href="/blog/how-to-add-an-adu-in-nevada" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">ADU vs. Home Addition — When Each Makes Sense</span>
+                      <span className="text-[11px] text-cream/35 block">Understand the difference before committing</span>
+                    </div>
+                  </Link>
+                  <Link href="/blog/reno-redevelopment" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">Reno's Construction Boom — What It Means for You</span>
+                      <span className="text-[11px] text-cream/35 block">Contractor availability and timing context</span>
+                    </div>
+                  </Link>
+                  <Link href="/blog/reno-home-10-year-maintenance" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">What Reno Homeowners Miss in 10-Year Homes</span>
+                      <span className="text-[11px] text-cream/35 block">Issues to address before adding square footage</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              {/* Service area links */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-6 h-px bg-teal flex-shrink-0" />
+                  <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Service Areas</span>
+                </div>
+                <div className="space-y-0 mb-4">
+                                    <Link href="/service-areas/nevada/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">Home Additions Reno, NV</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                  <Link href="/service-areas/sparks/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">Home Additions Sparks, NV</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                  <Link href="/service-areas/carson-city/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">Home Additions Carson City</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                                    <Link href="/testimonials" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">Testimonials →</Link>
+                  <Link href="/faq" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">FAQ →</Link>
+                  <Link href="/about" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">About BRE →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <RelatedServices items={[
           { label: 'ADU Construction', href: '/adus/', desc: 'Separate living unit' },
           { label: 'Kitchen & Bath', href: '/kitchen/', desc: 'Interior upgrade' },

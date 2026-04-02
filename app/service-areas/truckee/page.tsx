@@ -253,7 +253,26 @@ export default function TruckeePage() {
           </div>
         </section>
       </main>
-      <Footer />
+
+        {/* ── RELATED CONTENT PILLS ── */}
+        <section className="py-10 bg-deep border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Related Services & Guides</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">8 Signs Your Deck Is Unsafe →</Link>
+              <Link href="/services/decks" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Snow-Load Deck Construction →</Link>
+              <Link href="/services/new-home" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Custom Home Building →</Link>
+              <Link href="/service-areas/lake-tahoe/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Lake Tahoe Service Area →</Link>
+              <Link href="/service-areas/northern-california/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Northern California Services →</Link>
+              <Link href="/services/repairs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs →</Link>
+            </div>
+          </div>
+        </section>
+
+            <Footer />
     </>
   )
 }

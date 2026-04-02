@@ -308,6 +308,70 @@ export default function ADUPage() {
           </div>
         </PageSection>
 
+        
+        {/* ── BLOG + AREA CROSS-LINKS ── */}
+        <section className="py-14 bg-void border-t border-white/[0.05]">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Blog cross-links */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-6 h-px bg-teal flex-shrink-0" />
+                  <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Planning an ADU in Reno?</span>
+                </div>
+                <div className="space-y-0">
+                                    <Link href="/blog/how-to-add-an-adu-in-nevada" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">ADU Guide 2025 — Costs, Permits, Timelines</span>
+                      <span className="text-[11px] text-cream/35 block">Nevada ADU law, permit costs, construction timelines</span>
+                    </div>
+                  </Link>
+                  <Link href="/blog/reno-home-10-year-maintenance" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">What Reno Homeowners Overlook in 10-Year Homes</span>
+                      <span className="text-[11px] text-cream/35 block">Know your property before starting an ADU</span>
+                    </div>
+                  </Link>
+                  <Link href="/blog/reno-redevelopment" className="group flex items-start gap-3 py-3 border-b border-white/[0.05] last:border-0 hover:text-teal transition-colors">
+                    <span className="text-teal/30 group-hover:text-teal text-[16px] flex-shrink-0 leading-snug">›</span>
+                    <div>
+                      <span className="text-[13px] text-cream/70 group-hover:text-teal transition-colors font-medium block">Reno's Construction Boom — ADU Demand Context</span>
+                      <span className="text-[11px] text-cream/35 block">ADU ROI and rental market context for Reno</span>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              {/* Service area links */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-6 h-px bg-teal flex-shrink-0" />
+                  <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Service Areas</span>
+                </div>
+                <div className="space-y-0 mb-4">
+                                    <Link href="/service-areas/nevada/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">ADU Builders Reno, NV</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                  <Link href="/service-areas/sparks/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">ADU Builders Sparks, NV</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                  <Link href="/service-areas/lake-tahoe/" className="group flex items-center justify-between py-2.5 border-b border-white/[0.05] last:border-0">
+                    <span className="text-[13px] text-cream/60 group-hover:text-teal transition-colors">ADU Builders Lake Tahoe</span>
+                    <span className="text-cream/20 group-hover:text-teal text-[12px]">→</span>
+                  </Link>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                                    <Link href="/testimonials" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">Testimonials →</Link>
+                  <Link href="/faq" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">FAQ →</Link>
+                  <Link href="/about" className="font-mono text-[11px] text-cream/40 hover:text-teal border border-white/[0.07] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all">About BRE →</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <RelatedServices items={[
           { label: 'Custom Home Building', href: '/new-home/', desc: 'Ground-up custom builds' },
           { label: 'Home Additions', href: '/additions/', desc: 'Add space without moving' },

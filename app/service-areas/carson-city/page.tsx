@@ -252,7 +252,26 @@ export default function CarsonCityPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
+        {/* ── RELATED CONTENT PILLS ── */}
+        <section className="py-10 bg-deep border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Related Services & Guides</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/services/adu" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Construction Carson City →</Link>
+              <Link href="/services/repairs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs Carson City →</Link>
+              <Link href="/blog/reno-home-repairs-30-year" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">30-Year Reno Home Repairs →</Link>
+              <Link href="/blog/structural-repair-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Foundation Repair Guide →</Link>
+              <Link href="/service-areas/sparks/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Sparks, NV Service Area →</Link>
+              <Link href="/service-areas/nevada/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Reno, NV Service Area →</Link>
+            </div>
+          </div>
+        </section>
+
+            <Footer />
     </>
   )
 }

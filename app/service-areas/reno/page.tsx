@@ -273,7 +273,26 @@ export default function RenoPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
+        {/* ── RELATED CONTENT PILLS ── */}
+        <section className="py-10 bg-deep border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Related Services & Guides</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/blog/how-to-add-an-adu-in-nevada" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Guide Nevada 2025 →</Link>
+              <Link href="/blog/structural-repair-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Top 10 Structural Warning Signs →</Link>
+              <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">8 Signs Your Deck Is Unsafe →</Link>
+              <Link href="/blog/reno-home-repairs-20-year" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">20-Year Reno Home Repairs →</Link>
+              <Link href="/blog/reno-kitchen-remodeling-trends" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Reno Kitchen Trends 2025 →</Link>
+              <Link href="/blog/reno-redevelopment" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Reno's $1B Redevelopment →</Link>
+            </div>
+          </div>
+        </section>
+
+            <Footer />
     </>
   )
 }

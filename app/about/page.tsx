@@ -162,6 +162,44 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Strategic interlinking — What do you want to do next? */}
+        <section className="py-16 bg-panel border-y border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-7 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Explore BRE Builders</span>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              {[
+                { label: 'Our Services', desc: 'ADUs, repairs, remodeling, commercial', href: '/services' },
+                { label: 'Completed Projects', desc: 'Lake Tahoe, Ripon estate, and more', href: '/projects' },
+                { label: 'Client Testimonials', desc: 'Real reviews from Reno homeowners', href: '/testimonials' },
+                { label: 'Our Approach', desc: 'How we work and why it matters', href: '/our-approach' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="group p-4 bg-deep rounded-xl border border-white/[0.06] hover:border-teal/25 transition-colors">
+                  <span className="text-[14px] text-cream/80 group-hover:text-teal transition-colors font-medium block">{l.label} →</span>
+                  <span className="text-[12px] text-cream/35 block mt-0.5">{l.desc}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {[
+                { label: 'ADU Construction — Reno from $75K', href: '/services/adu' },
+                { label: 'Structural Repairs — Free Estimates', href: '/services/repairs' },
+                { label: 'Kitchen & Bath Remodeling', href: '/services/kitchen-bath' },
+                { label: 'Deck Construction & Repair', href: '/services/decks' },
+                { label: 'Home Additions', href: '/services/additions' },
+                { label: 'Commercial Construction', href: '/services/commercial' },
+              ].map(l => (
+                <Link key={l.href} href={l.href} className="group flex items-center justify-between px-4 py-3 bg-deep rounded-xl border border-white/[0.05] hover:border-teal/20 transition-colors">
+                  <span className="text-[13px] text-cream/55 group-hover:text-teal transition-colors">{l.label}</span>
+                  <span className="text-cream/20 group-hover:text-teal text-[12px] flex-shrink-0 ml-2">→</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-20 bg-void">
           <div className="container text-center">

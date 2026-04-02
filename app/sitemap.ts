@@ -59,6 +59,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Tier 6: Blog ──────────────────────────────────────────────────────
     { url: base + '/blog/',                                   lastModified: now, changeFrequency: 'weekly',  priority: 0.70 },
+    { url: base + '/blog/commercial-contractor-reno-nv/',  lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: base + '/blog/lake-tahoe-contractor-guide/',    lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: base + '/blog/custom-home-builder-reno-nv/',    lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: base + '/blog/kitchen-remodel-cost-reno-nv/',    lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
     { url: base + '/blog/home-addition-cost-reno-nv/',      lastModified: now, changeFrequency: 'monthly', priority: 0.80 },

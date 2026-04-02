@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/ripon-california-estate-project/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/ripon-california-estate-project/` },
 }
 
 const schema = {

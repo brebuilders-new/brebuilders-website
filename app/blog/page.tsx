@@ -24,6 +24,20 @@ export const metadata: Metadata = {
 // All posts now on Vercel routes
 const POSTS = [
   {
+    title: 'Commercial Contractor Reno NV — Tenant Improvements, Warehouses & Offices',
+    excerpt: 'What commercial construction costs in Reno NV — tenant improvements, warehouse builds, office renovations. Verified 2026 pricing from a licensed contractor.',
+    href: '/blog/commercial-contractor-reno-nv',
+    category: 'Commercial',
+    date: 'April 2026',
+  },
+  {
+    title: 'Lake Tahoe Contractor — What to Know Before You Build in 2026',
+    excerpt: 'TRPA permits, dual-state licensing, snow-load requirements, and why Lake Tahoe construction costs 20-35% more than Reno. Complete guide from a licensed NV & CA contractor.',
+    href: '/blog/lake-tahoe-contractor-guide',
+    category: 'Lake Tahoe',
+    date: 'April 2026',
+  },
+  {
     title: 'Custom Home Builder Reno NV — What It Actually Costs in 2026',
     excerpt: 'Real 2026 pricing for custom home construction in Reno NV — design-build process, permit timelines, and what separates good contractors from bad ones.',
     href: '/blog/custom-home-builder-reno-nv',

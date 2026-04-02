@@ -45,8 +45,8 @@ export default function PageHero({
 
   const licenseStr =
     license === 'NV' ? 'NV Lic #0085999' :
-    license === 'CA' ? 'CA Lic #1009219' :
-    'NV #0085999 · CA #1009219'
+    license === 'CA' ? 'CA Lic #1093798' :
+    'NV #0085999 · CA #1093798'
 
   return (
     <section className="page-hero">

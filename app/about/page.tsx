@@ -8,7 +8,7 @@ import { IMGS } from '@/lib/images'
 export const metadata: Metadata = {
   title: 'About | Blue Reef Enterprises | Licensed Since 1989',
   description:
-    'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1009219. Residential and commercial.',
+    'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercial.',
   alternates: { canonical: 'https://brebuilders.com/about/' },
 }
 
@@ -89,7 +89,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex items-center justify-between">
                       <span>California License</span>
-                      <span className="text-teal font-mono text-[12px]">#1009219</span>
+                      <span className="text-teal font-mono text-[12px]">#1093798</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Founded</span>
@@ -169,7 +169,7 @@ export default function AboutPage() {
               Work With a Contractor<br /><span className="italic text-teal">You Can Trust.</span>
             </h2>
             <p className="text-[15px] text-cream/50 max-w-md mx-auto mb-10">
-              Free estimates · Licensed NV #0085999 · CA #1009219 · Since 1989
+              Free estimates · Licensed NV #0085999 · CA #1093798 · Since 1989
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary px-8 py-4 w-full sm:w-auto justify-center">Request a Free Quote →</Link>

@@ -8,10 +8,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Ripon CA Luxury Estate | Custom Home Build | Portfolio',
-  description: 'Ground-up luxury estate in Ripon, California. Classical architecture, custom cabinetry, marble surfaces, iron staircase. CA License #1009219.',
+  description: 'Ground-up luxury estate in Ripon, California. Classical architecture, custom cabinetry, marble surfaces, iron staircase. CA License #1093798.',
   openGraph: {
     images: [{
-      url: `${SITE_URL}/api/og?title=Ripon+CA+Luxury+Estate&sub=Ground-Up+Custom+Home+%C2%B7+Ripon%2C+California+%C2%B7+CA+%231009219&badge=Portfolio`,
+      url: `${SITE_URL}/api/og?title=Ripon+CA+Luxury+Estate&sub=Ground-Up+Custom+Home+%C2%B7+Ripon%2C+California+%C2%B7+CA+%231093798&badge=Portfolio`,
       width: 1200, height: 630,
     }],
   },
@@ -22,7 +22,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'ItemPage',
   name: 'Ripon CA Luxury Estate — BRE Builders Portfolio',
-  description: 'Ground-up luxury custom home in Ripon, California by BRE Builders. CA License #1009219.',
+  description: 'Ground-up luxury custom home in Ripon, California by BRE Builders. CA License #1093798.',
   url: 'https://brebuilders.com/portfolio/ripon-california-estate-project/',
   image: IMGS.ripon[3],
 }
@@ -74,12 +74,12 @@ export default function RiponEstatePage() {
       location="Ripon, California"
       title="Crafting Luxury"
       titleItalic="from the Ground Up."
-      description="Every detail of this Ripon, California estate reflects our signature in-house craftsmanship, licensed expertise, and timeless design. CA License #1009219."
+      description="Every detail of this Ripon, California estate reflects our signature in-house craftsmanship, licensed expertise, and timeless design. CA License #1093798."
       meta={[
         { label: 'Project Type', value: 'Ground-Up Custom Home' },
         { label: 'Location', value: 'Ripon, CA' },
         { label: 'Style', value: 'Mediterranean / Classical' },
-        { label: 'License', value: 'CA #1009219' },
+        { label: 'License', value: 'CA #1093798' },
       ]}
       photos={PHOTOS}
       desktopGalleryMode="alternating"

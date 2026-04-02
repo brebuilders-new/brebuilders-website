@@ -13,9 +13,9 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Custom Home Builder Reno NV | New Home Construction',
-  description: 'Licensed custom home builders in Reno, NV and Northern California. Ground-up design-build, full permit handling. NV License #0085999 · CA License #1009219.',
+  description: 'Licensed custom home builders in Reno, NV and Northern California. Ground-up design-build, full permit handling. NV License #0085999 · CA License #1093798.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231009219&badge=Custom+Homes`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Custom+Homes`, width: 1200, height: 630 }],
   },
   alternates: { canonical: 'https://brebuilders.com/new-home/' },
 }
@@ -27,7 +27,7 @@ const schema = {
       '@type': 'Service',
       '@id': 'https://brebuilders.com/new-home/#service',
       name: 'Custom Home Builder Reno NV',
-      description: 'BRE Builders designs and constructs custom homes in Reno, NV and Northern California. Licensed NV #0085999 · CA #1009219.',
+      description: 'BRE Builders designs and constructs custom homes in Reno, NV and Northern California. Licensed NV #0085999 · CA #1093798.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
@@ -55,7 +55,7 @@ const schema = {
 const FAQS = [
   { q: 'How much does a custom home cost in Reno NV?', a: 'Custom homes in Reno typically cost $250–$450+ per square foot. A 2,000 sq ft custom home runs $500,000–$900,000+. Land is additional. BRE Builders provides detailed estimates after design is defined.' },
   { q: 'Does BRE Builders handle both design and construction?', a: 'Yes. BRE Builders is a design-build contractor. Our in-house team handles concept, design, engineering coordination, permitting, and all construction. One team from concept to keys.' },
-  { q: 'Does BRE Builders build in California?', a: 'Yes. BRE Builders holds California License #1009219 and has completed luxury estate projects in Ripon, CA and other Northern California locations.' },
+  { q: 'Does BRE Builders build in California?', a: 'Yes. BRE Builders holds California License #1093798 and has completed luxury estate projects in Ripon, CA and other Northern California locations.' },
   { q: 'How long does it take to build a custom home in Reno?', a: 'Design and permitting typically takes 3–6 months. Construction takes 8–18 months depending on size and complexity. Total timeline is 12–24 months from initial consultation.' },
 ]
 
@@ -71,7 +71,7 @@ export default function NewHomePage() {
           eyebrow: 'Custom Home Builder · Reno NV & California',
           h1Lines: ['Custom Homes', 'Built Your Way.'],
           h1Ghost: 'Concept to keys — one team.',
-          lead: 'Design-build custom home construction in Reno, NV and Northern California. In-house design, full permit handling, licensed construction. NV License #0085999 · CA License #1009219.',
+          lead: 'Design-build custom home construction in Reno, NV and Northern California. In-house design, full permit handling, licensed construction. NV License #0085999 · CA License #1093798.',
           badges: ['Design + Build', 'Both States Licensed', 'Permit Handling', 'Free Consultation'],
           ctaPrimaryLabel: 'Schedule a Free Consultation →',
           ctaPrimaryHref: '/contact?service=new-home',
@@ -153,7 +153,7 @@ export default function NewHomePage() {
               <SectionLabel text="Custom Home Builder Reno NV" />
               <SectionHeading line1="Licensed in Both States." line2italic="One Team Everywhere." size="md" className="mb-6" />
               <SpeakableBlock className="mb-6">
-                <p>BRE Builders is one of the few general contractors in the Reno region licensed in both Nevada (#0085999) and California (#1009219). Our custom home division provides complete design-build services — from initial design concept through final Certificate of Occupancy.</p>
+                <p>BRE Builders is one of the few general contractors in the Reno region licensed in both Nevada (#0085999) and California (#1093798). Our custom home division provides complete design-build services — from initial design concept through final Certificate of Occupancy.</p>
                 <p>We have completed custom homes and luxury estate projects in Reno, NV and throughout Northern California. Every project is managed in-house from design to construction — no subcontracting the design to a separate firm.</p>
               </SpeakableBlock>
               <div className="hidden md:flex flex-wrap gap-3">
@@ -168,13 +168,13 @@ export default function NewHomePage() {
         <RelatedServices items={[
           { label: 'ADU Construction', href: '/adus/', desc: 'Add a dwelling unit' },
           { label: 'Home Additions', href: '/additions/', desc: 'Expand your existing home' },
-          { label: 'Northern California', href: '/service-areas/northern-california/', desc: 'CA #1009219 projects' },
+          { label: 'Northern California', href: '/service-areas/northern-california/', desc: 'CA #1093798 projects' },
           { label: 'Kitchen & Bath', href: '/kitchen/', desc: 'Interior upgrades' },
         ]} />
 
         <MobileCTABox
           headline="Your custom home starts with one call."
-          subtext="Free consultation. NV #0085999 · CA #1009219. Response within 24 hours."
+          subtext="Free consultation. NV #0085999 · CA #1093798. Response within 24 hours."
           ctaLabel="Schedule a Consultation"
           ctaHref="/contact?service=new-home"
         />
@@ -183,7 +183,7 @@ export default function NewHomePage() {
           bgAlt="Luxury custom estate Ripon California BRE Builders"
           headline="Built the Way"
           headlineItalic="You Imagined It."
-          subtext="Free consultation · NV #0085999 · CA #1009219 · Since 1989"
+          subtext="Free consultation · NV #0085999 · CA #1093798 · Since 1989"
           ctaLabel="Schedule a Free Consultation →"
           ctaHref="/contact?service=new-home"
         />

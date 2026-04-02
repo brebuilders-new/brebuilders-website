@@ -210,7 +210,7 @@ export default function BlogPage() {
             <p className="font-display text-[22px] text-cream mb-2">Have a project in mind?</p>
             <p className="text-[14px] text-cream/50 mb-6">
               BRE Builders provides free estimates for all residential and commercial projects.
-              Licensed NV #0085999 · CA #1009219.
+              Licensed NV #0085999 · CA #1093798.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link href="/contact" className="btn-primary px-8">Request a Free Quote →</Link>

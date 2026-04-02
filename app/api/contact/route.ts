@@ -101,6 +101,6 @@ function buildClientEmail(data: Record<string, unknown>): string {
       <p style="margin:0;font-size:15px">📞 <a href="tel:7753914517" style="color:#1ecfc9;text-decoration:none">(775) 391-4517</a></p>
       <p style="margin:4px 0 0;font-size:15px">✉️ <a href="mailto:brebuilders@gmail.com" style="color:#1ecfc9;text-decoration:none">brebuilders@gmail.com</a></p>
     </div>
-    <p style="font-size:13px;color:#5a6472">Blue Reef Builders — NV Lic #0085999 · CA Lic #1009219<br>2600 Mill St #400, Reno, NV 89502</p>
+    <p style="font-size:13px;color:#5a6472">Blue Reef Builders — NV Lic #0085999 · CA Lic #1093798<br>2600 Mill St #400, Reno, NV 89502</p>
   </div></body></html>`
 }

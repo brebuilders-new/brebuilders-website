@@ -76,7 +76,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-[15px] text-cream/55 leading-relaxed">
               BRE Builders provides residential and commercial construction services across Northern
-              Nevada and California. Licensed NV #0085999 · CA #1009219.
+              Nevada and California. Licensed NV #0085999 · CA #1093798.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="flex justify-between">
                   <span>California</span>
-                  <span className="font-mono text-teal">Lic #1009219</span>
+                  <span className="font-mono text-teal">Lic #1093798</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Founded</span>

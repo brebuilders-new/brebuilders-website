@@ -28,8 +28,8 @@ const AREA_LINKS = [
   { label: 'Sparks, NV', href: '/service-areas/sparks', lic: 'NV #0085999' },
   { label: 'Lake Tahoe, NV', href: '/service-areas/lake-tahoe', lic: 'NV #0085999' },
   { label: 'Carson City, NV', href: '/service-areas/carson-city', lic: 'NV #0085999' },
-  { label: 'Truckee, CA', href: '/service-areas/truckee', lic: 'CA #1009219' },
-  { label: 'Northern California', href: '/service-areas/northern-california', lic: 'CA #1009219' },
+  { label: 'Truckee, CA', href: '/service-areas/truckee', lic: 'CA #1093798' },
+  { label: 'Northern California', href: '/service-areas/northern-california', lic: 'CA #1093798' },
 ]
 
 const COMPANY_LINKS = [
@@ -332,7 +332,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span className="font-mono text-[11px] text-teal/60">NV Lic #0085999</span>
             <span className="text-cream/15">·</span>
-            <span className="font-mono text-[11px] text-teal/60">CA Lic #1009219</span>
+            <span className="font-mono text-[11px] text-teal/60">CA Lic #1093798</span>
             <span className="text-cream/15">·</span>
             <a href={SITE.phoneHref} className="font-mono text-[11px] text-cream/25 hover:text-teal transition-colors">{SITE.phone}</a>
           </div>

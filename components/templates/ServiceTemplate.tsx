@@ -272,9 +272,9 @@ export function ServiceFAQSection({
 export function ServiceHeroSection({ hero }: { hero: ServiceHero }) {
   const licenseStr =
     hero.license === 'CA'
-      ? 'CA Lic #1009219'
+      ? 'CA Lic #1093798'
       : hero.license === 'both'
-      ? 'NV #0085999 · CA #1009219'
+      ? 'NV #0085999 · CA #1093798'
       : 'NV Lic #0085999'
 
   return (

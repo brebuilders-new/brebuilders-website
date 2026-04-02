@@ -28,8 +28,8 @@ const SERVICE_AREAS = [
   { label: 'Lake Tahoe, NV', href: '/service-areas/lake-tahoe', note: 'Completed projects' },
   { label: 'Sparks, NV', href: '/service-areas/sparks', note: 'NV #0085999' },
   { label: 'Carson City, NV', href: '/service-areas/carson-city', note: 'NV #0085999' },
-  { label: 'Truckee, CA', href: '/service-areas/truckee', note: 'CA #1009219' },
-  { label: 'Northern California', href: '/service-areas/northern-california', note: 'CA #1009219' },
+  { label: 'Truckee, CA', href: '/service-areas/truckee', note: 'CA #1093798' },
+  { label: 'Northern California', href: '/service-areas/northern-california', note: 'CA #1093798' },
 ]
 
 const TOP_LINKS = [
@@ -214,7 +214,7 @@ export default function Nav() {
                     <div className="flex items-center gap-4">
                       <span className="font-mono text-[10px] text-cream/25">NV Lic #0085999</span>
                       <span className="font-mono text-[10px] text-cream/25">·</span>
-                      <span className="font-mono text-[10px] text-cream/25">CA Lic #1009219</span>
+                      <span className="font-mono text-[10px] text-cream/25">CA Lic #1093798</span>
                     </div>
                     <a href={SITE.phoneHref} className="font-mono text-[11px] text-teal/70 hover:text-teal transition-colors tracking-wide">{SITE.phone}</a>
                   </div>
@@ -399,7 +399,7 @@ export default function Nav() {
                 <div className="font-mono text-[9px] text-cream/30 mt-0.5">Nevada License</div>
               </div>
               <div>
-                <div className="font-mono text-[11px] text-teal">CA #1009219</div>
+                <div className="font-mono text-[11px] text-teal">CA #1093798</div>
                 <div className="font-mono text-[9px] text-cream/30 mt-0.5">California License</div>
               </div>
             </div>

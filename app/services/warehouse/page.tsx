@@ -39,7 +39,7 @@ export default function WarehousePage() {
         <section className="py-20 bg-deep">
           <div className="container">
             <div className="speakable-summary text-[15px] text-cream/55 leading-relaxed max-w-[620px] mb-8">
-              <p>BRE Builders constructs warehouse and metal buildings across Northern Nevada. We handle site preparation, foundation, erection, and finish work for industrial, storage, and commercial structures. Licensed NV #0085999 · CA #1009219. Free estimates.</p>
+              <p>BRE Builders constructs warehouse and metal buildings across Northern Nevada. We handle site preparation, foundation, erection, and finish work for industrial, storage, and commercial structures. Licensed NV #0085999 · CA #1093798. Free estimates.</p>
             </div>
             <div className="flex gap-4">
               <Link href="/contact?service=warehouse" className="btn-primary">Get a Free Estimate →</Link>

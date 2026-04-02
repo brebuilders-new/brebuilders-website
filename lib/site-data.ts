@@ -20,7 +20,7 @@ export const SITE = {
   addressState: 'NV',
   addressZip: '89502',
   nvLicense: '0085999',    // ✅ VERIFIED — Nevada
-  caLicense: '1009219',    // ✅ VERIFIED — California
+  caLicense: '1093798',    // ✅ VERIFIED FROM LIVE WP SITE — appears in homepage + about page source
   founded: '1989',
   experience: '35+',
   url: 'https://brebuilders.com',
@@ -142,7 +142,7 @@ export const SERVICES = [
     tagline: 'Custom-built homes crafted from concept to completion with personalized design and expert project management.',
     description: 'Ground-up custom builds from concept to key. In-house design-build in Nevada and California.',
     seoTitle: 'Custom Home Builder Reno NV | New Home Construction | BRE Builders',
-    metaDescription: 'Custom home building in Reno, NV and Northern California. In-house design-build. Licensed NV #0085999 CA #1009219. Free consultations.',
+    metaDescription: 'Custom home building in Reno, NV and Northern California. In-house design-build. Licensed NV #0085999 CA #1093798. Free consultations.',
   },
   {
     slug: 'decks',
@@ -183,7 +183,7 @@ export const SERVICES = [
     tagline: 'High-function commercial spaces tailored for business growth and operational excellence.',
     description: 'Tenant improvements, retail buildouts, offices, warehouses, and metal buildings.',
     seoTitle: 'Commercial Contractor Reno NV | Tenant Improvements | BRE Builders',
-    metaDescription: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, warehouses. Licensed NV #0085999 CA #1009219. Free estimates.',
+    metaDescription: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, warehouses. Licensed NV #0085999 CA #1093798. Free estimates.',
   },
   {
     slug: 'retail',
@@ -345,7 +345,7 @@ export const FAQS = [
   { q: 'Will you help me stay within my budget?', a: 'Yes. We offer tiered pricing options and value-engineered alternatives to make your project affordable without compromising quality.' },
   { q: 'What kind of materials do you use?', a: 'We use high-grade, weather-tested, and code-approved materials, including Trex decking, pressure-treated lumber, composite siding, and premium waterproofing membranes. All material choices are discussed with the client.' },
   { q: 'Do your projects come with a warranty?', a: 'Yes. We offer a 1-year workmanship warranty on all projects and pass on manufacturer warranties where applicable.' },
-  { q: 'Are you licensed and insured?', a: 'Yes. BRE Builders is fully licensed, bonded, and insured in Nevada and California. Nevada License #0085999. California License #1009219.' },
+  { q: 'Are you licensed and insured?', a: 'Yes. BRE Builders is fully licensed, bonded, and insured in Nevada and California. Nevada License #0085999. California License #1093798.' },
   { q: 'Can you provide references or photos of past work?', a: 'Of course. Visit our portfolio or contact us for direct client referrals.' },
   { q: 'What payment methods do you accept?', a: 'We accept checks, bank transfers, and credit card payments. A deposit is required upon contract signing, with milestone-based payments throughout.' },
   { q: 'Do you offer financing options?', a: 'We are working with third-party lenders to provide flexible home improvement financing. Ask about current availability when requesting your quote.' },

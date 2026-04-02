@@ -36,12 +36,12 @@ Before touching any file:
 | Founded | 1989 | |
 | Experience | **35+** years — USE THIS | Not 20, not 30 |
 | **Nevada License** | **#0085999** | ✅ VERIFIED |
-| **California License** | **#1009219** | ✅ VERIFIED — CA only |
+| **California License** | **#1093798** | ✅ VERIFIED — CA only |
 
 **License display rule:**
 - Nevada pages → "NV License #0085999"
-- California pages → "CA License #1009219"  
-- Both states / footer → "NV #0085999 · CA #1009219"
+- California pages → "CA License #1093798"  
+- Both states / footer → "NV #0085999 · CA #1093798"
 - NEVER show both on same line as if they're the same number
 
 ---

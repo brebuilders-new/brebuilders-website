@@ -7,7 +7,7 @@ import { IMGS } from '@/lib/images'
 export const metadata: Metadata = {
   title: 'Service Areas | Nevada & California Licensed Contractor',
   description:
-    'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1009219.',
+    'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/' },
 }
 
@@ -56,7 +56,7 @@ const AREAS = [
   {
     name: 'Truckee, CA',
     slug: 'truckee',
-    license: 'CA #1009219',
+    license: 'CA #1093798',
     state: 'CA',
     services: ['Custom Homes', 'Decks', 'Remodeling', 'Structural Repair'],
     img: IMGS.lt(14),
@@ -66,7 +66,7 @@ const AREAS = [
   {
     name: 'Graeagle, CA',
     slug: 'truckee',
-    license: 'CA #1009219',
+    license: 'CA #1093798',
     state: 'CA',
     services: ['Custom Homes', 'Decks', 'Remodeling'],
     img: IMGS.lt(2),
@@ -76,12 +76,12 @@ const AREAS = [
   {
     name: 'Northern California',
     slug: 'northern-california',
-    license: 'CA #1009219',
+    license: 'CA #1093798',
     state: 'CA',
     services: ['Custom Homes', 'Commercial Construction', 'Structural Repair', 'Remodeling'],
     img: IMGS.ripon[3],
     alt: 'Luxury custom home Ripon California BRE Builders NorCal',
-    desc: 'Ripon estate project. Central Valley to foothills. CA License #1009219.',
+    desc: 'Ripon estate project. Central Valley to foothills. CA License #1093798.',
     featured: true,
   },
 ]
@@ -122,7 +122,7 @@ export default function ServiceAreasPage() {
               </div>
               <div className="bg-panel rounded-xl px-5 py-3 border border-teal/15">
                 <p className="font-mono text-[10px] tracking-wider uppercase text-teal/70 mb-1">California</p>
-                <p className="font-mono text-[13px] text-cream">Lic #1009219</p>
+                <p className="font-mono text-[13px] text-cream">Lic #1093798</p>
               </div>
             </div>
           </div>

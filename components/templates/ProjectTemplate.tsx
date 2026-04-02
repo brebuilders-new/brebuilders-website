@@ -209,7 +209,7 @@ export default function ProjectTemplate({
                   <span className="italic text-teal">Let&apos;s Talk.</span>
                 </h2>
                 <p className="text-[15px] text-cream/55 mb-6">
-                  Free estimates. Licensed NV #0085999 · CA #1009219. Response within 24 hours.
+                  Free estimates. Licensed NV #0085999 · CA #1093798. Response within 24 hours.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/contact" className="btn-primary">Request a Free Quote →</Link>

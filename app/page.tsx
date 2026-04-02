@@ -214,7 +214,7 @@ export default function HomePage() {
         {/* ═══════════════════════════ TRUST BAR ════════════════════════════ */}
         <div className="border-y border-white/[0.06] bg-panel overflow-x-auto">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-4 flex items-center gap-8 min-w-max">
-            {['NV License #0085999', 'CA License #1009219', 'Since 1989 — 35+ Years', 'Free Estimates', '1-Year Warranty', 'Full Permit Handling', 'Bonded & Insured'].map(t => (
+            {['NV License #0085999', 'CA License #1093798', 'Since 1989 — 35+ Years', 'Free Estimates', '1-Year Warranty', 'Full Permit Handling', 'Bonded & Insured'].map(t => (
               <div key={t} className="flex items-center gap-2 flex-shrink-0">
                 <span className="text-teal text-[12px]">✓</span>
                 <span className="font-mono text-[11px] tracking-wide text-cream/40 whitespace-nowrap">{t}</span>
@@ -397,7 +397,7 @@ export default function HomePage() {
                   A ground-up luxury estate in Ripon, California — blending classical European architecture with modern amenities. Every column, arch, and interior element was designed, engineered, and built by our licensed in-house team.
                 </p>
                 <p className="text-[15px] text-cream/55 leading-relaxed mb-8">
-                  NV Lic #0085999 · CA Lic #1009219
+                  NV Lic #0085999 · CA Lic #1093798
                 </p>
                 <Link href="/projects/ripon-estate" className="inline-flex items-center gap-2 px-6 py-3 bg-teal text-void text-[13px] font-semibold rounded-lg hover:bg-teal/90 transition-colors">
                   View Full Project →
@@ -493,7 +493,7 @@ export default function HomePage() {
                 <div className="bg-panel border border-l-[3px] border-l-gold border-white/[0.06] rounded-xl p-5">
                   <p className="text-[13px] text-cream/52 leading-[1.8]">
                     <strong className="text-gold">Nevada License #0085999</strong><br />
-                    <strong className="text-gold/75">California License #1009219</strong><br />
+                    <strong className="text-gold/75">California License #1093798</strong><br />
                     Blue Reef Enterprises, LLC holds active licenses in both states for residential and commercial construction.
                   </p>
                 </div>
@@ -503,8 +503,8 @@ export default function HomePage() {
                   { area: 'Reno & Sparks', slug: '/service-areas/reno', svcs: 'ADUs · Repairs · Kitchen & Bath · Commercial · Decks', lic: 'NV #0085999' },
                   { area: 'Lake Tahoe', slug: '/service-areas/lake-tahoe', svcs: 'Deck Repair · Structural · Full Home Renovation · ADUs', lic: 'NV #0085999' },
                   { area: 'Carson City & Valley', slug: '/service-areas/carson-city', svcs: 'Residential · Commercial · ADUs · Additions', lic: 'NV #0085999' },
-                  { area: 'Truckee & Graeagle', slug: '/service-areas/truckee', svcs: 'Custom Homes · Decks · Remodeling', lic: 'CA #1009219' },
-                  { area: 'Northern California', slug: '/service-areas/northern-california', svcs: 'Custom Homes · Commercial · Repairs · Remodeling', lic: 'CA #1009219' },
+                  { area: 'Truckee & Graeagle', slug: '/service-areas/truckee', svcs: 'Custom Homes · Decks · Remodeling', lic: 'CA #1093798' },
+                  { area: 'Northern California', slug: '/service-areas/northern-california', svcs: 'Custom Homes · Commercial · Repairs · Remodeling', lic: 'CA #1093798' },
                 ].map((a, i) => (
                   <Fade key={a.area} delay={i * 55}>
                     <Link href={a.slug} className="flex items-start justify-between gap-4 p-5 bg-panel border border-white/[0.055] rounded-xl hover:border-teal/25 transition-all group">

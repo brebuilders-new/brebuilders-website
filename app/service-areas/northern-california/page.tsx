@@ -6,8 +6,8 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Northern California Construction Services | CA #1009219',
-  description: 'BRE Builders provides construction services across Northern California — custom homes, commercial, structural repairs. CA License #1009219. Ripon, Truckee, Graeagle.',
+  title: 'Northern California Construction Services | CA #1093798',
+  description: 'BRE Builders provides construction services across Northern California — custom homes, commercial, structural repairs. CA License #1093798. Ripon, Truckee, Graeagle.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/northern-california/' },
 }
 
@@ -15,7 +15,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Northern California Construction Services',
-  description: 'BRE Builders provides construction services across Northern California. Custom homes, commercial construction, structural repairs. CA License #1009219.',
+  description: 'BRE Builders provides construction services across Northern California. Custom homes, commercial construction, structural repairs. CA License #1093798.',
   provider: { '@id': 'https://brebuilders.com/#business' },
   areaServed: { '@type': 'Place', name: 'Northern California' },
 }
@@ -39,14 +39,14 @@ export default function NorthernCaliforniaPage() {
               <div className="animate-fade-up-1 flex items-center gap-3 mb-5"><div className="w-6 h-px bg-teal" /><span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Northern California Construction</span></div>
               <h1 className="animate-fade-up-2 font-display font-light text-[clamp(36px,6vw,74px)] leading-[0.94] tracking-tight text-white mb-4">
                 Northern California<br />Construction Services<br />
-                <span className="italic text-teal">CA Lic #1009219.</span>
+                <span className="italic text-teal">CA Lic #1093798.</span>
               </h1>
               <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/70 mb-5 max-w-[480px]">
                 Custom home building, commercial construction, structural repairs, and remodeling across
-                Northern California. Proven work in Ripon, CA. CA License #1009219.
+                Northern California. Proven work in Ripon, CA. CA License #1093798.
               </p>
               <div className="animate-fade-up-3 flex flex-wrap gap-2 mb-6">
-                {['CA Lic #1009219', 'Custom Home Builds', 'Ripon CA Estate', 'Free Consultations'].map(b => (
+                {['CA Lic #1093798', 'Custom Home Builds', 'Ripon CA Estate', 'Free Consultations'].map(b => (
                   <span key={b} className="font-mono text-[10px] tracking-wider text-teal border border-teal/30 bg-teal/[0.08] px-2.5 py-1 rounded-md">✓ {b}</span>
                 ))}
               </div>
@@ -72,7 +72,7 @@ export default function NorthernCaliforniaPage() {
                 <p className="text-[15px] text-cream/55 leading-relaxed mb-5">
                   A complete ground-up luxury estate in Ripon, California — blending classical European
                   architecture with modern amenities. Every column, arch, and interior detail was designed,
-                  engineered, and built in-house by our California licensed team. CA License #1009219.
+                  engineered, and built in-house by our California licensed team. CA License #1093798.
                 </p>
                 <Link href="/portfolio/ripon-california-estate-project/" className="btn-primary inline-flex">View Full Ripon Project →</Link>
               </div>
@@ -89,7 +89,7 @@ export default function NorthernCaliforniaPage() {
         <section className="py-16 bg-panel border-y border-white/[0.05]">
           <div className="container">
             <div className="speakable-summary text-[15px] text-cream/55 leading-relaxed max-w-[660px] mb-8">
-              <p>BRE Builders holds California Contractor License #1009219 and provides construction services throughout Northern California — from the Central Valley (Ripon, Modesto) through the Sierra foothills to the high mountain communities of Truckee and Graeagle. Free consultations.</p>
+              <p>BRE Builders holds California Contractor License #1093798 and provides construction services throughout Northern California — from the Central Valley (Ripon, Modesto) through the Sierra foothills to the high mountain communities of Truckee and Graeagle. Free consultations.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact?location=northern-california" className="btn-primary">Get a Free Consultation →</Link>

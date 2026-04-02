@@ -6,8 +6,8 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Contractor Truckee CA & Graeagle | CA Lic #1009219',
-  description: 'BRE Builders serves Truckee, CA and Graeagle — custom homes, decks, remodeling, structural repair. CA License #1009219. Free estimates.',
+  title: 'Contractor Truckee CA & Graeagle | CA Lic #1093798',
+  description: 'BRE Builders serves Truckee, CA and Graeagle — custom homes, decks, remodeling, structural repair. CA License #1093798. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/service-areas/truckee/' },
 }
 
@@ -25,11 +25,11 @@ export default function TruckeePage() {
               <div className="animate-fade-up-1 flex items-center gap-3 mb-5"><div className="w-6 h-px bg-teal" /><span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Contractor · Truckee & Graeagle, CA</span></div>
               <h1 className="animate-fade-up-2 font-display font-light text-[clamp(36px,6vw,70px)] leading-[0.94] tracking-tight text-white mb-4">
                 Contractor Truckee &<br />Graeagle, CA<br />
-                <span className="italic text-teal">CA Lic #1009219.</span>
+                <span className="italic text-teal">CA Lic #1093798.</span>
               </h1>
               <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/70 mb-5 max-w-[460px]">
                 Custom homes, decks, remodeling, and structural repair in Truckee and Graeagle. BRE Builders is
-                California licensed (#1009219) for mountain community construction.
+                California licensed (#1093798) for mountain community construction.
               </p>
               <div className="animate-fade-up-4 flex gap-3">
                 <a href={SITE.phoneHref} className="btn-primary">📞 {SITE.phone}</a>
@@ -41,7 +41,7 @@ export default function TruckeePage() {
         <section className="py-16 bg-deep">
           <div className="container">
             <div className="speakable-summary text-[15px] text-cream/55 leading-relaxed max-w-[620px] mb-8">
-              <p>BRE Builders serves Truckee, CA and the Graeagle/Plumas County area. California Licensed #1009219. Mountain construction expertise — custom homes, snow-load rated decks, remodeling, and structural repairs for year-round and vacation properties.</p>
+              <p>BRE Builders serves Truckee, CA and the Graeagle/Plumas County area. California Licensed #1093798. Mountain construction expertise — custom homes, snow-load rated decks, remodeling, and structural repairs for year-round and vacation properties.</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               {[{ label: 'Custom Homes', href: '/new-home/' }, { label: 'Deck Build & Repair', href: '/decks/' }, { label: 'Remodeling', href: '/kitchen/' }, { label: 'Structural Repairs', href: '/repairs/' }, { label: 'Home Additions', href: '/additions/' }, { label: 'ADU Construction', href: '/adus/' }].map(s => (

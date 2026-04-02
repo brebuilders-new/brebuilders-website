@@ -101,7 +101,7 @@ export default function BlogTemplate({
               <div className="mt-16 p-6 bg-panel rounded-2xl border border-teal/15">
                 <p className="font-display text-[20px] text-cream mb-2">Have a project in mind?</p>
                 <p className="text-[14px] text-cream/50 mb-5">
-                  BRE Builders provides free estimates. Licensed NV #0085999 · CA #1009219. Response within 24 hours.
+                  BRE Builders provides free estimates. Licensed NV #0085999 · CA #1093798. Response within 24 hours.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link href="/contact" className="btn-primary">Request a Free Quote →</Link>

@@ -145,7 +145,7 @@ export async function GET(request: NextRequest) {
                 NV Lic #0085999
               </span>
               <span style={{ fontSize: 14, color: 'rgba(240,236,228,0.3)', fontFamily: 'monospace' }}>
-                CA Lic #1009219
+                CA Lic #1093798
               </span>
               <span style={{ fontSize: 14, color: 'rgba(240,236,228,0.3)', fontFamily: 'monospace' }}>
                 Free Estimates

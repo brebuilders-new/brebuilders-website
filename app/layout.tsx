@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Blue Reef Builders',
   },
   description:
-    'BRE Builders – licensed general contractor serving Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, repairs, commercial. NV #0085999 CA #1009219.',
+    'BRE Builders – licensed general contractor serving Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, repairs, commercial. NV #0085999 CA #1093798.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Blue Reef Builders',
     images: [
       {
-        url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=Licensed+Since+1989+%E2%80%93+NV+%230085999+%C2%B7+CA+%231009219`,
+        url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=Licensed+Since+1989+%E2%80%93+NV+%230085999+%C2%B7+CA+%231093798`,
         width: 1200,
         height: 630,
         alt: 'Blue Reef Builders – Licensed General Contractor Reno NV & California',
@@ -56,7 +56,7 @@ const baseSchema = {
   foundingDate: '1989',
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Nevada Contractor License #0085999' },
-    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'California Contractor License #1009219' },
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'California Contractor License #1093798' },
   ],
   areaServed: [
     { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },

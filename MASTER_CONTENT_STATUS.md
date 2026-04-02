@@ -19,7 +19,7 @@
 | Address | 2600 Mill St #400, Reno, NV 89502 | WP site |
 | Founded | 1989 | WP site (35+ years = verified) |
 | NV License | #0085999 | Verified via Nevada CSLB |
-| CA License | #1009219 | Verified via CSLB |
+| CA License | #1093798 | VERIFIED FROM LIVE WP SITE (homepage + about page raw source — appears as "NV Lic# 85999  CA Lic# 1093798") |
 
 ---
 

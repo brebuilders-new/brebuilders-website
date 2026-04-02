@@ -39,7 +39,7 @@ export default function RetailPage() {
         <section className="py-20 bg-deep">
           <div className="container">
             <div className="speakable-summary text-[15px] text-cream/55 leading-relaxed max-w-[620px] mb-8">
-              <p>BRE Builders builds out retail spaces throughout Reno. We manage permitting, MEP coordination, and all finish work. Our team delivers customer-ready retail environments on budget and on schedule. Licensed NV #0085999 · CA #1009219. Free estimates.</p>
+              <p>BRE Builders builds out retail spaces throughout Reno. We manage permitting, MEP coordination, and all finish work. Our team delivers customer-ready retail environments on budget and on schedule. Licensed NV #0085999 · CA #1093798. Free estimates.</p>
             </div>
             <div className="flex gap-4">
               <Link href="/contact?service=retail" className="btn-primary">Get a Free Estimate →</Link>

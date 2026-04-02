@@ -73,7 +73,7 @@ export default function ConcretePage() {
                 <h2 className="font-display text-[26px] text-cream mb-3">Ripon CA — Concrete Estate Foundation</h2>
                 <p className="text-[14px] text-cream/50 leading-relaxed mb-4">
                   BRE Builders poured and engineered the full concrete foundation for the Ripon, CA luxury
-                  estate — one of our largest California concrete projects. Licensed CA #1009219.
+                  estate — one of our largest California concrete projects. Licensed CA #1093798.
                 </p>
                 <Link href="/projects/ripon-estate" className="text-[12px] font-mono tracking-wider uppercase text-teal/60 hover:text-teal transition-colors">View Project →</Link>
               </div>

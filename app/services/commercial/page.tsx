@@ -8,7 +8,7 @@ import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
-  description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1009219. Free estimates.',
+  description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. Free estimates.',
   alternates: { canonical: 'https://brebuilders.com/commercial-services/' },
 }
 
@@ -31,7 +31,7 @@ function SL({ text }: { text: string }) {
 }
 
 const FAQS = [
-  { q: 'What commercial services does BRE Builders provide?', a: 'Tenant improvements, office buildouts, retail construction, warehouse builds, metal buildings, and commercial concrete. Licensed NV #0085999 · CA #1009219.' },
+  { q: 'What commercial services does BRE Builders provide?', a: 'Tenant improvements, office buildouts, retail construction, warehouse builds, metal buildings, and commercial concrete. Licensed NV #0085999 · CA #1093798.' },
   { q: 'Does BRE Builders do tenant improvements in Reno NV?', a: 'Yes. We specialize in commercial tenant improvements — office suites, retail spaces, medical offices, and multi-tenant buildouts. We handle permits, framing, MEP coordination, and finish work.' },
   { q: 'Do you build warehouses and metal buildings in Nevada?', a: 'Yes. BRE Builders builds custom warehouse and metal buildings across Northern Nevada. Scalable, code-compliant structures for industrial, storage, and commercial use.' },
 ]
@@ -58,7 +58,7 @@ export default function CommercialPage() {
               </h1>
               <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/70 mb-5 max-w-[470px]">
                 Tenant improvements, office buildouts, retail construction, warehouses, and metal buildings.
-                Licensed in Nevada and California. NV #0085999 · CA #1009219.
+                Licensed in Nevada and California. NV #0085999 · CA #1093798.
               </p>
               <div className="animate-fade-up-4">
                 <div className="md:hidden flex gap-3 mb-4">
@@ -117,7 +117,7 @@ export default function CommercialPage() {
                 </h2>
                 <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55">
                   <p>BRE Builders has built and improved commercial spaces in Reno since 1989. From small office suites to full warehouse builds, we manage the complete project — permits, trades, finishes.</p>
-                  <p>Licensed in Nevada (#0085999) and California (#1009219), we're qualified to work on commercial projects across the Nevada-California border. Free estimates on all commercial projects.</p>
+                  <p>Licensed in Nevada (#0085999) and California (#1093798), we're qualified to work on commercial projects across the Nevada-California border. Free estimates on all commercial projects.</p>
                 </div>
               </div>
               <div>
@@ -134,7 +134,7 @@ export default function CommercialPage() {
             <h2 className="font-display text-[clamp(32px,4.5vw,62px)] font-light leading-[1.0] tracking-tight text-white mb-5">
               Let&apos;s Build Your<br /><span className="italic text-teal">Commercial Space.</span>
             </h2>
-            <p className="text-[15px] text-white/50 max-w-md mx-auto mb-10">Free estimates · Licensed NV #0085999 · CA #1009219</p>
+            <p className="text-[15px] text-white/50 max-w-md mx-auto mb-10">Free estimates · Licensed NV #0085999 · CA #1093798</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact?service=commercial" className="btn-primary px-8 py-4 w-full sm:w-auto justify-center">Get a Free Estimate →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-8 py-4 w-full sm:w-auto justify-center font-mono">{SITE.phone}</a>

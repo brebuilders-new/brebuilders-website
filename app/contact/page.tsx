@@ -256,7 +256,7 @@ export default function ContactPage() {
                 <p className="font-mono text-[10px] tracking-wider uppercase text-teal mb-3">Licensed in Nevada & California</p>
                 <p className="text-[13px] text-cream/50 leading-relaxed">
                   NV License #0085999<br />
-                  CA License #1009219<br />
+                  CA License #1093798<br />
                   Blue Reef Enterprises, LLC · Est. 1989
                 </p>
               </div>

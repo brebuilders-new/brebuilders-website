@@ -174,7 +174,7 @@ export default function ProjectsPage() {
                     <div className="flex items-center gap-4">
                       {p.imageCount && <span className="font-mono text-[11px] text-cream/30">{p.imageCount} photos</span>}
                       {p.videoUrl && (
-                        <a href={p.videoUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
+                        <a href={p.videoUrl} target="_blank" rel="noopener noreferrer"
                           className="font-mono text-[11px] text-teal/60 hover:text-teal transition-colors">
                           ▶ Watch
                         </a>

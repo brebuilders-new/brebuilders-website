@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Office+Construction+Reno+NV&sub=Build-Outs+%C2%B7+Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/office/' },
+  alternates: { canonical: `${SITE_URL}/office/` },
 }
 
 const schema = {

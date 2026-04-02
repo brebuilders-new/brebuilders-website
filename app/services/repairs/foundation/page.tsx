@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
-  alternates: { canonical: 'https://brebuilders.com/repairs/foundation-repair-and-foundation-issues-in-reno-nv/' },
+  alternates: { canonical: `${SITE_URL}/repairs/foundation-repair-and-foundation-issues-in-reno-nv/` },
 }
 
 const schema = {

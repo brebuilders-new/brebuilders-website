@@ -291,7 +291,11 @@ export async function POST(req: NextRequest) {
 
       // Trigger async GPT-4o analysis if any images were saved
       if (savedImageRecords.length > 0) {
-        fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'}/api/analyze-images`, {
+        // Use request origin so callback works on staging + production
+        const origin = req.headers.get('origin') || req.headers.get('host')
+          ? `${req.headers.get('x-forwarded-proto') || 'https'}://${req.headers.get('host')}`
+          : process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+        fetch(`${origin}/api/analyze-images`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ leadId: savedLead.id, images: savedImageRecords }),

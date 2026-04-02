@@ -5,83 +5,129 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: "20-Year-Old Home Repairs in Reno — What to Inspect Now | BRE Builders",
-  description: "At 20 years old, Reno homes face cumulative damage from clay soils, freeze-thaw cycles, and UV exposure. BRE Builders identifies the 8 issues that matter most in homes built in the early 2000s.",
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=What+to+Inspect+%26+When+to+Act&badge=Structural+Repairs`, width: 1200, height: 630 }] },
-  alternates: { canonical: `${SITE_URL}/reno-home-repairs-20-year-old-house/` },
+  title: '20-Year-Old Reno Homes — What to Repair Before It Gets Worse | BRE Builders',
+  description: 'At 20 years, Reno homes face hidden wear homeowners miss until damage is done — attic mold, sagging kitchen floors, faulty breaker panels, shifting porch columns. BRE Builders NV #0085999.',
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=8+Hidden+Issues+in+Early+2000s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  alternates: { canonical: `${SITE_URL}/blog/reno-home-repairs-20-year/` },
 }
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "20-Year-Old Home Repairs in Reno — What to Inspect Now",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-01',
-  url: 'https://brebuilders.com/reno-home-repairs-20-year-old-house/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: '20-Year-Old Reno Homes — What to Repair Before It Gets Worse',
+      author: { '@type': 'Person', name: 'Steve Rosenthal', jobTitle: 'Owner, BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+      datePublished: '2025-06-01',
+      image: IMGS.repairs_foundation,
+      url: `${SITE_URL}/blog/reno-home-repairs-20-year/`,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What repairs do 20-year-old Reno homes need?', acceptedAnswer: { '@type': 'Answer', text: 'Twenty-year-old Reno homes commonly need: attic mold remediation, window frame replacement, sagging kitchen floor repair, cracked shower tile repair, HVAC replacement (furnaces over 18 years old), faulty breaker panel upgrade, shifting porch column repair, and basement water intrusion mitigation.' } },
+        { '@type': 'Question', name: 'Why do kitchen floors sag in 20-year-old Reno homes?', acceptedAnswer: { '@type': 'Answer', text: 'Kitchen floors soften under laminate due to long-term subfloor moisture or gaps in vapor barriers below sinks. This is common in Reno homes built between 2000–2005 and requires subfloor repair or replacement before new flooring is installed.' } },
+        { '@type': 'Question', name: 'Are Toll Brothers homes in Reno having furnace problems?', acceptedAnswer: { '@type': 'Answer', text: 'Furnaces over 18 years old lose efficiency and risk failure — this is especially common in Toll Brothers subdivisions in South Reno and Sparks built in the early 2000s. BRE Builders can assess your mechanical systems and coordinate HVAC replacement.' } },
+        { '@type': 'Question', name: 'How does basement water intrusion happen in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Basements near Damonte Ranch flood in spring when clay soil expands and groundwater rises post-snowmelt. BRE Builders provides waterproofing and drainage solutions for Reno homes with basement water intrusion.' } },
+      ],
+    },
+  ],
 }
+
+const ISSUES = [
+  {
+    title: 'Attic Mold Growth',
+    desc: 'Attic plywood molds from warm air trapped by poor vents, often seen in homes built before 2005 in South Reno.',
+    img: null,
+  },
+  {
+    title: 'Window Frame Separation',
+    desc: 'Vinyl or aluminum window frames detach from sills as shifting slabs and UV exposure weaken anchors over time.',
+    img: null,
+  },
+  {
+    title: 'Sagging Kitchen Floors',
+    desc: 'Kitchen floors soften under laminate due to long-term subfloor moisture or gaps in vapor barriers below sinks.',
+    img: IMGS.blog_20yr_hero,
+    imgAlt: 'Sagging kitchen floors 20-year-old Reno home — subfloor moisture damage repair by BRE Builders NV #0085999',
+    imgCaption: 'Sagging Kitchen Floors — Subfloor moisture damage common in early 2000s Reno homes',
+  },
+  {
+    title: 'Cracked Shower Tile',
+    desc: 'Tile walls around showers crack due to grout decay, allowing water to rot wallboard behind second-floor baths.',
+    img: null,
+  },
+  {
+    title: 'Aging Furnace Failure',
+    desc: 'Furnaces over 18 years old lose efficiency and risk failure; especially common in Toll Brothers subdivisions.',
+    img: null,
+  },
+  {
+    title: 'Faulty Breaker Panels',
+    desc: 'Breaker boxes from early 2000s lack GFCI/arc fault protection and may overheat from modern appliance usage.',
+    img: null,
+  },
+  {
+    title: 'Shifting Porch Columns',
+    desc: 'Stucco porch columns in Double Diamond shift from their bases as builder footings settle and shrink unevenly.',
+    img: IMGS.blog_porch,
+    imgAlt: 'Shifting porch columns 20-year-old Reno home — Double Diamond structural repair BRE Builders NV #0085999',
+    imgCaption: 'Shifting Porch Columns — Builder footings settling in Double Diamond and South Reno',
+  },
+  {
+    title: 'Basement Water Intrusion',
+    desc: 'Basements near Damonte Ranch flood in spring when clay soil expands and groundwater rises post-snowmelt.',
+    img: IMGS.blog_basement_water,
+    imgAlt: 'Basement water intrusion Reno NV — Damonte Ranch clay soil groundwater spring flooding BRE Builders',
+    imgCaption: 'Basement Water Intrusion — Damonte Ranch area, spring snowmelt and clay soil expansion',
+  },
+]
 
 export default function Repairs20YearPage() {
   return (
     <BlogTemplate
-      title="20-Year-Old Home Repairs in Reno"
+      title="20-Year-Old Reno Homes — What to Repair Before It Gets Worse"
       category="Structural Repairs"
       publishDate="June 2025"
       heroImage={IMGS.repairs_foundation}
-      heroAlt="Foundation and structural issues 20-year-old Reno home BRE Builders"
-      excerpt="At 20 years old, Reno homes often face hidden wear that homeowners only notice after damage is done. If your home was built in the early 2000s, these are the issues that matter most."
+      heroAlt="Foundation and structural repair 20-year-old Reno home — BRE Builders licensed contractor NV #0085999"
+      excerpt="At 20 years old, Reno homes often face hidden wear that homeowners only notice after damage is done. Here are the 8 issues most common in early 2000s Reno construction — and what to do about them."
       schema={schema}
       relatedServices={[
         { label: 'Structural Repairs', href: '/services/repairs' },
-        { label: 'Foundation Repair', href: '/services/repairs/foundation' },
         { label: 'Water Intrusion Repair', href: '/services/repairs/water-intrusion' },
+        { label: 'Foundation Repair', href: '/services/repairs/foundation' },
       ]}
       relatedPosts={[
-        { title: '10-Year Reno Home Oversights', href: '/blog/reno-home-10-year-maintenance', img: IMGS.svc_repair, alt: '10 year home maintenance Reno', category: 'Structural Repairs' },
-        { title: '30-Year-Old Reno Home Repairs', href: '/blog/reno-home-repairs-30-year', img: IMGS.repairs_rot, alt: '30 year home repairs Reno', category: 'Structural Repairs' },
-        { title: 'Top 10 Signs Your Home Needs Structural Repair', href: '/blog/structural-repair-warning-signs', img: IMGS.repairs_rot, alt: 'Structural repair warning signs', category: 'Structural Repairs' },
+        { title: '30-Year-Old Reno Home Repairs', href: '/blog/reno-home-repairs-30-year', img: IMGS.repairs_rot, alt: '30 year home repairs Reno NV', category: 'Structural Repairs' },
+        { title: '10-Year Reno Home Oversights', href: '/blog/reno-home-10-year-maintenance', img: IMGS.svc_repair, alt: '10 year home maintenance Reno NV', category: 'Structural Repairs' },
+        { title: 'Top 10 Signs Your Home Needs Structural Repair', href: '/blog/structural-repair-warning-signs', img: IMGS.repairs_rot, alt: 'Structural repair warning signs Reno NV', category: 'Structural Repairs' },
       ]}
       content={
         <div>
-          <p>A 20-year-old Reno home has reached a critical threshold. Major building systems — roof, HVAC, water heater, windows, and often the original appliances — are at or past their design life. The foundation has cycled through two full decades of Reno&apos;s expansive clay soil movement. And any deferred maintenance from the first decade has had time to compound. BRE Builders assesses hundreds of Reno homes in this age range every year. Here is what we find.</p>
-
-          <BlogImage
-            src={IMGS.repairs_rot}
-            alt="Dry rot structural damage 20-year-old Reno home BRE Builders repair"
-            caption="Dry rot exposure at 20 years — deferred maintenance from the first decade has compounded"
-            priority
-          />
-
-          <h2>Roof: At or Past Life Expectancy</h2>
-          <p>Standard 3-tab asphalt shingles installed in Reno circa 2005 have a rated life of 20–25 years — but Reno&apos;s UV exposure typically puts the actual service life at the low end of that range. At 20 years, the question is not if replacement is coming but when. Have the roof assessed by a licensed roofing contractor. Key indicators: granule loss in gutters, visible shingle surface texture loss, any cracked or missing shingles, and the condition of all flashing. If the roof was replaced at year 10, it is now at its own midpoint inspection.</p>
-
-          <h2>Foundation: 20 Cycles of Clay Movement</h2>
-          <p>Reno&apos;s clay soils have now moved through 20 wet-dry cycles. Any differential settlement that was minor at year 5 or 10 may now be visible as sticking doors, stair-step cracks in exterior stucco or brick, or interior drywall cracks at door and window corners. A structural assessment at year 20 is not optional — it is the point where many issues cross from cosmetic to structural. BRE Builders provides free structural assessments for homeowners throughout the Reno metro.</p>
-
-          <BlogImage
-            src={IMGS.repairs_foundation}
-            alt="Foundation crack repair 20-year-old home Reno NV BRE Builders assessment"
-            caption="Foundation crack assessment — 20-year-old homes in Reno often show the full effects of clay soil cycling"
-          />
-
-          <h2>HVAC: Replacement Planning</h2>
-          <p>Original HVAC equipment from 2005 is well past its rated life. Furnaces last 15–20 years; central air conditioners last 15–20 years. If the original system is still running, it is operating at significantly reduced efficiency — likely 20–30% below its original SEER rating. Replacement now, on a planned basis, costs considerably less than emergency replacement when the system fails in a heat wave. Modern high-efficiency systems typically pay back the incremental cost in energy savings within 5–7 years in Reno&apos;s climate.</p>
-
-          <h2>Windows: Seal Failure</h2>
-          <p>Dual-pane windows installed in 2005 often show seal failure at 20 years — visible as fogging or condensation between the panes. Failed seals eliminate the insulating value of the double-pane assembly. In Reno&apos;s climate, failed window seals increase heating and cooling costs meaningfully. Individual insulated glass units (IGUs) can be replaced without replacing the full window frame if the frames themselves are still structurally sound.</p>
+          <p>At 20 years old, Reno homes often face hidden wear that homeowners only notice after damage is done. Small issues that were easy to ignore at the 10-year mark have now had another decade to compound. These are the 8 structural and mechanical issues BRE Builders most commonly finds in early 2000s Reno homes.</p>
 
           <BlogPullQuote>
-            At year 20, deferred maintenance is no longer deferred — it is active damage. Every year of continued deferral adds to the eventual cost.
+            Reno home repairs for 20-year-old houses are time-sensitive. The problems common at this age are not cosmetic — they are structural, mechanical, and moisture-related issues that worsen significantly if not addressed.
           </BlogPullQuote>
 
-          <h2>Exterior: Paint, Caulk, and Water Management</h2>
-          <p>A 20-year-old exterior paint job is past life — even if touch-ups have been done. Full repainting at 20 years should include complete caulk replacement at all joints (window perimeters, door frames, trim-to-siding transitions), inspection and repair of any damaged or deteriorated siding, and an assessment of roof-to-wall transitions and all penetration flashings.</p>
+          {ISSUES.map((issue) => (
+            <div key={issue.title}>
+              <h2>{issue.title}</h2>
+              <p>{issue.desc}</p>
+              {issue.img && (
+                <BlogImage
+                  src={issue.img}
+                  alt={issue.imgAlt || ''}
+                  caption={issue.imgCaption || ''}
+                />
+              )}
+            </div>
+          ))}
 
-          <h2>Plumbing: Proactive Assessment</h2>
-          <p>At 20 years, original supply line valves (at toilets, sinks, and appliances) often fail when operated — they have not been turned in decades and the seats have corroded. Replace the easy ones preventively before they fail at an inconvenient moment. Have the water heater inspected — if it is original, plan for replacement. Check under every sink and in the crawlspace for any sign of slow leaks or corrosion.</p>
-
-          <h2>BRE Builders — 20-Year Home Assessments in Reno</h2>
-          <p>BRE Builders provides comprehensive structural and repair assessments for 20-year-old homes throughout the Reno-Sparks metro, Carson City, Lake Tahoe, and Northern California. Licensed NV #0085999 · CA #1093798. Contact us for a free consultation.</p>
+          <h2>Free 20-Year Home Assessment in Reno</h2>
+          <p>BRE Builders provides structural and repair assessments for 20-year-old homes across Reno, Sparks, Carson City, and Northern Nevada. Licensed NV #0085999 · CA #1093798. Free consultation. Response within 24 hours. Call (775) 391-4517.</p>
         </div>
       }
     />

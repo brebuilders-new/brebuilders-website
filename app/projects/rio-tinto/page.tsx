@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Rio+Tinto+Home+Renovation&sub=Interior+Renovation+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/rio-tinto-home-renovation-project/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/rio-tinto-home-renovation-project/` },
 }
 
 const schema = {

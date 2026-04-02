@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import CursorTracker from '@/components/ui/CursorTracker'
+import ChatWidget from '@/components/ui/ChatWidget'
 import RouteChangeTracker from '@/components/ui/RouteChangeTracker'
 import { Suspense } from 'react'
 import '../styles/globals.css'
@@ -121,6 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <CursorTracker />
         <Suspense fallback={null}><RouteChangeTracker /></Suspense>
         {children}
+        <ChatWidget />
         <Analytics />
         <SpeedInsights />
       </body>

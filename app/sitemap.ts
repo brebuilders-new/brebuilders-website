@@ -59,6 +59,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ── Tier 6: Blog ──────────────────────────────────────────────────────
     { url: base + '/blog/',                                   lastModified: now, changeFrequency: 'weekly',  priority: 0.70 },
+    { url: base + '/blog/custom-home-builder-reno-nv/',    lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: base + '/blog/kitchen-remodel-cost-reno-nv/',    lastModified: now, changeFrequency: 'monthly', priority: 0.82 },
+    { url: base + '/blog/home-addition-cost-reno-nv/',      lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: base + '/blog/deck-builder-reno-nv/',            lastModified: now, changeFrequency: 'monthly', priority: 0.78 },
     { url: base + '/blog/how-to-add-an-adu-in-nevada/',       lastModified: now, changeFrequency: 'weekly',  priority: 0.80 },
     { url: base + '/blog/structural-repair-warning-signs/',   lastModified: now, changeFrequency: 'monthly', priority: 0.72 },
     { url: base + '/blog/deck-safety-warning-signs/',         lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

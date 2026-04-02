@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "What Reno Homeowners Overlook in 10-Year-Old Homes | BRE Builders",
   description: "Reno's clay soils, UV exposure, and dry summers create specific problems in 10-year-old homes that most homeowners miss until they become expensive repairs. BRE Builders guide.",
   openGraph: { images: [{ url: `${SITE_URL}/api/og?title=10-Year-Old+Reno+Home+Oversights&sub=What+to+Check+Before+It+Gets+Expensive&badge=Repairs`, width: 1200, height: 630 }] },
-  alternates: { canonical: 'https://brebuilders.com/what-reno-homeowners-overlook-in-10-year-old-homes/' },
+  alternates: { canonical: `${SITE_URL}/what-reno-homeowners-overlook-in-10-year-old-homes/` },
 }
 
 const schema = {

@@ -105,6 +105,59 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(baseSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': 'https://brebuilders.com/#ratings',
+            name: 'Blue Reef Builders',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5',
+              reviewCount: '6',
+              bestRating: '5',
+              worstRating: '1',
+            },
+            review: [
+              { '@type': 'Review', author: { '@type': 'Person', name: 'Matt' }, reviewRating: { '@type': 'Rating', ratingValue: '5' }, reviewBody: 'I have worked with Steve for years. Always able to work with my budget and deliver beyond expectations. My go-to local expert.' },
+              { '@type': 'Review', author: { '@type': 'Person', name: 'Stephanie' }, reviewRating: { '@type': 'Rating', ratingValue: '5' }, reviewBody: 'The team at Blue Reef Builders exceeds my expectations every time. Always met their stated deadlines and come in at bid. I continue to use them and recommend them whenever I can.' },
+              { '@type': 'Review', author: { '@type': 'Person', name: 'Bill' }, reviewRating: { '@type': 'Rating', ratingValue: '5' }, reviewBody: 'Steve and Chris and the whole team at BRE Builders have been a joy to work with. The results have been fabulous!' },
+              { '@type': 'Review', author: { '@type': 'Person', name: 'Austin' }, reviewRating: { '@type': 'Rating', ratingValue: '5' }, reviewBody: 'Their team met all of my needs — concrete, new deck, kitchen remodel, electrical and landscaping. One company handling everything under one roof.' },
+              { '@type': 'Review', author: { '@type': 'Person', name: 'Reggie' }, reviewRating: { '@type': 'Rating', ratingValue: '5' }, reviewBody: 'Steve and his team are licensed in both Nevada and California which is great for investment properties in both states.' },
+            ],
+          }) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: 'Are you licensed and insured?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders is fully licensed, bonded, and insured. Nevada License #0085999. California License #1093798.' } },
+              { '@type': 'Question', name: 'Do you offer free estimates?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Free no-obligation estimates after a site visit. Call (775) 391-4517 or submit our project form.' } },
+              { '@type': 'Question', name: 'What areas do you serve?', acceptedAnswer: { '@type': 'Answer', text: 'Reno, Sparks, Carson City, Lake Tahoe, Truckee, and Northern California.' } },
+              { '@type': 'Question', name: 'How soon can you start?', acceptedAnswer: { '@type': 'Answer', text: 'Once contract is signed and permits secured, we typically begin within 1-2 weeks.' } },
+              { '@type': 'Question', name: 'Do projects come with a warranty?', acceptedAnswer: { '@type': 'Answer', text: '1-year workmanship warranty on all projects plus manufacturer warranties where applicable.' } },
+              { '@type': 'Question', name: 'Can you build an ADU in Reno or Carson City?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — we handle all ADU permits and designs based on your property zoning in Nevada and California.' } },
+            ],
+          }) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Steve Rosenthal',
+            jobTitle: 'Owner & Founder',
+            worksFor: { '@type': 'Organization', name: 'Blue Reef Builders' },
+            knowsAbout: ['General Contracting', 'ADU Construction', 'Structural Repairs', 'Custom Home Building', 'Commercial Construction'],
+            hasCredential: [
+              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Nevada Contractor License #0085999' },
+              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'California Contractor License #1093798' },
+            ],
+          }) }}
+        />
       </head>
       <body>
         {/* GTM noscript fallback */}

@@ -28,11 +28,36 @@ const schema = {
 }
 
 const PHOTOS = [
-  { src: IMGS.ripon[3], alt: 'Mediterranean-Inspired Front Elevation Luxury Estate Ripon California BRE Builders', caption: 'Mediterranean-Inspired Front Elevation' },
-  { src: IMGS.ripon[0], alt: 'Classical Columned Entryway Luxury Custom Home Ripon California BRE Builders', caption: 'Classical Columned Entryway' },
-  { src: IMGS.ripon[2], alt: 'Grand Foyer Custom Iron Staircase Marble Flooring Luxury Estate Ripon California', caption: 'Grand Foyer & Custom Staircase' },
-  { src: IMGS.ripon[1], alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Luxury Home Ripon CA BRE Builders", caption: "Chef's Kitchen" },
-  { src: IMGS.ripon[4], alt: 'Elegant Laundry Suite Custom Cabinetry Marble Surfaces Brass Hardware Ripon CA', caption: 'Elegant Laundry Suite' },
+  {
+    src: IMGS.ripon[3],
+    alt: 'Mediterranean-Inspired Front Elevation Luxury Estate Ripon California BRE Builders',
+    title: 'Mediterranean-Inspired Front Elevation',
+    caption: 'European-inspired columns, arched windows, and a central fountain — ground-up custom estate, Ripon, CA',
+  },
+  {
+    src: IMGS.ripon[0],
+    alt: 'Classical Columned Entryway Luxury Custom Home Ripon California BRE Builders',
+    title: 'Classical Columned Entryway',
+    caption: 'Arched entry with fluted columns and ornamental molding — an architectural study in balance and proportion',
+  },
+  {
+    src: IMGS.ripon[2],
+    alt: 'Grand Foyer Custom Iron Staircase Marble Flooring Luxury Estate Ripon California',
+    title: 'Grand Foyer',
+    caption: 'Double-height foyer with a sweeping staircase — hand-forged ironwork, marble flooring, architectural symmetry',
+  },
+  {
+    src: IMGS.ripon[1],
+    alt: "Chef's Kitchen Custom Cabinetry Marble Backsplash Luxury Home Ripon CA BRE Builders",
+    title: "Chef's Kitchen",
+    caption: 'Custom cabinetry with integrated lighting and a marble backsplash centerpiece — built for daily use and visual impact',
+  },
+  {
+    src: IMGS.ripon[4],
+    alt: 'Elegant Laundry Suite Custom Cabinetry Marble Surfaces Brass Hardware Ripon CA',
+    title: 'Elegant Laundry Suite',
+    caption: 'Charcoal custom cabinetry, marble surfaces, and brass hardware — every room finished to the same standard',
+  },
 ]
 
 export default function RiponEstatePage() {

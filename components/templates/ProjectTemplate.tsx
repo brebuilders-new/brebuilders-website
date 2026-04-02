@@ -1,130 +1,36 @@
+'use client'
+
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { SITE } from '@/lib/site-data'
 import { SectionLabel } from './ServiceTemplate'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 
-interface ProjectPhoto {
+// ─── Types ─────────────────────────────────────────────────────────────────────
+export interface ProjectPhoto {
   src: string
   alt: string
-  caption?: string
+  title?: string    // shown in lightbox + alternating layout
+  caption?: string  // shown below image + in lightbox description
 }
 
 interface ProjectTemplateProps {
-  // SEO
   breadcrumb: Array<{ name: string; href?: string }>
-  // Hero
   heroImage: string
   heroAlt: string
-  projectType: string  // "Full Home Renovation"
-  location: string     // "Zephyr Cove, Lake Tahoe, NV"
-  title: string        // "Full Home Renovation Lake Tahoe, NV"
-  titleItalic?: string // "Proven Work. Real Results."
+  projectType: string
+  location: string
+  title: string
+  titleItalic?: string
   description: string
-  meta?: Array<{ label: string; value: string }> // Project metadata
-  // Gallery
+  meta?: Array<{ label: string; value: string }>
   photos: ProjectPhoto[]
   desktopGalleryMode?: 'masonry' | 'alternating' | 'grid'
-  // Video
   videoUrl?: string
-  // Scope / details
   scope?: string[]
   aboutContent?: React.ReactNode
-  // Schema
   schema?: object
-}
-
-// ─── Mobile photo carousel ────────────────────────────────────────────────────
-function MobileCarousel({ photos }: { photos: ProjectPhoto[] }) {
-  return (
-    <div className="md:hidden">
-      <div
-        className="flex gap-3 overflow-x-auto pb-4 scrollbar-none"
-        style={{ scrollSnapType: 'x mandatory' }}
-      >
-        {photos.map((p, i) => (
-          <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '80vw' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={p.src}
-              alt={p.alt}
-              className="w-full h-56 object-cover rounded-xl"
-              loading={i < 2 ? 'eager' : 'lazy'}
-            />
-            {p.caption && (
-              <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.caption}</p>
-            )}
-          </div>
-        ))}
-      </div>
-      <p className="font-mono text-[10px] text-cream/25 tracking-wider mt-1">
-        ← Swipe · {photos.length} photos
-      </p>
-    </div>
-  )
-}
-
-// ─── Desktop masonry gallery ─────────────────────────────────────────────────
-function DesktopMasonry({ photos }: { photos: ProjectPhoto[] }) {
-  const col1 = photos.filter((_, i) => i % 3 === 0)
-  const col2 = photos.filter((_, i) => i % 3 === 1)
-  const col3 = photos.filter((_, i) => i % 3 === 2)
-
-  const renderCol = (imgs: ProjectPhoto[]) => (
-    <div className="flex flex-col gap-4">
-      {imgs.map((p, i) => (
-        <div key={i} className="overflow-hidden rounded-xl group">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={p.src}
-            alt={p.alt}
-            className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-600"
-            loading="lazy"
-          />
-          {p.caption && (
-            <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.caption}</p>
-          )}
-        </div>
-      ))}
-    </div>
-  )
-
-  return (
-    <div className="hidden md:grid md:grid-cols-3 gap-4">
-      {renderCol(col1)}
-      {renderCol(col2)}
-      {renderCol(col3)}
-    </div>
-  )
-}
-
-// ─── Desktop alternating layout (for small galleries like Ripon) ─────────────
-function DesktopAlternating({ photos }: { photos: ProjectPhoto[] }) {
-  return (
-    <div className="hidden md:block space-y-16">
-      {photos.map((p, i) => (
-        <div key={i} className={`grid grid-cols-2 gap-12 items-center`}>
-          <div className={`overflow-hidden rounded-2xl ${i % 2 === 1 ? 'order-2' : ''}`}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={p.src}
-              alt={p.alt}
-              className="w-full h-80 object-cover hover:scale-[1.02] transition-transform duration-700"
-              loading={i < 2 ? 'eager' : 'lazy'}
-            />
-          </div>
-          <div className={i % 2 === 1 ? 'order-1' : ''}>
-            <div className="font-mono text-[10px] tracking-[3px] uppercase text-teal mb-3">
-              Photo {String(i + 1).padStart(2, '0')} of {String(photos.length).padStart(2, '0')}
-            </div>
-            {p.caption && (
-              <h3 className="font-display text-[26px] font-light text-cream mb-4">{p.caption}</h3>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  )
 }
 
 export default function ProjectTemplate({
@@ -157,10 +63,14 @@ export default function ProjectTemplate({
         {/* ── HERO ── */}
         <section className="relative min-h-[72vh] lg:min-h-[82vh] flex flex-col justify-end pb-14 lg:pb-24 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={heroImage} alt={heroAlt} className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
+          <img
+            src={heroImage}
+            alt={heroAlt}
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-void/93 via-void/55 to-void/15" />
           <div className="absolute inset-0 bg-gradient-to-r from-void/65 to-transparent hidden md:block" />
-          <div className="absolute inset-0 grid-bg opacity-[0.02] pointer-events-none" />
 
           <div className="relative z-10 container">
             <div className="max-w-[620px]">
@@ -237,32 +147,28 @@ export default function ProjectTemplate({
           </section>
         )}
 
-        {/* ── GALLERY ── */}
+        {/* ── GALLERY with Lightbox ── */}
         {photos.length > 0 && (
           <section className="py-20 lg:py-28 bg-deep">
             <div className="container">
               <SectionLabel text={`Project Gallery — ${photos.length} Photos`} />
-              <h2 className="font-display text-[clamp(24px,4vw,50px)] font-light leading-[1.05] tracking-tight mb-10">
+              <h2 className="font-display text-[clamp(24px,4vw,50px)] font-light leading-[1.05] tracking-tight mb-3">
                 Every Phase.
                 <br />
                 <span className="italic text-teal">Every Detail.</span>
               </h2>
+              <p className="font-mono text-[11px] text-cream/30 mb-8 hidden md:block">
+                Click any image to expand · Navigate with arrow keys or arrows
+              </p>
+              <p className="font-mono text-[11px] text-cream/30 mb-6 md:hidden">
+                Tap to expand · Swipe to browse
+              </p>
 
-              <MobileCarousel photos={photos} />
-
-              {desktopGalleryMode === 'masonry' && <DesktopMasonry photos={photos} />}
-              {desktopGalleryMode === 'alternating' && <DesktopAlternating photos={photos} />}
-              {desktopGalleryMode === 'grid' && (
-                <div className="hidden md:grid grid-cols-3 gap-4">
-                  {photos.map((p, i) => (
-                    <div key={i} className="overflow-hidden rounded-xl group">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.src} alt={p.alt} className="w-full h-52 object-cover group-hover:scale-[1.02] transition-transform duration-600" loading={i < 3 ? 'eager' : 'lazy'} />
-                      {p.caption && <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{p.caption}</p>}
-                    </div>
-                  ))}
-                </div>
-              )}
+              <GalleryGrid
+                images={photos}
+                mode={desktopGalleryMode}
+                aspectClass="h-56"
+              />
             </div>
           </section>
         )}

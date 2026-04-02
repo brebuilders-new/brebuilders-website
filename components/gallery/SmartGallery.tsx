@@ -37,7 +37,7 @@ export function MobileCarousel({
               loading={i < 2 ? 'eager' : 'lazy'}
             />
             {img.caption && (
-              <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase px-1">{img.caption}</p>
+              <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/75 uppercase px-1">{img.caption}</p>
             )}
           </div>
         ))}
@@ -78,7 +78,7 @@ export function DesktopMasonry({
             loading="lazy"
           />
           {img.caption && (
-            <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.caption}</p>
+            <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/75 uppercase">{img.caption}</p>
           )}
         </div>
       ))}
@@ -110,7 +110,7 @@ export function DesktopHorizontalStrip({ images }: { images: GalleryImage[] }) {
               loading={i < 3 ? 'eager' : 'lazy'}
             />
             {img.caption && (
-              <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.caption}</p>
+              <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/75 uppercase">{img.caption}</p>
             )}
           </div>
         ))}
@@ -143,7 +143,7 @@ export function DesktopGrid({
             loading={i < 4 ? 'eager' : 'lazy'}
           />
           {img.caption && (
-            <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">{img.caption}</p>
+            <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/75 uppercase">{img.caption}</p>
           )}
         </div>
       ))}

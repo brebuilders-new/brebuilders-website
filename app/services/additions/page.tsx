@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Home+Additions+Reno+NV&sub=Add+Space.+Don%E2%80%99t+Move.+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999&badge=Home+Additions`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/additions/' },
+  alternates: { canonical: `${SITE_URL}/additions/` },
 }
 
 const schema = {

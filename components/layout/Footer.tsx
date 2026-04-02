@@ -128,7 +128,7 @@ export default function Footer() {
               {/* Real logo */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp"
+                src="/brelogo.webp"
                 alt="BRE Builders Logo"
                 className="h-8 w-auto object-contain"
                 loading="lazy"
@@ -220,7 +220,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp"
+                src="/brelogo.webp"
                 alt="BRE Builders Logo – Blue Reef Enterprises"
                 className="h-9 w-auto object-contain"
                 loading="lazy"

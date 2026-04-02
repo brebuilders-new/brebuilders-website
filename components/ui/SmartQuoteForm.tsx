@@ -1088,10 +1088,29 @@ export default function SmartQuoteForm({ preselect, className = '' }: SmartQuote
     setSubmitting(true)
     setError('')
     try {
+      // Convert File objects to base64 for transmission
+      const uploadedImages = await Promise.all(
+        leadImages.map(async (img) => {
+          const base64 = await new Promise<string>((resolve, reject) => {
+            const reader = new FileReader()
+            reader.onload = () => resolve((reader.result as string).split(',')[1])
+            reader.onerror = reject
+            reader.readAsDataURL(img.file)
+          })
+          return {
+            base64,
+            service: img.service,
+            filename: img.file.name,
+            mimeType: img.file.type,
+            fileSize: img.file.size,
+          }
+        })
+      )
+
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form }),
+        body: JSON.stringify({ ...form, uploadedImages }),
       })
       if (!res.ok) throw new Error('Submission failed')
       setSubmitted(true)

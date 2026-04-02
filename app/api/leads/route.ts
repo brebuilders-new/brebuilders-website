@@ -232,15 +232,71 @@ export async function POST(req: NextRequest) {
       })
     }
 
-    // Trigger async image analysis if images were uploaded
-    const imageCount = body.uploadedImages?.length || 0
+    // Upload images to Supabase Storage + save records
+    const uploadedImages = body.uploadedImages as Array<{
+      base64: string; service: string; filename: string; mimeType: string; fileSize: number
+    }> | undefined
+
+    const imageCount = uploadedImages?.length || 0
+    const savedImageRecords: Array<{ imageId: string; url: string; service: string }> = []
+
     if (imageCount > 0 && savedLead?.id) {
-      // Fire-and-forget — don't await, let it process in background
-      fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'}/api/analyze-images`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ leadId: savedLead.id, images: body.uploadedImages }),
-      }).catch(console.error)
+      for (const img of uploadedImages!) {
+        try {
+          // Decode base64 → Buffer
+          const buffer = Buffer.from(img.base64, 'base64')
+          const ext = img.mimeType === 'image/png' ? 'png' : img.mimeType === 'image/webp' ? 'webp' : 'jpg'
+          const storagePath = `${savedLead.id}/${Date.now()}-${img.service}.${ext}`
+
+          // Upload to Supabase Storage
+          const { error: uploadError } = await supabaseAdmin.storage
+            .from('lead-images')
+            .upload(storagePath, buffer, {
+              contentType: img.mimeType,
+              upsert: false,
+            })
+
+          if (uploadError) {
+            console.error('Storage upload error:', uploadError.message)
+            continue
+          }
+
+          // Get public URL
+          const { data: { publicUrl } } = supabaseAdmin.storage
+            .from('lead-images')
+            .getPublicUrl(storagePath)
+
+          // Save record to lead_images table
+          const { data: imageRecord } = await supabaseAdmin
+            .from('lead_images')
+            .insert({
+              lead_id:      savedLead.id,
+              service:      img.service,
+              storage_path: storagePath,
+              public_url:   publicUrl,
+              filename:     img.filename,
+              file_size:    img.fileSize,
+              mime_type:    img.mimeType,
+            })
+            .select('id')
+            .single()
+
+          if (imageRecord?.id) {
+            savedImageRecords.push({ imageId: imageRecord.id, url: publicUrl, service: img.service })
+          }
+        } catch (imgErr) {
+          console.error('Image processing error:', imgErr)
+        }
+      }
+
+      // Trigger async GPT-4o analysis if any images were saved
+      if (savedImageRecords.length > 0) {
+        fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'}/api/analyze-images`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ leadId: savedLead.id, images: savedImageRecords }),
+        }).catch(console.error)
+      }
     }
 
     // Send emails

@@ -6,41 +6,19 @@ export const contentType = 'image/png'
 export default function Icon() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: 32,
-          height: 32,
-          background: '#080604',
-          borderRadius: 6,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'relative',
-        }}
-      >
-        {/* Gold left accent bar */}
-        <div style={{
-          position: 'absolute',
-          left: 0,
-          top: 6,
-          bottom: 6,
-          width: 2,
-          background: '#d4a032',
-          borderRadius: 2,
-        }} />
-        <span
-          style={{
-            fontFamily: 'Georgia, serif',
-            fontSize: 19,
-            fontWeight: 400,
-            color: '#f8f0e0',
-            fontStyle: 'italic',
-            letterSpacing: '-0.5px',
-            marginLeft: 2,
-          }}
-        >
-          B
-        </span>
+      <div style={{ width: 32, height: 32, background: '#1a2d5a', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg viewBox="0 0 92 92" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <path d="M58 8 L62 12 L68 10 L72 16 L70 22 L74 28 L72 35 L76 40 L72 48 L68 55 L62 60 L58 68 L52 72 L46 70 L40 74 L34 70 L28 65 L24 58 L20 50 L22 42 L18 36 L22 30 L26 24 L24 18 L28 12 L34 10 L38 14 L44 10 L50 8 Z" fill="white" opacity="0.95"/>
+          <rect x="32" y="32" width="8" height="20" fill="#1a2d5a"/>
+          <rect x="42" y="26" width="8" height="26" fill="#1a2d5a"/>
+          <rect x="52" y="36" width="8" height="16" fill="#1a2d5a"/>
+          <rect x="34" y="36" width="2" height="3" fill="white" opacity="0.8"/>
+          <rect x="38" y="36" width="2" height="3" fill="white" opacity="0.8"/>
+          <rect x="44" y="30" width="2" height="3" fill="white" opacity="0.8"/>
+          <rect x="48" y="30" width="2" height="3" fill="white" opacity="0.8"/>
+          <rect x="44" y="36" width="2" height="3" fill="white" opacity="0.8"/>
+          <rect x="48" y="36" width="2" height="3" fill="white" opacity="0.8"/>
+        </svg>
       </div>
     ),
     { ...size }

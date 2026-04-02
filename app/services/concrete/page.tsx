@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/concrete/' },
+  alternates: { canonical: `${SITE_URL}/concrete/` },
 }
 
 const schema = {

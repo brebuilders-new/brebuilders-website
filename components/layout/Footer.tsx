@@ -35,11 +35,18 @@ const AREA_LINKS = [
 const COMPANY_LINKS = [
   { label: 'About BRE Builders', href: '/about' },
   { label: 'Projects & Portfolio', href: '/projects' },
+  { label: 'Client Testimonials', href: '/testimonials' },
   { label: 'Our Approach', href: '/our-approach' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Blog', href: '/blog' },
   { label: 'Careers', href: '/careers' },
   { label: 'Contact / Quote', href: '/contact' },
+]
+
+const LEGAL_LINKS = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Service', href: '/terms-of-service' },
+  { label: 'Cancellation Policy', href: '/cancellation-policy' },
 ]
 
 const SOCIAL_LINKS = [
@@ -325,16 +332,28 @@ export default function Footer() {
 
       {/* ── BOTTOM BAR ─────────────────────────────────────────────────────── */}
       <div className="border-t border-white/[0.05] bg-deep/40">
-        <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-mono text-[11px] text-cream/25">
-            &copy; {year} Blue Reef Enterprises, LLC &middot; All rights reserved
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="font-mono text-[11px] text-teal/60">NV Lic #0085999</span>
-            <span className="text-cream/15">·</span>
-            <span className="font-mono text-[11px] text-teal/60">CA Lic #1093798</span>
-            <span className="text-cream/15">·</span>
-            <a href={SITE.phoneHref} className="font-mono text-[11px] text-cream/25 hover:text-teal transition-colors">{SITE.phone}</a>
+        <div className="max-w-[1400px] mx-auto px-5 lg:px-10 py-4 flex flex-col gap-3">
+          {/* Legal links row */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            {LEGAL_LINKS.map((l, i) => (
+              <span key={l.href} className="flex items-center gap-4">
+                {i > 0 && <span className="text-cream/15 hidden sm:inline">·</span>}
+                <Link href={l.href} className="font-mono text-[10px] text-cream/25 hover:text-teal transition-colors">{l.label}</Link>
+              </span>
+            ))}
+          </div>
+          {/* Copyright + license row */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <p className="font-mono text-[11px] text-cream/25">
+              &copy; {year} Blue Reef Enterprises, LLC &middot; All rights reserved
+            </p>
+            <div className="flex items-center gap-4">
+              <span className="font-mono text-[11px] text-teal/60">NV Lic #0085999</span>
+              <span className="text-cream/15">·</span>
+              <span className="font-mono text-[11px] text-teal/60">CA Lic #1093798</span>
+              <span className="text-cream/15">·</span>
+              <a href={SITE.phoneHref} className="font-mono text-[11px] text-cream/25 hover:text-teal transition-colors">{SITE.phone}</a>
+            </div>
           </div>
         </div>
       </div>

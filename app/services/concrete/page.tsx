@@ -1,92 +1,166 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import Nav from '@/components/layout/Nav'
-import Footer from '@/components/layout/Footer'
+import ServiceTemplate, {
+  SectionLabel, SectionHeading, PageSection, MobileCTABox,
+  DesktopCTASection, RelatedServices, ServiceFAQSection,
+} from '@/components/templates/ServiceTemplate'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
-  title: 'Concrete Contractor Reno NV | Slabs & Foundations',
-  description: 'Concrete contractor in Reno, NV. Foundations, slabs, driveways, commercial concrete, utility access. Licensed NV #0085999. Free estimates.',
+  title: 'Concrete Contractors Reno NV | Foundations, Slabs & Flatwork | BRE Builders',
+  description: 'Expert concrete contractors in Reno, NV. Foundations, driveways, patios, commercial slabs, walkways. Licensed NV #0085999. Free estimates.',
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, width: 1200, height: 630 }],
+  },
   alternates: { canonical: 'https://brebuilders.com/concrete/' },
 }
 
-function SL({ text }: { text: string }) {
-  return (
-    <div className="flex items-center gap-3 mb-5">
-      <div className="w-7 h-px bg-teal flex-shrink-0" />
-      <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">{text}</span>
-    </div>
-  )
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Concrete Contractors Reno NV',
+      provider: { '@id': 'https://brebuilders.com/#business' },
+      areaServed: [{ '@type': 'City', name: 'Reno' }, { '@type': 'State', name: 'Nevada' }],
+      description: 'BRE Builders delivers high-quality concrete work — foundations, driveways, patios, commercial slabs, and walkways — built for strength and longevity in Reno\'s high-desert climate.',
+      url: 'https://brebuilders.com/concrete/',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What concrete services does BRE Builders provide in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides foundation pours, commercial slabs, residential driveways, patios, sidewalks, retaining walls, and specialty concrete work. Licensed NV #0085999.' } },
+        { '@type': 'Question', name: 'How does Reno\'s climate affect concrete?', acceptedAnswer: { '@type': 'Answer', text: 'Reno\'s freeze-thaw cycles, high UV exposure, and clay soils require specific concrete mix designs, proper curing procedures, and expansion joint placement. BRE Builders has worked in these conditions since 1989.' } },
+        { '@type': 'Question', name: 'Do you pour foundations for ADUs and additions?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders pours foundations for ADUs, home additions, garage slabs, and new construction. We coordinate with structural engineers for engineered foundation specifications.' } },
+      ],
+    },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://brebuilders.com/services/' },
+      { '@type': 'ListItem', position: 3, name: 'Concrete Work', item: 'https://brebuilders.com/concrete/' },
+    ]},
+  ],
 }
+
+const FAQS = [
+  { q: 'What concrete services does BRE Builders provide in Reno?', a: 'BRE Builders provides foundation pours, commercial slabs, residential driveways, patios, sidewalks, retaining walls, utility access slabs, and specialty concrete work. Licensed NV #0085999.' },
+  { q: "How does Reno's climate affect concrete work?", a: "Reno's freeze-thaw cycles, high UV exposure, and expansive clay soils require specific concrete mix designs, proper curing procedures, and strategic expansion joint placement. BRE Builders has worked in these conditions since 1989." },
+  { q: 'Do you pour foundations for ADUs and home additions?', a: 'Yes. BRE Builders pours foundations for ADUs, home additions, garage slabs, and new construction. We coordinate with structural engineers for engineered foundation specifications and work through the full permitting process.' },
+  { q: 'Can you repair existing concrete in Reno?', a: 'Yes. We repair cracked slabs, settled sections, spalled surfaces, and deteriorated expansion joints. Minor repairs through full slab replacement.' },
+  { q: 'Do you do commercial concrete work?', a: 'Yes. BRE Builders has completed commercial concrete pours including the car wash in Reno — a large utility-access commercial slab. We handle commercial foundations, warehouse floors, and site concrete.' },
+]
 
 export default function ConcretePage() {
   return (
-    <>
-      <Nav />
-      <main>
-        <section className="relative min-h-[60vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMGS.concrete_slab} alt="Commercial Concrete Slab Pour Utility Access Reno NV BRE Builders" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
-          <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/55 to-void/20" />
-          <div className="relative z-10 container">
-            <div className="max-w-[560px]">
-              <div className="animate-fade-up-1 flex items-center gap-3 mb-5">
-                <div className="w-6 h-px bg-teal" />
-                <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Concrete · Reno NV</span>
-              </div>
-              <h1 className="animate-fade-up-2 font-display font-light text-[clamp(38px,6vw,76px)] leading-[0.95] tracking-tight text-white mb-4">
-                Concrete<br />Contractor<br /><span className="italic text-teal">Reno, NV</span>
-              </h1>
-              <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/70 mb-6 max-w-[460px]">
-                Foundations, slabs, driveways, commercial concrete, and utility access. Licensed NV #0085999.
-                Residential and commercial concrete work throughout Northern Nevada.
-              </p>
-              <div className="animate-fade-up-4 flex gap-3">
-                <a href={SITE.phoneHref} className="btn-primary">📞 {SITE.phone}</a>
-                <Link href="/contact?service=concrete" className="btn-ghost">Get a Quote</Link>
-              </div>
-            </div>
-          </div>
-        </section>
+    <ServiceTemplate
+      schema={schema}
+      hero={{
+        bgDesktop: IMGS.concrete_slab,
+        bgMobile: IMGS.svc_concrete,
+        eyebrow: 'Concrete Work · Reno & Northern Nevada',
+        h1Lines: ['Concrete Contractors', 'Reno, Nevada'],
+        h1Ghost: 'Strength. Precision. Longevity.',
+        lead: 'BRE Builders delivers high-quality concrete solutions — from foundations and driveways to walkways and commercial slabs — built for strength and longevity in Reno\'s high-desert climate. Licensed NV #0085999.',
+        badges: ['Foundations & Slabs', 'Driveways & Patios', 'Commercial Concrete', 'Freeze-Thaw Rated'],
+        ctaPrimaryLabel: 'Get a Concrete Quote →',
+        ctaPrimaryHref: '/contact?service=concrete',
+        ctaSecondaryLabel: 'View Concrete Projects',
+        ctaSecondaryHref: '/projects/car-wash',
+        urgencyNote: 'Licensed NV #0085999 · 35+ years in Reno\'s climate conditions',
+        stats: [{ n: '35+', label: 'Years' }, { n: 'NV · CA', label: 'Licensed' }, { n: 'Free', label: 'Estimates' }],
+        license: 'NV',
+      }}
+      sections={
+        <>
+          <MobileCTABox
+            headline="Need concrete work done right?"
+            subtext="Licensed NV #0085999 · Built for Reno's climate · Free estimates"
+            ctaLabel="Call for a Free Quote"
+            ctaHref={SITE.phoneHref}
+            variant="default"
+          />
 
-        <section className="py-20 lg:py-28 bg-deep">
-          <div className="container">
-            <SL text="Concrete Services" />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
-              {['Foundations & Footings', 'Concrete Slabs', 'Driveways & Pathways', 'Commercial Concrete', 'Utility Access & Trenching', 'Retaining Walls'].map(s => (
-                <div key={s} className="bg-panel rounded-xl p-5 border border-white/[0.055] flex items-center gap-3">
-                  <span className="text-teal text-[14px] flex-shrink-0">✓</span>
-                  <span className="text-[14px] text-cream/65">{s}</span>
+          <PageSection bg="bg-deep">
+            <SectionLabel text="Concrete Services" />
+            <SectionHeading line1="Built for Strength," line2italic="Precision, and Longevity." size="lg" className="mb-6 text-cream" />
+            <div className="speakable-summary max-w-[680px] mb-10 space-y-3 text-[15px] text-cream/55 leading-relaxed">
+              <p>BRE Builders delivers high-quality concrete work for residential and commercial projects across Reno and Northern Nevada. We handle everything from ADU foundations to large commercial slabs — with the experience of 35+ years working in Reno's specific climate conditions.</p>
+              <p>Reno's expansive clay soils and freeze-thaw cycles create unique demands on concrete. We use proper mix designs, curing procedures, and expansion joint strategies that hold up over time.</p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+              {[
+                { icon: '🏗️', title: 'Foundations', desc: 'Residential and commercial foundations — slab-on-grade, stem wall, and pier designs. Engineered specifications when required.' },
+                { icon: '🚗', title: 'Driveways', desc: 'Residential and commercial driveways. Control joints, proper slope, and finish options including broom and exposed aggregate.' },
+                { icon: '🪨', title: 'Patios & Flatwork', desc: 'Backyard patios, pool decks, walkways, and entry slabs. Decorative finish options available.' },
+                { icon: '🏭', title: 'Commercial Slabs', desc: 'Warehouse floors, utility access slabs, loading dock areas, and commercial site concrete.' },
+                { icon: '🧱', title: 'Retaining Walls', desc: 'Concrete retaining walls for grading, erosion control, and site development.' },
+                { icon: '🔧', title: 'Concrete Repair', desc: 'Crack repair, slab grinding, spall patching, and joint replacement on existing concrete.' },
+              ].map(s => (
+                <div key={s.title} className="p-5 bg-panel rounded-2xl border border-white/[0.06] hover:border-teal/20 transition-colors">
+                  <div className="text-2xl mb-3">{s.icon}</div>
+                  <h3 className="font-display text-[16px] text-cream mb-2">{s.title}</h3>
+                  <p className="text-[13px] text-cream/50 leading-relaxed">{s.desc}</p>
                 </div>
               ))}
             </div>
+          </PageSection>
 
-            {/* Ripon/car wash project callout */}
-            <div className="grid md:grid-cols-2 gap-6 mt-8">
-              <div className="overflow-hidden rounded-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={IMGS.concrete_slab} alt="Commercial Concrete Slab Pour Utility Access Car Wash Reno NV BRE Builders" className="w-full h-52 object-cover" loading="eager" />
-                <p className="mt-2 font-mono text-[10px] tracking-wider text-cream/30 uppercase">Commercial Concrete Slab — Car Wash, Reno NV</p>
+          <PageSection bg="bg-void" border>
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <SectionLabel text="Reno Climate Expertise" />
+                <SectionHeading line1="35 Years in" line2italic="Reno's Conditions." size="md" className="text-cream mb-6" />
+                <div className="space-y-4 text-[14px] text-cream/55 leading-relaxed">
+                  <p>Reno's unique combination of expansive clay soils, freeze-thaw cycles, high-desert UV exposure, and temperature swings creates challenges that generic concrete specifications don't address. BRE Builders has been pouring concrete in these conditions since 1989.</p>
+                  <p>Proper concrete work in Reno requires correct mix design for the freeze-thaw environment, adequate curing time and protection, properly spaced control and expansion joints, and drainage planning that accounts for Reno's soil behavior when it expands and contracts.</p>
+                  <p>We don't guess at specs. We've poured slabs and foundations across the Reno basin, Sparks, Carson City, and at elevation in Lake Tahoe — each environment has specific requirements we know from direct experience.</p>
+                </div>
               </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="font-display text-[26px] text-cream mb-3">Ripon CA — Concrete Estate Foundation</h2>
-                <p className="text-[14px] text-cream/50 leading-relaxed mb-4">
-                  BRE Builders poured and engineered the full concrete foundation for the Ripon, CA luxury
-                  estate — one of our largest California concrete projects. Licensed CA #1093798.
-                </p>
-                <Link href="/projects/ripon-estate" className="text-[12px] font-mono tracking-wider uppercase text-teal/60 hover:text-teal transition-colors">View Project →</Link>
+              <div className="space-y-4">
+                <div className="bg-panel rounded-2xl p-6 border border-white/[0.06]">
+                  <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal mb-4">Concrete Project Types</p>
+                  {[
+                    'ADU foundations and slabs',
+                    'Home addition foundations',
+                    'Garage floor pours',
+                    'Commercial warehouse slabs',
+                    'Car wash and utility slabs',
+                    'Driveway replacement',
+                    'Patio and walkway pours',
+                    'Retaining wall construction',
+                    'Concrete repair and patching',
+                  ].map(item => (
+                    <div key={item} className="flex items-center gap-2.5 py-2 border-b border-white/[0.05] last:border-0">
+                      <span className="text-teal text-[12px]">✓</span>
+                      <span className="text-[13px] text-cream/60">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+          </PageSection>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link href="/contact?service=concrete" className="btn-primary">Get a Free Concrete Estimate →</Link>
-              <a href={SITE.phoneHref} className="btn-ghost font-mono">{SITE.phone}</a>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
+          <ServiceFAQSection faqs={FAQS} />
+          <DesktopCTASection
+            bgImage={IMGS.concrete_slab}
+            bgAlt="BRE Builders Reno NV"
+            headlineItalic="Free Estimates · NV #0085999"
+           
+            headline="Get Your Concrete Work Done Right"
+            subtext="Free estimates. 35+ years of Reno climate expertise. Licensed NV #0085999."
+            ctaLabel="Request a Concrete Quote →"
+            ctaHref="/contact?service=concrete"
+          />
+          <RelatedServices items={[
+            { label: 'ADU Construction', href: '/services/adu', desc: 'BRE Builders Reno NV' },
+            { label: 'Home Additions', href: '/services/additions', desc: 'BRE Builders Reno NV' },
+            { label: 'Commercial Construction', href: '/services/commercial', desc: 'BRE Builders Reno NV' },
+            { label: 'Hauling & Removal', href: '/services/hauling', desc: 'BRE Builders Reno NV' },
+          ]} />
+        </>
+      }
+    />
   )
 }

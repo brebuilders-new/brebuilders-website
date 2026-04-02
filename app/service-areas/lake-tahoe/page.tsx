@@ -18,6 +18,12 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contractor Lake Tahoe NV & CA | BRE Builders',
+    description: 'Licensed contractor serving Lake Tahoe NV & CA. Snow-load builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
+    images: [`${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV+%26+CA&sub=Snow-Load+%C2%B7+Custom+Homes+%C2%B7+Structural+Repair+%C2%B7+NV+%230085999&badge=Lake+Tahoe`],
+  },
   alternates: { canonical: 'https://brebuilders.com/service-areas/lake-tahoe/' },
 }
 
@@ -53,6 +59,14 @@ const schema = {
         { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://brebuilders.com/service-areas/' },
         { '@type': 'ListItem', position: 3, name: 'Lake Tahoe', item: 'https://brebuilders.com/service-areas/lake-tahoe/' },
       ],
+    },,
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/service-areas/lake-tahoe/',
+      name: 'Contractor Lake Tahoe NV & CA | BRE Builders',
+      url: 'https://brebuilders.com/service-areas/lake-tahoe/',
+      description: 'BRE Builders serves Lake Tahoe — snow-load rated builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-intro', '.speakable-faq', 'h1'] },
     },
   ],
 }

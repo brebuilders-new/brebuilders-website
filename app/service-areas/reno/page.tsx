@@ -18,6 +18,12 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'General Contractor Reno NV | BRE Builders — Licensed Since 1989',
+    description: '#1 ADU Builder Reno · Page 1 Foundation Repair · Licensed NV #0085999. Free estimates.',
+    images: [`${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+NV+%230085999&badge=Reno+NV`],
+  },
   alternates: { canonical: 'https://brebuilders.com/service-areas/nevada/' },
 }
 
@@ -45,6 +51,7 @@ const schema = {
         { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
       ],
       hasCredential: { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Nevada Contractor License #0085999' },
+      sameAs: ['https://www.facebook.com/BlueReefBuilds', 'https://brebuilders.com'],
     },
     {
       '@type': 'FAQPage',
@@ -68,6 +75,18 @@ const schema = {
         { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://brebuilders.com/service-areas/' },
         { '@type': 'ListItem', position: 3, name: 'Reno, NV', item: 'https://brebuilders.com/service-areas/nevada/' },
       ],
+    },
+,
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/service-areas/nevada/',
+      name: 'General Contractor Reno NV | BRE Builders',
+      url: 'https://brebuilders.com/service-areas/nevada/',
+      description: 'BRE Builders serves Reno, NV — #1 ADU builder, Page 1 foundation repair. Licensed NV #0085999. Free estimates.',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.speakable-intro', '.speakable-services', '.speakable-faq', 'h1'],
+      },
     },
   ],
 }
@@ -224,7 +243,7 @@ export default function RenoPage() {
               </div>
               <div>
                 <SL text="Common Questions" />
-                <FAQAccordion items={FAQS} />
+                <div className="speakable-faq"><FAQAccordion items={FAQS} /></div>
               </div>
             </div>
           </div>

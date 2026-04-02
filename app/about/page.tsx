@@ -5,11 +5,13 @@ import Footer from '@/components/layout/Footer'
 import { SITE, TESTIMONIALS } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
+
 export const metadata: Metadata = {
   title: 'About | Blue Reef Enterprises | Licensed Since 1989',
   description:
     'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercial.',
-  alternates: { canonical: 'https://brebuilders.com/about/' },
+  alternates: { canonical: `${SITE_URL}/about/` },
 }
 
 function SL({ text }: { text: string }) {

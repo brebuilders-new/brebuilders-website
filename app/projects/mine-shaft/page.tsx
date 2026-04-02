@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Mine+Shaft+Framing+%26+Shed+Construction&sub=Custom+Framing+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/mine-shaft-framing-shed-construction-reno-nv/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/mine-shaft-framing-shed-construction-reno-nv/` },
 }
 
 const schema = {

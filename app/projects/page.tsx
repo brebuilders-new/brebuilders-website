@@ -39,7 +39,7 @@ const ALL_PROJECTS = [
     desc: 'Ground-up luxury estate blending classical European architecture with modern amenities. Every column, arch, and interior detail built in-house.',
   },
   {
-    slug: 'portfolio/adus',
+    slug: 'adus',
     wpSlug: 'portfolio/adus',
     title: 'ADU Portfolio',
     type: 'ADU Construction',
@@ -50,7 +50,7 @@ const ALL_PROJECTS = [
     desc: 'Pool house ADUs, in-law suites, and garage conversions across Reno and Northern Nevada.',
   },
   {
-    slug: 'portfolio/warehouse-metal-buildings',
+    slug: 'warehouse-metal-buildings',
     wpSlug: 'portfolio/warehouse-metal-buildings',
     title: 'Warehouse & Metal Buildings',
     type: 'Commercial',
@@ -149,7 +149,7 @@ export default function ProjectsPage() {
               {featured.map((p, i) => (
                 <a
                   key={p.slug}
-                  href={p.slug.startsWith('portfolio/') ? `https://brebuilders.com/${p.wpSlug}/` : `/projects/${p.slug}/`}
+                  href={`/projects/${p.slug.replace('portfolio/', '')}/`}
                   className="group relative block overflow-hidden bg-void"
                   style={{ aspectRatio: '16/10' }}
                 >
@@ -229,7 +229,7 @@ export default function ProjectsPage() {
               {rest.map((p, i) => (
                 <a
                   key={p.slug}
-                  href={p.slug.startsWith('portfolio/') ? `https://brebuilders.com/${p.wpSlug}/` : `/projects/${p.slug}/`}
+                  href={`/projects/${p.slug.replace('portfolio/', '')}/`}
                   className="group relative block overflow-hidden bg-void"
                   style={{ aspectRatio: '4/3' }}
                 >

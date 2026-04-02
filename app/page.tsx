@@ -563,6 +563,17 @@ export default function HomePage() {
                 <p className="text-[15px] leading-relaxed text-cream/80 mb-8">
                   We focus on clear communication, responsible planning, and results that stay aligned with client expectations. Every build — small or large — is completed with attention to detail and a commitment to lasting quality.
                 </p>
+                {/* Named owner — E-E-A-T signal */}
+                <div className="flex items-center gap-4 p-4 bg-deep border border-white/[0.06] rounded-xl mb-5">
+                  <div className="w-12 h-12 rounded-full bg-teal/15 border border-teal/30 flex items-center justify-center flex-shrink-0">
+                    <span className="font-display text-[18px] text-teal font-light">SR</span>
+                  </div>
+                  <div>
+                    <div className="font-display text-[15px] text-cream">Steve Rosenthal</div>
+                    <div className="font-mono text-[10px] text-cream/45 tracking-wider mt-0.5">Owner & Founder · BRE Builders · Since 1989</div>
+                    <div className="font-mono text-[9px] text-teal/60 tracking-wider mt-1">NV #0085999 · CA #1093798</div>
+                  </div>
+                </div>
                 <div className="flex flex-wrap gap-3">
                   <Link href="/about" className="px-5 py-2.5 border border-white/12 text-cream/55 text-[13px] rounded-lg hover:border-teal/40 hover:text-teal transition-all">Our Story →</Link>
                   <Link href="/our-approach" className="px-5 py-2.5 border border-white/12 text-cream/55 text-[13px] rounded-lg hover:border-teal/40 hover:text-teal transition-all">Our Approach →</Link>
@@ -601,7 +612,10 @@ export default function HomePage() {
                 <Fade key={t.name} delay={i * 60}>
                   <div className="bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full">
                     <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
-                    <p className="font-display text-[15px] italic text-cream/85 leading-relaxed pt-8 mb-5">{t.text}</p>
+                    <div className="flex gap-0.5 mb-3 pt-8">
+                      {[1,2,3,4,5].map(s => <span key={s} className="text-gold text-[14px]">★</span>)}
+                    </div>
+                    <p className="font-display text-[15px] italic text-cream/85 leading-relaxed mb-5">{t.text}</p>
                     <div className="font-semibold text-[13px] text-cream">{t.name}</div>
                     <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                   </div>
@@ -661,6 +675,42 @@ export default function HomePage() {
                   </Fade>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════ HOW IT WORKS ════════════════════════════════════════ */}
+        <section className="py-20 lg:py-24 bg-void">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div className="text-center mb-12">
+              <SL text="How It Works" />
+              <h2 className="font-display text-[clamp(28px,4vw,52px)] font-light leading-[1.05] tracking-tight">
+                Simple Process.<br /><span className="italic text-teal">No Surprises.</span>
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              {[
+                { step: '01', title: 'Call or Submit', desc: 'Reach out by phone or form. We respond within 24 hours — no sales pitch, just a conversation about your project.' },
+                { step: '02', title: 'Free Site Visit', desc: 'Steve or a senior team member visits your property. We assess the full scope before quoting anything.' },
+                { step: '03', title: 'Written Quote', desc: 'You receive a detailed written estimate — line by line. No vague numbers, no hidden fees. Ever.' },
+                { step: '04', title: 'We Build', desc: 'Licensed crew, permitted work, clean execution. You get updates throughout. We match the quote or we tell you why.' },
+              ].map((s, i) => (
+                <div key={s.step} className="relative p-6 bg-panel border border-white/[0.06] rounded-xl hover:border-teal/20 transition-colors">
+                  <div className="font-mono text-[40px] font-light text-teal/12 leading-none mb-3 select-none">{s.step}</div>
+                  <div className="w-6 h-px bg-teal mb-4" />
+                  <h3 className="font-display text-[17px] text-cream mb-2">{s.title}</h3>
+                  <p className="text-[13px] text-cream/65 leading-relaxed">{s.desc}</p>
+                  {i < 3 && <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-teal/20" />}
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 p-5 bg-panel border border-teal/15 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p className="font-mono text-[12px] text-cream/60 tracking-wide">
+                <span className="text-teal font-medium">Guarantee:</span> We match the written quote on every project — or we explain why in writing before proceeding.
+              </p>
+              <Link href="/contact" className="px-6 py-2.5 bg-teal text-void text-[13px] font-bold rounded-lg hover:bg-gold transition-colors flex-shrink-0">
+                Get Your Free Quote →
+              </Link>
             </div>
           </div>
         </section>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       width: 1200, height: 630,
     }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/lake-tahoe-interior-renovation-project-bre-builders/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/lake-tahoe-interior-renovation-project-bre-builders/` },
 }
 
 const schema = {

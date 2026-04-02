@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Charolette%27s+Deck+%E2%80%93+Custom+Build&sub=Smooth+Sealed+Surface+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: 'https://brebuilders.com/portfolio/charolettes-deck/' },
+  alternates: { canonical: `${SITE_URL}/portfolio/charolettes-deck/` },
 }
 
 const schema = {

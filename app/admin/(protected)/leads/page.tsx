@@ -159,7 +159,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       {/* Table */}
       <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #e5e7eb', overflow: 'hidden' }}>
         {!leads?.length ? (
-          <div style={{ padding: '60px', textAlign: 'center', color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>
+          <div style={{ background: '#060e18', minHeight: '100vh', padding: '60px', textAlign: 'center', color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>
             No leads match this filter.
           </div>
         ) : (

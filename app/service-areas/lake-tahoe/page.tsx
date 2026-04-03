@@ -287,7 +287,7 @@ export default function LakeTahoePage() {
             <h2 className="font-display text-[clamp(34px,5vw,66px)] font-light leading-[1.0] tracking-tight text-white mb-5">
               Lake Tahoe Project?<br /><span className="italic text-teal">We&apos;ve Done This Before.</span>
             </h2>
-            <p className="text-[16px] text-white/50 max-w-md mx-auto mb-10">Free estimates · NV #0085999 · 45 min from Reno</p>
+            <p className="text-[16px] text-white/90 max-w-md mx-auto mb-10">Free estimates · NV #0085999 · 45 min from Reno</p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/contact?location=lake-tahoe" className="btn-primary px-10 py-4">Request a Free Estimate →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-10 py-4 font-mono">{SITE.phone}</a>

@@ -66,6 +66,16 @@ const schema = {
           name: 'What services does BRE Builders offer in Reno NV?',
           acceptedAnswer: { '@type': 'Answer', text: 'In Reno, BRE Builders provides ADU construction, structural repairs, foundation repair, water intrusion repair, kitchen and bathroom remodeling, home additions, custom home building, deck construction and repair, commercial tenant improvements, concrete work, and hauling and demolition.' },
         },
+        {
+          '@type': 'Question',
+          name: 'How quickly does BRE Builders respond to inquiries in Reno?',
+          acceptedAnswer: { '@type': 'Answer', text: 'We respond to all Reno inquiries within 24 hours. For structural emergencies, same-day response is available.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does BRE Builders serve Sparks NV as well?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Sparks is part of our core service area. We have completed multiple projects in Sparks neighborhoods including decks, ADUs, and kitchen remodels.' },
+        },
       ],
     },
     {

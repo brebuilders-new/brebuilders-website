@@ -50,6 +50,16 @@ const schema = {
           name: 'Do Lake Tahoe decks need special construction?',
           acceptedAnswer: { '@type': 'Answer', text: 'Yes. Lake Tahoe decks must handle heavy snow loads (up to 200 lbs per sq ft), UV exposure, and extreme freeze-thaw cycles. BRE Builders designs and builds to Washoe County and Douglas County structural requirements.' },
         },
+        {
+          '@type': 'Question',
+          name: 'Can BRE Builders build an ADU on a Lake Tahoe property?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes, subject to Washoe County zoning and TRPA regulations. BRE Builders manages the full permit process including TRPA review. ADU costs at Lake Tahoe typically range from $95,000 to $350,000.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How far is BRE Builders from Lake Tahoe?',
+          acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders is based in Reno, NV — approximately 45 minutes from Zephyr Cove and 60 minutes from Incline Village. We regularly serve Tahoe properties.' },
+        },
       ],
     },
     {
@@ -59,7 +69,7 @@ const schema = {
         { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://brebuilders.com/service-areas/' },
         { '@type': 'ListItem', position: 3, name: 'Lake Tahoe', item: 'https://brebuilders.com/service-areas/lake-tahoe/' },
       ],
-    },,
+    },
     {
       '@type': 'WebPage',
       '@id': 'https://brebuilders.com/service-areas/lake-tahoe/',
@@ -319,6 +329,26 @@ export default function LakeTahoePage() {
           </div>
         </section>
       </main>
+
+        {/* Related Content Pills */}
+        <section className="py-10 bg-deep border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[2.5px] uppercase text-teal">Related Services & Guides</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link href="/services/decks/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Deck Builder Lake Tahoe →</Link>
+              <Link href="/services/adu/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Builder Reno & Tahoe →</Link>
+              <Link href="/services/repairs/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs →</Link>
+              <Link href="/projects/lake-tahoe-interior-renovation/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Lake Tahoe Renovation Portfolio →</Link>
+              <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">8 Signs Your Deck Is Unsafe →</Link>
+              <Link href="/blog/how-to-add-an-adu-in-nevada" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Guide Nevada 2025 →</Link>
+              <Link href="/service-areas/truckee/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Truckee CA Contractor →</Link>
+            </div>
+          </div>
+        </section>
+
       <Footer />
     </>
   )

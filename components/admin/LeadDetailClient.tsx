@@ -188,7 +188,7 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
   const location = [lead.address_line1, lead.city, lead.state, lead.zip].filter(Boolean).join(', ')
 
   return (
-    <div style={{ padding: '32px', maxWidth: '1200px' }}>
+    <div style={{ padding: 'clamp(16px, 4vw, 32px)', maxWidth: '1200px', background: '#060e18', minHeight: '100vh' }}>
 
       {/* Back + header */}
       <div style={{ marginBottom: '24px' }}>
@@ -242,7 +242,7 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
         </div>
       </Card>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '20px' }}>
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_360px] gap-4 md:gap-5">
 
         {/* Left column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -334,7 +334,7 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
           {images.length > 0 && (
             <Card>
               <SectionTitle>Uploaded Photos — AI Analysis</SectionTitle>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px', marginBottom: '16px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px', marginBottom: '16px' }}>
                 {images.map(img => (
                   <button
                     key={img.id}

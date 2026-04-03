@@ -222,7 +222,7 @@ export default function ProjectsPage() {
                 )
               })}
             </div>
-            <p className="font-mono text-[10px] text-cream/25 mt-2 tracking-wider">695 Lakeview Blvd · Zephyr Cove, NV · ← Swipe</p>
+            <p className="font-mono text-[10px] text-cream/25 mt-2 tracking-wider">Zephyr Cove, Lake Tahoe · Zephyr Cove, NV · ← Swipe</p>
           </section>
 
           {/* All other projects — cinematic 3-col grid */}

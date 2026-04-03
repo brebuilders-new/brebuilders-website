@@ -7,6 +7,8 @@ import Footer from '@/components/layout/Footer'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
+import { PROJECT_IMAGES } from '@/lib/image-catalog'
 
 export const metadata: Metadata = {
   title: 'Contractor Lake Tahoe NV | Deck Repair & Renovation',
@@ -190,41 +192,16 @@ export default function LakeTahoePage() {
               </a>
             </div>
 
-            {/* Mobile: carousel */}
-            <div className="md:hidden flex gap-3 overflow-x-auto pb-3 scrollbar-none mb-4" style={{ scrollSnapType: 'x mandatory' }}>
-              {[1,2,3,4,5,6,7,8].map(n => {
-                const pad = String(n).padStart(2,'0')
-                return (
-                  <div key={n} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16-1024x684.webp`}
-                      alt={`Lake Tahoe Renovation Photo ${n} of 16 BRE Builders`}
-                      className="w-full h-52 object-cover rounded-xl"
-                      loading={n <= 2 ? 'eager' : 'lazy'}
-                    />
-                  </div>
-                )
-              })}
-            </div>
-
-            {/* Desktop: masonry */}
-            <div className="hidden md:grid grid-cols-4 gap-3">
-              {[1,2,3,4,5,6,7,8,9,10,11,12].map(n => {
-                const pad = String(n).padStart(2,'0')
-                const suffix = n === 16 ? '-1' : ''
-                return (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={n}
-                    src={`https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16${suffix}-1024x684.webp`}
-                    alt={`Lake Tahoe Full Home Renovation Photo ${n} BRE Builders`}
-                    className="w-full h-36 object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500"
-                    loading={n <= 4 ? 'eager' : 'lazy'}
-                  />
-                )
-              })}
-            </div>
+            <GalleryGrid
+              mode="grid"
+              images={PROJECT_IMAGES['lake-tahoe-renovation'].gallery.slice(0, 12).map(img => ({
+                src: img.url,
+                alt: img.alt,
+                title: img.title,
+                caption: img.caption,
+              }))}
+              aspectClass="h-40"
+            />
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a href="/portfolio/lake-tahoe-interior-renovation-project-bre-builders/" className="btn-primary">View Full Gallery (16 Photos) →</a>

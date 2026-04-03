@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
+import { PROJECT_IMAGES } from '@/lib/image-catalog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
@@ -212,18 +214,16 @@ export default function NorthernCaliforniaPage() {
                   <Link href="/projects/ripon-estate" className="btn-primary">View Full Ripon Project →</Link>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                {IMGS.ripon.map((src, i) => (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    key={i}
-                    src={src}
-                    alt={`Ripon CA luxury estate photo ${i + 1} BRE Builders Northern California`}
-                    className={`w-full object-cover rounded-xl ${i === 0 ? 'col-span-2 h-56' : 'h-40'}`}
-                    loading={i < 2 ? 'eager' : 'lazy'}
-                  />
-                ))}
-              </div>
+              <GalleryGrid
+                mode="grid"
+                images={PROJECT_IMAGES['ripon-estate'].gallery.map((img: import('@/lib/image-catalog').BREImage) => ({
+                  src: img.url,
+                  alt: img.alt,
+                  title: img.title,
+                  caption: img.caption,
+                }))}
+                aspectClass="h-44"
+              />
             </div>
           </div>
         </section>

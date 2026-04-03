@@ -13,7 +13,7 @@ import { useRef, useState, useEffect, useCallback } from 'react'
  */
 
 interface MobileCarouselProps<T> {
-  items: T[]
+  items: readonly T[] | T[]
   renderItem: (item: T, index: number) => React.ReactNode
   desktopClassName?: string  // e.g. "md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
   itemWidth?: string         // mobile card width, default '85vw'

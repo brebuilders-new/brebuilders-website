@@ -42,8 +42,8 @@ const schema = {
       telephone: '+17753914517',
       email: 'brebuilders@gmail.com',
       url: 'https://brebuilders.com',
-      logo: 'https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp',
-      image: 'https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp',
+      logo: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp',
+      image: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp',
       foundingDate: '1989',
       priceRange: '$$',
       areaServed: [

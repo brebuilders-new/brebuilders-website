@@ -46,7 +46,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
             className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg mb-0.5 text-sm transition-all duration-150 border ${
               active
                 ? 'bg-teal/10 text-teal border-teal/20'
-                : 'text-stone-400 border-transparent hover:text-cream/70 hover:bg-white/[0.05]'
+                : 'text-stone-500 border-transparent hover:text-stone-800 hover:bg-stone-100'
             }`}
           >
             <span className="w-4 text-center text-base leading-none">{item.icon}</span>
@@ -59,18 +59,18 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
 
   const SidebarContent = ({ onClick }: { onClick?: () => void }) => (
     <div className="flex flex-col h-full">
-      <div className="px-4 py-4 border-b border-white/[0.07]">
+      <div className="px-4 py-4 border-b border-stone-200">
         <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase mb-0.5">BRE Builders</p>
-        <p className="text-[12px] text-white/30">Admin Dashboard</p>
+        <p className="text-[12px] text-stone-400">Admin Dashboard</p>
       </div>
       <nav className="flex-1 p-2 overflow-y-auto">
         <NavLinks onClick={onClick} />
       </nav>
-      <div className="p-2 border-t border-white/[0.07]">
+      <div className="p-2 border-t border-stone-200">
         <button
           onClick={handleSignOut}
           disabled={signingOut}
-          className="w-full px-3 py-2.5 rounded-lg text-left text-[13px] font-mono text-white/30 hover:text-white/70 transition-colors"
+          className="w-full px-3 py-2.5 rounded-lg text-left text-[13px] font-mono text-stone-400 hover:text-stone-600 transition-colors"
         >
           {signingOut ? 'Signing out...' : '← Sign out'}
         </button>
@@ -79,20 +79,20 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   )
 
   return (
-    <div className="flex min-h-screen" style={{ background: '#060e18', color: '#e8e4dc', fontFamily: 'system-ui, sans-serif' }}>
+    <div className="flex min-h-screen" style={{ background: '#f1f0ee', color: '#1a1a1a', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* Desktop sidebar */}
-      <aside className="hidden md:flex flex-col w-[200px] flex-shrink-0 sticky top-0 h-screen border-r border-white/[0.07]">
+      <aside className="hidden md:flex flex-col w-[200px] flex-shrink-0 sticky top-0 h-screen border-r border-stone-200">
         <SidebarContent />
       </aside>
 
       {/* Mobile header */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 border-b border-white/[0.07]"
-        style={{ background: '#060e18' }}>
+      <div className="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 border-b border-stone-200"
+        style={{ background: '#ffffff' }}>
         <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase">BRE Builders · Admin</p>
         <button
           onClick={() => setMobileOpen(true)}
-          className="px-3 py-1.5 rounded-lg text-white/50 text-sm border border-white/[0.12] hover:border-white/25 hover:text-white/80"
+          className="px-3 py-1.5 rounded-lg text-stone-500 text-sm border border-stone-200 hover:border-stone-300"
         >
           ☰ Menu
         </button>
@@ -102,8 +102,8 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
       {mobileOpen && (
         <>
           <div className="md:hidden fixed inset-0 bg-black/60 z-40" onClick={() => setMobileOpen(false)} />
-          <aside className="md:hidden fixed top-0 left-0 bottom-0 w-[220px] z-50 border-r border-white/[0.07]"
-            style={{ background: '#060e18' }}>
+          <aside className="md:hidden fixed top-0 left-0 bottom-0 w-[220px] z-50 border-r border-stone-200"
+            style={{ background: '#ffffff' }}>
             <SidebarContent onClick={() => setMobileOpen(false)} />
           </aside>
         </>

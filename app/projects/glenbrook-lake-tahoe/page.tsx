@@ -19,7 +19,7 @@ const schema = {
   '@type': 'ItemPage',
   name: 'Glenbrook Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
   url: `${SITE_URL}/projects/glenbrook-lake-tahoe/`,
-  image: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37.webp`,
+  image: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
   about: {
     '@type': 'Project',
     name: 'Glenbrook Lake Tahoe Full Home Renovation',
@@ -49,7 +49,7 @@ const PHOTOS = [
 ].map(({ n, caption }) => {
   const pad = String(n).padStart(2, '0')
   return {
-    src: `${CDN}/2025/12/${pad}-619-Lakeview-Dr-Glenbrook-NV-89413-${n}-of-37.webp`,
+    src: `${CDN}/2025/12/${pad}-619-Lakeview-Dr-Glenbrook-NV-89413-${n}-of-37-600x403.webp`,
     alt: `${caption} — Glenbrook Lake Tahoe Full Home Renovation by BRE Builders | Licensed General Contractor NV #0085999`,
     caption,
   }
@@ -64,7 +64,7 @@ export default function GlenbrookLakeTahoePage() {
         { name: 'Projects', href: '/projects/' },
         { name: 'Glenbrook Lake Tahoe Renovation' },
       ]}
-      heroImage={`${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37.webp`}
+      heroImage={`${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`}
       heroAlt="Glenbrook Lake Tahoe Full Home Renovation Exterior — Glenbrook, Lake Tahoe — BRE Builders Licensed General Contractor NV #0085999"
       projectType="Full Home Renovation · Glenbrook, Lake Tahoe, NV"
       location="Glenbrook, Lake Tahoe, NV"

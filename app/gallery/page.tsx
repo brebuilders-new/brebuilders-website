@@ -70,8 +70,9 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     categories: ['renovation', 'before-after'],
     featured: true,
     hasBeforeAfter: true,
-    photos: Array.from({ length: 22 }, (_, i) => {
-      const n = String(i + 1).padStart(2, '0')
+    photos: [1,3,5,7,9,12,13,14,15,16,17,18,19,20,21,22].map((photoNum, idx) => {
+      const n = String(photoNum).padStart(2, '0')
+      const i = idx
       const titles = ['Full Home Renovation — Exterior','Front Elevation — Completed','Entry & Facade Detail','Main Living Area','Interior Finish Work','Kitchen Renovation','Dining & Living Space','Master Suite','Master Bathroom','Secondary Bedroom','Hallway Detail','Staircase Construction','Upper Level','Loft Area','Deck & Exterior','Rear Elevation','Side Elevation','Structural Upgrades','Foundation & Site Work','Framing Phase','Pre-Construction','Project Complete']
       const captions = [
         'Complete exterior renovation. Snow-rated structure, new siding, weather barrier. Washoe County permitted. BRE Builders NV #0085999.',

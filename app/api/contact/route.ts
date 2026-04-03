@@ -126,7 +126,11 @@ function buildServiceBlock(data: Record<string, unknown>): string {
   else if (s === 'commercial') rows = [row('Space Type', data.commercialType), row('Sq Ft', data.commercialSqft), row('Occupancy', data.commercialOccupancy)]
   const filtered = rows.filter(Boolean)
   if (!filtered.length) return ''
-  return `<table style="width:100%;border-collapse:collapse;background:#0c1a27;border-radius:8px;overflow:hidden;margin-bottom:16px">${filtered.join('')}</table>`
+  const serviceLabel = SERVICE_LABELS[data.service as string] || String(data.service)
+  return `<tr><td style="background:#060d14;padding:0 32px 20px">
+    <p style="margin:0 0 10px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;font-family:monospace">${serviceLabel} Details</p>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#0c1a27;border-radius:8px;overflow:hidden">${filtered.join('')}</table>
+  </td></tr>`
 }
 
 function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: LeadScore): string {

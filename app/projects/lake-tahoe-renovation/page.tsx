@@ -9,7 +9,7 @@ const BASE = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/1
 
 export const metadata: Metadata = {
   title: 'Lake Tahoe Full Home Renovation | Portfolio',
-  description: '695 Lakeview Blvd, Zephyr Cove, NV — complete interior and exterior renovation by BRE Builders. 16 photos + project video.',
+  description: 'Zephyr Cove, Lake Tahoe, NV — complete interior and exterior renovation by BRE Builders. 16 photos + project video.',
   openGraph: {
     images: [{
       url: `${SITE_URL}/api/og?title=Lake+Tahoe+Full+Home+Renovation&sub=695+Lakeview+Blvd%2C+Zephyr+Cove%2C+NV+%C2%B7+16+Photos&badge=Portfolio`,
@@ -23,7 +23,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'ItemPage',
   name: 'Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
-  description: 'Complete interior and exterior renovation of 695 Lakeview Blvd, Zephyr Cove, NV by BRE Builders.',
+  description: 'Complete interior and exterior renovation of Zephyr Cove, Lake Tahoe, NV by BRE Builders.',
   url: 'https://brebuilders.com/portfolio/lake-tahoe-interior-renovation-project-bre-builders/',
   image: `${BASE}/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp`,
 }
@@ -44,7 +44,7 @@ const PHOTOS = [
   { n: 13, suffix: '',  title: 'Loft Natural Light',        caption: 'Loft area renovation — open layout with natural light and updated finishes' },
   { n: 14, suffix: '',  title: 'Exterior Deck Renovation',  caption: 'Exterior deck renovation with new decking material and railing' },
   { n: 15, suffix: '',  title: 'Deck Walkway Detail',       caption: 'Deck walkway detail — sealed surface and railing upgrade complete' },
-  { n: 16, suffix: '-1', title: 'Completed — Full View',   caption: 'Full exterior view of completed renovation, 695 Lakeview Blvd, Zephyr Cove, Lake Tahoe, NV' },
+  { n: 16, suffix: '-1', title: 'Completed — Full View',   caption: 'Full exterior view of completed renovation, Zephyr Cove, Lake Tahoe, Lake Tahoe, NV' },
 ].map(p => ({
   src: `${BASE}/${String(p.n).padStart(2,'0')}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${p.n}-of-16${p.suffix}-1024x684.webp`,
   alt: `${p.title} — Lake Tahoe Full Home Renovation BRE Builders`,
@@ -62,12 +62,12 @@ export default function LakeTahoeProjectPage() {
         { name: 'Lake Tahoe Renovation' },
       ]}
       heroImage={PHOTOS[0].src}
-      heroAlt="Full Home Renovation Completed Exterior 695 Lakeview Blvd Zephyr Cove Lake Tahoe"
+      heroAlt="Full Home Renovation Completed Exterior Zephyr Cove, Lake Tahoe Lake Tahoe"
       projectType="Full Home Renovation"
       location="Zephyr Cove, Lake Tahoe, NV"
       title="Full Home Renovation"
       titleItalic="Lake Tahoe, NV"
-      description="A complete interior and exterior transformation combining structural upgrades, modern finishes, and long-term durability — executed by BRE Builders at 695 Lakeview Blvd, Zephyr Cove, NV 89448."
+      description="A complete interior and exterior transformation combining structural upgrades, modern finishes, and long-term durability — executed by BRE Builders at Zephyr Cove, Lake Tahoe, NV."
       meta={[
         { label: 'Project Type', value: 'Full Home Renovation' },
         { label: 'Location', value: 'Zephyr Cove, NV' },

@@ -544,7 +544,7 @@ export default function HomePage() {
               <div className="absolute right-0 top-0 bottom-4 w-20 bg-gradient-to-l from-void to-transparent pointer-events-none" />
             </div>
             <Fade delay={200} className="mt-6">
-              <p className="font-mono text-[11px] text-cream/70 tracking-wider">695 Lakeview Blvd · Zephyr Cove, NV · 16 Photos · Full Home Renovation</p>
+              <p className="font-mono text-[11px] text-cream/70 tracking-wider">Zephyr Cove, Lake Tahoe · Zephyr Cove, NV · 16 Photos · Full Home Renovation</p>
             </Fade>
           </div>
         </section>

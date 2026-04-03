@@ -563,7 +563,7 @@ export default function HomePage() {
               </div>
             </Fade>
             <MobileCarousel
-              items={PROJECTS.slice(0, 6)}
+              items={[...PROJECTS].slice(0, 6)}
               desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
               itemWidth="80vw"
               renderItem={(p, i) => (
@@ -682,7 +682,7 @@ export default function HomePage() {
               </h2>
             </Fade>
             <MobileCarousel
-              items={TESTIMONIALS}
+              items={[...TESTIMONIALS]}
               desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
               itemWidth="80vw"
               renderItem={(t, i) => (

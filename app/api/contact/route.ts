@@ -160,8 +160,14 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
 
   return `<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;" bgcolor="#f3f4f6">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<style>:root{color-scheme:light only}</style>
+</head>
+<body style="margin:0;padding:0;color-scheme:light only;" bgcolor="#f3f4f6">
 <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3f4f6" style="background:#f3f4f6;padding:24px 0">
 <tr><td align="center" style="padding:24px 16px">
 <table width="620" cellpadding="0" cellspacing="0" style="max-width:620px;width:100%">
@@ -187,7 +193,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>
 
   <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:24px 32px 0">
-    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;background:#ffffff">
       <tr>
         <td bgcolor="${scoreBg}" style="background:${scoreBg};border:1px solid ${scoreBorder};border-radius:8px;padding:16px 20px;vertical-align:top;width:120px">
           <p style="margin:0 0 2px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-family:monospace">Lead Score</p>

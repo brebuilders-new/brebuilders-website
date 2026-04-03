@@ -35,6 +35,7 @@ const SERVICE_AREAS = [
 
 const TOP_LINKS = [
   { label: 'Projects', href: '/projects' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' },
@@ -374,6 +375,7 @@ export default function Nav() {
             <div className="space-y-0">
               {[
                 { label: 'Projects & Portfolio', href: '/projects' },
+  { label: 'Gallery', href: '/gallery' },
                 { label: 'Blog', href: '/blog' },
                 { label: 'About BRE Builders', href: '/about' },
                 { label: 'Our Approach', href: '/our-approach' },

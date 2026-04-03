@@ -229,7 +229,7 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
-    slug: 'lake-tahoe-interior-renovation',
+    slug: 'lake-tahoe-renovation',
     title: 'Lake Tahoe Interior Renovation Project',
     type: 'Full Home Renovation',
     location: 'Zephyr Cove, Lake Tahoe, NV',
@@ -256,7 +256,7 @@ export const PROJECTS = [
     featured: true,
   },
   {
-    slug: 'rio-tinto-renovation',
+    slug: 'rio-tinto',
     title: 'Rio Tinto Home Renovation',
     type: 'Residential Renovation',
     location: 'Rio Tinto, NV',
@@ -267,7 +267,7 @@ export const PROJECTS = [
     categories: ['renovation', 'residential'],
   },
   {
-    slug: 'quaking-aspen-repair',
+    slug: 'quaking-aspen',
     title: 'Quaking Aspen Structural Repair',
     type: 'Structural Repair',
     location: 'Reno, NV',
@@ -278,7 +278,7 @@ export const PROJECTS = [
     categories: ['repair', 'structural'],
   },
   {
-    slug: 'lake-tahoe-deck-repair',
+    slug: 'lake-tahoe-deck',
     title: 'Lake Tahoe Deck Balcony Structural Repair',
     type: 'Deck Repair',
     location: 'Lake Tahoe, NV',
@@ -289,7 +289,7 @@ export const PROJECTS = [
     categories: ['deck', 'repair'],
   },
   {
-    slug: 'mine-shaft-framing',
+    slug: 'mine-shaft',
     title: 'Mine Shaft Framing & Shed Construction',
     type: 'Custom Construction',
     location: 'Reno, NV',
@@ -300,7 +300,7 @@ export const PROJECTS = [
     categories: ['custom', 'commercial'],
   },
   {
-    slug: 'car-wash-reno',
+    slug: 'car-wash',
     title: 'Car Wash Construction Reno NV',
     type: 'Commercial / Concrete',
     location: 'Reno, NV',

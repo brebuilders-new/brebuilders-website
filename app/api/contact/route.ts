@@ -180,7 +180,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td style="vertical-align:middle">
-          <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="110" style="display:block;margin-bottom:12px" />
+          <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="110" height="36" style="display:block;margin-bottom:12px;border:0" />
           <p style="margin:0 0 4px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request</p>
           <p style="margin:0 0 3px;font-size:22px;font-weight:700;color:#ffffff;font-family:Arial,sans-serif">${data.firstName} ${data.lastName}</p>
           <p style="margin:0;font-size:13px;color:#9ca3af;font-family:Arial,sans-serif">${serviceLabel}&nbsp;&nbsp;·&nbsp;&nbsp;${location || 'Location not provided'}</p>

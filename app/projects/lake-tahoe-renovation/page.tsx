@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { SITE } from '@/lib/site-data'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
-const BASE = 'https://brebuilders.com/wp-content/uploads/2025/12'
+const BASE = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12'
 
 export const metadata: Metadata = {
   title: 'Lake Tahoe Full Home Renovation | Portfolio',

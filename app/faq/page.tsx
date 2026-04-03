@@ -16,12 +16,28 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQS.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
+  '@graph': [
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://brebuilders.com/faq/#faqpage',
+      mainEntity: FAQS.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/faq/',
+      url: 'https://brebuilders.com/faq/',
+      name: 'Frequently Asked Questions | BRE Builders Reno NV',
+      description: 'Common questions about BRE Builders — licensing, permits, timelines, ADU costs, warranties, and service areas. Licensed NV #0085999.',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.faq-intro', '.speakable-faq'],
+      },
+    },
+  ],
 }
 
 export default function FAQPage() {

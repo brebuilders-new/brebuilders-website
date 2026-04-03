@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
+import { PROJECT_IMAGES } from '@/lib/image-catalog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 const CANONICAL = 'https://brebuilders.com/service-areas/truckee/'
@@ -254,6 +256,52 @@ export default function TruckeePage() {
         </section>
       </main>
 
+        {/* ── PROJECT GALLERY ── */}
+        <section className="py-20 bg-panel border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-7 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Completed Projects</span>
+            </div>
+            <h2 className="font-display font-light text-[clamp(24px,3.5vw,44px)] leading-tight text-cream mb-8">
+              Real Work.<br /><span className="italic text-teal">Mountain-Grade Builds.</span>
+            </h2>
+            <GalleryGrid
+              mode="grid"
+              images={[
+              {
+                src: PROJECT_IMAGES['arun-deck-repair'].gallery[0].url,
+                alt: PROJECT_IMAGES['arun-deck-repair'].gallery[0].alt,
+                title: PROJECT_IMAGES['arun-deck-repair'].gallery[0].title,
+                caption: PROJECT_IMAGES['arun-deck-repair'].gallery[0].caption,
+              },
+              {
+                src: PROJECT_IMAGES['arun-deck-repair'].gallery[1].url,
+                alt: PROJECT_IMAGES['arun-deck-repair'].gallery[1].alt,
+                title: PROJECT_IMAGES['arun-deck-repair'].gallery[1].title,
+                caption: PROJECT_IMAGES['arun-deck-repair'].gallery[1].caption,
+              },
+              {
+                src: PROJECT_IMAGES['zephyr-cove-lake-tahoe'].gallery[0].url,
+                alt: PROJECT_IMAGES['zephyr-cove-lake-tahoe'].gallery[0].alt,
+                title: PROJECT_IMAGES['zephyr-cove-lake-tahoe'].gallery[0].title,
+                caption: PROJECT_IMAGES['zephyr-cove-lake-tahoe'].gallery[0].caption,
+              },
+              {
+                src: PROJECT_IMAGES['ripon-estate'].gallery[0].url,
+                alt: PROJECT_IMAGES['ripon-estate'].gallery[0].alt,
+                title: PROJECT_IMAGES['ripon-estate'].gallery[0].title,
+                caption: PROJECT_IMAGES['ripon-estate'].gallery[0].caption,
+              },
+            ]}
+              aspectClass="h-48"
+            />
+            <div className="mt-8">
+              <Link href="/projects/" className="btn-ghost text-[13px]">View All Projects →</Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── RELATED CONTENT PILLS ── */}
         <section className="py-10 bg-deep border-t border-white/[0.05]">
           <div className="container">
@@ -268,6 +316,10 @@ export default function TruckeePage() {
               <Link href="/service-areas/lake-tahoe/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Lake Tahoe Service Area →</Link>
               <Link href="/service-areas/northern-california/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Northern California Services →</Link>
               <Link href="/services/repairs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs →</Link>
+              <Link href="/blog/how-to-add-an-adu-in-nevada" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Guide for CA & NV →</Link>
+              <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Mountain Deck Safety Guide →</Link>
+              <Link href="/services/adu/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Builder Truckee CA →</Link>
+              <Link href="/projects/lake-tahoe-renovation/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Lake Tahoe Project Gallery →</Link>
             </div>
           </div>
         </section>

@@ -78,7 +78,7 @@ const schema = {
       name: 'Contractor Lake Tahoe NV & CA | BRE Builders',
       url: 'https://brebuilders.com/service-areas/lake-tahoe/',
       description: 'BRE Builders serves Lake Tahoe — snow-load rated builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq', 'h1'] },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq', '.speakable-adu', 'h1'] },
     },
   ],
 }
@@ -238,6 +238,75 @@ export default function LakeTahoePage() {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+
+        {/* ── LAKE TAHOE ADU ── dedicated section for GSC keyword: lake tahoe adu builder pos 7.5 */}
+        <section className="py-20 lg:py-28 bg-deep" id="adu-lake-tahoe">
+          <div className="container">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-7 h-px bg-teal flex-shrink-0" />
+                  <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">ADU Construction · Lake Tahoe, NV</span>
+                </div>
+                <h2 className="font-display font-light text-[clamp(28px,4vw,52px)] leading-[1.05] tracking-tight text-cream mb-6">
+                  ADU Builder<br /><span className="italic text-teal">Lake Tahoe, Nevada.</span>
+                </h2>
+                <div className="speakable-adu space-y-4 text-[15px] leading-relaxed text-cream/55 mb-8">
+                  <p>
+                    Building an ADU at Lake Tahoe requires more than standard Nevada permitting. Every project must comply with Washoe County zoning, Douglas County regulations, and — in most cases — the Tahoe Regional Planning Agency (TRPA). BRE Builders manages the full permit process including TRPA review, environmental documentation, and coverage calculations specific to Tahoe Basin properties.
+                  </p>
+                  <p>
+                    ADU costs at Lake Tahoe typically range from <strong className="text-cream">$95,000 to $350,000</strong> for complete builds — higher than Reno due to site constraints, snow-load engineering requirements (up to 200 lbs per sq ft), and Tahoe-specific material standards. We provide free site evaluations to determine feasibility before any commitment.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    { label: 'Starting Cost', val: '$95,000' },
+                    { label: 'Avg Range', val: '$95K–$350K' },
+                    { label: 'Permit Process', val: 'TRPA + County' },
+                    { label: 'Timeline', val: '4–7 months' },
+                  ].map(s => (
+                    <div key={s.label} className="bg-panel rounded-xl border border-white/[0.06] p-4">
+                      <p className="font-mono text-[9px] tracking-[2px] text-cream/30 uppercase mb-1">{s.label}</p>
+                      <p className="font-display text-[22px] text-teal font-light leading-none">{s.val}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link href="/services/adu/" className="btn-primary">Lake Tahoe ADU Estimate →</Link>
+                  <Link href="/contact?service=adu&location=lake-tahoe" className="btn-ghost">Free Site Evaluation</Link>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-panel border border-white/[0.06] rounded-2xl p-6">
+                  <p className="font-mono text-[10px] tracking-[2px] text-teal uppercase mb-4">TRPA Permit Process</p>
+                  <div className="space-y-3">
+                    {[
+                      { step: '01', title: 'Site feasibility & coverage calc', desc: 'TRPA limits total land coverage. We calculate your parcel coverage before anything else.' },
+                      { step: '02', title: 'TRPA permit application', desc: 'Environmental review, coverage documentation, and TRPA-specific ADU application.' },
+                      { step: '03', title: 'County building permit', desc: 'Washoe or Douglas County building permit concurrent with TRPA process.' },
+                      { step: '04', title: 'Snow-load engineering', desc: 'All Tahoe structures require snow-load rated framing, roofing, and foundations.' },
+                      { step: '05', title: 'Construction & final inspection', desc: 'Licensed crew, code-compliant build, final sign-off by both TRPA and county.' },
+                    ].map(item => (
+                      <div key={item.step} className="flex gap-3">
+                        <span className="font-mono text-[11px] text-teal/50 w-6 flex-shrink-0 pt-0.5">{item.step}</span>
+                        <div>
+                          <p className="text-[13px] font-medium text-cream/80">{item.title}</p>
+                          <p className="text-[12px] text-cream/35 leading-snug">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-teal/[0.05] border border-teal/15 rounded-xl p-5">
+                  <p className="font-mono text-[10px] tracking-[2px] text-teal uppercase mb-2">NV License #0085999</p>
+                  <p className="text-[13px] text-cream/55">BRE Builders is licensed in Nevada and has completed ADU and construction projects throughout the Tahoe Basin. Free site evaluation — we assess feasibility before you commit to anything.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

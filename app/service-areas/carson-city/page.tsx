@@ -5,6 +5,8 @@ import Footer from '@/components/layout/Footer'
 import { FAQAccordion } from '@/components/ui/FAQAccordion'
 import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
+import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
+import { PROJECT_IMAGES } from '@/lib/image-catalog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 const CANONICAL = 'https://brebuilders.com/service-areas/carson-city/'
@@ -253,6 +255,46 @@ export default function CarsonCityPage() {
         </section>
       </main>
 
+        {/* ── PROJECT GALLERY ── */}
+        <section className="py-20 bg-panel border-t border-white/[0.05]">
+          <div className="container">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-7 h-px bg-teal flex-shrink-0" />
+              <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Completed Projects</span>
+            </div>
+            <h2 className="font-display font-light text-[clamp(24px,3.5vw,44px)] leading-tight text-cream mb-8">
+              Real Work.<br /><span className="italic text-teal">Northern Nevada.</span>
+            </h2>
+            <GalleryGrid
+              mode="grid"
+              images={[
+              {
+                src: PROJECT_IMAGES['quaking-aspen'].gallery[0].url,
+                alt: PROJECT_IMAGES['quaking-aspen'].gallery[0].alt,
+                title: PROJECT_IMAGES['quaking-aspen'].gallery[0].title,
+                caption: PROJECT_IMAGES['quaking-aspen'].gallery[0].caption,
+              },
+              {
+                src: PROJECT_IMAGES['rio-tinto'].gallery[0].url,
+                alt: PROJECT_IMAGES['rio-tinto'].gallery[0].alt,
+                title: PROJECT_IMAGES['rio-tinto'].gallery[0].title,
+                caption: PROJECT_IMAGES['rio-tinto'].gallery[0].caption,
+              },
+              {
+                src: PROJECT_IMAGES['car-wash-reno'].gallery[0].url,
+                alt: PROJECT_IMAGES['car-wash-reno'].gallery[0].alt,
+                title: PROJECT_IMAGES['car-wash-reno'].gallery[0].title,
+                caption: PROJECT_IMAGES['car-wash-reno'].gallery[0].caption,
+              },
+            ]}
+              aspectClass="h-48"
+            />
+            <div className="mt-8">
+              <Link href="/projects/" className="btn-ghost text-[13px]">View All Projects →</Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── RELATED CONTENT PILLS ── */}
         <section className="py-10 bg-deep border-t border-white/[0.05]">
           <div className="container">
@@ -267,6 +309,10 @@ export default function CarsonCityPage() {
               <Link href="/blog/structural-repair-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Foundation Repair Guide →</Link>
               <Link href="/service-areas/sparks/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Sparks, NV Service Area →</Link>
               <Link href="/service-areas/nevada/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Reno, NV Service Area →</Link>
+              <Link href="/blog/how-to-add-an-adu-in-nevada" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Guide Nevada 2025 →</Link>
+              <Link href="/blog/reno-home-repairs-20-year" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">20-Year Home Repair Guide →</Link>
+              <Link href="/services/adu/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">ADU Builders Carson City →</Link>
+              <Link href="/services/concrete/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Concrete Contractor Carson City →</Link>
             </div>
           </div>
         </section>

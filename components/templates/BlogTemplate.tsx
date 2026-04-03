@@ -100,6 +100,17 @@ export default function BlogTemplate({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', '.article-lede', 'article h2:first-of-type'],
+          },
+        }) }}
+      />
       <main>
         {/* ── HERO ── */}
         {/* ── BLOG HERO — MOBILE: compact strip, content below fold ── */}
@@ -206,6 +217,7 @@ export default function BlogTemplate({
 
                 prose-img:rounded-xl prose-img:border prose-img:border-white/[0.07]
               ">
+                <p className="article-lede sr-only" aria-hidden="false">{excerpt}</p>
                 {content}
               </div>
 

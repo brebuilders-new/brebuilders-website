@@ -158,6 +158,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             ],
           }) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            '@id': 'https://brebuilders.com/#website',
+            url: 'https://brebuilders.com',
+            name: 'Blue Reef Builders',
+            description: 'Licensed general contractor serving Reno NV and Northern California since 1989.',
+            publisher: { '@id': 'https://brebuilders.com/#business' },
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['h1', '.hero-lead', '.speakable-summary', '.speakable-intro'],
+            },
+          }) }}
+        />
       </head>
       <body>
         {/* GTM noscript fallback */}

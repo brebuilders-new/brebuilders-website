@@ -26,21 +26,28 @@ const SERVICE_LABELS: Record<string, string> = {
   'commercial': 'Commercial', 'other': 'Other',
 }
 
-const STATUS_COLOR: Record<string, { bg: string; text: string }> = {
-  new:        { bg: 'rgba(59,130,246,0.15)', text: '#93c5fd' },
-  contacted:  { bg: 'rgba(234,179,8,0.15)',  text: '#fde047' },
-  site_visit: { bg: 'rgba(168,85,247,0.15)', text: '#d8b4fe' },
-  quoted:     { bg: 'rgba(249,115,22,0.15)', text: '#fdba74' },
-  won:        { bg: 'rgba(34,197,94,0.15)',  text: '#86efac' },
-  lost:       { bg: 'rgba(239,68,68,0.15)',  text: '#fca5a5' },
-  archived:   { bg: 'rgba(107,114,128,0.15)',text: '#9ca3af' },
+const STATUS_COLOR: Record<string, { bg: string; text: string; border: string }> = {
+  new:        { bg: '#eff6ff', text: '#2563eb', border: '#bfdbfe' },
+  contacted:  { bg: '#fefce8', text: '#92400e', border: '#fde68a' },
+  site_visit: { bg: '#faf5ff', text: '#7c3aed', border: '#e9d5ff' },
+  quoted:     { bg: '#fff7ed', text: '#c2410c', border: '#fed7aa' },
+  won:        { bg: '#f0fdf4', text: '#15803d', border: '#bbf7d0' },
+  lost:       { bg: '#fef2f2', text: '#b91c1c', border: '#fecaca' },
+  archived:   { bg: '#f9fafb', text: '#6b7280', border: '#e5e7eb' },
 }
 
 function scoreColor(s: number) {
-  if (s >= 70) return '#22c55e'
-  if (s >= 45) return '#f59e0b'
-  if (s >= 20) return '#3b82f6'
+  if (s >= 70) return '#15803d'
+  if (s >= 45) return '#b45309'
+  if (s >= 20) return '#1d4ed8'
   return '#6b7280'
+}
+
+function scoreBg(s: number) {
+  if (s >= 70) return '#f0fdf4'
+  if (s >= 45) return '#fffbeb'
+  if (s >= 20) return '#eff6ff'
+  return '#f9fafb'
 }
 
 function timeAgo(d: string) {
@@ -124,7 +131,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                 fontFamily: 'monospace', transition: 'all 0.15s',
                 background: active ? '#c07d3e' : '#f3f4f6',
                 color: active ? '#ffffff' : '#6b7280',
-                border: active ? 'none' : '1px solid rgba(255,255,255,0.07)',
+                border: active ? 'none' : '1px solid #e5e7eb',
                 fontWeight: active ? 600 : 400,
               }}
             >
@@ -147,7 +154,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                 fontFamily: 'monospace', transition: 'all 0.15s',
                 background: active ? 'rgba(200,146,58,0.15)' : 'transparent',
                 color: active ? '#c8923a' : '#6b7280',
-                border: active ? '1px solid rgba(200,146,58,0.4)' : '1px solid rgba(255,255,255,0.07)',
+                border: active ? '1px solid rgba(200,146,58,0.5)' : '1px solid #e5e7eb',
               }}
             >
               {s === '' ? 'All services' : SERVICE_LABELS[s]}
@@ -200,10 +207,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                       <span style={{ fontSize: '12px', color: '#6b7280' }}>{svcText}</span>
                     </td>
                     <td style={{ ...cell, textAlign: 'center' }}>
-                      <div>
-                        <span style={{ fontSize: '15px', fontWeight: 700, color: scoreColor(lead.lead_score || 0) }}>{lead.lead_score}</span>
-                        <p style={{ margin: 0, fontSize: '9px', color: '#d1d5db', fontFamily: 'monospace' }}>/100</p>
-                      </div>
+                      <span style={{ display: 'inline-block', background: scoreBg(lead.lead_score || 0), color: scoreColor(lead.lead_score || 0), fontWeight: 700, fontSize: '13px', padding: '2px 8px', borderRadius: '6px', fontFamily: 'monospace' }}>{lead.lead_score}</span>
                     </td>
                     <td style={cell}>
                       <span style={{ fontSize: '12px', color: '#c8923a' }}>{lead.budget || '—'}</span>
@@ -212,11 +216,11 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                       <span style={{ fontSize: '12px' }}>{[lead.city, lead.state].filter(Boolean).join(', ') || '—'}</span>
                     </td>
                     <td style={cell}>
-                      <span style={{ padding: '3px 9px', borderRadius: '6px', fontSize: '11px', fontFamily: 'monospace', background: sc.bg, color: sc.text, border: `1px solid ${sc.text}30` }}>
+                      <span style={{ padding: '3px 9px', borderRadius: '6px', fontSize: '11px', fontFamily: 'monospace', background: sc.bg, color: sc.text, border: `1px solid ${sc.border}` }}>
                         {STATUS_LABELS[lead.status] || lead.status}
                       </span>
                     </td>
-                    <td style={{ ...cell, fontFamily: 'monospace', fontSize: '11px', color: 'rgba(232,228,220,0.3)' }}>
+                    <td style={{ ...cell, fontFamily: 'monospace', fontSize: '11px', color: '#9ca3af' }}>
                       {timeAgo(lead.created_at)}
                     </td>
                     <td style={cell}>

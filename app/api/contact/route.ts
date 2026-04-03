@@ -115,8 +115,8 @@ function row(label: string, value: unknown): string {
   if (!value || (Array.isArray(value) && (value as unknown[]).length === 0)) return ''
   const val = Array.isArray(value) ? (value as string[]).join(', ') : String(value)
   return `<tr>
-    <td style="padding:9px 16px;border-bottom:1px solid #1a2d3f;color:#6b8a9e;font-size:11px;font-family:monospace;letter-spacing:0.5px;width:150px;white-space:nowrap">${label}</td>
-    <td style="padding:9px 16px;border-bottom:1px solid #1a2d3f;color:#e2ddd5;font-size:13px;font-family:Arial,sans-serif">${val}</td>
+    <td style="padding:9px 16px;border-bottom:1px solid #1a2d3f;color:#9ca3af;font-size:11px;font-family:monospace;letter-spacing:0.5px;width:150px;white-space:nowrap">${label}</td>
+    <td style="padding:9px 16px;border-bottom:1px solid #f3f4f6;color:#374151;font-size:13px;font-family:Arial,sans-serif">${val}</td>
   </tr>`
 }
 
@@ -136,8 +136,8 @@ function buildServiceBlock(data: Record<string, unknown>): string {
   if (!filtered.length) return ''
   const label = SERVICE_LABELS[s] || s
   return `
-    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;font-family:monospace">${label} Details</p>
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a1827;border-radius:8px;overflow:hidden;margin-bottom:20px">
+    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">${label} Details</p>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;margin-bottom:20px">
       ${filtered.join('')}
     </table>`
 }
@@ -152,10 +152,10 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   const ts = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'medium', timeStyle: 'short' })
 
   const signalRows = lead.signals.map(s =>
-    `<tr><td style="padding:4px 0;font-size:12px;color:#86efac;font-family:Arial,sans-serif">&#10003;&nbsp;&nbsp;${s}</td></tr>`
+    `<tr><td style="padding:4px 0;font-size:12px;color:#15803d;font-family:Arial,sans-serif">&#10003;&nbsp;&nbsp;${s}</td></tr>`
   ).join('')
   const flagRows = lead.flags.map(f =>
-    `<tr><td style="padding:4px 0;font-size:12px;color:#fca5a5;font-family:Arial,sans-serif">&#9888;&nbsp;&nbsp;${f}</td></tr>`
+    `<tr><td style="padding:4px 0;font-size:12px;color:#b91c1c;font-family:Arial,sans-serif">&#9888;&nbsp;&nbsp;${f}</td></tr>`
   ).join('')
 
   const devBanner = isDev ? `
@@ -172,8 +172,8 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>New Lead — BRE Builders</title>
 </head>
-<body style="margin:0;padding:0;background:#0d1117;font-family:Arial,Helvetica,sans-serif">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#0d1117;padding:28px 0">
+<body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:28px 0">
 <tr><td align="center">
 <table width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%">
 
@@ -193,11 +193,11 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
             <tr>
               <td style="vertical-align:top">
                 <p style="margin:0 0 6px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request &nbsp;·&nbsp; BRE Builders</p>
-                <p style="margin:0 0 3px;font-size:24px;font-weight:300;color:#ffffff;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
-                <p style="margin:0;font-size:13px;color:#4a6680">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
+                <p style="margin:0 0 3px;font-size:24px;font-weight:600;color:#111827;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
+                <p style="margin:0;font-size:13px;color:#6b7280">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
               </td>
               <td align="right" style="vertical-align:top;white-space:nowrap;padding-left:20px">
-                <p style="margin:0;font-size:11px;color:#1cb8b3;font-family:monospace">${ts} PT</p>
+                <p style="margin:0;font-size:11px;color:#9ca3af;font-family:monospace">${ts} PT</p>
               </td>
             </tr>
           </table>
@@ -214,14 +214,14 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
         <td style="padding:18px 22px;vertical-align:top;border-right:1px solid ${scoreColor}25;width:110px">
           <p style="margin:0 0 3px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b8a9e;font-family:monospace">Lead Score</p>
           <p style="margin:0;font-size:40px;font-weight:700;color:${scoreColor};line-height:1;font-family:Arial,sans-serif">${lead.score}</p>
-          <p style="margin:1px 0 0;font-size:10px;color:#6b8a9e;font-family:monospace">/100</p>
-          <p style="margin:10px 0 0;font-size:15px;color:#e2ddd5">${lead.badge}</p>
+          <p style="margin:1px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">/100</p>
+          <p style="margin:10px 0 0;font-size:15px;color:#374151">${lead.badge}</p>
         </td>
         <!-- Signals / flags -->
         <td style="padding:18px 22px;vertical-align:top">
           ${signalRows ? `<table cellpadding="0" cellspacing="0">${signalRows}</table>` : ''}
           ${flagRows   ? `<table cellpadding="0" cellspacing="0" style="margin-top:10px">${flagRows}</table>` : ''}
-          ${!signalRows && !flagRows ? `<p style="margin:0;font-size:12px;color:#4a6680;font-family:Arial,sans-serif">No qualifying signals detected.</p>` : ''}
+          ${!signalRows && !flagRows ? `<p style="margin:0;font-size:12px;color:#6b7280;font-family:Arial,sans-serif">No qualifying signals detected.</p>` : ''}
         </td>
       </tr>
     </table>
@@ -229,8 +229,8 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
 
   <!-- ── CONTACT DETAILS ── -->
   <tr><td style="background:#060d14;padding:0 32px 20px">
-    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;font-family:monospace">Contact Details</p>
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a1827;border-radius:8px;overflow:hidden">
+    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Contact Details</p>
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb">
       ${row('Phone',        `<a href="tel:${data.phone}" style="color:#1cb8b3;text-decoration:none;font-family:Arial,sans-serif">${data.phone}</a>`)}
       ${row('Email',        `<a href="mailto:${data.email}" style="color:#1cb8b3;text-decoration:none;font-family:Arial,sans-serif">${data.email}</a>`)}
       ${row('Contact Pref', `${data.contactPref || '—'}${data.bestTime ? '&nbsp;·&nbsp;' + data.bestTime : ''}`)}
@@ -239,7 +239,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
       ${row('Owns Property',  data.ownsProperty)}
       ${row('Decision Maker', data.isDecisionMaker)}
       ${row('Getting Bids',   data.gettingBids)}
-      ${row('Budget',         `<strong style="color:#c8a96e;font-family:Arial,sans-serif">${data.budget || '—'}</strong>`)}
+      ${row('Budget',         `<strong style="color:#92400e;font-family:Arial,sans-serif">${data.budget || '—'}</strong>`)}
       ${row('Timeline',       data.timeline)}
       ${row('Source',         data.hearAboutUs)}
     </table>
@@ -253,10 +253,10 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   <!-- ── NOTES ── -->
   ${data.notes ? `
   <tr><td style="background:#060d14;padding:0 32px 20px">
-    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;font-family:monospace">Client Notes</p>
+    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Client Notes</p>
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
-        <td style="background:#0a1827;border-left:3px solid #c8a96e;padding:14px 18px;border-radius:0 8px 8px 0;font-size:13px;line-height:1.7;color:#c8d8e4;font-family:Arial,sans-serif">
+        <td style="background:#fffbeb;border-left:3px solid #d97706;padding:14px 18px;border-radius:0 8px 8px 0;font-size:13px;line-height:1.7;color:#374151;font-family:Arial,sans-serif">
           ${data.notes}
         </td>
       </tr>
@@ -264,7 +264,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>` : ''}
 
   <!-- ── FOOTER ── -->
-  <tr><td style="background:#030810;border-radius:0 0 12px 12px;padding:18px 32px">
+  <tr><td style="background:#f9fafb;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;border-top:none;padding:18px 32px">
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td style="vertical-align:middle">
@@ -272,7 +272,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
           <p style="margin:2px 0 0;font-size:10px;color:#2a3e52;font-family:monospace">NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798</p>
         </td>
         <td align="right" style="vertical-align:middle">
-          <a href="tel:7753914517" style="font-size:12px;color:#1cb8b3;text-decoration:none;font-family:monospace">(775) 391-4517</a>
+          <a href="tel:7753914517" style="font-size:12px;color:#0284c7;text-decoration:none;font-family:monospace">(775) 391-4517</a>
         </td>
       </tr>
     </table>
@@ -296,13 +296,13 @@ function buildClientEmail(data: Record<string, unknown>): string {
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>We received your request — BRE Builders</title>
 </head>
-<body style="margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;padding:32px 0">
+<body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:32px 0">
 <tr><td align="center">
 <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%">
 
   <!-- ── HEADER ── -->
-  <tr><td style="background:#060d14;border-radius:12px 12px 0 0">
+  <tr><td style="background:#ffffff;border-radius:12px 12px 0 0;border:1px solid #e5e7eb">
     <!-- Gold bar -->
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background:linear-gradient(90deg,#c8a96e,#e2c98a);height:3px;border-radius:12px 12px 0 0;font-size:0">&nbsp;</td></tr>
@@ -310,70 +310,70 @@ function buildClientEmail(data: Record<string, unknown>): string {
     <!-- Wordmark + greeting -->
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="padding:30px 36px 26px">
-        <p style="margin:0 0 18px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">Blue Reef Builders &nbsp;·&nbsp; Est. 1989</p>
-        <p style="margin:0;font-size:28px;font-weight:300;color:#ffffff;letter-spacing:-0.5px;line-height:1.15">Hi ${data.firstName},<br><span style="color:#e2ddd5;font-size:18px">we got your request.</span></p>
+        <p style="margin:0 0 18px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#92400e;font-family:monospace">Blue Reef Builders &nbsp;·&nbsp; Est. 1989</p>
+        <p style="margin:0;font-size:28px;font-weight:600;color:#111827;letter-spacing:-0.5px;line-height:1.15">Hi ${data.firstName},<br><span style="color:#e2ddd5;font-size:18px;color:#6b7280">we got your request.</span></p>
       </td></tr>
     </table>
   </td></tr>
 
   <!-- ── BODY ── -->
-  <tr><td style="background:#0a1520;padding:30px 36px">
+  <tr><td style="background:#ffffff;padding:30px 36px">
 
-    <p style="margin:0 0 22px;font-size:15px;line-height:1.8;color:#7a92a8;font-family:Arial,sans-serif">
-      Your <strong style="color:#e2ddd5">${serviceLabel}</strong> request has been received. Steve or his team will reach out within <strong style="color:#1cb8b3">24 hours</strong> to confirm details and schedule your free on-site estimate.
+    <p style="margin:0 0 22px;font-size:15px;line-height:1.8;color:#374151;font-family:Arial,sans-serif">
+      Your <strong style="color:#111827">${serviceLabel}</strong> request has been received. Steve or his team will reach out within <strong style="color:#0284c7">24 hours</strong> to confirm details and schedule your free on-site estimate.
     </p>
 
     <!-- What happens next -->
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#060d14;border-radius:10px;overflow:hidden;margin-bottom:22px">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border-radius:10px;overflow:hidden;margin-bottom:22px;border:1px solid #e5e7eb">
       <tr><td style="padding:18px 22px 8px">
-        <p style="margin:0 0 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;font-family:monospace">What happens next</p>
+        <p style="margin:0 0 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">What happens next</p>
       </td></tr>
       <tr><td style="padding:0 22px">
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr>
-            <td style="padding:10px 0;border-bottom:1px solid #1a2d3f;vertical-align:top;width:36px">
-              <span style="font-size:11px;color:#1cb8b3;font-family:monospace;font-weight:700">01</span>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;vertical-align:top;width:36px">
+              <span style="font-size:11px;color:#9ca3af;font-family:monospace;font-weight:700">01</span>
             </td>
-            <td style="padding:10px 0 10px 12px;border-bottom:1px solid #1a2d3f;font-size:13px;color:#7a92a8;font-family:Arial,sans-serif">
+            <td style="padding:10px 0 10px 12px;border-bottom:1px solid #e5e7eb;font-size:13px;color:#374151;font-family:Arial,sans-serif">
               Steve or his team reviews your request
             </td>
           </tr>
           <tr>
-            <td style="padding:10px 0;border-bottom:1px solid #1a2d3f;vertical-align:top;width:36px">
-              <span style="font-size:11px;color:#1cb8b3;font-family:monospace;font-weight:700">02</span>
+            <td style="padding:10px 0;border-bottom:1px solid #e5e7eb;vertical-align:top;width:36px">
+              <span style="font-size:11px;color:#9ca3af;font-family:monospace;font-weight:700">02</span>
             </td>
-            <td style="padding:10px 0 10px 12px;border-bottom:1px solid #1a2d3f;font-size:13px;color:#7a92a8;font-family:Arial,sans-serif">
+            <td style="padding:10px 0 10px 12px;border-bottom:1px solid #e5e7eb;font-size:13px;color:#374151;font-family:Arial,sans-serif">
               We call to confirm details and schedule your site visit
             </td>
           </tr>
           <tr>
             <td style="padding:10px 0;vertical-align:top;width:36px">
-              <span style="font-size:11px;color:#1cb8b3;font-family:monospace;font-weight:700">03</span>
+              <span style="font-size:11px;color:#9ca3af;font-family:monospace;font-weight:700">03</span>
             </td>
-            <td style="padding:10px 0 10px 12px;font-size:13px;color:#7a92a8;font-family:Arial,sans-serif">
+            <td style="padding:10px 0 10px 12px;font-size:13px;color:#374151;font-family:Arial,sans-serif">
               Free on-site estimate — no obligation, no pressure
             </td>
           </tr>
         </table>
       </td></tr>
       <tr><td style="padding:8px 22px 18px">
-        <p style="margin:0;font-size:11px;color:#2a3e52;font-family:monospace">Response within 24 hours &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; NV #0085999</p>
+        <p style="margin:0;font-size:11px;color:#9ca3af;font-family:monospace">Response within 24 hours &nbsp;·&nbsp; Free estimates &nbsp;·&nbsp; NV #0085999</p>
       </td></tr>
     </table>
 
     <!-- Direct contact -->
-    <table width="100%" cellpadding="0" cellspacing="0" style="border-left:3px solid #1cb8b3;background:#060d14;border-radius:0 10px 10px 0;margin-bottom:22px">
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-left:3px solid #0284c7;background:#f0f9ff;border-radius:0 10px 10px 0;margin-bottom:22px">
       <tr><td style="padding:18px 22px">
-        <p style="margin:0 0 12px;font-size:11px;letter-spacing:1px;color:#4a6680;font-family:monospace">REACH US DIRECTLY</p>
+        <p style="margin:0 0 12px;font-size:11px;letter-spacing:1px;color:#6b7280;font-family:monospace">REACH US DIRECTLY</p>
         <table cellpadding="0" cellspacing="0">
           <tr>
             <td style="padding:4px 0;font-size:14px;color:#e2ddd5;font-family:Arial,sans-serif">
-              &#128222;&nbsp;&nbsp;<a href="tel:7753914517" style="color:#1cb8b3;text-decoration:none">(775) 391-4517</a>
+              &#128222;&nbsp;&nbsp;<a href="tel:7753914517" style="color:#0284c7;text-decoration:none">(775) 391-4517</a>
             </td>
           </tr>
           <tr>
             <td style="padding:4px 0;font-size:14px;color:#e2ddd5;font-family:Arial,sans-serif">
-              &#9993;&nbsp;&nbsp;<a href="mailto:brebuilders@gmail.com" style="color:#1cb8b3;text-decoration:none">brebuilders@gmail.com</a>
+              &#9993;&nbsp;&nbsp;<a href="mailto:brebuilders@gmail.com" style="color:#0284c7;text-decoration:none">brebuilders@gmail.com</a>
             </td>
           </tr>
         </table>
@@ -383,18 +383,18 @@ function buildClientEmail(data: Record<string, unknown>): string {
   </td></tr>
 
   <!-- ── FOOTER ── -->
-  <tr><td style="background:#030810;border-radius:0 0 12px 12px;padding:18px 36px">
+  <tr><td style="background:#f9fafb;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;border-top:none;padding:18px 36px">
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td style="vertical-align:middle">
-          <p style="margin:0;font-size:13px;font-weight:700;color:#c8a96e;font-family:Arial,sans-serif">Blue Reef Builders</p>
-          <p style="margin:3px 0 0;font-size:10px;color:#2a3e52;line-height:1.7;font-family:monospace">
+          <p style="margin:0;font-size:13px;font-weight:700;color:#92400e;font-family:Arial,sans-serif">Blue Reef Builders</p>
+          <p style="margin:3px 0 0;font-size:10px;color:#9ca3af;line-height:1.7;font-family:monospace">
             NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798<br>
             2600 Mill St #400, Reno, NV 89502
           </p>
         </td>
         <td align="right" style="vertical-align:middle">
-          <a href="https://brebuilders.com" style="font-size:10px;color:#2a3e52;text-decoration:none;font-family:monospace">brebuilders.com</a>
+          <a href="https://brebuilders.com" style="font-size:10px;color:#9ca3af;text-decoration:none;font-family:monospace">brebuilders.com</a>
         </td>
       </tr>
     </table>

@@ -11,13 +11,13 @@ const NAV = [
 ]
 
 const STATUS_COLORS: Record<string, string> = {
-  new:        'bg-blue-500/15 text-blue-300 border-blue-500/30',
-  contacted:  'bg-yellow-500/15 text-yellow-300 border-yellow-500/30',
-  site_visit: 'bg-purple-500/15 text-purple-300 border-purple-500/30',
-  quoted:     'bg-orange-500/15 text-orange-300 border-orange-500/30',
-  won:        'bg-green-500/15 text-green-300 border-green-500/30',
-  lost:       'bg-red-500/15 text-red-300 border-red-500/30',
-  archived:   'bg-gray-500/15 text-gray-400 border-gray-500/30',
+  new:        'bg-blue-50 text-blue-700 border-blue-200',
+  contacted:  'bg-yellow-50 text-yellow-800 border-yellow-200',
+  site_visit: 'bg-purple-50 text-purple-700 border-purple-200',
+  quoted:     'bg-orange-50 text-orange-700 border-orange-200',
+  won:        'bg-green-50 text-green-700 border-green-200',
+  lost:       'bg-red-50 text-red-700 border-red-200',
+  archived:   'bg-gray-50 text-gray-500 border-gray-200',
 }
 
 export { STATUS_COLORS }

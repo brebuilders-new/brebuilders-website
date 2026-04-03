@@ -42,7 +42,7 @@ const AREAS = [
     services: ['Full Home Renovation', 'Deck Repair & Build', 'ADU Construction', 'Structural Repair', 'Water Intrusion'],
     img: IMGS.lt(16),
     alt: 'Full home renovation Lake Tahoe Zephyr Cove NV BRE Builders',
-    desc: '695 Lakeview Blvd full renovation. Multiple deck repair projects. Lake Tahoe snow load expertise.',
+    desc: 'Zephyr Cove, Lake Tahoe full renovation. Multiple deck repair projects. Lake Tahoe snow load expertise.',
     featured: true,
   },
   {

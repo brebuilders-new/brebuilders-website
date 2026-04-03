@@ -242,7 +242,11 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
         </div>
       </Card>
 
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_360px] gap-4 md:gap-5">
+      <div style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'minmax(0, 1fr)',
+                gap: '16px'
+              }} className="admin-lead-grid">
 
         {/* Left column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>

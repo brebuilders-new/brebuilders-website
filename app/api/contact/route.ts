@@ -146,8 +146,10 @@ function buildServiceBlock(data: Record<string, unknown>): string {
 function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: LeadScore): string {
   const serviceLabel = SERVICE_LABELS[data.service as string] || String(data.service)
   const location = [data.addressLine1, data.city, data.state, data.zip].filter(Boolean).join(', ')
-  const scoreColor  = lead.score >= 70 ? '#22c55e' : lead.score >= 45 ? '#f59e0b' : '#3b82f6'
-  const scoreBg     = lead.score >= 70 ? '#052010' : lead.score >= 45 ? '#1c1004' : '#040e1c'
+  // Light-mode score colors — dark text/bg on white
+  const scoreColor  = lead.score >= 70 ? '#15803d' : lead.score >= 45 ? '#b45309' : '#1d4ed8'
+  const scoreBg     = lead.score >= 70 ? '#f0fdf4' : lead.score >= 45 ? '#fffbeb' : '#eff6ff'
+  const scoreBorder = lead.score >= 70 ? '#bbf7d0' : lead.score >= 45 ? '#fde68a' : '#bfdbfe'
   const ts = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'medium', timeStyle: 'short' })
 
   const signalRows = lead.signals.map(s =>
@@ -156,13 +158,6 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   const flagRows = lead.flags.map(f =>
     `<tr><td style="padding:4px 0;font-size:12px;color:#b91c1c;font-family:Arial,sans-serif">&#9888;&nbsp;&nbsp;${f}</td></tr>`
   ).join('')
-
-  const devBanner = isDev ? `
-  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:0">
-    <tr><td style="background:#7f1d1d;padding:10px 32px;font-family:monospace;font-size:11px;color:#fecaca;letter-spacing:1px">
-      &#9888;&nbsp; DEV MODE — sent to protonmail only, not live team
-    </td></tr>
-  </table>` : ''
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -174,29 +169,25 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
 <body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif">
 <table width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:28px 0">
 <tr><td align="center">
-<table width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%">
-
-  ${devBanner}
+<table width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
 
   <!-- ── HEADER ── -->
-  <tr><td style="background:#060d14;border-radius:${isDev ? '0' : '12px 12px'} 0 0">
-    <!-- Gold bar -->
+  <tr><td style="background:#111827;padding:0">
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="background:#c8a96e;height:4px;font-size:0">&nbsp;</td></tr>
     </table>
-    <!-- Header content -->
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
-        <td style="padding:26px 32px 22px">
+        <td style="padding:24px 32px 20px">
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
               <td style="vertical-align:top">
                 <p style="margin:0 0 6px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request &nbsp;·&nbsp; BRE Builders</p>
-                <p style="margin:0 0 3px;font-size:24px;font-weight:600;color:#111827;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
-                <p style="margin:0;font-size:13px;color:#6b7280">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
+                <p style="margin:0 0 3px;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
+                <p style="margin:0;font-size:13px;color:#9ca3af">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
               </td>
               <td align="right" style="vertical-align:top;white-space:nowrap;padding-left:20px">
-                <p style="margin:0;font-size:11px;color:#9ca3af;font-family:monospace">${ts} PT</p>
+                <p style="margin:0;font-size:11px;color:#6b7280;font-family:monospace">${ts} PT</p>
               </td>
             </tr>
           </table>
@@ -206,17 +197,15 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>
 
   <!-- ── LEAD SCORE ── -->
-  <tr><td style="background:#ffffff;padding:0 32px 24px">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:${scoreBg};border:1px solid ${scoreColor}55;border-radius:10px">
+  <tr><td style="background:#ffffff;padding:24px 32px">
+    <table width="100%" cellpadding="0" cellspacing="0" style="background:${scoreBg};border:1px solid ${scoreBorder};border-radius:10px">
       <tr>
-        <!-- Score number -->
-        <td style="padding:18px 22px;vertical-align:top;border-right:1px solid ${scoreColor}25;width:110px">
-          <p style="margin:0 0 3px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b8a9e;font-family:monospace">Lead Score</p>
+        <td style="padding:18px 22px;vertical-align:top;border-right:1px solid ${scoreBorder};width:110px">
+          <p style="margin:0 0 4px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-family:monospace">Lead Score</p>
           <p style="margin:0;font-size:40px;font-weight:700;color:${scoreColor};line-height:1;font-family:Arial,sans-serif">${lead.score}</p>
           <p style="margin:1px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">/100</p>
           <p style="margin:10px 0 0;font-size:15px;color:#374151">${lead.badge}</p>
         </td>
-        <!-- Signals / flags -->
         <td style="padding:18px 22px;vertical-align:top">
           ${signalRows ? `<table cellpadding="0" cellspacing="0">${signalRows}</table>` : ''}
           ${flagRows   ? `<table cellpadding="0" cellspacing="0" style="margin-top:10px">${flagRows}</table>` : ''}
@@ -268,7 +257,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
       <tr>
         <td style="vertical-align:middle">
           <p style="margin:0;font-size:13px;font-weight:700;color:#c8a96e;font-family:Arial,sans-serif;letter-spacing:0.3px">Blue Reef Builders</p>
-          <p style="margin:2px 0 0;font-size:10px;color:#2a3e52;font-family:monospace">NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798</p>
+          <p style="margin:2px 0 0;font-size:10px;color:#6b7280;font-family:monospace">NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798</p>
         </td>
         <td align="right" style="vertical-align:middle">
           <a href="tel:7753914517" style="font-size:12px;color:#0284c7;text-decoration:none;font-family:monospace">(775) 391-4517</a>

@@ -7,25 +7,25 @@ import Footer from '@/components/layout/Footer'
 import { SITE, SERVICES, PROJECTS, TESTIMONIALS, FAQS } from '@/lib/site-data'
 
 // ─── All real project image URLs ──────────────────────────────────────────────
-const HERO_BG = 'https://brebuilders.com/wp-content/uploads/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp'
+const HERO_BG = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp'
 const HERO_IMGS = [
-  { src: 'https://brebuilders.com/wp-content/uploads/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp', alt: 'Lake Tahoe full home renovation exterior – BRE Builders' },
-  { src: 'https://brebuilders.com/wp-content/uploads/e228c329-e139-4d18-869f-29659b27e05d.jpg', alt: 'Luxury custom home Ripon CA classical entryway – Blue Reef Builders' },
-  { src: 'https://brebuilders.com/wp-content/uploads/2025/12/08-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-8-of-16-1024x684.webp', alt: 'Bathroom renovation Lake Tahoe – BRE Builders' },
-  { src: 'https://brebuilders.com/wp-content/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg', alt: 'Hillside deck repair Lake Tahoe – BRE Builders' },
+  { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp', alt: 'Lake Tahoe full home renovation exterior – BRE Builders' },
+  { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/e228c329-e139-4d18-869f-29659b27e05d.jpg', alt: 'Luxury custom home Ripon CA classical entryway – Blue Reef Builders' },
+  { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/08-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-8-of-16-1024x684.webp', alt: 'Bathroom renovation Lake Tahoe – BRE Builders' },
+  { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Arun-Deck-Repair-–-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg', alt: 'Hillside deck repair Lake Tahoe – BRE Builders' },
 ]
 
 const SERVICE_IMGS: Record<string, string> = {
-  adu: 'https://brebuilders.com/wp-content/uploads/adu-homepage-600x403.jpg',
-  repairs: 'https://brebuilders.com/wp-content/uploads/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg',
-  additions: 'https://brebuilders.com/wp-content/uploads/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp',
-  'kitchen-bath': 'https://brebuilders.com/wp-content/uploads/2025/12/08-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-8-of-16-1024x684.webp',
-  'new-home': 'https://brebuilders.com/wp-content/uploads/e228c329-e139-4d18-869f-29659b27e05d-600x403.jpg',
-  decks: 'https://brebuilders.com/wp-content/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg',
-  concrete: 'https://brebuilders.com/wp-content/uploads/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-600x403.jpg',
-  commercial: 'https://brebuilders.com/wp-content/uploads/Image_fx-9-600x403.jpg',
-  hauling: 'https://brebuilders.com/wp-content/uploads/image-26-600x403.jpg',
-  'lofts-condos': 'https://brebuilders.com/wp-content/uploads/loft-condo-remodel-600x403.jpg',
+  adu: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/adu-homepage-600x403.jpg',
+  repairs: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg',
+  additions: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp',
+  'kitchen-bath': 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/08-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-8-of-16-1024x684.webp',
+  'new-home': 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/e228c329-e139-4d18-869f-29659b27e05d.jpg',
+  decks: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Arun-Deck-Repair-–-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg',
+  concrete: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Commercial-Concrete-Slab-Pour-with-Utility-Access-–-Reno-NV-600x403.jpg',
+  commercial: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Image_fx-9-600x403.webp',
+  hauling: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/image-26-600x403.jpg',
+  'lofts-condos': 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/loft-condo-remodel-600x403.jpg',
 }
 
 // ─── Animated cycling word ─────────────────────────────────────────────────────
@@ -518,9 +518,9 @@ export default function HomePage() {
               <Fade>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { src: 'https://brebuilders.com/wp-content/uploads/03368773-da7c-4798-8693-4b3cfefd3615.jpg', alt: 'Mediterranean front elevation Ripon CA luxury estate', cls: 'col-span-2 h-56' },
-                    { src: 'https://brebuilders.com/wp-content/uploads/c1b0cbef-a25d-4690-9d95-0cc0bab05513.jpg', alt: "Chef's kitchen custom cabinetry marble backsplash Ripon CA", cls: 'h-44' },
-                    { src: 'https://brebuilders.com/wp-content/uploads/5e87f057-a867-4094-9529-636cd4f1e1ac.jpg', alt: 'Grand foyer custom iron staircase Ripon CA luxury home', cls: 'h-44' },
+                    { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/03368773-da7c-4798-8693-4b3cfefd3615.jpg', alt: 'Mediterranean front elevation Ripon CA luxury estate', cls: 'col-span-2 h-56' },
+                    { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/c1b0cbef-a25d-4690-9d95-0cc0bab05513.jpg', alt: "Chef's kitchen custom cabinetry marble backsplash Ripon CA", cls: 'h-44' },
+                    { src: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/5e87f057-a867-4094-9529-636cd4f1e1ac.jpg', alt: 'Grand foyer custom iron staircase Ripon CA luxury home', cls: 'h-44' },
                   ].map((img, i) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img key={i} src={img.src} alt={img.alt} className={`${img.cls} w-full object-cover rounded-xl`} loading="lazy" />
@@ -748,7 +748,7 @@ export default function HomePage() {
           <div className="absolute inset-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://brebuilders.com/wp-content/uploads/2025/12/14-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-14-of-16-1024x684.webp"
+              src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/14-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-14-of-16-1024x684.webp"
               alt="Blue Reef Builders completed project"
               className="w-full h-full object-cover"
             />

@@ -43,7 +43,7 @@ const schema = {
         {
           '@type': 'Question',
           name: 'Does BRE Builders work at Lake Tahoe properties?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders has completed multiple projects at Lake Tahoe including the full home renovation at 695 Lakeview Blvd, Zephyr Cove, deck structural repairs, and ADU work. Licensed NV #0085999.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders has completed multiple projects at Lake Tahoe including the full home renovation at Zephyr Cove, Lake Tahoe, deck structural repairs, and ADU work. Licensed NV #0085999.' },
         },
         {
           '@type': 'Question',
@@ -81,7 +81,7 @@ function SL({ text }: { text: string }) {
 }
 
 const FAQS = [
-  { q: 'Does BRE Builders work at Lake Tahoe properties?', a: 'Yes. BRE Builders has completed multiple projects at Lake Tahoe — including the full home renovation at 695 Lakeview Blvd in Zephyr Cove, structural deck repairs, and water intrusion work. NV License #0085999.' },
+  { q: 'Does BRE Builders work at Lake Tahoe properties?', a: 'Yes. BRE Builders has completed multiple projects at Lake Tahoe — including the full home renovation at Zephyr Cove, Lake Tahoe in Zephyr Cove, structural deck repairs, and water intrusion work. NV License #0085999.' },
   { q: 'Do Lake Tahoe decks need special structural requirements?', a: 'Yes. Lake Tahoe decks must handle heavy snow loads, UV degradation, and extreme freeze-thaw cycles. BRE Builders designs to Washoe County and Douglas County requirements and uses materials rated for high-altitude mountain climates.' },
   { q: 'Can BRE Builders build an ADU on a Lake Tahoe property?', a: 'Yes, subject to Washoe County zoning and the Tahoe Regional Planning Agency (TRPA) regulations. BRE Builders manages the full permit process including TRPA review. ADU costs in Tahoe typically range from $95,000 to $350,000.' },
   { q: 'How far is BRE Builders from Lake Tahoe?', a: "BRE Builders is based in Reno, NV — approximately 45 minutes from Zephyr Cove and 60 minutes from Incline Village. We regularly serve Tahoe properties and schedule efficiently to minimize travel time." },
@@ -144,7 +144,7 @@ export default function LakeTahoePage() {
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-10">
               <div>
                 <h2 className="font-display text-[clamp(26px,4vw,52px)] font-light leading-[1.05] tracking-tight">
-                  695 Lakeview Blvd.<br /><span className="italic text-teal">Zephyr Cove, NV.</span>
+                  Zephyr Cove, Lake Tahoe.<br /><span className="italic text-teal">Zephyr Cove, NV.</span>
                 </h2>
                 <p className="text-[14px] text-cream/45 mt-3 max-w-[420px]">
                   Complete interior and exterior transformation — structural upgrades, kitchen and bath
@@ -243,7 +243,7 @@ export default function LakeTahoePage() {
                 <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55 mb-8">
                   <p>
                     BRE Builders has completed verified projects at Lake Tahoe — including the full renovation
-                    of 695 Lakeview Blvd in Zephyr Cove, structural deck repairs at multiple properties, and
+                    of Zephyr Cove, Lake Tahoe in Zephyr Cove, structural deck repairs at multiple properties, and
                     water intrusion work on Tahoe vacation homes.
                   </p>
                   <p>

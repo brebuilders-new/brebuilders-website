@@ -164,7 +164,7 @@ export default function ProjectsPage() {
                     loading={i === 0 ? 'eager' : 'lazy'}
                   />
                   {/* Permanent gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-void/30 to-void/5 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-void/65 to-void/5 pointer-events-none" />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-void/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
                   {/* Gold left bar */}
@@ -250,7 +250,7 @@ export default function ProjectsPage() {
                   <div className="absolute bottom-0 left-0 right-0 p-5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2 pointer-events-none">
                     <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
                     <h3 className="font-display text-[17px] font-light text-white leading-snug">{p.title}</h3>
-                    <p className="text-[11px] text-white/50 mt-0.5">📍 {p.location}</p>
+                    <p className="text-[11px] text-white/90 mt-0.5">📍 {p.location}</p>
                   </div>
                   {/* Rich hover panel */}
                   <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-350 pointer-events-none">

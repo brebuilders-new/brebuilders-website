@@ -35,12 +35,13 @@ export default async function PipelinePage() {
   }, {})
 
   return (
-    <div style={{ padding: '32px' }}>
+    <div style={{ padding: '32px' , background: '#060e18', minHeight: '100vh' }}>
       <div style={{ marginBottom: '24px' }}>
         <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>Lead Pipeline</p>
         <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Pipeline</h1>
       </div>
 
+      <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '12px', minWidth: '900px', overflowX: 'auto' }}>
         {STAGES.map(stage => {
           const stageLeads = grouped[stage.value] || []

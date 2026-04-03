@@ -26,7 +26,7 @@ export const IMGS = {
 
   // STRUCTURAL REPAIRS
   repairs_rot:      `${CDN}/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg`,
-  repairs_deck_lt:  `${CDN}/Lake-Tahoe-Deck-Reinforcement---Steel-Angle-Bracket-System-600x403.jpg`,
+  repairs_deck_lt:  `${CDN}/Lake-Tahoe-Deck-Reinforcement-%E2%80%93-Steel-Angle-Bracket-System-1000x1000.jpg`,
   repairs_mine:     `${CDN}/Close-Up-of-Structural-Wall-with-Custom-Openings-600x403.jpg`,
   repairs_arun:     `${CDN}/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-1000x1000.jpg`,
 
@@ -53,7 +53,7 @@ export const IMGS = {
   ],
 
   // SERVICE CARDS
-  svc_commercial:   `${CDN}/Image_fx-9-600x403.jpg`,
+  svc_commercial:   `${CDN}/Image_fx-9-600x403.webp`,
   svc_custom_home:  `${CDN}/image-39-600x403.jpg`,
   svc_warehouse:    `${CDN}/image-18-600x403.jpg`,
   svc_hauling:      `${CDN}/image-26-600x403.jpg`,
@@ -68,13 +68,13 @@ export const IMGS = {
   svc_kitchen:      `${CDN}/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1-1024x768.webp`,
 
   // CONCRETE
-  concrete_slab: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access---Reno-NV-600x403.jpg`,
+  concrete_slab: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-1000x1000.jpg`,
 
   // DECKS
-  deck_charolette: `${CDN}/Charolettes-Finished-Deck---Smooth-Sealed-Surface-scaled-600x403.jpg`,
+  deck_charolette: `${CDN}/Charolettes-Finished-Deck-%E2%80%93-Smooth-Sealed-Surface-1000x1000.jpg`,
 
   // RIO TINTO
-  rio_tinto: `${CDN}/Interior-Living-Room-Drywall-Prep---Rio-Tinto-600x403.jpg`,
+  rio_tinto: `${CDN}/Interior-Living-Room-Drywall-Prep-%E2%80%93-Rio-Tinto-1000x1000.jpg`,
 
   // BLOG CONTENT IMAGES
   blog_contractor:    `${CDN}/pexels-nathanmartins-13834439-scaled.jpg`,

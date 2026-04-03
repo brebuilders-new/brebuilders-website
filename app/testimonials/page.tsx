@@ -136,21 +136,20 @@ export default function TestimonialsPage() {
               Thank you for your kind words that encourage us daily. Below are reviews from clients across Reno, Sparks, Sacramento, Modesto, and the greater region.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {TESTIMONIALS.map((t, i) => (
-                <div key={i} className="p-6 bg-panel rounded-2xl border border-white/[0.06] flex flex-col">
-                  <StarRating stars={t.stars} />
-                  <blockquote className="text-[14px] text-cream/70 leading-relaxed flex-1 mb-5 italic">
-                    &ldquo;{t.quote}&rdquo;
-                  </blockquote>
-                  <div className="pt-4 border-t border-white/[0.07]">
-                    <p className="text-[14px] text-cream/85 font-medium">{t.name}</p>
-                    <p className="font-mono text-[10px] text-teal/60 mt-0.5">{t.location}</p>
-                    <p className="font-mono text-[10px] text-cream/30 mt-0.5">{t.service}</p>
-                  </div>
+<MobileCarousel
+              items={TESTIMONIALS}
+              desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
+              itemWidth="82vw"
+              renderItem={(t, i) => (
+                <div key={t.name} className="bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full">
+                  <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
+                  <div className="flex gap-0.5 mb-3 pt-8">{[1,2,3,4,5].map(s => <span key={s} className="text-gold text-[14px]">&#9733;</span>)}</div>
+                  <p className="font-display text-[15px] italic text-cream/85 leading-relaxed mb-5">{t.text}</p>
+                  <div className="font-semibold text-[13px] text-cream">{t.name}</div>
+                  <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                 </div>
-              ))}
-            </div>
+              )}
+            />
           </div>
         </section>
 

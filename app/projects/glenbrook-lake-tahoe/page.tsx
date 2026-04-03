@@ -32,9 +32,9 @@ const schema = {
 const PHOTOS = [
   { n: 1,  title: 'Full Home Renovation — Exterior',       caption: 'Complete exterior renovation of this Lake Tahoe mountain home. Structural upgrades, new siding, and snow-load rated systems installed to current Washoe County code.' },
   { n: 2,  title: 'Front Elevation — Completed',           caption: 'Front elevation after full renovation. New exterior cladding, updated trim, and improved weather barrier throughout. Designed for Lake Tahoe winter conditions.' },
-  { n: 3,  title: 'Entry and Facade Detail',               caption: 'Entry area detail showing quality of exterior finish work. All exterior materials selected for performance in Lake Tahoe's freeze-thaw climate cycle.' },
+  { n: 3,  title: 'Entry and Facade Detail',               caption: "Entry area detail showing quality of exterior finish work. All exterior materials selected for performance in Lake Tahoe's freeze-thaw climate cycle." },
   { n: 4,  title: 'Main Living Area',                      caption: 'Main living area renovation — new flooring, updated walls, and improved lighting throughout. Open layout maintained while upgrading all finish materials.' },
-  { n: 5,  title: 'Interior Finish Work',                  caption: 'Interior finish detail showing the quality of materials and craftsmanship. Every surface inspected and finished to BRE Builders' standard before client walkthrough.' },
+  { n: 5,  title: 'Interior Finish Work',                  caption: "Interior finish detail showing the quality of materials and craftsmanship. Every surface inspected and finished to BRE Builders' standard before client walkthrough." },
   { n: 6,  title: 'Kitchen Renovation',                    caption: 'Kitchen renovation with new cabinetry, updated fixtures, and modern finishes. Layout optimized for function while maintaining the mountain home aesthetic.' },
   { n: 7,  title: 'Dining and Living Space',               caption: 'Dining and living renovation — coordinated finishes throughout the open-plan main level. New flooring connects kitchen, dining, and living zones seamlessly.' },
   { n: 8,  title: 'Master Suite Renovation',               caption: 'Master suite renovation — enlarged layout, new flooring, and updated lighting. En suite bathroom completely renovated as part of this phase.' },

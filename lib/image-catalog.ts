@@ -185,7 +185,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
     },
     gallery: [
       { url: `${CDN}/Arun-Deck-Repair---Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg`, alt: 'Reinforced Support Beams Elevated Framing Hillside Deck — Lake Tahoe NV | BRE Builders | NV #0085999', title: 'Reinforced Support Beams | Arun Deck Repair | BRE Builders', caption: 'Reinforced Support Beams — Elevated Framing', keywords: ['deck repair lake tahoe', 'structural deck', 'bre builders'] },
-      { url: `${CDN}/Lake-Tahoe-Deck-Reinforcement---Steel-Angle-Bracket-System-600x403.jpg`, alt: 'Steel Angle Bracket System Securing Deck to CMU Wall — Lake Tahoe Structural Repair by BRE Builders | NV #0085999', title: 'Steel Bracket System | Lake Tahoe Deck Repair | BRE Builders', caption: 'Steel Angle Bracket System — Deck to CMU Wall', keywords: ['steel bracket deck repair', 'deck structural repair lake tahoe', 'bre builders'] },
+      { url: `${CDN}/Lake-Tahoe-Deck-Reinforcement-%E2%80%93-Steel-Angle-Bracket-System-1000x1000.jpg`, alt: 'Steel Angle Bracket System Securing Deck to CMU Wall — Lake Tahoe Structural Repair by BRE Builders | NV #0085999', title: 'Steel Bracket System | Lake Tahoe Deck Repair | BRE Builders', caption: 'Steel Angle Bracket System — Deck to CMU Wall', keywords: ['steel bracket deck repair', 'deck structural repair lake tahoe', 'bre builders'] },
     ],
   },
 
@@ -196,7 +196,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
     location: 'Reno, NV',
     service_type: 'commercial-concrete',
     thumbnail: {
-      url: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access---Reno-NV-600x403.jpg`,
+      url: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-1000x1000.jpg`,
       wp_url: `${WP}/Commercial-Concrete-Slab-Pour-with-Utility-Access-–-Reno-NV-600x403.jpg`,
       alt: 'Commercial Concrete Slab Pour with Utility Access — Car Wash Construction Reno NV by BRE Builders | NV #0085999',
       title: 'Car Wash Concrete Slab & Foundation — Reno NV | BRE Builders',
@@ -204,7 +204,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
       keywords: ['commercial concrete reno nv', 'concrete slab pour', 'car wash construction reno', 'bre builders', 'commercial contractor nevada'],
     },
     gallery: [
-      { url: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access---Reno-NV-600x403.jpg`, alt: 'Commercial Concrete Slab Pour Utility Access Car Wash Reno NV — BRE Builders | NV #0085999', title: 'Concrete Slab Pour | Car Wash Reno NV | BRE Builders', caption: 'Commercial Concrete Slab Pour with Utility Access', keywords: ['concrete slab reno', 'commercial construction', 'bre builders'] },
+      { url: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-1000x1000.jpg`, alt: 'Commercial Concrete Slab Pour Utility Access Car Wash Reno NV — BRE Builders | NV #0085999', title: 'Concrete Slab Pour | Car Wash Reno NV | BRE Builders', caption: 'Commercial Concrete Slab Pour with Utility Access', keywords: ['concrete slab reno', 'commercial construction', 'bre builders'] },
     ],
   },
 
@@ -215,7 +215,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
     location: 'Rio Tinto, NV',
     service_type: 'full-home-renovation',
     thumbnail: {
-      url: `${CDN}/Interior-Living-Room-Drywall-Prep---Rio-Tinto-600x403.jpg`,
+      url: `${CDN}/Interior-Living-Room-Drywall-Prep-%E2%80%93-Rio-Tinto-1000x1000.jpg`,
       wp_url: `${WP}/Interior-Living-Room-Drywall-Prep-–-Rio-Tinto-600x403.jpg`,
       alt: 'Interior Living Room Drywall Prep — Rio Tinto Home Renovation Reno NV by BRE Builders | NV #0085999',
       title: 'Rio Tinto Home Renovation — Interior & Exterior | BRE Builders Reno NV',
@@ -223,7 +223,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
       keywords: ['home renovation reno nv', 'interior renovation', 'drywall contractor reno', 'bre builders', 'nv #0085999'],
     },
     gallery: [
-      { url: `${CDN}/Interior-Living-Room-Drywall-Prep---Rio-Tinto-600x403.jpg`, alt: 'Interior Living Room Drywall Prep Rio Tinto Reno NV — BRE Builders | NV #0085999', title: 'Interior Drywall Prep | Rio Tinto Renovation | BRE Builders', caption: 'Interior Living Room — Drywall Preparation', keywords: ['drywall renovation reno', 'interior renovation', 'bre builders'] },
+      { url: `${CDN}/Interior-Living-Room-Drywall-Prep-%E2%80%93-Rio-Tinto-1000x1000.jpg`, alt: 'Interior Living Room Drywall Prep Rio Tinto Reno NV — BRE Builders | NV #0085999', title: 'Interior Drywall Prep | Rio Tinto Renovation | BRE Builders', caption: 'Interior Living Room — Drywall Preparation', keywords: ['drywall renovation reno', 'interior renovation', 'bre builders'] },
     ],
   },
 }

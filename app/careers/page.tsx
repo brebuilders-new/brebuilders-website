@@ -80,7 +80,7 @@ export default function CareersPage() {
           lastName: form.lastName,
           phone: form.phone,
           email: form.email,
-          service: \`CAREERS: \${form.position}\`,
+          service: `CAREERS: ${form.position}`,
           message: summary,
         }),
       })

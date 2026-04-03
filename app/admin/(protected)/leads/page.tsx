@@ -207,7 +207,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
                       <span style={{ fontSize: '12px', color: '#6b7280' }}>{svcText}</span>
                     </td>
                     <td style={{ ...cell, textAlign: 'center' }}>
-                      <span style={{ display: 'inline-block', background: scoreBg(lead.lead_score || 0), color: scoreColor(lead.lead_score || 0), fontWeight: 700, fontSize: '13px', padding: '2px 8px', borderRadius: '6px', fontFamily: 'monospace' }}>{lead.lead_score}</span>
+                      <span style={{ display: 'inline-block', background: scoreBg(lead.lead_score || 0), color: scoreColor(lead.lead_score || 0), fontWeight: 700, fontSize: '13px', padding: '2px 8px', borderRadius: '6px', fontFamily: 'monospace' }}>{Math.min(lead.lead_score || 0, 100)}</span>
                     </td>
                     <td style={cell}>
                       <span style={{ fontSize: '12px', color: '#c8923a' }}>{lead.budget || '—'}</span>

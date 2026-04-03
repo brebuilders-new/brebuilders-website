@@ -90,11 +90,15 @@ function calcLeadScore(data: Record<string, unknown>): LeadScore {
   if (data.budget === 'Not sure yet') flags.push('Budget undefined')
 
   let badge = '🔵 Standard'
-  if (score >= 70)      badge = '🔥 Hot Lead'
-  else if (score >= 45) badge = '⚡ Warm Lead'
-  else if (score < 20)  badge = '⬜ Early Stage'
+  // Cap at 100 — max theoretical is 140, 100 is the ceiling displayed
+  const displayScore = Math.min(score, 100)
 
-  return { score, badge, signals, flags }
+  if (score >= 70)      badge = '🔥 Hot'
+  else if (score >= 45) badge = '⚡ Warm'
+  else if (score >= 20) badge = '🔵 Standard'
+  else                  badge = '⬜ Early'
+
+  return { score: displayScore, badge, signals, flags }
 }
 
 const SERVICE_LABELS: Record<string, string> = {
@@ -198,8 +202,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
         <td bgcolor="${scoreBg}" style="background:${scoreBg};border:1px solid ${scoreBorder};border-radius:8px;padding:16px 20px;vertical-align:top;width:120px">
           <p style="margin:0 0 2px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-family:monospace">Lead Score</p>
           <p style="margin:0;font-size:38px;font-weight:700;color:${scoreColor};line-height:1;font-family:Arial,sans-serif">${lead.score}</p>
-          <p style="margin:2px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">/100</p>
-          <p style="margin:10px 0 0;font-size:14px;color:#374151;font-family:Arial,sans-serif">${lead.badge}</p>
+          <p style="margin:8px 0 0;font-size:15px;color:#374151;font-family:Arial,sans-serif">${lead.badge}</p>
         </td>
         <td style="padding-left:16px;vertical-align:top">
           ${signalRows ? `<table cellpadding="0" cellspacing="2">${signalRows}</table>` : ''}

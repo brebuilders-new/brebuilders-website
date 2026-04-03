@@ -152,7 +152,7 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
           {/* Score badge */}
           <div style={{ background: scoreBg(lead.lead_score), border: `1px solid ${scoreBorder(lead.lead_score)}`, borderRadius: '12px', padding: '14px 20px', textAlign: 'center', minWidth: '100px' }}>
             <p style={{ margin: '0 0 2px', fontFamily: 'monospace', fontSize: '9px', color: '#9ca3af', textTransform: 'uppercase', letterSpacing: '2px' }}>Score</p>
-            <p style={{ margin: 0, fontSize: '30px', fontWeight: 700, color: scoreColor(lead.lead_score), lineHeight: 1 }}>{lead.lead_score}</p>
+            <p style={{ margin: 0, fontSize: '30px', fontWeight: 700, color: scoreColor(lead.lead_score), lineHeight: 1 }}>{Math.min(lead.lead_score, 100)}</p>
             <p style={{ margin: '4px 0 0', fontSize: '12px', color: '#374151' }}>{lead.score_badge}</p>
           </div>
         </div>

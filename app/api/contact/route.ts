@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,11 +10,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const resendKey = process.env.RESEND_API_KEY
-    if (!resendKey) {
-      console.error('RESEND_API_KEY not set')
+    const gmailUser = process.env.GMAIL_USER
+    const gmailPass = process.env.GMAIL_APP_PASSWORD
+    if (!gmailUser || !gmailPass) {
+      console.error('Gmail credentials not set')
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 })
     }
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: { user: gmailUser, pass: gmailPass },
+    })
 
     const isDev = process.env.NODE_ENV !== 'production'
     const toEmail = isDev ? 'ifyougetlockedout@protonmail.com' : 'brebuilders@gmail.com'
@@ -24,34 +31,21 @@ export async function POST(req: NextRequest) {
     const leadScore = calcLeadScore(body)
     const subject = `${leadScore.badge} ${serviceLabel} — ${firstName} ${lastName} (${location})`
 
-    const teamRes = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        from: 'BRE Builders Leads <no-reply@brebuilders.com>',
-        to: [toEmail],
-        ...(ccEmails.length > 0 && { cc: ccEmails }),
-        reply_to: email,
-        subject: isDev ? `[DEV] ${subject}` : subject,
-        html: buildTeamEmail(body, isDev, leadScore),
-      }),
+    await transporter.sendMail({
+      from: `BRE Builders Leads <${gmailUser}>`,
+      to: toEmail,
+      ...(ccEmails.length > 0 && { cc: ccEmails }),
+      replyTo: email,
+      subject: isDev ? `[DEV] ${subject}` : subject,
+      html: buildTeamEmail(body, isDev, leadScore),
     })
 
-    if (!teamRes.ok) {
-      console.error('Resend team email error:', await teamRes.text())
-      return NextResponse.json({ error: 'Failed to send notification' }, { status: 500 })
-    }
-
     if (!isDev) {
-      await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: 'BRE Builders <no-reply@brebuilders.com>',
-          to: [email],
-          subject: `We received your ${serviceLabel} request — BRE Builders`,
-          html: buildClientEmail(body),
-        }),
+      await transporter.sendMail({
+        from: `BRE Builders <${gmailUser}>`,
+        to: email,
+        subject: `We received your ${serviceLabel} request — BRE Builders`,
+        html: buildClientEmail(body),
       })
     }
 

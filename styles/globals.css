@@ -232,11 +232,11 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .page-hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(14,12,10,.95) 0%, rgba(14,12,10,.55) 50%, rgba(14,12,10,.2) 100%);
+  background: linear-gradient(to top, rgba(14,12,10,.98) 0%, rgba(14,12,10,.75) 40%, rgba(14,12,10,.50) 70%, rgba(14,12,10,.35) 100%);
 }
 .page-hero-overlay-side {
   position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(14,12,10,.80) 0%, rgba(14,12,10,.20) 60%, transparent 100%);
+  background: linear-gradient(to right, rgba(14,12,10,.90) 0%, rgba(14,12,10,.55) 50%, rgba(14,12,10,.15) 80%, transparent 100%);
 }
 
 /* ─── SPEAKABLE CONTENT ──────────────────────────────────────────────────────── */

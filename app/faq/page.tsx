@@ -31,7 +31,7 @@ const schema = {
       '@id': 'https://brebuilders.com/faq/',
       url: 'https://brebuilders.com/faq/',
       name: 'Frequently Asked Questions | BRE Builders Reno NV',
-      description: 'Common questions about BRE Builders — licensing, permits, timelines, ADU costs, warranties, and service areas. Licensed NV #0085999.',
+      description: 'Common questions about BRE Builders — licensing, permits, timelines, ADU costs, warranties, and service areas. Licensed NV #0085999 · CA #1093798.',
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.faq-intro', '.speakable-faq'],

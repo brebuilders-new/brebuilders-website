@@ -10,8 +10,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Projects & Portfolio | Reno NV & California',
-  description:
-    'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial construction. Northern Nevada and California since 1989.',
+  description: 'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial. Northern Nevada and California since 1989. NV #0085999.',
   alternates: { canonical: `${SITE_URL}/projects/` },
 }
 

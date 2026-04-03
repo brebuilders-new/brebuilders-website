@@ -13,8 +13,8 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Kitchen & Bath Remodel Reno NV | $15K–$80K | BRE Builders',
-  description: 'Kitchen remodels from $15K–$80K and full bathroom renovations in Reno, NV. Custom cabinetry, tile, layout changes. Licensed NV #0085999. Free on-site estimate.',
+  title: 'Kitchen & Bath Remodel Reno NV | $15K–$80K',
+  description: 'Kitchen remodels $15K–$80K and full bathroom renovations in Reno, NV. Custom cabinetry, tile, layout changes. Licensed NV #0085999. Free on-site estimate.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Custom+Cabinetry+%C2%B7+Tile+%C2%B7+Countertops+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },

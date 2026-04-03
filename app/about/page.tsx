@@ -8,7 +8,7 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'About | Blue Reef Enterprises | Licensed Since 1989',
+  title: 'About BRE Builders | Licensed Since 1989',
   description:
     'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercial.',
   alternates: { canonical: `${SITE_URL}/about/` },

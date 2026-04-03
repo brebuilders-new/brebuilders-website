@@ -8,8 +8,8 @@ import { SITE } from '@/lib/site-data'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Blog | BRE Builders Reno NV — Construction Tips & Guides',
-  description: 'ADU guides, structural repair advice, kitchen remodeling tips, and Northern Nevada construction insights from BRE Builders — licensed general contractor since 1989.',
+  title: 'Construction Guides | Reno NV Contractor',
+  description: 'ADU guides, structural repair tips, and construction insights for Reno homeowners from BRE Builders — licensed general contractor since 1989.',
   openGraph: {
     title: 'BRE Builders Blog — Construction Guides for Reno Homeowners',
     description: 'ADU guides, repair advice, remodeling tips, and local insights. Licensed NV #0085999 · CA #1093798.',

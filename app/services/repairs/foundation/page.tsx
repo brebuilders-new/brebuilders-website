@@ -9,7 +9,7 @@ import { SITE } from '@/lib/site-data'
 import { IMGS } from '@/lib/images'
 
 export const metadata: Metadata = {
-  title: 'Foundation Repair Reno NV | Foundation Issues',
+  title: 'Foundation Repair Reno NV | Free Inspection',
   description:
     'Foundation repair and structural inspection in Reno, NV. Licensed GC since 1989. Cracks, settlement, drainage issues. NV License #0085999. Free evaluation.',
   openGraph: {
@@ -28,7 +28,7 @@ const schema = {
       '@type': 'Service',
       '@id': 'https://brebuilders.com/repairs/foundation-repair-and-foundation-issues-in-reno-nv/#service',
       name: 'Foundation Repair Reno NV',
-      description: 'BRE Builders provides foundation repair and structural inspection in Reno, NV. Cracks, settlement, drainage, framing. Licensed NV #0085999.',
+      description: 'Foundation crack repair, underpinning, leveling, and structural stabilization in Reno, NV. Licensed GC since 1989. Free on-site inspection. NV #0085999.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },

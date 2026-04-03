@@ -11,7 +11,7 @@ import { IMGS } from '@/lib/images'
 export const metadata: Metadata = {
   title: 'General Contractor Reno NV | Licensed Since 1989',
   description:
-    'BRE Builders is a licensed general contractor in Reno, NV. ADUs, repairs, kitchen & bath, additions, custom homes, commercial. NV License #0085999. Free estimates.',
+    'Licensed GC in Reno, NV since 1989. ADUs, structural repairs, kitchen & bath, additions, custom homes. NV #0085999. Free estimates.',
   openGraph: {
     images: [{
       url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+Licensed+Since+1989&badge=Reno+NV`,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'General Contractor Reno NV | BRE Builders — Licensed Since 1989',
-    description: '#1 ADU Builder Reno · Page 1 Foundation Repair · Licensed NV #0085999. Free estimates.',
+    description: 'Licensed GC in Reno, NV since 1989. ADUs, structural repairs, kitchen & bath, additions, custom homes. NV #0085999. Free estimates.',
     images: [`${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+NV+%230085999&badge=Reno+NV`],
   },
   alternates: { canonical: `${SITE_URL}/service-areas/nevada/` },

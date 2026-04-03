@@ -10,7 +10,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
-  description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. Free estimates.',
+  description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. 35+ years. Free estimates.',
   alternates: { canonical: `${SITE_URL}/commercial-services/` },
 }
 

@@ -9,8 +9,8 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Concrete Contractors Reno NV | Foundations, Slabs & Flatwork | BRE Builders',
-  description: 'Expert concrete contractors in Reno, NV. Foundations, driveways, patios, commercial slabs, walkways. Licensed NV #0085999. Free estimates.',
+  title: 'Concrete Contractors Reno NV | Slabs & Flatwork',
+  description: 'Expert concrete contractors in Reno, NV. Foundations, driveways, patios, commercial slabs, and walkways. Licensed NV #0085999. 35+ years. Free estimates.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, width: 1200, height: 630 }],
   },

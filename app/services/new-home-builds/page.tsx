@@ -20,9 +20,9 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'New Home Builds Reno NV | Ground-Up Construction | Blue Reef Builders',
+  title: 'New Home Builds Reno NV | Ground-Up Builds',
   description:
-    'New home construction in Reno, NV and Northern California. Licensed builder with 35+ years experience. Full design-build, all permits handled. NV #0085999 · CA #1093798. Free estimate.',
+    'New home construction in Reno NV and Northern California. 35+ years. Full design-build, permits handled. NV #0085999 · CA #1093798. Free estimate.',
   openGraph: {
     title: 'New Home Builds Reno NV | Blue Reef Builders',
     images: [{
@@ -41,7 +41,7 @@ const schema = {
       '@id': 'https://brebuilders.com/services/new-home-builds/#service',
       name: 'New Home Builds Reno NV',
       alternateName: ['New Home Construction Reno', 'Ground-Up Home Builder Reno NV', 'New Construction Builder Northern Nevada'],
-      description: 'BRE Builders constructs new homes in Reno, NV and Northern California. Ground-up design-build with full permit handling. Licensed NV #0085999 · CA #1093798.',
+      description: 'New home construction in Reno NV and Northern California. 35+ years. Full design-build, all permits handled. NV #0085999 · CA #1093798. Free estimate.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },

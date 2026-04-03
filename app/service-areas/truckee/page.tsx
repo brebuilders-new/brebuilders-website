@@ -12,8 +12,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 const CANONICAL = 'https://brebuilders.com/service-areas/truckee/'
 
 export const metadata: Metadata = {
-  title: 'Contractor Truckee CA & Graeagle | Snow-Load Rated Builds | CA Lic #1093798',
-  description: 'BRE Builders serves Truckee CA and Graeagle — custom homes, snow-load rated decks, structural repair, remodeling. 200+ inches annual snow. CA Lic #1093798. Free estimates.',
+  title: 'Contractor Truckee CA & Graeagle | CA Lic #1093798',
+  description: 'BRE Builders serves Truckee CA and Graeagle. Custom homes, snow-load decks, structural repair, remodeling. CA #1093798. Free estimates.',
   openGraph: {
     title: 'Contractor Truckee CA & Graeagle | Snow-Load Builds | CA Lic #1093798',
     description: 'Mountain construction expertise. Custom homes, decks engineered for 200+ inch snowfall, structural repairs, vacation home remodeling. CA #1093798.',

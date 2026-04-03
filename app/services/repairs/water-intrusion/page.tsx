@@ -9,7 +9,7 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Water Intrusion Repair Reno NV | Moisture Issues',
+  title: 'Water Intrusion Repair Reno NV | Free Evaluation',
   description:
     'Water intrusion and moisture repair in Reno, NV. Basement, crawl space, foundation water damage. Licensed NV #0085999. Free evaluation.',
   alternates: { canonical: `${SITE_URL}/repairs/water-intrusion-and-moisture-issues-in-reno-nv/` },
@@ -22,7 +22,7 @@ const schema = {
       '@type': 'Service',
       '@id': 'https://brebuilders.com/repairs/water-intrusion-and-moisture-issues-in-reno-nv/#service',
       name: 'Water Intrusion Repair Reno NV',
-      description: 'BRE Builders diagnoses and repairs water intrusion and moisture issues in Reno, NV. Basement, crawl space, foundation drainage. Licensed NV #0085999.',
+      description: 'Water intrusion diagnosis, moisture barriers, drainage correction in Reno, NV. Basement, crawl space, foundation drainage. Licensed NV #0085999. Free evaluation.',
       provider: { '@id': 'https://brebuilders.com/#business' },
     },
     {

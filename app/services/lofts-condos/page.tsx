@@ -9,8 +9,8 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Loft & Condo Remodeling Reno NV | BRE Builders',
-  description: 'Loft and condo remodeling in Reno, NV. Modern renovations, custom layouts, kitchen and bath upgrades, HOA-compliant work. Licensed NV #0085999. Free estimates.',
+  title: 'Loft & Condo Remodeling Reno NV | HOA-Compliant',
+  description: 'Loft and condo remodeling in Reno, NV. Custom layouts, kitchen & bath upgrades, HOA-compliant work. Licensed NV #0085999. Free estimates.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Loft+%26+Condo+Remodeling&sub=Modern+Renovations+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Residential`, width: 1200, height: 630 }],
   },

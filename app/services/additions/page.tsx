@@ -19,8 +19,8 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Home Additions Reno NV | From $40K | Licensed GC Since 1989 | BRE Builders',
-  description: 'Add space without moving. BRE Builders builds room additions, garage expansions, and second stories in Reno NV from $40K. Licensed NV #0085999. Free estimate — call today.',
+  title: 'Home Additions Reno NV | Rooms, Garages & 2nd Stories',
+  description: 'Add space without moving. Room additions, garage expansions, second stories, in-law suites from $40K in Reno NV. Licensed NV #0085999. Free estimate.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Home+Additions+Reno+NV&sub=Add+Space.+Don%E2%80%99t+Move.+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999&badge=Home+Additions`, width: 1200, height: 630 }],
   },

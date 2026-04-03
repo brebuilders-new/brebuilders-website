@@ -7,8 +7,8 @@ import ContactPageInner from '@/components/ui/ContactPageInner'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Get a Free Quote | Contact BRE Builders',
-  description: 'Request a free estimate from BRE Builders — licensed general contractor in Reno, NV. ADUs, additions, custom homes, repairs, decks, commercial. NV #0085999 · CA #1093798.',
+  title: 'Free Quote | Contact Us | Reno NV',
+  description: 'Request a free estimate from BRE Builders in Reno, NV. ADUs, additions, custom homes, repairs, commercial. NV #0085999 · CA #1093798. Response within 24 hours.',
   alternates: { canonical: `${SITE_URL}/contact/` },
 }
 

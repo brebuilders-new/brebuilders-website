@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: '%s | Blue Reef Builders',
   },
   description:
-    'BRE Builders – licensed general contractor serving Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, repairs, commercial. NV #0085999 CA #1093798.',
+    'Licensed GC in Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, structural repairs, commercial. NV #0085999 · CA #1093798.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -166,7 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             '@id': 'https://brebuilders.com/#website',
             url: 'https://brebuilders.com',
             name: 'Blue Reef Builders',
-            description: 'Licensed general contractor serving Reno NV and Northern California since 1989.',
+            description: 'Licensed GC in Reno, Sparks, Lake Tahoe & Northern California since 1989. ADUs, custom homes, structural repairs, commercial. NV #0085999 · CA #1093798.',
             publisher: { '@id': 'https://brebuilders.com/#business' },
             speakable: {
               '@type': 'SpeakableSpecification',

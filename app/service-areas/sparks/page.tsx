@@ -12,8 +12,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 const CANONICAL = 'https://brebuilders.com/service-areas/sparks/'
 
 export const metadata: Metadata = {
-  title: 'General Contractor Sparks NV | ADU · Repairs · Remodeling | BRE Builders',
-  description: 'Licensed general contractor serving Sparks, NV since 1989. ADU construction from $75K, structural repairs, kitchen & bath remodeling, decks. NV Lic #0085999. Free estimates.',
+  title: 'General Contractor Sparks NV | Since 1989',
+  description: 'Licensed GC serving Sparks, NV since 1989. ADU construction, structural repairs, kitchen & bath, decks. NV #0085999. Free estimates.',
   openGraph: {
     title: 'General Contractor Sparks NV | BRE Builders — Licensed Since 1989',
     description: 'BRE Builders serves Spanish Springs, South Meadows, Wingfield Springs, and all Sparks neighborhoods. ADUs, repairs, remodeling. NV #0085999.',

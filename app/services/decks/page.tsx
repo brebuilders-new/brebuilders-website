@@ -13,8 +13,8 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Deck Contractors Reno NV | New Builds & Structural Repair | BRE Builders',
-  description: 'Licensed deck contractors serving Reno, Sparks & Lake Tahoe. New builds, structural repairs, snow-load rated framing. NV #0085999. 35+ years. Free estimate today.',
+  title: 'Deck Contractors Reno NV | New Builds & Structural Repair',
+  description: 'Licensed deck contractors in Reno, Sparks & Lake Tahoe. New builds, structural repair, snow-load rated framing. NV #0085999. 35+ years. Free estimate.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630 }],
   },

@@ -12,8 +12,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 const CANONICAL = 'https://brebuilders.com/service-areas/carson-city/'
 
 export const metadata: Metadata = {
-  title: 'General Contractor Carson City NV | ADU · Repairs · Remodeling | BRE Builders',
-  description: 'Licensed general contractor serving Carson City, NV since 1989. ADU construction, structural repairs, remodeling. 4,800 ft elevation expertise. NV Lic #0085999. Free estimates.',
+  title: 'General Contractor Carson City NV | Since 1989',
+  description: 'Licensed GC serving Carson City, NV since 1989. ADU construction, structural repairs, kitchen & bath remodeling. NV #0085999. Free estimates.',
   openGraph: {
     title: "General Contractor Carson City NV | BRE Builders — Nevada's Capital",
     description: "BRE Builders serves Carson City, NV — ADU construction, structural repairs, remodeling. Elevation-specific construction expertise. NV #0085999. Free estimates.",

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contractor Lake Tahoe NV & CA | BRE Builders',
-    description: 'Licensed contractor serving Lake Tahoe NV & CA. Snow-load builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
+    description: 'Licensed contractor serving Lake Tahoe, NV. Full home renovation, deck repair, ADU construction, structural work. NV #0085999 · CA #1093798. Free estimates.',
     images: [`${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV+%26+CA&sub=Snow-Load+%C2%B7+Custom+Homes+%C2%B7+Structural+Repair+%C2%B7+NV+%230085999&badge=Lake+Tahoe`],
   },
   alternates: { canonical: `${SITE_URL}/service-areas/lake-tahoe/` },

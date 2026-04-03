@@ -330,7 +330,7 @@ function ProjectCard({ project, onOpenLightbox }: {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/35 to-void/10" />
 
           {/* Expand icon */}
           <div className={`absolute top-3 right-3 w-8 h-8 rounded-full border border-white/20 bg-void/40 backdrop-blur-sm flex items-center justify-center transition-all duration-300 ${hovered ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
@@ -356,7 +356,7 @@ function ProjectCard({ project, onOpenLightbox }: {
           {/* Caption on hover */}
           <div className={`absolute bottom-0 left-0 right-0 p-4 transition-all duration-300 ${hovered ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'}`}>
             {current.title && <p className="font-display text-[15px] text-white leading-snug mb-1">{current.title}</p>}
-            {current.caption && <p className="font-mono text-[10px] text-white/65 leading-snug line-clamp-2">{current.caption}</p>}
+            {current.caption && <p className="font-mono text-[10px] text-white/90 leading-snug line-clamp-2">{current.caption}</p>}
           </div>
         </button>
 

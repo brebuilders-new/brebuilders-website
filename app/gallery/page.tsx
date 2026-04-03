@@ -144,7 +144,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     type: 'Deck Repair',
     categories: ['deck', 'repair'],
     photos: [
-      { src: `${CDN}/Lake-Tahoe-Deck-Reinforcement---Steel-Angle-Bracket-System-600x403.jpg`, alt: 'Steel angle bracket deck reinforcement Lake Tahoe', title: 'Steel Angle Bracket System', caption: 'Steel angle brackets anchored to CMU wall — engineered solution restoring structural safety to cantilevered deck. All hardware galvanized for exterior conditions.' },
+      { src: `${CDN}/Lake-Tahoe-Deck-Reinforcement-%E2%80%93-Steel-Angle-Bracket-System-1000x1000.jpg`, alt: 'Steel angle bracket deck reinforcement Lake Tahoe', title: 'Steel Angle Bracket System', caption: 'Steel angle brackets anchored to CMU wall — engineered solution restoring structural safety to cantilevered deck. All hardware galvanized for exterior conditions.' },
     ],
   },
 
@@ -156,7 +156,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     type: 'Deck Build',
     categories: ['deck'],
     photos: [
-      { src: `${CDN}/Charolettes-Finished-Deck---Smooth-Sealed-Surface-scaled-600x403.jpg`, alt: 'Custom deck smooth sealed surface Sparks NV', title: 'Completed Deck — Sealed Surface', caption: 'Custom deck build with smooth sealed surface finish. Properly sloped for drainage, sealed for UV and weather resistance.' },
+      { src: `${CDN}/Charolettes-Finished-Deck-%E2%80%93-Smooth-Sealed-Surface-1000x1000.jpg`, alt: 'Custom deck smooth sealed surface Sparks NV', title: 'Completed Deck — Sealed Surface', caption: 'Custom deck build with smooth sealed surface finish. Properly sloped for drainage, sealed for UV and weather resistance.' },
     ],
   },
 
@@ -168,7 +168,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     type: 'Commercial / Concrete',
     categories: ['commercial', 'concrete'],
     photos: [
-      { src: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access---Reno-NV-600x403.jpg`, alt: 'Commercial concrete slab car wash Reno NV', title: 'Commercial Concrete Slab', caption: 'Large-scale concrete slab pour with integrated utility access. Site prep, reinforcement, and pour managed by BRE Builders licensed crew. Reno, NV.' },
+      { src: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-1000x1000.jpg`, alt: 'Commercial concrete slab car wash Reno NV', title: 'Commercial Concrete Slab', caption: 'Large-scale concrete slab pour with integrated utility access. Site prep, reinforcement, and pour managed by BRE Builders licensed crew. Reno, NV.' },
     ],
   },
 
@@ -193,7 +193,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     categories: ['renovation', 'repair', 'before-after'],
     hasBeforeAfter: true,
     photos: [
-      { src: `${CDN}/Interior-Living-Room-Drywall-Prep---Rio-Tinto-600x403.jpg`, alt: 'Interior drywall prep renovation Reno NV', title: 'Interior Drywall Prep Phase', caption: 'Interior living room during drywall prep phase — framing inspected, mechanical rough-in complete, ready for insulation and drywall.' },
+      { src: `${CDN}/Interior-Living-Room-Drywall-Prep-%E2%80%93-Rio-Tinto-1000x1000.jpg`, alt: 'Interior drywall prep renovation Reno NV', title: 'Interior Drywall Prep Phase', caption: 'Interior living room during drywall prep phase — framing inspected, mechanical rough-in complete, ready for insulation and drywall.' },
     ],
   },
 

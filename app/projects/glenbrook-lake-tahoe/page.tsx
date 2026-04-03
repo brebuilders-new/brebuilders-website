@@ -6,8 +6,8 @@ import { CDN, WP } from '@/lib/image-catalog'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Glenbrook Lake Tahoe Full Home Renovation | 619 Lakeview Dr | BRE Builders',
-  description: 'Full home renovation at 619 Lakeview Dr, Glenbrook, Lake Tahoe NV. Structural upgrades, interior renovation, exterior work. 37-photo portfolio. BRE Builders NV #0085999.',
+  title: 'Glenbrook Lake Tahoe Full Home Renovation | Glenbrook, Lake Tahoe | BRE Builders',
+  description: 'Full home renovation at Glenbrook, Lake Tahoe, Lake Tahoe NV. Structural upgrades, interior renovation, exterior work. 37-photo portfolio. BRE Builders NV #0085999.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Glenbrook+Lake+Tahoe+Renovation&sub=619+Lakeview+Dr+%C2%B7+Full+Home+Renovation+%C2%B7+37+Photos&badge=Portfolio`, width: 1200, height: 630 }],
   },
@@ -71,16 +71,16 @@ export default function GlenbrookLakeTahoePage() {
         { name: 'Glenbrook Lake Tahoe Renovation' },
       ]}
       heroImage={`${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37.webp`}
-      heroAlt="Glenbrook Lake Tahoe Full Home Renovation Exterior — 619 Lakeview Dr — BRE Builders Licensed General Contractor NV #0085999"
+      heroAlt="Glenbrook Lake Tahoe Full Home Renovation Exterior — Glenbrook, Lake Tahoe — BRE Builders Licensed General Contractor NV #0085999"
       projectType="Full Home Renovation · Glenbrook, Lake Tahoe, NV"
       location="Glenbrook, Lake Tahoe, NV"
       title="Glenbrook Lake Tahoe"
       titleItalic="Full Home Renovation."
-      description="Complete interior and exterior renovation at 619 Lakeview Dr, Glenbrook, Lake Tahoe, NV. Structural upgrades, kitchen and bathroom renovation, custom finishes, deck work, and exterior improvements. Licensed NV #0085999."
+      description="Complete interior and exterior renovation at Glenbrook, Lake Tahoe, Lake Tahoe, NV. Structural upgrades, kitchen and bathroom renovation, custom finishes, deck work, and exterior improvements. Licensed NV #0085999."
       meta={[
         { label: 'Project Type', value: 'Full Home Renovation' },
         { label: 'Location', value: 'Glenbrook, Lake Tahoe, NV' },
-        { label: 'Address', value: '619 Lakeview Dr, Glenbrook NV 89413' },
+        { label: 'Address', value: 'Glenbrook, Lake Tahoe, NV' },
         { label: 'Photos', value: '22 Portfolio Photos' },
         { label: 'License', value: 'NV #0085999' },
       ]}
@@ -103,7 +103,7 @@ export default function GlenbrookLakeTahoePage() {
             Glenbrook, Lake Tahoe.<br /><span className="italic text-teal">Fully Renovated.</span>
           </h2>
           <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/80">
-            <p>619 Lakeview Dr in Glenbrook is one of the most demanding renovation environments in Northern Nevada — Lake Tahoe properties face extreme seasonal conditions, strict Washoe County permitting, and structural requirements that account for snow loads exceeding 200 lbs per square foot.</p>
+            <p>Glenbrook, Lake Tahoe in Glenbrook is one of the most demanding renovation environments in Northern Nevada — Lake Tahoe properties face extreme seasonal conditions, strict Washoe County permitting, and structural requirements that account for snow loads exceeding 200 lbs per square foot.</p>
             <p>BRE Builders completed a full interior and exterior renovation of this Lake Tahoe property, handling everything from structural reinforcement to custom interior finishes, kitchen and bathroom renovation, custom staircase work, and exterior improvements built to withstand mountain conditions.</p>
             <p>Every phase was permitted through Washoe County and inspected to current code. The result is a fully renovated Lake Tahoe home built to last decades in one of the most beautiful and demanding environments in Nevada.</p>
             <p className="text-[12px] text-cream/40 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>

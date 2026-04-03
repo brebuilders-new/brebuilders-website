@@ -79,7 +79,7 @@ export default async function AdminDashboard() {
   }
 
   return (
-    <div className="p-4 md:p-8" style={{ background: '#060e18', minHeight: '100vh' }}>
+    <div className="p-4 md:p-8" style={{ background: '#f1f0ee', minHeight: '100vh' }}>
       {/* Header */}
       <div style={{ marginBottom: '28px' }}>
         <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>Overview</p>

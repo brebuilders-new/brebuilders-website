@@ -102,15 +102,42 @@ export default function BlogTemplate({
       )}
       <main>
         {/* ── HERO ── */}
-        <section className="relative min-h-[55vh] lg:min-h-[62vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
+        {/* ── BLOG HERO — MOBILE: compact strip, content below fold ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full overflow-hidden" style={{ height: '42vw', minHeight: 150, maxHeight: 240 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={heroImage} alt={heroAlt} className="w-full h-full object-cover" fetchPriority="high" style={{ objectPosition: '50% 35%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-7">
+            <nav className="flex items-center gap-2 mb-3 font-mono text-[10px] text-cream/30">
+              <Link href="/" className="hover:text-teal transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/blog/" className="hover:text-teal transition-colors">Blog</Link>
+              <span>/</span>
+              <span className="text-cream/50">{category}</span>
+            </nav>
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase bg-teal text-void px-2 py-1 rounded">{category}</span>
+              {publishDate && <span className="font-mono text-[10px] text-cream/35">{publishDate}</span>}
+            </div>
+            <h1 className="font-display font-light text-[clamp(26px,7vw,38px)] leading-[1.05] tracking-tight text-white mb-3">
+              {title}
+            </h1>
+            <p className="text-[14px] text-white/55 leading-relaxed">
+              {excerpt}
+            </p>
+          </div>
+        </section>
+
+        {/* ── BLOG HERO — DESKTOP: full cinematic ── */}
+        <section className="hidden md:relative md:block md:min-h-[55vh] lg:min-h-[62vh] md:flex md:flex-col md:justify-end md:pb-14 lg:pb-20 md:pt-28 md:overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={heroImage} alt={heroAlt} className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/60 to-void/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent hidden md:block" />
-
+          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent" />
           <div className="relative z-10 container">
             <div className="max-w-[720px]">
-              {/* Breadcrumb */}
               <nav className="flex items-center gap-2 mb-5 font-mono text-[11px] text-cream/30">
                 <Link href="/" className="hover:text-teal transition-colors">Home</Link>
                 <span>/</span>
@@ -118,14 +145,12 @@ export default function BlogTemplate({
                 <span>/</span>
                 <span className="text-cream/60">{category}</span>
               </nav>
-
               <div className="animate-fade-up-1 inline-flex items-center gap-2 mb-4">
                 <span className="font-mono text-[10px] tracking-[3px] uppercase bg-teal text-void px-2.5 py-1 rounded-md">{category}</span>
                 {publishDate && (
                   <span className="font-mono text-[11px] text-cream/35">{publishDate}</span>
                 )}
               </div>
-
               <h1 className="animate-fade-up-2 font-display font-light text-[clamp(30px,5vw,64px)] leading-[1.0] tracking-tight text-white mb-4">
                 {title}
               </h1>

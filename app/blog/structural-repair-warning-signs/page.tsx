@@ -54,6 +54,11 @@ export default function StructuralWarningSignsPage() {
 
           <h2>1. Diagonal Cracks at Window and Door Corners</h2>
           <p>A diagonal crack running from the corner of a window or door opening — often at roughly 45 degrees — is the classic sign of foundation movement or settlement in Reno homes. The crack follows the path of least resistance in the drywall or stucco as the structure racks. This is not a drywall finishing problem. The crack will reappear after patching if the underlying movement continues. Get a structural assessment before repainting.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Stair-Step-Cracks-in-Brick-or-Block-1-1-600x403.webp"
+          alt="Stair-step diagonal cracks in brick — structural foundation movement indicator"
+          caption="Diagonal cracks at corners signal foundation movement — common in Reno homes on expansive clay soils. These require professional structural assessment."
+        />
 
           <h2>2. Doors and Windows That Stick or Won&apos;t Latch</h2>
           <p>A door that fit perfectly three years ago and now sticks at the top or bottom has racked — meaning the rough opening is no longer square. This follows from differential foundation settlement. It&apos;s a progressive problem: the longer it goes unaddressed, the worse the racking gets. Plane the door once if you need it to function, but the structural cause needs diagnosis.</p>
@@ -66,9 +71,19 @@ export default function StructuralWarningSignsPage() {
 
           <h2>3. Floors That Slope or Feel Springy</h2>
           <p>This is the one homeowners most commonly ignore — and it&apos;s often the most serious. Sloping floors mean the structural support system beneath them has moved. Springy or bouncy floors mean the joists are undersized, damaged, or their connections have failed. A marble on the floor tells you immediately if you have slope. Any bounce when walking on a main floor (not upper-story bounce, which can be normal) warrants looking in the crawlspace. Free crawlspace inspection from BRE Builders.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Foundation-Settlement-and-Movement-600x403.webp"
+          alt="Foundation settlement causing uneven floors — structural damage Reno NV"
+          caption="Floor slope indicates foundation settlement or joist failure. In Reno, clay soil movement is the most common cause."
+        />
 
           <h2>4. Cracks in the Foundation or Stem Wall</h2>
           <p>Hairline shrinkage cracks in concrete foundations are common and usually benign. Cracks that are horizontal, that show displacement (one side higher than the other), that are wider than ⅛ inch, or that have grown over time are structural concerns. Horizontal cracks in basement or crawlspace walls indicate lateral pressure from soil — a sign that the wall is being pushed inward by expansive clay. This is not a crack-filling issue. It requires engineering assessment and typically helical tiebacks or carbon fiber straps.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Wide-or-Growing-Foundation-Cracks-1-1-600x403.webp"
+          alt="Wide foundation cracks — structural repair needed Reno NV BRE Builders"
+          caption="Wide or growing foundation cracks (over 1/4 inch) require immediate professional evaluation. Horizontal cracks are especially serious."
+        />
 
           <BlogPullQuote>
             Reno&apos;s clay soils expand when wet and shrink when dry — this constant movement is the #1 cause of structural damage in Northern Nevada homes.
@@ -76,6 +91,11 @@ export default function StructuralWarningSignsPage() {
 
           <h2>5. Visible Sagging Between Joists</h2>
           <p>Stand back and look at your ceiling or floor from a low angle. Any sagging between joist bays — the ceiling bowing down between where the joists are — indicates joist damage, excessive span without adequate sizing, or post/beam failure below. In Reno crawlspaces, joist damage from moisture or rot is the most common cause. In older homes, undersized original framing is frequent.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Full-Length-Wall-with-Framing-Exposed-600x403.jpg"
+          alt="Framing exposed showing structural joist condition — Reno home repair"
+          caption="Exposed framing reveals joist condition. Sagging between joists often indicates dry rot, pest damage, or overloading — all requiring structural repair."
+        />
 
           <h2>6. Gaps Between Walls and Ceiling</h2>
           <p>A gap appearing between an interior partition wall and the ceiling above it — particularly in upper floors or rooms below a ridge — indicates that the floor or roof structure above is deflecting under load. This is a framing problem, not a finishing problem. It typically signals either undersized framing, a failed ridge beam connection, or removal of a load-bearing element during a prior renovation.</p>
@@ -88,9 +108,19 @@ export default function StructuralWarningSignsPage() {
 
           <h2>7. Musty Smell in Crawlspace or Basement</h2>
           <p>A persistent musty or earthy smell from below is almost always moisture — and moisture in a crawlspace means wood rot is either active or developing. Reno&apos;s irrigation season introduces significant moisture into crawlspaces from perimeter saturation. An unencapsulated crawlspace with standing water or wet soil is rotting the sill plates and floor joists even if you can&apos;t see it from above. BRE Builders performs crawlspace inspections as part of every structural repair assessment.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Water-Damage-in-a-Crawl-Space--600x403.png"
+          alt="Water damage in crawl space — moisture causing structural damage Reno NV"
+          caption="Crawlspace moisture causes wood rot, mold, and eventual structural failure. What smells minor can represent thousands in damage already underway."
+        />
 
           <h2>8. White Staining on Foundation Walls</h2>
           <p>White powdery deposits on concrete or block foundation walls — called efflorescence — are caused by water moving through the masonry and depositing minerals on the surface as it evaporates. Efflorescence is a visual indicator of water infiltration, not a structural problem in itself. But the water causing it is attacking the concrete over time and potentially creating hydrostatic pressure that can crack or bow foundation walls.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Water-Intrusion-Near-the-Foundation-2-600x403.webp"
+          alt="Water intrusion and efflorescence on foundation walls — Reno NV structural repair"
+          caption="White efflorescence staining means water is moving through the foundation wall. Left untreated, this leads to spalling, cracking, and structural compromise."
+        />
 
           <h2>9. Dry Rot Visible on Exposed Wood</h2>
           <p>Dry rot — despite the name — is a fungal decay that requires moisture to initiate. In Reno, it most commonly appears at sill plates, deck ledgers, exterior trim at grade, and any wood in contact with or close to the soil. Dry rot spreads through wood even after the moisture source is removed, consuming the cellulose and leaving a brown, cuboid-cracked mass with no structural capacity. Any visible dry rot requires immediate removal and replacement of affected framing.</p>
@@ -103,6 +133,11 @@ export default function StructuralWarningSignsPage() {
 
           <h2>10. Recent Soil Disturbance Near the Foundation</h2>
           <p>New landscaping, irrigation system installation, utility trenching, or neighboring construction can all disturb the soil bearing beneath or adjacent to a foundation. If any of these have occurred in the last 2–3 years and you&apos;ve noticed new cracking or settlement symptoms, the timing is not coincidental. Get a structural assessment sooner rather than later — catching soil disturbance movement early is far less expensive than addressing it after significant settlement has occurred.</p>
+        <BlogImage
+          src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Soil-Related-Cracking-600x403.png"
+          alt="Soil-related foundation cracking — Reno NV expansive clay soil structural damage"
+          caption="Reno sits on expansive clay soils that move with moisture changes. Any landscaping, grading, or irrigation changes near the foundation can accelerate movement."
+        />
 
           <h2>BRE Builders — Free Structural Assessments in Reno</h2>
           <p>BRE Builders provides free structural assessments for Reno, Sparks, Carson City, Lake Tahoe, and Northern Nevada homeowners. If you see any of these signs, call us before it becomes a larger problem. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>

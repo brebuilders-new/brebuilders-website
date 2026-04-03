@@ -88,7 +88,7 @@ const SERVICES_CONFIG = [
     index: '04',
     name: 'Kitchen & Bath',
     headline: <>Spaces You<br/>Love Daily</>,
-    tagline: 'Custom cabinetry, tile work, modern fixtures. High-quality finishes that hold up in Northern Nevada's climate.',
+    tagline: "Custom cabinetry, tile work, modern fixtures. High-quality finishes that hold up in Northern Nevada's climate.",
     price: '$30K–$150K',
     priceNote: 'Free estimate',
     cta: 'Explore Kitchen & Bath',

@@ -578,3 +578,16 @@ img { max-width: 100%; height: auto; display: block; }
 .before-after-reveal.revealed {
   animation: desaturate-to-color 1.2s cubic-bezier(0.22,1,0.36,1) forwards;
 }
+
+/* ─── ADMIN RESPONSIVE GRID ─────────────────────────────────────────────────── */
+.admin-lead-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .admin-lead-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 20px;
+  }
+}

@@ -216,7 +216,7 @@ function ServiceGalleryPanel({ svc, index }: { svc: typeof SERVICES_CONFIG[0]; i
           ))}
 
           {/* Gradient fade into content */}
-          <div className={`absolute inset-0 ${isReversed ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-void/95 via-void/20 to-transparent z-10`} />
+          <div className={`absolute inset-0 ${isReversed ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-void/98 via-void/45 to-void/10 z-10`} />
 
           {/* Photo thumbnails strip — visible on hover */}
           {photos.length > 1 && (
@@ -429,7 +429,7 @@ export default function HomePage() {
                 {[{ n: '35+', l: 'Years' }, { n: 'NV·CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
                   <div key={s.l}>
                     <div className="font-display text-[22px] text-white leading-none">{s.n}</div>
-                    <div className="font-mono text-[9px] uppercase text-white/65 mt-0.5 tracking-wider">{s.l}</div>
+                    <div className="font-mono text-[9px] uppercase text-white/90 mt-0.5 tracking-wider">{s.l}</div>
                   </div>
                 ))}
               </div>
@@ -470,8 +470,8 @@ export default function HomePage() {
                 <div className="flex gap-10 lg:gap-16">
                   {[{ n: '35+', l: 'Years' }, { n: 'NV · CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
                     <div key={s.l}>
-                      <div className="font-display text-[clamp(30px,4vw,50px)] font-light text-white leading-none" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>{s.n}</div>
-                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/65 mt-1.5">{s.l}</div>
+                      <div className="font-display text-[clamp(30px,4vw,50px)] font-light text-white leading-none" style={{ textShadow: '0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8)' }}>{s.n}</div>
+                      <div className="font-mono text-[10px] tracking-[1.5px] uppercase text-white/90 mt-1.5">{s.l}</div>
                     </div>
                   ))}
                 </div>
@@ -485,7 +485,7 @@ export default function HomePage() {
           </div>
           <div className="absolute bottom-8 right-12 hidden lg:flex flex-col items-center gap-3 z-10">
             <div className="w-px h-12 bg-gradient-to-b from-teal/80 to-transparent" />
-            <span className="font-mono text-[9px] tracking-[3px] text-white/55 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+            <span className="font-mono text-[9px] tracking-[3px] text-white/90 uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
           </div>
         </section>
 
@@ -577,7 +577,7 @@ export default function HomePage() {
                     <div className="relative overflow-hidden h-56">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={p.thumbnail} alt={p.thumbnailAlt} className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-700" loading={i < 3 ? 'eager' : 'lazy'} />
-                      <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/10 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/35 to-void/10" />
                       <div className="absolute bottom-0 left-0 right-0 p-4">
                         <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
                         <h3 className="font-display text-[16px] text-white leading-snug">{p.title}</h3>

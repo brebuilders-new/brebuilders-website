@@ -104,7 +104,7 @@ export default function TestimonialsPage() {
           <div className="relative w-full" style={{ height: '38vw', minHeight: 130, maxHeight: 190 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={IMGS.svc_repair} alt="BRE Builders Client Testimonials" className="w-full h-full object-cover" style={{ objectPosition: '50% 35%' }} />
-            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/40 to-void/85" />
           </div>
           <div className="bg-deep px-5 pt-5 pb-6">
             <div className="flex items-center gap-2 mb-3">
@@ -114,7 +114,7 @@ export default function TestimonialsPage() {
             <h1 className="font-display font-light text-[clamp(26px,7vw,38px)] leading-[1.02] tracking-tight text-white mb-2">
               What Clients Say<br /><span className="italic text-teal">About BRE Builders.</span>
             </h1>
-            <p className="text-[13px] leading-[1.65] text-white/55">
+            <p className="text-[13px] leading-[1.65] text-white/90">
               Real clients. Real projects. Real results. Serving Reno, Sparks, Lake Tahoe, and Northern California since 1989.
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function TestimonialsPage() {
               <h1 className="animate-fade-up-2 font-display font-light text-[clamp(34px,5.5vw,68px)] leading-[0.94] tracking-tight text-white mb-4">
                 What Clients Say<br /><span className="italic text-teal">About BRE Builders.</span>
               </h1>
-              <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/65 max-w-[460px]">
+              <p className="animate-fade-up-3 text-[15px] leading-[1.75] text-white/90 max-w-[460px]">
                 Real clients. Real projects. Real results. Serving Reno, Sparks, Lake Tahoe, and Northern California since 1989.
               </p>
             </div>

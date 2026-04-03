@@ -88,7 +88,7 @@ const SERVICES_CONFIG = [
     index: '04',
     name: 'Kitchen & Bath',
     headline: <>Spaces You<br/>Love Daily</>,
-    tagline: 'Custom cabinetry, tile work, modern fixtures. High-quality finishes that hold up in Northern Nevada\u2019s climate.',
+    tagline: 'Custom cabinetry, tile work, modern fixtures. High-quality finishes that hold up in Northern Nevada's climate.',
     price: '$30K–$150K',
     priceNote: 'Free estimate',
     cta: 'Explore Kitchen & Bath',
@@ -161,7 +161,7 @@ function ServiceGalleryPanel({ svc, index }: { svc: typeof SERVICES_CONFIG[0]; i
   const [active, setActive] = useState(0)
   const [hovered, setHovered] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
-  const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const isReversed = index % 2 === 1
 
   // Auto-cycle photos every 3s, pause on hover
@@ -829,22 +829,5 @@ export default function HomePage() {
       </main>
       <Footer />
     </>
-  )
-}
-
-function FAQItem({ q, a, idx }: { q: string; a: string; idx: number }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <Fade delay={idx * 35}>
-      <div className="border-b border-white/[0.055]">
-        <button onClick={() => setOpen(!open)} className="w-full flex items-start justify-between gap-4 py-5 text-left group">
-          <span className="text-[15px] text-cream/75 group-hover:text-cream transition-colors font-display">{q}</span>
-          <span className={`flex-shrink-0 w-5 h-5 border border-white/18 rounded flex items-center justify-center text-cream/35 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-          </span>
-        </button>
-        {open && <p className="pb-5 text-[14px] text-cream/78 leading-relaxed">{a}</p>}
-      </div>
-    </Fade>
   )
 }

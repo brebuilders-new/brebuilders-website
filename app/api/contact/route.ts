@@ -182,7 +182,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   <tr><td style="background:#060d14;border-radius:${isDev ? '0' : '12px 12px'} 0 0">
     <!-- Gold bar -->
     <table width="100%" cellpadding="0" cellspacing="0">
-      <tr><td style="background:linear-gradient(90deg,#c8a96e,#e2c98a);height:3px;border-radius:${isDev ? '0' : '12px 12px'} 0 0;font-size:0">&nbsp;</td></tr>
+      <tr><td style="background:#c8a96e;height:4px;font-size:0">&nbsp;</td></tr>
     </table>
     <!-- Header content -->
     <table width="100%" cellpadding="0" cellspacing="0">
@@ -304,13 +304,13 @@ function buildClientEmail(data: Record<string, unknown>): string {
   <tr><td style="background:#ffffff;border-radius:12px 12px 0 0;border:1px solid #e5e7eb">
     <!-- Gold bar -->
     <table width="100%" cellpadding="0" cellspacing="0">
-      <tr><td style="background:linear-gradient(90deg,#c8a96e,#e2c98a);height:3px;border-radius:12px 12px 0 0;font-size:0">&nbsp;</td></tr>
+      <tr><td style="background:#c8a96e;height:4px;font-size:0">&nbsp;</td></tr>
     </table>
     <!-- Wordmark + greeting -->
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="padding:30px 36px 26px">
         <p style="margin:0 0 18px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#92400e;font-family:monospace">Blue Reef Builders &nbsp;·&nbsp; Est. 1989</p>
-        <p style="margin:0;font-size:28px;font-weight:600;color:#111827;letter-spacing:-0.5px;line-height:1.15">Hi ${data.firstName},<br><span style="color:#e2ddd5;font-size:18px;color:#6b7280">we got your request.</span></p>
+        <p style="margin:0;font-size:28px;font-weight:600;color:#111827;letter-spacing:-0.5px;line-height:1.15">Hi ${data.firstName},<br><span style="color:#6b7280;font-size:18px">we got your request.</span></p>
       </td></tr>
     </table>
   </td></tr>
@@ -366,12 +366,12 @@ function buildClientEmail(data: Record<string, unknown>): string {
         <p style="margin:0 0 12px;font-size:11px;letter-spacing:1px;color:#6b7280;font-family:monospace">REACH US DIRECTLY</p>
         <table cellpadding="0" cellspacing="0">
           <tr>
-            <td style="padding:4px 0;font-size:14px;color:#e2ddd5;font-family:Arial,sans-serif">
+            <td style="padding:4px 0;font-size:14px;color:#374151;font-family:Arial,sans-serif">
               &#128222;&nbsp;&nbsp;<a href="tel:7753914517" style="color:#0284c7;text-decoration:none">(775) 391-4517</a>
             </td>
           </tr>
           <tr>
-            <td style="padding:4px 0;font-size:14px;color:#e2ddd5;font-family:Arial,sans-serif">
+            <td style="padding:4px 0;font-size:14px;color:#374151;font-family:Arial,sans-serif">
               &#9993;&nbsp;&nbsp;<a href="mailto:brebuilders@gmail.com" style="color:#0284c7;text-decoration:none">brebuilders@gmail.com</a>
             </td>
           </tr>

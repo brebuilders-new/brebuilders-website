@@ -167,16 +167,20 @@ export default function AboutPage() {
               Trusted by Homeowners
               <br /><span className="italic text-teal">Across Nevada & California.</span>
             </h2>
-            <div className="grid md:grid-cols-3 gap-5">
-              {TESTIMONIALS.map(t => (
-                <div key={t.name} className="bg-deep rounded-xl p-6 border border-white/[0.055] relative">
-                  <div className="font-display text-[48px] leading-none text-teal/18 absolute top-3 left-4 select-none">&ldquo;</div>
-                  <p className="font-display text-[15px] italic text-cream/62 leading-relaxed pt-7 mb-4">{t.text}</p>
+<MobileCarousel
+              items={TESTIMONIALS}
+              desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
+              itemWidth="82vw"
+              renderItem={(t, i) => (
+                <div key={t.name} className="bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full">
+                  <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
+                  <div className="flex gap-0.5 mb-3 pt-8">{[1,2,3,4,5].map(s => <span key={s} className="text-gold text-[14px]">&#9733;</span>)}</div>
+                  <p className="font-display text-[15px] italic text-cream/85 leading-relaxed mb-5">{t.text}</p>
                   <div className="font-semibold text-[13px] text-cream">{t.name}</div>
-                  <div className="font-mono text-[10px] text-cream/28 tracking-wider mt-0.5">{t.location}</div>
+                  <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                 </div>
-              ))}
-            </div>
+              )}
+            />
           </div>
         </section>
 

@@ -118,8 +118,8 @@ function row(label: string, value: unknown): string {
   if (!value || (Array.isArray(value) && (value as unknown[]).length === 0)) return ''
   const val = Array.isArray(value) ? (value as string[]).join(', ') : String(value)
   return `<tr>
-    <td style="padding:9px 16px;border-bottom:1px solid #1a2d3f;color:#9ca3af;font-size:11px;font-family:monospace;letter-spacing:0.5px;width:150px;white-space:nowrap">${label}</td>
-    <td style="padding:9px 16px;border-bottom:1px solid #f3f4f6;color:#374151;font-size:13px;font-family:Arial,sans-serif">${val}</td>
+    <td style="padding:9px 16px;border-bottom:1px solid #e5e7eb;color:#6b7280;font-size:11px;font-family:Arial,sans-serif;width:150px;white-space:nowrap">${label}</td>
+    <td style="padding:9px 16px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;font-family:Arial,sans-serif">${val}</td>
   </tr>`
 }
 
@@ -150,9 +150,9 @@ function buildServiceBlock(data: Record<string, unknown>): string {
 function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: LeadScore): string {
   const serviceLabel = SERVICE_LABELS[data.service as string] || String(data.service)
   const location = [data.addressLine1, data.city, data.state, data.zip].filter(Boolean).join(', ')
-  const scoreColor  = lead.score >= 70 ? '#15803d' : lead.score >= 45 ? '#b45309' : '#1d4ed8'
-  const scoreBg     = lead.score >= 70 ? '#f0fdf4' : lead.score >= 45 ? '#fffbeb' : '#eff6ff'
-  const scoreBorder = lead.score >= 70 ? '#bbf7d0' : lead.score >= 45 ? '#fde68a' : '#bfdbfe'
+  const scoreColor  = lead.score >= 70 ? '#14532d' : lead.score >= 45 ? '#92400e' : '#1e3a8a'
+  const scoreBg     = lead.score >= 70 ? '#dcfce7' : lead.score >= 45 ? '#fef3c7' : '#dbeafe'
+  const scoreBorder = lead.score >= 70 ? '#16a34a' : lead.score >= 45 ? '#d97706' : '#2563eb'
   const ts = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'medium', timeStyle: 'short' })
   const signalRows = lead.signals.map(s =>
     `<tr><td style="padding:3px 0;font-size:12px;color:#15803d;font-family:Arial,sans-serif">&#10003;&nbsp;&nbsp;${s}</td></tr>`

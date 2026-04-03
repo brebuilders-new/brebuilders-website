@@ -118,7 +118,7 @@ export default function CarsonCityPage() {
             <h1 className="font-display font-light text-[clamp(34px,9vw,52px)] leading-[0.95] tracking-tight text-white mb-3">
               General Contractor<br /><span className="italic text-teal">Carson City, NV</span>
             </h1>
-            <p className="speakable-intro text-[14px] leading-[1.6] text-white/65 mb-5 max-w-[340px]">
+            <p className="speakable-intro text-[14px] leading-[1.6] text-white/90 mb-5 max-w-[340px]">
               ADU construction, structural repairs, remodeling, and commercial work in Nevada&apos;s capital. Licensed NV #0085999.
             </p>
             <div className="flex flex-col gap-2.5 mb-4">
@@ -142,7 +142,7 @@ export default function CarsonCityPage() {
             <nav className="flex items-center gap-2 mb-7 font-mono text-[11px] text-white/30" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-teal transition-colors">Home</Link><span>/</span>
               <Link href="/service-areas" className="hover:text-teal transition-colors">Service Areas</Link><span>/</span>
-              <span className="text-white/55">Carson City, NV</span>
+              <span className="text-white/90">Carson City, NV</span>
             </nav>
             <div className="animate-fade-up-1 flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-teal" /><span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Carson City, NV · 4,800 ft Elevation · NV #0085999</span>
@@ -150,7 +150,7 @@ export default function CarsonCityPage() {
             <h1 className="animate-fade-up-2 font-display font-light text-[clamp(48px,6.5vw,88px)] leading-[0.92] tracking-tight text-white mb-5">
               General Contractor<br /><span className="italic text-teal">Carson City, Nevada</span>
             </h1>
-            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/65 mb-6 max-w-[580px]">
+            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/90 mb-6 max-w-[580px]">
               BRE Builders serves Nevada&apos;s capital for ADU construction from $75,000, structural repairs, remodeling, additions, and commercial work. Elevation-specific construction expertise at 4,800 feet. Licensed NV #0085999 · CA #1093798.
             </p>
             <div className="animate-fade-up-4 flex gap-3 flex-wrap items-center mb-6">

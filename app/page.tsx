@@ -13,7 +13,7 @@ const CDN = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main'
 const HERO_IMGS = [
   { src: `${CDN}/2025/12/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp`, alt: 'Lake Tahoe full home renovation exterior – BRE Builders' },
   { src: `${CDN}/e228c329-e139-4d18-869f-29659b27e05d.jpg`, alt: 'Luxury custom home Ripon CA classical entryway – Blue Reef Builders' },
-  { src: `${CDN}/uploads/Arun-Deck-Repair-–-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg`, alt: 'Hillside deck repair Lake Tahoe – BRE Builders' },
+  { src: `${CDN}/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-1000x1000.jpg`, alt: 'Hillside deck repair Lake Tahoe – BRE Builders' },
   { src: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37.webp`, alt: 'Glenbrook Lake Tahoe full home renovation – BRE Builders' },
 ]
 
@@ -32,7 +32,7 @@ const SERVICE_GALLERIES: Record<string, { src: string; alt: string; caption: str
   ],
   repairs: [
     { src: `${CDN}/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg`, alt: 'Dry rot exposure wall panel structural repair Reno NV – BRE Builders NV #0085999', caption: 'Dry Rot Remediation' },
-    { src: `${CDN}/uploads/Water-Intrusion-Near-the-Foundation-2.jpg`, alt: 'Water intrusion near foundation repair Reno NV – BRE Builders licensed', caption: 'Water Intrusion Repair' },
+    { src: `${CDN}/Water-Intrusion-Near-the-Foundation-2-600x403.webp`, alt: 'Water intrusion near foundation repair Reno NV – BRE Builders licensed', caption: 'Water Intrusion Repair' },
     { src: `${CDN}/Foundation-Repair-and-Foundation-Issues-in-Reno-NV-min.jpg`, alt: 'Foundation repair and structural issues Reno NV – BRE Builders NV #0085999', caption: 'Foundation Repair' },
   ],
   'kitchen-bath': [
@@ -46,8 +46,8 @@ const SERVICE_GALLERIES: Record<string, { src: string; alt: string; caption: str
     { src: `${CDN}/2025/12/07-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-7-of-16-1024x684.webp`, alt: 'Home addition custom stairs and loft – BRE Builders Lake Tahoe', caption: 'Custom Loft Addition' },
   ],
   commercial: [
-    { src: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-–-Reno-NV-600x403.jpg`, alt: 'Commercial concrete slab pour utility access Reno NV – BRE Builders', caption: 'Commercial Concrete' },
-    { src: `${CDN}/Warehouse-Interior-Slab-–-Equipment-Material-Staging.jpg`, alt: 'Warehouse interior slab staging Reno NV – BRE Builders licensed commercial', caption: 'Warehouse Construction' },
+    { src: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access-%E2%80%93-Reno-NV-1000x1000.jpg`, alt: 'Commercial concrete slab pour utility access Reno NV – BRE Builders', caption: 'Commercial Concrete' },
+    { src: `${CDN}/Warehouse-Interior-Slab-%E2%80%93-Equipment-Material-Staging-1000x1000.jpg`, alt: 'Warehouse interior slab staging Reno NV – BRE Builders licensed commercial', caption: 'Warehouse Construction' },
     { src: `${CDN}/Image_fx-9-600x403.webp`, alt: 'Commercial construction project Northern Nevada – BRE Builders NV #0085999', caption: 'Commercial Build-Out' },
   ],
 }

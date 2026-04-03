@@ -100,7 +100,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
   const cell: React.CSSProperties = { padding: '13px 16px', borderBottom: '1px solid #f3f4f6', fontSize: '13px', verticalAlign: 'middle' as const }
 
   return (
-    <div className="p-4 md:p-8" style={{ background: '#f1f0ee', minHeight: '100vh' }}>
+    <div className="p-4 md:p-8" >
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '24px' }}>
         <div>
@@ -159,7 +159,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
       {/* Table */}
       <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #e5e7eb', overflow: 'hidden' }}>
         {!leads?.length ? (
-          <div style={{ background: '#060e18', minHeight: '100vh', padding: '60px', textAlign: 'center', color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>
+          <div style={{ padding: '60px', textAlign: 'center', color: '#9ca3af', fontFamily: 'monospace', fontSize: '13px' }}>
             No leads match this filter.
           </div>
         ) : (

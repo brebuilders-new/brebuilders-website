@@ -122,7 +122,7 @@ export default function TruckeePage() {
             <h1 className="font-display font-light text-[clamp(34px,9vw,52px)] leading-[0.95] tracking-tight text-white mb-3">
               Contractor<br /><span className="italic text-teal">Truckee CA & Graeagle</span>
             </h1>
-            <p className="speakable-intro text-[14px] leading-[1.6] text-white/65 mb-5 max-w-[340px]">
+            <p className="speakable-intro text-[14px] leading-[1.6] text-white/90 mb-5 max-w-[340px]">
               Mountain construction expertise — snow-load rated decks, custom homes, structural repair. CA License #1093798 · NV #0085999.
             </p>
             <div className="flex flex-col gap-2.5 mb-4">
@@ -146,7 +146,7 @@ export default function TruckeePage() {
             <nav className="flex items-center gap-2 mb-7 font-mono text-[11px] text-white/30" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-teal transition-colors">Home</Link><span>/</span>
               <Link href="/service-areas" className="hover:text-teal transition-colors">Service Areas</Link><span>/</span>
-              <span className="text-white/55">Truckee CA & Graeagle</span>
+              <span className="text-white/90">Truckee CA & Graeagle</span>
             </nav>
             <div className="animate-fade-up-1 flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-teal" /><span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Mountain Construction · CA Lic #1093798 · NV #0085999</span>
@@ -154,7 +154,7 @@ export default function TruckeePage() {
             <h1 className="animate-fade-up-2 font-display font-light text-[clamp(48px,6.5vw,88px)] leading-[0.92] tracking-tight text-white mb-5">
               Contractor<br /><span className="italic text-teal">Truckee CA & Graeagle</span>
             </h1>
-            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/65 mb-6 max-w-[580px]">
+            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/90 mb-6 max-w-[580px]">
               Mountain community construction expertise — custom homes, snow-load rated decks engineered for 200+ inches of annual snowfall, structural repairs, vacation home remodeling. Licensed CA #1093798 · NV #0085999.
             </p>
             <div className="animate-fade-up-4 flex gap-3 flex-wrap items-center mb-6">

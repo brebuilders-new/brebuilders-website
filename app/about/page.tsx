@@ -29,9 +29,31 @@ export default function AboutPage() {
       <Nav />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[60vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
+        {/* ── ABOUT HERO — MOBILE: compact, title above fold ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full" style={{ height: '40vw', minHeight: 140, maxHeight: 200 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={IMGS.lt(1)} alt="BRE Builders completed project Lake Tahoe" className="w-full h-full object-cover" style={{ objectPosition: '50% 35%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/80" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal">About Blue Reef Builders</span>
+            </div>
+            <h1 className="font-display font-light text-[clamp(28px,7.5vw,40px)] leading-[1.0] tracking-tight text-white mb-3">
+              Licensed General<br />Contractor<br /><span className="italic text-teal">Since 1989.</span>
+            </h1>
+            <p className="text-[13px] leading-[1.65] text-white/60">
+              Blue Reef Enterprises, LLC. Reno, NV. 35+ years of residential and commercial construction across Northern Nevada and California.
+            </p>
+          </div>
+        </section>
+
+        {/* ── ABOUT HERO — DESKTOP: cinematic ── */}
+        <section className="hidden md:relative md:block md:min-h-[60vh] md:flex md:flex-col md:justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMGS.lt(1)} alt="BRE Builders completed project Lake Tahoe full home renovation" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
+          <img src={IMGS.lt(1)} alt="BRE Builders completed project Lake Tahoe full home renovation" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/60 to-void/25" />
           <div className="relative z-10 container">
             <div className="max-w-[560px]">

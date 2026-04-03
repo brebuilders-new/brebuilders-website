@@ -14,7 +14,7 @@ const PORTFOLIO = {
   adu:        `${BASE}/pool-house.jpg`,
   deck_lt:    `${BASE}/Lake-Tahoe-Deck-Reinforcement-\u2013-Steel-Angle-Bracket-System-600x403.jpg`,
   repairs:    `${BASE}/Foundation-Repair-and-Foundation-Issues-in-Reno-NV-min.jpg`,
-  commercial: `${BASE}/Image_fx-9-600x403.jpg`,
+  commercial: `${BASE}/Image_fx-9-600x403.webp`,
 }
 
 // ─── Types ────────────────────────────────────────────────────────────────────

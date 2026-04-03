@@ -273,23 +273,20 @@ export default function ADUPage() {
         {/* Testimonials */}
         <PageSection bg="bg-panel" border>
           <SectionLabel text="Client Reviews" />
-<MobileCarousel
-              items={[
-                { name: 'Reggie', location: 'Modesto, CA', text: "Steve and his team at Blue Reef are jacks of all trades. They do great work and stand behind it. I\'d recommend them to anyone looking for quality work." },
-                { name: 'Stephanie', location: 'Reno, NV', text: "The team at Blue Reef Builders exceeds my expectations every time. Responsive, skilled, and they keep the site clean. I\'ve used them for three projects." },
-                { name: 'Austin', location: 'Reno, NV', text: "I am so glad that I found these guys — concrete, new deck, and interior work all done right. Steve is hands-on and that makes all the difference." },
-              ]}
-              desktopClassName="md:grid md:grid-cols-3 md:gap-5"
-              itemWidth="82vw"
-              renderItem={(t) => (
-                <div className="bg-deep rounded-xl p-6 border border-white/[0.055] relative h-full">
-                  <div className="font-display text-[48px] leading-none text-teal/15 absolute top-3 left-4 select-none">&ldquo;</div>
-                  <p className="font-display text-[15px] italic text-cream/62 leading-relaxed pt-6 mb-4">{t.text}</p>
-                  <div className="font-semibold text-[13px] text-cream">{t.name}</div>
-                  <div className="font-mono text-[10px] text-cream/30 tracking-wider mt-0.5">{t.location}</div>
-                </div>
-              )}
-            />
+<div className="flex gap-4 overflow-x-auto pb-4 scrollbar-none md:grid md:grid-cols-3 md:overflow-visible md:pb-0 md:gap-5" style={{scrollSnapType:'x mandatory',WebkitOverflowScrolling:'touch'}}>
+                {[
+                  { name: "Reggie", location: "Modesto, CA", text: "Steve and his team at Blue Reef are jacks of all trades. They do great work and stand behind it. I\'d recommend them to anyone looking for quality work." },
+                  { name: "Stephanie", location: "Reno, NV", text: "The team at Blue Reef Builders exceeds my expectations every time. Responsive, skilled, and they keep the site clean. I\'ve used them for three projects." },
+                  { name: "Austin", location: "Reno, NV", text: "I am so glad that I found these guys — concrete, new deck, and interior work all done right. Steve is hands-on and that makes all the difference." },
+                ].map((t) => (
+                  <div key={t.name} className="flex-shrink-0 w-[82vw] md:w-auto bg-deep rounded-xl p-6 border border-white/[0.055] relative" style={{scrollSnapAlign:'start'}}>
+                    <div className="font-display text-[48px] leading-none text-teal/15 absolute top-3 left-4 select-none">&ldquo;</div>
+                    <p className="font-display text-[15px] italic text-cream/62 leading-relaxed pt-6 mb-4">{t.text}</p>
+                    <div className="font-semibold text-[13px] text-cream">{t.name}</div>
+                    <div className="font-mono text-[10px] text-cream/30 tracking-wider mt-0.5">{t.location}</div>
+                  </div>
+                ))}
+              </div>
         </PageSection>
 
         

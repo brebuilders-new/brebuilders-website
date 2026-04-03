@@ -188,7 +188,7 @@ export default function LeadDetailClient({ lead, images, notes, activity }: {
   const location = [lead.address_line1, lead.city, lead.state, lead.zip].filter(Boolean).join(', ')
 
   return (
-    <div style={{ padding: 'clamp(16px, 4vw, 32px)', maxWidth: '1200px', background: '#060e18', minHeight: '100vh' }}>
+    <div style={{ padding: 'clamp(16px, 4vw, 32px)', maxWidth: '1200px', background: '#f1f0ee', minHeight: '100vh' }}>
 
       {/* Back + header */}
       <div style={{ marginBottom: '24px' }}>

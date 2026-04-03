@@ -57,7 +57,7 @@ export default function PageHero({
           </div>
         )}
         <h1 className="font-display font-light text-[clamp(30px,8vw,42px)] leading-[0.97] tracking-tight text-white mb-3"
-          style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+          style={{ textShadow: '0 2px 24px rgba(0,0,0,0.95), 0 1px 8px rgba(0,0,0,0.8)' }}>
           {h1}
           {subh1 && (
             <><br />
@@ -66,8 +66,8 @@ export default function PageHero({
             </span></>
           )}
         </h1>
-        <p className="text-[13px] leading-[1.65] text-white/65 mb-4 max-w-[320px]"
-          style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
+        <p className="text-[13px] leading-[1.65] text-white/90 mb-4 max-w-[320px]"
+          style={{ textShadow: '0 1px 12px rgba(0,0,0,0.9), 0 2px 24px rgba(0,0,0,0.7)' }}>
           {lead}
         </p>
         {/* Mobile CTAs — call first, always */}
@@ -107,7 +107,7 @@ export default function PageHero({
             </div>
           )}
           <h1 className="animate-fade-up-2 font-display font-light text-[clamp(38px,6vw,78px)] leading-[0.95] tracking-tight text-white mb-4"
-            style={{ textShadow: '0 2px 30px rgba(0,0,0,0.4)' }}>
+            style={{ textShadow: '0 2px 32px rgba(0,0,0,0.95), 0 1px 12px rgba(0,0,0,0.8)' }}>
             {h1}
             {subh1 && (
               <><br />
@@ -116,8 +116,8 @@ export default function PageHero({
               </span></>
             )}
           </h1>
-          <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.75] text-white/70 mb-6 max-w-[500px]"
-            style={{ textShadow: '0 1px 15px rgba(0,0,0,0.5)' }}>
+          <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.75] text-white/90 mb-6 max-w-[500px]"
+            style={{ textShadow: '0 1px 16px rgba(0,0,0,0.9), 0 2px 32px rgba(0,0,0,0.7)' }}>
             {lead}
           </p>
           {badges.length > 0 && (

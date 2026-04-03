@@ -60,8 +60,8 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   const SidebarContent = ({ onClick }: { onClick?: () => void }) => (
     <div className="flex flex-col h-full">
       <div className="px-4 py-4 border-b border-stone-200">
-        <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase mb-0.5">BRE Builders</p>
-        <p className="text-[12px] text-stone-400">Admin Dashboard</p>
+        <img src="/brelogo.webp" alt="BRE Builders" style={{ height: 28, width: 'auto', marginBottom: 6 }} />
+        <p className="font-mono text-[9px] tracking-[2px] text-stone-400 uppercase">Admin Dashboard</p>
       </div>
       <nav className="flex-1 p-2 overflow-y-auto">
         <NavLinks onClick={onClick} />
@@ -89,7 +89,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
       {/* Mobile header */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-4 py-3 border-b border-stone-200"
         style={{ background: '#ffffff' }}>
-        <p className="font-mono text-[9px] tracking-[3px] text-teal uppercase">BRE Builders · Admin</p>
+        <img src="/brelogo.webp" alt="BRE Builders" style={{ height: 24, width: 'auto' }} />
         <button
           onClick={() => setMobileOpen(true)}
           className="px-3 py-1.5 rounded-lg text-stone-500 text-sm border border-stone-200 hover:border-stone-300"

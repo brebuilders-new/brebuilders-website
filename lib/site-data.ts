@@ -352,16 +352,51 @@ export const FAQS = [
   { q: 'Can I legally build an ADU in Reno or Carson City?', a: "Yes — but there are zoning, lot-size, and occupancy rules. We help homeowners navigate all ADU permits and designs based on your property's zoning laws." },
 ] as const
 
-// Lake Tahoe 16-image gallery — 695 Lakeview Blvd, Zephyr Cove, NV 89448
+// Lake Tahoe 16-image gallery — Zephyr Cove, Lake Tahoe, NV
 export const LT_GALLERY = Array.from({ length: 16 }, (_, i) => {
   const n = String(i + 1).padStart(2, '0')
   const suffix = i === 15 ? '-1' : ''
-  const captions = ['Full Home Renovation Exterior','Exterior Deck and Structural Work','Deck Railing and Walkway','Interior Living Space Renovation','Interior Finish Work','Loft and Upper-Level Renovation','Custom Interior Stair Construction','Bathroom Renovation','Interior Room Renovation','Bathroom Installation Phase','Interior Staircase View','Upper-Level Interior Renovation','Loft Area Renovation','Exterior Deck Renovation','Deck Walkway Detail','Completed Exterior Renovation']
-  const alts = ['Full Home Renovation Exterior Zephyr Cove, Lake Tahoe Lake Tahoe','Exterior Deck and Structural Renovation Lake Tahoe Zephyr Cove','Deck Railing and Walkway Renovation Lake Tahoe NV','Interior Living Space Renovation Lake Tahoe Home','Interior Finish Work and Updated Materials Lake Tahoe Renovation','Loft and Upper Level Renovation Lake Tahoe Home','Custom Interior Stair Construction Lake Tahoe Full Renovation','Bathroom Renovation with Updated Fixtures Lake Tahoe','Interior Room Renovation Updated Finishes Lake Tahoe Home','Bathroom Installation Vanity and Tub Lake Tahoe Renovation','Interior Staircase Connecting Multiple Renovated Levels Lake Tahoe','Upper Level Interior Renovation Skylights and Railing Lake Tahoe','Loft Area Renovation with Natural Light Open Layout Lake Tahoe','Exterior Deck Renovation Updated Materials and Railing Lake Tahoe','Deck Walkway Detail Railing and Surface Upgrades Lake Tahoe','Completed Full Home Renovation Exterior Lake Tahoe BRE Builders']
+  const captions = [
+    'Full Home Renovation Exterior',
+    'Exterior Deck and Structural Work',
+    'Deck Railing and Walkway',
+    'Interior Living Space',
+    'Interior Finish Work',
+    'Loft and Upper Level',
+    'Custom Interior Staircase',
+    'Bathroom Renovation',
+    'Interior Room',
+    'Bathroom Installation',
+    'Interior Staircase',
+    'Upper Level — Skylights',
+    'Loft Natural Light',
+    'Exterior Deck Renovation',
+    'Deck Walkway Detail',
+    'Completed Exterior',
+  ]
+  const descriptions = [
+    'Complete exterior transformation — snow-rated structure, updated siding, and deck system. All work permitted through Washoe County. BRE Builders NV #0085999.',
+    'Deck and structural renovation — new deck framing rated for Lake Tahoe snow loads, integrated with updated exterior cladding system.',
+    'Deck railing and walkway upgrade — code-compliant guard rail height, sealed decking surface for freeze-thaw durability.',
+    'Interior living space — new flooring, updated walls, and improved lighting throughout the main level living area.',
+    'Interior finish work — every surface inspected and finished to spec before client walkthrough. Consistent materials throughout.',
+    'Loft and upper level renovation — open railing, updated flooring, and improved natural light. Structural review completed prior to start.',
+    'Custom interior staircase — structural assessment confirmed load capacity, then new treads, risers, and railing installed. Permitted and inspected.',
+    'Bathroom renovation — new tile work, vanity, fixtures, and shower system. Plumbing updated to current code. Mountain climate durability materials.',
+    'Interior room renovation — consistent finish materials across all bedrooms. New flooring, updated walls, improved closet storage.',
+    'Bathroom installation phase — rough-in completed, tile in progress. All plumbing inspected before wall closure.',
+    'Interior staircase — connects multiple renovated levels. Updated treads, risers, and guard rail to current IBC requirements.',
+    'Upper level with skylights — open railing and natural light. Structural review of second-floor system prior to renovation.',
+    'Loft area — open second-floor space with updated flooring and railing. Natural light maximized through existing window layout.',
+    'Exterior deck renovation — new decking material, updated railing, and improved drainage away from foundation.',
+    'Deck walkway detail — sealed surface and railing upgrade. All connections hardware-upgraded for Lake Tahoe snow load conditions.',
+    'Completed full home renovation — interior and exterior transformation. Permitted, inspected, and delivered on schedule. BRE Builders NV #0085999.',
+  ]
+  const alts = captions.map((c, idx) => `${c} — Lake Tahoe Full Home Renovation by BRE Builders | Licensed General Contractor NV #0085999`)
   return {
     url: `https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${n}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${i + 1}-of-16${suffix}-1024x684.webp`,
     alt: alts[i],
-    title: `${captions[i]} – Lake Tahoe Full Home Renovation | BRE Builders`,
-    caption: captions[i],
+    title: captions[i],
+    caption: descriptions[i],
   }
 })

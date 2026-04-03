@@ -65,7 +65,7 @@ export const IMGS = {
   svc_deck:         `${CDN}/image-8-600x403.jpg`,
   svc_addition:     `${CDN}/image-9-600x403.jpg`,
   svc_loft:         `${CDN}/loft-condo-remodel-600x403.jpg`,
-  svc_kitchen:      `${CDN}/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1-600x403.jpg`,
+  svc_kitchen:      `${CDN}/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1-1024x768.webp`,
 
   // CONCRETE
   concrete_slab: `${CDN}/Commercial-Concrete-Slab-Pour-with-Utility-Access---Reno-NV-600x403.jpg`,

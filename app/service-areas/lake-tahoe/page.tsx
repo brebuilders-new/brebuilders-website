@@ -164,7 +164,7 @@ export default function LakeTahoePage() {
                   <div key={n} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '78vw' }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`https://brebuilders.com/wp-content/uploads/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16-1024x684.webp`}
+                      src={`https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16-1024x684.webp`}
                       alt={`Lake Tahoe Renovation Photo ${n} of 16 BRE Builders`}
                       className="w-full h-52 object-cover rounded-xl"
                       loading={n <= 2 ? 'eager' : 'lazy'}
@@ -183,7 +183,7 @@ export default function LakeTahoePage() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     key={n}
-                    src={`https://brebuilders.com/wp-content/uploads/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16${suffix}-1024x684.webp`}
+                    src={`https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${pad}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${n}-of-16${suffix}-1024x684.webp`}
                     alt={`Lake Tahoe Full Home Renovation Photo ${n} BRE Builders`}
                     className="w-full h-36 object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500"
                     loading={n <= 4 ? 'eager' : 'lazy'}

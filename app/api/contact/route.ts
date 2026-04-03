@@ -182,7 +182,8 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
           <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
               <td style="vertical-align:top">
-                <p style="margin:0 0 6px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request &nbsp;·&nbsp; BRE Builders</p>
+                <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="120" height="auto" style="display:block;margin-bottom:14px;height:auto" />
+                <p style="margin:0 0 4px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request</p>
                 <p style="margin:0 0 3px;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
                 <p style="margin:0;font-size:13px;color:#9ca3af">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
               </td>
@@ -298,7 +299,8 @@ function buildClientEmail(data: Record<string, unknown>): string {
     <!-- Wordmark + greeting -->
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr><td style="padding:30px 36px 26px">
-        <p style="margin:0 0 18px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#92400e;font-family:monospace">Blue Reef Builders &nbsp;·&nbsp; Est. 1989</p>
+        <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="110" height="auto" style="display:block;margin-bottom:14px;height:auto" />
+        <p style="margin:0 0 14px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#92400e;font-family:monospace">Blue Reef Builders &nbsp;·&nbsp; Est. 1989</p>
         <p style="margin:0;font-size:28px;font-weight:600;color:#111827;letter-spacing:-0.5px;line-height:1.15">Hi ${data.firstName},<br><span style="color:#6b7280;font-size:18px">we got your request.</span></p>
       </td></tr>
     </table>

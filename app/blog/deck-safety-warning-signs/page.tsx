@@ -44,7 +44,7 @@ export default function DeckSafetyPage() {
       content={
         <div>
           <BlogImage
-            src="https://brebuilders.com/wp-content/uploads/Framing-and-Bench-Layout-Stage.jpg"
+            src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/Framing-and-Bench-Layout-Stage.jpg"
             alt="Deck framing structural inspection BRE Builders Reno NV Lake Tahoe"
             caption="Deck framing — the structure beneath the surface is where failure begins."
             priority

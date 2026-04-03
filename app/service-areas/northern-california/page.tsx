@@ -142,7 +142,7 @@ export default function NorthernCaliforniaPage() {
             <h1 className="font-display font-light text-[clamp(30px,9vw,48px)] leading-[0.95] tracking-tight text-white mb-3">
               Northern California<br /><span className="italic text-teal">Construction Services</span>
             </h1>
-            <p className="speakable-intro text-[14px] leading-[1.65] text-white/65 mb-4 max-w-[340px]">
+            <p className="speakable-intro text-[14px] leading-[1.65] text-white/90 mb-4 max-w-[340px]">
               Custom homes, structural repairs, remodeling, commercial construction. CA License #1093798. Ripon estate completed.
             </p>
             <div className="flex gap-2 overflow-x-auto scrollbar-none pb-1 mb-4">
@@ -180,7 +180,7 @@ export default function NorthernCaliforniaPage() {
             <h1 className="animate-fade-up-2 font-display font-light text-[clamp(48px,6.5vw,88px)] leading-[0.93] tracking-tight text-white mb-5">
               Northern California<br /><span className="italic text-teal">Construction Services</span>
             </h1>
-            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/65 mb-6 max-w-[560px]">
+            <p className="speakable-intro animate-fade-up-3 text-[16px] leading-[1.8] text-white/90 mb-6 max-w-[560px]">
               BRE Builders holds California Contractor License #1093798 and serves Northern California for custom home construction, structural repairs, remodeling, home additions, and commercial work. Proven project: ground-up luxury estate in Ripon, CA. Free consultations.
             </p>
             <div className="animate-fade-up-3 flex flex-wrap gap-2 mb-7">
@@ -360,7 +360,7 @@ export default function NorthernCaliforniaPage() {
             <h2 className="font-display text-[clamp(32px,4.5vw,62px)] font-light leading-[1.0] text-white mb-5">
               Northern California Project?<br /><span className="italic text-teal">We&apos;ve Proven It Here.</span>
             </h2>
-            <p className="text-[15px] text-white/50 max-w-md mx-auto mb-10">CA #1093798 · NV #0085999 · Ripon estate completed · Free consultations</p>
+            <p className="text-[15px] text-white/90 max-w-md mx-auto mb-10">CA #1093798 · NV #0085999 · Ripon estate completed · Free consultations</p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/contact?location=northern-california" className="btn-primary px-10 py-4">Schedule a Free Consultation →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-10 py-4 font-mono">{SITE.phone}</a>

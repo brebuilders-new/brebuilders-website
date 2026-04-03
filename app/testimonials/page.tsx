@@ -99,12 +99,33 @@ export default function TestimonialsPage() {
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <main>
-        {/* Hero */}
-        <section className="relative min-h-[55vh] lg:min-h-[65vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
+        {/* ── TESTIMONIALS HERO — MOBILE: compact ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full" style={{ height: '38vw', minHeight: 130, maxHeight: 190 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={IMGS.svc_repair} alt="BRE Builders Client Testimonials" className="w-full h-full object-cover" style={{ objectPosition: '50% 35%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal">Client Reviews · Blue Reef Builders</span>
+            </div>
+            <h1 className="font-display font-light text-[clamp(26px,7vw,38px)] leading-[1.02] tracking-tight text-white mb-2">
+              What Clients Say<br /><span className="italic text-teal">About BRE Builders.</span>
+            </h1>
+            <p className="text-[13px] leading-[1.65] text-white/55">
+              Real clients. Real projects. Real results. Serving Reno, Sparks, Lake Tahoe, and Northern California since 1989.
+            </p>
+          </div>
+        </section>
+
+        {/* ── TESTIMONIALS HERO — DESKTOP: cinematic ── */}
+        <section className="hidden md:relative md:block md:min-h-[55vh] lg:min-h-[65vh] md:flex md:flex-col md:justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMGS.svc_repair} alt="BRE Builders Client Testimonials" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
+          <img src={IMGS.svc_repair} alt="BRE Builders Client Testimonials" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/65 to-void/25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent" />
           <div className="absolute top-0 left-0 w-1 h-full bg-teal/25" />
           <div className="relative z-10 container">
             <div className="max-w-[580px]">

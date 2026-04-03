@@ -47,7 +47,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
   'glenbrook-lake-tahoe': {
     slug: 'glenbrook-lake-tahoe',
     name: 'Glenbrook Lake Tahoe Full Home Renovation',
-    address: '619 Lakeview Dr, Glenbrook, NV 89413',
+    address: 'Glenbrook, Lake Tahoe, NV',
     location: 'Glenbrook, Lake Tahoe, NV',
     service_type: 'full-home-renovation',
     year: '2025',
@@ -78,7 +78,7 @@ export const PROJECT_IMAGES: Record<string, ProjectImages> = {
   'zephyr-cove-lake-tahoe': {
     slug: 'zephyr-cove-lake-tahoe',
     name: 'Zephyr Cove Full Home Renovation',
-    address: '695 Lakeview Blvd, Zephyr Cove, NV 89448',
+    address: 'Zephyr Cove, Lake Tahoe, NV',
     location: 'Zephyr Cove, Lake Tahoe, NV',
     service_type: 'full-home-renovation',
     year: '2025',

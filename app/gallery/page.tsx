@@ -99,7 +99,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
         'Project complete — full interior and exterior renovation. Permitted, inspected, delivered on schedule. BRE Builders NV #0085999.',
       ]
       return {
-        src: `${CDN}/2025/12/${n}-619-Lakeview-Dr-Glenbrook-NV-89413-${i + 1}-of-37.webp`,
+        src: `${CDN}/2025/12/${n}-619-Lakeview-Dr-Glenbrook-NV-89413-${i + 1}-of-37-600x403.webp`,
         alt: `${titles[i]} — Glenbrook Lake Tahoe Full Home Renovation`,
         title: titles[i],
         caption: captions[i],
@@ -500,8 +500,8 @@ export default function GalleryPage() {
                 {/* Glenbrook */}
                 <div>
                   <BeforeAfterSlider
-                    before={{ src: `${CDN}/2025/12/19-619-Lakeview-Dr-Glenbrook-NV-89413-19-of-37.webp`, alt: 'Before renovation foundation Glenbrook' }}
-                    after={{ src: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37.webp`, alt: 'After full renovation Glenbrook Lake Tahoe' }}
+                    before={{ src: `${CDN}/2025/12/19-619-Lakeview-Dr-Glenbrook-NV-89413-19-of-37-600x403.webp`, alt: 'Before renovation foundation Glenbrook' }}
+                    after={{ src: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`, alt: 'After full renovation Glenbrook Lake Tahoe' }}
                     beforeLabel="Foundation" afterLabel="Complete"
                   />
                   <p className="font-mono text-[10px] tracking-wider text-cream/40 mt-3">Glenbrook Full Home Renovation — Lake Tahoe, NV</p>

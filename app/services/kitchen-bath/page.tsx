@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Custom+Cabinetry+%C2%B7+Tile+%C2%B7+Countertops+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },
-  alternates: { canonical: `${SITE_URL}/kitchen/` },
+  alternates: { canonical: `${SITE_URL}/services/kitchen-bath/` },
 }
 
 const FAQS = [
@@ -28,10 +28,76 @@ const FAQS = [
   { q: 'Do you remodel bathrooms in addition to kitchens?', a: 'Yes. BRE Builders provides full bathroom remodels — from tile and vanity replacement to complete gut-and-rebuild. Master baths, guest baths, and powder rooms.' },
 ]
 
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': 'https://brebuilders.com/services/kitchen-bath/#service',
+      name: 'Kitchen & Bath Remodeling Reno NV',
+      serviceType: 'Kitchen and Bathroom Remodeling',
+      description: 'Full kitchen and bathroom remodeling in Reno, NV — custom cabinetry, tile, countertops, layout changes, and complete gut-and-rebuild projects. Licensed NV #0085999.',
+      provider: { '@id': 'https://brebuilders.com/#business' },
+      areaServed: [
+        { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+      ],
+      url: 'https://brebuilders.com/services/kitchen-bath/',
+      offers: { '@type': 'Offer', priceRange: '$15,000–$80,000+', priceCurrency: 'USD' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much does a kitchen remodel cost in Reno NV?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Kitchen remodels in Reno range from $15,000 for minor updates to $80,000+ for full gut-and-rebuild remodels with custom cabinetry. Mid-range remodels typically run $25,000–$50,000.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does a kitchen remodel take in Reno?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Minor kitchen remodels take 2–4 weeks. Full kitchen remodels with custom cabinetry take 6–12 weeks. Planning and design add 2–4 weeks before construction begins.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does BRE Builders handle kitchen permits in Reno NV?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders manages all permit applications for structural, electrical, and plumbing changes as part of the project scope. Licensed NV #0085999.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you remodel bathrooms in addition to kitchens?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders provides full bathroom remodels — tile, vanities, showers, tubs, and complete gut-and-rebuild. Master baths, guest baths, and powder rooms across Reno and Sparks.' },
+        },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://brebuilders.com/services/' },
+        { '@type': 'ListItem', position: 3, name: 'Kitchen & Bath Remodeling', item: 'https://brebuilders.com/services/kitchen-bath/' },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/services/kitchen-bath/',
+      url: 'https://brebuilders.com/services/kitchen-bath/',
+      name: 'Kitchen & Bath Remodel Reno NV | Blue Reef Builders',
+      description: 'Kitchen and bathroom remodeling in Reno, NV. Custom cabinetry, tile, countertops, layout changes. Licensed NV #0085999. Free estimates.',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.speakable-intro', '.speakable-faq'],
+      },
+    },
+  ],
+}
+
 export default function KitchenBathPage() {
   return (
     <>
       <Nav />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <main data-theme="warmth">
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.ripon[1],

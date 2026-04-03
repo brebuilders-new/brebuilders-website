@@ -81,17 +81,30 @@ const nextConfig = {
   },
   async headers() {
     return [
-      // Spam/malware pages from December 2024 incident — noindex
+      // Spam/malware pages from December 2024 incident — return 410 Gone
       {
         source: '/step-into-the-spotlight-win-big-with-nine-casino-today-4226/',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+        ],
       },
       {
         source: '/vavada-casino/',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex' }],
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+        ],
       },
     ]
   },
+}
+
+// Dynamic rewrites
+nextConfig.rewrites = async function() {
+  return [
+    { source: '/llms.txt', destination: '/api/llms' },
+  ]
 }
 
 module.exports = nextConfig

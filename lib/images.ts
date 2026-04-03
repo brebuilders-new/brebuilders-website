@@ -82,17 +82,17 @@ export const IMGS = {
   lt_glenbrook_1:     `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
 
   // BLOG POST INLINE IMAGES
-  blog_20yr_hero:     `${CDN}/20-Year-Old-Reno-Homes.jpg`,
-  blog_cracked_shower:`${CDN}/Cracked-Shower-Walls.jpg`,
-  blog_hvac:          `${CDN}/Failing-HVAC-Systems.jpg`,
-  blog_porch:         `${CDN}/Shifting-Porch-Columns.jpg`,
-  blog_basement_water:`${CDN}/Basement-Water-Intrusion.jpg`,
+  blog_20yr_hero:     `${CDN}/uploads/20-Year-Old-Reno-Homes-600x403.webp`,
+  blog_cracked_shower:`${CDN}/uploads/Cracked-Shower-Walls-600x403.webp`,
+  blog_hvac:          `${CDN}/uploads/Failing-HVAC-Systems-600x403.webp`,
+  blog_porch:         `${CDN}/uploads/Shifting-Porch-Columns-600x403.webp`,
+  blog_basement_water:`${CDN}/uploads/Basement-Water-Intrusion-600x403.webp`,
 
-  blog_30yr_hero:     `${CDN}/30-Year-Old-Reno-Homes.jpg`,
-  blog_furnace:       `${CDN}/Rusty-Furnace-Damage.jpg`,
-  blog_unsafe_deck:   `${CDN}/Unsafe-Deck-Framing.jpg`,
-  blog_pipes:         `${CDN}/Galvanized-Pipe-Corrosion.jpg`,
-  blog_wiring:        `${CDN}/Aluminum-Wiring-Risk.jpg`,
+  blog_30yr_hero:     `${CDN}/uploads/30-Year-Old-Reno-Homes-600x403.webp`,
+  blog_furnace:       `${CDN}/uploads/Rusty-Furnace-Damage-600x403.webp`,
+  blog_unsafe_deck:   `${CDN}/uploads/Unsafe-Deck-Framing-600x403.webp`,
+  blog_pipes:         `${CDN}/uploads/Galvanized-Pipe-Corrosion-600x403.webp`,
+  blog_wiring:        `${CDN}/uploads/Aluminum-Wiring-Risk-600x403.webp`,
 
   blog_deck_framing:  `${CDN}/Framing-and-Bench-Layout-Stage.jpg`,
   blog_after_const:   `${CDN}/After-Construction_resized.jpg`,

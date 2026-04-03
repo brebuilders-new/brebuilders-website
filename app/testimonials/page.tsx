@@ -141,7 +141,7 @@ export default function TestimonialsPage() {
                 <div key={t.name} className="flex-shrink-0 w-[82vw] md:w-auto md:flex-shrink-0 bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full" style={{scrollSnapAlign:'start'}}>
                   <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
                   <div className="flex gap-0.5 mb-3 pt-8">{[1,2,3,4,5].map(s => <span key={s} className="text-gold text-[14px]">&#9733;</span>)}</div>
-                  <p className="font-display text-[15px] italic text-cream/85 leading-relaxed mb-5">{t.text}</p>
+                  <p className="font-display text-[15px] italic text-cream/85 leading-relaxed mb-5">{(t as any).text || (t as any).quote}</p>
                   <div className="font-semibold text-[13px] text-cream">{t.name}</div>
                   <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                 </div>

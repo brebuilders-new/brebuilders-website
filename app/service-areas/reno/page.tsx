@@ -85,7 +85,7 @@ const schema = {
       description: 'BRE Builders serves Reno, NV — #1 ADU builder, Page 1 foundation repair. Licensed NV #0085999. Free estimates.',
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.speakable-intro', '.speakable-services', '.speakable-faq', 'h1'],
+        cssSelector: ['.speakable-summary', '.speakable-faq', 'h1'],
       },
     },
   ],

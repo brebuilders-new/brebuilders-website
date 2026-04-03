@@ -70,7 +70,7 @@ const schema = {
       isPartOf: { '@type': 'WebSite', url: 'https://brebuilders.com' },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.speakable-intro', 'h1', '.speakable-services'],
+        cssSelector: ['.speakable-intro', 'h1', '.speakable-services', '.speakable-faq'],
       },
     },
     {
@@ -313,7 +313,7 @@ export default function NorthernCaliforniaPage() {
                   <a href={SITE.phoneHref} className="btn-ghost font-mono">{SITE.phone}</a>
                 </div>
               </div>
-              <FAQAccordion items={FAQS} />
+              <div className="speakable-faq"><FAQAccordion items={FAQS} /></div>
             </div>
           </div>
         </section>

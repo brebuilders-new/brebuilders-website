@@ -66,7 +66,7 @@ const schema = {
       name: 'Contractor Lake Tahoe NV & CA | BRE Builders',
       url: 'https://brebuilders.com/service-areas/lake-tahoe/',
       description: 'BRE Builders serves Lake Tahoe — snow-load rated builds, structural repair, custom homes. NV #0085999 · CA #1093798.',
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-intro', '.speakable-faq', 'h1'] },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq', 'h1'] },
     },
   ],
 }
@@ -284,7 +284,7 @@ export default function LakeTahoePage() {
               </div>
               <div>
                 <SL text="Common Questions" />
-                <FAQAccordion items={FAQS} />
+                <div className="speakable-faq"><FAQAccordion items={FAQS} /></div>
               </div>
             </div>
           </div>

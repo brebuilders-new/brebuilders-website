@@ -25,7 +25,7 @@ export const VIDEOS: BREVideo[] = [
   {
     id: '6oTurM7gESE',
     title: 'Lake Tahoe Full Home Renovation — BRE Builders | Zephyr Cove, NV',
-    description: 'Complete interior and exterior renovation at 695 Lakeview Blvd, Zephyr Cove, Lake Tahoe NV. Structural upgrades, kitchen and bath remodeling, deck work, custom stairs.',
+    description: 'Complete interior and exterior renovation at Zephyr Cove, Lake Tahoe, Lake Tahoe NV. Structural upgrades, kitchen and bath remodeling, deck work, custom stairs.',
     category: 'Full Home Renovation',
     location: 'Zephyr Cove, Lake Tahoe, NV',
     featured: true,

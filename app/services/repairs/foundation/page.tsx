@@ -114,7 +114,36 @@ export default function FoundationRepairPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <main data-theme="repairs">
-        <section className="relative min-h-[68vh] lg:min-h-[75vh] flex flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
+        {/* ── MOBILE HERO — compact, content above fold ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full" style={{ height: '42vw', minHeight: 150, maxHeight: 220 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={IMGS.repairs_foundation} alt="Foundation Repair Structural Issues Reno NV Licensed Contractor BRE Builders" className="w-full h-full object-cover" fetchPriority="high" style={{ objectPosition: '50% 35%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal">Foundation Repair · Reno NV</span>
+            </div>
+            <h1 className="font-display font-light text-[clamp(27px,7.5vw,40px)] leading-[1.0] tracking-tight text-white mb-3">
+              Foundation Repair
+                <br />and Foundation Issues
+                <br />
+                <span className="italic text-teal">in Reno, NV</span>
+            </h1>
+            <p className="text-[13px] leading-[1.65] text-white/60 mb-4">
+              Licensed foundation repair contractor serving Reno, Sparks, and Northern Nevada. Cracks,
+                settlement, drainage correction, and framing repair. NV License #0085999.
+            </p>
+            <div className="flex gap-2.5">
+              <a href="tel:7753914517" className="btn-primary flex-1 justify-center py-3.5 text-[14px]">📞 Call Now</a>
+              <a href="/contact" className="btn-ghost flex-1 justify-center py-3.5 text-[13px]">Get Quote</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="hidden md:relative md:block md:flex min-h-[68vh] lg:min-h-[75vh] md:flex-col justify-end pb-14 lg:pb-20 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={IMGS.repairs_foundation}

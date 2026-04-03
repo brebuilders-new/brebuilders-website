@@ -29,7 +29,7 @@ const schema = {
 }
 
 const PHOTOS = [
-  { n: 1,  suffix: '',  title: 'Renovation Complete',       caption: 'Completed exterior view — full structural and cosmetic transformation, Lake Tahoe, NV' },
+  { n: 1,  suffix: '',  title: 'Renovation Complete',       caption: 'Full exterior renovation — structural upgrades, new siding, deck integration. Snow-load rated to Lake Tahoe standards. BRE Builders NV #0085999.' },
   { n: 2,  suffix: '',  title: 'Deck & Structure',          caption: 'New deck structure integrated with renovated exterior, Zephyr Cove' },
   { n: 3,  suffix: '',  title: 'Deck Railing & Walkway',    caption: 'Upgraded deck railing and sealed walkway surface' },
   { n: 4,  suffix: '',  title: 'Interior Living Space',     caption: 'Updated interior living area with new finishes throughout' },
@@ -44,7 +44,7 @@ const PHOTOS = [
   { n: 13, suffix: '',  title: 'Loft Natural Light',        caption: 'Loft area renovation — open layout with natural light and updated finishes' },
   { n: 14, suffix: '',  title: 'Exterior Deck Renovation',  caption: 'Exterior deck renovation with new decking material and railing' },
   { n: 15, suffix: '',  title: 'Deck Walkway Detail',       caption: 'Deck walkway detail — sealed surface and railing upgrade complete' },
-  { n: 16, suffix: '-1', title: 'Completed — Full View',   caption: 'Full exterior view of completed renovation, Zephyr Cove, Lake Tahoe, Lake Tahoe, NV' },
+  { n: 16, suffix: '-1', title: 'Completed — Full View',   caption: 'Completed exterior — full home renovation, Zephyr Cove, Lake Tahoe NV. Snow-rated structure, updated siding, and deck system.' },
 ].map(p => ({
   src: `${BASE}/${String(p.n).padStart(2,'0')}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${p.n}-of-16${p.suffix}-1024x684.webp`,
   alt: `${p.title} — Lake Tahoe Full Home Renovation BRE Builders`,

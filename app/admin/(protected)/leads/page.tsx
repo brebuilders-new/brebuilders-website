@@ -164,6 +164,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
           </div>
         ) : (
           <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' as const }}>
+          <div style={{ overflowX: "auto", WebkitOverflowScrolling: "touch", margin: "0 -16px", padding: "0 16px" }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px' }}>
             <thead>
               <tr>
@@ -228,6 +229,7 @@ export default async function AdminLeadsPage({ searchParams }: PageProps) {
               })}
             </tbody>
           </table>
+          </div>
           </div>
         )}
       </div>

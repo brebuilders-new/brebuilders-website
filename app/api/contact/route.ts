@@ -22,32 +22,31 @@ export async function POST(req: NextRequest) {
       auth: { user: gmailUser, pass: gmailPass },
     })
 
-    const isDev = process.env.NODE_ENV !== 'production'
-    const toEmail = isDev ? 'ifyougetlockedout@protonmail.com' : 'brebuilders@gmail.com'
-    const ccEmails = isDev ? [] : ['steve@brebuilders.com', 'chris@brebuilders.com', 'sean@brebuilders.com']
-
     const serviceLabel = SERVICE_LABELS[service as string] || service
     const location = [body.city, body.state].filter(Boolean).join(', ') || 'Location TBD'
     const leadScore = calcLeadScore(body)
     const subject = `${leadScore.badge} ${serviceLabel} — ${firstName} ${lastName} (${location})`
 
+    // ─── Internal team notification ────────────────────────────────────────────
+    // Production: primary to brebuilders@gmail.com, CC full team
+    // Always BCC dev monitor so leads can be verified from any environment
     await transporter.sendMail({
       from: `BRE Builders Leads <${gmailUser}>`,
-      to: toEmail,
-      ...(ccEmails.length > 0 && { cc: ccEmails }),
+      to: 'brebuilders@gmail.com',
+      cc: ['steve@brebuilders.com', 'chris@brebuilders.com', 'sean@brebuilders.com'],
+      bcc: 'ifyougetlockedout@protonmail.com',
       replyTo: email,
-      subject: isDev ? `[DEV] ${subject}` : subject,
-      html: buildTeamEmail(body, isDev, leadScore),
+      subject,
+      html: buildTeamEmail(body, false, leadScore),
     })
 
-    if (!isDev) {
-      await transporter.sendMail({
-        from: `BRE Builders <${gmailUser}>`,
-        to: email,
-        subject: `We received your ${serviceLabel} request — BRE Builders`,
-        html: buildClientEmail(body),
-      })
-    }
+    // ─── Client confirmation ───────────────────────────────────────────────────
+    await transporter.sendMail({
+      from: `BRE Builders <${gmailUser}>`,
+      to: email,
+      subject: `We received your ${serviceLabel} request — BRE Builders`,
+      html: buildClientEmail(body),
+    })
 
     return NextResponse.json({ success: true })
   } catch (err) {
@@ -207,7 +206,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>
 
   <!-- ── LEAD SCORE ── -->
-  <tr><td style="background:#060d14;padding:0 32px 24px">
+  <tr><td style="background:#ffffff;padding:0 32px 24px">
     <table width="100%" cellpadding="0" cellspacing="0" style="background:${scoreBg};border:1px solid ${scoreColor}55;border-radius:10px">
       <tr>
         <!-- Score number -->
@@ -228,7 +227,7 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>
 
   <!-- ── CONTACT DETAILS ── -->
-  <tr><td style="background:#060d14;padding:0 32px 20px">
+  <tr><td style="background:#ffffff;padding:0 32px 20px">
     <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Contact Details</p>
     <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb">
       ${row('Phone',        `<a href="tel:${data.phone}" style="color:#1cb8b3;text-decoration:none;font-family:Arial,sans-serif">${data.phone}</a>`)}
@@ -246,13 +245,13 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
   </td></tr>
 
   <!-- ── SERVICE DETAILS ── -->
-  <tr><td style="background:#060d14;padding:0 32px 20px">
+  <tr><td style="background:#ffffff;padding:0 32px 20px">
     ${buildServiceBlock(data)}
   </td></tr>
 
   <!-- ── NOTES ── -->
   ${data.notes ? `
-  <tr><td style="background:#060d14;padding:0 32px 20px">
+  <tr><td style="background:#ffffff;padding:0 32px 20px">
     <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Client Notes</p>
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>

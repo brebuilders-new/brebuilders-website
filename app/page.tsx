@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
+import MobileCarousel from '@/components/ui/MobileCarousel'
 import Link from 'next/link'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
@@ -561,15 +562,18 @@ export default function HomePage() {
                 <Link href="/projects" className="text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors flex-shrink-0">View All →</Link>
               </div>
             </Fade>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {PROJECTS.slice(0, 6).map((p, i) => (
-                <Fade key={p.slug} delay={i * 65} className={i === 0 ? 'md:col-span-2 lg:col-span-1' : ''}>
-                  <Link href={`/projects/${p.slug}`} className="group block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/25 transition-all duration-500 bg-panel">
-                    <div className={`relative overflow-hidden ${i === 0 ? 'h-64 md:h-72 lg:h-60' : 'h-52'}`}>
+            <MobileCarousel
+              items={PROJECTS.slice(0, 6)}
+              desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
+              itemWidth="80vw"
+              renderItem={(p, i) => (
+                <Fade key={p.slug} delay={i * 65}>
+                  <Link href={`/projects/${p.slug}`} className="group block overflow-hidden rounded-xl border border-white/[0.055] hover:border-teal/25 transition-all duration-500 bg-panel h-full">
+                    <div className="relative overflow-hidden h-56">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={p.thumbnail} alt={p.thumbnailAlt} className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-700" loading={i < 3 ? 'eager' : 'lazy'} />
                       <div className="absolute inset-0 bg-gradient-to-t from-void/80 via-void/10 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
                         <div className="font-mono text-[10px] tracking-[2px] uppercase text-teal/80 mb-1">{p.type}</div>
                         <h3 className="font-display text-[16px] text-white leading-snug">{p.title}</h3>
                         <p className="text-[12px] text-white/80 mt-1">📍 {p.location}</p>
@@ -577,8 +581,8 @@ export default function HomePage() {
                     </div>
                   </Link>
                 </Fade>
-              ))}
-            </div>
+              )}
+            />
             <Fade delay={300} className="mt-10 text-center">
               <Link href="/projects" className="inline-flex items-center gap-2 px-8 py-3.5 border border-white/12 text-cream/45 text-[12px] rounded-lg hover:border-teal/35 hover:text-teal transition-all font-mono tracking-wider uppercase">
                 View All Projects →
@@ -677,8 +681,11 @@ export default function HomePage() {
                 Trusted Across<br /><span className="italic text-teal">Nevada & California.</span>
               </h2>
             </Fade>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {TESTIMONIALS.map((t, i) => (
+            <MobileCarousel
+              items={TESTIMONIALS}
+              desktopClassName="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5"
+              itemWidth="80vw"
+              renderItem={(t, i) => (
                 <Fade key={t.name} delay={i * 60}>
                   <div className="bg-panel border border-white/[0.055] rounded-xl p-7 hover:border-teal/15 transition-colors relative h-full">
                     <div className="font-display text-[56px] leading-none text-teal/35 absolute top-4 left-5 select-none">&ldquo;</div>
@@ -688,8 +695,8 @@ export default function HomePage() {
                     <div className="font-mono text-[10px] text-cream/60 tracking-wider mt-0.5">{t.location}</div>
                   </div>
                 </Fade>
-              ))}
-            </div>
+              )}
+            />
           </div>
         </section>
 

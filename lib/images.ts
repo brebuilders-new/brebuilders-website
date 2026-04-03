@@ -28,7 +28,7 @@ export const IMGS = {
   repairs_rot:      `${CDN}/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg`,
   repairs_deck_lt:  `${CDN}/Lake-Tahoe-Deck-Reinforcement---Steel-Angle-Bracket-System-600x403.jpg`,
   repairs_mine:     `${CDN}/Close-Up-of-Structural-Wall-with-Custom-Openings-600x403.jpg`,
-  repairs_arun:     `${CDN}/Arun-Deck-Repair---Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg`,
+  repairs_arun:     `${CDN}/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-1000x1000.jpg`,
 
   // LAKE TAHOE ZEPHYR COVE — 16 photos (695 Lakeview Blvd)
   lt: (n: number) => {

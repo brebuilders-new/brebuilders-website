@@ -56,7 +56,32 @@ export default function OurApproachPage() {
     <>
       <Nav />
       <main>
-        <section className="relative min-h-[55vh] flex flex-col justify-end pb-14 pt-28 overflow-hidden">
+        {/* ── MOBILE HERO — compact, content above fold ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full" style={{ height: '42vw', minHeight: 150, maxHeight: 220 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={IMGS.lt(7)} alt="Custom Interior Stair Construction Lake Tahoe BRE Builders craftsmanship" className="w-full h-full object-cover" fetchPriority="high" style={{ objectPosition: '50% 35%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal">How We Work</span>
+            </div>
+            <h1 className="font-display font-light text-[clamp(27px,7.5vw,40px)] leading-[1.0] tracking-tight text-white mb-3">
+              Our Approach.<br /><span className="italic text-teal">No Surprises.</span>
+            </h1>
+            <p className="text-[13px] leading-[1.65] text-white/60 mb-4">
+              
+            </p>
+            <div className="flex gap-2.5">
+              <a href="tel:7753914517" className="btn-primary flex-1 justify-center py-3.5 text-[14px]">📞 Call Now</a>
+              <a href="/contact" className="btn-ghost flex-1 justify-center py-3.5 text-[13px]">Get Quote</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="hidden md:relative md:block md:flex min-h-[55vh] md:flex-col justify-end pb-14 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={IMGS.lt(7)} alt="Custom Interior Stair Construction Lake Tahoe BRE Builders craftsmanship" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/55 to-void/20" />

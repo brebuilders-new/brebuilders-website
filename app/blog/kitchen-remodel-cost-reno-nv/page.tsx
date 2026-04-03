@@ -28,10 +28,10 @@ const schema = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does a kitchen remodel cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Kitchen remodels in Reno NV range from $18,000 for a basic refresh (paint, hardware, minor updates) to $85,000+ for a full gut renovation with new cabinets, countertops, appliances, and layout changes. Most mid-range kitchen remodels in Reno run $35,000–$55,000.' } },
-        { '@type': 'Question', name: 'How long does a kitchen remodel take in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'A basic kitchen refresh takes 1–2 weeks. A mid-range remodel with new cabinets and countertops takes 3–5 weeks. A full gut renovation with layout changes takes 6–10 weeks.' } },
-        { '@type': 'Question', name: 'Do I need a permit for a kitchen remodel in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Permits are required for any electrical, plumbing, or structural work in a kitchen remodel. Cosmetic updates — painting, replacing hardware, new appliances — do not require permits. BRE Builders handles all permit requirements.' } },
-        { '@type': 'Question', name: 'What adds the most value in a kitchen remodel?', acceptedAnswer: { '@type': 'Answer', text: 'In Reno NV, cabinet replacement or refacing, countertop upgrades to quartz or granite, and updated lighting consistently deliver the highest return on investment in kitchen remodels.' } },
+        { '@type': 'Question', name: 'How much does a kitchen remodel cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: "Kitchen remodels in Reno NV range from $18,000 for a basic refresh (paint, hardware, minor updates) to $85,000+ for a full gut renovation with new cabinets, countertops, appliances, and layout changes. Most mid-range kitchen remodels in Reno run $35,000–$55,000." } },
+        { '@type': 'Question', name: 'How long does a kitchen remodel take in Reno?', acceptedAnswer: { '@type': 'Answer', text: "A basic kitchen refresh takes 1–2 weeks. A mid-range remodel with new cabinets and countertops takes 3–5 weeks. A full gut renovation with layout changes takes 6–10 weeks." } },
+        { '@type': 'Question', name: 'Do I need a permit for a kitchen remodel in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: "Permits are required for any electrical, plumbing, or structural work in a kitchen remodel. Cosmetic updates — painting, replacing hardware, new appliances — do not require permits. BRE Builders handles all permit requirements." } },
+        { '@type': 'Question', name: 'What adds the most value in a kitchen remodel?', acceptedAnswer: { '@type': 'Answer', text: "In Reno NV, cabinet replacement or refacing, countertop upgrades to quartz or granite, and updated lighting consistently deliver the highest return on investment in kitchen remodels." } },
       ],
     },
   ],

@@ -213,7 +213,7 @@ export default function ProjectsPage() {
                   <div key={i} className="flex-shrink-0" style={{ scrollSnapAlign: 'start', width: '260px' }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`https://brebuilders.com/wp-content/uploads/2025/12/${n}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${i + 1}-of-16${suffix}-1024x684.webp`}
+                      src={`https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2025/12/${n}-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-${i + 1}-of-16${suffix}-1024x684.webp`}
                       alt={`Lake Tahoe Full Home Renovation Photo ${i + 1} of 16 BRE Builders`}
                       className="w-full h-44 object-cover rounded-xl hover:scale-[1.02] transition-transform duration-500"
                       loading={i < 4 ? 'eager' : 'lazy'}

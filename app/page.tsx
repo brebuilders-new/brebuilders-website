@@ -409,7 +409,7 @@ export default function HomePage() {
         {/* ── HERO MOBILE ── */}
         <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>
           <HeroSlider />
-          <div className="relative z-10 flex flex-col justify-end px-5 pb-8 pt-28" style={{ minHeight: '100svh' }}>
+          <div className="relative z-10 flex flex-col justify-between px-5 pb-6 pt-20" style={{ minHeight: '100svh' }}>
             <div className="inline-flex items-center gap-2 border border-teal/60 rounded-full px-3 py-1.5 bg-teal/[0.18] backdrop-blur-sm mb-5 self-start">
               <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
               <span className="font-mono text-[9px] tracking-[2px] uppercase text-cream font-medium">Now Accepting Projects · NV & CA</span>

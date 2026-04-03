@@ -13,8 +13,8 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Deck Builder Reno NV & Lake Tahoe | Deck Repair & Construction',
-  description: 'Licensed deck builders in Reno, NV and Lake Tahoe. New deck construction, structural repair, snow-load rated. NV License #0085999. Free estimates.',
+  title: 'Deck Contractors Reno NV | New Builds & Structural Repair | BRE Builders',
+  description: 'Licensed deck contractors serving Reno, Sparks & Lake Tahoe. New builds, structural repairs, snow-load rated framing. NV #0085999. 35+ years. Free estimate today.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630 }],
   },
@@ -126,10 +126,10 @@ export default function DecksPage() {
           <GalleryGrid
             mode="grid"
             images={[
-              { src: IMGS.deck_charolette, alt: "Charolette's Deck Smooth Sealed Surface BRE Builders Reno", title: '', caption: '' },
-              { src: IMGS.repairs_arun, alt: 'Hillside Deck Reinforcement Support Beams Lake Tahoe BRE Builders', title: '', caption: '' },
-              { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Bracket System Deck Repair Lake Tahoe BRE Builders', title: '', caption: '' },
-              { src: IMGS.lt(2), alt: 'Deck Structure Renovation Lake Tahoe BRE Builders', title: '', caption: '' },
+              { src: IMGS.deck_charolette, alt: "Charolette's Deck Smooth Sealed Surface BRE Builders Reno", title: 'Sealed Deck Surface', caption: 'Reno, NV · Smooth sealed finish' },
+              { src: IMGS.repairs_arun, alt: 'Hillside Deck Reinforcement Support Beams Lake Tahoe BRE Builders', title: 'Hillside Deck Reinforcement', caption: 'Lake Tahoe, NV · Structural support beams' },
+              { src: IMGS.repairs_deck_lt, alt: 'Steel Angle Bracket System Deck Repair Lake Tahoe BRE Builders', title: 'Steel Bracket Repair', caption: 'Lake Tahoe, NV · CMU wall deck anchor system' },
+              { src: IMGS.lt(2), alt: 'Deck Structure Renovation Lake Tahoe BRE Builders', title: 'Deck Structure Renovation', caption: 'Zephyr Cove, Lake Tahoe · Full structural rebuild' },
             ]}
             aspectClass="h-56"
           />

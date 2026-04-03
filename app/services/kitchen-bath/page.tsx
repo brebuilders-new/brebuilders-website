@@ -13,8 +13,8 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
-  description: 'Kitchen and bathroom remodeling in Reno, NV. Custom cabinetry, tile, countertops, full remodels. Licensed contractor NV #0085999. Free estimates.',
+  title: 'Kitchen & Bath Remodel Reno NV | $15K–$80K | BRE Builders',
+  description: 'Kitchen remodels from $15K–$80K and full bathroom renovations in Reno, NV. Custom cabinetry, tile, layout changes. Licensed NV #0085999. Free on-site estimate.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Custom+Cabinetry+%C2%B7+Tile+%C2%B7+Countertops+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },
@@ -117,7 +117,7 @@ export default function KitchenBathPage() {
 
         <PageSection bg="bg-deep">
           <SectionLabel text="Kitchen & Bath Gallery" />
-          <SectionHeading line1="Real Projects." line2italic="Real Results." size="lg" className="mb-10" />
+          <SectionHeading line1="Kitchen &amp; Bath Remodels" line2italic="Reno, NV — Completed Projects." size="lg" className="mb-10" />
           <GalleryGrid
             mode="grid"
             images={[
@@ -156,7 +156,7 @@ export default function KitchenBathPage() {
           aeoContent={
             <div>
               <SectionLabel text="Kitchen & Bath in Reno NV" />
-              <SectionHeading line1="High-Quality Finishes." line2italic="Expert Execution." size="md" className="mb-6" />
+              <SectionHeading line1="What's Included in a" line2italic="Reno Kitchen Remodel." size="md" className="mb-6" />
               <SpeakableBlock className="mb-6">
                 <p>BRE Builders provides full kitchen and bathroom remodeling throughout Reno, NV. From minor fixture upgrades to complete gut-and-rebuild remodels with custom cabinetry, we handle every aspect of the project in-house.</p>
                 <p>Kitchen remodels in Reno range from $15,000 for cosmetic updates to $80,000+ for custom cabinetry and full layout changes. Bathroom remodels run $8,000–$40,000. All structural, electrical, and plumbing changes are permitted through Washoe County or the City of Reno. Licensed NV #0085999.</p>

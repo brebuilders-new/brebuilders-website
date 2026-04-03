@@ -22,7 +22,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'ADU Builders Reno NV | $75K–$300K Complete Builds',
   description:
-    'Licensed ADU contractors in Reno, NV. Complete builds from $75,000. Permit-ready plans, full design-build, 35+ years experience. NV License #0085999. Free quote in 24 hours.',
+    'Top-rated ADU contractors in Reno, NV. Studio to 2-bed builds from $75K — BRE Builders handles permits, design & construction. Licensed NV #0085999. Free quote in 24 hours.',
   openGraph: {
     title: 'ADU Builders Reno NV | $75K–$300K | Blue Reef Builders',
     images: [{
@@ -142,7 +142,7 @@ export default function ADUPage() {
         <PageSection bg="bg-deep">
           <SectionLabel text="ADU Types & Pricing" />
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-12">
-            <SectionHeading line1="Choose Your ADU." line2italic="We Handle Everything Else." size="lg" />
+            <SectionHeading line1="ADU Types We Build" line2italic="in Reno &amp; Northern Nevada." size="lg" />
             <Link href="/contact?service=adu" className="hidden md:flex items-center gap-2 text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors flex-shrink-0">Get Custom Quote →</Link>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
@@ -176,7 +176,7 @@ export default function ADUPage() {
         <PageSection bg="bg-void">
           <SectionLabel text="ADU Portfolio" />
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-            <SectionHeading line1="ADUs We've Built" line2italic="in Northern Nevada." size="lg" />
+            <SectionHeading line1="Completed ADU Projects" line2italic="Reno, Sparks &amp; Lake Tahoe." size="lg" />
             <Link href="/portfolio/adus/" className="hidden md:inline-flex items-center gap-2 text-[11px] font-mono tracking-[2px] uppercase text-teal/60 hover:text-teal transition-colors flex-shrink-0">Full ADU Portfolio →</Link>
           </div>
           {/* Mobile carousel */}
@@ -195,7 +195,7 @@ export default function ADUPage() {
         {/* Process */}
         <PageSection bg="bg-panel" border>
           <SectionLabel text="The Process" />
-          <SectionHeading line1="From Concept to" line2italic="Keys in Hand." size="lg" className="mb-12" />
+          <SectionHeading line1="How We Build Your ADU" line2italic="Start to Move-In Ready." size="lg" className="mb-12" />
           <div className="hidden md:grid grid-cols-4 gap-8">
             {[
               { n: '01', title: 'Free Consultation', time: 'Day 1', body: 'We review your property, discuss options, and provide a ballpark estimate. No commitment.' },
@@ -238,11 +238,14 @@ export default function ADUPage() {
           aeoContent={
             <div>
               <SectionLabel text="Why Build an ADU in Reno?" />
-              <SectionHeading line1="Reno's Fastest-Growing" line2italic="Housing Solution." size="md" className="mb-6" />
+              <SectionHeading line1="ADU Construction Costs" line2italic="in Reno, NV — 2025." size="md" className="mb-6" />
               <SpeakableBlock className="mb-6">
-                <p>Nevada law allows ADUs on most single-family residential lots in Reno and Washoe County. With rising rents across the Reno metro, homeowners are adding ADUs to offset mortgage costs, house aging parents, or create passive rental income.</p>
-                <p>ADU costs in Reno start at $75,000 for a studio unit and range up to $300,000 for a fully-appointed two-bedroom. At $175/sqft and up, BRE Builders builds ADUs that are code-compliant, energy-efficient, and rental-ready.</p>
-                <p>BRE Builders holds Nevada License #0085999. We handle everything from zoning review through final Certificate of Occupancy.</p>
+                <h3 className="font-display text-[17px] text-teal mb-2">How much does an ADU cost in Reno, NV?</h3>
+                <p>ADU costs in Reno start at $75,000 for a studio unit (400–600 sq ft) and range up to $300,000 for a fully-appointed two-bedroom. At $175/sqft and up, BRE Builders builds ADUs that are code-compliant, energy-efficient, and rental-ready.</p>
+                <h3 className="font-display text-[17px] text-teal mb-2 mt-4">Is it legal to build an ADU in Reno, Nevada?</h3>
+                <p>Yes. Nevada law allows ADUs on most single-family residential lots in Reno and Washoe County. With rising rents across the Reno metro, homeowners are adding ADUs to offset mortgage costs, house aging parents, or create passive rental income.</p>
+                <h3 className="font-display text-[17px] text-teal mb-2 mt-4">Who handles permits for ADU construction in Reno?</h3>
+                <p>BRE Builders holds Nevada License #0085999 and handles everything from zoning review through final Certificate of Occupancy — including all Washoe County and City of Reno permit applications.</p>
               </SpeakableBlock>
               <div className="speakable-pricing bg-panel border border-teal/15 rounded-xl p-5 mb-6">
                 <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal mb-3">Verified ADU Pricing — Reno NV</p>

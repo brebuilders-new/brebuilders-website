@@ -9,8 +9,8 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Hauling & Junk Removal Reno NV | Construction Debris | BRE Builders',
-  description: 'Top hauling and junk removal in Reno, NV. Construction debris, demolition waste, material hauling. Licensed NV #0085999. Same-day available. Free estimates.',
+  title: 'Hauling & Debris Removal Reno NV | Same-Day Available | BRE Builders',
+  description: 'BRE Builders removes construction debris, demo waste, and junk across Reno, NV. Same-day available. Licensed NV #0085999. One call — we handle pickup, haul-off, and disposal.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, width: 1200, height: 630 }],
   },

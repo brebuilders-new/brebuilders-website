@@ -19,8 +19,8 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Home Additions Reno NV | Bedroom Suites, Garages & 2nd Stories | BRE Builders',
-  description: 'Home additions in Reno NV from $40K. Bedroom suites, garage additions, 2nd stories, in-law suites. Licensed NV #0085999. 35+ years. Free estimates.',
+  title: 'Home Additions Reno NV | From $40K | Licensed GC Since 1989 | BRE Builders',
+  description: 'Add space without moving. BRE Builders builds room additions, garage expansions, and second stories in Reno NV from $40K. Licensed NV #0085999. Free estimate — call today.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Home+Additions+Reno+NV&sub=Add+Space.+Don%E2%80%99t+Move.+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999&badge=Home+Additions`, width: 1200, height: 630 }],
   },
@@ -160,7 +160,7 @@ export default function AdditionsPage() {
         {/* Addition types */}
         <PageSection bg="bg-deep">
           <SectionLabel text="Addition Types" />
-          <SectionHeading line1="What We Add." line2italic="What You Keep." size="lg" className="mb-12" />
+          <SectionHeading line1="Home Addition Types" line2italic="Reno, NV — Costs &amp; Timelines." size="lg" className="mb-12" />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {ADDITION_TYPES.map((a) => (
               <div key={a.title} className="card group overflow-hidden">
@@ -192,7 +192,7 @@ export default function AdditionsPage() {
           aeoContent={
             <div>
               <SectionLabel text="Home Additions in Reno NV" />
-              <SectionHeading line1="The Smarter Way to" line2italic="Get More Space." size="md" className="mb-6" />
+              <SectionHeading line1="How to Add Space" line2italic="Without Moving — Reno, NV." size="md" className="mb-6" />
               <SpeakableBlock className="mb-6">
                 <p>In Reno&apos;s 2024–2026 housing market, selling your current home and buying larger is an expensive proposition. Rising interest rates mean a bigger mortgage on a bigger home can cost hundreds more per month — before you even count agent fees and moving costs.</p>
                 <p>A home addition with BRE Builders lets you get the space you need — a master suite, an extra bedroom, a garage, or a dedicated home office — while keeping your current mortgage, your neighborhood, and your community.</p>

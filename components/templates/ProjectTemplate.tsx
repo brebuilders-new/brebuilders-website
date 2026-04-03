@@ -103,7 +103,7 @@ export default function ProjectTemplate({
               {titleItalic && <span className="block italic text-teal">{titleItalic}</span>}
             </h1>
 
-            <p className="text-[13px] leading-[1.65] text-white/60 mb-5 max-w-[340px]">
+            <p className="text-[13px] leading-[1.65] text-white/92 mb-5 max-w-[340px]">
               {description.split('.')[0]}.
             </p>
 
@@ -153,7 +153,7 @@ export default function ProjectTemplate({
             className="absolute inset-0 w-full h-full object-cover"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-void/95 via-void/60 to-void/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/98 via-void/80 to-void/45" />
           <div className="absolute inset-0 bg-gradient-to-r from-void/80 via-void/45 to-transparent" />
           {/* Left accent */}
           <div className="absolute top-0 left-0 w-1 h-full bg-teal/25" />
@@ -187,7 +187,7 @@ export default function ProjectTemplate({
                 )}
               </h1>
 
-              <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.8] text-white/65 mb-7 max-w-[540px]">
+              <p className="animate-fade-up-3 text-[15px] lg:text-[16px] leading-[1.8] text-white/92 mb-7 max-w-[540px]">
                 {description}
               </p>
 

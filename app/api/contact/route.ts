@@ -146,123 +146,88 @@ function buildServiceBlock(data: Record<string, unknown>): string {
 function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: LeadScore): string {
   const serviceLabel = SERVICE_LABELS[data.service as string] || String(data.service)
   const location = [data.addressLine1, data.city, data.state, data.zip].filter(Boolean).join(', ')
-  // Light-mode score colors — dark text/bg on white
   const scoreColor  = lead.score >= 70 ? '#15803d' : lead.score >= 45 ? '#b45309' : '#1d4ed8'
   const scoreBg     = lead.score >= 70 ? '#f0fdf4' : lead.score >= 45 ? '#fffbeb' : '#eff6ff'
   const scoreBorder = lead.score >= 70 ? '#bbf7d0' : lead.score >= 45 ? '#fde68a' : '#bfdbfe'
   const ts = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'medium', timeStyle: 'short' })
-
   const signalRows = lead.signals.map(s =>
-    `<tr><td style="padding:4px 0;font-size:12px;color:#15803d;font-family:Arial,sans-serif">&#10003;&nbsp;&nbsp;${s}</td></tr>`
+    `<tr><td style="padding:3px 0;font-size:12px;color:#15803d;font-family:Arial,sans-serif">&#10003;&nbsp;&nbsp;${s}</td></tr>`
   ).join('')
   const flagRows = lead.flags.map(f =>
-    `<tr><td style="padding:4px 0;font-size:12px;color:#b91c1c;font-family:Arial,sans-serif">&#9888;&nbsp;&nbsp;${f}</td></tr>`
+    `<tr><td style="padding:3px 0;font-size:12px;color:#b91c1c;font-family:Arial,sans-serif">&#9888;&nbsp;&nbsp;${f}</td></tr>`
   ).join('')
+  const devBanner = isDev ? `<tr><td bgcolor="#7f1d1d" style="background:#7f1d1d;padding:10px 24px;font-family:monospace;font-size:11px;color:#fecaca">&#9888; DEV MODE</td></tr>` : ''
 
   return `<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>New Lead — BRE Builders</title>
-</head>
-<body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:28px 0">
-<tr><td align="center">
-<table width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;" bgcolor="#f3f4f6">
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3f4f6" style="background:#f3f4f6;padding:24px 0">
+<tr><td align="center" style="padding:24px 16px">
+<table width="620" cellpadding="0" cellspacing="0" style="max-width:620px;width:100%">
 
-  <!-- ── HEADER ── -->
-  <tr><td style="background:#111827;padding:0">
-    <table width="100%" cellpadding="0" cellspacing="0">
-      <tr><td style="background:#c8a96e;height:4px;font-size:0">&nbsp;</td></tr>
-    </table>
-    <table width="100%" cellpadding="0" cellspacing="0">
-      <tr>
-        <td style="padding:24px 32px 20px">
-          <table width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="vertical-align:top">
-                <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="120" height="auto" style="display:block;margin-bottom:14px;height:auto" />
-                <p style="margin:0 0 4px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request</p>
-                <p style="margin:0 0 3px;font-size:24px;font-weight:700;color:#ffffff;letter-spacing:-0.3px">${data.firstName} ${data.lastName}</p>
-                <p style="margin:0;font-size:13px;color:#9ca3af">${serviceLabel} &nbsp;&nbsp;·&nbsp;&nbsp; ${location || 'Location not provided'}</p>
-              </td>
-              <td align="right" style="vertical-align:top;white-space:nowrap;padding-left:20px">
-                <p style="margin:0;font-size:11px;color:#6b7280;font-family:monospace">${ts} PT</p>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td></tr>
+  ${devBanner}
 
-  <!-- ── LEAD SCORE ── -->
-  <tr><td style="background:#ffffff;padding:24px 32px">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:${scoreBg};border:1px solid ${scoreBorder};border-radius:10px">
-      <tr>
-        <td style="padding:18px 22px;vertical-align:top;border-right:1px solid ${scoreBorder};width:110px">
-          <p style="margin:0 0 4px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-family:monospace">Lead Score</p>
-          <p style="margin:0;font-size:40px;font-weight:700;color:${scoreColor};line-height:1;font-family:Arial,sans-serif">${lead.score}</p>
-          <p style="margin:1px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">/100</p>
-          <p style="margin:10px 0 0;font-size:15px;color:#374151">${lead.badge}</p>
-        </td>
-        <td style="padding:18px 22px;vertical-align:top">
-          ${signalRows ? `<table cellpadding="0" cellspacing="0">${signalRows}</table>` : ''}
-          ${flagRows   ? `<table cellpadding="0" cellspacing="0" style="margin-top:10px">${flagRows}</table>` : ''}
-          ${!signalRows && !flagRows ? `<p style="margin:0;font-size:12px;color:#6b7280;font-family:Arial,sans-serif">No qualifying signals detected.</p>` : ''}
-        </td>
-      </tr>
-    </table>
-  </td></tr>
+  <tr><td bgcolor="#c8a96e" style="background:#c8a96e;height:4px;font-size:0;line-height:0">&nbsp;</td></tr>
 
-  <!-- ── CONTACT DETAILS ── -->
-  <tr><td style="background:#ffffff;padding:0 32px 20px">
-    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Contact Details</p>
-    <table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border-radius:8px;overflow:hidden;border:1px solid #e5e7eb">
-      ${row('Phone',        `<a href="tel:${data.phone}" style="color:#1cb8b3;text-decoration:none;font-family:Arial,sans-serif">${data.phone}</a>`)}
-      ${row('Email',        `<a href="mailto:${data.email}" style="color:#1cb8b3;text-decoration:none;font-family:Arial,sans-serif">${data.email}</a>`)}
-      ${row('Contact Pref', `${data.contactPref || '—'}${data.bestTime ? '&nbsp;·&nbsp;' + data.bestTime : ''}`)}
-      ${row('Location',     location || '—')}
-      ${row('Property',     `${data.propertyType || '—'}&nbsp;·&nbsp;Built ${data.yearBuilt || '—'}`)}
-      ${row('Owns Property',  data.ownsProperty)}
-      ${row('Decision Maker', data.isDecisionMaker)}
-      ${row('Getting Bids',   data.gettingBids)}
-      ${row('Budget',         `<strong style="color:#92400e;font-family:Arial,sans-serif">${data.budget || '—'}</strong>`)}
-      ${row('Timeline',       data.timeline)}
-      ${row('Source',         data.hearAboutUs)}
-    </table>
-  </td></tr>
-
-  <!-- ── SERVICE DETAILS ── -->
-  <tr><td style="background:#ffffff;padding:0 32px 20px">
-    ${buildServiceBlock(data)}
-  </td></tr>
-
-  <!-- ── NOTES ── -->
-  ${data.notes ? `
-  <tr><td style="background:#ffffff;padding:0 32px 20px">
-    <p style="margin:0 0 8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Client Notes</p>
-    <table width="100%" cellpadding="0" cellspacing="0">
-      <tr>
-        <td style="background:#fffbeb;border-left:3px solid #d97706;padding:14px 18px;border-radius:0 8px 8px 0;font-size:13px;line-height:1.7;color:#374151;font-family:Arial,sans-serif">
-          ${data.notes}
-        </td>
-      </tr>
-    </table>
-  </td></tr>` : ''}
-
-  <!-- ── FOOTER ── -->
-  <tr><td style="background:#f9fafb;border-radius:0 0 12px 12px;border:1px solid #e5e7eb;border-top:none;padding:18px 32px">
+  <tr><td bgcolor="#111827" style="background:#111827;padding:24px 32px 20px">
     <table width="100%" cellpadding="0" cellspacing="0">
       <tr>
         <td style="vertical-align:middle">
-          <p style="margin:0;font-size:13px;font-weight:700;color:#c8a96e;font-family:Arial,sans-serif;letter-spacing:0.3px">Blue Reef Builders</p>
-          <p style="margin:2px 0 0;font-size:10px;color:#6b7280;font-family:monospace">NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798</p>
+          <img src="https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp" alt="BRE Builders" width="110" style="display:block;margin-bottom:12px" />
+          <p style="margin:0 0 4px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#c8a96e;font-family:monospace">New Quote Request</p>
+          <p style="margin:0 0 3px;font-size:22px;font-weight:700;color:#ffffff;font-family:Arial,sans-serif">${data.firstName} ${data.lastName}</p>
+          <p style="margin:0;font-size:13px;color:#9ca3af;font-family:Arial,sans-serif">${serviceLabel}&nbsp;&nbsp;·&nbsp;&nbsp;${location || 'Location not provided'}</p>
         </td>
-        <td align="right" style="vertical-align:middle">
-          <a href="tel:7753914517" style="font-size:12px;color:#0284c7;text-decoration:none;font-family:monospace">(775) 391-4517</a>
+        <td align="right" style="vertical-align:top;padding-left:16px">
+          <p style="margin:0;font-size:11px;color:#6b7280;font-family:monospace">${ts} PT</p>
         </td>
+      </tr>
+    </table>
+  </td></tr>
+
+  <tr><td bgcolor="#ffffff" style="background:#ffffff;padding:24px 32px 0">
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">
+      <tr>
+        <td bgcolor="${scoreBg}" style="background:${scoreBg};border:1px solid ${scoreBorder};border-radius:8px;padding:16px 20px;vertical-align:top;width:120px">
+          <p style="margin:0 0 2px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b7280;font-family:monospace">Lead Score</p>
+          <p style="margin:0;font-size:38px;font-weight:700;color:${scoreColor};line-height:1;font-family:Arial,sans-serif">${lead.score}</p>
+          <p style="margin:2px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">/100</p>
+          <p style="margin:10px 0 0;font-size:14px;color:#374151;font-family:Arial,sans-serif">${lead.badge}</p>
+        </td>
+        <td style="padding-left:16px;vertical-align:top">
+          ${signalRows ? `<table cellpadding="0" cellspacing="2">${signalRows}</table>` : ''}
+          ${flagRows ? `<table cellpadding="0" cellspacing="2" style="margin-top:8px">${flagRows}</table>` : ''}
+        </td>
+      </tr>
+    </table>
+    <p style="margin:0 0 8px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Contact Details</p>
+    <table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f9fafb" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:20px">
+      ${row('Phone', `<a href="tel:${data.phone}" style="color:#0284c7;text-decoration:none;font-family:Arial,sans-serif">${data.phone}</a>`)}
+      ${row('Email', `<a href="mailto:${data.email}" style="color:#0284c7;text-decoration:none;font-family:Arial,sans-serif">${data.email}</a>`)}
+      ${row('Contact Pref', `${data.contactPref || '—'}${data.bestTime ? '&nbsp;·&nbsp;' + data.bestTime : ''}`)}
+      ${row('Location', location || '—')}
+      ${row('Property', `${data.propertyType || '—'}&nbsp;·&nbsp;Built ${data.yearBuilt || '—'}`)}
+      ${row('Owns Property', data.ownsProperty)}
+      ${row('Decision Maker', data.isDecisionMaker)}
+      ${row('Getting Bids', data.gettingBids)}
+      ${row('Budget', `<strong style="color:#92400e;font-family:Arial,sans-serif">${data.budget || '—'}</strong>`)}
+      ${row('Timeline', data.timeline)}
+      ${row('Source', data.hearAboutUs)}
+    </table>
+    ${buildServiceBlock(data)}
+    ${data.notes ? `
+    <p style="margin:0 0 8px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#92400e;font-family:monospace">Client Notes</p>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px">
+      <tr><td bgcolor="#fffbeb" style="background:#fffbeb;border-left:4px solid #d97706;padding:14px 18px;font-size:13px;line-height:1.7;color:#374151;font-family:Arial,sans-serif">${data.notes}</td></tr>
+    </table>` : ''}
+  </td></tr>
+
+  <tr><td bgcolor="#f9fafb" style="background:#f9fafb;border-top:1px solid #e5e7eb;padding:16px 32px">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><p style="margin:0;font-size:13px;font-weight:700;color:#c8a96e;font-family:Arial,sans-serif">Blue Reef Builders</p><p style="margin:2px 0 0;font-size:10px;color:#9ca3af;font-family:monospace">NV Lic #0085999 &nbsp;·&nbsp; CA Lic #1093798</p></td>
+        <td align="right"><a href="tel:7753914517" style="font-size:12px;color:#0284c7;text-decoration:none;font-family:monospace">(775) 391-4517</a></td>
       </tr>
     </table>
   </td></tr>
@@ -273,8 +238,6 @@ function buildTeamEmail(data: Record<string, unknown>, isDev: boolean, lead: Lea
 </body>
 </html>`
 }
-
-// ─── CLIENT confirmation email ─────────────────────────────────────────────────
 
 function buildClientEmail(data: Record<string, unknown>): string {
   const serviceLabel = SERVICE_LABELS[data.service as string] || String(data.service)

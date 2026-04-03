@@ -32,6 +32,8 @@ interface ProjectTemplateProps {
   aboutContent?: React.ReactNode
   schema?: object
   theme?: string
+  ctaHref?: string
+  ctaLabel?: string
 }
 
 export default function ProjectTemplate({
@@ -51,6 +53,8 @@ export default function ProjectTemplate({
   aboutContent,
   schema,
   theme,
+  ctaHref,
+  ctaLabel,
 }: ProjectTemplateProps) {
   return (
     <>

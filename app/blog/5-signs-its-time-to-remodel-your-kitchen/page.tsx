@@ -34,9 +34,9 @@ export default function KitchenSignsPage() {
       excerpt="Not sure if it's time to remodel? These 5 signs tell you the answer — and #2 is one most Reno homeowners don't catch until it shows up in the appraisal."
       schema={schema}
       relatedPosts={[
-        { title: 'Is Your Kitchen Ruining Your Property Value?', href: '/blog/is-your-kitchen-ruining-your-property-value', category: 'Kitchen', img: 'https://brebuilders.com/wp-content/uploads/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1-600x403.jpg', alt: 'Kitchen property value Reno NV' },
-        { title: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025', href: '/blog/reno-kitchen-remodeling-trends', category: 'Kitchen', img: 'https://brebuilders.com/wp-content/uploads/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1-600x403.jpg', alt: 'Reno kitchen remodeling trends' },
-        { title: '8 Signs Your Deck Is No Longer Safe', href: '/blog/deck-safety-warning-signs', category: 'Decks', img: 'https://brebuilders.com/wp-content/uploads/image-8-600x403.jpg', alt: '8 signs deck is unsafe' },
+        { title: 'Is Your Kitchen Ruining Your Property Value?', href: '/blog/is-your-kitchen-ruining-your-property-value', category: 'Kitchen', img: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1.jpg', alt: 'Kitchen property value Reno NV' },
+        { title: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025', href: '/blog/reno-kitchen-remodeling-trends', category: 'Kitchen', img: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2022/08/069e8b9c8f2e2250197256ce430710e4-uncropped_scaled_within_1536_1152-1.jpg', alt: 'Reno kitchen remodeling trends' },
+        { title: '8 Signs Your Deck Is No Longer Safe', href: '/blog/deck-safety-warning-signs', category: 'Decks', img: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/image-8-600x403.jpg', alt: '8 signs deck is unsafe' },
       ]}
       relatedServices={[
         { label: 'Kitchen & Bath Remodeling', href: '/services/kitchen-bath' },

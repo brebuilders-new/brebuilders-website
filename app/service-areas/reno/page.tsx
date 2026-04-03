@@ -34,7 +34,7 @@ const schema = {
       '@type': 'LocalBusiness',
       '@id': 'https://brebuilders.com/#business',
       name: 'Blue Reef Builders',
-      image: 'https://brebuilders.com/wp-content/uploads/2026/01/brelogo.webp',
+      image: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp',
       telephone: '+17753914517',
       address: {
         '@type': 'PostalAddress',

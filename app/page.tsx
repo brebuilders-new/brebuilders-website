@@ -150,7 +150,7 @@ function HeroSlider() {
           <img src={img.src} alt={img.alt} className="w-full h-full object-cover" style={{ transition: 'transform 6s ease', transform: i === active ? 'scale(1)' : 'scale(1.04)' }} />
         </div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-b from-void/60 via-void/30 to-void/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void/35 via-void/20 to-void/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-void/60 to-transparent" />
     </div>
   )
@@ -410,33 +410,38 @@ export default function HomePage() {
         <section className="relative md:hidden overflow-hidden" style={{ minHeight: '100svh' }}>
           <HeroSlider />
           <div className="relative z-10 flex flex-col justify-between px-5 pb-6 pt-20" style={{ minHeight: '100svh' }}>
-            <div className="inline-flex items-center gap-2 border border-teal/60 rounded-full px-3 py-1.5 bg-teal/[0.18] backdrop-blur-sm mb-5 self-start">
-              <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
-              <span className="font-mono text-[9px] tracking-[2px] uppercase text-cream font-medium">Now Accepting Projects · NV & CA</span>
+            {/* TOP — badge + headline + copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 border border-teal/60 rounded-full px-3 py-1.5 bg-teal/[0.18] backdrop-blur-sm mb-4 self-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
+                <span className="font-mono text-[9px] tracking-[2px] uppercase text-cream font-medium">Now Accepting Projects · NV & CA</span>
+              </div>
+              <h1 className="font-display font-light text-[clamp(36px,10vw,52px)] leading-[0.93] tracking-tight text-white mb-3" style={{ textShadow: '0 2px 30px rgba(0,0,0,0.6)' }}>
+                Built to Last.<br />Built Right.<br /><span className="italic text-teal">Since&nbsp;1989.</span>
+              </h1>
+              <p className="text-[13px] leading-[1.55] text-white/80 max-w-[300px]">
+                Licensed contractor — Reno, Lake Tahoe, Northern California.
+              </p>
             </div>
-            <h1 className="font-display font-light text-[clamp(40px,11vw,58px)] leading-[0.93] tracking-tight text-white mb-4" style={{ textShadow: '0 2px 30px rgba(0,0,0,0.6)' }}>
-              Built to Last.<br />Built Right.<br /><span className="italic text-teal">Since&nbsp;1989.</span>
-            </h1>
-            <p className="text-[14px] leading-[1.65] text-white/85 mb-5 max-w-[320px]">
-              Licensed contractor serving Reno, Lake Tahoe, and Northern California.
-              <span className="block mt-1 font-display text-[17px] text-white/75">We build with <AnimatedWord />.</span>
-            </p>
-            <div className="flex gap-6 mb-6">
-              {[{ n: '35+', l: 'Years' }, { n: 'NV·CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
-                <div key={s.l}>
-                  <div className="font-display text-[22px] text-white leading-none">{s.n}</div>
-                  <div className="font-mono text-[9px] uppercase text-white/65 mt-0.5 tracking-wider">{s.l}</div>
+            {/* BOTTOM — stats + CTAs */}
+            <div>
+              <div className="flex gap-6 mb-5">
+                {[{ n: '35+', l: 'Years' }, { n: 'NV·CA', l: 'Licensed' }, { n: 'Free', l: 'Estimates' }].map(s => (
+                  <div key={s.l}>
+                    <div className="font-display text-[22px] text-white leading-none">{s.n}</div>
+                    <div className="font-mono text-[9px] uppercase text-white/65 mt-0.5 tracking-wider">{s.l}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col gap-2">
+                <a href={SITE.phoneHref} className="w-full flex items-center justify-center gap-2 py-4 bg-teal text-void text-[15px] font-bold rounded-xl">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+                  Call for a Free Quote
+                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <Link href="/contact" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">Request Quote</Link>
+                  <Link href="/projects" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">View Projects</Link>
                 </div>
-              ))}
-            </div>
-            <div className="flex flex-col gap-2.5 mb-4">
-              <a href={SITE.phoneHref} className="w-full flex items-center justify-center gap-2 py-4 bg-teal text-void text-[15px] font-bold rounded-xl">
-                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
-                Call for a Free Quote
-              </a>
-              <div className="grid grid-cols-2 gap-2">
-                <Link href="/contact" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">Request Quote</Link>
-                <Link href="/projects" className="flex items-center justify-center py-3.5 border border-white/20 text-white text-[13px] font-mono rounded-xl bg-white/[0.04]">View Projects</Link>
               </div>
             </div>
           </div>

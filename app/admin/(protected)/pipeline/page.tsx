@@ -91,6 +91,7 @@ export default async function PipelinePage() {
           )
         })}
       </div>
+      </div>
     </div>
   )
 }

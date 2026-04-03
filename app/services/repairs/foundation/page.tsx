@@ -252,7 +252,7 @@ export default function FoundationRepairPage() {
             <h2 className="font-display text-[clamp(36px,5vw,68px)] font-light leading-[1.0] tracking-tight text-white mb-5">
               Free Foundation Evaluation.<br /><span className="italic text-teal">Licensed. Honest. Thorough.</span>
             </h2>
-            <p className="text-[16px] text-white/50 max-w-md mx-auto mb-10">NV #0085999 · Response within 24 hours · No upselling</p>
+            <p className="text-[16px] text-white/90 max-w-md mx-auto mb-10">NV #0085999 · Response within 24 hours · No upselling</p>
             <div className="flex items-center justify-center gap-4">
               <Link href="/contact?service=foundation" className="btn-primary px-10 py-4 text-[14px]">Request Free Evaluation →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-10 py-4 text-[14px] font-mono">{SITE.phone}</a>

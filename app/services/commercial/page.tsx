@@ -136,7 +136,7 @@ export default function CommercialPage() {
             <h2 className="font-display text-[clamp(32px,4.5vw,62px)] font-light leading-[1.0] tracking-tight text-white mb-5">
               Let&apos;s Build Your<br /><span className="italic text-teal">Commercial Space.</span>
             </h2>
-            <p className="text-[15px] text-white/50 max-w-md mx-auto mb-10">Free estimates · Licensed NV #0085999 · CA #1093798</p>
+            <p className="text-[15px] text-white/90 max-w-md mx-auto mb-10">Free estimates · Licensed NV #0085999 · CA #1093798</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact?service=commercial" className="btn-primary px-8 py-4 w-full sm:w-auto justify-center">Get a Free Estimate →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-8 py-4 w-full sm:w-auto justify-center font-mono">{SITE.phone}</a>

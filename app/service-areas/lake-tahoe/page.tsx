@@ -194,7 +194,7 @@ export default function LakeTahoePage() {
 
             <GalleryGrid
               mode="grid"
-              images={PROJECT_IMAGES['lake-tahoe-renovation'].gallery.slice(0, 12).map(img => ({
+              images={PROJECT_IMAGES['zephyr-cove-lake-tahoe'].gallery.slice(0, 12).map(img => ({
                 src: img.url,
                 alt: img.alt,
                 title: img.title,

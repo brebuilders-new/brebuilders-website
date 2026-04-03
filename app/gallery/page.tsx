@@ -132,7 +132,7 @@ const GALLERY_PROJECTS: GalleryProject[] = [
     categories: ['deck', 'repair', 'before-after'],
     hasBeforeAfter: true,
     photos: [
-      { src: `${CDN}/uploads/Arun-Deck-Repair-–-Reinforced-Support-Beams-and-Elevated-Framing-600x403.jpg`, alt: 'Hillside deck repair reinforced beams Lake Tahoe', title: 'Reinforced Structural Beams', caption: 'New support beams installed on challenging hillside terrain. Elevated framing system designed for Lake Tahoe snow load and slope conditions.' },
+      { src: `${CDN}/uploads/Arun-Deck-Repair-%E2%80%93-Reinforced-Support-Beams-and-Elevated-Framing-1000x1000.jpg`, alt: 'Hillside deck repair reinforced beams Lake Tahoe', title: 'Reinforced Structural Beams', caption: 'New support beams installed on challenging hillside terrain. Elevated framing system designed for Lake Tahoe snow load and slope conditions.' },
     ],
   },
 

@@ -35,7 +35,7 @@ export default async function PipelinePage() {
   }, {})
 
   return (
-    <div style={{ padding: '32px' , background: '#060e18', minHeight: '100vh' }}>
+    <div style={{ padding: 'clamp(16px,4vw,32px)', background: '#060e18', minHeight: '100vh' }}>
       <div style={{ marginBottom: '24px' }}>
         <p style={{ fontFamily: 'monospace', fontSize: '10px', letterSpacing: '3px', color: '#c07d3e', textTransform: 'uppercase', margin: '0 0 6px' }}>Lead Pipeline</p>
         <h1 style={{ fontSize: '28px', fontWeight: 400, margin: 0, color: '#e8e4dc' }}>Pipeline</h1>

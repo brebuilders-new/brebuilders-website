@@ -94,15 +94,43 @@ export default function LakeTahoePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <main>
         {/* Hero — the actual LT project photos are the proof */}
-        <section className="relative min-h-[70vh] lg:min-h-[78vh] flex flex-col justify-end pb-14 lg:pb-24 pt-28 overflow-hidden">
-          {/* Desktop: wide exterior shot */}
+        {/* ── MOBILE HERO — compact strip, content immediately visible ── */}
+        <section className="md:hidden relative overflow-hidden">
+          <div className="relative w-full" style={{ height: '44vw', minHeight: 160, maxHeight: 240 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={IMGS.lt(3)} alt="Deck renovation Lake Tahoe NV BRE Builders" className="w-full h-full object-cover" fetchPriority="high" style={{ objectPosition: '50% 40%' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-void/5 to-void/85" />
+          </div>
+          <div className="bg-deep px-5 pt-5 pb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-5 h-px bg-teal" />
+              <span className="font-mono text-[9px] tracking-[2.5px] uppercase text-teal">Contractor · Lake Tahoe, NV</span>
+            </div>
+            <h1 className="font-display font-light text-[clamp(28px,7.5vw,42px)] leading-[0.97] tracking-tight text-white mb-3">
+              Contractor<br />Lake Tahoe, NV<br />
+              <span className="italic text-teal">Proven Work. Real Results.</span>
+            </h1>
+            <p className="text-[13px] leading-[1.65] text-white/60 mb-4">
+              Full home renovation, deck repair, ADU construction, structural work. Completed projects at Lake Tahoe since 1989. NV Lic #0085999.
+            </p>
+            <div className="flex gap-2.5">
+              <a href={SITE.phoneHref} className="btn-primary flex-1 justify-center py-3.5 text-[14px]">📞 Call Now</a>
+              <Link href="/contact?location=lake-tahoe" className="btn-ghost flex-1 justify-center py-3.5 text-[13px]">Get Quote</Link>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {['Completed Projects', 'Snow Load Expertise', 'Free Estimates'].map(b => (
+                <span key={b} className="font-mono text-[9px] tracking-wider text-teal border border-teal/25 bg-teal/[0.06] px-2 py-1 rounded">✓ {b}</span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── DESKTOP HERO — cinematic full bleed ── */}
+        <section className="hidden md:relative md:block md:min-h-[70vh] lg:min-h-[78vh] md:flex md:flex-col md:justify-end pb-14 lg:pb-24 pt-28 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMGS.lt(1)} alt="Full Home Renovation Lake Tahoe Zephyr Cove NV BRE Builders completed exterior" className="absolute inset-0 w-full h-full object-cover hidden md:block" fetchPriority="high" />
-          {/* Mobile: deck/railing detail — dramatic */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={IMGS.lt(3)} alt="Deck Railing Renovation Lake Tahoe NV BRE Builders" className="absolute inset-0 w-full h-full object-cover md:hidden" fetchPriority="high" />
+          <img src={IMGS.lt(1)} alt="Full Home Renovation Lake Tahoe Zephyr Cove NV BRE Builders completed exterior" className="absolute inset-0 w-full h-full object-cover" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-void/92 via-void/55 to-void/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-r from-void/70 to-transparent" />
           <div className="relative z-10 container">
             <div className="max-w-[600px]">
               <div className="animate-fade-up-1 flex items-center gap-3 mb-5">
@@ -124,13 +152,9 @@ export default function LakeTahoePage() {
                 ))}
               </div>
               <div className="animate-fade-up-4">
-                <div className="md:hidden flex gap-3 mb-4">
-                  <a href={SITE.phoneHref} className="btn-primary flex-1 justify-center">📞 Call Now</a>
-                  <Link href="/contact?location=lake-tahoe" className="btn-ghost flex-1 justify-center">Get Quote</Link>
-                </div>
-                <div className="hidden md:flex gap-3">
+                <div className="flex gap-3">
                   <Link href="/contact?location=lake-tahoe" className="btn-primary">Request a Free Estimate →</Link>
-                  <Link href="/portfolio/lake-tahoe-interior-renovation-project-bre-builders/" className="btn-ghost">View Project Gallery</Link>
+                  <Link href="/projects/lake-tahoe-renovation" className="btn-ghost">View Completed Projects</Link>
                 </div>
               </div>
             </div>

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import BlogTemplate, { BlogPullQuote } from '@/components/templates/BlogTemplate'
+import BlogTemplate, { BlogImage, BlogPullQuote } from '@/components/templates/BlogTemplate'
 import { IMGS } from '@/lib/images'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Prevent Winter Moisture Damage in Older Reno Homes | BRE Builders',
-  description: 'Older Reno homes lack modern vapor barriers and insulation, making them vulnerable to winter moisture damage. BRE Builders explains what to check and how to protect your home. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Prevent+Winter+Moisture+Damage+Reno&sub=Older+Home+Guide+%C2%B7+BRE+Builders+NV+%230085999&badge=Winter+Prep`, width: 1200, height: 630 }] },
+  title: 'Prevent Winter Moisture Damage Older Reno Homes | BRE Builders',
+  description: 'Older Reno homes lack modern vapor barriers and insulation, making them vulnerable every winter. BRE Builders explains what to check and how to protect your home before temperatures drop. NV #0085999.',
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+to+Prevent+Winter+Moisture+Damage+in+Older+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Winter+Prep`, width: 1200, height: 630 }] },
   alternates: { canonical: `${SITE_URL}/blog/prevent-winter-moisture-damage-reno-homes/` },
 }
 
@@ -17,10 +17,24 @@ const schema = {
     {
       '@type': 'Article',
       headline: 'How to Prevent Winter Moisture Damage in Older Reno Homes',
+      description: 'Older Reno homes lack modern vapor barriers and insulation, making them vulnerable every winter. BRE Builders explains what to check and how to protect your home before temperatures drop. NV #0085999.',
       author: { '@type': 'Person', name: 'Steve Rosenthal', jobTitle: 'Owner, BRE Builders' },
-      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com', logo: { '@type': 'ImageObject', url: 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/2026/01/brelogo.webp' } },
       datePublished: '2025-10-01',
+      dateModified: '2025-11-01',
+      image: IMGS.repairs_foundation,
       url: `${SITE_URL}/blog/prevent-winter-moisture-damage-reno-homes/`,
+      keywords: 'winter moisture damage reno homes, prevent moisture older home reno nv, northern nevada home winterization, bre builders moisture prevention',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.article-lede', 'article h2'] },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I prevent moisture damage in an older Reno home over winter?', acceptedAnswer: { '@type': 'Answer', text: 'Five priorities for older Reno homes: (1) Seal windows and doors with new weatherstripping and caulk. (2) Have your crawlspace evaluated and install a vapor barrier if not present. (3) Inspect and repair roof flashing, particularly around chimneys and at valleys. (4) Clean gutters and downspouts so snowmelt routes away from the foundation. (5) Confirm bathroom fans vent to the exterior, not into the attic.' } },
+        { '@type': 'Question', name: 'What are the signs of winter moisture damage in a Reno home?', acceptedAnswer: { '@type': 'Answer', text: 'Early signs include: peeling paint or bubbling wallpaper on exterior walls, ceiling staining that appears or grows after rain or snowmelt, musty odor in specific rooms or closets, condensation on windows that does not occur in summer, and soft spots in floors near exterior walls. These signs often appear in spring after the damage occurred over winter.' } },
+        { '@type': 'Question', name: 'Why are older Reno homes more vulnerable to winter moisture?', acceptedAnswer: { '@type': 'Answer', text: 'Homes built before the 1990s typically lack: continuous vapor barriers in crawlspaces, foam-sealed rim joists, high-R insulation in attics, and modern weatherstripping on windows and doors. Aging wood and plaster absorb and retain moisture differently than modern materials. Without active maintenance, these conditions worsen each winter.' } },
+        { '@type': 'Question', name: 'When should I replace weatherstripping on windows and doors in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'If you can feel cold air around window or door frames in winter, or if existing weatherstripping is cracked, flattened, or separating from the frame — replace it before the first hard freeze. This is a simple, inexpensive fix that prevents significant moisture and heat loss over the course of a winter.' } },
+      ],
     },
   ],
 }
@@ -32,34 +46,70 @@ export default function Blog_PreventWinterMoistureDamageRenoHomes() {
       category="Structural Repairs"
       publishDate="October 2025"
       heroImage={IMGS.repairs_foundation}
-      heroAlt="Winter moisture damage older Reno home — BRE Builders structural repair NV #0085999"
-      excerpt="Older Reno homes were built before modern vapor barriers and insulation standards. Winter moisture seeps in through aging materials, gaps, and unprotected crawlspaces. Here is how to protect your home."
+      heroAlt="Winter moisture damage prevention older Reno home — structural evaluation BRE Builders NV #0085999"
+      excerpt="Older Reno homes were built before modern vapor barriers and insulation standards. Winter moisture seeps in through aging materials, gaps, and unprotected crawlspaces. Here is what to check before the cold season."
       schema={schema}
       relatedServices={[
-        { label: 'Water Intrusion Repair', href: '/services/repairs/water-intrusion' },
         { label: 'Structural Repairs', href: '/services/repairs' },
+        { label: 'Water Intrusion Repair', href: '/services/repairs/water-intrusion' },
       ]}
       relatedPosts={[
-        { title: 'Why Is My House Humid in Reno?', href: '/blog/house-humid-reno-no-leak', img: IMGS.repairs_water, alt: 'House humidity Reno Nevada', category: 'Structural Repairs' },
-        { title: '30-Year-Old Reno Home Repairs', href: '/blog/reno-home-repairs-30-year', img: IMGS.blog_30yr_hero, alt: '30 year home repairs Reno', category: 'Structural Repairs' },
+        { title: 'Top 10 Signs Your Home Needs Structural Repair', href: '/blog/structural-repair-warning-signs', img: IMGS.repairs_rot, alt: 'Structural repair warning signs Reno NV', category: 'Structural Repairs' },
+        { title: '20-Year-Old Reno Home Repairs', href: '/blog/reno-home-repairs-20-year', img: IMGS.blog_20yr_hero, alt: '20 year old Reno home repairs', category: 'Structural Repairs' },
+        { title: 'Why Trust BRE Builders for Structural Repairs', href: '/blog/reno-structural-repairs', img: IMGS.blog_contractor, alt: 'BRE Builders structural repairs Reno NV', category: 'Structural Repairs' },
       ]}
       content={
         <div>
-          <p>Older Reno homes have character and value — but they were built before modern vapor barriers, insulation standards, and building envelope requirements. As winter arrives and temperatures drop, moisture finds its way in through aging materials, gaps around windows and doors, and unprotected crawlspaces. Here is what to check before the cold season starts.</p>
+          <p>Older Reno homes have character and value — but they were built before modern vapor barriers, insulation standards, and building envelope requirements. As temperatures drop below freezing and snowmelt cycles begin, moisture finds entry through aging materials, failed seals, and unprotected structural cavities. The damage from winter moisture rarely shows up in winter — it shows up in spring, after months of slow infiltration.</p>
 
           <h2>Why Older Homes Are More Vulnerable</h2>
-          <p>Homes built before the 1990s typically lack the continuous vapor barriers, foam-sealed rim joists, and high-R insulation that modern construction requires. Aging wood, plaster, and original windows absorb and retain moisture differently than modern materials. When temperatures drop, thermal bridging creates cold surfaces where condensation forms — silently, inside walls and in crawlspaces.</p>
 
-          <BlogPullQuote>The damage from winter moisture rarely shows up in winter. It shows up in spring — as mold, as soft flooring, as staining on ceilings — after months of slow infiltration.</BlogPullQuote>
+          <BlogImage
+            src={IMGS.repairs_foundation}
+            alt="Older Reno home foundation moisture vulnerability — winter moisture damage prevention evaluation BRE Builders"
+            caption="Foundation moisture assessment in an older Reno home — winter is when existing vulnerabilities become active damage"
+          />
 
-          <h2>Key Signs to Check Before Winter</h2>
-          <p><strong>Peeling paint or bubbling wallpaper.</strong> Moisture is infiltrating the wall assembly from outside or from condensation within. This will worsen significantly over a cold, wet winter if not addressed.</p>
-          <p><strong>Staining on ceilings or exterior walls.</strong> Water stains that appeared after last winter and have dried may indicate roof flashing issues, chimney leaks, or wall penetrations that need to be sealed before the next freeze-thaw cycle.</p>
-          <p><strong>Gaps around windows and doors.</strong> Older homes often have deteriorated weatherstripping and failed caulk around frames. These gaps allow cold air and moisture in — seal them before temperatures drop below freezing consistently.</p>
-          <p><strong>Uninsulated or unencapsulated crawlspace.</strong> Ground moisture rises through unprotected crawlspaces and into the floor system above. In older Reno homes with vented crawlspaces, this is a primary source of winter moisture damage to subfloors and joists.</p>
+          <p>Homes built before the 1990s typically lack the continuous vapor barriers, foam-sealed rim joists, and high-R insulation that modern construction requires. Aging wood, plaster, and original windows absorb and retain moisture differently than modern materials. When temperatures drop, thermal bridging creates cold surfaces where condensation forms — silently, inside walls and crawlspaces — over the entire winter season.</p>
 
-          <h2>What to Do</h2>
-          <p>Seal windows and doors with new weatherstripping and caulk. Inspect and repair roof flashing, gutters, and downspouts. Have your crawlspace evaluated if you have not in the last five years. BRE Builders provides free on-site evaluations for older Reno homes — we identify moisture vulnerabilities and provide written scope before any work begins. NV License #0085999.</p>
+          <BlogPullQuote>
+            Winter moisture damage rarely shows up in winter. It shows up in spring — as mold, as soft flooring, as ceiling staining — after months of slow infiltration you could not see or feel while it was happening.
+          </BlogPullQuote>
+
+          <h2>What to Check Before Winter Arrives</h2>
+
+          <BlogImage
+            src={IMGS.blog_cracked_shower}
+            alt="Water damage behind wall surfaces Reno home — moisture infiltration winter BRE Builders structural repair"
+            caption="What lies behind surfaces that look fine — moisture damage discovered during renovation of a pre-1995 Reno home"
+          />
+
+          <h3>Windows and door frames</h3>
+          <p>Older homes often have deteriorated weatherstripping and failed caulk around frames. If you can feel cold air at the frame edges in winter, moisture is also entering. Reseal with weatherstripping and caulk rated for exterior use before temperatures drop consistently below freezing.</p>
+
+          <h3>Roof flashing</h3>
+          <p>Flashing at chimneys, valleys, skylights, and roof-to-wall transitions fails over time. Any ceiling staining that appeared after last winter — even faint — indicates a flashing failure that will worsen with snow loading and freeze-thaw cycles. Have it repaired before the first significant snowfall.</p>
+
+          <h3>Gutters and downspouts</h3>
+          <p>Clogged gutters cause overflow that pools against the foundation. In older homes without adequate foundation waterproofing, this winter pooling is a primary moisture infiltration path. Clean gutters before winter and extend downspouts at least four feet away from the foundation.</p>
+
+          <h3>Crawlspace vapor barrier</h3>
+
+          <BlogImage
+            src={IMGS.blog_basement_water}
+            alt="Crawlspace moisture winter Reno older home — vapor barrier needed northern nevada"
+            caption="Unprotected crawlspace in a pre-1990s Reno home — without a vapor barrier, winter ground moisture continuously evaporates upward"
+          />
+
+          <p>Ground moisture rises through unprotected crawlspaces into the floor system above, year-round — but especially in winter when temperature differentials increase evaporation. In older Reno homes with vented crawlspaces built on clay soil, this is a primary source of winter subfloor and joist deterioration over time.</p>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <h3>What are the signs of winter moisture damage in Reno homes?</h3>
+          <p>Early signs include: peeling paint or bubbling wallpaper on exterior walls, ceiling staining that appears after snowmelt or rain, musty odors in specific rooms, condensation on windows that does not occur in summer, and soft spots in floors near exterior walls. These signs often appear in spring after the damage occurred over winter.</p>
+
+          <h3>Is weatherstripping replacement worth doing on older windows?</h3>
+          <p>Yes — it is the lowest-cost, highest-ROI winter preparation for older homes. If you can feel cold air at frames in winter, moisture is also entering. Replacement weatherstripping and exterior-rated caulk costs very little and prevents significant heat loss and moisture infiltration over the course of a full winter.</p>
         </div>
       }
     />

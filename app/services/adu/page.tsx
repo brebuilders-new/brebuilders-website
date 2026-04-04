@@ -21,7 +21,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'ADU Builders Reno NV | $75K–$300K Complete Builds',
-  description: 'Licensed ADU builders in Reno, NV. Builds $75K–$300K. Studios, 1-bed, 2-bed. Permits, design, construction included. NV #0085999. Free quote in 24 hours.',
+  description: 'Licensed ADU builders in Reno NV. Complete builds $75K–$300K — studio, 1-bed, 2-bed. Permits, design, construction all handled. NV #0085999. Free quote.',
   openGraph: {
     title: 'ADU Builders Reno NV | $75K–$300K | Blue Reef Builders',
     images: [{

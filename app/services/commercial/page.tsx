@@ -10,7 +10,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
-  description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. 35+ years. Free estimates.',
+  description: 'Commercial contractor in Reno NV. Tenant improvement contractors for office, retail, warehouse builds. Licensed NV #0085999 · CA #1093798. Free estimates.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Commercial`, width: 1200, height: 630 }],
   },

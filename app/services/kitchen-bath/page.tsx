@@ -14,7 +14,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
-  description: 'Kitchen and bathroom remodeling in Reno, NV. Custom cabinetry, tile, layout changes, full gut-and-rebuild. Licensed NV #0085999. Free on-site estimate.',
+  description: 'Kitchen and bathroom remodelers in Reno NV. Custom cabinetry, tile, full gut-and-rebuild, layout changes. Licensed NV #0085999. Free on-site estimate.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Licensed+Contractor+%C2%B7+Tile+%C2%B7+Custom+Cabinetry+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },

@@ -21,7 +21,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Structural Repairs Reno NV | Foundation & Home Repairs',
-  description: 'Licensed structural repair contractors in Reno, NV. Foundation repair, dry rot, water intrusion, framing. Free inspection request. NV License #0085999.',
+  description: 'Licensed structural repair contractors in Reno NV and Northern California. Foundation, dry rot, water intrusion, framing. NV #0085999. Free inspection.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Structural+Repairs+Reno+NV&sub=Foundation+%26+Dry+Rot+%C2%B7+Free+Inspection+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630 }],
   },

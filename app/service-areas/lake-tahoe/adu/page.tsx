@@ -10,7 +10,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds',
-  description: 'Licensed ADU builders serving Lake Tahoe, NV. TRPA-compliant builds. Washoe & Douglas County permits handled. NV #0085999. Free site evaluation.',
+  description: 'ADU builder at Lake Tahoe NV. TRPA permits, Washoe & Douglas County permits, snow-load engineering all handled. NV #0085999. Free site evaluation.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, width: 1200, height: 630 }],
   },

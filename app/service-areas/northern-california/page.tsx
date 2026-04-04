@@ -12,7 +12,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'Northern California Contractor | CA Lic #1093798',
-  description: 'Licensed contractor in Northern California. Custom homes, structural repairs, remodeling, commercial. CA #1093798. Ripon estate completed. Free consultations.',
+  description: 'Licensed contractor in Northern California. Structural repairs, custom homes, remodeling, commercial. CA #1093798. 35+ years. Free consultations.',
   openGraph: {
     title: 'Northern California Contractor | BRE Builders — CA Lic #1093798',
     description: 'BRE Builders serves Northern California for custom homes, structural repairs, remodeling, and commercial construction. Proven work in Ripon CA. CA #1093798 · NV #0085999.',

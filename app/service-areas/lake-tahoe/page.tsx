@@ -11,9 +11,9 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 import { PROJECT_IMAGES } from '@/lib/image-catalog'
 
 export const metadata: Metadata = {
-  title: 'Contractor Lake Tahoe NV | Deck Repair & Renovation',
+  title: 'Contractor Lake Tahoe NV | ADU Builder & Renovation',
   description:
-    'Licensed contractor serving Lake Tahoe, NV — full home renovation, deck repair, ADU construction, structural work. NV License #0085999. Free estimates.',
+    'Licensed contractor at Lake Tahoe NV. ADU builder, full home renovation, deck repair, structural work. TRPA permits handled. NV #0085999. Free estimates.',
   openGraph: {
     images: [{
       url: `${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV&sub=Deck+Repair+%C2%B7+Full+Home+Renovation+%C2%B7+ADU+Construction&badge=Lake+Tahoe`,

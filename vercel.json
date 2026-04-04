@@ -1,7 +1,14 @@
 {
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "installCommand": "npm install",
-  "regions": ["sfo1"]
+  "routes": [
+    {
+      "src": "/step-into-the-spotlight-win-big-with-nine-casino-today-4226(/)?",
+      "status": 410,
+      "headers": { "X-Robots-Tag": "noindex" }
+    },
+    {
+      "src": "/vavada-casino(/)?",
+      "status": 410,
+      "headers": { "X-Robots-Tag": "noindex" }
+    }
+  ]
 }

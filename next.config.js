@@ -77,6 +77,9 @@ const nextConfig = {
       { source: '/why-more-reno-homeowners-trust-bre-builders-for-structural-repairs',  destination: '/blog/reno-structural-repairs',                permanent: true },
       { source: '/reno-1-billion-redevelopment-contractors',                            destination: '/blog/reno-redevelopment',                     permanent: true },
       { source: '/what-reno-homeowners-overlook-in-10-year-old-homes',                  destination: '/blog/reno-home-10-year-maintenance',          permanent: true },
+      { source: '/5-signs-its-time-to-remodel-your-kitchen-2-hurts-your-home-value',    destination: '/blog/5-signs-its-time-to-remodel-your-kitchen', permanent: true },
+      { source: '/is-your-kitchen-ruining-your-property-value-fix-these-5-things-first', destination: '/blog/is-your-kitchen-ruining-your-property-value', permanent: true },
+      { source: '/blue-reef-builders-dynamic-home-renovation-flow-nevada-focused',       destination: '/',                                             permanent: true },
     ]
   },
   async headers() {

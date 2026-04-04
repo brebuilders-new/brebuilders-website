@@ -109,7 +109,7 @@ export default function LakeTahoeContractorGuidePage() {
           <p>BRE Builders plans Lake Tahoe projects to start permit applications in January–February for a May construction start — the timing that maximizes the productive construction window and avoids the peak summer labor crunch.</p>
 
           <h2>BRE Builders at Lake Tahoe — Completed Projects</h2>
-          <p>BRE Builders has completed full home renovations at Zephyr Cove, Lake Tahoe (Zephyr Cove) and Glenbrook, Lake Tahoe (Glenbrook), structural deck repairs throughout the Nevada side, and ADU work at South Lake Tahoe. View the complete portfolio at brebuilders.com/projects.</p>
+          <p>BRE Builders has completed full home renovations at Zephyr Cove, Lake Tahoe (Zephyr Cove) and Glenbrook, Lake Tahoe (Glenbrook), structural deck repairs throughout the Nevada side, and ADU work at South Lake Tahoe. View the <a href="/projects/" className="text-teal hover:underline">complete portfolio</a>.</p>
 
           <h2>Get a Free Lake Tahoe Contractor Consultation</h2>
           <p>BRE Builders provides free consultations for Lake Tahoe homeowners considering renovation, addition, deck, or structural repair work. We are licensed on both sides of the lake — NV #0085999 and CA #1093798 — and have been working in the Tahoe basin since 1989. Call (775) 391-4517 or submit a project form. Response within 24 hours.</p>

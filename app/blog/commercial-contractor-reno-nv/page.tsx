@@ -100,7 +100,7 @@ export default function CommercialContractorRenoPage() {
           <p>BRE Builders has been completing commercial projects in Northern Nevada since 1989. NV License #0085999 is active for both residential and commercial construction. Our commercial project experience spans tenant improvements, retail buildouts, restaurant construction, office renovations, warehouse construction, and metal building erection.</p>
 
           <h2>BRE Builders Commercial Projects</h2>
-          <p>Recent BRE Builders commercial work includes warehouse construction and renovation in Northern Nevada, commercial concrete slab and foundation work for a car wash facility in Reno, metal building kit erection and assembly, and office and retail tenant improvements across Washoe County. View our commercial portfolio at brebuilders.com/projects.</p>
+          <p>Recent BRE Builders commercial work includes warehouse construction and renovation in Northern Nevada, commercial concrete slab and foundation work for a car wash facility in Reno, metal building kit erection and assembly, and office and retail tenant improvements across Washoe County. View our <a href="/projects/" className="text-teal hover:underline">completed portfolio</a>.</p>
 
           <h2>Get a Free Commercial Construction Estimate in Reno</h2>
           <p>BRE Builders provides free estimates for commercial construction projects in Reno, Sparks, Carson City, and Northern Nevada. We review your space, scope your project, and give you a detailed written estimate — no vague ranges, no surprise fees. Call (775) 391-4517 or submit a project form. Licensed NV #0085999 · CA #1093798. Response within 24 hours.</p>

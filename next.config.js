@@ -64,6 +64,31 @@ const nextConfig = {
       { source: '/portfolio/charolettes-deck',    destination: '/projects/charolettes-deck',   permanent: true },
       { source: '/portfolio/lake-tahoe-hillside-structural-repair-expansion', destination: '/projects/lake-tahoe-renovation', permanent: true },
       // ─── Service area aliases ─────────────────────────────────────────
+
+      // ─── Portfolio category pages → relevant service pages ───────────────
+      { source: '/portfolio/additions',                    destination: '/services/additions',       permanent: true },
+      { source: '/portfolio/commercial-tenant-improvements', destination: '/services/commercial',    permanent: true },
+      { source: '/portfolio/concrete',                     destination: '/services/concrete',        permanent: true },
+      { source: '/portfolio/custom-home-building',         destination: '/services/new-home',        permanent: true },
+      { source: '/portfolio/decks',                        destination: '/services/decks',           permanent: true },
+      { source: '/portfolio/hauling-removal',              destination: '/services/hauling',         permanent: true },
+      { source: '/portfolio/home-remodeling',              destination: '/services',                 permanent: true },
+      { source: '/portfolio/kitchen-bath',                 destination: '/services/kitchen-bath',    permanent: true },
+      { source: '/portfolio/lake-tahoe-interior-renovation-project', destination: '/projects/lake-tahoe-renovation', permanent: true },
+      { source: '/portfolio/landscape-hardscape',          destination: '/projects',                 permanent: true },
+      { source: '/portfolio/lofts-condo-remodels',         destination: '/services/lofts-condos',    permanent: true },
+      { source: '/portfolio/new-home',                     destination: '/services/new-home',        permanent: true },
+      { source: '/portfolio/office',                       destination: '/services/office',          permanent: true },
+      { source: '/portfolio/repairs',                      destination: '/services/repairs',         permanent: true },
+      { source: '/portfolio/retail',                       destination: '/services/retail',          permanent: true },
+      { source: '/portfolio/warehouse-metal-buildings',    destination: '/services/warehouse',       permanent: true },
+
+      // ─── WP Category / taxonomy pages ────────────────────────────────────
+      { source: '/category/deck-repair',                   destination: '/services/decks',           permanent: true },
+      { source: '/category/adu-construction',              destination: '/services/adu',             permanent: true },
+      { source: '/category/concrete-work',                 destination: '/services/concrete',        permanent: true },
+      { source: '/project-type/car-wash',                  destination: '/projects/car-wash',        permanent: true },
+
       { source: '/service-areas/nevada',   destination: '/service-areas/reno',  permanent: true },
 
       // ─── WP blog post slugs → /blog/[slug] on Vercel ─────────────────

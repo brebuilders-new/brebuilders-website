@@ -10,9 +10,9 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
   title: 'ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds',
-  description: 'Licensed ADU builders serving Lake Tahoe, NV. TRPA-compliant builds $95K–$350K. Washoe & Douglas County permits handled. NV #0085999. Free site evaluation.',
+  description: 'Licensed ADU builders serving Lake Tahoe, NV. TRPA-compliant builds. Washoe & Douglas County permits handled. NV #0085999. Free site evaluation.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+%2495K%E2%80%93%24350K+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, width: 1200, height: 630 }],
   },
   alternates: { canonical: `${SITE_URL}/service-areas/lake-tahoe/adu/` },
 }
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: 'How much does an ADU cost in Lake Tahoe?',
-    a: 'ADU builds at Lake Tahoe typically range from $95,000 to $350,000 for complete builds. Costs are higher than Reno due to TRPA permitting, snow-load engineering requirements, site access constraints, and Tahoe-specific material standards.',
+    a: 'ADU costs at Lake Tahoe are higher than standard Reno builds due to TRPA permitting, snow-load engineering requirements, site access constraints, and mountain material transport. BRE Builders provides a free site evaluation with a realistic cost estimate for your specific parcel.'
   },
   {
     q: 'What is the TRPA permit process for a Lake Tahoe ADU?',
@@ -46,10 +46,10 @@ const schema = {
     {
       '@type': 'Service',
       name: 'ADU Construction Lake Tahoe NV',
-      description: 'Licensed ADU builders serving Lake Tahoe, NV. TRPA-compliant ADU construction with full permit handling. $95K–$350K complete builds. NV #0085999.',
+      description: 'Licensed ADU builders serving Lake Tahoe, NV. TRPA-compliant ADU construction with full permit handling. NV #0085999. Free site evaluation.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: { '@type': 'Place', name: 'Lake Tahoe, NV' },
-      offers: { '@type': 'Offer', priceRange: '$95,000–$350,000' },
+      offers: { '@type': 'Offer', description: 'Price varies by parcel TRPA coverage, lot conditions, and ADU size. Free site evaluation available.' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-adu-lt'] },
     },
     {
@@ -101,7 +101,7 @@ export default function LakeTahoeADUPage() {
               ADU Builder<br /><span className="italic text-teal">Lake Tahoe, Nevada.</span>
             </h1>
             <p className="text-[13px] leading-[1.65] text-white/60 mb-6 max-w-[380px]">
-              TRPA-compliant ADU construction. Complete builds $95K–$350K. BRE Builders handles all permits — TRPA, Washoe County, Douglas County. NV #0085999.
+              TRPA-compliant ADU construction. BRE Builders handles all permits — TRPA, Washoe County, Douglas County. NV #0085999.
             </p>
             <div className="flex flex-col gap-3">
               <Link href="/contact?service=adu&location=lake-tahoe" className="btn-primary">Get a Free Site Evaluation →</Link>
@@ -123,7 +123,7 @@ export default function LakeTahoeADUPage() {
               ADU Builder<br /><span className="italic text-teal">Lake Tahoe, Nevada.</span>
             </h1>
             <p className="text-[16px] leading-relaxed text-white/60 mb-8 max-w-[520px] speakable-adu-lt">
-              TRPA-compliant ADU construction at Lake Tahoe. Complete builds $95K–$350K including TRPA permits, Washoe or Douglas County permits, engineering, and construction. Licensed NV #0085999.
+              TRPA-compliant ADU construction at Lake Tahoe. Full permit handling — TRPA, Washoe or Douglas County. Licensed NV #0085999.
             </p>
             <div className="flex gap-4">
               <Link href="/contact?service=adu&location=lake-tahoe" className="btn-primary">Free Site Evaluation →</Link>
@@ -141,7 +141,7 @@ export default function LakeTahoeADUPage() {
                 'TRPA Permit Experience',
                 'Washoe & Douglas County',
                 'Snow-Load Engineered',
-                '$95K–$350K Complete Builds',
+                'Free Site Evaluation',
                 'Free Site Evaluation',
               ].map(t => (
                 <span key={t} className="font-mono text-[11px] text-cream/45 tracking-wide">✓ {t}</span>
@@ -188,30 +188,28 @@ export default function LakeTahoeADUPage() {
 
         {/* ── PRICING ── */}
         <section className="py-20 lg:py-24 bg-void border-y border-white/[0.05]">
-          <div className="container">
+          <div className="container max-w-[760px]">
             <SL text="ADU Costs at Lake Tahoe" />
-            <h2 className="font-display font-light text-[clamp(26px,4vw,48px)] leading-tight text-cream mb-10">
+            <h2 className="font-display font-light text-[clamp(26px,4vw,48px)] leading-tight text-cream mb-8">
               What Does a Lake Tahoe<br /><span className="italic text-teal">ADU Cost?</span>
             </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-              {[
-                { type: 'Studio ADU', size: '400–600 sq ft', range: '$95K–$140K', note: 'Entry-level Tahoe ADU' },
-                { type: '1-Bedroom ADU', size: '600–800 sq ft', range: '$140K–$200K', note: 'Most common Tahoe build' },
-                { type: '2-Bedroom ADU', size: '800–1,200 sq ft', range: '$200K–$350K', note: 'Full rental unit' },
-                { type: 'Garage Conversion', size: 'Varies', range: '$85K–$150K', note: 'Subject to TRPA approval' },
-              ].map(t => (
-                <div key={t.type} className="bg-panel rounded-2xl border border-white/[0.06] p-5">
-                  <p className="font-mono text-[10px] tracking-[2px] text-teal uppercase mb-2">{t.type}</p>
-                  <p className="font-display text-[24px] text-cream font-light leading-none mb-1">{t.range}</p>
-                  <p className="text-[11px] text-cream/35 mb-2">{t.size}</p>
-                  <p className="text-[11px] text-cream/45">{t.note}</p>
-                </div>
-              ))}
-            </div>
-            <div className="bg-teal/[0.05] border border-teal/15 rounded-xl p-5 max-w-[680px]">
-              <p className="text-[13px] text-cream/60 leading-relaxed">
-                <strong className="text-cream">Why Tahoe costs more than Reno:</strong> TRPA permitting adds time and fees. Snow-load engineering is required on all structures. Site access at Tahoe is often limited. Material transport to mountain locations adds cost. Prices above include permits, engineering, and complete construction.
+            <div className="space-y-4 text-[15px] leading-relaxed text-cream/55 mb-8">
+              <p>
+                Lake Tahoe ADU costs are higher than standard Reno builds due to TRPA permitting requirements, snow-load engineering, site access constraints, and mountain material transport costs. Pricing is project-specific and depends on your parcel's TRPA coverage allowance, lot conditions, and ADU size.
               </p>
+              <p>
+                BRE Builders provides a <strong className="text-cream">free site evaluation</strong> to assess your parcel's eligibility and give you a realistic cost estimate before you commit to anything.
+              </p>
+            </div>
+            <div className="bg-teal/[0.05] border border-teal/15 rounded-xl p-6">
+              <p className="font-mono text-[10px] tracking-[2px] text-teal uppercase mb-3">Why Tahoe Costs More Than Reno</p>
+              <ul className="space-y-2 text-[13px] text-cream/55">
+                <li>✓ TRPA permit process adds time and agency fees</li>
+                <li>✓ Snow-load engineering required on all structures (up to 200 lbs/sq ft)</li>
+                <li>✓ Site access at Tahoe is often limited — affects material delivery</li>
+                <li>✓ TRPA coverage calculations must be completed before design begins</li>
+                <li>✓ Washoe or Douglas County permits required in addition to TRPA</li>
+              </ul>
             </div>
           </div>
         </section>

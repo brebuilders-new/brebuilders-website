@@ -38,7 +38,7 @@ const schema = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does a custom home cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Custom homes in Reno typically cost $250–$450+ per square foot for construction. A 2,000 sq ft custom home runs $500,000–$900,000+. Land is additional. BRE Builders provides detailed estimates after design is defined.' } },
+        { '@type': 'Question', name: 'How much does a custom home cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free consultations for custom home builds. Pricing depends on size, site conditions, finish level, and complexity. Contact us to discuss your project.' } },
         { '@type': 'Question', name: 'Does BRE Builders handle both design and construction?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders is a design-build contractor. Our in-house team handles concept, design, engineering coordination, permitting, and construction. You work with one team from start to finish.' } },
       ],
     },
@@ -54,7 +54,7 @@ const schema = {
 }
 
 const FAQS = [
-  { q: 'How much does a custom home cost in Reno NV?', a: 'Custom homes in Reno typically cost $250–$450+ per square foot. A 2,000 sq ft custom home runs $500,000–$900,000+. Land is additional. BRE Builders provides detailed estimates after design is defined.' },
+  { q: 'How much does a custom home cost in Reno NV?', a: 'BRE Builders provides free consultations for custom home builds. Pricing depends on size, site conditions, and finish level. Contact us to discuss your project.' },
   { q: 'Does BRE Builders handle both design and construction?', a: 'Yes. BRE Builders is a design-build contractor. Our in-house team handles concept, design, engineering coordination, permitting, and all construction. One team from concept to keys.' },
   { q: 'Does BRE Builders build in California?', a: 'Yes. BRE Builders holds California License #1093798 and has completed luxury estate projects in Ripon, CA and other Northern California locations.' },
   { q: 'How long does it take to build a custom home in Reno?', a: 'Design and permitting typically takes 3–6 months. Construction takes 8–18 months depending on size and complexity. Total timeline is 12–24 months from initial consultation.' },
@@ -79,7 +79,7 @@ export default function NewHomePage() {
           ctaSecondaryLabel: 'View Ripon Estate Project',
           ctaSecondaryHref: '/projects/ripon-estate/',
           urgencyNote: 'Custom home builds start with a free design consultation',
-          stats: [{ n: '$250+', label: 'Per Sq Ft' }, { n: '35+', label: 'Years Exp.' }, { n: 'NV + CA', label: 'Licensed' }],
+          stats: [{ n: 'Free', label: 'Consultation' }, { n: '35+', label: 'Years Exp.' }, { n: 'NV + CA', label: 'Licensed' }],
           license: 'both',
         }} />
 

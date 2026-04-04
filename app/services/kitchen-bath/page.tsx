@@ -13,16 +13,16 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Kitchen & Bath Remodel Reno NV | $15K–$80K',
-  description: 'Kitchen remodels $15K–$80K and full bathroom renovations in Reno, NV. Custom cabinetry, tile, layout changes. Licensed NV #0085999. Free on-site estimate.',
+  title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
+  description: 'Kitchen and bathroom remodeling in Reno, NV. Custom cabinetry, tile, layout changes, full gut-and-rebuild. Licensed NV #0085999. Free on-site estimate.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Custom+Cabinetry+%C2%B7+Tile+%C2%B7+Countertops+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Licensed+Contractor+%C2%B7+Tile+%C2%B7+Custom+Cabinetry+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
   },
   alternates: { canonical: `${SITE_URL}/services/kitchen-bath/` },
 }
 
 const FAQS = [
-  { q: 'How much does a kitchen remodel cost in Reno NV?', a: 'Kitchen remodels in Reno range from $15,000 for minor updates to $80,000+ for full gut-and-rebuild remodels with custom cabinetry. The national average for a mid-range remodel is $25,000–$50,000.' },
+  { q: 'How much does a kitchen remodel cost in Reno NV?', a: 'BRE Builders provides free on-site estimates for kitchen remodels. Pricing depends on scope, materials, and layout changes. Contact us for a project-specific quote.' },
   { q: 'How long does a kitchen remodel take in Reno?', a: 'Minor kitchen remodels take 2–4 weeks. Full kitchen remodels with custom cabinetry take 6–12 weeks. Planning and design add 2–4 weeks before construction begins.' },
   { q: 'Does BRE Builders handle kitchen permits in Reno?', a: 'Yes. Structural, electrical, and plumbing changes require permits. BRE Builders manages all permit applications as part of the project.' },
   { q: 'Do you remodel bathrooms in addition to kitchens?', a: 'Yes. BRE Builders provides full bathroom remodels — from tile and vanity replacement to complete gut-and-rebuild. Master baths, guest baths, and powder rooms.' },
@@ -44,7 +44,7 @@ const schema = {
         { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
       ],
       url: 'https://brebuilders.com/services/kitchen-bath/',
-      offers: { '@type': 'Offer', priceRange: '$15,000–$80,000+', priceCurrency: 'USD' },
+      offers: { '@type': 'Offer', description: 'Free on-site estimate. Contact BRE Builders for project-specific pricing.' },
     },
     {
       '@type': 'FAQPage',
@@ -52,7 +52,7 @@ const schema = {
         {
           '@type': 'Question',
           name: 'How much does a kitchen remodel cost in Reno NV?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Kitchen remodels in Reno range from $15,000 for minor updates to $80,000+ for full gut-and-rebuild remodels with custom cabinetry. Mid-range remodels typically run $25,000–$50,000.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free on-site estimates for kitchen remodels. Pricing depends on scope, materials, and layout changes required. Contact us for a project-specific quote.' },
         },
         {
           '@type': 'Question',
@@ -111,7 +111,7 @@ export default function KitchenBathPage() {
           ctaPrimaryHref: '/contact?service=kitchen-bath',
           ctaSecondaryLabel: 'View Kitchen Gallery',
           ctaSecondaryHref: '/projects/ripon-estate/',
-          stats: [{ n: '$15K', label: 'Starting Cost' }, { n: '35+', label: 'Years Exp.' }, { n: '6–12 wks', label: 'Avg Timeline' }],
+          stats: [{ n: 'Free', label: 'Estimate' }, { n: '35+', label: 'Years Exp.' }, { n: '6–12 wks', label: 'Avg Timeline' }],
           license: 'NV',
         }} />
 
@@ -159,7 +159,7 @@ export default function KitchenBathPage() {
               <SectionHeading line1="What's Included in a" line2italic="Reno Kitchen Remodel." size="md" className="mb-6" />
               <SpeakableBlock className="mb-6">
                 <p>BRE Builders provides full kitchen and bathroom remodeling throughout Reno, NV. From minor fixture upgrades to complete gut-and-rebuild remodels with custom cabinetry, we handle every aspect of the project in-house.</p>
-                <p>Kitchen remodels in Reno range from $15,000 for cosmetic updates to $80,000+ for custom cabinetry and full layout changes. Bathroom remodels run $8,000–$40,000. All structural, electrical, and plumbing changes are permitted through Washoe County or the City of Reno. Licensed NV #0085999.</p>
+                <p>BRE Builders handles full kitchen and bathroom remodels in Reno, NV — from cosmetic updates to complete gut-and-rebuild with custom cabinetry and layout changes. All structural, electrical, and plumbing changes are permitted through Washoe County or the City of Reno. Licensed NV #0085999. Free on-site estimate.</p>
               </SpeakableBlock>
               <div className="hidden md:flex flex-wrap gap-3">
                 <Link href="/additions/" className="btn-ghost text-[12px] py-2 px-4">Home Additions →</Link>

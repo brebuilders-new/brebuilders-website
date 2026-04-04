@@ -45,7 +45,7 @@ const schema = {
         { '@type': 'Question', name: 'What are signs of structural damage in a Reno home?', acceptedAnswer: { '@type': 'Answer', text: 'Key warning signs: stair-step cracks in brick or block, wide or growing foundation cracks, uneven or sloping floors, bowing walls, and suddenly misaligned doors or windows. These require professional inspection.' } },
         { '@type': 'Question', name: 'How quickly does BRE Builders respond to structural repair requests?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders responds within 24 hours. Emergency evaluations can often be scheduled within 48 hours.' } },
         { '@type': 'Question', name: 'What causes foundation problems in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Reno\'s expansive clay soils are the primary cause. Clay expands when wet and shrinks when dry, creating pressure against foundations. Freeze-thaw cycles in Northern Nevada compound this movement.' } },
-        { '@type': 'Question', name: 'How much do structural repairs cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Minor repairs like dry rot or localized framing run $1,500–$8,000. Foundation crack repair runs $3,000–$15,000. Major structural repairs or water intrusion remediation range from $10,000–$50,000+.' } },
+        { '@type': 'Question', name: 'How much do structural repairs cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free structural inspections and written scope before any estimate. Repair costs vary based on scope and severity. Contact us for a free evaluation.' } },
       ],
     },
     {
@@ -81,7 +81,7 @@ const FAQS = [
   { q: 'What are signs of structural damage in a Reno home?', a: 'Key warning signs: stair-step cracks in brick or block, wide or growing foundation cracks, uneven or sloping floors, bowing walls, and suddenly misaligned doors or windows. These require professional inspection.' },
   { q: 'How quickly does BRE Builders respond to structural repair requests?', a: 'BRE Builders responds within 24 hours. Emergency evaluations can often be scheduled within 48 hours in Reno and Sparks.' },
   { q: 'What causes foundation problems in Reno NV?', a: "Reno's expansive clay soils are the primary cause. Clay expands when wet and shrinks when dry, creating constant pressure against foundations. Freeze-thaw cycles in Northern Nevada compound this movement over time." },
-  { q: 'How much do structural repairs cost in Reno NV?', a: 'Minor repairs like dry rot or localized framing run $1,500–$8,000. Foundation crack repair runs $3,000–$15,000. Major structural work or water intrusion remediation ranges from $10,000–$50,000+.' },
+  { q: 'How much do structural repairs cost in Reno NV?', a: 'BRE Builders provides free structural inspections and written scope before any estimate. Repair costs vary based on scope and severity. Contact us for a free on-site evaluation.' },
   { q: 'Does BRE Builders handle insurance claims for structural damage?', a: 'BRE Builders can provide documentation for insurance purposes. We work directly with homeowners and can coordinate with adjusters when needed.' },
 ]
 
@@ -132,8 +132,8 @@ export default function RepairsPage() {
             <div className="grid grid-cols-4 gap-8">
               {[
                 { label: 'Ignored Crack', val: 'Grows', sub: 'Clay soil pressure is constant' },
-                { label: 'Early Repair Cost', val: '$1,500–$8K', sub: 'Minor structural work' },
-                { label: 'Delayed Repair', val: '$10K–$50K+', sub: 'After failure compounds' },
+                { label: 'Early Repair Cost', val: 'Act Early', sub: 'Lower cost, less damage' },
+                { label: 'Delayed Repair', val: 'Much More', sub: 'Waiting always costs more' },
                 { label: 'Our Response', val: '24 Hours', sub: 'Inspection within one week' },
               ].map((s) => (
                 <div key={s.label}>
@@ -150,7 +150,7 @@ export default function RepairsPage() {
         <PageSection bg="bg-deep">
           <SectionLabel text="Repair Services" />
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-10">
-            <SectionHeading line1="Every Structural Issue." line2italic="Diagnosed and Fixed." size="lg" />
+            <SectionHeading line1="Structural Repair Services" line2italic="Reno &amp; Northern Nevada." size="lg" />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {REPAIRS.map((r) => (
@@ -179,7 +179,7 @@ export default function RepairsPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <SectionLabel text="Warning Signs" />
-              <SectionHeading line1="8 Signs Your Home" line2italic="Needs Inspection Now." size="md" className="mb-6" />
+              <SectionHeading line1="8 Warning Signs Your Reno Home" line2italic="Needs Structural Inspection." size="md" className="mb-6" />
               <SpeakableBlock>
                 <p>Reno homes face unique structural stresses from expansive clay soils and freeze-thaw cycles. These 8 warning signs indicate that professional evaluation is needed — the sooner, the less expensive the repair.</p>
               </SpeakableBlock>
@@ -210,7 +210,7 @@ export default function RepairsPage() {
         {/* Real project photos */}
         <PageSection bg="bg-deep">
           <SectionLabel text="Completed Repairs" />
-          <SectionHeading line1="Before Signs Become" line2italic="Bigger Problems." size="lg" className="mb-10" />
+          <SectionHeading line1="How Structural Repairs Work" line2italic="Free Inspection to Fix." size="lg" className="mb-10" />
           {/* Mobile carousel */}
           <GalleryGrid
             mode="grid"
@@ -231,7 +231,7 @@ export default function RepairsPage() {
           aeoContent={
             <div>
               <SectionLabel text="Structural Repairs in Reno NV" />
-              <SectionHeading line1="Reno Homes Face" line2italic="Unique Structural Risks." size="md" className="mb-6" />
+              <SectionHeading line1="Why Reno Homes Need" line2italic="Structural Inspections." size="md" className="mb-6" />
               <SpeakableBlock className="mb-8">
                 <p>Reno, Nevada sits on expansive clay soils that swell when wet and shrink when dry. This constant soil movement is the leading cause of foundation cracks, settling, and structural damage in Northern Nevada homes. Freeze-thaw cycles in the Reno climate compound this problem, making annual inspection important for older properties.</p>
                 <p>BRE Builders has provided structural repair services in Reno since 1989. We hold Nevada Contractor License #0085999 and offer free inspection requests with 24-hour response. Our licensed team diagnoses the root cause before recommending repairs — never upselling work that isn&apos;t needed.</p>

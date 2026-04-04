@@ -55,7 +55,7 @@ const schema = {
         {
           '@type': 'Question',
           name: 'Can BRE Builders build an ADU on a Lake Tahoe property?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes, subject to Washoe County zoning and TRPA regulations. BRE Builders manages the full permit process including TRPA review. ADU costs at Lake Tahoe typically range from $95,000 to $350,000.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes, subject to Washoe County zoning and TRPA regulations. BRE Builders manages the full permit process including TRPA review. Contact us for a free site evaluation and project-specific estimate.' },
         },
         {
           '@type': 'Question',
@@ -95,7 +95,7 @@ function SL({ text }: { text: string }) {
 const FAQS = [
   { q: 'Does BRE Builders work at Lake Tahoe properties?', a: 'Yes. BRE Builders has completed multiple projects at Lake Tahoe — including the full home renovation at Zephyr Cove, Lake Tahoe in Zephyr Cove, structural deck repairs, and water intrusion work. NV License #0085999.' },
   { q: 'Do Lake Tahoe decks need special structural requirements?', a: 'Yes. Lake Tahoe decks must handle heavy snow loads, UV degradation, and extreme freeze-thaw cycles. BRE Builders designs to Washoe County and Douglas County requirements and uses materials rated for high-altitude mountain climates.' },
-  { q: 'Can BRE Builders build an ADU on a Lake Tahoe property?', a: 'Yes, subject to Washoe County zoning and the Tahoe Regional Planning Agency (TRPA) regulations. BRE Builders manages the full permit process including TRPA review. ADU costs in Tahoe typically range from $95,000 to $350,000.' },
+  { q: 'Can BRE Builders build an ADU on a Lake Tahoe property?', a: 'Yes, subject to Washoe County zoning and the Tahoe Regional Planning Agency (TRPA) regulations. BRE Builders manages the full permit process including TRPA review. Contact us for a free site evaluation and project-specific estimate.' },
   { q: 'How far is BRE Builders from Lake Tahoe?', a: "BRE Builders is based in Reno, NV — approximately 45 minutes from Zephyr Cove and 60 minutes from Incline Village. We regularly serve Tahoe properties and schedule efficiently to minimize travel time." },
 ]
 
@@ -260,13 +260,13 @@ export default function LakeTahoePage() {
                     Building an ADU at Lake Tahoe requires more than standard Nevada permitting. Every project must comply with Washoe County zoning, Douglas County regulations, and — in most cases — the Tahoe Regional Planning Agency (TRPA). BRE Builders manages the full permit process including TRPA review, environmental documentation, and coverage calculations specific to Tahoe Basin properties.
                   </p>
                   <p>
-                    ADU costs at Lake Tahoe typically range from <strong className="text-cream">$95,000 to $350,000</strong> for complete builds — higher than Reno due to site constraints, snow-load engineering requirements (up to 200 lbs per sq ft), and Tahoe-specific material standards. We provide free site evaluations to determine feasibility before any commitment.
+                    ADU costs at Lake Tahoe are higher than standard Reno builds due to TRPA permitting requirements, snow-load engineering, and site access constraints. BRE Builders provides free site evaluations to determine feasibility and provide accurate project-specific pricing before any commitment.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {[
-                    { label: 'Starting Cost', val: '$95,000' },
-                    { label: 'Avg Range', val: '$95K–$350K' },
+                    { label: 'Free Evaluation', val: 'Available', sub: '' },
+                    { label: 'TRPA Permits', val: 'Handled', sub: '' },
                     { label: 'Permit Process', val: 'TRPA + County' },
                     { label: 'Timeline', val: '4–7 months' },
                   ].map(s => (

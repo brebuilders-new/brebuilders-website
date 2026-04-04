@@ -296,7 +296,7 @@ export default function SparksPage() {
                 </div>
                 <div className="bg-teal/[0.06] border border-teal/20 rounded-2xl p-5">
                   <p className="font-mono text-[11px] text-teal mb-2">ADU Rental Income Potential — Sparks, NV</p>
-                  <p className="text-[13px] text-cream/55 leading-relaxed">ADUs in Sparks earn $1,100–$1,800/month. Nevada requires 30-day minimum rental. A $75K–$150K ADU can fully pay for itself in 6–12 years on rental income alone. BRE Builders provides free ROI consultation on all ADU projects.</p>
+                  <p className="text-[13px] text-cream/55 leading-relaxed">ADUs in the Reno-Sparks area earn $1,200–$2,000/month. Nevada requires 30-day minimum rental. A $75K–$150K ADU can fully pay for itself in 6–12 years on rental income alone. BRE Builders provides free ROI consultation on all ADU projects.</p>
                 </div>
               </div>
             </div>

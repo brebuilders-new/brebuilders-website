@@ -59,7 +59,7 @@ const schema = {
         {
           '@type': 'Question',
           name: 'How much does a new home build cost in Reno NV?',
-          acceptedAnswer: { '@type': 'Answer', text: 'New home construction in Reno typically ranges from $200–$350 per square foot depending on finishes, complexity, and site conditions. A 2,000 sq ft home runs $400,000–$700,000 for mid-range finishes. Custom luxury builds with premium finishes start at $500 per square foot.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free consultations for new home builds. Pricing depends on size, site conditions, finish level, and complexity. Contact us for a detailed estimate.' },
         },
         {
           '@type': 'Question',
@@ -96,7 +96,7 @@ const schema = {
 }
 
 const FAQS = [
-  { q: 'How much does a new home build cost in Reno NV?', a: 'New home construction in Reno ranges from $200–$350 per square foot for mid-range finishes. A 2,000 sq ft home runs $400,000–$700,000. Custom luxury builds with premium finishes, high-end cabinetry, and complex site work start at $500+ per square foot. BRE Builders provides detailed line-item estimates after an initial site consultation.' },
+  { q: 'How much does a new home build cost in Reno NV?', a: 'BRE Builders provides free consultations for new home builds. Pricing depends on size, site conditions, and finish level. Contact us for a detailed project estimate.' },
   { q: 'How long does a new home build take in Reno?', a: 'Plan for 10–18 months total. Washoe County and City of Reno permitting typically takes 6–12 weeks. Framing through move-in takes another 6–12 months depending on size, finishes, and weather. BRE Builders provides a milestone schedule at project kickoff.' },
   { q: 'Do I need my own land to build?', a: 'Yes. You need to own the lot before construction begins. BRE Builders will assess your lot for soil conditions, slope, utility access, setback requirements, and HOA restrictions during the consultation phase — before you commit to anything.' },
   { q: 'What does design-build mean with BRE?', a: 'One company handles concept through keys. BRE Builders coordinates architectural plans, structural engineering, all permit applications, and full construction under a single contract. You work with one team, one point of contact, and one warranty.' },
@@ -135,7 +135,7 @@ export default function NewHomeBuildsPage() {
           ctaMobileLabel:    '📞 Discuss Your Build',
           stats: [
             { n: '35+', label: 'Years Building' },
-            { n: '$350K+', label: 'Starting Cost' },
+            { n: 'Free', label: 'Consultation' },
             { n: '10–18', label: 'Months to Keys' },
           ],
           license: 'both',
@@ -159,7 +159,7 @@ export default function NewHomeBuildsPage() {
                   Our team handles everything from site assessment through final walkthrough.
                 </p>
                 <p>
-                  New home builds in Reno typically range from $200–$350 per square foot depending on finishes,
+                  New home builds in Reno are priced based on size, site conditions, and finish level.
                   site complexity, and current material costs. We provide detailed line-item estimates after a
                   consultation — no vague ballparks.
                 </p>
@@ -231,7 +231,7 @@ export default function NewHomeBuildsPage() {
             {[
               {
                 factor: 'Square Footage',
-                detail: 'Reno new builds typically run $200–$350/sq ft for standard finishes. A 2,000 sq ft home: $400K–$700K. A 3,500 sq ft home: $700K–$1.2M.',
+                detail: 'BRE Builders provides free consultations for new home builds. Pricing depends on size, site conditions, and finish level.',
                 icon: '📐',
               },
               {
@@ -241,7 +241,7 @@ export default function NewHomeBuildsPage() {
               },
               {
                 factor: 'Finish Level',
-                detail: 'Builder-grade finishes are included in base pricing. Semi-custom and full custom upgrades (cabinetry, tile, counters, fixtures) add $30–$150/sq ft.',
+                detail: 'Base pricing includes standard finishes. Custom upgrades available — contact BRE Builders for a detailed estimate.',
                 icon: '✨',
               },
               {
@@ -262,26 +262,10 @@ export default function NewHomeBuildsPage() {
 
           {/* Cost summary */}
           <div className="hidden md:block bg-panel border border-white/[0.07] rounded-2xl overflow-hidden">
-            <div className="px-6 py-4 border-b border-white/[0.06]">
-              <p className="font-mono text-[11px] tracking-[2px] text-cream/40 uppercase">Typical Cost Ranges — Reno/Northern Nevada</p>
-            </div>
-            <div className="divide-y divide-white/[0.05]">
-              {[
-                { size: '1,500 sq ft', type: 'Starter / ranch style', range: '$300K – $525K' },
-                { size: '2,000 sq ft', type: 'Standard 3BR/2BA',      range: '$400K – $700K' },
-                { size: '2,500 sq ft', type: 'Mid-range 4BR',         range: '$500K – $875K' },
-                { size: '3,500 sq ft', type: 'Upscale custom',        range: '$700K – $1.2M' },
-                { size: '5,000+ sq ft', type: 'Luxury estate',        range: '$1.2M+' },
-              ].map(row => (
-                <div key={row.size} className="grid grid-cols-3 px-6 py-4">
-                  <span className="font-mono text-[13px] text-cream/70">{row.size}</span>
-                  <span className="text-[13px] text-cream/45">{row.type}</span>
-                  <span className="font-mono text-[13px] text-gold text-right">{row.range}</span>
-                </div>
-              ))}
-            </div>
-            <div className="px-6 py-3 border-t border-white/[0.05]">
-              <p className="text-[11px] text-cream/25 font-mono">Based on 2024–2025 Northern Nevada construction costs. Ranges vary with finishes and site conditions. Free on-site estimate available.</p>
+            <div className="px-6 py-6 text-center">
+              <p className="text-[14px] text-cream/60 mb-4">Pricing for new home builds depends on size, site conditions, and finish level.</p>
+              <p className="text-[13px] text-cream/40 mb-2">BRE Builders provides a free detailed estimate after an initial consultation.</p>
+              <p className="font-mono text-[11px] text-teal">NV #0085999 · CA #1093798 · Free consultations available</p>
             </div>
           </div>
         </PageSection>

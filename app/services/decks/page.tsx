@@ -38,7 +38,7 @@ const schema = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'How much does a new deck cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'New deck construction in Reno typically costs $25–$60 per square foot. A 300 sq ft deck runs $7,500–$18,000. Lake Tahoe decks cost more due to snow-load engineering requirements.' } },
+        { '@type': 'Question', name: 'How much does a new deck cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free on-site estimates for deck construction and repair. Pricing depends on size, materials, and structural requirements. Contact us for a project-specific quote.' } },
         { '@type': 'Question', name: 'Do decks in Lake Tahoe need special construction?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Lake Tahoe decks must handle snow loads of up to 200 lbs per sq ft, UV exposure, and freeze-thaw cycles. BRE Builders designs to Washoe County and Douglas County structural requirements.' } },
         { '@type': 'Question', name: 'What are signs a deck needs structural repair?', acceptedAnswer: { '@type': 'Answer', text: 'Signs include: soft or spongy wood when walked on, visible rot or discoloration, ledger pulling away from house, wobbly railing, rust-stained fasteners, and posts showing signs of rot at the base.' } },
       ],
@@ -66,7 +66,7 @@ const DECK_SIGNS = [
 ]
 
 const FAQS = [
-  { q: 'How much does a new deck cost in Reno NV?', a: 'New deck construction in Reno typically costs $25–$60 per square foot. A 300 sq ft deck runs $7,500–$18,000. Lake Tahoe decks cost more due to snow-load engineering requirements.' },
+  { q: 'How much does a new deck cost in Reno NV?', a: 'BRE Builders provides free on-site estimates for deck construction and repair. Pricing depends on size, materials, and structural requirements. Contact us for a project-specific quote.' },
   { q: 'Do decks in Lake Tahoe need special construction?', a: 'Yes. Lake Tahoe decks must handle snow loads up to 200 lbs per sq ft, UV degradation, and extreme freeze-thaw cycles. BRE Builders designs and builds to Washoe County and Douglas County structural requirements.' },
   { q: 'What are signs a deck needs structural repair?', a: 'Signs include: soft or spongy wood, visible rot, ledger pulling away from the house, wobbly railing, rust-stained fasteners, and posts showing rot at the base.' },
   { q: 'Does BRE Builders repair existing decks?', a: 'Yes. We provide complete structural evaluations and repair failing decks throughout Reno and Lake Tahoe. Many repairs are more cost-effective than full replacement.' },
@@ -92,7 +92,7 @@ export default function DecksPage() {
           ctaSecondaryLabel: 'Lake Tahoe Deck Repair',
           ctaSecondaryHref: '/service-areas/lake-tahoe/',
           urgencyNote: 'Deck inspections available same-week — free with any estimate',
-          stats: [{ n: '$25', label: 'Per Sq Ft' }, { n: '35+', label: 'Years Exp.' }, { n: 'Free', label: 'Inspection' }],
+          stats: [{ n: 'Free', label: 'Inspection' }, { n: '35+', label: 'Years Exp.' }, { n: 'Free', label: 'Inspection' }],
           license: 'NV',
         }} />
 

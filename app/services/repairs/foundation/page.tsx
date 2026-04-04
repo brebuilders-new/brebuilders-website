@@ -51,7 +51,7 @@ const schema = {
           name: 'How much does foundation repair cost in Reno NV?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Foundation repair costs in Reno vary widely based on severity. Minor crack repair starts at $500–$2,000. Drainage corrections run $2,000–$8,000. Major foundation work can range from $10,000–$40,000+. BRE Builders provides free evaluations with written scope.',
+            text: 'BRE Builders provides free foundation inspections with a written scope before any estimate. Repair costs vary based on severity and scope. Contact us for a free evaluation.',
           },
         },
         {
@@ -91,7 +91,7 @@ const FAQS = [
   },
   {
     q: 'How much does foundation repair cost in Reno NV?',
-    a: 'Minor crack repair: $500–$2,000. Drainage corrections: $2,000–$8,000. Major foundation work: $10,000–$40,000+. Cost depends on the root cause and extent of damage. BRE Builders provides free evaluations with written scope.',
+    a: 'Costs vary by scope and severity. BRE Builders provides free on-site foundation inspections before any estimate',
   },
   {
     q: 'Is foundation repair covered by homeowners insurance in Nevada?',
@@ -241,7 +241,7 @@ export default function FoundationRepairPage() {
                     repair it properly.
                   </p>
                   <p>
-                    Foundation repair costs in Reno range from $500 for minor crack repair to $40,000+ for
+                    Foundation repair costs vary based on severity and scope. BRE Builders provides free evaluations —
                     major foundation work. BRE Builders provides written scopes and itemized estimates.
                     Licensed NV #0085999. Free evaluation.
                   </p>

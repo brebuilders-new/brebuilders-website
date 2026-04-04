@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Water Intrusion Repair Reno NV | Free Evaluation',
   description:
     'Water intrusion and moisture repair in Reno, NV. Basement, crawl space, foundation water damage. Licensed NV #0085999. Free evaluation.',
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og?title=Water+Intrusion+Repair+Reno+NV&sub=Free+Evaluation+%C2%B7+Licensed+Since+1989+%C2%B7+NV+%230085999&badge=Water+Intrusion`, width: 1200, height: 630 }],
+  },
   alternates: { canonical: `${SITE_URL}/repairs/water-intrusion-and-moisture-issues-in-reno-nv/` },
 }
 

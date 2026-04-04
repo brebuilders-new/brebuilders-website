@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'FAQ — Licensed Contractor Reno NV | Common Questions',
   description:
     'Answers to common questions about BRE Builders — services, pricing, timelines, materials, warranty, licensing, and service areas.',
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og?title=FAQ+BRE+Builders+Reno+NV&sub=Licensing+%C2%B7+Permits+%C2%B7+Timelines+%C2%B7+ADU+Costs&badge=FAQ`, width: 1200, height: 630 }],
+  },
   alternates: { canonical: `${SITE_URL}/frequently-asked-questions-bre-builders/` },
 }
 

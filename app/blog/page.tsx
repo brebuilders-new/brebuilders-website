@@ -214,6 +214,16 @@ export default function BlogPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        '@id': 'https://brebuilders.com/blog/',
+        url: 'https://brebuilders.com/blog/',
+        name: 'BRE Builders Blog — Construction Guides for Reno Homeowners',
+        description: 'ADU guides, structural repair tips, and construction insights for Reno homeowners from BRE Builders.',
+        publisher: { '@id': 'https://brebuilders.com/#business' },
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.blog-intro'] },
+      }) }} />
       <Nav />
       <main className="pt-28 pb-24">
         <div className="container">

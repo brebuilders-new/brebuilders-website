@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'About BRE Builders | Licensed Since 1989',
   description:
     'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercial.',
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og?title=About+BRE+Builders&sub=Licensed+General+Contractor+Since+1989+%C2%B7+NV+%230085999&badge=About`, width: 1200, height: 630 }],
+  },
   alternates: { canonical: `${SITE_URL}/about/` },
 }
 
@@ -26,6 +29,16 @@ function SL({ text }: { text: string }) {
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        '@id': 'https://brebuilders.com/about/',
+        url: 'https://brebuilders.com/about/',
+        name: 'About BRE Builders | Blue Reef Enterprises | Licensed Since 1989',
+        description: 'Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Owner Steve Rosenthal. NV #0085999 · CA #1093798.',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.about-intro', '.speakable-about'] },
+        mainEntity: { '@id': 'https://brebuilders.com/#business' },
+      }) }} />
       <Nav />
       <main>
         {/* Hero */}

@@ -11,16 +11,38 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
   description: 'Commercial construction in Reno, NV — tenant improvements, office buildouts, retail, warehouses. Licensed NV #0085999 · CA #1093798. 35+ years. Free estimates.',
+  openGraph: {
+    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Commercial`, width: 1200, height: 630 }],
+  },
   alternates: { canonical: `${SITE_URL}/commercial-services/` },
 }
 
+const FAQS = [
+  { q: 'What commercial services does BRE Builders provide?', a: 'Tenant improvements, office buildouts, retail construction, warehouse builds, metal buildings, and commercial concrete. Licensed NV #0085999 · CA #1093798.' },
+  { q: 'Does BRE Builders do tenant improvements in Reno NV?', a: 'Yes. We specialize in commercial tenant improvements — office suites, retail spaces, medical offices, and multi-tenant buildouts. We handle permits, framing, MEP coordination, and finish work.' },
+  { q: 'Do you build warehouses and metal buildings in Nevada?', a: 'Yes. BRE Builders builds custom warehouse and metal buildings across Northern Nevada. Scalable, code-compliant structures for industrial, storage, and commercial use.' },
+]
+
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Commercial Construction Reno NV',
-  description: 'BRE Builders provides commercial construction and tenant improvements in Reno, NV. Offices, retail, warehouses, metal buildings. Licensed NV #0085999.',
-  provider: { '@id': 'https://brebuilders.com/#business' },
-  areaServed: { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+  '@graph': [
+    {
+      '@type': 'Service',
+      name: 'Commercial Construction Reno NV',
+      description: 'BRE Builders provides commercial construction and tenant improvements in Reno, NV. Offices, retail, warehouses, metal buildings. Licensed NV #0085999.',
+      provider: { '@id': 'https://brebuilders.com/#business' },
+      areaServed: { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: FAQS.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
 }
 
 function SL({ text }: { text: string }) {
@@ -31,12 +53,6 @@ function SL({ text }: { text: string }) {
     </div>
   )
 }
-
-const FAQS = [
-  { q: 'What commercial services does BRE Builders provide?', a: 'Tenant improvements, office buildouts, retail construction, warehouse builds, metal buildings, and commercial concrete. Licensed NV #0085999 · CA #1093798.' },
-  { q: 'Does BRE Builders do tenant improvements in Reno NV?', a: 'Yes. We specialize in commercial tenant improvements — office suites, retail spaces, medical offices, and multi-tenant buildouts. We handle permits, framing, MEP coordination, and finish work.' },
-  { q: 'Do you build warehouses and metal buildings in Nevada?', a: 'Yes. BRE Builders builds custom warehouse and metal buildings across Northern Nevada. Scalable, code-compliant structures for industrial, storage, and commercial use.' },
-]
 
 export default function CommercialPage() {
   return (

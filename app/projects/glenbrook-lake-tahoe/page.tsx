@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import ProjectTemplate from '@/components/templates/ProjectTemplate'
 import { SectionLabel } from '@/components/templates/ServiceTemplate'
-import { CDN, WP } from '@/lib/image-catalog'
+import { CDN } from '@/lib/image-catalog'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 

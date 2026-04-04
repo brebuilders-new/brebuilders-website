@@ -6,7 +6,6 @@
  */
 
 export const CDN = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main'
-export const WP  = 'https://brebuilders.com/wp-content/uploads' // remove after WP shutdown
 
 // ── IMAGE TYPES ──────────────────────────────────────────────────────────────
 

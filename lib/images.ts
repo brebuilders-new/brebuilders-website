@@ -1,14 +1,8 @@
 // All verified image URLs
 // CDN: https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main/
-// WP fallback: https://brebuilders.com/wp-content/uploads/ (remove when WP shuts down)
 
 const CDN = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main'
-const WP  = 'https://brebuilders.com/wp-content/uploads' // DEPRECATED — remove after WP shutdown
 
-// Helper: use CDN if file is downloaded, otherwise WP
-function img(filename: string, hasCdn = false): string {
-  return hasCdn ? `${CDN}/${filename}` : `${WP}/${filename}`
-}
 
 export const IMGS = {
   // BRANDING
@@ -18,11 +12,11 @@ export const IMGS = {
   adu_main:   `${CDN}/adu-homepage-600x403.jpg`,
   adu_pool:   `${CDN}/pool-house.jpg`,
   adu_inlaw:  `${CDN}/inlaw-unit.jpg`,
-  adu_garage: `${WP}/garage.jpg`,
+  adu_garage: `${CDN}/garage.jpg`,
 
   // REPAIRS SERVICE
   repairs_foundation: `${CDN}/Foundation-Repair-and-Foundation-Issues-in-Reno-NV-min.jpg`,
-  repairs_water:      `${WP}/Water-Intrusion-and-Moisture-Issues-in-Reno-NV.jpg`,
+  repairs_water:      `${CDN}/Water-Intrusion-and-Moisture-Issues-in-Reno-NV.jpg`,
 
   // STRUCTURAL REPAIRS
   repairs_rot:      `${CDN}/Extensive-Rot-Exposure-Along-Wall-Panel-600x403.jpg`,

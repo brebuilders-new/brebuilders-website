@@ -80,6 +80,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    // New service — Safe Rooms & Panic Rooms
+    {
+      url: base + '/services/safe-rooms/',
+      lastModified: getPageLastModified('services/safe-rooms'),
+      changeFrequency: 'monthly',
+      priority: 0.88,
+    },
 
     // ── Tier 3: Projects (dynamic from PROJECTS array) ────────────────────
     {

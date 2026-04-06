@@ -10,6 +10,7 @@ const RESIDENTIAL = [
   { label: 'Home Additions', href: '/services/additions', badge: null, badgeColor: '', desc: 'Bedroom suites · Garages · 2nd stories', icon: '📐' },
   { label: 'Kitchen & Bath', href: '/services/kitchen-bath', badge: null, badgeColor: '', desc: 'Custom cabinetry · Tile · Full remodels', icon: '🪵' },
   { label: 'New Home Builds', href: '/services/new-home-builds', badge: null, badgeColor: '', desc: 'Ground-up builds · Reno & California', icon: '🏡' },
+  { label: 'Safe Rooms & Panic Rooms', href: '/services/safe-rooms', badge: 'New', badgeColor: 'bg-gold/20 text-gold', desc: 'Reinforced rooms · NV & CA licensed', icon: '🔒' },
   { label: 'Decks', href: '/services/decks', badge: null, badgeColor: '', desc: 'New builds · Structural repair · Tahoe', icon: '🌲' },
   { label: 'Lofts & Condos', href: '/services/lofts-condos', badge: null, badgeColor: '', desc: 'Interior renovation · HOA compliant', icon: '🏙️' },
 ]

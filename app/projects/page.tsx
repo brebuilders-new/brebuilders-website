@@ -286,7 +286,7 @@ export default function ProjectsPage() {
             {[
               { label: 'ADU Construction', desc: 'From $75K · See our ADU work', href: '/services/adu' },
               { label: 'Structural Repairs', desc: 'Foundation, framing, dry rot', href: '/services/repairs' },
-              { label: 'Custom Homes', desc: 'Nevada & California', href: '/services/new-home' },
+              { label: 'Custom Homes', desc: 'Nevada & California', href: '/services/new-home-builds' },
               { label: 'Decks', desc: 'Reno, Sparks, Lake Tahoe', href: '/services/decks' },
             ].map(s => (
               <Link key={s.href} href={s.href} className="group p-4 bg-panel rounded-xl border border-white/[0.06] hover:border-teal/25 transition-colors">

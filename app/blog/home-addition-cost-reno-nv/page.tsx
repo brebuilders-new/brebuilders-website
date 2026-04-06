@@ -50,7 +50,7 @@ export default function HomeAdditionCostRenoPage() {
       relatedServices={[
         { label: 'Home Additions', href: '/services/additions' },
         { label: 'ADU Construction', href: '/services/adu' },
-        { label: 'Custom Home Building', href: '/services/new-home' },
+        { label: 'Custom Home Building', href: '/services/new-home-builds' },
       ]}
       relatedPosts={[
         { title: 'How to Add an ADU in Nevada Without Breaking the Bank', href: '/blog/how-to-add-an-adu-in-nevada', img: IMGS.adu_main, alt: 'ADU construction Reno NV', category: 'ADU' },

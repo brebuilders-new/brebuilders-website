@@ -162,7 +162,7 @@ export default function AdditionsPage() {
         <RelatedServices items={[
           { label: 'ADU Construction', href: '/adus/', desc: 'Separate living unit' },
           { label: 'Kitchen & Bath', href: '/kitchen/', desc: 'Interior upgrade' },
-          { label: 'Custom Homes', href: '/new-home/', desc: 'Ground-up builds' },
+          { label: 'Custom Homes', href: '/services/new-home-builds', desc: 'Ground-up builds' },
           { label: 'Structural Repairs', href: '/repairs/', desc: 'Fix before you add' },
         ]} />
 

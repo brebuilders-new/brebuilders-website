@@ -48,7 +48,7 @@ export default function CustomHomeBuilderRenoPage() {
       excerpt="Real costs, timelines, and what to expect from the custom home building process in Reno, NV and Northern Nevada. Verified data from 35+ years of licensed construction."
       schema={schema}
       relatedServices={[
-        { label: 'Custom Home Building', href: '/services/new-home' },
+        { label: 'Custom Home Building', href: '/services/new-home-builds' },
         { label: 'Home Additions', href: '/services/additions' },
         { label: 'ADU Construction', href: '/services/adu' },
       ]}

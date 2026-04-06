@@ -97,7 +97,7 @@ const schema = {
       '@type': 'ItemList',
       name: 'BRE Builders Northern California Services',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Custom Home Building Northern California', url: 'https://brebuilders.com/new-home/' },
+        { '@type': 'ListItem', position: 1, name: 'Custom Home Building Northern California', url: 'https://brebuilders.com/services/new-home-builds' },
         { '@type': 'ListItem', position: 2, name: 'Structural Repairs Northern California', url: 'https://brebuilders.com/repairs/' },
         { '@type': 'ListItem', position: 3, name: 'Kitchen Remodeling Northern California', url: 'https://brebuilders.com/kitchen/' },
         { '@type': 'ListItem', position: 4, name: 'Contractor Truckee CA', url: 'https://brebuilders.com/service-areas/truckee/' },
@@ -237,7 +237,7 @@ export default function NorthernCaliforniaPage() {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { label: 'Custom Home Building', href: '/services/new-home', desc: 'Ground-up custom homes in Northern California. Full design-build under CA License #1093798.', icon: '🏡' },
+                { label: 'Custom Home Building', href: '/services/new-home-builds', desc: 'Ground-up custom homes in Northern California. Full design-build under CA License #1093798.', icon: '🏡' },
                 { label: 'Structural Repairs', href: '/services/repairs', desc: 'Foundation repair, dry rot, water intrusion, framing. California residential and commercial.', icon: '🔧' },
                 { label: 'Kitchen & Bath', href: '/services/kitchen-bath', desc: 'Full kitchen and bathroom remodels in Northern California homes.', icon: '🍳' },
                 { label: 'Home Additions', href: '/services/additions', desc: 'Room additions, second stories, and garage additions in California.', icon: '🏗️' },
@@ -328,7 +328,7 @@ export default function NorthernCaliforniaPage() {
             </div>
             <div className="flex flex-wrap gap-2">
               <Link href="/projects/ripon-estate" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Ripon CA Estate Project →</Link>
-              <Link href="/services/new-home" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Custom Home Building CA →</Link>
+              <Link href="/services/new-home-builds" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Custom Home Building CA →</Link>
               <Link href="/services/repairs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs →</Link>
               <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">8 Signs Your Deck Is Unsafe →</Link>
               <Link href="/service-areas/truckee/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Truckee, CA Service Area →</Link>

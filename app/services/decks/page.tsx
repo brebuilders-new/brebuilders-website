@@ -222,7 +222,7 @@ export default function DecksPage() {
           { label: 'Structural Repairs', href: '/repairs/', desc: 'If the deck is failing' },
           { label: 'Lake Tahoe Services', href: '/service-areas/lake-tahoe/', desc: 'Mountain deck experts' },
           { label: 'Home Additions', href: '/additions/', desc: 'Expand your space' },
-          { label: 'Custom Homes', href: '/new-home/', desc: 'Full builds' },
+          { label: 'Custom Homes', href: '/services/new-home-builds', desc: 'Full builds' },
         ]} />
 
         <MobileCTABox

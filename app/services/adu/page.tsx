@@ -356,7 +356,7 @@ export default function ADUPage() {
           </div>
         </section>
         <RelatedServices items={[
-          { label: 'Custom Home Building', href: '/new-home/', desc: 'Ground-up custom builds' },
+          { label: 'Custom Home Building', href: '/services/new-home-builds', desc: 'Ground-up custom builds' },
           { label: 'Home Additions', href: '/additions/', desc: 'Add space without moving' },
           { label: 'Structural Repairs', href: '/repairs/', desc: 'Foundation & structural' },
           { label: 'Concrete Work', href: '/concrete/', desc: 'Slabs, foundations, pads' },

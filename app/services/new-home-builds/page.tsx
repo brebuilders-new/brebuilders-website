@@ -352,7 +352,7 @@ export default function NewHomeBuildsPage() {
                 </p>
               </SpeakableBlock>
               <div className="hidden md:flex flex-wrap gap-3">
-                <Link href="/services/new-home/" className="btn-ghost text-[12px] py-2 px-4">Custom Home Builder →</Link>
+                <Link href="/services/new-home-builds" className="btn-ghost text-[12px] py-2 px-4">Custom Home Builder →</Link>
                 <Link href="/services/adu/" className="btn-ghost text-[12px] py-2 px-4">ADU Builders Reno →</Link>
                 <Link href="/services/additions/" className="btn-ghost text-[12px] py-2 px-4">Home Additions →</Link>
                 <Link href="/projects/ripon-estate/" className="btn-ghost text-[12px] py-2 px-4">Ripon Estate Project →</Link>

@@ -216,7 +216,7 @@ export default function TestimonialsPage() {
                 { label: 'Structural Repairs', desc: 'Foundation, framing, dry rot · Free estimates', href: '/services/repairs' },
                 { label: 'Kitchen & Bath Remodeling', desc: 'Custom cabinetry, stone counters, premium finishes', href: '/services/kitchen-bath' },
                 { label: 'Deck Construction', desc: 'Snow-load rated · Reno, Sparks, Lake Tahoe', href: '/services/decks' },
-                { label: 'Custom Home Building', desc: 'Ground-up builds · Ripon CA estate completed', href: '/services/new-home' },
+                { label: 'Custom Home Building', desc: 'Ground-up builds · Ripon CA estate completed', href: '/services/new-home-builds' },
                 { label: 'Home Additions', desc: 'Room additions, second stories, garage additions', href: '/services/additions' },
               ].map(s => (
                 <Link key={s.href} href={s.href} className="group flex items-center gap-3 p-4 rounded-xl border border-white/[0.06] hover:border-teal/25 bg-deep hover:bg-teal/[0.04] transition-all">

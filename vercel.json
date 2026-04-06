@@ -1,6 +1,16 @@
 {
   "routes": [
     {
+      "src": "/services/new-home(/)?",
+      "status": 301,
+      "headers": { "Location": "/services/new-home-builds" }
+    },
+    {
+      "src": "/new-home(/)?",
+      "status": 301,
+      "headers": { "Location": "/services/new-home-builds" }
+    },
+    {
       "src": "/step-into-the-spotlight-win-big-with-nine-casino-today-4226(/)?",
       "status": 410,
       "headers": { "X-Robots-Tag": "noindex" }

@@ -217,7 +217,7 @@ export default function TruckeePage() {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { label: 'Custom Homes', href: '/services/new-home', desc: 'Ground-up custom homes in Truckee and Graeagle. Full design-build. CA License #1093798.' },
+                { label: 'Custom Homes', href: '/services/new-home-builds', desc: 'Ground-up custom homes in Truckee and Graeagle. Full design-build. CA License #1093798.' },
                 { label: 'Snow-Load Decks', href: '/services/decks', desc: 'Decks engineered for Truckee\'s 200+ inch snowfall. Proper drainage and structural calculations.' },
                 { label: 'Structural Repairs', href: '/services/repairs', desc: 'Mountain home structural repairs — dry rot, snow damage, foundation issues at elevation.' },
                 { label: 'Kitchen & Bath', href: '/services/kitchen-bath', desc: 'Full remodels in Truckee vacation and primary homes.' },
@@ -312,7 +312,7 @@ export default function TruckeePage() {
             <div className="flex flex-wrap gap-2">
               <Link href="/blog/deck-safety-warning-signs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">8 Signs Your Deck Is Unsafe →</Link>
               <Link href="/services/decks" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Snow-Load Deck Construction →</Link>
-              <Link href="/services/new-home" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Custom Home Building →</Link>
+              <Link href="/services/new-home-builds" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Custom Home Building →</Link>
               <Link href="/service-areas/lake-tahoe/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Lake Tahoe Service Area →</Link>
               <Link href="/service-areas/northern-california/" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Northern California Services →</Link>
               <Link href="/services/repairs" className="font-mono text-[11px] text-cream/45 hover:text-teal border border-white/[0.08] hover:border-teal/25 px-3 py-1.5 rounded-full transition-all bg-white/[0.02]">Structural Repairs →</Link>

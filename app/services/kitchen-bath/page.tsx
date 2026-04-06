@@ -163,7 +163,7 @@ export default function KitchenBathPage() {
               </SpeakableBlock>
               <div className="hidden md:flex flex-wrap gap-3">
                 <Link href="/additions/" className="btn-ghost text-[12px] py-2 px-4">Home Additions →</Link>
-                <Link href="/new-home/" className="btn-ghost text-[12px] py-2 px-4">Custom Homes →</Link>
+                <Link href="/services/new-home-builds" className="btn-ghost text-[12px] py-2 px-4">Custom Homes →</Link>
               </div>
             </div>
           }
@@ -236,7 +236,7 @@ export default function KitchenBathPage() {
         <RelatedServices items={[
           { label: 'Home Additions', href: '/additions/', desc: 'Add a whole new room' },
           { label: 'ADU Construction', href: '/adus/', desc: 'Full unit build' },
-          { label: 'Custom Homes', href: '/new-home/', desc: 'Ground-up builds' },
+          { label: 'Custom Homes', href: '/services/new-home-builds', desc: 'Ground-up builds' },
           { label: 'Structural Repairs', href: '/repairs/', desc: 'Fix before you remodel' },
         ]} />
 

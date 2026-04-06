@@ -7,7 +7,6 @@ const RESIDENTIAL_LINKS = [
   { label: 'Structural Repairs', href: '/services/repairs', badge: 'Page 1' },
   { label: 'Home Additions', href: '/services/additions', badge: null },
   { label: 'Kitchen & Bath', href: '/services/kitchen-bath', badge: null },
-  { label: 'Custom Home Builds', href: '/services/new-home', badge: null },
   { label: 'New Home Builds', href: '/services/new-home-builds', badge: null },
   { label: 'Decks', href: '/services/decks', badge: null },
   { label: 'Lofts & Condos', href: '/services/lofts-condos', badge: null },

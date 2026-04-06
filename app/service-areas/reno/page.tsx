@@ -124,7 +124,7 @@ const RENO_SERVICES = [
   { label: 'Kitchen & Bath', href: '/kitchen/', note: null, img: IMGS.svc_kitchen, alt: 'Kitchen Remodel Reno NV BRE Builders' },
   { label: 'Home Additions', href: '/additions/', note: null, img: IMGS.lt(4), alt: 'Home Additions Reno NV BRE Builders' },
   { label: 'Deck Builder', href: '/decks/', note: null, img: IMGS.deck_charolette, alt: 'Deck Builder Reno NV BRE Builders' },
-  { label: 'Custom Home Building', href: '/new-home/', note: null, img: IMGS.ripon[3], alt: 'Custom Home Builder Reno NV BRE Builders' },
+  { label: 'Custom Home Building', href: '/services/new-home-builds', note: null, img: IMGS.ripon[3], alt: 'Custom Home Builder Reno NV BRE Builders' },
   { label: 'Commercial', href: '/commercial-services/', note: null, img: IMGS.svc_commercial, alt: 'Commercial Contractor Reno NV BRE Builders' },
 ]
 

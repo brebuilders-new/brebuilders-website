@@ -34,7 +34,7 @@ export default function ADUGuidePage() {
       schema={schema}
       relatedServices={[
         { label: 'ADU Construction', href: '/services/adu' },
-        { label: 'Custom Home Builds', href: '/services/new-home' },
+        { label: 'Custom Home Builds', href: '/services/new-home-builds' },
         { label: 'Home Additions', href: '/services/additions' },
       ]}
       relatedPosts={[

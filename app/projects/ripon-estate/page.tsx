@@ -105,7 +105,7 @@ export default function RiponEstatePage() {
           <blockquote className="border-l-2 border-teal pl-5 mb-8">
             <p className="font-display text-[15px] italic text-cream/60 leading-relaxed">&ldquo;Every project we take on is fully managed by our in-house team — from design concept to final construction. Our licensed professionals handle planning, permitting, and craftsmanship across Nevada and California.&rdquo;</p>
           </blockquote>
-          <Link href="/services/new-home/" className="btn-primary inline-flex">Interested in a Custom Home? →</Link>
+          <Link href="/services/new-home-builds" className="btn-primary inline-flex">Interested in a Custom Home? →</Link>
         </div>
       }
       schema={schema}

@@ -20,13 +20,13 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'New Home Builds Reno NV | Ground-Up Builds',
+  title: 'Custom Home Builder Reno NV | New Home Builds | BRE Builders',
   description:
-    'New home construction in Reno NV and Northern California. 35+ years. Full design-build, permits handled. NV #0085999 · CA #1093798. Free estimate.',
+    'Licensed custom home builder in Reno NV. Ground-up new home construction in Reno, Sparks, Lake Tahoe & Northern California. Design-build, permits handled. NV #0085999 · CA #1093798. Free estimate.',
   openGraph: {
-    title: 'New Home Builds Reno NV | Blue Reef Builders',
+    title: 'Custom Home Builder Reno NV | New Home Construction | BRE Builders',
     images: [{
-      url: `${SITE_URL}/api/og?title=New+Home+Builds+Reno+NV&sub=Ground-Up+Construction+%C2%B7+35%2B+Years+%C2%B7+NV+%230085999&badge=New+Construction`,
+      url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Builds+%C2%B7+35%2B+Years+%C2%B7+NV+%230085999&badge=New+Construction`,
       width: 1200, height: 630,
     }],
   },
@@ -39,9 +39,19 @@ const schema = {
     {
       '@type': 'Service',
       '@id': 'https://brebuilders.com/services/new-home-builds/#service',
-      name: 'New Home Builds Reno NV',
-      alternateName: ['New Home Construction Reno', 'Ground-Up Home Builder Reno NV', 'New Construction Builder Northern Nevada'],
-      description: 'New home construction in Reno NV and Northern California. 35+ years. Full design-build, all permits handled. NV #0085999 · CA #1093798. Free estimate.',
+      name: 'Custom Home Builder Reno NV',
+      alternateName: [
+        'New Home Construction Reno NV',
+        'New Home Builds Reno Nevada',
+        'Ground-Up Home Builder Reno NV',
+        'Custom Home Builder Northern Nevada',
+        'New Construction Homes Reno NV',
+        'Home Builder Reno Nevada',
+        'Custom Home Builder Lake Tahoe',
+        'New Home Builder Sparks NV',
+        'Home Builder Carson City NV',
+      ],
+      description: 'Licensed custom home builder in Reno NV and Northern California. Ground-up new home construction with design-build service. All permits handled. NV #0085999 · CA #1093798.',
       provider: { '@id': 'https://brebuilders.com/#business' },
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
@@ -56,31 +66,14 @@ const schema = {
     {
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much does a new home build cost in Reno NV?',
-          acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free consultations for new home builds. Pricing depends on size, site conditions, finish level, and complexity. Contact us for a detailed estimate.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to build a new home in Reno Nevada?',
-          acceptedAnswer: { '@type': 'Answer', text: 'New home construction in Reno typically takes 10–18 months from contract to occupancy. Permitting with Washoe County or the City of Reno takes 6–12 weeks. Framing through finishes takes another 6–12 months depending on size and complexity.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I need my own land to build a new home with BRE Builders?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes, you need to own the lot before construction begins. BRE Builders can advise on site suitability, utility access, and any geotechnical considerations during the planning phase.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is included in a design-build contract with BRE Builders?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Our design-build contracts include architectural concept development, structural engineering coordination, all permit applications and fees management, full construction from foundation through finishes, and final inspection support.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does BRE Builders build new homes in California?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders holds California Contractor License #1093798 and has completed projects in Northern California including the Ripon Estate. We serve Truckee, Grass Valley, Auburn, and the greater Sacramento region.' },
-        },
+        { '@type': 'Question', name: 'How much does a new home build cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free consultations for new home builds in Reno. Pricing depends on size, site conditions, finish level, and current material costs. We provide detailed line-item estimates after a site consultation. NV License #0085999.' } },
+        { '@type': 'Question', name: 'How long does a new home build take in Reno Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'Plan for 10-18 months total. Washoe County and City of Reno permitting typically takes 6-12 weeks. Framing through move-in takes another 6-12 months depending on size, finishes, and weather. BRE Builders provides a milestone schedule at kickoff.' } },
+        { '@type': 'Question', name: 'Do I need my own land to build a custom home with BRE Builders?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. You need to own the lot before construction begins. BRE Builders assesses your lot for soil conditions, slope, utility access, setback requirements, and HOA restrictions during the consultation phase.' } },
+        { '@type': 'Question', name: 'What does design-build mean with BRE Builders?', acceptedAnswer: { '@type': 'Answer', text: 'One company handles concept through keys. BRE Builders coordinates architectural plans, structural engineering, all permit applications, and full construction under a single contract. One team, one point of contact, one warranty.' } },
+        { '@type': 'Question', name: 'Does BRE Builders build custom homes in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders builds custom homes in Lake Tahoe including TRPA permit compliance and snow-load engineering. We have completed renovation and construction projects at Zephyr Cove and Glenbrook. NV License #0085999.' } },
+        { '@type': 'Question', name: 'Does BRE Builders build new homes in California?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders holds California Contractor License #1093798 and has built in Northern California including the Ripon Estate. We serve Truckee, Grass Valley, Auburn, and the greater Sacramento region.' } },
+        { '@type': 'Question', name: 'What is the difference between a custom home builder and a production builder?', acceptedAnswer: { '@type': 'Answer', text: 'Production builders use fixed floor plans on developer lots. Custom home builders like BRE Builders build to your specifications on your land — your floor plan, your finishes, your timeline. Every BRE Builders home is unique.' } },
+        { '@type': 'Question', name: 'Does BRE Builders build homes in Carson City Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders is licensed in Nevada (#0085999) and serves Reno, Sparks, Carson City, Minden, Gardnerville, Fernley, and the greater Northern Nevada region.' } },
       ],
     },
     {
@@ -96,11 +89,14 @@ const schema = {
 }
 
 const FAQS = [
-  { q: 'How much does a new home build cost in Reno NV?', a: 'BRE Builders provides free consultations for new home builds. Pricing depends on size, site conditions, and finish level. Contact us for a detailed project estimate.' },
+  { q: 'How much does a new home build cost in Reno NV?', a: 'BRE Builders provides free consultations for new home builds in Reno. Pricing depends on size, site conditions, finish level, and current material costs. We provide detailed line-item estimates after a site consultation — no vague ballparks. NV License #0085999.' },
   { q: 'How long does a new home build take in Reno?', a: 'Plan for 10–18 months total. Washoe County and City of Reno permitting typically takes 6–12 weeks. Framing through move-in takes another 6–12 months depending on size, finishes, and weather. BRE Builders provides a milestone schedule at project kickoff.' },
-  { q: 'Do I need my own land to build?', a: 'Yes. You need to own the lot before construction begins. BRE Builders will assess your lot for soil conditions, slope, utility access, setback requirements, and HOA restrictions during the consultation phase — before you commit to anything.' },
-  { q: 'What does design-build mean with BRE?', a: 'One company handles concept through keys. BRE Builders coordinates architectural plans, structural engineering, all permit applications, and full construction under a single contract. You work with one team, one point of contact, and one warranty.' },
-  { q: 'Does BRE Builders build in California?', a: 'Yes. We hold California Contractor License #1093798 and have built in Northern California including Ripon, Truckee, and the Sacramento foothills. We handle all California permit processes.' },
+  { q: 'Do I need my own land to build a custom home with BRE Builders?', a: 'Yes. You need to own the lot before construction begins. BRE Builders will assess your lot for soil conditions, slope, utility access, setback requirements, and HOA restrictions during the consultation phase — before you commit to anything.' },
+  { q: 'What does design-build mean with BRE Builders?', a: 'One company handles concept through keys. BRE Builders coordinates architectural plans, structural engineering, all permit applications, and full construction under a single contract. You work with one team, one point of contact, and one warranty.' },
+  { q: 'Does BRE Builders build custom homes in Lake Tahoe?', a: 'Yes. BRE Builders builds custom homes in Lake Tahoe and the Tahoe Basin, including TRPA permit compliance and snow-load engineering requirements. We have completed renovation and construction projects at Zephyr Cove and Glenbrook. NV License #0085999.' },
+  { q: 'Does BRE Builders build new homes in California?', a: 'Yes. We hold California Contractor License #1093798 and have built in Northern California including the Ripon Estate — a ground-up Mediterranean custom home. We serve Truckee, Grass Valley, Auburn, and the greater Sacramento region.' },
+  { q: 'What is the difference between a custom home builder and a production builder?', a: 'Production builders build from a fixed set of floor plans on developer-owned lots with limited customization. Custom home builders like BRE Builders build to your specifications on your land — your floor plan, your finishes, your timeline. Every BRE Builders home is one-of-a-kind.' },
+  { q: 'Can BRE Builders build in Carson City and Northern Nevada?', a: 'Yes. BRE Builders is licensed in Nevada (#0085999) and serves Reno, Sparks, Carson City, Minden, Gardnerville, Fernley, and the greater Northern Nevada region. We handle all applicable city and county permit requirements.' },
 ]
 
 const BUILD_STAGES = [
@@ -123,10 +119,10 @@ export default function NewHomeBuildsPage() {
         <ServiceHeroSection hero={{
           bgDesktop: IMGS.ripon[3],
           bgMobile:  IMGS.svc_newbuild,
-          eyebrow:   'New Home Builds · Reno, NV & Northern California',
-          h1Lines:   ['New Home Builds'],
+          eyebrow:   'Custom Home Builder · Reno, NV · Sparks · Lake Tahoe · Northern California',
+          h1Lines:   ['Custom Home', 'Builds Reno NV'],
           h1Ghost:   'Built to Last.',
-          lead:      'Ground-up new home construction by a licensed builder with 35 years in Northern Nevada and California. One team from design to keys.',
+          lead:      'Licensed custom home builder with 35 years in Northern Nevada and California. Ground-up new construction — one team from design to keys.',
           badges:    ['NV Lic #0085999', 'CA Lic #1093798', '35+ Years', 'Design-Build'],
           ctaPrimaryLabel:   'Get a Free Estimate',
           ctaPrimaryHref:    '/contact?service=new-home',
@@ -340,15 +336,24 @@ export default function NewHomeBuildsPage() {
               <SectionLabel text="New Home Construction — Northern Nevada" />
               <SectionHeading line1="Building New in" line2italic="Reno Requires Experience." size="md" className="mb-6" />
               <SpeakableBlock className="speakable-faq mb-8">
+                <h3 className="font-display text-[17px] text-teal mb-2">What does a custom home builder in Reno NV do?</h3>
                 <p>
-                  New home construction in the Reno-Sparks metro requires navigating Washoe County and City of Reno
-                  permitting, expansive clay soil conditions, high-altitude building requirements near Lake Tahoe,
-                  and Nevada energy code compliance. BRE Builders has managed all of these consistently since 1989.
+                  A custom home builder manages every phase of new home construction on your lot — site assessment,
+                  architectural coordination, engineering, permit applications, foundation, framing, MEP rough-in,
+                  finishes, and final inspection. BRE Builders handles all of this under one licensed contract in
+                  Reno, Sparks, Carson City, Lake Tahoe, and Northern California.
                 </p>
+                <h3 className="font-display text-[17px] text-teal mb-2 mt-4">How do I find a licensed home builder in Reno Nevada?</h3>
                 <p>
-                  We build in Reno, Sparks, Carson City, Lake Tahoe, Truckee, and Northern California under a
-                  single licensed team. Whether you have a finished lot, architectural plans, or just a vision,
-                  we can take your project from the first meeting to move-in day.
+                  Verify Nevada contractor license status at the Nevada State Contractors Board (nvcontractorsboard.com).
+                  BRE Builders holds Nevada License #0085999 — active since 1989, with a BuildZoom score of 108
+                  ranking in the top 5% of 21,879 Nevada licensed contractors.
+                </p>
+                <h3 className="font-display text-[17px] text-teal mb-2 mt-4">Does BRE Builders build new homes in Reno, Sparks, and Carson City?</h3>
+                <p>
+                  Yes. BRE Builders serves the full Northern Nevada region including Reno, Sparks, Carson City,
+                  Minden, Gardnerville, Fernley, and Lake Tahoe. We hold Nevada License #0085999 and
+                  California License #1093798 for projects across the Nevada-California border.
                 </p>
               </SpeakableBlock>
               <div className="hidden md:flex flex-wrap gap-3">

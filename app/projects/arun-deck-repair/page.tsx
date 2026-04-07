@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Arun Hillside Deck Repair — BRE Builders Portfolio',
-  url: 'https://brebuilders.com/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/',
-  image: IMGS.repairs_arun,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Arun Hillside Deck Repair — BRE Builders Portfolio',
+      description: 'Precision hillside deck repair at Lake Tahoe by BRE Builders. Reinforced support beams, elevated framing, structural restoration on steep terrain. NV #0085999.',
+      url: 'https://brebuilders.com/projects/arun-deck-repair/',
+      image: IMGS.repairs_arun,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders repair decks in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders repairs hillside and elevated decks throughout Lake Tahoe and Northern Nevada. We handle structural beam reinforcement, railing replacement, deck board replacement, and full structural rehabilitation. All work permitted under NV #0085999.' } },
+        { '@type': 'Question', name: 'What makes hillside deck repair in Lake Tahoe different?', acceptedAnswer: { '@type': 'Answer', text: 'Hillside decks at Lake Tahoe face snow loads, freeze-thaw cycling, and steep terrain that accelerate structural wear. BRE Builders assesses load capacity, connection hardware, and ledger attachment before recommending repairs.' } },
+        { '@type': 'Question', name: 'How much does deck repair cost in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Deck repair costs at Lake Tahoe depend on extent of damage, deck size, and structural requirements. BRE Builders provides free on-site estimates. Contact us to schedule a free inspection.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Arun Deck Repair', item: 'https://brebuilders.com/projects/arun-deck-repair/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function ArunDeckRepairPage() {
@@ -68,6 +90,16 @@ export default function ArunDeckRepairPage() {
             <p>Hillside decks at Lake Tahoe face amplified structural stress — the combination of snow loads, elevated framing exposure, and the compressive forces of hillside terrain makes regular structural inspection and reinforcement essential.</p>
             <p>This repair reinforced the support beams and elevated framing system, bringing the deck up to current Lake Tahoe structural requirements and restoring load-bearing integrity throughout the structure.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders repair hillside decks in Lake Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders handles structural beam reinforcement, railing replacement, and full deck rehabilitation on steep terrain at Lake Tahoe. All work permitted under NV #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What makes hillside deck repair different at Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Snow loads, freeze-thaw cycling, and steep terrain accelerate structural wear. BRE Builders assesses load capacity and connection hardware before recommending any repair approach.</p>
+            </div>
           </div>
         </div>
       }

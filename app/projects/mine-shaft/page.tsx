@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Mine Shaft Framing & Shed Construction — BRE Builders Portfolio',
-  url: 'https://brebuilders.com/portfolio/mine-shaft-framing-shed-construction-reno-nv/',
-  image: IMGS.repairs_mine,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Mine Shaft Framing & Shed Construction — BRE Builders Portfolio',
+      description: 'Custom framing and shed construction over a mine shaft in Reno NV by BRE Builders. Precision structural work, safety compliance. NV #0085999.',
+      url: 'https://brebuilders.com/projects/mine-shaft/',
+      image: IMGS.repairs_mine,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders do specialty framing and custom construction in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders handles specialty construction projects in Reno including this mine shaft framing project. We manage complex structural requirements, safety compliance, and permitting for non-standard construction projects. NV License #0085999.' } },
+        { '@type': 'Question', name: 'What is involved in constructing over a mine shaft?', acceptedAnswer: { '@type': 'Answer', text: 'Building over a mine shaft requires structural assessment of the existing opening, engineered framing to span and cap the shaft safely, and full building department permitting. BRE Builders handled all structural and permit requirements for this Reno project.' } },
+        { '@type': 'Question', name: 'Does BRE Builders build custom sheds and outbuildings in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders constructs custom sheds, outbuildings, and accessory structures in Reno and Northern Nevada. All work is permitted and inspected. NV License #0085999.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Mine Shaft Framing', item: 'https://brebuilders.com/projects/mine-shaft/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function MineShaftPage() {
@@ -65,6 +87,16 @@ export default function MineShaftPage() {
           <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55">
             <p>This custom framing project involved constructing structural walls with custom openings — work that requires precise structural engineering and code-compliant execution. BRE Builders handled design coordination, permitting, and full construction in-house.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders do specialty framing in Reno?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders handles complex structural requirements, safety compliance, and permitting for non-standard construction projects across Reno. NV License #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE build custom sheds and outbuildings in Reno?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. Custom sheds, outbuildings, and accessory structures throughout Reno and Northern Nevada — all permitted and inspected.</p>
+            </div>
           </div>
         </div>
       }

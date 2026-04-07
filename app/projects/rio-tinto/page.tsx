@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Rio Tinto Home Renovation — BRE Builders Portfolio',
-  url: 'https://brebuilders.com/portfolio/rio-tinto-home-renovation-project/',
-  image: IMGS.rio_tinto,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Rio Tinto Home Renovation — BRE Builders Portfolio',
+      description: 'Full-scale residential renovation in Rio Tinto Reno NV by BRE Builders. Exterior housewrap, siding, windows, drywall, custom bathroom tiling. NV #0085999.',
+      url: 'https://brebuilders.com/projects/rio-tinto/',
+      image: IMGS.rio_tinto,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders do full home renovations in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders completes full-scale residential renovations in Reno including this Rio Tinto project — exterior housewrap, siding, windows, interior drywall, and custom bathroom tiling. All work permitted under NV #0085999.' } },
+        { '@type': 'Question', name: 'What does a full home renovation include in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'A full home renovation with BRE Builders can include exterior siding replacement, window installation, structural repairs, interior drywall finishing, kitchen and bathroom remodeling, flooring, and finish work throughout. BRE Builders manages permits, trades, and construction under a single contract.' } },
+        { '@type': 'Question', name: 'How much does a home renovation cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Home renovation costs in Reno vary significantly based on scope, size, and finish level. BRE Builders provides free on-site estimates with detailed line-item pricing. Contact us to discuss your renovation project. NV #0085999.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Rio Tinto Renovation', item: 'https://brebuilders.com/projects/rio-tinto/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function RioTintoPage() {
@@ -65,6 +87,16 @@ export default function RioTintoPage() {
           <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55">
             <p>This Rio Tinto residential renovation showcases BRE Builders&apos; interior renovation work — drywall preparation, framing, and finish work executed to permit-compliant standards throughout the home.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders do full home renovations in Reno NV?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. This Rio Tinto project included exterior housewrap, siding, windows, interior drywall finishing, and custom bathroom tiling. All work permitted under NV #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What does a full home renovation include with BRE Builders?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Exterior siding, windows, structural repairs, drywall, kitchen and bath remodeling, flooring, and finishes — all under one contract with one team.</p>
+            </div>
           </div>
         </div>
       }

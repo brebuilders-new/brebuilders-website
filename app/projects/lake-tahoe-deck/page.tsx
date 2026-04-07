@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Lake Tahoe Deck Balcony Structural Repair — BRE Builders Portfolio',
-  url: 'https://brebuilders.com/portfolio/lake-tahoe-deck-balcony-structural-repair/',
-  image: IMGS.repairs_deck_lt,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Lake Tahoe Deck Balcony Structural Repair — BRE Builders Portfolio',
+      description: 'Steel angle bracket structural repair of deck balcony at Lake Tahoe by BRE Builders. CMU wall anchoring, deck reinforcement. NV #0085999.',
+      url: 'https://brebuilders.com/projects/lake-tahoe-deck/',
+      image: IMGS.repairs_deck_lt,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders repair balcony decks in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders repairs balcony and deck structures throughout Lake Tahoe. This project involved steel angle bracket anchoring to a CMU wall, complete structural reinforcement, and deck rehabilitation. All work permitted under NV #0085999.' } },
+        { '@type': 'Question', name: 'How do you repair a deck attached to a CMU wall at Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders uses steel angle bracket systems anchored into CMU (concrete masonry unit) walls with rated hardware. Each anchor point is engineered for the snow loads and seismic conditions specific to the Lake Tahoe Basin.' } },
+        { '@type': 'Question', name: 'How much does balcony structural repair cost in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Balcony and deck structural repair costs at Lake Tahoe depend on extent of damage and structural requirements. BRE Builders provides free on-site inspections with written estimates. NV #0085999.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Lake Tahoe Deck Repair', item: 'https://brebuilders.com/projects/lake-tahoe-deck/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function LakeTahoeDeckPage() {
@@ -68,6 +90,16 @@ export default function LakeTahoeDeckPage() {
             <p>Lake Tahoe decks face some of the most demanding structural requirements in Northern Nevada — snow loads can reach 200 lbs per square foot. This deck and balcony repair project reinforced the connection between the wood deck structure and the concrete masonry wall using a custom steel angle bracket system.</p>
             <p>The repair addressed structural movement that develops over time at Lake Tahoe properties due to freeze-thaw cycles, snow load, and UV degradation. BRE Builders assesses the full structural connection before recommending repairs — not just the surface symptoms.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders repair balcony decks in Lake Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. This project involved steel angle bracket anchoring to a CMU wall with full structural reinforcement. All work permitted under NV #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">How is deck repair different at Lake Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Tahoe Basin decks require hardware rated for snow loads and seismic conditions specific to the region. BRE Builders engineers each repair to those standards.</p>
+            </div>
           </div>
         </div>
       }

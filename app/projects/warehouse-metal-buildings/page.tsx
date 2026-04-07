@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Warehouse & Metal Buildings Portfolio — BRE Builders',
-  url: 'https://brebuilders.com/projects/warehouse-metal-buildings/',
-  image: IMGS.svc_warehouse,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Warehouse & Metal Buildings Portfolio — BRE Builders',
+      description: 'Warehouse and metal building construction by BRE Builders in Reno NV. Custom, scalable, code-compliant industrial structures. NV #0085999 · CA #1093798.',
+      url: 'https://brebuilders.com/projects/warehouse-metal-buildings/',
+      image: IMGS.svc_warehouse,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders build warehouses in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders constructs custom warehouse and metal buildings in Reno and Northern Nevada. Scalable, code-compliant structures for industrial, storage, and commercial use. Licensed NV #0085999 and CA #1093798.' } },
+        { '@type': 'Question', name: 'What types of metal buildings does BRE Builders construct?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders builds pre-engineered metal buildings, custom steel-frame structures, hybrid wood-and-metal buildings, and commercial warehouse facilities. We handle site prep, foundation, erection, and finish work under a single contract.' } },
+        { '@type': 'Question', name: 'How much does warehouse construction cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Warehouse and metal building costs depend on size, site conditions, and specification level. BRE Builders provides free consultations and detailed written estimates for warehouse projects in Reno and Northern Nevada. NV #0085999.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Warehouse & Metal Buildings', item: 'https://brebuilders.com/projects/warehouse-metal-buildings/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function WarehouseMetalBuildingsPage() {
@@ -66,6 +88,16 @@ export default function WarehouseMetalBuildingsPage() {
             <p>BRE Builders has delivered commercial warehouse and metal building projects across Northern Nevada for over 35 years. From pre-engineered steel kits to full ground-up concrete and steel construction, we handle the complete scope.</p>
             <p>We are licensed in both Nevada and California, with deep experience in commercial permitting, site prep, utility coordination, and tenant improvements.</p>
             <p>Free estimates. Licensed NV #0085999, CA #1093798.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders build warehouses in Reno NV?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. Custom warehouse and metal buildings in Reno and Northern Nevada — scalable, code-compliant, for industrial and commercial use. NV #0085999 · CA #1093798.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What types of metal buildings does BRE build?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Pre-engineered metal buildings, custom steel-frame structures, hybrid wood-and-metal, and commercial warehouse facilities — site prep through finish under one contract.</p>
+            </div>
           </div>
         </div>
       }

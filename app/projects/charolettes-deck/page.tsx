@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: "Charolette's Deck — BRE Builders Portfolio",
-  url: 'https://brebuilders.com/portfolio/charolettes-deck/',
-  image: IMGS.deck_charolette,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: "Charolette's Deck — BRE Builders Portfolio",
+      description: 'Custom deck build in Sparks NV by BRE Builders. Smooth sealed surface finish, custom design. Licensed NV #0085999.',
+      url: 'https://brebuilders.com/projects/charolettes-deck/',
+      image: IMGS.deck_charolette,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders build custom decks in Sparks NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders builds custom decks in Sparks, Reno, and throughout Northern Nevada. We handle design, permitting, and construction — from simple ground-level decks to elevated multi-level structures. NV License #0085999.' } },
+        { '@type': 'Question', name: 'What deck materials does BRE Builders use in Reno and Sparks?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders uses pressure-treated lumber, composite decking (including Trex), and sealed concrete surfaces depending on project requirements and client preference. All materials are selected for Northern Nevada climate durability.' } },
+        { '@type': 'Question', name: 'How much does a custom deck cost in Reno or Sparks NV?', acceptedAnswer: { '@type': 'Answer', text: 'Custom deck costs in Reno and Sparks depend on size, materials, and complexity. BRE Builders provides free on-site estimates. Contact us to discuss your deck project.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: "Charolette's Deck", item: 'https://brebuilders.com/projects/charolettes-deck/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function CharoletteDeckPage() {
@@ -67,6 +89,16 @@ export default function CharoletteDeckPage() {
           <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55">
             <p>This custom deck build in Reno delivered a smooth, sealed surface finish — designed for durability through Nevada&apos;s freeze-thaw cycles and UV exposure. BRE Builders handled structural design, permitting, and complete construction in-house.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders build custom decks in Sparks NV?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders builds custom decks in Sparks, Reno, and Northern Nevada — design, permits, and construction under one contract. NV License #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What deck materials does BRE Builders use?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Pressure-treated lumber, composite decking, and sealed concrete surfaces — all selected for Northern Nevada climate durability.</p>
+            </div>
           </div>
         </div>
       }

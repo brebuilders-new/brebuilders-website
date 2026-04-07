@@ -21,6 +21,9 @@ const FAQS = [
   { q: 'What commercial services does BRE Builders provide?', a: 'Tenant improvements, office buildouts, retail construction, warehouse builds, metal buildings, and commercial concrete. Licensed NV #0085999 · CA #1093798.' },
   { q: 'Does BRE Builders do tenant improvements in Reno NV?', a: 'Yes. We specialize in commercial tenant improvements — office suites, retail spaces, medical offices, and multi-tenant buildouts. We handle permits, framing, MEP coordination, and finish work.' },
   { q: 'Do you build warehouses and metal buildings in Nevada?', a: 'Yes. BRE Builders builds custom warehouse and metal buildings across Northern Nevada. Scalable, code-compliant structures for industrial, storage, and commercial use.' },
+  { q: 'Are you licensed for commercial work in California?', a: 'Yes. BRE Builders holds California Contractor License #1093798 and has completed commercial projects in Northern California. We handle all California permit requirements.' },
+  { q: 'How long does a commercial tenant improvement take?', a: 'Timelines vary by scope. A basic office suite remodel typically takes 4–8 weeks. A full buildout from shell condition runs 8–20 weeks depending on permit timelines and trade coordination. BRE Builders provides a project schedule at kickoff.' },
+  { q: 'Do you handle permits for commercial projects?', a: 'Yes. BRE Builders manages all commercial permit applications, trade inspections, and final sign-offs. We work with Washoe County, the City of Reno, and California jurisdictions.' },
 ]
 
 const schema = {
@@ -28,11 +31,14 @@ const schema = {
   '@graph': [
     {
       '@type': 'Service',
+      '@id': 'https://brebuilders.com/services/commercial/#service',
       name: 'Commercial Construction Reno NV',
-      description: 'BRE Builders provides commercial construction and tenant improvements in Reno, NV. Offices, retail, warehouses, metal buildings. Licensed NV #0085999.',
+      description: 'BRE Builders provides commercial construction and tenant improvements in Reno, NV. Offices, retail, warehouses, metal buildings. Licensed NV #0085999 · CA #1093798.',
       provider: { '@id': 'https://brebuilders.com/#business' },
-      areaServed: { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+      areaServed: [
+        { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'Place', name: 'Northern California' },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -42,6 +48,15 @@ const schema = {
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
     },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://brebuilders.com/services/' },
+        { '@type': 'ListItem', position: 3, name: 'Commercial Construction', item: 'https://brebuilders.com/services/commercial/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 
@@ -155,13 +170,23 @@ export default function CommercialPage() {
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-16">
               <div>
-                <SL text="Commercial Contractor Reno" />
+                <SL text="Commercial Construction in Reno NV" />
                 <h2 className="font-display text-[clamp(26px,3.5vw,46px)] font-light leading-[1.1] tracking-tight mb-6">
-                  Licensed.<br /><span className="italic text-teal">Experienced. Reliable.</span>
+                  What to Know Before<br /><span className="italic text-teal">Your Commercial Build.</span>
                 </h2>
-                <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55">
-                  <p>BRE Builders has built and improved commercial spaces in Reno since 1989. From small office suites to full warehouse builds, we manage the complete project — permits, trades, finishes.</p>
-                  <p>Licensed in Nevada (#0085999) and California (#1093798), we're qualified to work on commercial projects across the Nevada-California border. Free estimates on all commercial projects.</p>
+                <div className="speakable-faq space-y-4 text-[14px] leading-relaxed text-cream/55">
+                  <div>
+                    <h3 className="font-display text-[15px] text-teal mb-2">What does a tenant improvement involve in Reno NV?</h3>
+                    <p>A tenant improvement (TI) is any construction done to customize a commercial lease space for a specific tenant. BRE Builders handles the full scope — framing, MEP coordination, finishes, signage blocking, ADA compliance, and all Washoe County or City of Reno permits. Licensed NV #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[15px] text-teal mb-2">How long does a commercial buildout take in Reno?</h3>
+                    <p>A basic office suite remodel typically takes 4–8 weeks. A full buildout from shell condition runs 8–20 weeks depending on permit timelines and trade coordination. BRE Builders provides a detailed project schedule at kickoff.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[15px] text-teal mb-2">Does BRE Builders do commercial work in California?</h3>
+                    <p>Yes. BRE Builders holds California Contractor License #1093798 and has completed commercial projects in Northern California. We handle all California permit requirements including CARB and local jurisdiction requirements.</p>
+                  </div>
                 </div>
               </div>
               <div>
@@ -182,6 +207,24 @@ export default function CommercialPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact?service=commercial" className="btn-primary px-8 py-4 w-full sm:w-auto justify-center">Get a Free Estimate →</Link>
               <a href={SITE.phoneHref} className="btn-ghost px-8 py-4 w-full sm:w-auto justify-center font-mono">{SITE.phone}</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-panel">
+          <div className="container">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { label: 'Concrete Work', href: '/services/concrete/', desc: 'Slabs, foundations, site concrete' },
+                { label: 'Warehouse & Metal', href: '/services/warehouse/', desc: 'Industrial, storage, commercial' },
+                { label: 'Office Construction', href: '/services/office/', desc: 'Open plans, private suites' },
+                { label: 'Retail Build-Out', href: '/services/retail/', desc: 'Storefront, fixtures, permits' },
+              ].map(s => (
+                <Link key={s.label} href={s.href} className="group block p-4 bg-deep rounded-xl border border-white/[0.055] hover:border-teal/30 transition-all">
+                  <div className="font-display text-[15px] text-cream mb-1 group-hover:text-teal transition-colors">{s.label}</div>
+                  <div className="font-mono text-[11px] text-cream/35">{s.desc}</div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

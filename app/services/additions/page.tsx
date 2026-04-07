@@ -159,11 +159,40 @@ export default function AdditionsPage() {
             </div>
           </div>
         </section>
+        <ServiceFAQSection
+          faqs={FAQS}
+          label="Home Addition Questions"
+          aeoContent={
+            <div>
+              <SectionLabel text="Home Additions in Reno NV" />
+              <SectionHeading line1="What Reno Homeowners" line2italic="Ask Before Adding." size="md" className="mb-6" />
+              <SpeakableBlock className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                <div>
+                  <h3 className="font-display text-[16px] text-teal mb-2">Is it cheaper to add on or move in Reno?</h3>
+                  <p>In most cases, adding on costs significantly less than moving. Between agent commissions, closing costs, and moving expenses, relocating in Reno typically costs 8–10% of home value before you even start. A well-designed addition keeps your mortgage, your neighborhood, and your equity working for you.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-[16px] text-teal mb-2">How long does a home addition take in Reno?</h3>
+                  <p>Permitting with Washoe County or the City of Reno takes 4–8 weeks. Construction runs 8–20 weeks depending on size and complexity. Total timeline is typically 4–7 months from contract to completion. BRE Builders provides a milestone schedule at project kickoff.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-[16px] text-teal mb-2">Do I need a permit for a home addition in Reno NV?</h3>
+                  <p>Yes. All structural additions require permits from Washoe County or the City of Reno. BRE Builders handles all permitting, inspections, and final sign-off as part of the project scope — holding Nevada License #0085999.</p>
+                </div>
+              </SpeakableBlock>
+            </div>
+          }
+          internalLinks={[
+            { label: 'ADU Construction', href: '/services/adu/' },
+            { label: 'Custom Home Builds', href: '/services/new-home-builds/' },
+            { label: 'Structural Repairs', href: '/services/repairs/' },
+          ]}
+        />
         <RelatedServices items={[
-          { label: 'ADU Construction', href: '/adus/', desc: 'Separate living unit' },
-          { label: 'Kitchen & Bath', href: '/kitchen/', desc: 'Interior upgrade' },
+          { label: 'ADU Construction', href: '/services/adu/', desc: 'Separate living unit' },
+          { label: 'Kitchen & Bath', href: '/services/kitchen-bath/', desc: 'Interior upgrade' },
           { label: 'Custom Homes', href: '/services/new-home-builds', desc: 'Ground-up builds' },
-          { label: 'Structural Repairs', href: '/repairs/', desc: 'Fix before you add' },
+          { label: 'Structural Repairs', href: '/services/repairs/', desc: 'Fix before you add' },
         ]} />
 
         <MobileCTABox

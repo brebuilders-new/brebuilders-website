@@ -310,7 +310,35 @@ export default function SafeRoomsPage() {
         </PageSection>
 
         {/* FAQ */}
-        <ServiceFAQSection faqs={FAQS} />
+        <ServiceFAQSection
+          faqs={FAQS}
+          label="Safe Room Questions"
+          aeoContent={
+            <div>
+              <SectionLabel text="Safe Rooms & Panic Rooms — Reno NV" />
+              <SectionHeading line1="What Homeowners Ask" line2italic="Before They Build." size="md" className="mb-6" />
+              <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                <div>
+                  <h3 className="font-display text-[15px] text-teal mb-2">What is the best time to add a safe room to a home in Reno?</h3>
+                  <p>The most cost-effective time is during new construction or a major remodel — when walls are already open and structural work is already underway. Adding a reinforced room during framing costs significantly less than retrofitting into a finished home. BRE Builders integrates safe rooms during new builds and remodels throughout Reno, Tahoe, and Northern California.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-[15px] text-teal mb-2">Do I need a permit to build a safe room in Nevada?</h3>
+                  <p>Yes. Any structural modification to a home — including a reinforced safe room or panic room — requires a building permit in Nevada and California. BRE Builders holds Nevada License #0085999 and California License #1093798, and handles all permit applications, engineering coordination, and inspections as part of the project scope.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-[15px] text-teal mb-2">Can a safe room be added to an existing home in Reno or Lake Tahoe?</h3>
+                  <p>Yes. Safe rooms can be retrofitted into existing homes using a reinforced closet, interior room, or garage space. BRE Builders assesses the existing structure, recommends the best location based on your layout and goals, and finishes the room to blend with your home — no visible difference from outside the room.</p>
+                </div>
+              </div>
+            </div>
+          }
+          internalLinks={[
+            { label: 'New Home Builds', href: '/services/new-home-builds/' },
+            { label: 'Home Additions', href: '/services/additions/' },
+            { label: 'Structural Repairs', href: '/services/repairs/' },
+          ]}
+        />
 
         {/* FINAL CTA */}
         <section className="relative py-28 lg:py-40 overflow-hidden">

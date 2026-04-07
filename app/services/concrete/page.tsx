@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import ServiceTemplate, {
-  SectionLabel, SectionHeading, PageSection, MobileCTABox,
+  SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
 } from '@/components/templates/ServiceTemplate'
 import { SITE } from '@/lib/site-data'
@@ -142,7 +142,35 @@ export default function ConcretePage() {
             </div>
           </PageSection>
 
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Concrete Work Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Concrete Work in Reno NV" />
+                <SectionHeading line1="What to Know About" line2italic="Concrete in Reno." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">How does Reno's climate affect concrete work?</h3>
+                    <p>Reno's freeze-thaw cycles, high UV exposure, and expansive clay soils require specific concrete mix designs, proper curing procedures, and strategic expansion joint placement. Concrete poured without accounting for these conditions will crack prematurely. BRE Builders has worked in these conditions since 1989 — NV License #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders pour foundations for ADUs and additions?</h3>
+                    <p>Yes. BRE Builders pours foundations for ADUs, home additions, garage slabs, and new construction. We coordinate with structural engineers for engineered foundation specifications and manage the full permitting process through Washoe County and the City of Reno.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Can you repair existing concrete slabs in Reno?</h3>
+                    <p>Yes. BRE Builders repairs cracked slabs, settled sections, spalled surfaces, and deteriorated expansion joints — from minor crack filling through full slab replacement. We assess the cause of failure before recommending a repair approach.</p>
+                  </div>
+                </div>
+              </div>
+            }
+            internalLinks={[
+              { label: 'Home Additions', href: '/services/additions/' },
+              { label: 'ADU Construction', href: '/services/adu/' },
+              { label: 'Commercial Construction', href: '/services/commercial/' },
+            ]}
+          />
           <DesktopCTASection
             bgImage={IMGS.concrete_slab}
             bgAlt="BRE Builders Reno NV"

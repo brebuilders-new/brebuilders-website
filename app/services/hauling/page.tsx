@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import ServiceTemplate, {
-  SectionLabel, SectionHeading, PageSection, MobileCTABox,
+  SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
 } from '@/components/templates/ServiceTemplate'
 import { SITE } from '@/lib/site-data'
@@ -144,7 +144,35 @@ export default function HaulingPage() {
             </div>
           </PageSection>
 
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Hauling & Removal Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Hauling & Removal in Reno NV" />
+                <SectionHeading line1="What Reno Homeowners" line2italic="Ask About Hauling." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders do same-day hauling in Reno?</h3>
+                    <p>Same-day hauling is available depending on schedule and volume. Contact us to check availability — we typically respond within 24 hours for most hauling jobs in Reno, Sparks, and Northern Nevada. Licensed NV #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">What types of debris does BRE Builders haul?</h3>
+                    <p>BRE Builders hauls construction debris, demolition waste, lumber, concrete chunks, drywall, roofing material, yard waste, old appliances, and general junk. We do not haul hazardous materials, chemicals, or biohazardous waste.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Do you do demolition as well as hauling?</h3>
+                    <p>Yes. BRE Builders handles light demolition — interior demo, deck removal, shed demolition, wall removal — and then hauls all debris. Ask about combined demolition and hauling quotes when requesting an estimate.</p>
+                  </div>
+                </div>
+              </div>
+            }
+            internalLinks={[
+              { label: 'Structural Repairs', href: '/services/repairs/' },
+              { label: 'Concrete Work', href: '/services/concrete/' },
+              { label: 'Commercial Construction', href: '/services/commercial/' },
+            ]}
+          />
           <DesktopCTASection
             bgImage={IMGS.svc_hauling}
             bgAlt="BRE Builders Reno NV"

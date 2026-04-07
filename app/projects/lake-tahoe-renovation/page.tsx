@@ -21,11 +21,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
-  description: 'Complete interior and exterior renovation of Zephyr Cove, Lake Tahoe, NV by BRE Builders.',
-  url: 'https://brebuilders.com/portfolio/lake-tahoe-interior-renovation-project-bre-builders/',
-  image: `${BASE}/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp`,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
+      description: 'Complete interior and exterior renovation of Zephyr Cove, Lake Tahoe, NV by BRE Builders. Structural upgrades, deck, kitchen, bath, and finish work. NV #0085999.',
+      url: 'https://brebuilders.com/projects/lake-tahoe-renovation/',
+      image: `${BASE}/01-695-Lakeview-Blvd-Zephyr-Cove-NV-89448-1-of-16-1024x684.webp`,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders do full home renovations in Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders has completed full home renovations in Lake Tahoe including this Zephyr Cove project. We handle structural upgrades, interior remodeling, deck work, kitchen and bath renovation, and exterior restoration. All work is permitted under Nevada License #0085999.' } },
+        { '@type': 'Question', name: 'Can BRE Builders handle Tahoe Basin TRPA permit requirements?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders is experienced with Tahoe Basin TRPA permit requirements — among the most complex residential permitting jurisdictions in the region. We manage all permit applications, agency submissions, and inspections for Lake Tahoe projects.' } },
+        { '@type': 'Question', name: 'What does a full home renovation in Lake Tahoe cost?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free on-site consultations for Lake Tahoe renovation projects. Pricing depends on scope, structural requirements, finish level, and TRPA compliance factors. Contact us for a project-specific estimate.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Lake Tahoe Renovation', item: 'https://brebuilders.com/projects/lake-tahoe-renovation/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 const PHOTOS = [
@@ -98,6 +119,16 @@ export default function LakeTahoeProjectPage() {
             <p>This full-home renovation showcases coordinated kitchen and bath remodeling, interior structural improvements, upgraded living spaces, and exterior deck work — delivered with precision planning and code-compliant construction.</p>
             <p>The project included custom interior staircase construction, loft renovation with skylights, bathroom installations, exterior deck railing and walkway upgrades, and full interior finish work throughout the multi-level Zephyr Cove property.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed residential project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-4 mb-8">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders renovate homes in Lake Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders has completed full home renovations in Lake Tahoe including this Zephyr Cove project — structural upgrades, deck work, kitchen and bath, and complete interior finish work. All work permitted under NV #0085999 with TRPA compliance handled by our team.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Can BRE handle TRPA permit requirements?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. TRPA permitting is among the most complex residential permitting in the region. BRE Builders manages all permit applications, agency submissions, and inspections for Tahoe Basin projects.</p>
+            </div>
           </div>
           <div className="bg-panel rounded-xl p-5 border border-teal/15">
             <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal mb-3">Project Video</p>

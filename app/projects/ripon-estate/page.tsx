@@ -20,11 +20,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Ripon CA Luxury Estate — BRE Builders Portfolio',
-  description: 'Ground-up luxury custom home in Ripon, California by BRE Builders. CA License #1093798.',
-  url: 'https://brebuilders.com/portfolio/ripon-california-estate-project/',
-  image: IMGS.ripon[3],
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Ripon CA Luxury Estate — BRE Builders Portfolio',
+      description: 'Ground-up luxury custom home in Ripon, California by BRE Builders. Classical European architecture, in-house design-build. CA License #1093798.',
+      url: 'https://brebuilders.com/projects/ripon-estate/',
+      image: IMGS.ripon[3],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders build custom homes in California?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders holds California Contractor License #1093798 and has built custom homes in Northern California including this luxury estate in Ripon. We handle architectural coordination, engineering, permits, and full construction under one contract.' } },
+        { '@type': 'Question', name: 'What does a ground-up custom home cost in Northern California?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free consultations for custom home projects in California. Pricing depends on size, site conditions, finish level, and complexity. Contact us for a project-specific estimate — no vague ballparks.' } },
+        { '@type': 'Question', name: 'What is design-build custom home construction?', acceptedAnswer: { '@type': 'Answer', text: 'Design-build means one company manages both the design and construction under a single contract. BRE Builders coordinates architectural plans, structural engineering, all permit applications, and full construction from foundation through finishes — one team, one contract, one warranty.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Ripon CA Luxury Estate', item: 'https://brebuilders.com/projects/ripon-estate/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 const PHOTOS = [
@@ -101,6 +122,16 @@ export default function RiponEstatePage() {
           <div className="speakable-summary space-y-4 text-[15px] leading-relaxed text-cream/55 mb-6">
             <p>At Blue Reef Builders, we take pride in bringing vision to life — from the first concept sketch to the final turn of the key. Licensed to build in both Nevada and California, our in-house design and planning teams ensure every project embodies craftsmanship, creativity, and precision.</p>
             <p>This ground-up custom estate in Ripon, California showcases timeless architecture paired with modern luxury. Designed to balance grandeur and comfort, it combines classical detailing with contemporary finishes, creating a home that is as welcoming as it is impressive.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mb-8">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders build custom homes in California?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders holds California Contractor License #1093798 and has built custom homes in Northern California including this Ripon estate. Architectural coordination, engineering, permits, and full construction handled in-house.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What is design-build custom home construction?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">One company manages design and construction under a single contract. BRE Builders coordinates plans, engineering, permits, and all construction from foundation through finishes — one team, one contract, one warranty.</p>
+            </div>
           </div>
           <blockquote className="border-l-2 border-teal pl-5 mb-8">
             <p className="font-display text-[15px] italic text-cream/60 leading-relaxed">&ldquo;Every project we take on is fully managed by our in-house team — from design concept to final construction. Our licensed professionals handle planning, permitting, and craftsmanship across Nevada and California.&rdquo;</p>

@@ -16,10 +16,32 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Car Wash Construction Reno NV — BRE Builders Portfolio',
-  url: 'https://brebuilders.com/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/',
-  image: IMGS.concrete_slab,
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Car Wash Construction Reno NV — BRE Builders Portfolio',
+      description: 'Commercial concrete slab and car wash construction in Reno NV by BRE Builders. Site prep, utility integration, commercial build-out. NV #0085999.',
+      url: 'https://brebuilders.com/projects/car-wash/',
+      image: IMGS.concrete_slab,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders do commercial concrete work in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders handles commercial concrete slabs, foundations, and site concrete in Reno and Northern Nevada. This car wash project involved a large utility-access commercial slab with drainage integration and complete commercial build-out. Licensed NV #0085999.' } },
+        { '@type': 'Question', name: 'What is involved in commercial site prep for a car wash in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Commercial car wash construction requires excavation, grading, utility rough-in, drainage system design, commercial-grade concrete slab pours with utility access points, and coordination of all mechanical, electrical, and plumbing trades. BRE Builders manages the full project from permits through final inspection.' } },
+        { '@type': 'Question', name: 'Can BRE Builders handle commercial permits in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders manages all commercial permit applications with the City of Reno and Washoe County — including commercial building permits, utility permits, and final occupancy inspections. NV License #0085999.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Car Wash Construction Reno NV', item: 'https://brebuilders.com/projects/car-wash/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 export default function CarWashPage() {
@@ -67,6 +89,16 @@ export default function CarWashPage() {
             <p>This commercial project converted an existing Reno property into a fully operational car wash — requiring new concrete slab construction with utility access, drainage integration, and complete commercial build-out from the ground up.</p>
             <p>BRE Builders managed the entire project from permit application through final inspection. Commercial concrete work at this scale requires precise coordination of poured sections, utility stub-outs, and drainage slopes — all executed within commercial code requirements.</p>
             <p className="text-[12px] text-cream/30 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders do commercial concrete work in Reno?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders handles commercial concrete slabs, foundations, and site concrete across Reno and Northern Nevada. This car wash project involved a large utility-access commercial slab with drainage integration and complete build-out. Licensed NV #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Can BRE Builders handle commercial permits in Reno?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. BRE Builders manages all commercial permit applications with the City of Reno and Washoe County — including commercial building permits, utility permits, and final occupancy inspections.</p>
+            </div>
           </div>
         </div>
       }

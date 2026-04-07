@@ -7,7 +7,7 @@ const SERVICE_LABELS: Record<string, string> = {
   'adu': 'ADU / Guest House', 'additions': 'Home Addition',
   'new-home': 'New Custom Home', 'kitchen-bath': 'Kitchen & Bath Remodel',
   'repairs': 'Structural Repairs', 'decks': 'Decks & Outdoor',
-  'commercial': 'Commercial / TI', 'other': 'Other Work',
+  'commercial': 'Commercial / TI', 'safe-rooms': 'Safe Room / Panic Room', 'other': 'Other Work',
 }
 
 // ─── Lead scoring ────────────────────────────────────────────────────────────────

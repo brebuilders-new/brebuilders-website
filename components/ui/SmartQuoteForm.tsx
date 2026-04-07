@@ -6,7 +6,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 
 export type ServiceId =
   | 'adu' | 'additions' | 'new-home' | 'kitchen-bath'
-  | 'repairs' | 'decks' | 'commercial' | 'other'
+  | 'repairs' | 'decks' | 'commercial' | 'safe-rooms' | 'other'
 
 // Services that support image upload
 export const IMAGE_UPLOAD_SERVICES: ServiceId[] = ['repairs', 'decks', 'kitchen-bath']
@@ -104,6 +104,7 @@ const SERVICES: { id: ServiceId; label: string; sub: string; icon: string }[] = 
   { id: 'repairs',     label: 'Structural Repairs',     sub: 'Foundation, dry rot, water intrusion',   icon: '🔧' },
   { id: 'decks',       label: 'Decks & Outdoor',        sub: 'New decks, repairs, Tahoe snow-rated',   icon: '🌲' },
   { id: 'commercial',  label: 'Commercial / TI',        sub: 'Offices, retail, warehouse, buildouts',  icon: '🏢' },
+  { id: 'safe-rooms',  label: 'Safe Room / Panic Room',  sub: 'Reinforced rooms, above or below-grade',  icon: '🔒' },
   { id: 'other',       label: 'Something Else',         sub: 'Concrete, hauling, other work',          icon: '💬' },
 ]
 
@@ -116,6 +117,7 @@ const BUDGET_RANGES: Record<ServiceId, string[]> = {
   'repairs':      ['Under $10k', '$10k–$25k', '$25k–$75k', '$75k–$150k', 'Over $150k', 'Not sure yet'],
   'decks':        ['Under $15k', '$15k–$35k', '$35k–$75k', '$75k–$150k', 'Over $150k', 'Not sure yet'],
   'commercial':   ['Under $50k', '$50k–$150k', '$150k–$500k', '$500k–$1M', 'Over $1M', 'Not sure yet'],
+  'safe-rooms':   ['Under $20k', '$20k–$50k', '$50k–$100k', '$100k–$200k', 'Over $200k', 'Not sure yet'],
   'other':        ['Under $10k', '$10k–$30k', '$30k–$75k', '$75k–$200k', 'Over $200k', 'Not sure yet'],
 }
 

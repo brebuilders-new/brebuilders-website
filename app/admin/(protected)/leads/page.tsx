@@ -23,7 +23,7 @@ interface Lead {
 const SERVICE_LABELS: Record<string, string> = {
   'adu': 'ADU', 'additions': 'Addition', 'new-home': 'New Home',
   'kitchen-bath': 'Kitchen/Bath', 'repairs': 'Repairs', 'decks': 'Decks',
-  'commercial': 'Commercial', 'other': 'Other',
+  'commercial': 'Commercial', 'safe-rooms': 'Safe Room', 'other': 'Other',
 }
 
 const STATUS_COLOR: Record<string, { bg: string; text: string; border: string }> = {

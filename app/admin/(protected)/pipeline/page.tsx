@@ -13,7 +13,7 @@ const STAGES = [
 const SERVICE_SHORT: Record<string, string> = {
   'adu': 'ADU', 'additions': 'Add.', 'new-home': 'New Home',
   'kitchen-bath': 'K/B', 'repairs': 'Repairs', 'decks': 'Decks',
-  'commercial': 'Comm.', 'other': 'Other',
+  'commercial': 'Comm.', 'safe-rooms': 'Safe Rm', 'other': 'Other',
 }
 
 function scoreColor(s: number) {

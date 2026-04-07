@@ -6,7 +6,7 @@ import { SITE } from '@/lib/site-data'
 
 const VALID_SERVICES: ServiceId[] = [
   'adu', 'additions', 'new-home', 'kitchen-bath',
-  'repairs', 'decks', 'commercial', 'other',
+  'repairs', 'decks', 'commercial', 'safe-rooms', 'other',
 ]
 
 export default function ContactPageInner() {

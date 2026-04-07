@@ -109,6 +109,7 @@ const SERVICE_LABELS: Record<string, string> = {
   'repairs':      'Structural Repairs',
   'decks':        'Decks & Outdoor',
   'commercial':   'Commercial / TI',
+  'safe-rooms':   'Safe Room / Panic Room',
   'other':        'Other Work',
 }
 

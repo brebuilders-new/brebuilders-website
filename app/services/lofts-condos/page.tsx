@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import ServiceTemplate, {
-  SectionLabel, SectionHeading, PageSection, MobileCTABox,
+  SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
 } from '@/components/templates/ServiceTemplate'
 import { SITE } from '@/lib/site-data'
@@ -143,7 +143,30 @@ export default function LoftCondoPage() {
             </div>
           </PageSection>
 
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Loft & Condo Remodel Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Loft & Condo Remodeling in Reno NV" />
+                <SectionHeading line1="What to Know Before" line2italic="Remodeling Your Condo." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders work with HOA restrictions for condo remodels in Reno?</h3>
+                    <p>Yes. BRE Builders is experienced with HOA approval processes and condo building rules. We review your HOA documentation, coordinate approvals, and work within the restrictions that apply to your unit. All condo remodel work is permitted and inspected under NV License #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Can a condo kitchen or bathroom be fully remodeled in Reno?</h3>
+                    <p>Yes. Kitchen and bath remodeling is one of the most common condo renovation requests BRE Builders handles. We do full gut-and-remodel or targeted upgrades — cabinets, countertops, tile, plumbing fixtures, and electrical — within the constraints of your building and HOA.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders do loft conversions and open-plan remodels?</h3>
+                    <p>Yes. BRE Builders handles open-plan conversions, loft bedroom builds, mezzanine additions, and maximizing vertical space in loft-style units throughout Reno. Free consultation to assess what your specific unit allows.</p>
+                  </div>
+                </div>
+              </div>
+            }
+          />
           <DesktopCTASection
             bgImage={IMGS.svc_loft}
             bgAlt="BRE Builders Reno NV"

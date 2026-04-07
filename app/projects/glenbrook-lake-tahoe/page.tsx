@@ -16,16 +16,38 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  name: 'Glenbrook Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
-  url: `${SITE_URL}/projects/glenbrook-lake-tahoe/`,
-  image: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
-  about: {
-    '@type': 'Project',
-    name: 'Glenbrook Lake Tahoe Full Home Renovation',
-    location: { '@type': 'Place', name: '619 Lakeview Dr, Glenbrook, NV 89413', address: { '@type': 'PostalAddress', streetAddress: '619 Lakeview Dr', addressLocality: 'Glenbrook', addressRegion: 'NV', postalCode: '89413' } },
-    contractor: { '@type': 'GeneralContractor', name: 'Blue Reef Builders', license: 'NV #0085999' },
-  },
+  '@graph': [
+    {
+      '@type': 'ItemPage',
+      name: 'Glenbrook Lake Tahoe Full Home Renovation — BRE Builders Portfolio',
+      description: 'Full interior and exterior renovation of a Glenbrook Lake Tahoe property by BRE Builders. Structural reinforcement, custom finishes, kitchen, bath, staircase. NV #0085999.',
+      url: `${SITE_URL}/projects/glenbrook-lake-tahoe/`,
+      image: `${CDN}/2025/12/01-619-Lakeview-Dr-Glenbrook-NV-89413-1-of-37-600x403.webp`,
+      about: {
+        '@type': 'Project',
+        name: 'Glenbrook Lake Tahoe Full Home Renovation',
+        location: { '@type': 'Place', name: '619 Lakeview Dr, Glenbrook, NV 89413', address: { '@type': 'PostalAddress', streetAddress: '619 Lakeview Dr', addressLocality: 'Glenbrook', addressRegion: 'NV', postalCode: '89413' } },
+        contractor: { '@type': 'GeneralContractor', name: 'Blue Reef Builders', license: 'NV #0085999' },
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders renovate homes in Glenbrook Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders completed a full interior and exterior renovation of this Glenbrook, Lake Tahoe property — structural reinforcement, kitchen and bathroom renovation, custom staircase, and exterior improvements. All work permitted through Washoe County under NV #0085999.' } },
+        { '@type': 'Question', name: 'What are the permitting requirements for renovating a home in Glenbrook NV?', acceptedAnswer: { '@type': 'Answer', text: 'Glenbrook properties fall under Washoe County jurisdiction with additional TRPA (Tahoe Regional Planning Agency) requirements for properties in the Lake Tahoe Basin. BRE Builders is experienced with both Washoe County and TRPA permit requirements and manages all applications as part of the project scope.' } },
+        { '@type': 'Question', name: 'What structural requirements apply to Lake Tahoe home renovations?', acceptedAnswer: { '@type': 'Answer', text: 'Lake Tahoe properties must be designed for snow loads exceeding 200 lbs per square foot in some zones, seismic requirements, and high wind conditions. BRE Builders accounts for all Lake Tahoe Basin structural requirements in renovation design and construction.' } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://brebuilders.com/projects/' },
+        { '@type': 'ListItem', position: 3, name: 'Glenbrook Lake Tahoe Renovation', item: 'https://brebuilders.com/projects/glenbrook-lake-tahoe/' },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
+  ],
 }
 
 // 37 photos — all labeled with SEO captions
@@ -101,6 +123,16 @@ export default function GlenbrookLakeTahoePage() {
             <p>BRE Builders completed a full interior and exterior renovation of this Lake Tahoe property, handling everything from structural reinforcement to custom interior finishes, kitchen and bathroom renovation, custom staircase work, and exterior improvements built to withstand mountain conditions.</p>
             <p>Every phase was permitted through Washoe County and inspected to current code. The result is a fully renovated Lake Tahoe home built to last decades in one of the most beautiful and demanding environments in Nevada.</p>
             <p className="text-[12px] text-cream/40 italic">Images shown are from a completed project and are displayed for portfolio purposes only.</p>
+          </div>
+          <div className="speakable-faq space-y-3 mt-6">
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">Does BRE Builders renovate homes in Glenbrook Lake Tahoe?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Yes. This Glenbrook project included full structural reinforcement, kitchen and bathroom renovation, custom staircase work, and exterior improvements — all permitted through Washoe County under NV #0085999.</p>
+            </div>
+            <div className="p-4 bg-deep rounded-xl border border-white/[0.06]">
+              <h3 className="font-display text-[14px] text-teal mb-2">What permitting is required for Lake Tahoe home renovations?</h3>
+              <p className="text-[13px] text-cream/50 leading-relaxed">Glenbrook properties require both Washoe County and TRPA (Tahoe Regional Planning Agency) permits. BRE Builders manages all applications and is experienced with the specific requirements of the Tahoe Basin.</p>
+            </div>
           </div>
         </div>
       }

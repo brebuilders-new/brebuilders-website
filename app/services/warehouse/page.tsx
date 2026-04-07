@@ -163,7 +163,30 @@ export default function WarehousePage() {
           </PageSection>
 
           {/* FAQ */}
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Warehouse & Metal Building Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Warehouse & Metal Buildings in Reno NV" />
+                <SectionHeading line1="What Reno Businesses Ask" line2italic="About Metal Buildings." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">How long does it take to build a metal warehouse in Reno?</h3>
+                    <p>A standard metal building can be erected in 2–4 weeks after the foundation is complete. Full project including permits, site prep, and foundation typically runs 6–12 weeks depending on size and complexity. BRE Builders provides a project schedule at kickoff. Licensed NV #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders handle the foundation for warehouse projects?</h3>
+                    <p>Yes. BRE Builders handles the full scope — site preparation, concrete foundation slab, metal structure erection, interior finishing, and final inspection. One contractor, one contract, from ground to certificate of occupancy.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Can BRE Builders build metal buildings for industrial or agricultural use?</h3>
+                    <p>Yes. BRE Builders builds metal structures for industrial storage, equipment housing, workshops, and agricultural applications across Northern Nevada. We design to your specific use-case and load requirements.</p>
+                  </div>
+                </div>
+              </div>
+            }
+          />
 
           {/* Desktop CTA */}
           <DesktopCTASection

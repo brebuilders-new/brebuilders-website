@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import ServiceTemplate, {
-  SectionLabel, SectionHeading, PageSection, MobileCTABox,
+  SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
 } from '@/components/templates/ServiceTemplate'
 import { SITE } from '@/lib/site-data'
@@ -144,7 +144,30 @@ export default function OfficePage() {
             </div>
           </PageSection>
 
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Office Construction Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Office Construction in Reno NV" />
+                <SectionHeading line1="What Reno Businesses Ask" line2italic="Before Building Out." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">How long does an office tenant improvement take in Reno?</h3>
+                    <p>A standard office tenant improvement runs 4–8 weeks. Larger multi-room builds or those requiring significant MEP work can take 8–12 weeks. Permit approval adds 2–4 weeks upfront. BRE Builders provides a project schedule at kickoff so you can plan your move-in date. Licensed NV #0085999.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Does BRE Builders handle ADA compliance for office construction?</h3>
+                    <p>Yes. All office construction includes ADA-compliant design — accessible restrooms, door widths, pathway clearances, and accessible entry. BRE Builders ensures full compliance before final inspection with Washoe County or the City of Reno.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Can BRE Builders add private offices to an open floor plan?</h3>
+                    <p>Yes. BRE Builders adds private offices, conference rooms, and glass partition walls to existing open-plan spaces — managing structural framing, electrical for new circuits, data rough-in, and all finish work.</p>
+                  </div>
+                </div>
+              </div>
+            }
+          />
           <DesktopCTASection
             bgImage={IMGS.svc_office}
             bgAlt="BRE Builders Reno NV"

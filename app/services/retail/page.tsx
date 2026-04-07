@@ -150,7 +150,30 @@ export default function RetailPage() {
             </div>
           </PageSection>
 
-          <ServiceFAQSection faqs={FAQS} />
+          <ServiceFAQSection
+            faqs={FAQS}
+            label="Retail Construction Questions"
+            aeoContent={
+              <div>
+                <SectionLabel text="Retail Construction in Reno NV" />
+                <SectionHeading line1="What Reno Retailers Ask" line2italic="Before Building Out." size="md" className="mb-6" />
+                <div className="speakable-faq space-y-4 text-[14px] text-cream/60 leading-relaxed">
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">What does a retail tenant improvement include in Reno?</h3>
+                    <p>A retail TI typically includes demolition, framing, electrical, plumbing, HVAC modifications, flooring, ceiling, lighting, storefront elements, and finish work. BRE Builders manages permitting and all trades under one contract. Licensed NV #0085999 and CA #1093798.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">How long does a retail build-out take in Reno?</h3>
+                    <p>A standard retail build-out runs 4–8 weeks depending on scope. Permit approval adds 2–4 weeks. BRE Builders coordinates the full schedule to get you open as quickly as code allows — we provide a milestone timeline at project kickoff.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[16px] text-teal mb-2">Can BRE Builders work with my landlord and architect on a retail build-out?</h3>
+                    <p>Yes. We coordinate with landlords, architects, and property managers. We review the lease improvement allowance, landlord approval process, and construction specifications as part of pre-construction. One point of contact throughout.</p>
+                  </div>
+                </div>
+              </div>
+            }
+          />
           <DesktopCTASection
             bgImage={IMGS.svc_retail}
             bgAlt="BRE Builders Reno NV"

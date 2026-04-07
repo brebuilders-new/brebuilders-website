@@ -32,6 +32,7 @@ const schema = {
         { '@type': 'Question', name: 'What are stucco hairline cracks a sign of in Sparks NV?', acceptedAnswer: { '@type': 'Answer', text: 'Stucco cracking in Sparks and Cold Springs can indicate internal moisture issues or improper expansion joints. BRE Builders recommends an assessment if cracks are widening, appearing at corners, or accompanied by interior moisture.' } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

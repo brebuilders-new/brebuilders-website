@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "8 Signs Your Deck Is No Longer Safe — Reno & Lake Tahoe",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-01',
-  url: 'https://brebuilders.com/deck-safety-warning-signs-reno-lake-tahoe/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: '8 Signs Your Deck Is No Longer Safe',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What are the warning signs of an unsafe deck?', acceptedAnswer: { '@type': 'Answer', text: 'Key signs include soft or spongy wood underfoot, gaps between ledger board and house, loose railings, rusted hardware, cracked boards, rotted post bases, and a deck that moves under weight. Annual inspection is recommended for Reno and Lake Tahoe decks.' } },
+        { '@type': 'Question', name: 'How often should a deck be inspected in Reno or Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: 'Annual inspection is recommended due to UV exposure, freeze-thaw cycles, and snow loads. BRE Builders provides free deck inspections in Reno and Lake Tahoe. NV #0085999.' } },
+        { '@type': 'Question', name: 'How much does deck repair cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Deck repair costs depend on extent of damage, size, and materials. BRE Builders provides free on-site estimates for deck repairs in Reno, Sparks, and Lake Tahoe. Contact us for a project-specific estimate.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function DeckSafetyPage() {

@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "Why More Reno Homeowners Trust BRE Builders for Structural Repairs",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-04',
-  url: 'https://brebuilders.com/why-more-reno-homeowners-trust-bre-builders-for-structural-repairs/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Why More Reno Homeowners Trust BRE Builders for Structural Repairs',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Why is BRE Builders trusted for structural repairs in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders has provided structural repair services in Reno since 1989. We diagnose root causes before recommending repairs. All work is permitted, inspected, and backed by a 1-year workmanship warranty. NV License #0085999.' } },
+        { '@type': 'Question', name: 'What structural repairs does BRE Builders do in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders handles foundation repair, dry rot remediation, water intrusion damage, structural framing repair, wall panel replacement, and structural rehabilitation across Reno, Sparks, Carson City, and Lake Tahoe.' } },
+        { '@type': 'Question', name: 'How do I know if I need a structural repair in my Reno home?', acceptedAnswer: { '@type': 'Answer', text: 'Warning signs include diagonal cracks at window corners, doors that stick, sloping floors, foundation cracks, soft wood, and water stains. BRE Builders offers free structural inspections in Reno. NV #0085999.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function StructuralRepairsTrustPage() {

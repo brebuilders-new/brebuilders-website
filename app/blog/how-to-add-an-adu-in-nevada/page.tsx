@@ -15,12 +15,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'How to Add an ADU in Nevada Without Breaking the Bank — 2025 Guide',
-  author: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders' },
-  url: 'https://brebuilders.com/how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide/',
-  image: IMGS.adu_main,
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'How to Add an ADU in Nevada Without Breaking the Bank',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Is it legal to build an ADU in Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Nevada law allows ADUs on most single-family residential lots in Reno and Washoe County. Local zoning determines setbacks, maximum size, and occupancy rules. BRE Builders navigates all ADU permit requirements in Nevada. NV License #0085999.' } },
+        { '@type': 'Question', name: 'How much does an ADU cost in Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'ADU costs in Nevada start at $75,000 for a studio unit and range up to $300,000 for a fully-appointed two-bedroom. BRE Builders provides free ADU consultations with detailed written estimates.' } },
+        { '@type': 'Question', name: 'How long does it take to build an ADU in Reno Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'Plan for 3-5 months total. Washoe County permitting typically takes 4-8 weeks. Construction runs 8-14 weeks depending on size and complexity. BRE Builders manages the full timeline from permit through Certificate of Occupancy.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function ADUGuidePage() {

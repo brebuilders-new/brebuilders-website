@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "Top 10 Signs Your Home Needs Structural Repair — Don't Ignore #3",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-01',
-  url: 'https://brebuilders.com/top-10-signs-your-home-needs-structural-repair-dont-ignore-3/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Top 10 Signs Your Home Needs Structural Repair',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What are the signs of structural damage in a Reno home?', acceptedAnswer: { '@type': 'Answer', text: 'Key signs include diagonal cracks at window and door corners, stair-step cracks in brick, doors and windows that stick, sloping floors, gaps between walls and ceiling, and visible foundation cracks. BRE Builders provides free structural inspections. NV #0085999.' } },
+        { '@type': 'Question', name: 'How much does structural repair cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Structural repair costs depend on extent of damage, structural complexity, and materials. BRE Builders provides free on-site inspections and written estimates before any work begins.' } },
+        { '@type': 'Question', name: 'Can structural damage be repaired without replacing the whole structure?', acceptedAnswer: { '@type': 'Answer', text: 'In most cases yes. BRE Builders repairs specific structural elements without full demolition. The key is diagnosing the root cause. All work is permitted and inspected under NV #0085999.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function StructuralWarningSignsPage() {

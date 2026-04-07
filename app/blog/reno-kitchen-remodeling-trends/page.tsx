@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025',
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-02',
-  url: 'https://brebuilders.com/reno-kitchen-remodeling-top-trends-investment-tips-for-2025/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Reno Kitchen Remodeling Trends',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What are the most popular kitchen remodeling trends in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Current trends include open-concept layouts, quartz countertops, custom cabinetry, large-format tile, integrated appliances, and mixed metal fixtures. BRE Builders incorporates current design trends with durability suited for Northern Nevada.' } },
+        { '@type': 'Question', name: 'How do I choose the right kitchen design for my Reno home?', acceptedAnswer: { '@type': 'Answer', text: 'The best design balances your home architecture, workflow, and budget. BRE Builders provides free design consultations for kitchen remodels in Reno and recommends improvements that maximize function and value.' } },
+        { '@type': 'Question', name: 'Does BRE Builders do custom kitchen cabinetry in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders installs custom cabinetry in Reno kitchen remodels. All kitchen remodels are permitted and inspected where required. NV License #0085999.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function KitchenTrendsPage() {

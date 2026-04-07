@@ -35,6 +35,7 @@ const schema = {
         { '@type': 'Question', name: 'Can BRE Builders build a custom home in California?', acceptedAnswer: { '@type': 'Answer', text: "Yes. BRE Builders holds California License #1093798 and builds custom homes in Truckee, Graeagle, and Northern California." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

@@ -34,6 +34,7 @@ const schema = {
         { '@type': 'Question', name: 'What adds the most value in a kitchen remodel?', acceptedAnswer: { '@type': 'Answer', text: "In Reno NV, cabinet replacement or refacing, countertop upgrades to quartz or granite, and updated lighting consistently deliver the highest return on investment in kitchen remodels." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

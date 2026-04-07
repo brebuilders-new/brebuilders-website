@@ -32,6 +32,7 @@ const schema = {
         { '@type': 'Question', name: 'Why do basements flood near Damonte Ranch?', acceptedAnswer: { '@type': 'Answer', text: 'Basements near Damonte Ranch flood in spring when clay soil expands and groundwater rises post-snowmelt. BRE Builders provides drainage and waterproofing solutions.' } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

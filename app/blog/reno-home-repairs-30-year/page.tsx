@@ -32,6 +32,7 @@ const schema = {
         { '@type': 'Question', name: 'How do I know if my 30-year-old deck is unsafe in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Decks built pre-2000 often lack proper joist spacing for snow load requirements. Signs include sagging, soft spots, and visible rot at ledger connections. BRE Builders provides free deck structural assessments in Reno and Lake Tahoe.' } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

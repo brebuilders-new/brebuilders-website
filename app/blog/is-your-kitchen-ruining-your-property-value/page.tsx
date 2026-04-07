@@ -15,13 +15,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First',
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-01',
-  image: IMGS.svc_kitchen,
-  url: 'https://brebuilders.com/is-your-kitchen-ruining-your-property-value/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Is Your Kitchen Ruining Your Property Value?',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does a kitchen remodel increase home value in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. An updated kitchen is one of the highest-ROI home improvements in Reno. Outdated kitchens reduce perceived value and can slow a sale. BRE Builders provides kitchen remodels in Reno starting at $25,000. NV #0085999.' } },
+        { '@type': 'Question', name: 'What kitchen updates have the highest ROI in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Cabinet replacement, countertop upgrades, new appliances, updated lighting, and improved layout all deliver strong ROI in the Reno market. BRE Builders provides free kitchen remodel consultations with written estimates.' } },
+        { '@type': 'Question', name: 'How much does it cost to update a kitchen in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Basic kitchen updates in Reno start at $10,000-$25,000 for cosmetic upgrades. A full custom remodel runs $40,000-$75,000+. BRE Builders provides free on-site estimates.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function KitchenPropertyValuePage() {

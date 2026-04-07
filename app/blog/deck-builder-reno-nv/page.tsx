@@ -35,6 +35,7 @@ const schema = {
         { '@type': 'Question', name: "Does BRE Builders build decks at Lake Tahoe?", acceptedAnswer: { '@type': 'Answer', text: "Yes. BRE Builders builds and repairs decks throughout Lake Tahoe - Nevada and California sides. Lake Tahoe decks require snow-load rated structural design. NV #0085999 and CA #1093798." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

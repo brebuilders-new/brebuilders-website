@@ -35,6 +35,7 @@ const schema = {
         { '@type': 'Question', name: 'Does BRE Builders work at Lake Tahoe?', acceptedAnswer: { '@type': 'Answer', text: "Yes. BRE Builders has completed full home renovations, deck repairs, structural work, and ADU construction at Lake Tahoe on both the Nevada and California sides. NV License #0085999 covers the Nevada side. CA License #1093798 covers the California side including Truckee and South Lake Tahoe." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "Reno's $1 Billion Redevelopment — What It Means for Contractors and Homeowners",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-01',
-  url: 'https://brebuilders.com/reno-1-billion-redevelopment-contractors/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: "Reno Redevelopment: What It Means for Northern Nevada Contractors",
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is the Reno redevelopment project?', acceptedAnswer: { '@type': 'Answer', text: 'Reno has seen significant investment in downtown and surrounding area redevelopment including residential, commercial, and mixed-use projects, creating substantial demand for licensed general contractors across Northern Nevada.' } },
+        { '@type': 'Question', name: 'Is BRE Builders involved in Reno commercial redevelopment?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders holds Nevada License #0085999 and California License #1093798, serving both residential and commercial clients across the Reno metro with tenant improvements, commercial build-outs, ADUs, and custom home construction.' } },
+        { '@type': 'Question', name: 'How does Reno growth affect construction costs?', acceptedAnswer: { '@type': 'Answer', text: 'Strong construction demand in Reno has increased material and labor costs. Working with an experienced licensed contractor who manages budgets efficiently matters more than ever. BRE Builders has navigated the Reno construction market since 1989.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function RenoRedevelopmentPage() {

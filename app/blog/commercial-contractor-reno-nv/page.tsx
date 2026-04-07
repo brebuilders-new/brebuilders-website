@@ -35,6 +35,7 @@ const schema = {
         { '@type': 'Question', name: 'Does BRE Builders build warehouses in Northern Nevada?', acceptedAnswer: { '@type': 'Answer', text: "Yes. BRE Builders constructs and renovates warehouses, metal buildings, and industrial facilities across Northern Nevada. We handle site prep, concrete foundations, structural steel, and tenant improvements. NV #0085999." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

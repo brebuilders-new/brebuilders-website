@@ -13,12 +13,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: "From Strikes to Suds: How BRE Builders Saved a Reno Icon",
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-07-30',
-  url: 'https://brebuilders.com/from-strikes-to-suds-how-bre-builders-saved-a-reno-icon/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'From Strikes to Suds: How BRE Builders Saved a Reno Icon',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Does BRE Builders do commercial construction in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders provides commercial construction including tenant improvements, concrete slabs, and commercial build-outs. Licensed NV #0085999 and CA #1093798.' } },
+        { '@type': 'Question', name: 'Can BRE Builders convert an existing building into a car wash?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders completed this Reno car wash conversion — concrete slab, utility integration, drainage systems, and complete commercial build-out from permits through final inspection.' } },
+        { '@type': 'Question', name: 'Does BRE Builders handle commercial permits in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders manages all commercial permit applications with the City of Reno and Washoe County, including building permits, utility connections, and occupancy inspections. NV License #0085999.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function CarWashBlogPage() {

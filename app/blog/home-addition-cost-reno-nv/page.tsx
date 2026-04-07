@@ -35,6 +35,7 @@ const schema = {
         { '@type': 'Question', name: "Can BRE Builders add a second story to my home?", acceptedAnswer: { '@type': 'Answer', text: "Yes. BRE Builders builds second-story additions in Reno, Sparks, Carson City, and Lake Tahoe. Second-story additions require a structural engineering assessment to verify the existing foundation and wall framing can support the additional load." } },
       ],
     },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary', '.speakable-faq'] },
   ],
 }
 

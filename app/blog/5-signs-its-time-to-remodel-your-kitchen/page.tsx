@@ -15,13 +15,23 @@ export const metadata: Metadata = {
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: '5 Signs It\'s Time to Remodel Your Kitchen — #2 Hurts Your Home Value',
-  author: { '@type': 'Organization', name: 'BRE Builders' },
-  publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
-  datePublished: '2025-06-15',
-  image: IMGS.svc_kitchen,
-  url: 'https://brebuilders.com/5-signs-its-time-to-remodel-your-kitchen/',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: '5 Signs It\'s Time to Remodel Your Kitchen',
+      author: { '@type': 'Organization', name: 'BRE Builders' },
+      publisher: { '@type': 'Organization', name: 'Blue Reef Builders', url: 'https://brebuilders.com' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How do I know if my kitchen needs a remodel?', acceptedAnswer: { '@type': 'Answer', text: 'Key signs include outdated cabinets, poor layout, damaged countertops, inadequate storage, and a kitchen that reduces home value. BRE Builders provides free kitchen remodel consultations in Reno. NV #0085999.' } },
+        { '@type': 'Question', name: 'How much does a kitchen remodel cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Kitchen remodel costs in Reno range from $25,000 for a basic update to $75,000+ for a full custom remodel. BRE Builders provides free on-site estimates with detailed line-item pricing.' } },
+        { '@type': 'Question', name: 'How long does a kitchen remodel take in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'A standard kitchen remodel takes 2-4 weeks for construction. Allow additional time for design and permitting if structural changes are involved. BRE Builders provides a project schedule at kickoff.' } },
+      ],
+    },
+    { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-summary'] },
+  ],
 }
 
 export default function KitchenSignsPage() {

@@ -1,12 +1,11 @@
 // components/PhotoGrid.tsx
 // Fetches and displays approved photos from Supabase
 // Real-time subscription for new photos
-// Lazy loads images to prevent CLS
+// Styled to match BRE Builders gallery aesthetic
 
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
@@ -73,46 +72,37 @@ export default function PhotoGrid() {
       setError(null);
     } catch (err) {
       console.error('Error fetching photos:', err);
-      setError('Failed to load photos. Please try again.');
+      setError('Failed to load photos.');
     } finally {
       setLoading(false);
     }
   }
 
-  if (loading) {
-    return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="bg-stone-200 rounded-lg aspect-video animate-pulse" />
-        ))}
-      </div>
-    );
-  }
-
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-        <p className="text-red-800">{error}</p>
+      <div className="text-center py-12">
+        <p className="font-display text-[20px] text-cream/30 mb-3">{error}</p>
         <button
           onClick={fetchPhotos}
-          className="mt-3 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+          className="font-mono text-[12px] text-teal tracking-wider"
         >
-          Try Again
+          Try Again →
         </button>
       </div>
     );
   }
 
-  if (photos.length === 0) {
+  if (photos.length === 0 && !loading) {
     return (
-      <div className="bg-stone-100 border border-stone-300 rounded-lg p-12 text-center">
-        <p className="text-stone-600 text-lg">No photos yet. Check back as projects progress!</p>
+      <div className="text-center py-12">
+        <p className="font-display text-[20px] text-cream/30">No photos yet.</p>
+        <p className="font-mono text-[11px] text-cream/40 tracking-wider mt-2">Check back as projects progress.</p>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
       {photos.map((photo) => (
         <PhotoCard key={photo.id} photo={photo} />
       ))}
@@ -120,52 +110,45 @@ export default function PhotoGrid() {
   );
 }
 
-interface PhotoCardProps {
-  photo: Photo;
-}
-
-function PhotoCard({ photo }: PhotoCardProps) {
-  const [loaded, setLoaded] = useState(false);
+function PhotoCard({ photo }: { photo: Photo }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group">
-      {/* Fixed aspect ratio prevents CLS */}
-      <div className="relative w-full bg-stone-200" style={{ paddingBottom: '66.67%' }}>
-        <Image
-          src={photo.blob_url}
-          alt={photo.title}
-          fill
-          className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
-            loaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          onLoadingComplete={() => setLoaded(true)}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          quality={75}
-          priority={false}
-        />
-      </div>
-
-      {/* Photo metadata - fixed height prevents CLS */}
-      <div className="p-4 h-32 flex flex-col justify-between">
-        <div>
-          <h3 className="font-bold text-sm text-stone-900 line-clamp-2 mb-1">
-            {photo.title}
-          </h3>
-          <p className="text-xs text-stone-600 line-clamp-2 mb-2">
-            {photo.description}
-          </p>
-        </div>
-
-        {/* Tags */}
-        <div className="flex gap-2 flex-wrap">
-          <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">
-            {photo.construction_phase}
-          </span>
-          <span className="text-xs bg-stone-100 text-stone-700 px-2 py-1 rounded">
-            {photo.location_description}
-          </span>
+    <button
+      className="group focus:outline-none text-left"
+      onClick={() => {
+        // Future: open lightbox with full res image
+      }}
+    >
+      {/* Image container */}
+      <div className="relative overflow-hidden rounded-xl bg-void/20 mb-3 group-hover:opacity-90 transition-opacity">
+        <div style={{ aspectRatio: '16/9' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photo.blob_url}
+            alt={photo.title}
+            loading="lazy"
+            className={`w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={() => setImageLoaded(true)}
+          />
         </div>
       </div>
-    </div>
+
+      {/* Metadata */}
+      <div className="space-y-2">
+        <h3 className="font-display text-[13px] leading-tight text-cream line-clamp-2">
+          {photo.title}
+        </h3>
+        <p className="font-mono text-[10px] tracking-wider text-cream/50 line-clamp-1">
+          {photo.location_description} · {photo.construction_phase}
+        </p>
+        <p className="font-mono text-[9px] tracking-wider text-cream/30">
+          {photo.description}
+        </p>
+      </div>
+    </button>
   );
 }
+

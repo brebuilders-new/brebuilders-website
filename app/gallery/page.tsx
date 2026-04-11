@@ -2,9 +2,17 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import Nav from '@/components/layout/Nav'
 import Footer from '@/components/layout/Footer'
 import { GalleryGrid, GalleryLightbox, useGalleryLightbox, type LightboxImage } from '@/components/gallery/GalleryLightbox'
+
+// Lazy load PhotoGrid (below fold)
+const PhotoGrid = dynamic(() => import('@/components/PhotoGrid'), {
+  loading: () => <GalleryLoadingSkeleton />,
+  ssr: false,
+})
 
 const CDN = 'https://cdn.jsdelivr.net/gh/brebuilders-new/bre-assets@main'
 
@@ -284,6 +292,17 @@ function BeforeAfterSlider({ before, after, beforeLabel = 'Before', afterLabel =
           ← drag to compare →
         </div>
       </div>
+    </div>
+  )
+}
+
+// ─── Loading Skeleton ──────────────────────────────────────────────────────
+function GalleryLoadingSkeleton() {
+  return (
+    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+      {[...Array(6)].map((_, i) => (
+        <div key={i} className="bg-void/20 rounded-xl animate-pulse" style={{ aspectRatio: '16/9' }} />
+      ))}
     </div>
   )
 }
@@ -589,6 +608,22 @@ export default function GalleryPage() {
             </div>
           </section>
         )}
+
+        {/* ── LIVE PROJECT PHOTOS (from Supabase) ── */}
+        <section className="py-16 lg:py-24 bg-deep border-t border-white/[0.05]">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-7 h-px bg-teal" />
+              <span className="font-mono text-[10px] tracking-[3px] uppercase text-teal">Live Updates</span>
+            </div>
+            <h2 className="font-display text-[clamp(28px,4vw,52px)] font-light leading-[1.05] tracking-tight mb-12">
+              New Photos<br /><span className="italic text-teal">As Projects Progress.</span>
+            </h2>
+            <Suspense fallback={<GalleryLoadingSkeleton />}>
+              <PhotoGrid />
+            </Suspense>
+          </div>
+        </section>
 
         {/* ── CTA ── */}
         <section className="py-20 lg:py-28 bg-void border-t border-white/[0.05]">

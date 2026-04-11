@@ -44,7 +44,12 @@ const schema = {
       name: 'Home Additions Reno NV',
       description: 'BRE Builders designs and builds home additions in Reno, NV. Bedroom suites, garages, second stories, in-law suites, and sunrooms.',
       provider: { '@id': 'https://brebuilders.com/#business' },
-      areaServed: { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+      areaServed: [
+        { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Carson City', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'Place', name: 'Lake Tahoe, NV' },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -52,6 +57,8 @@ const schema = {
         { '@type': 'Question', name: 'How much does a home addition cost in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders provides free on-site estimates for home additions. Pricing depends on scope, size, and structural requirements. Contact us for a project-specific quote.' } },
         { '@type': 'Question', name: 'Is it cheaper to add on or move to a bigger house in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'In most cases, adding on is significantly cheaper than moving. Moving costs in Reno include agent commissions (5–6%), closing costs (2–3%), and moving expenses — typically 8–10% of home value. A well-designed addition costs far less and keeps your neighborhood and mortgage.' } },
         { '@type': 'Question', name: 'Do I need a permit for a home addition in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. All structural home additions in Reno require permits from Washoe County or the City of Reno. BRE Builders handles all permitting as part of the project.' } },
+        { '@type': 'Question', name: 'Are there home addition contractors near me in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders is a licensed home addition contractor serving Reno, Sparks, Carson City, and Lake Tahoe NV. Nevada Contractor License #0085999. In business since 1989. Call (775) 391-4517 for a free estimate.' } },
+        { '@type': 'Question', name: 'What home addition companies serve the Reno NV area?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders (Blue Reef Enterprises, LLC) is a licensed general contractor specializing in home additions in Reno NV — master suites, second stories, garage additions, sunrooms, and in-law suites. NV License #0085999.' } },
       ],
     },
     {
@@ -80,6 +87,7 @@ const FAQS = [
   { q: 'Do I need a permit for a home addition in Reno NV?', a: 'Yes. All structural home additions require permits from Washoe County or the City of Reno. BRE Builders handles all permitting as part of the project.' },
   { q: 'How long does a home addition take in Reno?', a: 'Permitting takes 4–8 weeks. Construction runs 8–20 weeks depending on size and complexity. Total timeline is typically 4–7 months from contract to completion.' },
   { q: 'Does BRE Builders design the addition as well?', a: 'Yes. Our in-house team handles design, engineering coordination, permitting, and construction. You work with one team from concept to keys.' },
+  { q: 'Are there home addition contractors near me in Reno NV?', a: 'Yes. BRE Builders is a licensed home addition contractor serving Reno, Sparks, Carson City, and Lake Tahoe. Licensed since 1989. NV #0085999. Call (775) 391-4517 for a free on-site estimate.' },
 ]
 
 export default function AdditionsPage() {
@@ -186,6 +194,10 @@ export default function AdditionsPage() {
                 <div>
                   <h3 className="font-display text-[16px] text-teal mb-2">Do I need a permit for a home addition in Reno NV?</h3>
                   <p>Yes. All structural additions require permits from Washoe County or the City of Reno. BRE Builders handles all permitting, inspections, and final sign-off as part of the project scope — holding Nevada License #0085999.</p>
+                </div>
+                <div>
+                  <h3 className="font-display text-[16px] text-teal mb-2">Looking for home addition contractors near you in Reno or Sparks?</h3>
+                  <p>BRE Builders is a licensed home addition contractor serving Reno, Sparks, Carson City, and Lake Tahoe NV since 1989. We handle master suites, second stories, garage additions, sunrooms, and in-law suites — all in-house. Nevada License #0085999. Call (775) 391-4517.</p>
                 </div>
               </SpeakableBlock>
             </div>

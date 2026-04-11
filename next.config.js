@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Normalize all URLs to trailing slash — fixes 68 redirect variants missing /
+  // and ensures canonical consistency with alternates: { canonical: '.../slug/' }
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
@@ -40,7 +43,8 @@ const nextConfig = {
       { source: '/frequently-asked-questions-bre-builders',   destination: '/faq',            permanent: true },
       { source: '/blogs',                                      destination: '/blog',           permanent: true },
       { source: '/portfolio',                                  destination: '/projects',       permanent: true },
-      { source: '/residential-services',                       destination: '/services',       permanent: true },
+      { source: '/residential-services',                       destination: '/services/',      permanent: true },
+      { source: '/residential-services/',                      destination: '/services/',      permanent: true },
 
       // ─── Project type taxonomies ──────────────────────────────────────
       { source: '/project-type/home-remodeling',               destination: '/services',           permanent: true },

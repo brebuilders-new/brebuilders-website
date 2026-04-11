@@ -53,7 +53,10 @@ const schema = {
       areaServed: [
         { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
         { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Carson City', containedInPlace: { '@type': 'State', name: 'Nevada' } },
         { '@type': 'Place', name: 'Lake Tahoe, NV' },
+        { '@type': 'City', name: 'Truckee', containedInPlace: { '@type': 'State', name: 'California' } },
+        { '@type': 'Place', name: 'Northern Nevada' },
       ],
       offers: { '@type': 'AggregateOffer', lowPrice: '75000', highPrice: '300000', priceCurrency: 'USD' },
     },
@@ -64,6 +67,9 @@ const schema = {
         { '@type': 'Question', name: 'Can I legally build an ADU in Reno Nevada?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Nevada and Washoe County allow ADUs on most residential lots. BRE Builders handles all permits and compliance.' } },
         { '@type': 'Question', name: 'How long does it take to build an ADU in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'Permits take 4–6 weeks. Construction takes 8–14 weeks. Total timeline is typically 3–5 months.' } },
         { '@type': 'Question', name: 'How much rental income can I earn from an ADU in Reno?', acceptedAnswer: { '@type': 'Answer', text: 'ADUs in Reno typically earn $1,200–$2,000/month. Nevada requires a 30-day minimum rental period.' } },
+        { '@type': 'Question', name: 'Who are the ADU contractors near me in Reno NV?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders is a licensed ADU contractor serving Reno, Sparks, Carson City, and Lake Tahoe NV. We hold Nevada Contractor License #0085999 and have been building ADUs in Northern Nevada since 1989. Call (775) 391-4517 for a free estimate.' } },
+        { '@type': 'Question', name: 'What ADU companies in Reno NV build accessory dwelling units?', acceptedAnswer: { '@type': 'Answer', text: 'BRE Builders (Blue Reef Enterprises, LLC) is a licensed ADU construction company in Reno, NV. We specialize in accessory dwelling units — detached backyard homes, garage conversions, in-law suites, and pool houses. NV License #0085999.' } },
+        { '@type': 'Question', name: 'Can BRE Builders build an ADU near me in Sparks or Carson City NV?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. BRE Builders builds ADUs throughout the Reno–Sparks metro and Carson City. We also serve Lake Tahoe and Truckee. All projects are fully permitted under Nevada License #0085999.' } },
       ],
     },
     {
@@ -90,6 +96,8 @@ const FAQS = [
   { q: 'How much rental income can my ADU earn?', a: 'ADUs in Reno typically earn $1,200–$2,000/month. Nevada requires 30-day minimum rental and owner must occupy the main unit.' },
   { q: 'Does BRE Builders handle the ADU permit?', a: 'Yes. We manage the entire permitting process from Washoe County and the City of Reno. Permit costs typically run $3,000–$5,000.' },
   { q: 'What types of ADUs can I build in Reno?', a: 'Detached backyard homes, garage conversions, pool houses, in-law suites, and junior ADUs (JADUs). We advise which works best for your property.' },
+  { q: 'Are you ADU contractors near me serving Sparks and Carson City NV?', a: 'Yes. BRE Builders builds ADUs throughout Reno, Sparks, Carson City, and Lake Tahoe. Licensed NV #0085999 since 1989. Call (775) 391-4517 for a free estimate.' },
+  { q: 'What ADU companies in Reno NV build accessory dwelling units?', a: 'BRE Builders (Blue Reef Enterprises, LLC) is a licensed ADU construction company in Reno, NV — specializing in detached backyard homes, garage conversions, in-law suites, and pool houses. NV License #0085999.' },
 ]
 
 export default function ADUPage() {
@@ -256,6 +264,8 @@ export default function ADUPage() {
                 <p>Yes. Nevada law allows ADUs on most single-family residential lots in Reno and Washoe County. With rising rents across the Reno metro, homeowners are adding ADUs to offset mortgage costs, house aging parents, or create passive rental income.</p>
                 <h3 className="font-display text-[17px] text-teal mb-2 mt-4">Who handles permits for ADU construction in Reno?</h3>
                 <p>BRE Builders holds Nevada License #0085999 and handles everything from zoning review through final Certificate of Occupancy — including all Washoe County and City of Reno permit applications.</p>
+                <h3 className="font-display text-[17px] text-teal mb-2 mt-4">Looking for ADU contractors near you in Reno or Sparks NV?</h3>
+                <p>BRE Builders is a licensed ADU contractor serving Reno, Sparks, Carson City, and Lake Tahoe since 1989. We are one of the few accessory dwelling unit companies in Northern Nevada that handles the full project in-house — design, permits, construction, and final inspection. NV License #0085999. Call (775) 391-4517 for a free estimate.</p>
               </SpeakableBlock>
               <div className="speakable-pricing bg-panel border border-teal/15 rounded-xl p-5 mb-6">
                 <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal mb-3">Verified ADU Pricing — Reno NV</p>

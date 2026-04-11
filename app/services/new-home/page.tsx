@@ -16,7 +16,15 @@ export const metadata: Metadata = {
   title: 'Custom Home Builder Reno NV | New Home Construction',
   description: 'Custom home builders in Reno NV and Northern California. Ground-up design-build, full permit handling. Licensed NV #0085999 · CA #1093798. Free consultation.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Custom+Homes`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Custom+Homes`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Custom Home Builder Reno NV | New Home Construction', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Home Builder Reno NV | New Home Construction',
+    description: 'Custom home builders in Reno NV and Northern California. Ground-up design-build, full permit handling. Licensed NV #0085999 · CA #1093798. Free consultatio',
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Design-Build+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Custom+Homes`, alt: 'Blue Reef Builders — Custom Home Builder Reno NV | New Home Construction' }],
   },
   alternates: { canonical: `${SITE_URL}/new-home/` },
 }

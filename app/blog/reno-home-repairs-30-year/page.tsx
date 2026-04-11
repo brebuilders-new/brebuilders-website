@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: '30-Year-Old Reno Homes — 8 Structural Repairs to Act On Now | BRE Builders',
   description: 'A 30-year-old home in Northern Nevada is dealing with real structural degradation — galvanized pipe corrosion, aluminum wiring, unsafe deck framing, foundation movement. BRE Builders NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=30-Year-Old+Reno+Home+Repairs&sub=8+Structural+Issues+in+1990s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=30-Year-Old+Reno+Home+Repairs&sub=8+Structural+Issues+in+1990s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — 30-Year-Old Reno Homes — 8 Structural Repairs to Act On Now | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: '30-Year-Old Reno Homes — 8 Structural Repairs to Act On Now | BRE Buil',
+    description: 'A 30-year-old home in Northern Nevada is dealing with real structural degradation — galvanized pipe corrosion, aluminum wiring, unsafe deck framing, founda',
+    images: [{ url: `${SITE_URL}/api/og?title=30-Year-Old+Reno+Home+Repairs&sub=8+Structural+Issues+in+1990s+Reno+Homes&badge=Structural+Repairs`, alt: 'Blue Reef Builders — 30-Year-Old Reno Homes — 8 Structural Repairs to Act On Now | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/reno-home-repairs-30-year/` },
 }
 

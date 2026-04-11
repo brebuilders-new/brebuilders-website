@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Prevent Winter Moisture Damage Older Reno Homes | BRE Builders',
   description: 'Older Reno homes lack modern vapor barriers and insulation, making them vulnerable every winter. BRE Builders explains what to check and how to protect your home before temperatures drop. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+to+Prevent+Winter+Moisture+Damage+in+Older+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Winter+Prep`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+to+Prevent+Winter+Moisture+Damage+in+Older+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Winter+Prep`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Prevent Winter Moisture Damage Older Reno Homes | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Prevent Winter Moisture Damage Older Reno Homes | BRE Builders',
+    description: 'Older Reno homes lack modern vapor barriers and insulation, making them vulnerable every winter. BRE Builders explains what to check and how to protect you',
+    images: [{ url: `${SITE_URL}/api/og?title=How+to+Prevent+Winter+Moisture+Damage+in+Older+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Winter+Prep`, alt: 'Blue Reef Builders — Prevent Winter Moisture Damage Older Reno Homes | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/prevent-winter-moisture-damage-reno-homes/` },
 }
 

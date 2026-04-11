@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Mine Shaft Framing & Shed Construction Reno NV | Portfolio',
   description: 'Custom framing and shed construction in Reno, NV. Structural wall construction with custom openings. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Mine+Shaft+Framing+%26+Shed+Construction&sub=Custom+Framing+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Mine+Shaft+Framing+%26+Shed+Construction&sub=Custom+Framing+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Mine Shaft Framing & Shed Construction Reno NV | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mine Shaft Framing & Shed Construction Reno NV | Portfolio',
+    description: 'Custom framing and shed construction in Reno, NV. Structural wall construction with custom openings. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Mine+Shaft+Framing+%26+Shed+Construction&sub=Custom+Framing+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, alt: 'Blue Reef Builders — Mine Shaft Framing & Shed Construction Reno NV | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/mine-shaft-framing-shed-construction-reno-nv/` },
 }

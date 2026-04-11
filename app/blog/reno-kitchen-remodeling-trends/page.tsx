@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025 | BRE Builders',
   description: 'Top kitchen remodeling trends in Reno for 2025. Smart kitchens, natural materials, functional islands. Investment tips to maximize your ROI. Licensed NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Kitchen+Remodeling+Trends+2025&sub=Investment+Tips+%26+Top+Trends&badge=Kitchen`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Kitchen+Remodeling+Trends+2025&sub=Investment+Tips+%26+Top+Trends&badge=Kitchen`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Reno Kitchen Remodeling Trends & Investment Tips for 2025 | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Reno Kitchen Remodeling Trends & Investment Tips for 2025 | BRE Builde',
+    description: 'Top kitchen remodeling trends in Reno for 2025. Smart kitchens, natural materials, functional islands. Investment tips to maximize your ROI. Licensed NV #0',
+    images: [{ url: `${SITE_URL}/api/og?title=Reno+Kitchen+Remodeling+Trends+2025&sub=Investment+Tips+%26+Top+Trends&badge=Kitchen`, alt: 'Blue Reef Builders — Reno Kitchen Remodeling Trends & Investment Tips for 2025 | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/reno-kitchen-remodeling-top-trends-investment-tips-for-2025/` },
 }
 

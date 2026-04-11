@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV — Tenant Improvements, Warehouses & Offices | 2026',
   description: 'Licensed commercial contractor in Reno NV since 1989. Tenant improvements, retail buildouts, warehouse construction, office renovations. BRE Builders NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+Warehouses+%C2%B7+Offices&badge=Commercial`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+Warehouses+%C2%B7+Offices&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Commercial Contractor Reno NV — Tenant Improvements, Warehouses & Offices | 2026', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Commercial Contractor Reno NV — Tenant Improvements, Warehouses & Offi',
+    description: 'Licensed commercial contractor in Reno NV since 1989. Tenant improvements, retail buildouts, warehouse construction, office renovations. BRE Builders NV #0',
+    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+Warehouses+%C2%B7+Offices&badge=Commercial`, alt: 'Blue Reef Builders — Commercial Contractor Reno NV — Tenant Improvements, Warehouses & Offices | 2026' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/commercial-contractor-reno-nv/` },
 }

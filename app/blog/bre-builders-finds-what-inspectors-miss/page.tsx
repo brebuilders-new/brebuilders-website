@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'What Home Inspectors Miss in Reno | How BRE Builders Helps',
   description: 'Standard home inspections miss hidden structural issues, moisture damage, and local code problems. BRE Builders explains what they find beyond the inspection report — and what it means for homeowners. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+BRE+Builders+Finds+What+Home+Inspectors+in+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Inspections`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+BRE+Builders+Finds+What+Home+Inspectors+in+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Inspections`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — What Home Inspectors Miss in Reno | How BRE Builders Helps', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What Home Inspectors Miss in Reno | How BRE Builders Helps',
+    description: 'Standard home inspections miss hidden structural issues, moisture damage, and local code problems. BRE Builders explains what they find beyond the inspecti',
+    images: [{ url: `${SITE_URL}/api/og?title=How+BRE+Builders+Finds+What+Home+Inspectors+in+Ren&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Inspections`, alt: 'Blue Reef Builders — What Home Inspectors Miss in Reno | How BRE Builders Helps' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/bre-builders-finds-what-inspectors-miss/` },
 }
 

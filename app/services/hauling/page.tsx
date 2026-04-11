@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Hauling & Debris Removal Reno NV | Same-Day Available',
   description: 'Demolition and hauling services in Reno NV. Construction debris, demo waste, junk removal. Same-day available. Licensed NV #0085999. One call handles it all.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Hauling & Debris Removal Reno NV | Same-Day Available', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hauling & Debris Removal Reno NV | Same-Day Available',
+    description: 'Demolition and hauling services in Reno NV. Construction debris, demo waste, junk removal. Same-day available. Licensed NV #0085999. One call handles it al',
+    images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, alt: 'Blue Reef Builders — Hauling & Debris Removal Reno NV | Same-Day Available' }],
   },
   alternates: { canonical: `${SITE_URL}/hauling-removal/` },
 }

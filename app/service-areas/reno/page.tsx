@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     images: [{
       url: `${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+Licensed+Since+1989&badge=Reno+NV`,
       width: 1200, height: 630,
+      alt: 'Blue Reef Builders — General Contractor Reno NV | Licensed Since 1989',
     }],
   },
   twitter: {
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     description: 'Licensed GC in Reno, NV since 1989. ADUs, structural repairs, kitchen & bath, additions, custom homes. NV #0085999. Free estimates.',
     images: [`${SITE_URL}/api/og?title=General+Contractor+Reno+NV&sub=%231+ADU+Builder+%C2%B7+Page+1+Foundation+Repair+%C2%B7+NV+%230085999&badge=Reno+NV`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: `${SITE_URL}/service-areas/nevada/` },
 }
 

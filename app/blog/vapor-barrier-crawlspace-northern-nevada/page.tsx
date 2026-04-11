@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Vapor Barrier Crawlspace Northern Nevada | BRE Builders Reno',
   description: 'Northern Nevada crawlspaces face seasonal moisture, clay soil expansion, and pest pressure. BRE Builders explains when a vapor barrier is needed, what to look for first, and what full encapsulation involves. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Do+I+Need+a+Vapor+Barrier+in+My+Crawlspace+in+Nort&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Do+I+Need+a+Vapor+Barrier+in+My+Crawlspace+in+Nort&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Vapor Barrier Crawlspace Northern Nevada | BRE Builders Reno', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Vapor Barrier Crawlspace Northern Nevada | BRE Builders Reno',
+    description: 'Northern Nevada crawlspaces face seasonal moisture, clay soil expansion, and pest pressure. BRE Builders explains when a vapor barrier is needed, what to l',
+    images: [{ url: `${SITE_URL}/api/og?title=Do+I+Need+a+Vapor+Barrier+in+My+Crawlspace+in+Nort&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, alt: 'Blue Reef Builders — Vapor Barrier Crawlspace Northern Nevada | BRE Builders Reno' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/vapor-barrier-crawlspace-northern-nevada/` },
 }
 

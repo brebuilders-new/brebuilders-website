@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     description: 'Mountain construction expertise. Custom homes, decks engineered for 200+ inch snowfall, structural repairs, vacation home remodeling. CA #1093798.',
     url: CANONICAL,
     type: 'website',
-    images: [{ url: `${SITE_URL}/api/og?title=Contractor+Truckee+CA+%26+Graeagle&sub=Snow-Load+Rated+%C2%B7+Custom+Homes+%C2%B7+CA+%231093798&badge=Truckee+CA`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Contractor+Truckee+CA+%26+Graeagle&sub=Snow-Load+Rated+%C2%B7+Custom+Homes+%C2%B7+CA+%231093798&badge=Truckee+CA`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Contractor Truckee CA & Graeagle | CA Lic #1093798', }],
     siteName: 'BRE Builders',
     locale: 'en_US',
   },
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     description: 'Mountain construction — snow-load rated decks, custom homes, structural repair. CA #1093798. Free estimates.',
     images: [`${SITE_URL}/api/og?title=Contractor+Truckee+CA&sub=Snow-Load+%C2%B7+Custom+Homes+%C2%B7+CA+%231093798&badge=Truckee+CA`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: CANONICAL },
 }
 

@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Quaking Aspen Structural Repair | Portfolio',
   description: 'Structural repair project at Quaking Aspen, Reno NV. Dry rot removal, framing repair, structural restoration. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Quaking+Aspen+Structural+Repair&sub=Dry+Rot+%26+Structural+Restoration+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Quaking+Aspen+Structural+Repair&sub=Dry+Rot+%26+Structural+Restoration+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Quaking Aspen Structural Repair | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Quaking Aspen Structural Repair | Portfolio',
+    description: 'Structural repair project at Quaking Aspen, Reno NV. Dry rot removal, framing repair, structural restoration. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Quaking+Aspen+Structural+Repair&sub=Dry+Rot+%26+Structural+Restoration+%C2%B7+Reno+NV&badge=Portfolio`, alt: 'Blue Reef Builders — Quaking Aspen Structural Repair | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/quaking-aspen-structural-repair/` },
 }

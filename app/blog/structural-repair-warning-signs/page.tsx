@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: "Top 10 Signs Your Home Needs Structural Repair — Don't Ignore #3 | BRE Builders",
   description: "10 structural warning signs Reno homeowners miss until it's expensive. BRE Builders breaks down each sign, what causes it, and what it means for your home. Licensed NV #0085999.",
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Top+10+Structural+Repair+Warning+Signs&sub=Don%27t+Ignore+%233+%C2%B7+Reno+NV&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Top+10+Structural+Repair+Warning+Signs&sub=Don%27t+Ignore+%233+%C2%B7+Reno+NV&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Top 10 Signs Your Home Needs Structural Repair', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Top 10 Signs Your Home Needs Structural Repair — BRE Builders',
+    description: "10 structural warning signs Reno homeowners miss until it's expensive. BRE Builders breaks down each sign, what causes it, and what it means for your home.",
+    images: [{ url: `${SITE_URL}/api/og?title=Top+10+Structural+Repair+Warning+Signs&sub=Don%27t+Ignore+%233+%C2%B7+Reno+NV&badge=Structural+Repairs`, alt: 'Blue Reef Builders — Top 10 Signs Your Home Needs Structural Repair' }],
+  },
   alternates: { canonical: `${SITE_URL}/top-10-signs-your-home-needs-structural-repair-dont-ignore-3/` },
 }
 

@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'What Reno Homeowners Overlook in 10-Year-Old Homes | BRE Builders',
   description: 'A 10-year-old Reno home may look modern, but early stress is already showing — soil cracking, UV siding damage, leaky attic ducts, deck splintering, stucco cracks. BRE Builders NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=10-Year-Old+Reno+Home+Repairs&sub=What+Homeowners+Miss+Early&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=10-Year-Old+Reno+Home+Repairs&sub=What+Homeowners+Miss+Early&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — What Reno Homeowners Overlook in 10-Year-Old Homes | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What Reno Homeowners Overlook in 10-Year-Old Homes | BRE Builders',
+    description: 'A 10-year-old Reno home may look modern, but early stress is already showing — soil cracking, UV siding damage, leaky attic ducts, deck splintering, stucco',
+    images: [{ url: `${SITE_URL}/api/og?title=10-Year-Old+Reno+Home+Repairs&sub=What+Homeowners+Miss+Early&badge=Structural+Repairs`, alt: 'Blue Reef Builders — What Reno Homeowners Overlook in 10-Year-Old Homes | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/reno-home-10-year-maintenance/` },
 }
 

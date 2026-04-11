@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Concrete Contractors Reno NV | Slabs & Flatwork',
   description: 'Expert concrete contractors in Reno, NV. Foundations, driveways, patios, commercial slabs, and walkways. Licensed NV #0085999. 35+ years. Free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Concrete Contractors Reno NV | Slabs & Flatwork', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Concrete Contractors Reno NV | Slabs & Flatwork',
+    description: 'Expert concrete contractors in Reno, NV. Foundations, driveways, patios, commercial slabs, and walkways. Licensed NV #0085999. 35+ years. Free estimates.',
+    images: [{ url: `${SITE_URL}/api/og?title=Concrete+Contractors+Reno+NV&sub=Foundations+%C2%B7+Slabs+%C2%B7+Flatwork+%C2%B7+NV+%230085999&badge=Concrete`, alt: 'Blue Reef Builders — Concrete Contractors Reno NV | Slabs & Flatwork' }],
   },
   alternates: { canonical: `${SITE_URL}/concrete/` },
 }

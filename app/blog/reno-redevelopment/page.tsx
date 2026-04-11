@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: "Reno's $1 Billion Redevelopment — What It Means for Contractors | BRE Builders",
   description: "Reno is in the middle of its largest redevelopment wave in decades. BRE Builders breaks down what the construction boom means for contractors, homeowners, and commercial property owners in Northern Nevada.",
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Redevelopment+%241+Billion&sub=What+It+Means+for+Northern+Nevada+Construction&badge=Commercial`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Redevelopment+%241+Billion&sub=What+It+Means+for+Northern+Nevada+Construction&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Reno', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Reno',
+    description: 'Reno is in the middle of its largest redevelopment wave in decades. BRE Builders breaks down what the construction boom means for contractors, homeowners, ',
+    images: [{ url: `${SITE_URL}/api/og?title=Reno+Redevelopment+%241+Billion&sub=What+It+Means+for+Northern+Nevada+Construction&badge=Commercial`, alt: 'Blue Reef Builders — Reno' }],
+  },
   alternates: { canonical: `${SITE_URL}/reno-1-billion-redevelopment-contractors/` },
 }
 

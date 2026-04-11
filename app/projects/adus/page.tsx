@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'ADU Construction Portfolio | Reno NV & Northern Nevada | BRE Builders',
   description: 'ADU construction portfolio — pool house ADUs, in-law suites, and garage conversions across Reno and Northern Nevada. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=ADU+Portfolio&sub=Pool+Houses+%C2%B7+In-Law+Suites+%C2%B7+Garage+Conversions&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=ADU+Portfolio&sub=Pool+Houses+%C2%B7+In-Law+Suites+%C2%B7+Garage+Conversions&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — ADU Construction Portfolio | Reno NV & Northern Nevada | BRE Builders', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ADU Construction Portfolio | Reno NV & Northern Nevada | BRE Builders',
+    description: 'ADU construction portfolio — pool house ADUs, in-law suites, and garage conversions across Reno and Northern Nevada. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=ADU+Portfolio&sub=Pool+Houses+%C2%B7+In-Law+Suites+%C2%B7+Garage+Conversions&badge=Portfolio`, alt: 'Blue Reef Builders — ADU Construction Portfolio | Reno NV & Northern Nevada | BRE Builders' }],
   },
   alternates: { canonical: 'https://brebuilders.com/projects/adus/' },
 }

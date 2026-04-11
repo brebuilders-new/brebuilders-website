@@ -23,7 +23,15 @@ export const metadata: Metadata = {
   title: 'Structural Repairs Reno NV | Foundation & Home Repairs',
   description: 'Licensed structural repair contractors in Reno NV and Northern California. Foundation, dry rot, water intrusion, framing. NV #0085999. Free inspection.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Structural+Repairs+Reno+NV&sub=Foundation+%26+Dry+Rot+%C2%B7+Free+Inspection+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Structural+Repairs+Reno+NV&sub=Foundation+%26+Dry+Rot+%C2%B7+Free+Inspection+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Structural Repairs Reno NV | Foundation & Home Repairs', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Structural Repairs Reno NV | Foundation & Home Repairs',
+    description: 'Licensed structural repair contractors in Reno NV and Northern California. Foundation, dry rot, water intrusion, framing. NV #0085999. Free inspection.',
+    images: [{ url: `${SITE_URL}/api/og?title=Structural+Repairs+Reno+NV&sub=Foundation+%26+Dry+Rot+%C2%B7+Free+Inspection+%C2%B7+NV+%230085999&badge=Structural+Repairs`, alt: 'Blue Reef Builders — Structural Repairs Reno NV | Foundation & Home Repairs' }],
   },
   alternates: { canonical: `${SITE_URL}/repairs/` },
 }

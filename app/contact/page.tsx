@@ -10,7 +10,15 @@ export const metadata: Metadata = {
   title: 'Free Quote | Contact Us | Reno NV',
   description: 'Request a free estimate from BRE Builders in Reno, NV. ADUs, additions, custom homes, repairs, commercial. NV #0085999 · CA #1093798. Response within 24 hours.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Free+Quote+%7C+Contact+BRE+Builders&sub=Reno+NV+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Contact`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Free+Quote+%7C+Contact+BRE+Builders&sub=Reno+NV+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Contact`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Free Quote | Contact Us | Reno NV', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Quote | Contact Us | Reno NV',
+    description: 'Request a free estimate from BRE Builders in Reno, NV. ADUs, additions, custom homes, repairs, commercial. NV #0085999 · CA #1093798. Response within 24 ho',
+    images: [{ url: `${SITE_URL}/api/og?title=Free+Quote+%7C+Contact+BRE+Builders&sub=Reno+NV+%C2%B7+Free+Estimates+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Contact`, alt: 'Blue Reef Builders — Free Quote | Contact Us | Reno NV' }],
   },
   alternates: { canonical: `${SITE_URL}/contact/` },
 }

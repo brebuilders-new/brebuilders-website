@@ -16,7 +16,15 @@ export const metadata: Metadata = {
   title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
   description: 'Kitchen and bathroom remodelers in Reno NV. Custom cabinetry, tile, full gut-and-rebuild, layout changes. Licensed NV #0085999. Free on-site estimate.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Licensed+Contractor+%C2%B7+Tile+%C2%B7+Custom+Cabinetry+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Licensed+Contractor+%C2%B7+Tile+%C2%B7+Custom+Cabinetry+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Kitchen & Bath Remodel Reno NV | Licensed Contractor', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kitchen & Bath Remodel Reno NV | Licensed Contractor',
+    description: 'Kitchen and bathroom remodelers in Reno NV. Custom cabinetry, tile, full gut-and-rebuild, layout changes. Licensed NV #0085999. Free on-site estimate.',
+    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+%26+Bath+Remodel+Reno+NV&sub=Licensed+Contractor+%C2%B7+Tile+%C2%B7+Custom+Cabinetry+%C2%B7+NV+%230085999&badge=Kitchen+%26+Bath`, alt: 'Blue Reef Builders — Kitchen & Bath Remodel Reno NV | Licensed Contractor' }],
   },
   alternates: { canonical: `${SITE_URL}/services/kitchen-bath/` },
 }

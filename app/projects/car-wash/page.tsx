@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Car Wash Construction Reno NV — Commercial Concrete | Portfolio',
   description: 'Commercial car wash construction in Reno, NV. Concrete slab, utility access, commercial build. NV License #0085999. BRE Builders.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Car+Wash+Construction+Reno+NV&sub=Commercial+Concrete+%26+Build-Out+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Car+Wash+Construction+Reno+NV&sub=Commercial+Concrete+%26+Build-Out+%C2%B7+Reno+NV&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Car Wash Construction Reno NV — Commercial Concrete | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Car Wash Construction Reno NV — Commercial Concrete | Portfolio',
+    description: 'Commercial car wash construction in Reno, NV. Concrete slab, utility access, commercial build. NV License #0085999. BRE Builders.',
+    images: [{ url: `${SITE_URL}/api/og?title=Car+Wash+Construction+Reno+NV&sub=Commercial+Concrete+%26+Build-Out+%C2%B7+Reno+NV&badge=Portfolio`, alt: 'Blue Reef Builders — Car Wash Construction Reno NV — Commercial Concrete | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/car-wash-construction-reno-nv-concrete-slab-foundation/` },
 }

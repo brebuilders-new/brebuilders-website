@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Home Addition Cost Reno NV — 2026 Pricing Guide',
   description: 'How much does a home addition cost in Reno NV? Real 2026 data — room additions start at $80,000. BRE Builders licensed home addition contractor NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Home+Addition+Cost+Reno+NV&sub=2026+Pricing+%C2%B7+From+%2480K&badge=Home+Additions`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Home+Addition+Cost+Reno+NV&sub=2026+Pricing+%C2%B7+From+%2480K&badge=Home+Additions`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Home Addition Cost Reno NV — 2026 Pricing Guide', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Addition Cost Reno NV — 2026 Pricing Guide',
+    description: 'How much does a home addition cost in Reno NV? Real 2026 data — room additions start at $80,000. BRE Builders licensed home addition contractor NV #0085999',
+    images: [{ url: `${SITE_URL}/api/og?title=Home+Addition+Cost+Reno+NV&sub=2026+Pricing+%C2%B7+From+%2480K&badge=Home+Additions`, alt: 'Blue Reef Builders — Home Addition Cost Reno NV — 2026 Pricing Guide' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/home-addition-cost-reno-nv/` },
 }

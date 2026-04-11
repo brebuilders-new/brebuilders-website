@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds',
   description: 'ADU builder at Lake Tahoe NV. TRPA permits, Washoe & Douglas County permits, snow-load engineering all handled. NV #0085999. Free site evaluation.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds',
+    description: 'ADU builder at Lake Tahoe NV. TRPA permits, Washoe & Douglas County permits, snow-load engineering all handled. NV #0085999. Free site evaluation.',
+    images: [{ url: `${SITE_URL}/api/og?title=ADU+Builder+Lake+Tahoe+NV&sub=TRPA+Permits+%C2%B7+NV+%230085999&badge=Lake+Tahoe+ADU`, alt: 'Blue Reef Builders — ADU Builder Lake Tahoe NV | TRPA Permits & Complete Builds' }],
   },
   alternates: { canonical: `${SITE_URL}/service-areas/lake-tahoe/adu/` },
 }

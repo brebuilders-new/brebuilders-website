@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Rio Tinto Home Renovation | Portfolio',
   description: 'Interior residential renovation project in Rio Tinto, NV by BRE Builders. Drywall, framing, and interior finish work. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Rio+Tinto+Home+Renovation&sub=Interior+Renovation+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Rio+Tinto+Home+Renovation&sub=Interior+Renovation+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Rio Tinto Home Renovation | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rio Tinto Home Renovation | Portfolio',
+    description: 'Interior residential renovation project in Rio Tinto, NV by BRE Builders. Drywall, framing, and interior finish work. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Rio+Tinto+Home+Renovation&sub=Interior+Renovation+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, alt: 'Blue Reef Builders — Rio Tinto Home Renovation | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/rio-tinto-home-renovation-project/` },
 }

@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'BRE Builders',
     locale: 'en_US',
+    images: [{ url: `${SITE_URL}/api/og?title=BRE+Builders+Blog&sub=Reno+Construction+Guides+%C2%B7+NV+%230085999&badge=Blog`, width: 1200, height: 630, alt: 'Blue Reef Builders Blog — Construction & Remodeling Guides for Reno NV Homeowners' }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BRE Builders Blog — Construction Guides for Reno Homeowners',
+    description: 'ADU guides, repair advice, remodeling tips, and local insights. Licensed NV #0085999 · CA #1093798.',
+    images: [{ url: `${SITE_URL}/api/og?title=BRE+Builders+Blog&sub=Reno+Construction+Guides+%C2%B7+NV+%230085999&badge=Blog`, alt: 'Blue Reef Builders Blog — Construction & Remodeling Guides for Reno NV Homeowners' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/` },
 }

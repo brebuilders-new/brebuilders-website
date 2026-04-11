@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: "Why More Reno Homeowners Trust BRE Builders for Structural Repairs | BRE Builders",
   description: "BRE Builders is Reno's structural repair expert — foundation cracks, sagging floors, damaged joists, load-bearing beam reinforcement. Northern Nevada's harsh conditions require experience. NV #0085999.",
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Structural+Repair+Experts&sub=Foundation+%C2%B7+Framing+%C2%B7+Dry+Rot+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Reno+Structural+Repair+Experts&sub=Foundation+%C2%B7+Framing+%C2%B7+Dry+Rot+%C2%B7+NV+%230085999&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Why More Reno Homeowners Trust BRE Builders for Structural Repairs | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Why More Reno Homeowners Trust BRE Builders for Structural Repairs',
+    description: "BRE Builders is Reno's structural repair expert — foundation cracks, sagging floors, damaged joists, load-bearing beam reinforcement. NV #0085999.",
+    images: [{ url: `${SITE_URL}/api/og?title=Reno+Structural+Repair+Experts&sub=Foundation+%C2%B7+Framing+%C2%B7+Dry+Rot+%C2%B7+NV+%230085999&badge=Structural+Repairs`, alt: 'Blue Reef Builders — Why More Reno Homeowners Trust BRE Builders for Structural Repairs | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/why-more-reno-homeowners-trust-bre-builders-for-structural-repairs/` },
 }
 

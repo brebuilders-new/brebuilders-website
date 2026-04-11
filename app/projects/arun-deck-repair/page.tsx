@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Arun Hillside Deck Repair Lake Tahoe NV | Portfolio',
   description: 'Hillside deck structural repair at Lake Tahoe, NV. Reinforced support beams and elevated framing. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Arun+Hillside+Deck+Repair&sub=Reinforced+Support+Beams+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Arun+Hillside+Deck+Repair&sub=Reinforced+Support+Beams+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Arun Hillside Deck Repair Lake Tahoe NV | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Arun Hillside Deck Repair Lake Tahoe NV | Portfolio',
+    description: 'Hillside deck structural repair at Lake Tahoe, NV. Reinforced support beams and elevated framing. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Arun+Hillside+Deck+Repair&sub=Reinforced+Support+Beams+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, alt: 'Blue Reef Builders — Arun Hillside Deck Repair Lake Tahoe NV | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/arun-hillside-deck-repair-lake-tahoe-nv/` },
 }

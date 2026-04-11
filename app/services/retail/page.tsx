@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Retail Construction & Tenant Improvements Reno NV | BRE Builders',
   description: 'Retail build-outs and tenant improvements in Reno, NV. Brand-focused retail spaces, storefront construction, permitting. Licensed NV #0085999. Free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Retail+Build-Out+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Retail+Build-Out+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Retail Construction & Tenant Improvements Reno NV | BRE Builders', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Retail Construction & Tenant Improvements Reno NV | BRE Builders',
+    description: 'Retail build-outs and tenant improvements in Reno, NV. Brand-focused retail spaces, storefront construction, permitting. Licensed NV #0085999. Free estimat',
+    images: [{ url: `${SITE_URL}/api/og?title=Retail+Build-Out+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, alt: 'Blue Reef Builders — Retail Construction & Tenant Improvements Reno NV | BRE Builders' }],
   },
   alternates: { canonical: `${SITE_URL}/retail/` },
 }

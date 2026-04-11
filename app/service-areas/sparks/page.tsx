@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     description: 'BRE Builders serves Spanish Springs, South Meadows, Wingfield Springs, and all Sparks neighborhoods. ADUs, repairs, remodeling. NV #0085999.',
     url: CANONICAL,
     type: 'website',
-    images: [{ url: `${SITE_URL}/api/og?title=General+Contractor+Sparks+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+Licensed+Since+1989+%C2%B7+NV+%230085999&badge=Sparks+NV`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=General+Contractor+Sparks+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+Licensed+Since+1989+%C2%B7+NV+%230085999&badge=Sparks+NV`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — General Contractor Sparks NV | Since 1989', }],
     siteName: 'BRE Builders',
     locale: 'en_US',
   },
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     description: 'Licensed contractor serving Sparks, NV. ADU construction, repairs, remodeling. NV #0085999. Free estimates.',
     images: [`${SITE_URL}/api/og?title=General+Contractor+Sparks+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+NV+%230085999&badge=Sparks+NV`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: CANONICAL },
 }
 

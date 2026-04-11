@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Lake Tahoe Contractor — What to Know Before You Build in 2026',
   description: 'Everything you need to know about hiring a contractor at Lake Tahoe — TRPA permits, snow-load requirements, costs, and licensed contractors for NV and CA. BRE Builders NV #0085999 CA #1093798.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Contractor&sub=TRPA+Permits+%C2%B7+Snow+Load+%C2%B7+2026+Guide&badge=Lake+Tahoe`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Contractor&sub=TRPA+Permits+%C2%B7+Snow+Load+%C2%B7+2026+Guide&badge=Lake+Tahoe`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Lake Tahoe Contractor — What to Know Before You Build in 2026', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lake Tahoe Contractor — What to Know Before You Build in 2026',
+    description: 'Everything you need to know about hiring a contractor at Lake Tahoe — TRPA permits, snow-load requirements, costs, and licensed contractors for NV and CA. ',
+    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Contractor&sub=TRPA+Permits+%C2%B7+Snow+Load+%C2%B7+2026+Guide&badge=Lake+Tahoe`, alt: 'Blue Reef Builders — Lake Tahoe Contractor — What to Know Before You Build in 2026' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/lake-tahoe-contractor-guide/` },
 }

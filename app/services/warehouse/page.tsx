@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Warehouse & Metal Buildings Reno NV | BRE Builders',
   description: 'Durable warehouse and metal building construction in Reno, NV. Custom steel structures, fast turnaround, code-compliant builds. Licensed NV #0085999. Free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Warehouse+%26+Metal+Buildings&sub=Custom+Steel+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Warehouse+%26+Metal+Buildings&sub=Custom+Steel+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Warehouse & Metal Buildings Reno NV | BRE Builders', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Warehouse & Metal Buildings Reno NV | BRE Builders',
+    description: 'Durable warehouse and metal building construction in Reno, NV. Custom steel structures, fast turnaround, code-compliant builds. Licensed NV #0085999. Free ',
+    images: [{ url: `${SITE_URL}/api/og?title=Warehouse+%26+Metal+Buildings&sub=Custom+Steel+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Commercial`, alt: 'Blue Reef Builders — Warehouse & Metal Buildings Reno NV | BRE Builders' }],
   },
   alternates: { canonical: `${SITE_URL}/warehouse-metal-buildings/` },
 }

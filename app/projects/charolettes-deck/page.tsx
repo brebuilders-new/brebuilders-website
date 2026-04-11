@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: "Charolette's Deck — Custom Deck Build Reno NV | Portfolio",
   description: "Custom deck construction in Reno, NV. Smooth sealed surface finish. Licensed deck builder. NV License #0085999.",
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Charolette%27s+Deck+%E2%80%93+Custom+Build&sub=Smooth+Sealed+Surface+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Charolette%27s+Deck+%E2%80%93+Custom+Build&sub=Smooth+Sealed+Surface+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Charolette', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Charolette',
+    description: 'Custom deck construction in Reno, NV. Smooth sealed surface finish. Licensed deck builder. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Charolette%27s+Deck+%E2%80%93+Custom+Build&sub=Smooth+Sealed+Surface+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Portfolio`, alt: 'Blue Reef Builders — Charolette' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/charolettes-deck/` },
 }

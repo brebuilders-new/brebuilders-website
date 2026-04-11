@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'How to Add an ADU in Nevada Without Breaking the Bank — 2025 Guide',
   description: 'Nevada ADU laws, permit costs, construction timelines, and real cost data for Reno homeowners. ADUs start at $75,000. Licensed NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=How+to+Add+an+ADU+in+Nevada&sub=2025+Guide+%C2%B7+Costs%2C+Permits%2C+Timeline+%C2%B7+Reno+NV&badge=ADU+Guide`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=How+to+Add+an+ADU+in+Nevada&sub=2025+Guide+%C2%B7+Costs%2C+Permits%2C+Timeline+%C2%B7+Reno+NV&badge=ADU+Guide`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — How to Add an ADU in Nevada Without Breaking the Bank — 2025 Guide', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Add an ADU in Nevada Without Breaking the Bank — 2025 Guide',
+    description: 'Nevada ADU laws, permit costs, construction timelines, and real cost data for Reno homeowners. ADUs start at $75,000. Licensed NV #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=How+to+Add+an+ADU+in+Nevada&sub=2025+Guide+%C2%B7+Costs%2C+Permits%2C+Timeline+%C2%B7+Reno+NV&badge=ADU+Guide`, alt: 'Blue Reef Builders — How to Add an ADU in Nevada Without Breaking the Bank — 2025 Guide' }],
   },
   alternates: { canonical: `${SITE_URL}/how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide/` },
 }

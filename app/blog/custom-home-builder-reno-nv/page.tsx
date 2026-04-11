@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Custom Home Builder Reno NV — What It Actually Costs in 2026',
   description: 'Real costs, timelines, and permit requirements for custom home construction in Reno, NV. BRE Builders — licensed custom home builder since 1989. NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Real+Costs+%C2%B7+Timelines+%C2%B7+2026+Guide&badge=Custom+Homes`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Real+Costs+%C2%B7+Timelines+%C2%B7+2026+Guide&badge=Custom+Homes`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Custom Home Builder Reno NV — What It Actually Costs in 2026', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Home Builder Reno NV — What It Actually Costs in 2026',
+    description: 'Real costs, timelines, and permit requirements for custom home construction in Reno, NV. BRE Builders — licensed custom home builder since 1989. NV #008599',
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Real+Costs+%C2%B7+Timelines+%C2%B7+2026+Guide&badge=Custom+Homes`, alt: 'Blue Reef Builders — Custom Home Builder Reno NV — What It Actually Costs in 2026' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/custom-home-builder-reno-nv/` },
 }

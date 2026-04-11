@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Crawlspace Encapsulation Cost Nevada | BRE Builders Reno NV',
   description: 'Crawlspace encapsulation cost in Nevada depends on size, existing damage, and drainage needs. BRE Builders explains what affects pricing and provides free on-site evaluations. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+Much+Does+Crawlspace+Encapsulation+Cost+in+Nev&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+Much+Does+Crawlspace+Encapsulation+Cost+in+Nev&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Crawlspace Encapsulation Cost Nevada | BRE Builders Reno NV', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crawlspace Encapsulation Cost Nevada | BRE Builders Reno NV',
+    description: 'Crawlspace encapsulation cost in Nevada depends on size, existing damage, and drainage needs. BRE Builders explains what affects pricing and provides free ',
+    images: [{ url: `${SITE_URL}/api/og?title=How+Much+Does+Crawlspace+Encapsulation+Cost+in+Nev&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Crawlspace`, alt: 'Blue Reef Builders — Crawlspace Encapsulation Cost Nevada | BRE Builders Reno NV' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/crawlspace-encapsulation-cost-nevada/` },
 }
 

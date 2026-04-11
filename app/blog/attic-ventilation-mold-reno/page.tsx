@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Attic Ventilation and Mold Signs Reno NV | BRE Builders',
   description: 'Poor attic ventilation causes mold, structural damage, and health problems in Reno homes. BRE Builders explains the signs, health risks, and solutions. Licensed NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Attic+Making+You+Sick%3F+Signs+of+Poor+Ven&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Attic+Health`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Attic+Making+You+Sick%3F+Signs+of+Poor+Ven&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Attic+Health`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Attic Ventilation and Mold Signs Reno NV | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Attic Ventilation and Mold Signs Reno NV | BRE Builders',
+    description: 'Poor attic ventilation causes mold, structural damage, and health problems in Reno homes. BRE Builders explains the signs, health risks, and solutions. Lic',
+    images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Attic+Making+You+Sick%3F+Signs+of+Poor+Ven&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Attic+Health`, alt: 'Blue Reef Builders — Attic Ventilation and Mold Signs Reno NV | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/attic-ventilation-mold-reno/` },
 }
 

@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: "From Strikes to Suds: How BRE Builders Saved a Reno Icon | BRE Builders",
   description: "BRE Builders transformed the abandoned Starlite Lanes bowling alley into Reno's longest car wash tunnel. Adaptive reuse case study. Licensed NV #0085999.",
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=From+Strikes+to+Suds&sub=How+BRE+Builders+Saved+a+Reno+Icon&badge=Commercial`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=From+Strikes+to+Suds&sub=How+BRE+Builders+Saved+a+Reno+Icon&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — From Strikes to Suds: How BRE Builders Saved a Reno Icon | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'From Strikes to Suds: How BRE Builders Saved a Reno Icon | BRE Builder',
+    description: "BRE Builders transformed the abandoned Starlite Lanes bowling alley into Reno's longest car wash tunnel. Adaptive reuse case study. Licensed NV #0085999.",
+    images: [{ url: `${SITE_URL}/api/og?title=From+Strikes+to+Suds&sub=How+BRE+Builders+Saved+a+Reno+Icon&badge=Commercial`, alt: 'Blue Reef Builders — From Strikes to Suds: How BRE Builders Saved a Reno Icon | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/from-strikes-to-suds-how-bre-builders-saved-a-reno-icon/` },
 }
 

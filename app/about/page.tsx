@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   description:
     'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercial.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=About+BRE+Builders&sub=Licensed+General+Contractor+Since+1989+%C2%B7+NV+%230085999&badge=About`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=About+BRE+Builders&sub=Licensed+General+Contractor+Since+1989+%C2%B7+NV+%230085999&badge=About`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — About BRE Builders | Licensed Since 1989', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About BRE Builders | Licensed Since 1989',
+    description: 'About Blue Reef Builders — licensed general contractor in Reno, NV since 1989. Steve Rosenthal, owner. NV #0085999 · CA #1093798. Residential and commercia',
+    images: [{ url: `${SITE_URL}/api/og?title=About+BRE+Builders&sub=Licensed+General+Contractor+Since+1989+%C2%B7+NV+%230085999&badge=About`, alt: 'Blue Reef Builders — About BRE Builders | Licensed Since 1989' }],
   },
   alternates: { canonical: `${SITE_URL}/about/` },
 }

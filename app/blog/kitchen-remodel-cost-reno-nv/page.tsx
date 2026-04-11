@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Kitchen Remodel Cost Reno NV — Real Prices for 2026',
   description: 'How much does a kitchen remodel cost in Reno NV? Real 2026 pricing data — from $18,000 basic refreshes to $85,000 full gut renovations. BRE Builders NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+Remodel+Cost+Reno+NV&sub=Real+2026+Pricing+%C2%B7+$18K%E2%80%93$85K&badge=Kitchen+%26+Bath`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+Remodel+Cost+Reno+NV&sub=Real+2026+Pricing+%C2%B7+$18K%E2%80%93$85K&badge=Kitchen+%26+Bath`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Kitchen Remodel Cost Reno NV — Real Prices for 2026', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kitchen Remodel Cost Reno NV — Real Prices for 2026',
+    description: 'How much does a kitchen remodel cost in Reno NV? Real 2026 pricing data — from $18,000 basic refreshes to $85,000 full gut renovations. BRE Builders NV #00',
+    images: [{ url: `${SITE_URL}/api/og?title=Kitchen+Remodel+Cost+Reno+NV&sub=Real+2026+Pricing+%C2%B7+$18K%E2%80%93$85K&badge=Kitchen+%26+Bath`, alt: 'Blue Reef Builders — Kitchen Remodel Cost Reno NV — Real Prices for 2026' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/kitchen-remodel-cost-reno-nv/` },
 }

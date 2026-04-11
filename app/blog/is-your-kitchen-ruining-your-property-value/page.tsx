@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First',
   description: 'An outdated kitchen can quietly drain your Reno home\'s value. BRE Builders identifies the 5 kitchen problems that most hurt resale — and how to fix them.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Kitchen+Hurting+Your+Home+Value%3F&sub=5+Things+to+Fix+First+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Kitchen+Hurting+Your+Home+Value%3F&sub=5+Things+to+Fix+First+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First',
+    description: "An outdated kitchen can quietly drain your Reno home\'s value. BRE Builders identifies the 5 kitchen problems that most hurt resale — and how to fix them.",
+    images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Kitchen+Hurting+Your+Home+Value%3F&sub=5+Things+to+Fix+First+%C2%B7+Reno+NV&badge=Kitchen`, alt: 'Blue Reef Builders — Is Your Kitchen Ruining Your Property Value? Fix These 5 Things First' }],
   },
   alternates: { canonical: `${SITE_URL}/is-your-kitchen-ruining-your-property-value/` },
 }

@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     images: [{
       url: `${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV&sub=Deck+Repair+%C2%B7+Full+Home+Renovation+%C2%B7+ADU+Construction&badge=Lake+Tahoe`,
       width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Contractor Lake Tahoe NV | ADU Builder & Renovation',
     }],
   },
   twitter: {
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     description: 'Licensed contractor serving Lake Tahoe, NV. Full home renovation, deck repair, ADU construction, structural work. NV #0085999 · CA #1093798. Free estimates.',
     images: [`${SITE_URL}/api/og?title=Contractor+Lake+Tahoe+NV+%26+CA&sub=Snow-Load+%C2%B7+Custom+Homes+%C2%B7+Structural+Repair+%C2%B7+NV+%230085999&badge=Lake+Tahoe`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: `${SITE_URL}/service-areas/lake-tahoe/` },
 }
 

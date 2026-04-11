@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'How to Tell If Your Deck Is Dangerous — 8 Red Flags | BRE Builders',
   description: 'Soft wood, loose railings, popping fasteners, missing flashing. 8 signs your Reno or Lake Tahoe deck is structurally unsafe. Free deck inspection. BRE Builders NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Deck+Safe%3F+8+Red+Flags&sub=Free+Inspection+%C2%B7+BRE+Builders+NV+%230085999&badge=Deck+Safety`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Deck+Safe%3F+8+Red+Flags&sub=Free+Inspection+%C2%B7+BRE+Builders+NV+%230085999&badge=Deck+Safety`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — How to Tell If Your Deck Is Dangerous — 8 Red Flags | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Tell If Your Deck Is Dangerous — 8 Red Flags | BRE Builders',
+    description: 'Soft wood, loose railings, popping fasteners, missing flashing. 8 signs your Reno or Lake Tahoe deck is structurally unsafe. Free deck inspection. BRE Buil',
+    images: [{ url: `${SITE_URL}/api/og?title=Is+Your+Deck+Safe%3F+8+Red+Flags&sub=Free+Inspection+%C2%B7+BRE+Builders+NV+%230085999&badge=Deck+Safety`, alt: 'Blue Reef Builders — How to Tell If Your Deck Is Dangerous — 8 Red Flags | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/how-to-tell-if-deck-is-dangerous/` },
 }
 

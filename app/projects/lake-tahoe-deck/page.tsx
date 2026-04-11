@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   title: 'Lake Tahoe Deck & Balcony Structural Repair | Portfolio',
   description: 'Deck and balcony structural repair at Lake Tahoe, NV. Steel bracket reinforcement, structural assessment. NV License #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Deck+Structural+Repair&sub=Steel+Bracket+Reinforcement+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Deck+Structural+Repair&sub=Steel+Bracket+Reinforcement+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Lake Tahoe Deck & Balcony Structural Repair | Portfolio', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lake Tahoe Deck & Balcony Structural Repair | Portfolio',
+    description: 'Deck and balcony structural repair at Lake Tahoe, NV. Steel bracket reinforcement, structural assessment. NV License #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Lake+Tahoe+Deck+Structural+Repair&sub=Steel+Bracket+Reinforcement+%C2%B7+Lake+Tahoe+NV&badge=Portfolio`, alt: 'Blue Reef Builders — Lake Tahoe Deck & Balcony Structural Repair | Portfolio' }],
   },
   alternates: { canonical: `${SITE_URL}/portfolio/lake-tahoe-deck-balcony-structural-repair/` },
 }

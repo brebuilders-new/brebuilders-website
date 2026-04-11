@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   description:
     'Answers to common questions about BRE Builders — services, pricing, timelines, materials, warranty, licensing, and service areas.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=FAQ+BRE+Builders+Reno+NV&sub=Licensing+%C2%B7+Permits+%C2%B7+Timelines+%C2%B7+ADU+Costs&badge=FAQ`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=FAQ+BRE+Builders+Reno+NV&sub=Licensing+%C2%B7+Permits+%C2%B7+Timelines+%C2%B7+ADU+Costs&badge=FAQ`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — FAQ — Licensed Contractor Reno NV | Common Questions', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ — Licensed Contractor Reno NV | Common Questions',
+    description: 'Answers to common questions about BRE Builders — services, pricing, timelines, materials, warranty, licensing, and service areas.',
+    images: [{ url: `${SITE_URL}/api/og?title=FAQ+BRE+Builders+Reno+NV&sub=Licensing+%C2%B7+Permits+%C2%B7+Timelines+%C2%B7+ADU+Costs&badge=FAQ`, alt: 'Blue Reef Builders — FAQ — Licensed Contractor Reno NV | Common Questions' }],
   },
   alternates: { canonical: `${SITE_URL}/frequently-asked-questions-bre-builders/` },
 }

@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Loft & Condo Remodeling Reno NV | HOA-Compliant',
   description: 'Loft and condo remodeling in Reno, NV. Custom layouts, kitchen & bath upgrades, HOA-compliant work. Licensed NV #0085999. Free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Loft+%26+Condo+Remodeling&sub=Modern+Renovations+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Residential`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Loft+%26+Condo+Remodeling&sub=Modern+Renovations+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Residential`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Loft & Condo Remodeling Reno NV | HOA-Compliant', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Loft & Condo Remodeling Reno NV | HOA-Compliant',
+    description: 'Loft and condo remodeling in Reno, NV. Custom layouts, kitchen & bath upgrades, HOA-compliant work. Licensed NV #0085999. Free estimates.',
+    images: [{ url: `${SITE_URL}/api/og?title=Loft+%26+Condo+Remodeling&sub=Modern+Renovations+%C2%B7+Reno+NV+%C2%B7+NV+%230085999&badge=Residential`, alt: 'Blue Reef Builders — Loft & Condo Remodeling Reno NV | HOA-Compliant' }],
   },
   alternates: { canonical: `${SITE_URL}/lofts-and-condo-remodels/` },
 }

@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Projects & Portfolio | Reno NV & California',
   description: 'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial. Northern Nevada and California since 1989. NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Projects+%26+Portfolio+%7C+BRE+Builders&sub=Custom+Homes+%C2%B7+ADUs+%C2%B7+Structural+Repairs+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Projects+%26+Portfolio+%7C+BRE+Builders&sub=Custom+Homes+%C2%B7+ADUs+%C2%B7+Structural+Repairs+%C2%B7+NV+%230085999&badge=Portfolio`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Projects & Portfolio | Reno NV & California', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Projects & Portfolio | Reno NV & California',
+    description: 'BRE Builders project portfolio — custom homes, ADUs, structural repairs, decks, commercial. Northern Nevada and California since 1989. NV #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Projects+%26+Portfolio+%7C+BRE+Builders&sub=Custom+Homes+%C2%B7+ADUs+%C2%B7+Structural+Repairs+%C2%B7+NV+%230085999&badge=Portfolio`, alt: 'Blue Reef Builders — Projects & Portfolio | Reno NV & California' }],
   },
   alternates: { canonical: `${SITE_URL}/projects/` },
 }

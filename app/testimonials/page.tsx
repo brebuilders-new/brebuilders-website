@@ -11,7 +11,15 @@ export const metadata: Metadata = {
   title: 'What Do Clients Say About Blue Reef Builders in Reno, NV?',
   description: 'Discover real reviews from clients who have worked with Blue Reef Builders. Exceptional construction and remodeling in Reno, NV. Licensed NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Client+Testimonials&sub=Real+Reviews+%C2%B7+Blue+Reef+Builders+Reno+NV&badge=Reviews`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Client+Testimonials&sub=Real+Reviews+%C2%B7+Blue+Reef+Builders+Reno+NV&badge=Reviews`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — What Do Clients Say About Blue Reef Builders in Reno, NV?', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'What Do Clients Say About Blue Reef Builders in Reno, NV?',
+    description: 'Discover real reviews from clients who have worked with Blue Reef Builders. Exceptional construction and remodeling in Reno, NV. Licensed NV #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Client+Testimonials&sub=Real+Reviews+%C2%B7+Blue+Reef+Builders+Reno+NV&badge=Reviews`, alt: 'Blue Reef Builders — What Do Clients Say About Blue Reef Builders in Reno, NV?' }],
   },
   alternates: { canonical: `${SITE_URL}/testimonials/` },
 }

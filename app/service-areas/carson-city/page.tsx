@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     description: "BRE Builders serves Carson City, NV — ADU construction, structural repairs, remodeling. Elevation-specific construction expertise. NV #0085999. Free estimates.",
     url: CANONICAL,
     type: 'website',
-    images: [{ url: `${SITE_URL}/api/og?title=General+Contractor+Carson+City+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+NV+%230085999+%C2%B7+Since+1989&badge=Carson+City`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=General+Contractor+Carson+City+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+NV+%230085999+%C2%B7+Since+1989&badge=Carson+City`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — General Contractor Carson City NV | Since 1989', }],
     siteName: 'BRE Builders',
     locale: 'en_US',
   },
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
     description: 'Licensed contractor serving Carson City, NV. ADUs, repairs, remodeling. NV #0085999. Free estimates.',
     images: [`${SITE_URL}/api/og?title=General+Contractor+Carson+City+NV&sub=ADUs+%C2%B7+Repairs+%C2%B7+NV+%230085999&badge=Carson+City`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: CANONICAL },
 }
 

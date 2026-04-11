@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: 'Deck Builder Reno NV — Cost, Permits & What to Expect in 2026',
   description: 'Deck construction and repair costs in Reno NV and Lake Tahoe. New decks start at $18,000. BRE Builders — licensed deck builder NV #0085999 since 1989.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV&sub=Cost%2C+Permits+%26+Timeline+%C2%B7+2026&badge=Decks`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV&sub=Cost%2C+Permits+%26+Timeline+%C2%B7+2026&badge=Decks`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Deck Builder Reno NV — Cost, Permits & What to Expect in 2026', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Deck Builder Reno NV — Cost, Permits & What to Expect in 2026',
+    description: 'Deck construction and repair costs in Reno NV and Lake Tahoe. New decks start at $18,000. BRE Builders — licensed deck builder NV #0085999 since 1989.',
+    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV&sub=Cost%2C+Permits+%26+Timeline+%C2%B7+2026&badge=Decks`, alt: 'Blue Reef Builders — Deck Builder Reno NV — Cost, Permits & What to Expect in 2026' }],
   },
   alternates: { canonical: `${SITE_URL}/blog/deck-builder-reno-nv/` },
 }

@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Spot Hidden Water Damage Before Buying a Reno Home | BRE Builders',
   description: 'Hidden water damage is the most expensive surprise in Reno home purchases. Here are the visual signs, tools, and professional evaluation steps that protect buyers. BRE Builders NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+to+Spot+Hidden+Water+Damage+Before+Buying+a+Ho&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Buying`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=How+to+Spot+Hidden+Water+Damage+Before+Buying+a+Ho&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Buying`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Spot Hidden Water Damage Before Buying a Reno Home | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spot Hidden Water Damage Before Buying a Reno Home | BRE Builders',
+    description: 'Hidden water damage is the most expensive surprise in Reno home purchases. Here are the visual signs, tools, and professional evaluation steps that protect',
+    images: [{ url: `${SITE_URL}/api/og?title=How+to+Spot+Hidden+Water+Damage+Before+Buying+a+Ho&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Buying`, alt: 'Blue Reef Builders — Spot Hidden Water Damage Before Buying a Reno Home | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/spot-hidden-water-damage-buying-home-reno/` },
 }
 

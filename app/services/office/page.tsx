@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Office Construction Contractors Reno NV | BRE Builders',
   description: 'Office construction and build-out contractors in Reno, NV. New office builds, tenant improvements, medical offices, ADA compliance. Licensed NV #0085999.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Office+Construction+Reno+NV&sub=Build-Outs+%C2%B7+Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Office+Construction+Reno+NV&sub=Build-Outs+%C2%B7+Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Office Construction Contractors Reno NV | BRE Builders', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Office Construction Contractors Reno NV | BRE Builders',
+    description: 'Office construction and build-out contractors in Reno, NV. New office builds, tenant improvements, medical offices, ADA compliance. Licensed NV #0085999.',
+    images: [{ url: `${SITE_URL}/api/og?title=Office+Construction+Reno+NV&sub=Build-Outs+%C2%B7+Tenant+Improvements+%C2%B7+NV+%230085999&badge=Commercial`, alt: 'Blue Reef Builders — Office Construction Contractors Reno NV | BRE Builders' }],
   },
   alternates: { canonical: `${SITE_URL}/office/` },
 }

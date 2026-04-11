@@ -28,7 +28,15 @@ export const metadata: Metadata = {
     images: [{
       url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Builds+%C2%B7+35%2B+Years+%C2%B7+NV+%230085999&badge=New+Construction`,
       width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Custom Home Builder Reno NV | New Home Builds | BRE Builders',
     }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Custom Home Builder Reno NV | New Home Builds | BRE Builders',
+    description: 'Licensed custom home builder in Reno NV. Ground-up new home construction in Reno, Sparks, Lake Tahoe & Northern California. Design-build, permits handled. ',
+    images: [{ url: `${SITE_URL}/api/og?title=Custom+Home+Builder+Reno+NV&sub=Ground-Up+Builds+%C2%B7+35%2B+Years+%C2%B7+NV+%230085999&badge=New+Construction`, alt: 'Blue Reef Builders — Custom Home Builder Reno NV | New Home Builds | BRE Builders' }],
   },
   alternates: { canonical: `${SITE_URL}/services/new-home-builds/` },
 }

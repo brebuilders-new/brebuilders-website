@@ -8,7 +8,15 @@ export const metadata: Metadata = {
   title: '5 Signs It\'s Time to Remodel Your Kitchen — #2 Hurts Your Home Value',
   description: '5 clear signs your Reno kitchen needs a remodel. Warning #2 is quietly costing you equity. BRE Builders kitchen remodeling experts — free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=5+Signs+Your+Kitchen+Needs+a+Remodel&sub=%232+Hurts+Your+Home+Value+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=5+Signs+Your+Kitchen+Needs+a+Remodel&sub=%232+Hurts+Your+Home+Value+%C2%B7+Reno+NV&badge=Kitchen`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — 5 Signs Its Time to Remodel Your Kitchen', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: '5 Signs Its Time to Remodel Your Kitchen — BRE Builders',
+    description: '5 clear signs your Reno kitchen needs a remodel. Warning #2 is quietly costing you equity. BRE Builders kitchen remodeling experts — free estimates.',
+    images: [{ url: `${SITE_URL}/api/og?title=5+Signs+Your+Kitchen+Needs+a+Remodel&sub=%232+Hurts+Your+Home+Value+%C2%B7+Reno+NV&badge=Kitchen`, alt: 'Blue Reef Builders — 5 Signs Its Time to Remodel Your Kitchen' }],
   },
   alternates: { canonical: `${SITE_URL}/5-signs-its-time-to-remodel-your-kitchen/` },
 }

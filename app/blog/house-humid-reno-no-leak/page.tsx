@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Why Is My House Humid in Reno With No Leak? | BRE Builders',
   description: 'Reno\'s dry climate doesn\'t prevent indoor humidity. Daily activities, poor ventilation, and unprotected crawlspaces all contribute. BRE Builders explains the causes and solutions. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Why+Is+My+House+So+Humid+in+Reno+Even+Without+a+Le&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Moisture`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Why+Is+My+House+So+Humid+in+Reno+Even+Without+a+Le&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Moisture`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Why Is My House Humid in Reno With No Leak? | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Why Is My House Humid in Reno With No Leak? | BRE Builders',
+    description: "Reno's dry climate doesn't prevent indoor humidity. Daily activities, poor ventilation, and unprotected crawlspaces all contribute. BRE Builders explains the causes and solutions. NV #0085999.",
+    images: [{ url: `${SITE_URL}/api/og?title=Why+Is+My+House+So+Humid+in+Reno+Even+Without+a+Le&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Moisture`, alt: 'Blue Reef Builders — Why Is My House Humid in Reno With No Leak? | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/house-humid-reno-no-leak/` },
 }
 

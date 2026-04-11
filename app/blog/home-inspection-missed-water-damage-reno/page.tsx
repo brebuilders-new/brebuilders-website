@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Home Inspection Missed Water Damage Reno? What to Do | BRE Builders',
   description: 'Reno home inspectors often miss mold, hidden water damage, and structural issues. Here is what inspectors overlook, warning signs to check yourself, and how BRE Builders evaluates what they miss. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=What+to+Do+If+Your+Home+Inspection+Missed+Mold+or+&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Water+Damage`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=What+to+Do+If+Your+Home+Inspection+Missed+Mold+or+&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Water+Damage`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Home Inspection Missed Water Damage Reno? What to Do | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Home Inspection Missed Water Damage Reno? What to Do | BRE Builders',
+    description: 'Reno home inspectors often miss mold, hidden water damage, and structural issues. Here is what inspectors overlook, warning signs to check yourself, and ho',
+    images: [{ url: `${SITE_URL}/api/og?title=What+to+Do+If+Your+Home+Inspection+Missed+Mold+or+&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Water+Damage`, alt: 'Blue Reef Builders — Home Inspection Missed Water Damage Reno? What to Do | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/home-inspection-missed-water-damage-reno/` },
 }
 

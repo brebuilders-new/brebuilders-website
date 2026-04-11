@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Upgrade Bathroom Fan Before Winter Reno NV | BRE Builders',
   description: 'Bathroom fans that vent into attics trap moisture and cause mold damage over winter in Reno. BRE Builders explains how to check yours, the signs it needs replacement, and what the fix involves. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Why+You+Should+Upgrade+Your+Bathroom+Fan+Before+Wi&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Prep`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Why+You+Should+Upgrade+Your+Bathroom+Fan+Before+Wi&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Prep`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Upgrade Bathroom Fan Before Winter Reno NV | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Upgrade Bathroom Fan Before Winter Reno NV | BRE Builders',
+    description: 'Bathroom fans that vent into attics trap moisture and cause mold damage over winter in Reno. BRE Builders explains how to check yours, the signs it needs r',
+    images: [{ url: `${SITE_URL}/api/og?title=Why+You+Should+Upgrade+Your+Bathroom+Fan+Before+Wi&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Prep`, alt: 'Blue Reef Builders — Upgrade Bathroom Fan Before Winter Reno NV | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/bathroom-fan-upgrade-reno-winter/` },
 }
 

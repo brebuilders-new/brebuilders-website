@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     description: 'BRE Builders serves Northern California for custom homes, structural repairs, remodeling, and commercial construction. Proven work in Ripon CA. CA #1093798 · NV #0085999.',
     url: 'https://brebuilders.com/service-areas/northern-california/',
     type: 'website',
-    images: [{ url: `${SITE_URL}/api/og?title=Northern+California+Contractor&sub=Custom+Homes+%C2%B7+CA+Lic+%231093798+%C2%B7+Proven+Work+in+Ripon+CA&badge=Northern+CA`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Northern+California+Contractor&sub=Custom+Homes+%C2%B7+CA+Lic+%231093798+%C2%B7+Proven+Work+in+Ripon+CA&badge=Northern+CA`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Northern California Contractor | CA Lic #1093798', }],
     siteName: 'BRE Builders',
     locale: 'en_US',
   },
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     description: 'Custom homes, repairs, remodeling. CA #1093798. Proven work in Ripon CA.',
     images: [`${SITE_URL}/api/og?title=Northern+California+Contractor&sub=CA+Lic+%231093798+%C2%B7+Ripon+CA&badge=Northern+CA`],
   },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: `${SITE_URL}/service-areas/northern-california/` },
 }
 

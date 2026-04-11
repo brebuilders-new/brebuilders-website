@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: 'Top Home Repairs for 20-Year-Old Reno Houses 2025 | BRE Builders',
   description: 'Reno homes built in the early 2000s are hitting the 20-year mark. Plumbing, roofing, electrical, and structural issues are common at this age. BRE Builders explains what to check. NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Top+Home+Repairs+for+20-Year-Old+Reno+Houses+in+20&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Maintenance`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=Top+Home+Repairs+for+20-Year-Old+Reno+Houses+in+20&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Maintenance`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Top Home Repairs for 20-Year-Old Reno Houses 2025 | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Top Home Repairs for 20-Year-Old Reno Houses 2025 | BRE Builders',
+    description: 'Reno homes built in the early 2000s are hitting the 20-year mark. Plumbing, roofing, electrical, and structural issues are common at this age. BRE Builders',
+    images: [{ url: `${SITE_URL}/api/og?title=Top+Home+Repairs+for+20-Year-Old+Reno+Houses+in+20&sub=BRE+Builders+%C2%B7+NV+%230085999+%C2%B7+Free+Evaluation&badge=Home+Maintenance`, alt: 'Blue Reef Builders — Top Home Repairs for 20-Year-Old Reno Houses 2025 | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/reno-home-repairs-needed-2025/` },
 }
 

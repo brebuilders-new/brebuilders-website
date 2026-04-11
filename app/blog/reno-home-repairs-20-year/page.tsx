@@ -7,7 +7,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 export const metadata: Metadata = {
   title: '20-Year-Old Reno Homes — 8 Issues to Repair Before They Worsen | BRE Builders',
   description: 'At 20 years, Reno homes face hidden wear — attic mold, sagging kitchen floors, faulty breaker panels, shifting porch columns, basement water intrusion. BRE Builders NV #0085999.',
-  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=8+Hidden+Issues+in+Early+2000s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630 }] },
+  openGraph: { images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=8+Hidden+Issues+in+Early+2000s+Reno+Homes&badge=Structural+Repairs`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — 20-Year-Old Reno Homes — 8 Issues to Repair Before They Worsen | BRE Builders', }] },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: '20-Year-Old Reno Homes — 8 Issues to Repair Before They Worsen | BRE B',
+    description: 'At 20 years, Reno homes face hidden wear — attic mold, sagging kitchen floors, faulty breaker panels, shifting porch columns, basement water intrusion. BRE',
+    images: [{ url: `${SITE_URL}/api/og?title=20-Year-Old+Reno+Home+Repairs&sub=8+Hidden+Issues+in+Early+2000s+Reno+Homes&badge=Structural+Repairs`, alt: 'Blue Reef Builders — 20-Year-Old Reno Homes — 8 Issues to Repair Before They Worsen | BRE Builders' }],
+  },
   alternates: { canonical: `${SITE_URL}/blog/reno-home-repairs-20-year/` },
 }
 

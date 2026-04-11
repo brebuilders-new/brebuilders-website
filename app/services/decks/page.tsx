@@ -16,7 +16,15 @@ export const metadata: Metadata = {
   title: 'Deck Contractors Reno NV | New Builds & Structural Repair',
   description: 'Licensed deck contractors in Reno NV. New deck builds, structural repair, snow-load rated framing for Tahoe. NV #0085999. 35+ years. Free estimate.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Deck Contractors Reno NV | New Builds & Structural Repair', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Deck Contractors Reno NV | New Builds & Structural Repair',
+    description: 'Licensed deck contractors in Reno NV. New deck builds, structural repair, snow-load rated framing for Tahoe. NV #0085999. 35+ years. Free estimate.',
+    images: [{ url: `${SITE_URL}/api/og?title=Deck+Builder+Reno+NV+%26+Lake+Tahoe&sub=New+Decks+%C2%B7+Structural+Repair+%C2%B7+Snow+Load+Expertise&badge=Decks`, alt: 'Blue Reef Builders — Deck Contractors Reno NV | New Builds & Structural Repair' }],
   },
   alternates: { canonical: `${SITE_URL}/decks/` },
 }

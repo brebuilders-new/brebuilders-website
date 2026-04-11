@@ -12,7 +12,15 @@ export const metadata: Metadata = {
   title: 'Commercial Contractor Reno NV | Tenant Improvements',
   description: 'Commercial contractor in Reno NV. Tenant improvement contractors for office, retail, warehouse builds. Licensed NV #0085999 · CA #1093798. Free estimates.',
   openGraph: {
-    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Commercial`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Commercial`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Commercial Contractor Reno NV | Tenant Improvements', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Commercial Contractor Reno NV | Tenant Improvements',
+    description: 'Commercial contractor in Reno NV. Tenant improvement contractors for office, retail, warehouse builds. Licensed NV #0085999 · CA #1093798. Free estimates.',
+    images: [{ url: `${SITE_URL}/api/og?title=Commercial+Contractor+Reno+NV&sub=Tenant+Improvements+%C2%B7+NV+%230085999+%C2%B7+CA+%231093798&badge=Commercial`, alt: 'Blue Reef Builders — Commercial Contractor Reno NV | Tenant Improvements' }],
   },
   alternates: { canonical: `${SITE_URL}/commercial-services/` },
 }

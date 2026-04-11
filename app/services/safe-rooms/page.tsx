@@ -21,7 +21,15 @@ export const metadata: Metadata = {
   description: 'Safe rooms and panic rooms built by a licensed GC in Reno, Lake Tahoe, and Northern California. Reinforced concrete and framing. Permits handled. NV #0085999 · CA #1093798. Free consultation.',
   openGraph: {
     title: 'Safe Rooms & Panic Rooms Reno NV | BRE Builders',
-    images: [{ url: `${SITE_URL}/api/og?title=Safe+Rooms+%26+Panic+Rooms&sub=Licensed+GC+%C2%B7+Reno+NV+%26+Northern+CA+%C2%B7+NV+%230085999`, width: 1200, height: 630 }],
+    images: [{ url: `${SITE_URL}/api/og?title=Safe+Rooms+%26+Panic+Rooms&sub=Licensed+GC+%C2%B7+Reno+NV+%26+Northern+CA+%C2%B7+NV+%230085999`, width: 1200, height: 630,
+      alt: 'Blue Reef Builders — Safe Rooms & Panic Rooms Reno NV | Licensed Contractor | BRE Builders', }],
+  },
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Safe Rooms & Panic Rooms Reno NV | Licensed Contractor | BRE Builders',
+    description: 'Safe rooms and panic rooms built by a licensed GC in Reno, Lake Tahoe, and Northern California. Reinforced concrete and framing. Permits handled. NV #00859',
+    images: [{ url: `${SITE_URL}/api/og?title=Safe+Rooms+%26+Panic+Rooms&sub=Licensed+GC+%C2%B7+Reno+NV+%26+Northern+CA+%C2%B7+NV+%230085999`, alt: 'Blue Reef Builders — Safe Rooms & Panic Rooms Reno NV | Licensed Contractor | BRE Builders' }],
   },
   alternates: { canonical: `${SITE_URL}/services/safe-rooms/` },
 }

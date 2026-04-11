@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import ServiceTemplate, {
   SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
@@ -191,6 +192,13 @@ export default function LoftCondoPage() {
             { label: 'Structural Repairs', href: '/services/repairs', desc: 'BRE Builders Reno NV' },
             { label: 'ADU Construction', href: '/services/adu', desc: 'BRE Builders Reno NV' },
           ]} />
+          <div className="container pb-10">
+            <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal/60 mb-4">Portfolio — Completed Projects</p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/projects/rio-tinto/" className="btn-ghost text-[13px] py-2.5 px-5">View: Residential Renovation — Reno NV →</Link>
+              <Link href="/projects/glenbrook-lake-tahoe/" className="btn-ghost text-[13px] py-2.5 px-5">View: Full Home Renovation — Glenbrook →</Link>
+            </div>
+          </div>
         </>
       }
     />

@@ -170,6 +170,10 @@ export default function CommercialPage() {
                 </Link>
               ))}
             </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/projects/car-wash/" className="btn-ghost text-[13px] py-2.5 px-5">View: Car Wash Construction — Reno NV →</Link>
+              <Link href="/projects/warehouse-metal-buildings/" className="btn-ghost text-[13px] py-2.5 px-5">View: Warehouse & Metal Building →</Link>
+            </div>
           </div>
         </section>
 

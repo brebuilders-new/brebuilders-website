@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import ServiceTemplate, {
   SectionLabel, SectionHeading, SpeakableBlock, PageSection, MobileCTABox,
   DesktopCTASection, RelatedServices, ServiceFAQSection,
@@ -192,6 +193,10 @@ export default function OfficePage() {
             { label: 'Warehouse & Metal', href: '/services/warehouse', desc: 'BRE Builders Reno NV' },
             { label: 'Lofts & Condos', href: '/services/lofts-condos', desc: 'BRE Builders Reno NV' },
           ]} />
+          <div className="flex flex-wrap gap-3 mt-6 mb-2">
+            <Link href="/projects/car-wash/" className="btn-ghost text-[13px] py-2.5 px-5">View: Commercial Construction — Reno NV →</Link>
+            <Link href="/projects/warehouse-metal-buildings/" className="btn-ghost text-[13px] py-2.5 px-5">View: Warehouse & Metal Building →</Link>
+          </div>
         </>
       }
     />

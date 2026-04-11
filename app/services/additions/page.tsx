@@ -203,6 +203,15 @@ export default function AdditionsPage() {
           { label: 'Structural Repairs', href: '/services/repairs/', desc: 'Fix before you add' },
         ]} />
 
+        <div className="container pb-10">
+          <p className="font-mono text-[10px] tracking-[2px] uppercase text-teal/60 mb-4">Portfolio — Completed Projects</p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/projects/lake-tahoe-renovation/" className="btn-ghost text-[13px] py-2.5 px-5">View: Full Home Renovation — Lake Tahoe →</Link>
+            <Link href="/projects/glenbrook-lake-tahoe/" className="btn-ghost text-[13px] py-2.5 px-5">View: Full Home Renovation — Glenbrook →</Link>
+            <Link href="/projects/rio-tinto/" className="btn-ghost text-[13px] py-2.5 px-5">View: Residential Renovation — Reno NV →</Link>
+          </div>
+        </div>
+
         <MobileCTABox
           headline="Why move when you can add?"
           subtext="Free estimate + site visit. NV #0085999. 35+ years in Reno."

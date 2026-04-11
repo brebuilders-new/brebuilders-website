@@ -197,6 +197,9 @@ export default function ADUPage() {
             ]}
             aspectClass="h-56"
           />
+          <div className="flex flex-wrap gap-3 mt-8">
+            <Link href="/projects/adus/" className="btn-ghost text-[13px] py-2.5 px-5">View: ADU Portfolio — Reno & Northern Nevada →</Link>
+          </div>
         </PageSection>
 
         {/* Process */}

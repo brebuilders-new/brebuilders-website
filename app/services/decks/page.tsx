@@ -141,6 +141,11 @@ export default function DecksPage() {
             ]}
             aspectClass="h-56"
           />
+          <div className="flex flex-wrap gap-3 mt-8">
+            <Link href="/projects/charolettes-deck/" className="btn-ghost text-[13px] py-2.5 px-5">View: Custom Deck — Reno NV →</Link>
+            <Link href="/projects/arun-deck-repair/" className="btn-ghost text-[13px] py-2.5 px-5">View: Hillside Deck Repair — Lake Tahoe →</Link>
+            <Link href="/projects/lake-tahoe-deck/" className="btn-ghost text-[13px] py-2.5 px-5">View: Structural Deck Repair — Lake Tahoe →</Link>
+          </div>
         </PageSection>
 
         <ServiceFAQSection

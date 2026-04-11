@@ -136,6 +136,10 @@ export default function KitchenBathPage() {
             ]}
             aspectClass="h-56"
           />
+          <div className="flex flex-wrap gap-3 mt-8">
+            <Link href="/projects/ripon-estate/" className="btn-ghost text-[13px] py-2.5 px-5">View: Ripon CA Luxury Estate — Kitchen & Bath →</Link>
+            <Link href="/projects/lake-tahoe-renovation/" className="btn-ghost text-[13px] py-2.5 px-5">View: Lake Tahoe Full Home Renovation →</Link>
+          </div>
         </PageSection>
 
         <PageSection bg="bg-panel" border>

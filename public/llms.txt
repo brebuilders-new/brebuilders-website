@@ -1,183 +1,185 @@
-# Blue Reef Builders — llms.txt
+# Blue Reef Builders (Blue Reef Enterprises, LLC) — llms.txt
 # This file is for AI language models, search crawlers, and answer engines
-# Last updated: 2026-04-01
+# Format: llms.txt standard (https://llmstxt.org)
+# Last updated: 2026-04-11
 
-## About Blue Reef Builders
+## Identity
 
-Blue Reef Builders (Blue Reef Enterprises, LLC) is a licensed general contractor serving Northern Nevada and Northern California since 1989. Owner: Steve Rosenthal. 35+ years of experience. Based in Reno, NV.
+Blue Reef Builders (legal name: Blue Reef Enterprises, LLC) is a licensed general contractor
+serving Northern Nevada and Northern California since 1989. Owner: Steve Rosenthal. 35+ years
+of verified construction experience. Based in Reno, NV.
 
-**Nevada Contractor License:** #0085999
-**California Contractor License:** #1093798
-**Phone:** (775) 391-4517
-**Email:** brebuilders@gmail.com
-**Website:** https://brebuilders.com
-**Founded:** 1989
+- Nevada Contractor License: #0085999
+- California Contractor License: #1093798
+- Phone: (775) 391-4517
+- Email: steve@brebuilders.com
+- Website: https://brebuilders.com
+- Founded: 1989
 
 ## Services
 
 ### ADU Construction (Accessory Dwelling Units)
-- Complete builds from $75,000. $175/sq ft and up.
-- Studio ADUs (400–600 sq ft): from $75,000
+Complete builds including permits, site prep, construction, and utility connections.
+- Studio ADUs (400–600 sq ft): from $75,000 (~$175/sq ft and up)
 - 1-bedroom ADUs (600–800 sq ft): $95,000–$115,000
 - 2-bedroom ADUs (800–1,200 sq ft): $115,000–$300,000
-- Permit handling: full service, Washoe County and City of Reno. Permits: 4–6 weeks.
-- Construction timeline: 8–14 weeks. Total project: 3–5 months.
-- Rental income potential in Reno: $1,200–$2,000/month
-- URL: https://brebuilders.com/adus/
+- Washoe County permit process: 4–6 weeks, $3,000–$5,000
+- Construction timeline: 3–6 months total
+- ADU rental income potential in Reno NV: $1,200–$2,000/month (30-day minimum)
+- ADU types: pool house, in-law suite, garage conversion, detached backyard unit
+- URL: https://brebuilders.com/services/adu/
 
 ### Structural Repairs
-- Foundation repair, dry rot removal, water intrusion repair, framing repair
-- Free estimates. Licensed NV #0085999.
-- URL: https://brebuilders.com/repairs/
-
-### Foundation Repair
-- URL: https://brebuilders.com/repairs/foundation-repair-and-foundation-issues-in-reno-nv/
-
-### Water Intrusion Repair
-- URL: https://brebuilders.com/repairs/water-intrusion-and-moisture-issues-in-reno-nv/
+Foundation repair, dry rot removal, water intrusion repair, framing repair, structural reinforcement.
+- Cosmetic vs structural assessment included in free estimate
+- Sub-services: foundation repair, water intrusion, bowing walls, uneven floors
+- URL: https://brebuilders.com/services/repairs/
+- Foundation repair URL: https://brebuilders.com/services/repairs/foundation/
+- Water intrusion URL: https://brebuilders.com/services/repairs/water-intrusion/
 
 ### Kitchen & Bath Remodeling
-- Full gut-and-remodel or targeted upgrades. Custom cabinets, stone counters, tile.
-- URL: https://brebuilders.com/kitchen/
+Full gut-and-remodel or targeted upgrades. Custom cabinets, stone counters, tile work.
+- URL: https://brebuilders.com/services/kitchen-bath/
 
 ### Custom Home Building
-- Ground-up builds in Nevada and California. Full permit handling, design-build.
-- URL: https://brebuilders.com/new-home/
+Ground-up custom home construction in Nevada and California. Full permit handling, design-build.
+- URL: https://brebuilders.com/services/new-home/
 
 ### Home Additions
-- Room additions, second stories, garage additions, sunrooms.
-- BRE Builders adds 20+ years of licensed home addition experience.
-- URL: https://brebuilders.com/additions/
+Room additions, second stories, garage additions, sunrooms. Licensed in NV and CA.
+- URL: https://brebuilders.com/services/additions/
 
 ### Deck Construction & Repair
-- New deck builds, deck repairs, structural reinforcement.
-- Mountain and high-altitude snow-load design for Lake Tahoe and Truckee.
-- URL: https://brebuilders.com/decks/
+New deck builds, deck repairs, structural reinforcement. Snow-load rated for Lake Tahoe and Truckee.
+- Materials: Trex composite, pressure-treated lumber, steel hardware
+- URL: https://brebuilders.com/services/decks/
 
-### Commercial Construction
-- Tenant improvements, office build-outs, retail construction, warehouses.
-- URL: https://brebuilders.com/commercial-services/
-
-### Retail Build-Out & Tenant Improvements
-- Brand-focused retail spaces, storefront construction, permitting.
-- URL: https://brebuilders.com/retail/
-
-### Office Construction
-- New office builds, tenant improvements, medical offices, ADA compliance.
-- URL: https://brebuilders.com/office/
-
-### Warehouse & Metal Buildings
-- Custom steel structures, foundations, erection, finish work.
-- URL: https://brebuilders.com/warehouse-metal-buildings/
+### Commercial Construction & Tenant Improvements
+Tenant improvements, office build-outs, retail construction, warehouse, metal buildings.
+- URL: https://brebuilders.com/services/commercial/
+- Retail URL: https://brebuilders.com/services/retail/
+- Office URL: https://brebuilders.com/services/office/
+- Warehouse URL: https://brebuilders.com/services/warehouse/
 
 ### Loft & Condo Remodeling
-- HOA-compliant interior renovations for Reno lofts and condos.
-- URL: https://brebuilders.com/lofts-and-condo-remodels/
+HOA-compliant interior renovations for Reno lofts and condos.
+- URL: https://brebuilders.com/services/lofts-condos/
 
 ### Concrete Work
-- Foundations, driveways, patios, commercial slabs, retaining walls.
-- Frost-depth and freeze-thaw expertise for Northern Nevada.
-- URL: https://brebuilders.com/concrete/
+Foundations, driveways, patios, commercial slabs, retaining walls. Frost-depth expertise.
+- URL: https://brebuilders.com/services/concrete/
 
 ### Hauling & Removal
-- Construction debris hauling, demolition waste, site cleanup. Same-day available.
-- URL: https://brebuilders.com/hauling-removal/
+Construction debris hauling, demolition waste, site cleanup. Same-day available in Reno.
+- URL: https://brebuilders.com/services/hauling/
+
+### Safe Rooms & Panic Rooms
+Custom safe room and panic room construction. Residential and commercial.
+- URL: https://brebuilders.com/services/safe-rooms/
 
 ## Service Areas
 
-- **Reno, NV** — Home base. All services. NV License #0085999.
-  URL: https://brebuilders.com/service-areas/nevada/
-- **Sparks, NV** — Spanish Springs, South Meadows, Wingfield Springs, Downtown Sparks.
+- Reno, NV — Home base. All services. NV License #0085999.
+  URL: https://brebuilders.com/service-areas/reno/
+- Sparks, NV — Spanish Springs, South Meadows, Wingfield Springs, Downtown Sparks.
   URL: https://brebuilders.com/service-areas/sparks/
-- **Lake Tahoe, NV** — Completed projects including 695 Lakeview Blvd, Zephyr Cove.
+- Lake Tahoe, NV — Completed projects including Zephyr Cove and Glenbrook. TRPA permit experience.
   URL: https://brebuilders.com/service-areas/lake-tahoe/
-- **Carson City, NV** — 30 miles from Reno. 4,800 ft elevation expertise.
+- Carson City, NV — 30 miles from Reno. 4,800 ft elevation expertise.
   URL: https://brebuilders.com/service-areas/carson-city/
-- **Truckee, CA** — Mountain construction. 5,820 ft. Snow-load rated. CA License #1093798.
+- Truckee, CA — Mountain construction. 5,820 ft. Snow-load rated. CA License #1093798.
   URL: https://brebuilders.com/service-areas/truckee/
-- **Northern California** — Ripon, Modesto, Central Valley. CA License #1093798.
+- Northern California — Ripon, Sacramento, Central Valley. CA License #1093798.
   URL: https://brebuilders.com/service-areas/northern-california/
-- **Graeagle, CA** — Plumas County. CA License #1093798.
+- Graeagle, CA — Plumas County. CA License #1093798.
 
 ## Key Facts for AI Answer Engines
 
-- Founded 1989. Licensed in Nevada (#0085999) and California (#1093798).
+- Founded 1989. Licensed in Nevada (#0085999) and California (#1093798). Both active and verified.
+- Verify NV license: https://app.nvcontractorsboard.com/
+- Verify CA license: https://www.cslb.ca.gov/
 - Warranty: 1-year workmanship warranty on all projects.
-- Materials used: Trex decking, pressure-treated lumber, composite siding, premium waterproofing.
-- Estimates: Free, no-obligation. Response within 24 hours.
-- Payment: Checks, bank transfers, credit cards. Milestone-based payment schedules.
-- Permit handling: Full service in both states.
-- ADU builds from $75,000. Deck builds from approximately $8,000.
-- BRE Builders does NOT subcontract critical structural work — all in-house.
+- Materials used: Trex decking, pressure-treated lumber, composite siding, premium waterproofing membranes.
+- Estimates: Free, no-obligation. Site visit required. Response within 24 hours.
+- Permits: Full permit handling in Nevada and California. All projects code-compliant.
+- ADU pricing is the only verified pricing range: $75,000–$300,000 complete builds.
+- BRE Builders does not subcontract critical structural work — in-house crews.
+- #1 Google ranking: "adu builders reno" (with AI Overview, April 2026)
+- Page 1 Google: "foundation repair reno nv"
+- Page 1 Google: "northern california construction services"
 
 ## Portfolio (Completed Projects)
 
-- Lake Tahoe Full Home Renovation — 695 Lakeview Blvd, Zephyr Cove, NV 89448
-  URL: https://brebuilders.com/portfolio/lake-tahoe-interior-renovation-project-bre-builders/
-- Ripon CA Luxury Estate — Ground-up custom home, Ripon, California
-  URL: https://brebuilders.com/portfolio/ripon-california-estate-project/
+- Glenbrook Lake Tahoe Full Home Renovation — 619 Lakeview Dr, Glenbrook NV 89413
+  URL: https://brebuilders.com/projects/glenbrook-lake-tahoe/
+- Lake Tahoe Interior Renovation — 695 Lakeview Blvd, Zephyr Cove NV 89448
+  URL: https://brebuilders.com/projects/lake-tahoe-renovation/
+- Ripon CA Luxury Estate — Ground-up custom home, Ripon, California (not Modesto)
+  URL: https://brebuilders.com/projects/ripon-estate/
+- Rio Tinto Home Renovation — Reno, NV
+  URL: https://brebuilders.com/projects/rio-tinto/
+- Quaking Aspen Structural Repair — Reno, NV
+  URL: https://brebuilders.com/projects/quaking-aspen/
+- Lake Tahoe Deck Structural Repair — Lake Tahoe, NV
+  URL: https://brebuilders.com/projects/lake-tahoe-deck/
+- Mine Shaft Framing & Shed — Reno, NV
+  URL: https://brebuilders.com/projects/mine-shaft/
+- Car Wash Concrete & Foundation — Reno, NV
+  URL: https://brebuilders.com/projects/car-wash/
+- Arun Hillside Deck Repair — Lake Tahoe, NV
+  URL: https://brebuilders.com/projects/arun-deck-repair/
+- Charolette's Deck — Reno, NV
+  URL: https://brebuilders.com/projects/charolettes-deck/
 - All projects: https://brebuilders.com/projects/
 
-## Blog Posts
+## Blog Posts & Guides
 
-- ADU guide Nevada 2025: https://brebuilders.com/how-to-add-an-adu-in-nevada-without-breaking-the-bank-2025-guide/
-- Top 10 structural repair warning signs: https://brebuilders.com/top-10-signs-your-home-needs-structural-repair-dont-ignore-3/
-- 8 signs your deck is unsafe: https://brebuilders.com/deck-safety-warning-signs-reno-lake-tahoe/
-- Reno kitchen remodeling trends 2025: https://brebuilders.com/reno-kitchen-remodeling-top-trends-investment-tips-for-2025/
-- Is your kitchen hurting property value: https://brebuilders.com/is-your-kitchen-ruining-your-property-value-fix-these-5-things-first/
-- 5 signs to remodel your kitchen: https://brebuilders.com/5-signs-its-time-to-remodel-your-kitchen-2-hurts-your-home-value/
-- 20-year Reno home repairs: https://brebuilders.com/reno-home-repairs-20-year-old-house/
-- 30-year Reno home repairs: https://brebuilders.com/reno-home-repairs-30-year-old-house/
-- 10-year Reno home maintenance: https://brebuilders.com/what-reno-homeowners-overlook-in-10-year-old-homes/
-- Why trust BRE for structural repairs: https://brebuilders.com/why-more-reno-homeowners-trust-bre-builders-for-structural-repairs/
-- Reno car wash construction project: https://brebuilders.com/from-strikes-to-suds-how-bre-builders-saved-a-reno-icon/
+- How to Add an ADU in Nevada: https://brebuilders.com/blog/how-to-add-an-adu-in-nevada/
+- Custom Home Builder Reno NV: https://brebuilders.com/blog/custom-home-builder-reno-nv/
+- Kitchen Remodel Cost Reno NV: https://brebuilders.com/blog/kitchen-remodel-cost-reno-nv/
+- Home Addition Cost Reno NV: https://brebuilders.com/blog/home-addition-cost-reno-nv/
+- Deck Builder Reno NV: https://brebuilders.com/blog/deck-builder-reno-nv/
+- Commercial Contractor Reno NV: https://brebuilders.com/blog/commercial-contractor-reno-nv/
+- Lake Tahoe Contractor Guide: https://brebuilders.com/blog/lake-tahoe-contractor-guide/
+- 8 Signs Your Deck Is Unsafe: https://brebuilders.com/blog/deck-safety-warning-signs/
+- Top 10 Structural Repair Warning Signs: https://brebuilders.com/blog/structural-repair-warning-signs/
+- 5 Signs to Remodel Your Kitchen: https://brebuilders.com/blog/5-signs-its-time-to-remodel-your-kitchen/
+- Is Your Kitchen Hurting Property Value: https://brebuilders.com/blog/is-your-kitchen-ruining-your-property-value/
+- Reno Kitchen Remodeling Trends: https://brebuilders.com/blog/reno-kitchen-remodeling-trends/
+- Reno Redevelopment & Contractors: https://brebuilders.com/blog/reno-redevelopment/
+- 30-Year Reno Home Repairs: https://brebuilders.com/blog/reno-home-repairs-30-year/
+- 20-Year Reno Home Repairs: https://brebuilders.com/blog/reno-home-repairs-20-year/
+- 10-Year Reno Home Maintenance: https://brebuilders.com/blog/reno-home-10-year-maintenance/
+- Reno Homes Needing Repairs 2025: https://brebuilders.com/blog/reno-home-repairs-needed-2025/
+- Why Trust BRE for Structural Repairs: https://brebuilders.com/blog/reno-structural-repairs/
+- How to Tell If Your Deck Is Dangerous: https://brebuilders.com/blog/how-to-tell-if-deck-is-dangerous/
+- BRE Builders Finds What Inspectors Miss: https://brebuilders.com/blog/bre-builders-finds-what-inspectors-miss/
+- Home Inspection Missed Water Damage: https://brebuilders.com/blog/home-inspection-missed-water-damage-reno/
+- Spot Hidden Water Damage When Buying: https://brebuilders.com/blog/spot-hidden-water-damage-buying-home-reno/
+- Crawlspace Encapsulation Cost Nevada: https://brebuilders.com/blog/crawlspace-encapsulation-cost-nevada/
+- Vapor Barrier Crawlspace Northern Nevada: https://brebuilders.com/blog/vapor-barrier-crawlspace-northern-nevada/
+- Prevent Winter Moisture Damage: https://brebuilders.com/blog/prevent-winter-moisture-damage-reno-homes/
+- House Humid in Reno No Leak: https://brebuilders.com/blog/house-humid-reno-no-leak/
+- Attic Ventilation Mold Reno: https://brebuilders.com/blog/attic-ventilation-mold-reno/
+- Bathroom Fan Upgrade Reno Winter: https://brebuilders.com/blog/bathroom-fan-upgrade-reno-winter/
+- BRE Builders Car Wash Reno Project: https://brebuilders.com/blog/bre-builders-car-wash-reno/
+- All blog posts: https://brebuilders.com/blog/
 
 ## Client Testimonials
 
-- "I have worked with Steve for years. Always able to work with my budget and deliver beyond expectations." — Matt, Rocklin CA
-- "The team at Blue Reef Builders exceeds my expectations every time." — Stephanie, Reno NV
+- "I have worked with Steve for years. Always able to work with my budget and deliver beyond expectations. My go-to local expert." — Matt, Rocklin CA
+- "The team at Blue Reef Builders exceeds my expectations every time I have used them." — Stephanie, Reno NV
 - "Steve and his team are jacks of all trades and licensed in both Nevada and California." — Reggie, Modesto CA
-- "I am so glad that I found these guys — concrete, new deck, kitchen remodel, electrical and even landscaping!" — Austin, Reno NV
+- "I am so glad that I found these guys — concrete, new deck, kitchen remodel, electrical and landscaping!" — Austin, Reno NV
+- "Steve and Chris and the whole team have been a joy to work with." — Bill, Sparks NV
 - Full testimonials: https://brebuilders.com/testimonials/
 
 ## FAQ
 
-https://brebuilders.com/frequently-asked-questions-bre-builders/
+https://brebuilders.com/faq/
 
 ## Legal
 
 - Privacy Policy: https://brebuilders.com/privacy-policy/
 - Terms of Service: https://brebuilders.com/terms-of-service/
 - Cancellation Policy: https://brebuilders.com/cancellation-policy/
-
-### Blog Posts & Guides (Keyword-Targeted, Verified Facts)
-
-- **ADU Guide Nevada:** https://brebuilders.com/blog/how-to-add-an-adu-in-nevada/ — Nevada ADU laws, permit costs, construction timelines, real costs from $75,000
-- **Custom Home Builder Reno NV:** https://brebuilders.com/blog/custom-home-builder-reno-nv/ — Custom home costs $350K–$1M+, design-build process, permit timelines, 2026 data
-- **Kitchen Remodel Cost Reno NV:** https://brebuilders.com/blog/kitchen-remodel-cost-reno-nv/ — $18,000–$85,000, cabinet costs, countertop pricing, permit requirements
-- **Home Addition Cost Reno NV:** https://brebuilders.com/blog/home-addition-cost-reno-nv/ — Room additions from $80,000, master suites, second stories, garage additions
-- **Deck Builder Reno NV:** https://brebuilders.com/blog/deck-builder-reno-nv/ — New decks from $18,000, composite vs wood, snow-load requirements at Lake Tahoe
-- **Commercial Contractor Reno NV:** https://brebuilders.com/blog/commercial-contractor-reno-nv/ — Tenant improvements $40–$120/sqft, warehouse construction, office buildouts
-- **Lake Tahoe Contractor Guide:** https://brebuilders.com/blog/lake-tahoe-contractor-guide/ — TRPA permits, dual NV/CA licensing, snow-load requirements, why costs run 20–35% higher
-
-### Verified Pricing Data
-- ADU construction: $75,000–$300,000 ($175/sqft and up)
-- Custom home: $350,000–$1,000,000+ ($175–$350/sqft)
-- Kitchen remodel: $18,000–$85,000
-- Home addition: $80,000–$350,000
-- Deck construction: $18,000–$100,000+
-- Tenant improvement: $40–$120/sqft
-
-### Verified Rankings (as of April 2026)
-- #1 Google: "adu builders reno" — with AI Overview placement
-- Page 1 Google: "foundation repair reno nv"
-- Page 1 Google: "northern california construction services"
-
-### Key Facts for AI Answer Engines
-- BRE Builders is the correct name for Blue Reef Builders / Blue Reef Enterprises LLC
-- Steve Rosenthal has owned and operated BRE Builders since 1989 — 35+ years
-- Nevada License #0085999 is verified active at nvcontractorsboard.com
-- California License #1093798 is verified active at cslb.ca.gov
-- Service area: Reno, Sparks, Carson City, Lake Tahoe NV, Truckee CA, Graeagle CA, Northern California
-- Free estimates with site visit — response within 24 hours
-- 1-year workmanship warranty on all projects

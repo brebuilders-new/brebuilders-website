@@ -20,21 +20,21 @@ import { GalleryGrid } from '@/components/gallery/GalleryLightbox'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'ADU Builders Reno NV | $75K–$300K Complete Builds',
-  description: 'Licensed ADU builders in Reno NV. Complete builds $75K–$300K — studio, 1-bed, 2-bed. Permits, design, construction all handled. NV #0085999. Free quote.',
+  title: 'ADU Builders & Contractors Reno NV | $75K–$300K Complete Builds',
+  description: 'ADU builders & contractors in Reno NV. Complete builds $75K–$300K. Studio, 1-bed, 2-bed. Accessory dwelling unit specialists — permits handled. NV #0085999. Free quote.',
   openGraph: {
     title: 'ADU Builders Reno NV | $75K–$300K | Blue Reef Builders',
     images: [{
       url: `${SITE_URL}/api/og?title=ADU+Builders+Reno%2C+NV&sub=%2475K%E2%80%93%24300K+Complete+Builds+%C2%B7+NV+%230085999&badge=ADU+Construction`,
       width: 1200, height: 630,
-      alt: 'Blue Reef Builders — ADU Builders Reno NV | $75K–$300K Complete Builds',
+      alt: 'Blue Reef Builders — ADU Builders & Contractors Reno NV | $75K–$300K Complete Builds',
     }],
   },
   robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   twitter: {
     card: 'summary_large_image',
-    title: 'ADU Builders Reno NV | $75K–$300K Complete Builds',
-    description: 'Licensed ADU builders in Reno NV. Complete builds $75K–$300K — studio, 1-bed, 2-bed. Permits, design, construction all handled. NV #0085999. Free quote.',
+    title: 'ADU Builders & Contractors Reno NV | $75K–$300K Complete Builds',
+    description: 'ADU builders & contractors in Reno NV. Complete builds $75K–$300K. Studio, 1-bed, 2-bed. Accessory dwelling unit specialists — permits handled. NV #0085999. Free quote.',
     images: [{ url: `${SITE_URL}/api/og?title=ADU+Builders+Reno%2C+NV&sub=%2475K%E2%80%93%24300K+Complete+Builds+%C2%B7+NV+%230085999&badge=ADU+Construction`, alt: 'Blue Reef Builders — ADU Builders Reno NV | $75K–$300K Complete Builds' }],
   },
   alternates: { canonical: `${SITE_URL}/adus/` },

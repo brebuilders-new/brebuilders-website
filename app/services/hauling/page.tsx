@@ -10,18 +10,18 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Hauling & Debris Removal Reno NV | Same-Day Available',
-  description: 'Demolition and hauling services in Reno NV. Construction debris, demo waste, junk removal. Same-day available. Licensed NV #0085999. One call handles it all.',
+  title: 'Demo & Hauling Near Me | Debris Removal Reno NV | BRE Builders',
+  description: 'Demo and hauling near you in Reno NV. Construction debris removal, demolition waste, junk hauling. Same-day available. Licensed NV #0085999. One call, done.',
   openGraph: {
     images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, width: 1200, height: 630,
-      alt: 'Blue Reef Builders — Hauling & Debris Removal Reno NV | Same-Day Available', }],
+      alt: 'Blue Reef Builders — Demo & Hauling Reno NV | Same-Day Debris Removal', }],
   },
   robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hauling & Debris Removal Reno NV | Same-Day Available',
+    title: 'Demo & Hauling Near Me | Debris Removal Reno NV | BRE Builders',
     description: 'Demolition and hauling services in Reno NV. Construction debris, demo waste, junk removal. Same-day available. Licensed NV #0085999. One call handles it al',
-    images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, alt: 'Blue Reef Builders — Hauling & Debris Removal Reno NV | Same-Day Available' }],
+    images: [{ url: `${SITE_URL}/api/og?title=Hauling+%26+Debris+Removal+Reno+NV&sub=Construction+Site+Cleanup+%C2%B7+NV+%230085999&badge=Hauling`, alt: 'Blue Reef Builders — Demo & Hauling Reno NV | Same-Day Debris Removal' }],
   },
   alternates: { canonical: `${SITE_URL}/hauling-removal/` },
 }

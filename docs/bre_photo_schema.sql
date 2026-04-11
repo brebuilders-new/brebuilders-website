@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS bre_projects (
   project_slug TEXT UNIQUE NOT NULL,
   project_name TEXT NOT NULL,
   location TEXT,
-  region TEXT,
   service_type TEXT,
   client_name TEXT,
   client_email TEXT,
@@ -130,17 +129,17 @@ CREATE POLICY "Public read before after"
 
 -- ─── Seed: 11 existing portfolio projects ────────────────────────────────────
 
-INSERT INTO bre_projects (project_slug, project_name, location, region, service_type, status, website_published)
+INSERT INTO bre_projects (project_slug, project_name, location, service_type, status, website_published)
 VALUES
-  ('lake-tahoe-renovation',    'Lake Tahoe Full Home Renovation',   'Zephyr Cove, NV',     'Lake Tahoe',          'Full Home Renovation',   'completed', true),
-  ('glenbrook-lake-tahoe',     'Glenbrook Lake Tahoe Renovation',   'Glenbrook, NV',       'Lake Tahoe',          'Full Home Renovation',   'completed', true),
-  ('ripon-estate',             'Ripon CA Luxury Estate',            'Ripon, CA',           'Northern California', 'Custom Home',            'completed', true),
-  ('rio-tinto',                'Rio Tinto Home Renovation',         'Reno, NV',            'Reno',                'Residential Renovation', 'completed', true),
-  ('quaking-aspen',            'Quaking Aspen Structural Repair',   'Reno, NV',            'Reno',                'Structural Repair',      'completed', true),
-  ('lake-tahoe-deck',          'Lake Tahoe Deck Structural Repair', 'Lake Tahoe, NV',      'Lake Tahoe',          'Deck Structural Repair', 'completed', true),
-  ('mine-shaft',               'Mine Shaft Framing & Shed',         'Reno, NV',            'Reno',                'Custom Framing',         'completed', true),
-  ('car-wash',                 'Car Wash Concrete & Foundation',    'Reno, NV',            'Reno',                'Commercial Concrete',    'completed', true),
-  ('arun-deck-repair',         'Arun Hillside Deck Repair',         'Lake Tahoe, NV',      'Lake Tahoe',          'Deck Repair',            'completed', true),
-  ('charolettes-deck',         'Charolettes Deck',                  'Reno, NV',            'Reno',                'Deck Construction',      'completed', true),
-  ('warehouse-metal-buildings','Warehouse Metal Building',          'Northern Nevada, NV',  'Northern Nevada',    'Commercial',             'completed', true)
+  ('lake-tahoe-renovation',    'Lake Tahoe Full Home Renovation',   'Zephyr Cove, NV',          'Full Home Renovation',   'completed', true),
+  ('glenbrook-lake-tahoe',     'Glenbrook Lake Tahoe Renovation',   'Glenbrook, NV',          'Full Home Renovation',   'completed', true),
+  ('ripon-estate',             'Ripon CA Luxury Estate',            'Ripon, CA', 'Custom Home',            'completed', true),
+  ('rio-tinto',                'Rio Tinto Home Renovation',         'Reno, NV',                'Residential Renovation', 'completed', true),
+  ('quaking-aspen',            'Quaking Aspen Structural Repair',   'Reno, NV',                'Structural Repair',      'completed', true),
+  ('lake-tahoe-deck',          'Lake Tahoe Deck Structural Repair', 'Lake Tahoe, NV',          'Deck Structural Repair', 'completed', true),
+  ('mine-shaft',               'Mine Shaft Framing & Shed',         'Reno, NV',                'Custom Framing',         'completed', true),
+  ('car-wash',                 'Car Wash Concrete & Foundation',    'Reno, NV',                'Commercial Concrete',    'completed', true),
+  ('arun-deck-repair',         'Arun Hillside Deck Repair',         'Lake Tahoe, NV',          'Deck Repair',            'completed', true),
+  ('charolettes-deck',         'Charolettes Deck',                  'Reno, NV',                'Deck Construction',      'completed', true),
+  ('warehouse-metal-buildings','Warehouse Metal Building',          'Northern Nevada, NV',    'Commercial',             'completed', true)
 ON CONFLICT (project_slug) DO NOTHING;

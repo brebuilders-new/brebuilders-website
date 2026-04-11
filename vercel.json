@@ -1,4 +1,10 @@
 {
+  "crons": [
+    {
+      "path": "/api/cron/poll-photos",
+      "schedule": "*/5 * * * *"
+    }
+  ],
   "routes": [
     {
       "src": "/services/new-home(/)?",

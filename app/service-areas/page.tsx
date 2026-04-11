@@ -7,10 +7,68 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'Service Areas | Nevada & California Licensed Contractor',
+  title: 'Service Areas | Nevada & California Licensed Contractor | BRE Builders',
   description:
-    'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798.',
+    'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798. Free estimates.',
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: `${SITE_URL}/service-areas/` },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${SITE_URL}/service-areas/`,
+    siteName: 'Blue Reef Builders',
+    title: 'Service Areas | BRE Builders — Nevada & Northern California',
+    description: 'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798.',
+    images: [{
+      url: `${SITE_URL}/api/og?title=Service+Areas&sub=Nevada+%C2%B7+Northern+California+%C2%B7+Licensed+NV+%230085999+%C2%B7+CA+%231093798&badge=Service`,
+      width: 1200, height: 630,
+      alt: 'Blue Reef Builders Service Areas — Nevada and Northern California Licensed Contractor',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Service Areas | BRE Builders — Nevada & Northern California',
+    description: 'BRE Builders serves Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California. Licensed NV #0085999 · CA #1093798.',
+    images: [{
+      url: `${SITE_URL}/api/og?title=Service+Areas&sub=Nevada+%C2%B7+Northern+California+%C2%B7+Licensed+NV+%230085999+%C2%B7+CA+%231093798&badge=Service`,
+      alt: 'Blue Reef Builders Service Areas — Nevada and Northern California Licensed Contractor',
+    }],
+  },
+}
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/service-areas/',
+      name: 'Service Areas — BRE Builders Nevada & Northern California',
+      url: 'https://brebuilders.com/service-areas/',
+      description: 'BRE Builders holds active contractor licenses in Nevada (#0085999) and California (#1093798) — serving Reno, Sparks, Lake Tahoe, Carson City, Truckee, Graeagle, and Northern California since 1989.',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', 'h1'] },
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://brebuilders.com/#business',
+      name: 'Blue Reef Builders',
+      areaServed: [
+        { '@type': 'City', name: 'Reno', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Sparks', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'City', name: 'Carson City', containedInPlace: { '@type': 'State', name: 'Nevada' } },
+        { '@type': 'Place', name: 'Lake Tahoe, NV' },
+        { '@type': 'City', name: 'Truckee', containedInPlace: { '@type': 'State', name: 'California' } },
+        { '@type': 'City', name: 'Graeagle', containedInPlace: { '@type': 'State', name: 'California' } },
+        { '@type': 'Place', name: 'Northern California' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://brebuilders.com/service-areas/' },
+      ],
+    },
+  ],
 }
 
 const AREAS = [
@@ -103,6 +161,7 @@ export default function ServiceAreasPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Nav />
       <main className="pt-28 pb-24">
         <div className="container">
@@ -113,7 +172,7 @@ export default function ServiceAreasPage() {
               Northern Nevada<br />
               <span className="italic text-teal">& California.</span>
             </h1>
-            <p className="text-[15px] text-cream/55 leading-relaxed mb-5">
+            <p className="speakable-summary text-[15px] text-cream/55 leading-relaxed mb-5">
               BRE Builders holds active licenses in both Nevada and California — one of the few
               general contractors in the region qualified to build on both sides of the state line.
             </p>

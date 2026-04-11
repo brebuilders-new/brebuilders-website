@@ -8,10 +8,76 @@ import { IMGS } from '@/lib/images'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brebuilders.com'
 
 export const metadata: Metadata = {
-  title: 'All Services | General Contractor Reno NV',
+  title: 'All Services | General Contractor Reno NV | BRE Builders',
   description:
-    'Complete list of BRE Builders services — ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial, concrete, hauling. Licensed NV & CA.',
+    'Complete list of BRE Builders services — ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial, concrete, hauling. Licensed NV #0085999 · CA #1093798.',
+  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   alternates: { canonical: `${SITE_URL}/services/` },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: `${SITE_URL}/services/`,
+    siteName: 'Blue Reef Builders',
+    title: 'All Construction Services | BRE Builders Reno NV',
+    description: 'ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial builds. Licensed NV #0085999 · CA #1093798. Free estimates.',
+    images: [{
+      url: `${SITE_URL}/api/og?title=All+Services&sub=Reno+NV+%C2%B7+Lake+Tahoe+%C2%B7+Northern+CA+%C2%B7+NV+%230085999&badge=Service`,
+      width: 1200, height: 630,
+      alt: 'Blue Reef Builders — All Construction Services Reno NV and Northern California',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'All Construction Services | BRE Builders Reno NV',
+    description: 'ADU construction, structural repairs, kitchen & bath, custom homes, decks, additions, commercial builds. Licensed NV #0085999 · CA #1093798.',
+    images: [{
+      url: `${SITE_URL}/api/og?title=All+Services&sub=Reno+NV+%C2%B7+Lake+Tahoe+%C2%B7+Northern+CA+%C2%B7+NV+%230085999&badge=Service`,
+      alt: 'Blue Reef Builders — All Construction Services Reno NV and Northern California',
+    }],
+  },
+}
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://brebuilders.com/services/',
+      name: 'All Construction Services — BRE Builders Reno NV',
+      url: 'https://brebuilders.com/services/',
+      description: 'Complete residential and commercial construction services from Blue Reef Builders — licensed general contractor serving Reno NV, Lake Tahoe, and Northern California since 1989. NV #0085999 · CA #1093798.',
+      provider: { '@type': 'Organization', name: 'Blue Reef Builders', '@id': 'https://brebuilders.com/#business' },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.speakable-summary', 'h1'] },
+    },
+    {
+      '@type': 'ItemList',
+      name: 'BRE Builders Construction Services',
+      description: 'All residential and commercial construction services offered by BRE Builders in Reno NV and Northern California.',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'ADU Construction', url: 'https://brebuilders.com/services/adu/' },
+        { '@type': 'ListItem', position: 2, name: 'Structural Repairs', url: 'https://brebuilders.com/services/repairs/' },
+        { '@type': 'ListItem', position: 3, name: 'Kitchen & Bath Remodeling', url: 'https://brebuilders.com/services/kitchen-bath/' },
+        { '@type': 'ListItem', position: 4, name: 'Custom Home Building', url: 'https://brebuilders.com/services/new-home/' },
+        { '@type': 'ListItem', position: 5, name: 'Home Additions', url: 'https://brebuilders.com/services/additions/' },
+        { '@type': 'ListItem', position: 6, name: 'Deck Construction & Repair', url: 'https://brebuilders.com/services/decks/' },
+        { '@type': 'ListItem', position: 7, name: 'Commercial Construction', url: 'https://brebuilders.com/services/commercial/' },
+        { '@type': 'ListItem', position: 8, name: 'Concrete Work', url: 'https://brebuilders.com/services/concrete/' },
+        { '@type': 'ListItem', position: 9, name: 'Loft & Condo Remodeling', url: 'https://brebuilders.com/services/lofts-condos/' },
+        { '@type': 'ListItem', position: 10, name: 'Warehouse & Metal Buildings', url: 'https://brebuilders.com/services/warehouse/' },
+        { '@type': 'ListItem', position: 11, name: 'Retail Build-Out', url: 'https://brebuilders.com/services/retail/' },
+        { '@type': 'ListItem', position: 12, name: 'Office Construction', url: 'https://brebuilders.com/services/office/' },
+        { '@type': 'ListItem', position: 13, name: 'Hauling & Removal', url: 'https://brebuilders.com/services/hauling/' },
+        { '@type': 'ListItem', position: 14, name: 'Safe Rooms & Panic Rooms', url: 'https://brebuilders.com/services/safe-rooms/' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brebuilders.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://brebuilders.com/services/' },
+      ],
+    },
+  ],
 }
 
 const SERVICE_IMGS: Record<string, string> = {
@@ -66,6 +132,7 @@ export default function ServicesPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Nav />
       <main className="pt-28 pb-24">
         <div className="container">
@@ -76,7 +143,7 @@ export default function ServicesPage() {
               Every Project.<br />
               <span className="italic text-teal">Every Scale.</span>
             </h1>
-            <p className="text-[15px] text-cream/55 leading-relaxed">
+            <p className="speakable-summary text-[15px] text-cream/55 leading-relaxed">
               BRE Builders provides residential and commercial construction services across Northern
               Nevada and California. Licensed NV #0085999 · CA #1093798.
             </p>

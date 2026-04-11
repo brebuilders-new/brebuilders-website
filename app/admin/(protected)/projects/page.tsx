@@ -27,6 +27,7 @@ export default function ProjectsAdminPage() {
     service_type: '',
     status: 'active',
   })
+  const [filterRegion, setFilterRegion] = useState<string>('all')
 
   useEffect(() => {
     fetchProjects()
@@ -97,21 +98,70 @@ export default function ProjectsAdminPage() {
     )
   }
 
+  // Get unique regions for filter
+  const regions = Array.from(new Set(projects.map(p => p.location).filter(Boolean))).sort()
+  
+  // Filter projects by region
+  const filteredProjects = filterRegion === 'all' 
+    ? projects 
+    : projects.filter(p => p.location === filterRegion)
+
   return (
     <div className="p-8 max-w-6xl mx-auto">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col gap-4 mb-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Projects</h1>
+            <p className="text-stone-600">
+              {filteredProjects.length} of {projects.length} {projects.length === 1 ? 'project' : 'projects'}
+            </p>
+          </div>
+          <button
+            onClick={() => setShowForm(!showForm)}
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-bold"
+          >
+            {showForm ? 'Cancel' : '+ New Project'}
+          </button>
+        </div>
+        
+        {/* Region Filter */}
+        <div className="flex gap-2 flex-wrap">
+          <button
+            onClick={() => setFilterRegion('all')}
+            className={`px-3 py-1.5 rounded-lg text-sm font-bold transition ${
+              filterRegion === 'all'
+                ? 'bg-blue-600 text-white'
+                : 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+            }`}
+          >
+            All Regions ({projects.length})
+          </button>
+          {regions.map(region => {
+            const count = projects.filter(p => p.location === region).length
+            return (
+              <button
+                key={region}
+                onClick={() => setFilterRegion(region)}
+                className={`px-3 py-1.5 rounded-lg text-sm font-bold transition ${
+                  filterRegion === region
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-stone-200 text-stone-700 hover:bg-stone-300'
+                }`}
+              >
+                {region} ({count})
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      <div className="flex items-center justify-between mb-8" style={{display: 'none'}}>
         <div>
           <h1 className="text-3xl font-bold mb-2">Projects</h1>
           <p className="text-stone-600">
-            {projects.length} {projects.length === 1 ? 'project' : 'projects'}
+            {filteredProjects.length} of {projects.length} {projects.length === 1 ? 'project' : 'projects'}
           </p>
         </div>
-        <button
-          onClick={() => setShowForm(!showForm)}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-bold"
-        >
-          {showForm ? 'Cancel' : '+ New Project'}
-        </button>
       </div>
 
       {/* Create Form */}
@@ -181,9 +231,9 @@ export default function ProjectsAdminPage() {
             Retry
           </button>
         </div>
-      ) : projects.length === 0 ? (
+      ) : filteredProjects.length === 0 ? (
         <div className="bg-stone-50 border border-stone-200 rounded-lg p-12 text-center">
-          <p className="text-stone-600 mb-4">No projects yet.</p>
+          <p className="text-stone-600 mb-4">{filterRegion === 'all' ? 'No projects yet.' : `No projects in ${filterRegion}.`}</p>
           <button
             onClick={() => setShowForm(true)}
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
@@ -193,7 +243,7 @@ export default function ProjectsAdminPage() {
         </div>
       ) : (
         <div className="space-y-3">
-          {projects.map(project => (
+          {filteredProjects.map(project => (
             <div key={project.id} className="bg-white border border-stone-200 rounded-lg p-4 hover:shadow-md transition">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
